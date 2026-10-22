@@ -1,0 +1,1155 @@
+{
+  "schemaVersion": "roda-kekacauan-warlord/0.1",
+  "version": "warlord/0.5.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "warlord",
+  "eventProfileId": "warlord-army",
+  "status": "Core army selection/per-race quantity/source reuse directly instructed. Pool arrangement and composite/history/count routing are disclosed implementation choices. Algorithm design; troop capability/body-role fit, source/body bindings and executor remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Warlord spins an army race or Multi Race. Multi Race spins 1–3 race groups, then their races.",
+      "Troop identity descends to types such as Pocong; Dragon stops at Dragon without body form or element.",
+      "Each selected army race gets one independent army quantity spin.",
+      "Army quantity differs by race and reuses the existing Slayer or Vampire number wheels.",
+      "Unspecified wheel probabilities are equal."
+    ],
+    "authoredInterpretations": [
+      "Army Type uses the twenty-two canonical family options plus one Multi Race sector. Goblin/Orc/Troll resolve within their existing grouped family; Primordial descends through its shared identity selector.",
+      "Direct Vampire troops use the six-value Vampire count; other troops use the matching Slayer quantity profile and canonical assignments.",
+      "Multi Race groups are distinct: exclude families already consumed by this army identity chain, including nested origins/hosts/components, using separate army history. The commander’s race remains available.",
+      "Other identity paths reuse Slayer’s identity-only routes and classification rules, except the explicit Dragon stop. Dragon uses its existing apex assignment without a form draw.",
+      "A composite troop identity receives one count for its whole group; its host/origin/components do not receive extra counts. A nested Vampire component still contributes its Slayer rank for composite classification."
+    ]
+  },
+  "armyTypeWheel": {
+    "id": "warlord-army-type",
+    "label": "Jenis Pasukan",
+    "outcomeCount": 23,
+    "probabilityPolicy": {
+      "mode": "equal-base-weight",
+      "defaultBaseWeight": 1
+    },
+    "outcomes": [
+      {
+        "id": "human",
+        "label": "Manusia",
+        "familyId": "human",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "elf",
+        "label": "Elf",
+        "familyId": "elf",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "dwarf",
+        "label": "Kurcaci",
+        "familyId": "dwarf",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "goblinoid",
+        "label": "Goblin & Orc",
+        "familyId": "goblinoid",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "raksasa",
+        "label": "Raksasa",
+        "familyId": "raksasa",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "fae",
+        "label": "Peri",
+        "familyId": "fae",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "beastfolk",
+        "label": "Siluman",
+        "familyId": "beastfolk",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "lelembut",
+        "label": "Lelembut",
+        "familyId": "lelembut",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "mythical-beast",
+        "label": "Mythical Beast",
+        "familyId": "mythical-beast",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "golem",
+        "label": "Golem",
+        "familyId": "golem",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "elemental",
+        "label": "Elemental",
+        "familyId": "elemental",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "symbiote",
+        "label": "Symbiote",
+        "familyId": "symbiote",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "heavenly-principle",
+        "label": "Heavenly Principle",
+        "familyId": "heavenly-principle",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "demon",
+        "label": "Abyssal Axiom",
+        "familyId": "demon",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "hybrid",
+        "label": "Hybrid",
+        "familyId": "hybrid",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "anime-lineage",
+        "label": "Anime",
+        "familyId": "anime-lineage",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "legendary-warrior",
+        "label": "Reinkarnasi Pahlawan Legendaris",
+        "familyId": "legendary-warrior",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "machine",
+        "label": "Machine",
+        "familyId": "machine",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "multi-race",
+        "label": "Multi Race",
+        "mode": "multi",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "primordial",
+        "label": "Primordial",
+        "familyId": "primordial",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "slime",
+        "label": "Slime",
+        "familyId": "slime",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "centaur",
+        "label": "Centaur",
+        "familyId": "centaur",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      },
+      {
+        "id": "cosmic-warrior",
+        "label": "Cosmic Warrior",
+        "familyId": "cosmic-warrior",
+        "mode": "single",
+        "baseWeight": 1,
+        "probability": 0.043478260869565216
+      }
+    ],
+    "projection": "Canonical family identity only; first single-family result already selects its troop root, so no redundant race-family spin.",
+    "dispatchRaceEvents": false
+  },
+  "multiRaceCountWheel": {
+    "id": "warlord-race-group-count",
+    "label": "Berapa Ras Pasukan?",
+    "outcomeCount": 3,
+    "outcomes": [
+      {
+        "id": "army-races-1",
+        "label": "1",
+        "value": 1,
+        "baseWeight": 1,
+        "probability": 0.3333333333333333
+      },
+      {
+        "id": "army-races-2",
+        "label": "2",
+        "value": 2,
+        "baseWeight": 1,
+        "probability": 0.3333333333333333
+      },
+      {
+        "id": "army-races-3",
+        "label": "3",
+        "value": 3,
+        "baseWeight": 1,
+        "probability": 0.3333333333333333
+      }
+    ],
+    "allowOneGroup": true
+  },
+  "multiRaceFamilySelector": {
+    "wheelId": "race-family",
+    "definitionFile": "content/race-wheel-design.json",
+    "purpose": "army-reference",
+    "drawCount": "one per requested group, in order",
+    "dispatchEvents": false,
+    "commitCharacterRaceHistory": false,
+    "excludeHistory": "usedArmyFamilyIds from this army invocation only; includes prior groups and all nested components",
+    "modeOutcomeExclusion": "Multi Race is not in canonical race-family, so it cannot recursively select itself."
+  },
+  "selectorCatalog": [
+    {
+      "id": "race-family",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "race-family",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "elf-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "elf-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "sea-elf-form",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "sea-elf-form",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "fey-elf-season",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "fey-elf-season",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "dwarf-gnome-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "dwarf-gnome-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "goblin-orc-troll-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "goblin-orc-troll-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "orc-role",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "orc-role",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "fairy-subrace",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "fairy-subrace",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "siluman-animal-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "siluman-animal-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "lelembut-origin",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-origin",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "lelembut-local-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-local-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "lelembut-imported-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-imported-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "mythical-beast-origin",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-origin",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "mythical-beast-local-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-local-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "mythical-beast-imported-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-imported-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "golem-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "golem-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "heavenly-principle-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "heavenly-principle-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "element-universal",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "canonicalWheelId": "element-universal",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "abyssal-axiom-type",
+      "definitionFile": "content/abyssal-axiom-design.json",
+      "canonicalWheelId": "abyssal-axiom-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "setan-type",
+      "definitionFile": "content/abyssal-axiom-design.json",
+      "canonicalWheelId": "setan-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "anime-genre",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-genre",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "anime-role",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-role",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "anime-scifi-role",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-scifi-role",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "legend-origin",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-origin",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "legend-local-character",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-local-character",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "legend-imported-character",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-imported-character",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "machine-type",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-type",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "machine-mecha-model",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-mecha-model",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "machine-transformer-form",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-transformer-form",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "machine-appliance-item",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-appliance-item",
+      "projection": "id/label/baseWeight only; identity reference with dispatchEvents:false and commitCharacterRaceHistory:false"
+    },
+    {
+      "id": "slime-type",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "slime-type",
+      "projection": "id/label/baseWeight only; no power/stat/race rewards"
+    },
+    {
+      "id": "centaur-lower-body",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "centaur-lower-body",
+      "projection": "id/label/baseWeight only; no power/stat/race rewards"
+    },
+    {
+      "id": "cosmic-warrior-group",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "cosmic-warrior-group",
+      "projection": "id/label/baseWeight only; no power/stat/race rewards"
+    }
+  ],
+  "identityRoutes": {
+    "human": {
+      "defaultProfileId": "common",
+      "selectors": [],
+      "promotion": 0
+    },
+    "elf": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "elf-type"
+        },
+        {
+          "wheelId": "sea-elf-form",
+          "when": {
+            "elf-type": [
+              "sea-elf"
+            ]
+          }
+        },
+        {
+          "wheelId": "fey-elf-season",
+          "when": {
+            "elf-type": [
+              "fey-elf"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "dwarf": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "dwarf-gnome-type"
+        }
+      ],
+      "promotion": 0
+    },
+    "goblinoid": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "goblin-orc-troll-type"
+        },
+        {
+          "wheelId": "orc-role",
+          "when": {
+            "goblin-orc-troll-type": [
+              "orc"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "raksasa": {
+      "defaultProfileId": "apex",
+      "selectors": [],
+      "children": {
+        "relation": "base",
+        "count": 1
+      },
+      "minimumProfileId": "apex",
+      "promotion": 1
+    },
+    "fae": {
+      "defaultProfileId": "elite",
+      "selectors": [
+        {
+          "wheelId": "fairy-subrace"
+        }
+      ],
+      "promotion": 0
+    },
+    "beastfolk": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "siluman-animal-type",
+          "drawCount": 1
+        }
+      ],
+      "promotion": 0
+    },
+    "lelembut": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "lelembut-origin"
+        },
+        {
+          "wheelId": "lelembut-local-type",
+          "when": {
+            "lelembut-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "lelembut-imported-type",
+          "when": {
+            "lelembut-origin": [
+              "imported"
+            ]
+          }
+        }
+      ],
+      "children": {
+        "relation": "origin",
+        "count": 1,
+        "when": {
+          "lelembut-origin": [
+            "imported"
+          ],
+          "lelembut-imported-type": [
+            "skeleton",
+            "zombie"
+          ]
+        }
+      },
+      "minimumProfileId": "common",
+      "promotion": 0
+    },
+    "mythical-beast": {
+      "defaultProfileId": "apex",
+      "selectors": [
+        {
+          "wheelId": "mythical-beast-origin"
+        },
+        {
+          "wheelId": "mythical-beast-local-type",
+          "when": {
+            "mythical-beast-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "when": {
+            "mythical-beast-origin": [
+              "imported"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "golem": {
+      "defaultProfileId": "formidable",
+      "selectors": [
+        {
+          "wheelId": "golem-type"
+        },
+        {
+          "wheelId": "element-universal",
+          "when": {
+            "golem-type": [
+              "element-golem"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "elemental": {
+      "defaultProfileId": "formidable",
+      "selectors": [
+        {
+          "wheelId": "element-universal"
+        }
+      ],
+      "promotion": 0
+    },
+    "symbiote": {
+      "defaultProfileId": "elite",
+      "selectors": [],
+      "children": {
+        "relation": "host",
+        "count": 1
+      },
+      "minimumProfileId": "elite",
+      "promotion": 0
+    },
+    "heavenly-principle": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "heavenly-principle-type"
+        }
+      ],
+      "promotion": 0
+    },
+    "demon": {
+      "defaultProfileId": "apex",
+      "selectors": [
+        {
+          "wheelId": "abyssal-axiom-type"
+        },
+        {
+          "wheelId": "setan-type",
+          "when": {
+            "abyssal-axiom-type": [
+              "setan"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "hybrid": {
+      "defaultProfileId": "common",
+      "selectors": [],
+      "children": {
+        "relation": "hybrid-component",
+        "count": 2
+      },
+      "promotion": 1
+    },
+    "anime-lineage": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "anime-genre"
+        },
+        {
+          "wheelId": "anime-role"
+        },
+        {
+          "wheelId": "anime-scifi-role",
+          "when": {
+            "anime-genre": [
+              "sci-fi"
+            ],
+            "anime-role": [
+              "mc"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "legendary-warrior": {
+      "defaultProfileId": "legendary",
+      "selectors": [
+        {
+          "wheelId": "legend-origin"
+        },
+        {
+          "wheelId": "legend-local-character",
+          "when": {
+            "legend-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "legend-imported-character",
+          "when": {
+            "legend-origin": [
+              "imported"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "machine": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "machine-type"
+        },
+        {
+          "wheelId": "machine-mecha-model",
+          "when": {
+            "machine-type": [
+              "mecha"
+            ]
+          }
+        },
+        {
+          "wheelId": "machine-transformer-form",
+          "when": {
+            "machine-type": [
+              "transformer"
+            ]
+          }
+        },
+        {
+          "wheelId": "machine-appliance-item",
+          "when": {
+            "machine-type": [
+              "household-appliance"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "slime": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "slime-type"
+        }
+      ],
+      "promotion": 0
+    },
+    "centaur": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "centaur-lower-body"
+        }
+      ],
+      "promotion": 0
+    },
+    "cosmic-warrior": {
+      "defaultProfileId": "legendary",
+      "selectors": [
+        {
+          "wheelId": "cosmic-warrior-group"
+        }
+      ],
+      "promotion": 0
+    }
+  },
+  "identityRouteSource": {
+    "definitionFile": "content/slayer-events-design.json",
+    "sourceVersion": "slayer/1.4.0",
+    "derivation": "Same identity-only selectors/classification with dragon-form removed. Never use the original whole Slayer planner without this route override."
+  },
+  "stopRules": [
+    {
+      "familyId": "lelembut",
+      "wheelId": "lelembut-local-type",
+      "outcomeId": "pocong",
+      "terminal": true,
+      "forbiddenChildEvents": [
+        "jump power",
+        "race rewards"
+      ]
+    },
+    {
+      "familyId": "mythical-beast",
+      "wheelId": "mythical-beast-imported-type",
+      "outcomeId": "dragon",
+      "terminal": true,
+      "quantityProfileId": "apex",
+      "forbiddenChildWheelIds": [
+        "dragon-form",
+        "element-universal"
+      ]
+    },
+    {
+      "familyId": "slime",
+      "wheelId": "slime-type",
+      "outcomeId": "elemental",
+      "terminal": true,
+      "quantityProfileId": "formidable",
+      "forbiddenChildWheelIds": [
+        "element-universal"
+      ]
+    },
+    {
+      "familyId": "cosmic-warrior",
+      "wheelId": "cosmic-warrior-group",
+      "outcomeId": "ultraman",
+      "terminal": true,
+      "quantityProfileId": "legendary",
+      "forbiddenChildWheelIds": [
+        "ultraman-color"
+      ]
+    },
+    {
+      "familyId": "cosmic-warrior",
+      "wheelId": "cosmic-warrior-group",
+      "outcomeId": "saint",
+      "terminal": true,
+      "quantityProfileId": "apex",
+      "forbiddenChildWheelIds": [
+        "saint-cosmic-armor"
+      ]
+    },
+    {
+      "familyId": "cosmic-warrior",
+      "wheelId": "cosmic-warrior-group",
+      "outcomeId": "green-lantern",
+      "terminal": true,
+      "quantityProfileId": "apex",
+      "forbiddenChildWheelIds": [
+        "lantern-ring-color"
+      ]
+    }
+  ],
+  "quantityContract": {
+    "wheelId": "warlord-army-quantity",
+    "label": "Jumlah Pasukan",
+    "invocationCount": "one per completed troop group",
+    "countSources": [
+      {
+        "id": "swarm",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "swarm",
+        "definitionRef": "quantityProfiles[id=swarm]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "common",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "common",
+        "definitionRef": "quantityProfiles[id=common]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "trained",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "trained",
+        "definitionRef": "quantityProfiles[id=trained]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "elite",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "elite",
+        "definitionRef": "quantityProfiles[id=elite]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "formidable",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "formidable",
+        "definitionRef": "quantityProfiles[id=formidable]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "apex",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "apex",
+        "definitionRef": "quantityProfiles[id=apex]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "legendary",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "legendary",
+        "definitionRef": "quantityProfiles[id=legendary]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "divine",
+        "sourceKind": "slayer-profile",
+        "definitionFile": "content/slayer-events-design.json",
+        "sourceVersion": "slayer/1.5.0",
+        "profileId": "divine",
+        "definitionRef": "quantityProfiles[id=divine]",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "label as troop-count label",
+            "value",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; the canonical source is authoritative for new plans."
+      },
+      {
+        "id": "vampire",
+        "sourceKind": "vampire-count",
+        "definitionFile": "content/lelembut-events-design.json",
+        "wheelId": "vampire-victim-count",
+        "definitionRef": "wheels[id=vampire-victim-count]",
+        "outcomeCount": 6,
+        "allowModifiers": false,
+        "projection": {
+          "fields": [
+            "id as sourceOutcomeId",
+            "victimCount as value",
+            "troop-count label",
+            "baseWeight",
+            "probability"
+          ],
+          "dispatchEvents": false
+        },
+        "snapshotPolicy": "Freeze the projected rows per invocation; exclude all feeding reward/context fields."
+      }
+    ],
+    "assignmentsRef": "content/slayer-events-design.json#quantityAssignments",
+    "assignmentSourceVersion": "slayer/1.5.0",
+    "ignoredAssignmentKeys": [
+      "mythical-beast:dragon-form",
+      "slime:element-universal"
+    ],
+    "directVampireOverride": {
+      "familyId": "lelembut",
+      "requiredResults": {
+        "lelembut-origin": "imported",
+        "lelembut-imported-type": "vampire"
+      },
+      "requiredNodePosition": "group root",
+      "countSourceId": "vampire"
+    },
+    "resolveProfileContract": "Use canonical Slayer route default and quantityAssignments for applicable identity results; latest selector assignment wins. Siluman uses its single selected animal rank. Anime NPC is common, MC uses genre then applicable Sci-fi role. Wrappers use min(7,max(minimumRank,hardestChildRank+promotion)). Apply these classification rules with the Warlord Dragon cap; never run Slayer victim-count reward resolution.",
+    "resultProjectionContract": "Quantity views expose sourceOutcomeId, numeric value, troop label, baseWeight and probability only. Do not project Slayer strengthBonus or Vampire effects/followupWheelId/narration/influence. Do not invoke resolveSlayerVictimCount or feeding reward dispatch."
+  },
+  "groupRecord": {
+    "fields": [
+      "id",
+      "sourceArchetypeInvocationId",
+      "groupOrdinal",
+      "rootFamilyId",
+      "identityTree",
+      "identityDisplayPath",
+      "sourceCountProfileId",
+      "sourceCountOutcomeId",
+      "quantitySpinId",
+      "count",
+      "controlledArmyCount",
+      "sourceSpinIds[]",
+      "frozenProbabilitySnapshot"
+    ],
+    "controlledArmyCount": "equals selected count for this Warlord group, including zero",
+    "totalArmyCount": "sum(count) for Warlord-owned groups in this invocation only"
+  },
+  "contracts": {
+    "order": "Actual Warlord/reaction -> Army Type/reaction -> Multi Race only: one 1–3 group-count spin/reaction -> for each group in order: identity-only race path/reactions -> one race-specific Army Quantity/reaction -> commit source-owned group -> after all groups Backstory.",
+    "troopIdentity": "Only allowed identityRoutes/selectors execute in troop-reference mode. No troop race reward package, stat/mastery/power/weapon/armor, army/follower count, Takeover, Size or secondary Archetype event is imported. Elemental/Golem element is material identity only; Dragon never spins form or element.",
+    "history": "Use separate usedArmyFamilyIds within the Warlord invocation, never the commander’s usedRaceFamilyIds. Commit a family before its identity children. Multi Race groups exclude every already-consumed army family; nested wrapper chains share that army history. Freeze commander gate/race history unchanged.",
+    "quantity": "Exactly one quantity spin per complete root troop group, not per identity component, nested selector or individual soldier. Single race has one count; Multi Race N has N counts even when N=1. Resolve that group’s identity first, then use the source count profile and its exact base weights.",
+    "profileSelection": "Use canonical Slayer route default and quantityAssignments for applicable identity results; latest selector assignment wins. Siluman uses its single selected animal rank. Anime NPC is common, MC uses genre then applicable Sci-fi role. Wrappers use min(7,max(minimumRank,hardestChildRank+promotion)). Apply these classification rules with the Warlord Dragon cap; never run Slayer victim-count reward resolution.",
+    "vampireOverride": "Only a direct root Lelembut with imported-type vampire uses vampire-victim-count. Re-label count as troops and project victimCount to value. Skeleton/Zombie origins, Symbiote hosts and Hybrid components containing Vampire use their canonical Slayer rank when classifying the one composite troop group.",
+    "sourceProjection": "Quantity views expose sourceOutcomeId, numeric value, troop label, baseWeight and probability only. Do not project Slayer strengthBonus or Vampire effects/followupWheelId/narration/influence. Do not invoke resolveSlayerVictimCount or feeding reward dispatch.",
+    "zero": "Zero is a valid empty troop group with a recorded identity and count; retain it and its reaction without reroll or replacing its race. Total army is the sum of this invocation’s group counts; all zero means zero soldiers.",
+    "reward": "The army is the declared benefit. No Warlord personal stat/power/mastery bonus or loot was specified. Troop abilities and battlefield contribution need separate capability profiles, never implicit per-soldier full racial spin results.",
+    "existingArmies": "Create Warlord-owned army records alongside earlier Goblin/Orc armies; do not overwrite their count, Bos/Kacung position or source. Warlord commands its own newly selected groups without another Bos/Kacung roll. Follower records remain separate.",
+    "probability": "Army Type: twenty-three baseWeight1 sectors (twenty-two families plus Multi Race). Multi group count:1/2/3 equal. Identity selectors retain canonical odds; count views retain exact Slayer profiles or Vampire5:4:3:3:2:1. Reused Slayer outcomes retain their existing >=5% odds. No new rarity or quantity multiplier. Authorized active Equalizer keeps its established final eligible-odds precedence.",
+    "context": "Stack actual Warlord, selected mode, group count, troop identity path and actual group quantities. Narrator reacts after every actual spin. Future groups/results remain unknown; rewrite feeding/victim labels as pasukan. Short Gen Z captions, no joke explanation or implicit funny tag.",
+    "ledger": "Freeze rule/source versions, projected selector/count pools and final odds, mode/group-count, each identity tree and count result, usedArmyFamilyIds, group ordinals/source IDs and saved continuation. Commit each group once by runId/WarlordInvocationId/groupOrdinal/quantitySpinId. Replay/media retry restores committed groups and resumes unfinished steps without redraw, duplicated army or counted components.",
+    "return": "Return to Backstory only after all requested group identities/counts/commits/reactions. Normal owner Backstory, Size, main stats, equipment, powers and final bonuses remain unchanged.",
+    "runtime": "Design contract only; final army capability/control/body fit and executor remain configuration. Siluman resolves one identity-only animal from its twelve-choice wheel."
+  },
+  "powers": [],
+  "weapons": [],
+  "statModifiers": [],
+  "masteryModifiers": [],
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "module": null,
+    "planner": null,
+    "resolver": null,
+    "status": "design-only",
+    "outputKinds": [
+      "next identity/count spin",
+      "needs_configuration",
+      "source-owned army group",
+      "complete to Backstory"
+    ]
+  },
+  "returnTo": "backstory",
+  "followupSpinCount": null,
+  "followupSpinCountFormula": {
+    "single": "1 Army Type + identity follow-ups + 1 quantity",
+    "multi": "1 Army Type + 1 group-count + sum(1 family root + identity follow-ups + 1 quantity) for N groups"
+  },
+  "openConfiguration": [
+    "Explicit troop capability, control limitations, body-role fit and battlefield contribution.",
+    "Army reference executor, separate source/history ledger and saved continuation."
+  ],
+  "migrationContract": "Only new Warlord plans use this module. Preserve old committed character, Slayer, feeding and army snapshots. Never rewrite canonical race or source count/reward catalogs.",
+  "primordialExtension": {
+    "identitySelector": "primordial-identity",
+    "definitionFile": "content/primordial-events-design.json",
+    "stopAfterIdentity": true,
+    "quantityProfileId": "divine",
+    "rewards": false,
+    "authority": "Projection of newly registered canonical family; no race package grants to commander or soldiers.",
+    "snapshot": "reference/before-primordial-packages-2026-10-10.json"
+  },
+  "video2RaceImports": {
+    "design": "content/video2-race-imports-design.json",
+    "approvedFamilyIds": [
+      "slime",
+      "centaur",
+      "cosmic-warrior"
+    ],
+    "quantityAssignmentApproved": "Authored under prior Slayer estimate delegation; no new count profile.",
+    "snapshot": "reference/before-video2-race-imports-2026-10-10.json",
+    "latestCatalogVersion": "video2-race-imports/0.3.0"
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,477 @@
+{
+  "schemaVersion": "roda-kekacauan-main-wheel-strength/0.1",
+  "version": "main-wheel-strength/1.0.0",
+  "updatedDate": "2026-10-10",
+  "authority": {
+    "userRequest": "make the wheel and sort from weakest to strongest. the distribution also make the weakest have slight more chance, like3:2.5:2 for weak:moderate:strong",
+    "classification": "Authored relative ordering from current approved game packages, conditional upside and zonk/risk; no external lore stats or new rewards.",
+    "ratioInterpretation": "Ratio applies to total full-wheel band mass, not3/2.5/2 to each sector; same weight within each band."
+  },
+  "scope": [
+    "race-family",
+    "archetype"
+  ],
+  "bands": [
+    {
+      "id": "weak",
+      "label": "Lemah",
+      "groupWeight": 3,
+      "fullWheelProbability": 0.4
+    },
+    {
+      "id": "moderate",
+      "label": "Sedang",
+      "groupWeight": 2.5,
+      "fullWheelProbability": 0.3333333333333333
+    },
+    {
+      "id": "strong",
+      "label": "Kuat",
+      "groupWeight": 2,
+      "fullWheelProbability": 0.26666666666666666
+    }
+  ],
+  "contracts": {
+    "order": "List order is weak to strong. With an anticlockwise spinning wheel and fixed top pointer, place increasing ranks clockwise so sectors pass the pointer weakest to strongest. One actual draw; no preliminary band draw.",
+    "weights": "Full-wheel baseWeight(i)=groupWeight(band)/fullCatalogBandCount; final probability=eligible positive weight/total eligible weight.",
+    "filters": "Apply race history/body/roster/Hybrid exclusions before sampling; retain canonical per-sector base weights then renormalize surviving outcomes. Full40/33.33/26.67 masses can shift after exclusions or declared modifiers; do not refill or dynamically rebalance bands.",
+    "equalizer": "An authorized active Equalizer replaces final weights with1 per hard-eligible outcome after guards; no group-mass postprocessor follows it.",
+    "rankMeaning": "Authoring order/distributionBand is relative package strength and variability, independent of intrinsic Power Tier1–5, gate boostBand, raw stat scores or guaranteed combat victory.",
+    "events": "Do not change child catalogs, ratios, guarantees, rewards, mastery/bonus timing, source history or final stat weighting. No extra tier-to-stat conversion.",
+    "references": "Every canonical Race reference/owned invocation reuses current Race weights under its caller guards. Warlord Army Type is its separate23-sector wheel, unchanged; canonical race-family followups inherit these weights.",
+    "history": "Freeze versions/eligible pools/weights per new invocation; committed old journals and source-video catalogs do not update."
+  },
+  "wheels": {
+    "race-family": {
+      "wheelId": "race-family",
+      "outcomeCount": 22,
+      "bandCounts": {
+        "weak": 7,
+        "moderate": 8,
+        "strong": 7
+      },
+      "outcomes": [
+        {
+          "id": "human",
+          "order": 1,
+          "distributionBand": "weak",
+          "reason": "Tidak ada hadiah ras.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "goblinoid",
+          "order": 2,
+          "distributionBand": "weak",
+          "reason": "Gabungan Goblin/Kacung/Troll memberi banyak hasil kecil atau debuff; Oni/Shrek tetap bisa melonjak.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "dwarf",
+          "order": 3,
+          "distributionBand": "weak",
+          "reason": "Armor1–5 poin atau satu alat Gnome; kapasitas paket umumnya terbatas.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "centaur",
+          "order": 4,
+          "distributionBand": "weak",
+          "reason": "Hanya1–2 poin stat tubuh bawah.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "slime",
+          "order": 5,
+          "distributionBand": "weak",
+          "reason": "Tubuh Jelly lemah atau satu power spesialis; tanpa paket stat tambahan.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "anime-lineage",
+          "order": 6,
+          "distributionBand": "weak",
+          "reason": "NPC50% memberi nol event genre; MC bisa tinggi tetapi tidak dijamin.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "elf",
+          "order": 7,
+          "distributionBand": "weak",
+          "reason": "Satu power/type specialization atau bonus Sea Elf; hasil child tetap bervariasi.",
+          "baseWeight": 0.42857142857142855,
+          "fullWheelProbability": 0.05714285714285715
+        },
+        {
+          "id": "beastfolk",
+          "order": 8,
+          "distributionBand": "moderate",
+          "reason": "Satu jenis dari 12 pilihan; Animal Transformation, Babi juga Nyolong.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "lelembut",
+          "order": 9,
+          "distributionBand": "moderate",
+          "reason": "Mayoritas power lokal sempit; Vampire/Lich/undead origin dapat menaikkan paket.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "elemental",
+          "order": 10,
+          "distributionBand": "moderate",
+          "reason": "Satu kendali elemen universal.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "golem",
+          "order": 11,
+          "distributionBand": "moderate",
+          "reason": "Manipulasi material plus0–3 Durability atau mastery Element Golem.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "machine",
+          "order": 12,
+          "distributionBand": "moderate",
+          "reason": "Appliance sangat lemah; AI/Android/Cyborg/Mecha dapat memberi paket lebih kuat.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "fae",
+          "order": 13,
+          "distributionBand": "moderate",
+          "reason": "Healing/Element/Wish atau Fairy King; hasil unggulan berada di child.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "legendary-warrior",
+          "order": 14,
+          "distributionBand": "moderate",
+          "reason": "Paket hero empat poin konsisten dengan power/weapon/stat sesuai tokoh.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "mythical-beast",
+          "order": 15,
+          "distributionBand": "moderate",
+          "reason": "Paket beast kuat, umumnya3–4 poin atau dua power Phoenix.",
+          "baseWeight": 0.3125,
+          "fullWheelProbability": 0.041666666666666664
+        },
+        {
+          "id": "symbiote",
+          "order": 16,
+          "distributionBand": "strong",
+          "reason": "Menambahkan host Race beserta bonus takeover/power, hasil persentase tetap berisiko.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "demon",
+          "order": 17,
+          "distributionBand": "strong",
+          "reason": "Dosa/Setan sampai Raja dengan empat Demonic dan pengikut.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "heavenly-principle",
+          "order": 18,
+          "distributionBand": "strong",
+          "reason": "Komunikasi/Pemuka sampai God Authority maksimum, Divine dan pengikut.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "cosmic-warrior",
+          "order": 19,
+          "distributionBand": "strong",
+          "reason": "Power media2–5 plus dua poin stat; Alien X membawa Reality Rewrite.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "raksasa",
+          "order": 20,
+          "distributionBand": "strong",
+          "reason": "Ras dasar lengkap plus skala Size raksasa sampai ambang Cosmic.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "hybrid",
+          "order": 21,
+          "distributionBand": "strong",
+          "reason": "Dua ras berbeda beserta event dan nested composition.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        },
+        {
+          "id": "primordial",
+          "order": 22,
+          "distributionBand": "strong",
+          "reason": "Paket ras enam poin dengan signature power/weapon sesuai legenda.",
+          "baseWeight": 0.2857142857142857,
+          "fullWheelProbability": 0.03809523809523809
+        }
+      ]
+    },
+    "archetype": {
+      "wheelId": "archetype",
+      "outcomeCount": 28,
+      "bandCounts": {
+        "weak": 9,
+        "moderate": 10,
+        "strong": 9
+      },
+      "outcomes": [
+        {
+          "id": "npc",
+          "order": 1,
+          "distributionBand": "weak",
+          "reason": "Nol event dan nol hadiah.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "pirate",
+          "order": 2,
+          "distributionBand": "weak",
+          "reason": "Rank0–2 poin; kapal hanya desain.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "alchemist",
+          "order": 3,
+          "distributionBand": "weak",
+          "reason": "Satu ramuan: debuff/neutral sering, buff atau superpower mungkin.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "disciple",
+          "order": 4,
+          "distributionBand": "weak",
+          "reason": "Satu hadiah mentor atau kategori kosong zonk; Best Stat hanya+1.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "archaeologist",
+          "order": 5,
+          "distributionBand": "weak",
+          "reason": "Temuan kini nol; purba1–3 poin paket.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "slayer",
+          "order": 6,
+          "distributionBand": "weak",
+          "reason": "Jumlah korban memberi0–3 Strength saja.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "druid",
+          "order": 7,
+          "distributionBand": "weak",
+          "reason": "Satu power alam Tier3; paket dua poin.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "rider",
+          "order": 8,
+          "distributionBand": "weak",
+          "reason": "Weak/moderate memberi1–2 poin; strong juga mount-as-weapon.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "goliath",
+          "order": 9,
+          "distributionBand": "weak",
+          "reason": "90% Strength2;10% Strength4 dengan Rage.",
+          "baseWeight": 0.3333333333333333,
+          "fullWheelProbability": 0.044444444444444446
+        },
+        {
+          "id": "gladiator",
+          "order": 10,
+          "distributionBand": "moderate",
+          "reason": "Satu weapon/mastery+2 tetapi mengganti dan mengunci semua weapon lain.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "survivalist",
+          "order": 11,
+          "distributionBand": "moderate",
+          "reason": "Satu stat, power, atau keduanya; band chance menentukan hasil.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "priest",
+          "order": 12,
+          "distributionBand": "moderate",
+          "reason": "Satu Angelic Power; tier hasil tetap bervariasi.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "assassin",
+          "order": 13,
+          "distributionBand": "moderate",
+          "reason": "Speed1 dan satu weapon/power3–4.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "cursed",
+          "order": 14,
+          "distributionBand": "moderate",
+          "reason": "Persentase menghasilkan0–3 Cursed Power dengan weakness pada band tinggi.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "equaliser",
+          "order": 15,
+          "distributionBand": "moderate",
+          "reason": "Mengubah semua peluang setelah aktif menjadi seragam; dapat memperbaiki atau menurunkan bias semula.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "paladin",
+          "order": 16,
+          "distributionBand": "moderate",
+          "reason": "90% satu Angelic/all-weapon mastery1;10% tiga Angelic.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "apostle",
+          "order": 17,
+          "distributionBand": "moderate",
+          "reason": "Satu Divine/Demonic dan shared Power Mastery1.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "primordial-champion",
+          "order": 18,
+          "distributionBand": "moderate",
+          "reason": "Signature patron tiga poin; bukan paket ras enam poin.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "colossal-warmech",
+          "order": 19,
+          "distributionBand": "moderate",
+          "reason": "Satu mech-as-weapon dan dua poin stat kelas.",
+          "baseWeight": 0.25,
+          "fullWheelProbability": 0.03333333333333333
+        },
+        {
+          "id": "tamer",
+          "order": 20,
+          "distributionBand": "strong",
+          "reason": "Taming Power plus companion yang dapat mencapai Mythical/Pop Culture.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "mage",
+          "order": 21,
+          "distributionBand": "strong",
+          "reason": "Dua/ tiga power dijamin; Master Sihir meningkatkan bobot tier3–5.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "gambler",
+          "order": 22,
+          "distributionBand": "strong",
+          "reason": "Mekanika stat/Lucky Number bisa memberi lonjakan besar; bukan buff yang selalu positif.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "resilient",
+          "order": 23,
+          "distributionBand": "strong",
+          "reason": "Keep-best retry raw<=5 berlaku untuk lima stat dan kedua mastery.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "warlord",
+          "order": 24,
+          "distributionBand": "strong",
+          "reason": "Satu sampai tiga kelompok pasukan dengan jumlah spesifik ras.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "vessel",
+          "order": 25,
+          "distributionBand": "strong",
+          "reason": "Compatibility tinggi membuka Authority atau paket God/Raja lengkap; rendah overload.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "royal",
+          "order": 26,
+          "distributionBand": "strong",
+          "reason": "King Authority5, Queen all-stat1, Pawn evolusi all-stat2 bersyarat.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "mutant",
+          "order": 27,
+          "distributionBand": "strong",
+          "reason": "Satu ras tambahan berikut event lengkap dan nested race outcomes.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        },
+        {
+          "id": "hybrid",
+          "order": 28,
+          "distributionBand": "strong",
+          "reason": "Dua Archetype berbeda dan kedua event; kekuatan bergantung pasangan.",
+          "baseWeight": 0.2222222222222222,
+          "fullWheelProbability": 0.02962962962962963
+        }
+      ]
+    }
+  },
+  "snapshot": "reference/before-main-wheel-strength-2026-10-10.json",
+  "document": "docs/MAIN-WHEELS.md",
+  "preview": "preview/main-wheels.html",
+  "visualLayout": {
+    "spinDirection": "anticlockwise",
+    "sectorPlacement": "clockwise",
+    "pointerPosition": "top",
+    "passingOrder": "weak-to-strong"
+  }
+}

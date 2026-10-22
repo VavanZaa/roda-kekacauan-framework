@@ -1,0 +1,573 @@
+{
+  "schemaVersion": "roda-kekacauan-assassin/0.1",
+  "version": "assassin/0.2.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "assassin",
+  "displayLabel": "Assassin",
+  "status": "User-approved six-type roster, +1 numeric Speed and exactly one thematic power or weapon per type. Concrete packages authored within delegated scope; algorithm design, runtime/body/capability limits pending.",
+  "runtimeReady": false,
+  "authority": {
+    "confirmed": [
+      "Assassin spins Assassin Type.",
+      "User suggested Ninja and Hassan Sabbah and explicitly requested historical-group research.",
+      "Unspecified wheel probabilities use equal base weights.",
+      "User accepts all six proposed types.",
+      "Every selected type gives +1 Speed and either one group-related power or one weapon.",
+      "Power rewards should be Tier 3 or 4; equal power level between types is not required."
+    ],
+    "nameInterpretation": "The accepted Assassins Alamut sector references medieval fidai agents associated with Hasan-i Sabbah; the historical leader is not a separate outcome.",
+    "researchScope": "Online research is authorized for these historical subtype candidates; the outer Archetype roster still comes from the supplied videos.",
+    "interpretation": "Exactly one direct fixed thematic reward per selected subtype, chosen by the authored recipe. No additional Power-versus-Weapon chance wheel or normal acquisition spin is added.",
+    "authored": "Three power recipes and three weapon recipes, descriptions and individual Tier 3/4 ratings are editable authored choices within the user reward brief, not historical facts."
+  },
+  "flow": {
+    "structureApproved": true,
+    "steps": [
+      {
+        "operation": "spin",
+        "wheelId": "assassin-type",
+        "count": 1
+      },
+      {
+        "operation": "commit-selected-recipe-once",
+        "recipeField": "rewardProfileRef"
+      }
+    ],
+    "subtypeEffects": "register-speed-bonus-and-grant-one-linked-reward",
+    "returnTo": "backstory",
+    "completionGate": "Commit the actual selected recipe atomically, respecting intrinsic catalog references and existing inventory guards, then react and restore Backstory. Unknown definition/body/inventory configuration is not an invented fallback."
+  },
+  "wheel": {
+    "id": "assassin-type",
+    "label": "Jenis Assassin",
+    "status": "six-types-user-approved",
+    "rosterApproved": true,
+    "defaultWeight": 1,
+    "probabilityMeaning": "Six equal base weights at 1/6 each before approved eligibility/modifiers; intrinsic power tier and history do not add rarity.",
+    "outcomes": [
+      {
+        "id": "ninja",
+        "label": "Ninja",
+        "origin": "Jepang",
+        "period": "Jepang feodal",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "broader-covert-role",
+        "context": "Shinobi dari tradisi Iga/Koka; konteks utamanya spionase dan penyusupan.",
+        "contextLimit": "Bukan satu organisasi pembunuh tunggal. Iga/Koka tetap konteks di satu sektor, bukan dua bobot tambahan.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-ninja",
+        "sourceIds": [
+          "ninja-mlit",
+          "ninja-heritage"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Ninja",
+            "Bonus pending: Speed +1",
+            "Power diperoleh: Kage Bunshin",
+            "Tier Power: 3"
+          ],
+          "caption": "Satu ninja, rame sendiri.",
+          "displayContext": "Ninja; Speed +1; Kage Bunshin",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "alamut-assassins",
+        "label": "Assassins Alamut",
+        "aliases": [
+          "Hashashin",
+          "Hassan-i Sabbah",
+          "Hasan-i Sabbah"
+        ],
+        "origin": "Persia dan jaringan Nizari abad pertengahan",
+        "period": "Abad 11-13",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "targeted-assassination-agents",
+        "context": "Fidai yang terkait dengan negara Alamut dan Hasan-i Sabbah.",
+        "contextLimit": "Hasan adalah tokoh pemimpin; label mengacu pada agen historis tertentu, bukan semua penganut Nizari.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-alamut-assassins",
+        "sourceIds": [
+          "hasan-iranica"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Assassins Alamut",
+            "Bonus pending: Speed +1",
+            "Power diperoleh: Death Mark (Tanda Maut)",
+            "Tier Power: 4"
+          ],
+          "caption": "Nama lu masuk daftar.",
+          "displayContext": "Assassins Alamut; Speed +1; Death Mark (Tanda Maut)",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "sicarii",
+        "label": "Sicarii",
+        "origin": "Yudea pada masa Romawi",
+        "period": "Abad 1 M",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "political-assassination-group",
+        "context": "Kelompok kuno yang namanya berkaitan dengan belati dan pembunuhan politik.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-sicarii",
+        "sourceIds": [
+          "sicarii-je"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Sicarii",
+            "Bonus pending: Speed +1",
+            "Power diperoleh: Presence Concealment",
+            "Tier Power: 3"
+          ],
+          "caption": "Ada, tapi susah kebaca.",
+          "displayContext": "Sicarii; Speed +1; Presence Concealment",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "black-hand-serbia",
+        "label": "Black Hand",
+        "origin": "Serbia",
+        "period": "1911-1917",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "broader-secret-political-organization",
+        "context": "Organisasi rahasia Union or Death; anggotanya terkait jaringan konspirasi Sarajevo 1914.",
+        "contextLimit": "Bukan Black Hand kriminal Italia dan bukan nama lain untuk seluruh Young Bosnia.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-black-hand-serbia",
+        "sourceIds": [
+          "black-hand-eme"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Black Hand",
+            "Bonus pending: Speed +1",
+            "Weapon diperoleh: Pistol Black Hand"
+          ],
+          "caption": "Paket operasi rahasia.",
+          "displayContext": "Black Hand; Speed +1; Pistol Black Hand",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "narodnaya-volya",
+        "label": "Narodnaya Volya",
+        "origin": "Kekaisaran Rusia",
+        "period": "Akhir abad 19",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "broader-revolutionary-organization",
+        "context": "People's Will, organisasi revolusioner yang menargetkan pejabat dan membunuh Tsar Alexander II pada 1881.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-narodnaya-volya",
+        "sourceIds": [
+          "peoples-will-erh"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Narodnaya Volya",
+            "Bonus pending: Speed +1",
+            "Weapon diperoleh: Bom Dinamit"
+          ],
+          "caption": "Datang bawa dinamit.",
+          "displayContext": "Narodnaya Volya; Speed +1; Bom Dinamit",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "murder-inc",
+        "label": "Murder Inc. (Mafia)",
+        "origin": "Amerika Serikat",
+        "period": "1930-an hingga awal 1940-an",
+        "candidateAuthority": "Six-type roster accepted by direct user instruction on 2026-10-10; exact reward recipe authored within delegated scope.",
+        "historicalCategory": "organized-crime-killer-network",
+        "context": "Jaringan pembunuh bayaran dunia kriminal New York; Murder Inc. adalah julukan pers.",
+        "baseWeight": 1,
+        "rewardProfileRef": "assassin-reward-murder-inc",
+        "sourceIds": [
+          "murder-inc-mob-museum"
+        ],
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Archetype: Assassin",
+            "Jenis Assassin: Murder Inc. (Mafia)",
+            "Bonus pending: Speed +1",
+            "Weapon diperoleh: Tommy Gun"
+          ],
+          "caption": "Mafia starter pack.",
+          "displayContext": "Murder Inc. (Mafia); Speed +1; Tommy Gun",
+          "futureResultsUnknown": true
+        }
+      }
+    ],
+    "outcomeCount": 6,
+    "drawCount": 1
+  },
+  "reserveCandidates": [
+    {
+      "id": "krypteia",
+      "label": "Krypteia Sparta",
+      "active": false,
+      "reason": "Identitas sebagai institusi assassin masih diperdebatkan; riset modern juga menafsirkannya sebagai latihan survival dan unit militer.",
+      "sourceIds": [
+        "krypteia-psoma"
+      ]
+    }
+  ],
+  "contracts": {
+    "order": "Actual Assassin result/reaction -> one equal Assassin Type spin -> register Speed+1 and grant exactly its one linked reward atomically -> actual subtype/grant reaction -> Backstory.",
+    "probability": "All six types accepted; each baseWeight1 and ordinary probability1/6. Rewards/power tiers do not introduce rarity or a category wheel. Retain authorized eligibility/distribution policies.",
+    "reward": "Apply only the selected recipe: +1 numeric Speed plus one power OR one weapon, never both. Fixed grant is not a power/weapon acquisition draw and adds no extra subtype/rarity/success/count wheel.",
+    "speed": "Register a source-owned +1 Speed ledger once at the committed subtype result. Calculate only during final bonus phase from immutable retained raw stat plus distinct active modifiers; do not increase current raw score or roll a stat here.",
+    "power": "Each power is ordinary recipient-owned Tier3/4 with one shared character Power Mastery later, retained after normal Power None. No mastery boost, God Authority maximum or power Enchant. Tier is intrinsic and independent of mastery.",
+    "weapon": "One weapon instance from its exact definition, with normal per-active-weapon mastery later and final compatible effective-Master5+ Enchant. Normal main Weapon acquisition remains scheduled. Respect existing central inventory guards; a blocked weapon gives no reroll or guessed replacement and does not cancel Speed+1.",
+    "historyVsMechanics": "Historical sources provide context only. Exact game power/weapon recipes are authored fantasy adaptations authorized by this reward brief, not factual claims about real groups. Do not dispatch historical hero/race/group events.",
+    "ledger": "Freeze Assassin rule/version, actual pool/odds, subtype, selected recipe and canonical definition/tier metadata. Stable source key runId/sourceArchetypeInvocationId/sourceAssassinTypeSpinId/eventProfileId; atomic commit once, replay/media retries reuse grants/modifier without another draw or duplicate inventory.",
+    "context": "Stack actual selected type, acquired reward and pending numeric Speed bonus with provenance. At reaction time do not reveal future stat/mastery/Backstory. Short captions create no implicit funny-result tag or Shrek trigger.",
+    "return": "Restore Backstory after the one subtype child transaction/reaction. Preserve all earlier source-owned rewards and the approved stage order.",
+    "existingPolicies": "Preserve accepted Archetype eligibility, global owned-race exclusions, one Size, shared Power Mastery and final bonus/Enchant timing. Type selection is not an owned-race draw and changes no race history.",
+    "runtime": "Core event design approved; final body-role fit, intrinsic capability/equipment profiles and runtime executor remain configuration. Whole Archetype roster is not automatically active.",
+    "migration": "Old draft/frozen results remain unchanged under reference/before-assassin-rewards-2026-10-10.json; new invocations use assassin/0.2.0. Do not retroactively grant rewards to old journals.",
+    "recipeAuthority": "Execute the selected rewardProfiles entry once: its statModifiers list and its one grant are the sole reward instructions. Other display/profile metadata never dispatch a duplicate reward."
+  },
+  "powers": [
+    {
+      "id": "assassin-kage-bunshin",
+      "label": "Kage Bunshin",
+      "scope": "Membuat beberapa klon bayangan yang membantu mengalihkan perhatian dan bertarung.",
+      "affinityTags": [
+        "shadow",
+        "clone"
+      ],
+      "group": "assassin-subtype-power",
+      "contentStatus": "Authored editable thematic game ability within the accepted reward brief; not a claim about historical members.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Klon memiliki durasi/jumlah/ketahanan terbatas sesuai profil dan mastery. Bukan karakter mandiri, ras baru, grant senjata atau spin stat/mastery tambahan.",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Clone/body control with several useful tactical forms is an authored Tier 3 capability.",
+      "powerTierRef": "content/power-tier-design.json#assassin-kage-bunshin",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Kage Bunshin",
+          "Tier Power: 3"
+        ],
+        "displayContext": "Kage Bunshin"
+      }
+    },
+    {
+      "id": "assassin-death-mark",
+      "label": "Death Mark (Tanda Maut)",
+      "scope": "Menandai satu lawan dan melemahkan vitalitasnya secara bertahap.",
+      "affinityTags": [
+        "mark",
+        "curse"
+      ],
+      "group": "assassin-subtype-power",
+      "contentStatus": "Authored editable thematic game ability within the accepted reward brief; not a claim about historical members.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Tanda memiliki target/range/durasi/cost/resistance yang dikonfigurasi. Tidak otomatis membunuh, mengabaikan seluruh pertahanan, atau mengendalikan hidup-mati secara mutlak.",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "An authored target-bound supernatural vitality curse is Tier 4 hax, without absolute death authority.",
+      "powerTierRef": "content/power-tier-design.json#assassin-death-mark",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Death Mark (Tanda Maut)",
+          "Tier Power: 4"
+        ],
+        "displayContext": "Death Mark (Tanda Maut)"
+      }
+    },
+    {
+      "id": "assassin-presence-concealment",
+      "label": "Presence Concealment",
+      "scope": "Menyamarkan kehadiran tubuh dan aura sehingga sulit dideteksi.",
+      "affinityTags": [
+        "stealth",
+        "aura"
+      ],
+      "group": "assassin-subtype-power",
+      "contentStatus": "Authored editable thematic game ability within the accepted reward brief; not a claim about historical members.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Deteksi/perlawanan/durasi dan interaksi serangan mengikuti profil. Tidak berarti tak tersentuh, menghapus keberadaan, atau invisibility Tier 2 yang diam-diam dinaikkan.",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Broader supernatural masking of presence and aura is authored Tier 3, distinct from the existing personal Invisibility Tier 2.",
+      "powerTierRef": "content/power-tier-design.json#assassin-presence-concealment",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Presence Concealment",
+          "Tier Power: 3"
+        ],
+        "displayContext": "Presence Concealment"
+      }
+    }
+  ],
+  "weapons": [
+    {
+      "id": "assassin-black-hand-pistol",
+      "label": "Pistol Black Hand",
+      "kind": "pistol",
+      "scope": "Senjata bertema assassin konspirasi; satu pistol fantasi, tanpa bonus akurasi/stat bawaan.",
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantmentStatus": "Intrinsic compatibility/slots require configuration; final effective Weapon Mastery>=5 is the existing threshold, not a guaranteed enchant.",
+      "contentStatus": "Authored editable group-themed game weapon; no factual historical loadout claim.",
+      "intrinsicProfileStatus": "Ammo/range/output/reload/equipment-fit/control limits pending; no unlimited ammo or numerical boost inferred.",
+      "resultContext": {
+        "facts": [
+          "Weapon diperoleh: Pistol Black Hand"
+        ],
+        "displayContext": "Pistol Black Hand"
+      }
+    },
+    {
+      "id": "assassin-dynamite-bomb",
+      "label": "Bom Dinamit",
+      "kind": "explosive weapon",
+      "scope": "Satu jenis weapon ledakan bertema Narodnaya Volya. Kapasitas dan persediaan mengikuti profil game.",
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantmentStatus": "Intrinsic compatibility/slots require configuration; final effective Weapon Mastery>=5 is the existing threshold, not a guaranteed enchant.",
+      "contentStatus": "Authored editable group-themed game weapon; no factual historical loadout claim.",
+      "intrinsicProfileStatus": "Ammo/range/output/reload/equipment-fit/control limits pending; no unlimited ammo or numerical boost inferred.",
+      "resultContext": {
+        "facts": [
+          "Weapon diperoleh: Bom Dinamit"
+        ],
+        "displayContext": "Bom Dinamit"
+      }
+    },
+    {
+      "id": "assassin-tommy-gun",
+      "label": "Tommy Gun",
+      "kind": "submachine gun",
+      "scope": "Weapon bergaya gangster era 1930-an; hadiah game untuk Murder Inc., bukan klaim semua anggotanya memakai senjata ini.",
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantmentStatus": "Intrinsic compatibility/slots require configuration; final effective Weapon Mastery>=5 is the existing threshold, not a guaranteed enchant.",
+      "contentStatus": "Authored editable group-themed game weapon; no factual historical loadout claim.",
+      "intrinsicProfileStatus": "Ammo/range/output/reload/equipment-fit/control limits pending; no unlimited ammo or numerical boost inferred.",
+      "resultContext": {
+        "facts": [
+          "Weapon diperoleh: Tommy Gun"
+        ],
+        "displayContext": "Tommy Gun"
+      }
+    }
+  ],
+  "researchRef": "reference/assassin-group-research.json",
+  "pendingDecisions": [],
+  "eventProfileId": "assassin-type-reward",
+  "rewardProfiles": [
+    {
+      "id": "assassin-reward-ninja",
+      "subtypeId": "ninja",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "power",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-kage-bunshin"
+        },
+        "count": 1,
+        "grantMode": "power"
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Power: Kage Bunshin"
+    },
+    {
+      "id": "assassin-reward-alamut-assassins",
+      "subtypeId": "alamut-assassins",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "power",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-death-mark"
+        },
+        "count": 1,
+        "grantMode": "power"
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Power: Death Mark (Tanda Maut)"
+    },
+    {
+      "id": "assassin-reward-sicarii",
+      "subtypeId": "sicarii",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "power",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-presence-concealment"
+        },
+        "count": 1,
+        "grantMode": "power"
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Power: Presence Concealment"
+    },
+    {
+      "id": "assassin-reward-black-hand-serbia",
+      "subtypeId": "black-hand-serbia",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "weapon",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-black-hand-pistol"
+        },
+        "count": 1
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Weapon: Pistol Black Hand"
+    },
+    {
+      "id": "assassin-reward-narodnaya-volya",
+      "subtypeId": "narodnaya-volya",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "weapon",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-dynamite-bomb"
+        },
+        "count": 1
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Weapon: Bom Dinamit"
+    },
+    {
+      "id": "assassin-reward-murder-inc",
+      "subtypeId": "murder-inc",
+      "status": "User-approved reward shape; authored editable exact thematic item.",
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "grant": {
+        "kind": "weapon",
+        "definitionRef": {
+          "definitionFile": "content/assassin-events-design.json",
+          "definitionId": "assassin-tommy-gun"
+        },
+        "count": 1
+      },
+      "additionalAcquisitionSpinCount": 0,
+      "display": "Speed +1; Weapon: Tommy Gun"
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "assassin-type",
+      "definitionFile": "content/assassin-events-design.json",
+      "invocationCount": 1,
+      "stepId": "assassin-type-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; event planner/resolver and grant persistence adapter not implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Editable exact power/weapon descriptions within accepted six-type roster and Tier3/4 reward brief.",
+    "Intrinsic power cost/range/duration/target/resistance and weapon ammo/output/enchantment/equipment-fit profiles.",
+    "Final Assassin body-role compatibility and boost band; no implicit eligibility change.",
+    "Runtime subtype planner, atomic grant/modifier transaction and journal/persistence adapter."
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-assassin-rewards-2026-10-10.json",
+    "policy": "Old draft/frozen results remain unchanged under reference/before-assassin-rewards-2026-10-10.json; new invocations use assassin/0.2.0. Do not retroactively grant rewards to old journals."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "roda-kekacauan-equalizer/0.1",
+  "version": "equalizer/0.1.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "equaliser",
+  "displayLabel": "Equalizer",
+  "sourceLabel": "Equaliser",
+  "aliases": [
+    "Equaliser"
+  ],
+  "eventProfileId": "equalizer-future-uniform-wheels",
+  "status": "User-approved all-subsequent-wheel uniform odds including both masteries; algorithm design. Body-role fit and odds-policy executor remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Equalizer makes the probabilities of stat numbers equal regardless of race or archetype lore.",
+      "Include Weapon Mastery and Power Mastery.",
+      "Extend the equal-probability rule to every later wheel, including Weakness."
+    ],
+    "interpretation": "All later actual character-mechanics wheels use uniform per-eligible-outcome odds, replacing fixed ratios/shapes/group mass and conditional probability biases. Preserve independent eligibility/guarantees, wheel structure, ownership and numeric bonus contracts."
+  },
+  "policy": {
+    "id": "equalizer-future-uniform-wheels",
+    "operation": "replace-future-distribution-with-uniform",
+    "scope": "all-subsequent-character-mechanics-wheel-invocations",
+    "activation": "Register once when the actual Equalizer Archetype result commits; applies to invocation odds snapshots begun after this source activation, including descendants and final-phase Enchant.",
+    "drawCountAtArchetype": 0,
+    "returnTo": "backstory",
+    "weightPerEligibleCanonicalOutcome": 1,
+    "formula": "N = count(canonical eligible outcomes); P(i) = eligible(i) ? 1/N : 0",
+    "priority": "After wheel selection and all explicit eligibility/disabled/guarantee filters, instead of ordinary weight/shape/group-mass/conditional-factor calculation, before freezing probabilities/draw.",
+    "coveredExamples": [
+      "Backstory and its event children",
+      "Size and Cosmic/thematic child wheels",
+      "Strength/Speed/Durability/Intelligence/Fight",
+      "Weapon acquisition/details and each active-weapon raw Weapon Mastery",
+      "Power acquisition/details/bonus acquisitions and one shared raw Power Mastery",
+      "Weakness and its children",
+      "Apex and any authorized chance/bonus-stat wheel",
+      "Title and hidden children",
+      "Final-phase compatible Enchant and its approved child wheels",
+      "Any authorized later race/origin/count/chance/theme wheel; invocation history and caller guards still apply"
+    ],
+    "suppressedWeightRules": [
+      "Race/archetype/backstory lore bias and later conditional probability factors",
+      "Ordinary base rarity weights and explicit ratios",
+      "Ordinary Size Gaussian/normal weight shape",
+      "God normal Power80% None/20%power group-mass postprocessor",
+      "Mage tier factors or other approved high/low-tier weight boosts if the invocation is otherwise authorized"
+    ],
+    "retainedRules": [
+      "Explicit outcome membership, disabled/forbidden status and compatible wheel variants",
+      "Global own-race no-repeat and without-replacement armor/other sampling filters",
+      "Minimum/master/max or guaranteed-acquisition hard constraints; no phantom power/weapon",
+      "Original main-flow/event order, activation conditions and required draw counts",
+      "Normal raw result ownership, Resilient retry count and shared Power Mastery reuse",
+      "All numeric bonuses/debuffs at final phase, source-bound God Authority max and effective Weapon Mastery Enchant gate",
+      "Final activation/depth limits and source-once ledgers"
+    ],
+    "numericScale": {
+      "catalog": "stat-scales-design.json",
+      "fullPool": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "probabilityPerNumberForFullPool": 0.1,
+      "requirement": "One canonical outcome per eligible number in stat/mastery wheels; normalize display aliases without creating extra sectors. Unresolved duplicate-number membership requires configuration, never bias from alias count."
+    },
+    "noNewWheels": true,
+    "extraStatBonus": 0,
+    "extraMasteryBonus": 0,
+    "extraPower": false,
+    "extraWeapon": false
+  },
+  "followups": [],
+  "directEffects": [
+    {
+      "type": "register-deferred-distribution-policy",
+      "policyId": "equalizer-future-uniform-wheels",
+      "sourceOnce": true
+    }
+  ],
+  "powers": [],
+  "weapons": [],
+  "contracts": {
+    "order": "Actual Equalizer result/reaction -> register future uniform-odds policy -> Backstory. Every subsequent actual mechanics wheel selects its valid pool, filters explicit guards, freezes uniform actual probabilities and draws the usual number of times.",
+    "defaultDifference": "Normal equal-default only fills unspecified base weights before explicit distributions/lore modifiers. Equalizer is a character-owned override that forces final eligible probabilities uniform even when the ordinary profile is biased or fixed. Other characters retain their configured distributions.",
+    "noCatalogMutation": "Replace the current invocation distribution only. Do not rewrite canonical ratios/normal Size templates/modifier definitions or a different character catalog. Record the suppressed ordinary profile references when available; an unconfigured lore-weight profile is not invented or calculated as a required counterfactual.",
+    "constraints": "Probability equality does not remove structural eligibility. Apply hard minimum/maximum/guaranteed-grant/no-repeat/compatibility filters first, then equalize the remaining choices. Full0..9=10% each; constrained5..9=20% each; max-only9=100%. A zero probability caused only by ordinary lore/rarity weighting can become positive under Equalizer if still independently eligible; an explicit forbidden/disabled outcome remains excluded.",
+    "hierarchy": "Uniform per actual wheel, not per all leaf paths or Tier1..5 groups. Do not flatten the event tree, invent a has-power/tier selector or balance unequal group counts. An actual pool None plus three allowed powers has four25% outcomes; a guaranteed-power wheel still excludes None before equalization.",
+    "fixedOverride": "Equalizer is a named user-authorized distribution override, not an ordinary multiplicative modifier. Fixed-wheel allowModifiers:false and ordinary God80/20/Size shape protection do not block this policy on subsequent authorized invocations. No final ordinary group-mass/ratio postprocessor may reintroduce a bias after uniformization.",
+    "temporal": "Do not apply to requester selection, original Race/events, the Archetype draw that selected Equalizer, or earlier frozen/committed invocations. Freeze each future wheel just in time with its active policy; source activation is part of the invocation proof. No retroactive reweighting/resampling on resume.",
+    "allLater": "Includes event descendants, retries, authorized late acquisition/mastery slots and final-phase Enchant. Missing Weakness/Apex/Title catalogs remain configuration; equal odds do not invent their options. Fixed grants, image/meme/narration randomness and non-wheel calculations are not extra mechanics draws.",
+    "bonuses": "Equalizer changes probabilities only. Retain all original grants/bonus sources and end-only bonus timing. Mastery remains per-active-weapon/one common power base, not one draw per power. God max is fixed instance override; Enchant still requires final effective Weapon Mastery>=5 and compatible unused slot.",
+    "gate": "Reuse the existing accepted Race->Archetype eligibility gate and chosen role. This rule does not grant Archetype to God/Raksasa/other skipped races or authorize multiple roles. Strong race examples describe hypothetical stat bias, not new eligibility.",
+    "composition": "A newly configured composite odds policy must explicitly declare compatible wheel variants/constraints. Once an otherwise-authorized wheel runs after active Equalizer, this uniform distribution has precedence over its weight biases. No additional Archetype/Gambler mode is inferred.",
+    "ledger": "Freeze rule version, active Equalizer source invocation/spin ID, activation journal index, canonical wheel/options, eligible/disabled IDs and constraint proofs, uniform weights/probabilities and suppressed profile refs before drawing. Deduplicate activation and each actual source invocation; replay/media retries reuse frozen distributions/results.",
+    "reaction": "Stack actual Equalizer source fact and known uniform distribution. Narrator may say semua peluang disamain. Unknown future results remain unknown; uniform odds does not make the actual rolled values identical. No caption-derived funny tag.",
+    "return": "No immediate child spin. Continue to Backstory. Every later wheel/event retains its original saved caller and normal required stages; final bonus/Enchant/image ordering unchanged.",
+    "migration": "Old frozen/committed wheels keep their original odds and seeded outcomes. New runs with active policy use equalizer/0.1.0; do not add Equalizer or rewrite old results.",
+    "loreMembership": "Future ordinary stat lore profiles use weights over declared0..9 scale, not a preferred-band hard exclusion. Only separately approved true guarantees/compatibility may restrict membership; unresolved lore-vs-guard classification needs_configuration."
+  },
+  "futureNormalLoreDesign": {
+    "status": "User describes direction; exact race/archetype conditional stat-weight tables remain to be designed later.",
+    "examples": [
+      {
+        "race": "human",
+        "preferredStatBandDescription": "Mid to Peak Human, rather than forced guaranteed outcomes",
+        "illustrativeStrengthValues": [
+          2,
+          3
+        ]
+      },
+      {
+        "race": "god",
+        "preferredStatBandDescription": "Near Universal",
+        "illustrativeStrengthValue": 8
+      }
+    ],
+    "numericWeightsAssigned": false,
+    "scope": "A lore-based odds profile is separate from fixed numeric grants and body/Archetype gate eligibility. Equalizer bypasses only its weighting."
+  },
+  "examples": [
+    {
+      "wheel": "full raw stat/mastery",
+      "eligibleValues": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "probabilities": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "wheel": "generic later two-option chance",
+      "ordinaryWeights": [
+        1,
+        9
+      ],
+      "equalizerWeights": [
+        1,
+        1
+      ],
+      "probabilities": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "wheel": "ordinary Size12 sections",
+      "eligibleCount": 12,
+      "probabilityPerOption": "1/12",
+      "physicalSizesChanged": false
+    },
+    {
+      "wheel": "Weakness",
+      "eligibleCount": "N from approved catalog",
+      "probabilityPerOption": "1/N",
+      "weaknessEffectsChanged": false
+    },
+    {
+      "wheel": "minimum-rank-constrained mastery (only if invocation is independently authorized)",
+      "eligibleValues": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "probabilities": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; final odds-policy selector/sampler adapter and persistence not implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Future normal race/archetype/backstory lore stat-weight profiles and approved outcome catalogs",
+    "Final Equalizer body-role fit/boost band and complete Archetype roster",
+    "Explicit combined variants if ever authorized; no automatic role stacking",
+    "Runtime per-invocation odds policy/freeze/resume executor"
+  ],
+  "resultContext": {
+    "facts": [
+      "Archetype: Equalizer",
+      "Semua peluang roda berikutnya disamain"
+    ],
+    "displayContext": "Equalizer. Semua peluang disamain.",
+    "futureResultsUnknown": true
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

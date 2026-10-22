@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "roda-kekacauan-apostle/0.1",
+  "version": "apostle/0.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "apostle",
+  "eventProfileId": "apostle-patron-power",
+  "status": "Core equal God/Devil patron -> one canonical Divine/Demonic acquisition and all-power +1 shared mastery approved. Power limits/body-role fit/mastery scale/runtime helper remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Apostle is analogous to Utusan Tuhan, but first spins Apostle of whom: God or Devil/Demon; unspecified equal-default gives 50/50.",
+      "God patron leads to exactly one canonical Divine Power spin; Devil/Demon patron leads to exactly one canonical Demonic Power spin.",
+      "User explicitly confirms Apostle also gives +1 Power Mastery for all owned powers, not only the themed result."
+    ],
+    "clarification": "Explicit new patron-dependent themed wheels replace any implied Utusan Concept route for Apostle only. Existing Utusan Tuhan race event unchanged. Devil and Demon are one patron outcome alias, not two weighted choices. Latest user correction: Devil uses the independent twenty-outcome Demonic pool."
+  },
+  "patronWheel": {
+    "id": "apostle-patron",
+    "label": "Utusan Siapa?",
+    "drawCount": 1,
+    "outcomeCount": 2,
+    "outcomes": [
+      {
+        "id": "god",
+        "label": "God",
+        "wheelId": "power-divine",
+        "count": 20,
+        "baseWeight": 1,
+        "probability": 0.5,
+        "effects": [
+          {
+            "type": "register-shared-power-mastery-modifier",
+            "definitionFile": "apostle-events-design.json",
+            "definitionRef": "powerMasteryModifier",
+            "modifierId": "apostle-power-mastery"
+          },
+          {
+            "type": "invoke-shared-wheel",
+            "definitionFile": "universal-power-wheels-design.json",
+            "wheelId": "power-divine",
+            "invocationCount": 1,
+            "catalogVersion": "universal-power/0.2.0"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Apostle dari God",
+            "Satu Divine Power spin",
+            "+1 Power Mastery untuk semua power"
+          ],
+          "futureResultsUnknown": true
+        },
+        "catalogVersion": "universal-power/0.2.0"
+      },
+      {
+        "id": "devil",
+        "label": "Devil",
+        "aliases": [
+          "Demon"
+        ],
+        "wheelId": "power-demonic",
+        "count": 20,
+        "baseWeight": 1,
+        "probability": 0.5,
+        "effects": [
+          {
+            "type": "register-shared-power-mastery-modifier",
+            "definitionFile": "apostle-events-design.json",
+            "definitionRef": "powerMasteryModifier",
+            "modifierId": "apostle-power-mastery"
+          },
+          {
+            "type": "invoke-shared-wheel",
+            "definitionFile": "universal-power-wheels-design.json",
+            "wheelId": "power-demonic",
+            "invocationCount": 1,
+            "catalogVersion": "universal-power/0.2.0"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Apostle dari Devil",
+            "Satu Demonic Power spin",
+            "+1 Power Mastery untuk semua power"
+          ],
+          "futureResultsUnknown": true
+        },
+        "catalogVersion": "universal-power/0.2.0"
+      }
+    ]
+  },
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-divine",
+      "definitionFile": "universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "invocationCount": 1,
+      "guard": "Actual god patron only",
+      "catalogVersion": "universal-power/0.2.0"
+    },
+    {
+      "wheelId": "power-demonic",
+      "definitionFile": "universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "invocationCount": 1,
+      "guard": "Actual devil patron only",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "powerMasteryModifier": {
+    "id": "apostle-power-mastery",
+    "amount": 1,
+    "unit": "ordered mastery rank steps",
+    "operation": "add-rank-steps",
+    "scope": "all-owned-powers",
+    "sourceProfileId": "apostle-patron-power",
+    "status": "User-confirmed all-power +1 applies for either patron, once to ordinary shared rank; source-bound God Authority uses base9 plus shared modifiers.",
+    "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+    "sourceKey": "runId/modifierId/sourceArchetypeInvocationId/sourcePatronSpinId",
+    "stackingRef": "framework/spec.json#powerMasteryContract.stacking",
+    "scopeAuthority": "Direct user answer: Ya, +1 Power Mastery untuk semua power",
+    "independence": "Distinct from utusan-tuhan-power-mastery; if both authorized source bonuses exist, each adds once under the existing additive policy. Neither replaces or repeats the other.",
+    "lateActivation": "Register new source as pending. Before final phase do not project; within final phase refresh from the same retained immutable base plus current distinct sources, preserving God instance overrides. No mastery redraw or compounded bonus.",
+    "emptyInventory": "No phantom power or mastery. Complete selected thematic acquisition and the normal later inventory gate.",
+    "enchantment": "Never from Power Mastery; no bonus-induced acquisition/event spin.",
+    "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+  },
+  "powers": [],
+  "weapons": [],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "apostle-patron",
+      "definitionFile": "apostle-events-design.json",
+      "invocationCount": 1,
+      "stepId": "apostle-patron-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "conditionalFollowups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "power-divine",
+      "definitionFile": "universal-power-wheels-design.json",
+      "guard": "Actual god patron",
+      "invocationCount": 1,
+      "stepId": "apostle-god-power-1",
+      "returnTo": "backstory",
+      "catalogVersion": "universal-power/0.2.0"
+    },
+    {
+      "type": "spin-wheel",
+      "wheelId": "power-demonic",
+      "definitionFile": "universal-power-wheels-design.json",
+      "guard": "Actual devil patron",
+      "invocationCount": 1,
+      "stepId": "apostle-devil-power-1",
+      "returnTo": "backstory",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "contracts": {
+    "order": "Actual Apostle/reaction -> one equal patron spin -> register +1 all-owned mastery modifier/reaction -> one selected canonical Divine or Demonic spin/grant/reaction -> Backstory. Exactly two actual child spins, only one thematic branch.",
+    "probability": "God 1/2, Devil 1/2 by equal default. Reuse power-divine twenty or power-demonic twenty canonical outcomes/base weights unchanged. Base per-entry 1/20 or 1/20 before separately approved applicable modifiers; branch count does not alter 50/50 patron odds.",
+    "grant": "Grant exactly the actual selected canonical ordinary power once, sourced to the thematic child result. Freeze exact definition/grant mode/tier metadata under existing powerTierContract. No new power definition or tier boost.",
+    "mastery": "Both patrons give exactly one +1 source modifier affecting every owned ordinary power through the single common rank, including earlier/normal/bonus/future grants. Preserve actual raw mastery, the signed, unbounded score policy and source-bound God Authority maximum. Do not multiply +1 by power count or patron/thematic invocation count.",
+    "inventory": "Selected early power survives main Power None. Keep normal main/bonus acquisitions and one shared mastery inventory gate. No weapon/stat bonus, extra normal acquisition ticket, power Enchant or mastery-triggered wheel.",
+    "identity": "Patron is a spiritual-affiliation reference, not a new God/Devil race. God invokes canonical Divine; Devil invokes canonical Demonic, superseding the old Cursed branch. No Heavenly/Abyssal, followers, Concept, God scarcity/max or Utusan race dispatch.",
+    "ledger": "Freeze patron and canonical thematic pool/weights/version, modifier definition/source and actual selected power reference/tier. Commit patron/modifier once; thematic child grant once under its own source key. Restore exact saved continuations; replay/media retry gives no duplicate modifier/power/spin or second branch.",
+    "reaction": "Append actual patron and pending themed route/+1 all-power modifier, then actual selected power facts/tier. Future mastery/Backstory/stats remain unknown. No caption-derived funny-result tag.",
+    "return": "After the selected thematic child and reaction restore Backstory; retain other source grants, raw-stat conditions and the remaining main flow.",
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "runtimeInterface": {
+    "status": "design-only; patron/thematic planner and modifier persistence helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "existing canonical Divine/Demonic intrinsic power limits",
+    "Raw shared mastery0..9 and signed unbounded finals approved; profile odds remain to configure.",
+    "final Archetype body/role fit and boost band",
+    "runtime event planner/source-ledger/persistence adapter"
+  ],
+  "migrationContract": {
+    "retiredSnapshot": "reference/power-themes-before-2026-10-09.json",
+    "policy": "New invocations use this route/version and universal-power/0.2.0; committed old results keep their original version, route, pool and effects."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

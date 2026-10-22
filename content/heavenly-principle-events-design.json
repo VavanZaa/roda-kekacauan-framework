@@ -1,0 +1,757 @@
+{
+  "schemaVersion": "roda-kekacauan-heavenly-principle-events/0.1",
+  "status": "Six existing subtype packages/odds retained; God shared Power Mastery now fixed9 for all owned powers without a draw. No Concept/Divine/follower/scarcity changes.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "heavenly-principle",
+  "subtypeWheelId": "heavenly-principle-type",
+  "subtypeIds": [
+    "god",
+    "demigod",
+    "angel",
+    "utusan-tuhan",
+    "pemuka-agama",
+    "orang-saleh"
+  ],
+  "subtypeWeights": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+  ],
+  "weightTotal": 12,
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-concept-wheel-design.json",
+      "wheelId": "god-concept",
+      "callers": [
+        "god",
+        "demigod",
+        "utusan-tuhan"
+      ],
+      "outcomeCount": 12,
+      "rosterStatus": "assistant-proposed starter, adjustable"
+    },
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "wheelId": "power-divine",
+      "callers": [
+        "god",
+        "pemuka-agama"
+      ],
+      "outcomeCount": 20,
+      "orderedBy": "powerTier ascending 1..5; four results per tier",
+      "catalogVersion": "universal-power/0.2.0"
+    },
+    {
+      "definitionFile": "universal-follower-wheel-design.json",
+      "wheelId": "follower-count",
+      "callers": [
+        "god"
+      ],
+      "outcomeCount": 9,
+      "rewardProfileId": "god"
+    },
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "wheelId": "power-angelic",
+      "callers": [
+        "angel"
+      ],
+      "outcomeCount": 20,
+      "orderedBy": "powerTier ascending 1..5; four results per tier",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "powers": [
+    {
+      "id": "communication-with-god",
+      "label": "Komunikasi dengan Tuhan",
+      "group": "spiritual-communication",
+      "contentStatus": "User-defined fictional game power; phrasing does not assert a real religious mechanism.",
+      "scope": "Menerima/menyampaikan komunikasi bertema petunjuk ilahi sesuai limits game; tidak otomatis menyalin power, memanggil Tuhan sebagai petarung, mendapat jawaban sempurna, atau menambah stat.",
+      "affinityTags": [
+        "spiritual",
+        "communication",
+        "guidance"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Channel, frequency, clarity, limits, cost and rank-dependent expression pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Komunikasi dengan Tuhan"
+        ],
+        "narrativeContext": "Jalur komunikasi ilahi masuk daftar power; hasil lain tetap mengikuti spin."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Komunikasi/petunjuk terbatas; tema ilahi tidak memberi kendali ilahi.",
+      "powerTierRef": "content/power-tier-design.json#communication-with-god"
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "god",
+      "label": "God",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Divine base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "god",
+          "source": "actual committed Heavenly subtype result and component"
+        },
+        {
+          "type": "register-normal-power-odds-variant",
+          "definitionFile": "heavenly-principle-events-design.json",
+          "contractRef": "god-normal-power-scarcity",
+          "source": "actual God subtype result and component"
+        },
+        {
+          "type": "register-mastery-guarantee",
+          "target": "power-mastery",
+          "scope": "all-owned-powers",
+          "value": 9,
+          "operation": "fixed-base-no-rng",
+          "source": "actual committed God subtype result"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "god-concept",
+          "definitionFile": "universal-concept-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "grantPolicy": {
+            "role": "authority",
+            "scopeMode": "authority",
+            "powerAuthority": "selected canonical concept power only",
+            "masteryOverrideRef": "god-concept-authority-max-mastery"
+          },
+          "returnPoint": "next declared Heavenly child or saved caller",
+          "followupStepId": "concept-grant",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+        },
+        {
+          "wheelId": "power-divine",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 2,
+          "invocationCount": 2,
+          "drawCountPerInvocation": 1,
+          "execution": "Two sequential result/grant/reaction invocations; then follower-count, then saved caller.",
+          "mastery": "Fixed shared God base9 for all powers, then final shared modifiers; no mastery spin.",
+          "returnPoint": "next declared Heavenly child or saved caller",
+          "followupStepId": "divine-power-grants",
+          "sequenceIndex": 2,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "catalogVersion": "universal-power/0.2.0"
+        },
+        {
+          "wheelId": "follower-count",
+          "definitionFile": "universal-follower-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "follower-count",
+          "sequenceIndex": 3,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "rewardProfileId": "god"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: God",
+          "Satu Concept spin memberi Authority dengan shared Power Mastery dasar9 untuk semua power, tanpa spin mastery",
+          "Dua Divine Power spin berikutnya; power belum diketahui",
+          "Roda Power normal nanti: 80% None, 20% mendapat power",
+          "Satu jumlah pengikut spin sesudah dua Divine; hanya bonus kelima stat pada 1/10/100 juta"
+        ],
+        "displayContext": "Heavenly Principle terpilih: God. Satu Concept spin memberi Authority dengan shared Power Mastery dasar9 untuk semua power, tanpa spin mastery. Dua Divine Power spin berikutnya; power belum diketahui. Roda Power normal nanti: 80% None, 20% mendapat power. Satu jumlah pengikut spin sesudah dua Divine; hanya bonus kelima stat pada 1/10/100 juta.",
+        "narrationExample": "Authority dapet, dua Divine ikut. Cek pengikut; bonusnya stat, cari power tambahan cuma 20%.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Divine results only after their actual child results; main stat and shared rank values stay unknown until recorded. Follower count/reward only after actual follower child.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "demigod",
+      "label": "Demigod",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Divine base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "demigod",
+          "source": "actual committed Heavenly subtype result and component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual Demigod subtype result and source component",
+          "timing": "Record once on subtype commitment; add after each immutable base stat via numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual Demigod subtype result and source component",
+          "timing": "Record once on subtype commitment; add after each immutable base stat via numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual Demigod subtype result and source component",
+          "timing": "Record once on subtype commitment; add after each immutable base stat via numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual Demigod subtype result and source component",
+          "timing": "Record once on subtype commitment; add after each immutable base stat via numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual Demigod subtype result and source component",
+          "timing": "Record once on subtype commitment; add after each immutable base stat via numeric ledger."
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "god-concept",
+          "definitionFile": "universal-concept-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "grantPolicy": {
+            "role": "power",
+            "scopeMode": "power",
+            "powerAuthority": "selected canonical concept power only",
+            "mastery": "ordinary shared character mastery; no fixed maximum"
+          },
+          "returnPoint": "next declared Heavenly child or saved caller",
+          "followupStepId": "concept-grant",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: Demigod",
+          "Satu Concept spin memberi power biasa; tidak mendapat mastery maksimum",
+          "Bonus kelima main stat masing-masing +1 poin angka"
+        ],
+        "displayContext": "Heavenly Principle terpilih: Demigod. Satu Concept spin memberi power biasa; tidak mendapat mastery maksimum. Bonus kelima main stat masing-masing +1 poin angka.",
+        "narrationExample": "Demigod: semua stat +1. Concept dapet, mastery-nya tetap spin biasa.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Divine results only after their actual child results; main stat and shared rank values stay unknown until recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "angel",
+      "label": "Angel",
+      "baseWeight": 2,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Angelic base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "angel",
+          "source": "actual committed Heavenly subtype result and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "power-angelic",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 2,
+          "invocationCount": 2,
+          "drawCountPerInvocation": 1,
+          "execution": "Sequential one-result/grant/reaction invocations with distinct parent/component/child ordinal; finish before saved return.",
+          "mastery": "ordinary shared character mastery; no implicit God Concept Authority maximum",
+          "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+          "followupStepId": "angelic-power-grants",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "catalogVersion": "universal-power/0.2.0"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: Angel",
+          "Dua Angelic Power spin berikutnya; belum ada nama power hasilnya"
+        ],
+        "displayContext": "Heavenly Principle terpilih: Angel. Dua Angelic Power spin berikutnya; belum ada nama power hasilnya.",
+        "narrationExample": "Angel dapet dua Angelic spin. Power-nya tunggu hasil, bos.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Angelic results only after their actual child results; main stat and shared rank values stay unknown until recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "utusan-tuhan",
+      "label": "Utusan Tuhan",
+      "baseWeight": 2,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Divine base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "utusan-tuhan",
+          "source": "actual committed Heavenly subtype result and component"
+        },
+        {
+          "type": "register-power-mastery-modifier",
+          "definitionFile": "heavenly-principle-events-design.json",
+          "contractRef": "utusan-tuhan-power-mastery",
+          "amount": 1,
+          "operation": "add-rank-steps",
+          "scope": "all-owned-powers",
+          "source": "actual Utusan Tuhan subtype result and component",
+          "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+          "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "god-concept",
+          "definitionFile": "universal-concept-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "grantPolicy": {
+            "role": "power",
+            "scopeMode": "power",
+            "powerAuthority": "selected canonical concept power only",
+            "mastery": "ordinary shared character mastery; no fixed maximum"
+          },
+          "returnPoint": "next declared Heavenly child or saved caller",
+          "followupStepId": "concept-grant",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: Utusan Tuhan",
+          "Satu Concept spin memberi power biasa",
+          "Bonus +1 rank pada Power Mastery bersama terdaftar"
+        ],
+        "displayContext": "Heavenly Principle terpilih: Utusan Tuhan. Satu Concept spin memberi power biasa. Bonus +1 rank pada Power Mastery bersama terdaftar.",
+        "narrationExample": "Utusan Tuhan dapet Concept dan mastery +1. Power-nya ikut satu rank bersama.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Divine results only after their actual child results; main stat and shared rank values stay unknown until recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "pemuka-agama",
+      "label": "Pemuka Agama",
+      "baseWeight": 3,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Divine base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "pemuka-agama",
+          "source": "actual committed Heavenly subtype result and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "power-divine",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "execution": "Sequential one-result/grant/reaction invocations with distinct parent/component/child ordinal; finish before saved return.",
+          "mastery": "ordinary shared character mastery; no implicit God Concept Authority maximum",
+          "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+          "followupStepId": "divine-power-grants",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "catalogVersion": "universal-power/0.2.0"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: Pemuka Agama",
+          "Satu Divine Power spin berikutnya"
+        ],
+        "displayContext": "Heavenly Principle terpilih: Pemuka Agama. Satu Divine Power spin berikutnya.",
+        "narrationExample": "Pemuka Agama dapet satu Divine spin. Isi build-nya tunggu roda.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Divine results only after their actual child results; main stat and shared rank values stay unknown until recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "orang-saleh",
+      "label": "Orang Saleh",
+      "baseWeight": 3,
+      "status": "User-confirmed subtype, effects and exact 1:1:2:2:3:3 odds; concept starter and detailed limits remain balance work; Concept/Divine base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "heavenlySubtypeId",
+          "value": "orang-saleh",
+          "source": "actual committed Heavenly subtype result and component"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "heavenly-principle-events-design.json",
+          "definitionId": "communication-with-god",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual Orang Saleh subtype result and component"
+        }
+      ],
+      "followups": [],
+      "resultContext": {
+        "facts": [
+          "Heavenly Principle terpilih: Orang Saleh",
+          "Power diperoleh: Komunikasi dengan Tuhan"
+        ],
+        "displayContext": "Heavenly Principle terpilih: Orang Saleh. Power diperoleh: Komunikasi dengan Tuhan.",
+        "narrationExample": "Orang Saleh dapet Komunikasi dengan Tuhan. Jalur komunikasi kebuka.",
+        "availability": "Only after actual subtype commit and immediate effect registration. Name Concept/Divine results only after their actual child results; main stat and shared rank values stay unknown until recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; creates no unlisted power/stat, religious affiliation or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit granted effects/scarcity are active; other compatibility/odds remain pending.",
+        "basis": [
+          "actual Heavenly subtype",
+          "actual chosen Concept and grant role",
+          "actual owned powers",
+          "source-scoped approved stat/mastery/scarcity rules"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    }
+  ],
+  "contracts": {
+    "routing": "Commit/react to family, spin one subtype at declared weights, commit subtype source effects and react, resolve declared child wheels sequentially with a reaction per result, then restore saved caller.",
+    "profileAuthority": "Profiles here are canonical. Inline race outcomes are mirrors/pointers and must not execute a second copy.",
+    "fixedOdds": {
+      "order": [
+        "god",
+        "demigod",
+        "angel",
+        "utusan-tuhan",
+        "pemuka-agama",
+        "orang-saleh"
+      ],
+      "weights": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "total": 12,
+      "probabilities": [
+        {
+          "numerator": 1,
+          "denominator": 12
+        },
+        {
+          "numerator": 1,
+          "denominator": 12
+        },
+        {
+          "numerator": 2,
+          "denominator": 12
+        },
+        {
+          "numerator": 2,
+          "denominator": 12
+        },
+        {
+          "numerator": 3,
+          "denominator": 12
+        },
+        {
+          "numerator": 3,
+          "denominator": 12
+        }
+      ]
+    },
+    "godAuthorityMaximum": {
+      "id": "god-concept-authority-max-mastery",
+      "scope": "all-owned-powers",
+      "status": "User confirmed all God powers use shared base9 and skip Power Mastery spin.",
+      "operation": "set-shared-power-mastery-base-to-9",
+      "target": "All actual owned powers of the committed God character, including Authority, Divine and ordinary future grants.",
+      "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+      "formula": "Every God owned power final mastery =9 + distinct applicable shared modifiers.",
+      "sharedBase": "One fixed shared base9; no sampled result or mastery reaction.",
+      "ordinaryPowers": "Actual God subtype fixes the one shared Power Mastery base9 for all owned present/future powers, including Authority, Divine and ordinary grants.",
+      "sourceKey": "runId/sourceGodComponentId/sourceConceptSpinId/sourceGrantId/powerInstanceId/overrideId",
+      "projectionGuard": "Actual committed God source only; no activation by matching a name/definition.",
+      "duplicatePolicy": "Deduplicate the same source grant on replay. Authority-mode and ordinary concept-power grants remain distinct source instances; never merge them in a way that transfers the max override.",
+      "limits": "Fixed base9; final signed/unbounded. No intrinsic Tier/concept/domain or main-stat maxima are granted.",
+      "enchantment": "Never from Power Mastery.",
+      "baseValue": 9,
+      "runtimeRuleId": "god-all-power-mastery-max"
+    },
+    "godPowerScarcity": {
+      "id": "god-normal-power-scarcity",
+      "status": "User-confirmed normal Power result split: 80% None, 20% a power.",
+      "activation": "An actual committed God subtype source. Register source once; multiple references/replays do not multiply the 80% failure mass.",
+      "target": "Later normal Power acquisition wheel: main stage and authorized normal-pool bonus acquisitions whose guard permits None.",
+      "excluded": "God Concept, all Divine/themed event calls, fixed grants, direct title rewards and acquisitions explicitly guaranteed to exclude None are unaffected.",
+      "distribution": {
+        "noneProbability": 0.8,
+        "powerProbability": 0.2,
+        "powerConditionalOdds": "After all declared eligible-power guards and modifiers, normalize the remaining positive non-None weights within the 20% group."
+      },
+      "formula": "P(None)=0.8; P(eligible power i)=0.2*effectiveWeight(i)/sum(effectiveWeight(eligible non-None powers))",
+      "resolution": "One actual normal Power spin with this final odds snapshot. No preliminary success/failure wheel or reroll. Main None never removes owned Authority/Divine/fixed powers.",
+      "validation": "For an applicable normal draw require an eligible configured None result and at least one eligible non-None positive weight. Unspecified base weights use 1; missing pools or invalid/zero-total eligible weights are configuration errors.",
+      "idempotence": "Freeze/commit actual odds and result once by invocation. Resume/replay does not draw again."
+    },
+    "powerMasteryModifiers": [
+      {
+        "id": "utusan-tuhan-power-mastery",
+        "amount": 1,
+        "unit": "ordered mastery rank steps",
+        "operation": "add-rank-steps",
+        "scope": "all-owned-powers",
+        "status": "User-confirmed +1 Power Mastery; applies to the one shared character rank for ordinary powers, while any actual God Authority uses base9 plus the same final shared modifiers.",
+        "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+        "sourceKey": "characterId/modifierDefinitionId/sourceComponentId/sourceSpinId",
+        "stackingRef": "framework/spec.json#powerMasteryContract.stacking",
+        "emptyInventory": "No phantom power/mastery draw. Finish normal acquisitions and use the one inventory gate.",
+        "enchantment": "Never from Power Mastery.",
+        "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+      }
+    ],
+    "numericStats": {
+      "unit": "numeric point",
+      "operation": "add-flat",
+      "bySubtype": {
+        "demigod": {
+          "strength": 1,
+          "speed": 1,
+          "durability": 1,
+          "intelligence": 1,
+          "fight": 1
+        }
+      },
+      "timing": "Register once from actual subtype result and apply each after the immutable base stat using the signed, unbounded final-score policy.",
+      "sourceKey": "runId/sourceComponentId/sourceSpinId/profileId/effectOrdinal"
+    },
+    "conceptGrantMapping": {
+      "god": {
+        "role": "authority",
+        "masteryOverrideRef": "god-concept-authority-max-mastery"
+      },
+      "demigod": {
+        "role": "power",
+        "mastery": "ordinary shared rank, no maximum"
+      },
+      "utusan-tuhan": {
+        "role": "power",
+        "mastery": "ordinary shared rank with its +1 shared modifier"
+      }
+    },
+    "ownedInventory": "Retain actual power grants after main None. God uses fixed shared base9/no spin for every power; other subtypes use one ordinary shared resolution. No phantom power.",
+    "duplicatePowerResults": "No distinct-result guarantee: God makes two independent Divine invocations; Angel two independent Angelic invocations, each using its canonical eligible pool. Preserve duplicate results/source ordinals, no reroll. General merge policy remains pending; Authority/ordinary concepts stay distinct.",
+    "classification": "Subtype selection does not select the main family again. Utusan/Pemuka/Orang Saleh are user-defined spiritual role entries in this family; they dispatch no Human, Reinkarnasi Pahlawan Legendaris or religion selector. Demigod runs no Hybrid, God parent event or Awakening unless separately authorized.",
+    "inheritedOrigins": "Authorized Skeleton/Zombie origin or Hybrid/host callers execute the same approved subtype profiles with source component, shared no-repeat race history and saved return.",
+    "size": "All subtypes participate in the existing global Size stage. Source-backed body metric/profiles remain pending; divine identity grants no extra Size spin or unlisted main stat.",
+    "idempotence": "Commit subtype/effects once per run/source component/sourceSpinId/profile. Child key includes followupStepId and childOrdinal, so Concept child 1 differs from Divine child 1/2. Replay/media retries duplicate no source bonus, override, grant, scarcity profile or spin.",
+    "weights": "Preserve subtype weights 1:1:2:2:3:3. Proposed Concept outcomes use equal defaults; Divine and Angelic each twenty equal outcomes at 5%, four per tier. Concept roster remains proposed.",
+    "followers": {
+      "definitionFile": "universal-follower-wheel-design.json",
+      "wheelId": "follower-count",
+      "rewardProfileId": "god",
+      "drawCount": 1,
+      "sequence": "God Concept Authority → Divine 1 → Divine 2 → follower-count → saved caller",
+      "numericRewards": "1M/10M: +1 numeric each main stat; 100M: total +2 each; lower counts none.",
+      "powerMasteryBonus": 0,
+      "source": "User clarified: Hanya bonus kelima stat",
+      "rewardStacking": "Selected follower row only; no cumulative thresholds.",
+      "authorityAndScarcity": "Keep Concept-only max and normal Power 80/20 unchanged."
+    },
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "contextContract": {
+    "stackedFacts": [
+      "actual family/subtype/source",
+      "actual chosen concept and Authority/power role",
+      "actual acquired Divine/communication powers",
+      "God Authority maximum scope",
+      "registered numeric/shared mastery/scarcity sources",
+      "actual base/final stats and common rank only once available",
+      "actual God follower count and selected stat-only rewards, scoped to component"
+    ],
+    "futureGuard": "Unrolled Concept/Divine outcomes and final stats are not leaked into earlier subtype reactions. Follower count/rewards unavailable before child.",
+    "tone": "Funny Gen Z Indonesian plus familiar English; no real religion or deity identity is selected by these game roles.",
+    "reactionPolicy": "Each actual family/subtype/Concept/Divine/follower spin has one reaction. Fixed grants/bonuses/maximum attachment are explained in that result, not extra spins."
+  },
+  "openBalance": [
+    "Confirm or revise the twelve proposed Concept entries/count; base weights equal unless the user specifies otherwise.",
+    "Set twenty Divine/Angelic full capacities/costs/domain limits; base weights equal unless the user specifies otherwise.",
+    "Source body Size profiles and declared later odds/compatibility."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "version": "heavenly-principle/0.2.0",
+  "updatedDate": "2026-10-09",
+  "migrationContract": {
+    "retiredSnapshot": "reference/power-themes-before-2026-10-09.json",
+    "policy": "New invocations use this route/version and universal-power/0.2.0; committed old results keep their original version, route, pool and effects."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "maximumGuaranteeContract": {
+    "version": "fixed-maximum/0.1.0",
+    "scope": "Actual committed maximum guarantees for stats or mastery skip the random wheel.",
+    "God": "Actual God subtype fixes the one shared Power Mastery base9 for all owned present/future powers, including Authority, Divine and ordinary grants.",
+    "VesselGod": "God patron at compatibility60/70/80/90/100 inherits the existing maximum guarantee; all owned Power Mastery base9. Lower bands and demon patron do not qualify.",
+    "Lich": "Committed Lich fixes Durability base9; no singleton100% spin in new runs.",
+    "notGuarantees": "High lore probability, intrinsic Tier5, matching power names and Kinnara minimumMaster are not maximum guarantees.",
+    "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+    "hooks": "No random sample, actual attempt, spin ID, Lucky hit, Resilient retry, Double/Nothing decision or sampled Pawn category for automatic bases.",
+    "precedence": "Explicit maximum before random shaping/Equalizer/Gambler. Contradictory hard exclusions require configuration. Empty power inventory creates no phantom mastery.",
+    "history": "Existing frozen actual God/ordinary mastery and Lich singleton draws replay unchanged; no retroactive guarantee rewriting."
+  }
+}

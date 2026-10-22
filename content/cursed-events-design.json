@@ -1,0 +1,780 @@
+{
+  "schemaVersion": "roda-kekacauan-cursed/0.1",
+  "version": "cursed/0.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "cursed",
+  "eventProfileId": "cursed-percentage",
+  "status": "User-approved percentage boundaries and power/weakness invocation totals. Twelve weakness identities/conditions are an editable authored draft, not user-approved roster. Algorithm design; detailed counters/body-fit/executor pending.",
+  "authority": {
+    "confirmed": [
+      "One Cursed Percentage spin from 0 to 100 in steps of 10.",
+      "User chooses 0–20 none; 30–50 one; 60–80 two; 90–100 three powers.",
+      "Original third package includes one Cursed Weakness; fourth includes two Cursed Weaknesses.",
+      "Unspecified wheel probabilities are equal."
+    ],
+    "interpretation": "Threshold clarification relocates the four earlier power/weakness packages; selected band totals are exclusive, not cumulative.",
+    "authoredChoices": [
+      "Twelve source-owned fantasy weaknesses with conditional limits, each equal by default.",
+      "Resolve selected power draws first, then selected weakness draws, with one reaction per actual spin."
+    ]
+  },
+  "percentageWheel": {
+    "id": "cursed-percentage",
+    "label": "Cursed Percentage",
+    "outcomeCount": 11,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "cursed-0",
+        "label": "0%",
+        "percentage": 0,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "no-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 0%",
+            "Paket: 0 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Belum kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-10",
+        "label": "10%",
+        "percentage": 10,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "no-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 10%",
+            "Paket: 0 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Belum kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-20",
+        "label": "20%",
+        "percentage": 20,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "no-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 20%",
+            "Paket: 0 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Belum kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-30",
+        "label": "30%",
+        "percentage": 30,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "light-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 30%",
+            "Paket: 1 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Mulai kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-40",
+        "label": "40%",
+        "percentage": 40,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "light-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 40%",
+            "Paket: 1 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Mulai kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-50",
+        "label": "50%",
+        "percentage": 50,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "light-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 50%",
+            "Paket: 1 Cursed Power, 0 Cursed Weakness"
+          ],
+          "caption": "Mulai kena kutuk.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-60",
+        "label": "60%",
+        "percentage": 60,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "heavy-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 60%",
+            "Paket: 2 Cursed Power, 1 Cursed Weakness"
+          ],
+          "caption": "Power naik, kutukan ikut.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-70",
+        "label": "70%",
+        "percentage": 70,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "heavy-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 70%",
+            "Paket: 2 Cursed Power, 1 Cursed Weakness"
+          ],
+          "caption": "Power naik, kutukan ikut.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-80",
+        "label": "80%",
+        "percentage": 80,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "heavy-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 80%",
+            "Paket: 2 Cursed Power, 1 Cursed Weakness"
+          ],
+          "caption": "Power naik, kutukan ikut.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-90",
+        "label": "90%",
+        "percentage": 90,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "full-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 90%",
+            "Paket: 3 Cursed Power, 2 Cursed Weakness"
+          ],
+          "caption": "Full paket kutukan.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "cursed-100",
+        "label": "100%",
+        "percentage": 100,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "selectedProfileId": "full-curse",
+        "resultContext": {
+          "facts": [
+            "Archetype: Cursed",
+            "Kutukan: 100%",
+            "Paket: 3 Cursed Power, 2 Cursed Weakness"
+          ],
+          "caption": "Full paket kutukan.",
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "branchProfiles": [
+    {
+      "id": "no-curse",
+      "minimumPercentage": 0,
+      "maximumPercentage": 20,
+      "powerInvocationCount": 0,
+      "weaknessInvocationCount": 0,
+      "ordinaryBandProbability": 0.2727272727272727,
+      "steps": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "light-curse",
+      "minimumPercentage": 30,
+      "maximumPercentage": 50,
+      "powerInvocationCount": 1,
+      "weaknessInvocationCount": 0,
+      "ordinaryBandProbability": 0.2727272727272727,
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "light-curse-power-1",
+          "ordinal": 1,
+          "returnTo": "saved-cursed-branch-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "heavy-curse",
+      "minimumPercentage": 60,
+      "maximumPercentage": 80,
+      "powerInvocationCount": 2,
+      "weaknessInvocationCount": 1,
+      "ordinaryBandProbability": 0.2727272727272727,
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "heavy-curse-power-1",
+          "ordinal": 1,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "heavy-curse-power-2",
+          "ordinal": 2,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "weakness-cursed",
+          "definitionFile": "content/cursed-events-design.json",
+          "catalogVersion": "cursed/0.1.0",
+          "invocationCount": 1,
+          "stepId": "heavy-curse-weakness-1",
+          "ordinal": 3,
+          "returnTo": "saved-cursed-branch-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "full-curse",
+      "minimumPercentage": 90,
+      "maximumPercentage": 100,
+      "powerInvocationCount": 3,
+      "weaknessInvocationCount": 2,
+      "ordinaryBandProbability": 0.18181818181818182,
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "full-curse-power-1",
+          "ordinal": 1,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "full-curse-power-2",
+          "ordinal": 2,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-cursed",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "catalogVersion": "universal-power/0.2.0",
+          "invocationCount": 1,
+          "stepId": "full-curse-power-3",
+          "ordinal": 3,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "weakness-cursed",
+          "definitionFile": "content/cursed-events-design.json",
+          "catalogVersion": "cursed/0.1.0",
+          "invocationCount": 1,
+          "stepId": "full-curse-weakness-1",
+          "ordinal": 4,
+          "returnTo": "saved-cursed-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "weakness-cursed",
+          "definitionFile": "content/cursed-events-design.json",
+          "catalogVersion": "cursed/0.1.0",
+          "invocationCount": 1,
+          "stepId": "full-curse-weakness-2",
+          "ordinal": 5,
+          "returnTo": "saved-cursed-branch-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    }
+  ],
+  "weaknessWheel": {
+    "id": "weakness-cursed",
+    "label": "Cursed Weakness",
+    "status": "Editable authored draft; not user-approved identities/conditions.",
+    "outcomeCount": 12,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "sunlight-taboo",
+        "label": "Alergi Matahari",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "sunlight-taboo",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Alergi Matahari"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "holy-water",
+        "label": "Air Suci Bikin Panik",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "holy-water",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Air Suci Bikin Panik"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "silver-contact",
+        "label": "Perak Bikin Lemes",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "silver-contact",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Perak Bikin Lemes"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "salt-ward",
+        "label": "Garam Anti Kutuk",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "salt-ward",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Garam Anti Kutuk"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "curse-seal",
+        "label": "Segel Nempel",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "curse-seal",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Segel Nempel"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "true-name",
+        "label": "Nama Asli Bocor",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "true-name",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Nama Asli Bocor"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "curse-reflection",
+        "label": "Kutukan Mantul",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "curse-reflection",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Kutukan Mantul"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "daily-ritual",
+        "label": "Ritual Harian",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "daily-ritual",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Ritual Harian"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "broken-oath",
+        "label": "Janji Pantang Ingkar",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "broken-oath",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Janji Pantang Ingkar"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "bound-shadow",
+        "label": "Bayangan Dikunci",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "bound-shadow",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Bayangan Dikunci"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "voodoo-link",
+        "label": "Boneka Voodoo",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "voodoo-link",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Boneka Voodoo"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "energy-hunger",
+        "label": "Laper Energi",
+        "baseWeight": 1,
+        "probability": 0.08333333333333333,
+        "effects": [
+          {
+            "type": "grant-weakness",
+            "definitionId": "energy-hunger",
+            "definitionFile": "content/cursed-events-design.json",
+            "source": "actual committed Cursed Weakness child invocation"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Cursed Weakness: Laper Energi"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "weaknesses": [
+    {
+      "id": "sunlight-taboo",
+      "label": "Alergi Matahari",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Terpapar sinar matahari langsung",
+      "conditionalEffect": "Power dari sumber kutukan terganggu selama paparan.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "holy-water",
+      "label": "Air Suci Bikin Panik",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Kontak dengan air suci yang punya kapasitas anti-kutuk",
+      "conditionalEffect": "Kontrol power kutukan sementara terganggu.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "silver-contact",
+      "label": "Perak Bikin Lemes",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Kontak langsung dengan perak berkekuatan anti-kutuk",
+      "conditionalEffect": "Tubuh rentan selama kontak; batas dampak mengikuti profil counter.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "salt-ward",
+      "label": "Garam Anti Kutuk",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Mencoba melewati lingkaran garam yang diaktifkan sebagai ward magis",
+      "conditionalEffect": "Ward dapat menghalangi karakter menyeberang.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "curse-seal",
+      "label": "Segel Nempel",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Terikat segel anti-kutuk yang berhasil mengenai karakter",
+      "conditionalEffect": "Power dari sumber kutukan terblokir sampai segel dilepas.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "true-name",
+      "label": "Nama Asli Bocor",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Lawan mengetahui nama asli dan menjalankan ritual penargetan yang valid",
+      "conditionalEffect": "Karakter lebih mudah ditargetkan counter kutukan.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "curse-reflection",
+      "label": "Kutukan Mantul",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Power kutukan menyerang counter pemantul yang kompatibel",
+      "conditionalEffect": "Efek dapat berbalik ke pengirim sesuai profil counter.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "daily-ritual",
+      "label": "Ritual Harian",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Ritual pemeliharaan kutukan terlewat",
+      "conditionalEffect": "Power dari sumber kutukan tidak tersedia sampai ritual dipenuhi.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "broken-oath",
+      "label": "Janji Pantang Ingkar",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Melanggar sumpah yang terikat pada sumber kutukan",
+      "conditionalEffect": "Power dari sumber kutukan tertahan sampai syarat pemulihan terpenuhi.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "bound-shadow",
+      "label": "Bayangan Dikunci",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Bayangan karakter terkena teknik pengikat yang kompatibel",
+      "conditionalEffect": "Gerak karakter terhambat selama ikatan aktif.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "voodoo-link",
+      "label": "Boneka Voodoo",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Lawan berhasil membuat tautan boneka kutukan ke karakter",
+      "conditionalEffect": "Gangguan pada tautan dapat diteruskan ke karakter sesuai batas counter.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    },
+    {
+      "id": "energy-hunger",
+      "label": "Laper Energi",
+      "grantMode": "additional source-owned weakness",
+      "activationGuard": "Cadangan energi sumber kutukan habis setelah penggunaan",
+      "conditionalEffect": "Power dari sumber kutukan berhenti sampai energi pulih.",
+      "numericStatPenalty": null,
+      "severityStatus": "Counter strength, duration, resistance, resource cost and recovery details need explicit capability profiles; no extra detail wheel or numerical penalty inferred."
+    }
+  ],
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-cursed",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "catalogVersion": "universal-power/0.2.0",
+      "outcomeCount": 20,
+      "invocationCountByBand": {
+        "no-curse": 0,
+        "light-curse": 1,
+        "heavy-curse": 2,
+        "full-curse": 3
+      }
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "cursed-percentage",
+      "definitionFile": "content/cursed-events-design.json",
+      "invocationCount": 1,
+      "stepId": "cursed-percentage-1",
+      "ordinal": 1,
+      "returnTo": "selected-cursed-branch"
+    }
+  ],
+  "followupSpinCountByResult": {
+    "cursed-0": 1,
+    "cursed-10": 1,
+    "cursed-20": 1,
+    "cursed-30": 2,
+    "cursed-40": 2,
+    "cursed-50": 2,
+    "cursed-60": 4,
+    "cursed-70": 4,
+    "cursed-80": 4,
+    "cursed-90": 6,
+    "cursed-100": 6
+  },
+  "contracts": {
+    "order": "Actual Cursed/reaction -> one percentage spin/commit/reaction -> chosen band canonical Cursed Power children/grants/reactions -> chosen band Cursed Weakness children/grants/reactions -> Backstory.",
+    "probability": "Eleven percentages baseWeight1/1 per 11; a ten-point label step is not10% probability. Bands have ordinary masses3/11,3/11,3/11,2/11. Each canonical Power child20 equal5%; draft Weakness12 equal1/12. Apply authorized distribution policies after hard eligibility.",
+    "bands": "Only selected band totals: 0–20 zero/zero;30–50 one/zero;60–80 two/one;90–100 three/two. Never stack earlier thresholds, add extra count spins or interpret percentage as a success roll.",
+    "power": "Reuse power-cursed20 with existing canonical tier1–5 definitions/ratings. Not Demonic/Angelic/Divine, no private copy, tier floor, mastery guarantee, cursed-race dispatch or extra stat/weapon bonus.",
+    "weakness": "Grant only selected source-owned weakness. These are additional to the later normal main Weakness result and persist alongside it. Conditional weaknesses impose their authored guard/effect only; no always-on main-stat reduction or automatic severity/activation/countermeasure wheel.",
+    "repeatedCalls": "Each planned child is one independent actual invocation with unique step/ordinal and saved continuation. Keep the same eligible canonical pool between calls; duplicates do not trigger an unrequested exclusion/reroll or substituted reward. Record every actual source. Repeated weakness IDs do not infer doubled severity or numeric penalty; global duplicate-power handling remains the existing policy.",
+    "ownership": "Early Cursed powers survive main Power None and use the one normal shared Power Mastery resolution. Main Power and Weakness stages still occur. Power Mastery opens no Enchant; numeric/mastery bonuses from other sources calculate at final phase.",
+    "recipeAuthority": "Select one branchProfiles recipe; execute its steps once. Counts and display context describe that same recipe and never schedule a second copy.",
+    "ledger": "Freeze percentage rule/pool/odds/result, selected band/ordered schedule, catalog versions, child IDs/results, canonical power tiers and source weakness guards. Branch key runId/sourceArchetypeInvocationId/sourcePercentageSpinId/eventProfileId; child grants keyed by actual invocation/definition. Replay/media retry resumes next unfinished step without redraw or duplicate grants.",
+    "reaction": "Each actual percentage/power/weakness result gets its own stacked-context reaction. Future child results, main stats and mastery remain unknown; no implicit funny tag or extra Shrek hook from labels/fixed grants.",
+    "return": "0–20 returns after percentage reaction; other bands finish all scheduled children before Backstory. Preserve gate/global Size/race history and all prior owned rewards.",
+    "runtime": "Core package thresholds/counts approved. Exact weakness roster/conditional scope is an authored editable draft; counter capability/severity/body-role fit and executor remain configuration. Final roster is not activated."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only",
+    "module": null
+  },
+  "openConfiguration": [
+    "Review/edit twelve draft Cursed Weakness identities and conditions.",
+    "Explicit weakness counter strength, duration/resistance/energy/ritual/oath/recovery profiles and global duplicate ownership persistence.",
+    "Final Cursed body-role fit and percentage/child schedule/grant executor."
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-druid-cursed-2026-10-10.json",
+    "policy": "New invocations use cursed/0.1.0; old frozen runs retain original versions/pools/results and receive no retroactive children."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

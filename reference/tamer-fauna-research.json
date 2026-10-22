@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "roda-kekacauan-tamer-research/1.0",
+  "checkedDate": "2026-10-09",
+  "scope": "Fauna and named Pop Culture identity/category context only; Archetype source name remains from supplied videos. Fantasy acquisition and bounded companion capabilities are authored game content.",
+  "sources": [
+    {
+      "id": "megalodon",
+      "title": "NHM — Is megalodon still alive?",
+      "url": "https://www.nhm.ac.uk/discover/is-megalodon-still-alive.html",
+      "support": "Megalodon is an extinct shark, placed in prehistoric rather than mythical outcomes.",
+      "authority": "primary museum source"
+    },
+    {
+      "id": "blue-whale",
+      "title": "NOAA Fisheries — Blue Whale",
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+      "support": "Blue Whale is a living marine mammal, included among modern animals.",
+      "authority": "primary wildlife agency"
+    },
+    {
+      "id": "orca",
+      "title": "NOAA Fisheries — Killer Whale",
+      "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+      "support": "Orca is a living marine mammal, included among modern animals.",
+      "authority": "primary wildlife agency"
+    }
+  ],
+  "existingReferences": [
+    {
+      "file": "reference/archaeologist-fauna-research.json",
+      "scope": "Fifteen reused past-animal identities; no finding stat/power rewards. Megalodon uses the direct museum source."
+    },
+    {
+      "file": "reference/race-content-research.json",
+      "scope": "Existing Mythical Beast identity catalog; no transfer of character-race packages."
+    }
+  ],
+  "popCultureSources": [
+    {
+      "id": "kurama",
+      "title": "Kyūbi (Kurama) — Naruto",
+      "url": "https://naruto-official.com/en/news/01_1896",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "pikachu",
+      "title": "Pikachu — Pokémon",
+      "url": "https://www.pokemon.com/us/pokemon-video-games/pokemon-lets-go-pikachu-and-pokemon-lets-go-eevee",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "agumon",
+      "title": "Agumon — Digimon",
+      "url": "https://digimon.net/reference_en/detail.php?directory_name=agumon",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "toothless",
+      "title": "Toothless — How to Train Your Dragon",
+      "url": "https://www.dreamworks.com/movies/how-to-train-your-dragon",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "appa",
+      "title": "Appa — Avatar: The Last Airbender",
+      "url": "https://www.avatarstudiosofficial.com/characters/",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "chopper",
+      "title": "Chopper — One Piece",
+      "url": "https://one-piece.com/character/chopper/index.html",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "totoro",
+      "title": "Totoro — My Neighbor Totoro",
+      "url": "https://gkids.com/films/my-neighbor-totoro/",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "scooby-doo",
+      "title": "Scooby-Doo — Scooby-Doo",
+      "url": "https://www.warnerbros.com/movies/scoob",
+      "support": "Identity/franchise reference only. No copying feats, powers, forms, allies or owner rewards.",
+      "authority": "Official franchise/studio/publisher/distributor reference",
+      "checkedDate": "2026-10-09"
+    }
+  ],
+  "popCultureSourceLimits": {
+    "scoobyDoo": "Official Warner Bros SCOOB! page is minimally text-extractable; used as franchise reference only. No lore/power claims imported.",
+    "kyubi": "User spelling normalized to Naruto Kurama/Nine Tails as one editable named outcome, not a second generic nine-tailed-fox entry."
+  }
+}

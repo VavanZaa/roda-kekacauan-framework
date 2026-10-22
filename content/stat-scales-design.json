@@ -1,0 +1,856 @@
+{
+  "schemaVersion": "roda-kekacauan-stat-scales/0.1",
+  "version": "stat-scales/0.2.0",
+  "updatedDate": "2026-10-10",
+  "status": "Raw0..9 mappings preserved; every final main-stat and mastery score is signed and unbounded, with bonus calculation only at finalization.",
+  "authority": {
+    "confirmed": [
+      "Replace Darwizzy with Noob.",
+      "Assign the ten outcomes 0..9.",
+      "All stat bonuses are calculated at the end.",
+      "Weapon Mastery and Power Mastery bonuses also apply at the end.",
+      "Weapon Mastery bonuses affect Enchant eligibility."
+    ],
+    "mappingInterpretation": "Noob=0; the nine previously inspected regular labels retain ascending project order 1..9. These numeric bindings are project adoption, not a claim about original video mechanics."
+  },
+  "scales": [
+    {
+      "id": "strength-0-9",
+      "stage": "strength",
+      "kind": "numeric-gameplay-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/0",
+      "sourceTimeSeconds": 54,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": null,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "weak",
+          "label": "Weak",
+          "value": 1,
+          "rankIndex": null,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Weak"
+        },
+        {
+          "id": "mid",
+          "label": "Mid",
+          "value": 2,
+          "rankIndex": null,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Mid"
+        },
+        {
+          "id": "peak-human",
+          "label": "Peak Human",
+          "value": 3,
+          "rankIndex": null,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Peak Human"
+        },
+        {
+          "id": "superhuman",
+          "label": "Superhuman",
+          "value": 4,
+          "rankIndex": null,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Superhuman"
+        },
+        {
+          "id": "mighty",
+          "label": "Mighty",
+          "value": 5,
+          "rankIndex": null,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Mighty"
+        },
+        {
+          "id": "herculean",
+          "label": "Herculean",
+          "value": 6,
+          "rankIndex": null,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Herculean"
+        },
+        {
+          "id": "cosmic",
+          "label": "Cosmic",
+          "value": 7,
+          "rankIndex": null,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic"
+        },
+        {
+          "id": "universal",
+          "label": "Universal",
+          "value": 8,
+          "rankIndex": null,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal"
+        },
+        {
+          "id": "boundless",
+          "label": "Boundless",
+          "value": 9,
+          "rankIndex": null,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Boundless"
+        }
+      ]
+    },
+    {
+      "id": "speed-0-9",
+      "stage": "speed",
+      "kind": "numeric-gameplay-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/1",
+      "sourceTimeSeconds": 66,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": null,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "old-man",
+          "label": "Old man",
+          "value": 1,
+          "rankIndex": null,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Old man"
+        },
+        {
+          "id": "mid",
+          "label": "Mid",
+          "value": 2,
+          "rankIndex": null,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Mid"
+        },
+        {
+          "id": "peak-human",
+          "label": "Peak Human",
+          "value": 3,
+          "rankIndex": null,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Peak Human"
+        },
+        {
+          "id": "superhuman",
+          "label": "Superhuman",
+          "value": 4,
+          "rankIndex": null,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Superhuman"
+        },
+        {
+          "id": "supersonic",
+          "label": "Supersonic",
+          "value": 5,
+          "rankIndex": null,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Supersonic"
+        },
+        {
+          "id": "light-speed",
+          "label": "Light Speed",
+          "value": 6,
+          "rankIndex": null,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Light Speed"
+        },
+        {
+          "id": "cosmic",
+          "label": "Cosmic",
+          "value": 7,
+          "rankIndex": null,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic"
+        },
+        {
+          "id": "universal",
+          "label": "Universal",
+          "value": 8,
+          "rankIndex": null,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal"
+        },
+        {
+          "id": "omnipresent",
+          "label": "Omnipresent",
+          "value": 9,
+          "rankIndex": null,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Omnipresent"
+        }
+      ]
+    },
+    {
+      "id": "durability-0-9",
+      "stage": "durability",
+      "kind": "numeric-gameplay-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/2",
+      "sourceTimeSeconds": 78,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": null,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "fragile",
+          "label": "Fragile",
+          "value": 1,
+          "rankIndex": null,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Fragile"
+        },
+        {
+          "id": "mid",
+          "label": "Mid",
+          "value": 2,
+          "rankIndex": null,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Mid"
+        },
+        {
+          "id": "peak-human",
+          "label": "Peak Human",
+          "value": 3,
+          "rankIndex": null,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Peak Human"
+        },
+        {
+          "id": "superhuman",
+          "label": "Superhuman",
+          "value": 4,
+          "rankIndex": null,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Superhuman"
+        },
+        {
+          "id": "nuclear",
+          "label": "Nuclear",
+          "value": 5,
+          "rankIndex": null,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Nuclear"
+        },
+        {
+          "id": "planetary",
+          "label": "Planetary",
+          "value": 6,
+          "rankIndex": null,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Planetary"
+        },
+        {
+          "id": "cosmic",
+          "label": "Cosmic",
+          "value": 7,
+          "rankIndex": null,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic"
+        },
+        {
+          "id": "universal",
+          "label": "Universal",
+          "value": 8,
+          "rankIndex": null,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal"
+        },
+        {
+          "id": "regenerative",
+          "label": "Regenerative",
+          "value": 9,
+          "rankIndex": null,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Regenerative"
+        }
+      ]
+    },
+    {
+      "id": "intelligence-0-9",
+      "stage": "intelligence",
+      "kind": "numeric-gameplay-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Noob=0; labels 1..9 not established by the inspected video, require content configuration.",
+      "sourceRef": "../reference/stat-tiers-video2.json#intelligence",
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": null,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-1",
+          "label": null,
+          "value": 1,
+          "rankIndex": null,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-2",
+          "label": null,
+          "value": 2,
+          "rankIndex": null,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-3",
+          "label": null,
+          "value": 3,
+          "rankIndex": null,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-4",
+          "label": null,
+          "value": 4,
+          "rankIndex": null,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-5",
+          "label": null,
+          "value": 5,
+          "rankIndex": null,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-6",
+          "label": null,
+          "value": 6,
+          "rankIndex": null,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-7",
+          "label": null,
+          "value": 7,
+          "rankIndex": null,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-8",
+          "label": null,
+          "value": 8,
+          "rankIndex": null,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": null
+        },
+        {
+          "id": "intelligence-9",
+          "label": null,
+          "value": 9,
+          "rankIndex": null,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": null
+        }
+      ]
+    },
+    {
+      "id": "fight-0-9",
+      "stage": "fight",
+      "kind": "numeric-gameplay-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/3",
+      "sourceTimeSeconds": 90,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": null,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "rookie",
+          "label": "Rookie",
+          "value": 1,
+          "rankIndex": null,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Rookie"
+        },
+        {
+          "id": "amateur",
+          "label": "Amateur",
+          "value": 2,
+          "rankIndex": null,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Amateur"
+        },
+        {
+          "id": "skilled",
+          "label": "Skilled",
+          "value": 3,
+          "rankIndex": null,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Skilled"
+        },
+        {
+          "id": "champion",
+          "label": "Champion",
+          "value": 4,
+          "rankIndex": null,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Champion"
+        },
+        {
+          "id": "meta-martial",
+          "label": "Meta-Martial",
+          "value": 5,
+          "rankIndex": null,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Meta-Martial"
+        },
+        {
+          "id": "planetary-fighter",
+          "label": "Planetary Fighter",
+          "value": 6,
+          "rankIndex": null,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Planetary Fighter"
+        },
+        {
+          "id": "cosmic-brawler",
+          "label": "Cosmic Brawler",
+          "value": 7,
+          "rankIndex": null,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic Brawler"
+        },
+        {
+          "id": "universal-gladiator",
+          "label": "Universal Gladiator",
+          "value": 8,
+          "rankIndex": null,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal Gladiator"
+        },
+        {
+          "id": "unbeatable",
+          "label": "Unbeatable",
+          "value": 9,
+          "rankIndex": null,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Unbeatable"
+        }
+      ]
+    },
+    {
+      "id": "weapon-mastery-0-9",
+      "stage": "weapon-mastery",
+      "kind": "ordered-mastery-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/4",
+      "sourceTimeSeconds": 102,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": 0,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "novice",
+          "label": "Novice",
+          "value": 1,
+          "rankIndex": 1,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Novice"
+        },
+        {
+          "id": "apprentice",
+          "label": "Apprentice",
+          "value": 2,
+          "rankIndex": 2,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Apprentice"
+        },
+        {
+          "id": "adept",
+          "label": "Adept",
+          "value": 3,
+          "rankIndex": 3,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Adept"
+        },
+        {
+          "id": "expert",
+          "label": "Expert",
+          "value": 4,
+          "rankIndex": 4,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Expert"
+        },
+        {
+          "id": "master",
+          "label": "Master",
+          "value": 5,
+          "rankIndex": 5,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Master"
+        },
+        {
+          "id": "grand-master",
+          "label": "Grand Master",
+          "value": 6,
+          "rankIndex": 6,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Grand Master"
+        },
+        {
+          "id": "cosmic",
+          "label": "Cosmic",
+          "value": 7,
+          "rankIndex": 7,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic"
+        },
+        {
+          "id": "universal",
+          "label": "Universal",
+          "value": 8,
+          "rankIndex": 8,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal"
+        },
+        {
+          "id": "transcendent",
+          "label": "Transcendent",
+          "value": 9,
+          "rankIndex": 9,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Transcendent"
+        }
+      ]
+    },
+    {
+      "id": "power-mastery-0-9",
+      "stage": "power-mastery",
+      "kind": "ordered-mastery-score",
+      "numericMappingApproved": true,
+      "labelsStatus": "Nine regular labels from video; Noob renamed by user.",
+      "sourceRef": "../reference/stat-tiers-video2.json#observedWheels/5",
+      "sourceTimeSeconds": 114,
+      "minimumDrawValue": 0,
+      "maximumDrawValue": 9,
+      "defaultWeight": 1,
+      "outcomes": [
+        {
+          "id": "noob",
+          "label": "Noob",
+          "value": 0,
+          "rankIndex": 0,
+          "luckyMatchNumber": 0,
+          "baseWeight": 1,
+          "sourceLabel": "Darwizzy"
+        },
+        {
+          "id": "dormant",
+          "label": "Dormant",
+          "value": 1,
+          "rankIndex": 1,
+          "luckyMatchNumber": 1,
+          "baseWeight": 1,
+          "sourceLabel": "Dormant"
+        },
+        {
+          "id": "awakening",
+          "label": "Awakening",
+          "value": 2,
+          "rankIndex": 2,
+          "luckyMatchNumber": 2,
+          "baseWeight": 1,
+          "sourceLabel": "Awakening"
+        },
+        {
+          "id": "controlled",
+          "label": "Controlled",
+          "value": 3,
+          "rankIndex": 3,
+          "luckyMatchNumber": 3,
+          "baseWeight": 1,
+          "sourceLabel": "Controlled"
+        },
+        {
+          "id": "master",
+          "label": "Master",
+          "value": 4,
+          "rankIndex": 4,
+          "luckyMatchNumber": 4,
+          "baseWeight": 1,
+          "sourceLabel": "Master"
+        },
+        {
+          "id": "archmage",
+          "label": "Archmage",
+          "value": 5,
+          "rankIndex": 5,
+          "luckyMatchNumber": 5,
+          "baseWeight": 1,
+          "sourceLabel": "Archmage"
+        },
+        {
+          "id": "planetary",
+          "label": "Planetary",
+          "value": 6,
+          "rankIndex": 6,
+          "luckyMatchNumber": 6,
+          "baseWeight": 1,
+          "sourceLabel": "Planetary"
+        },
+        {
+          "id": "cosmic",
+          "label": "Cosmic",
+          "value": 7,
+          "rankIndex": 7,
+          "luckyMatchNumber": 7,
+          "baseWeight": 1,
+          "sourceLabel": "Cosmic"
+        },
+        {
+          "id": "universal",
+          "label": "Universal",
+          "value": 8,
+          "rankIndex": 8,
+          "luckyMatchNumber": 8,
+          "baseWeight": 1,
+          "sourceLabel": "Universal"
+        },
+        {
+          "id": "omnipotent",
+          "label": "Omnipotent",
+          "value": 9,
+          "rankIndex": 9,
+          "luckyMatchNumber": 9,
+          "baseWeight": 1,
+          "sourceLabel": "Omnipotent"
+        }
+      ]
+    }
+  ],
+  "contracts": {
+    "identity": "Stable scaleId/outcomeId lookup with explicit value/rankIndex/luckyMatchNumber. Freeze version and mapping in every actual pool; never parse captions, source-sector angles or ordering at runtime.",
+    "zero": "Noob is an actual zero-valued result. It is not None, an empty inventory, a skipped draw, a missing binding or an automatic funny-result tag.",
+    "probability": "Random stat/mastery outcomes use conditional lore5%..25%. Explicit maximum guarantee skips RNG: God all-owned shared Power Mastery9, Lich Durability9. Equalizer/guards unchanged; old saved plans replay original mode.",
+    "units": "Main-stat and mastery modifiers add numeric score points. Raw labels/indices are explicit0..9; finalized signed mastery scores may lie outside this raw label range.",
+    "bounds": "Raw wheel outcomes remain0..9. Final scores for all five stats and both masteries may be negative or exceed9; no numeric cap/floor.",
+    "powerTier": "Intrinsic Power Tier 1..5 is separate from 0..9 Power Mastery.",
+    "labels": "A high stat label does not grant a separate power. In particular Durability Regenerative is score 9, not an automatic regeneration power acquisition.",
+    "history": "Raw source evidence retains Darwizzy. New project invocations use Noob and this mapping; old committed journals keep original outcomes, labels, mappings, odds and effects."
+  },
+  "knownBindings": {
+    "weaponMasterThreshold": {
+      "scaleId": "weapon-mastery-0-9",
+      "outcomeId": "master",
+      "value": 5
+    },
+    "powerMasterRank": {
+      "scaleId": "power-mastery-0-9",
+      "outcomeId": "master",
+      "value": 4
+    },
+    "lichMaximumDurability": {
+      "scaleId": "durability-0-9",
+      "outcomeId": "regenerative",
+      "value": 9,
+      "guaranteeStage": "base-roll-only",
+      "finalScore": "9 + distinct Durability bonuses/debuffs",
+      "actualSpin": false
+    },
+    "godAuthorityMaximum": {
+      "scaleId": "power-mastery-0-9",
+      "outcomeId": "omnipotent",
+      "value": 9,
+      "guaranteeStage": "source-instance-base-only",
+      "finalScore": "9 + distinct applicable shared Power Mastery bonuses/debuffs",
+      "scope": "all-owned-powers",
+      "actualSpin": false
+    },
+    "highRollerUnconstrainedMainPool": [
+      0,
+      1,
+      8,
+      9
+    ]
+  },
+  "openConfiguration": [
+    "Intelligence labels for values1..9",
+    "Persistent mechanics executor/inventory adapters and final event scheduler",
+    "Individual Backstory likelihoods after review"
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "finalValuePolicy": {
+    "approved": true,
+    "authority": "Direct user answers on 2026-10-10",
+    "scope": [
+      "strength",
+      "speed",
+      "durability",
+      "intelligence",
+      "fight",
+      "weapon-mastery",
+      "power-mastery"
+    ],
+    "minimum": null,
+    "maximum": null,
+    "allowNegative": true,
+    "allowAboveRawMaximum": true,
+    "rawMinimum": 0,
+    "rawMaximum": 9,
+    "calculation": "Final numeric score = resolved immutable base + sum(distinct applicable signed modifiers); no clamp, wrap, extra spin or invented tier.",
+    "masteryBonusUnit": "One numeric score point per ordered mastery step, including beyond raw0..9 labels.",
+    "display": "Use the mapped label for final0..9. Above9, display that stat's label at9 plus the exact excess (Power Mastery12 = Omnipotent+3). Below0, display Noob plus the signed deficit (-2 = Noob-2). Keep the exact signed number internally; raw spin labels and numeric mechanics do not change.",
+    "displayPolicy": {
+      "version": "final-score-label/1",
+      "approved": true,
+      "authority": "Direct user instruction on 2026-10-12",
+      "module": "framework/score-label.mjs",
+      "videoAdapter": "video/public-label.mjs",
+      "numericScoreUnchanged": true,
+      "scope": "All five main stats, per-weapon mastery and shared Power Mastery",
+      "aboveRawMaximum": "label(rawMaximum) + '+' + (finalValue - rawMaximum)",
+      "belowRawMinimum": "label(rawMinimum) + (finalValue - rawMinimum)",
+      "withinRawRange": "Mapped label without +0 or an exposed numeric score",
+      "intelligence": "Requires configured endpoint names; video retains its existing Omniscient alias."
+    },
+    "intrinsicPowerTier": "The separate Power Tier1..5 rating does not change when mastery overflows.",
+    "bonusTimingRef": "content/bonus-timing-design.json#contracts",
+    "history": "Existing frozen journals retain their original policies; no retroactive change."
+  },
+  "conditionalOddsRef": {
+    "design": "content/stat-odds-design.json",
+    "version": "stat-odds/0.4.0",
+    "module": "framework/stat-odds.mjs",
+    "cap": 0.25,
+    "capScope": "each actual random attempt, not retained/copy/final score",
+    "forcedException": "Legacy saved Lich raw9 singleton only; new guarantees skip RNG",
+    "minimumOutcomeProbability": 0.05,
+    "maximumOutcomeProbability": 0.25
+  },
+  "maximumGuaranteeContract": {
+    "version": "fixed-maximum/0.1.0",
+    "scope": "Actual committed maximum guarantees for stats or mastery skip the random wheel.",
+    "God": "Actual God subtype fixes the one shared Power Mastery base9 for all owned present/future powers, including Authority, Divine and ordinary grants.",
+    "VesselGod": "God patron at compatibility60/70/80/90/100 inherits the existing maximum guarantee; all owned Power Mastery base9. Lower bands and demon patron do not qualify.",
+    "Lich": "Committed Lich fixes Durability base9; no singleton100% spin in new runs.",
+    "notGuarantees": "High lore probability, intrinsic Tier5, matching power names and Kinnara minimumMaster are not maximum guarantees.",
+    "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+    "hooks": "No random sample, actual attempt, spin ID, Lucky hit, Resilient retry, Double/Nothing decision or sampled Pawn category for automatic bases.",
+    "precedence": "Explicit maximum before random shaping/Equalizer/Gambler. Contradictory hard exclusions require configuration. Empty power inventory creates no phantom mastery.",
+    "history": "Existing frozen actual God/ordinary mastery and Lich singleton draws replay unchanged; no retroactive guarantee rewriting."
+  }
+}

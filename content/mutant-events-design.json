@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "roda-kekacauan-mutant/0.1",
+  "version": "mutant/0.1.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "mutant",
+  "eventProfileId": "mutant-race-mutation",
+  "status": "Core extra owned race/no-repeat rule approved. Normal acquired-race event execution and saved Archetype continuation use existing acquisition contracts; combined body/Size profiles and runtime executor remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Mutant spins the Race wheel and gains its result as an additional race: race mutation.",
+      "The same-race exclusion still applies: every previously acquired canonical family, including nested identity families, is disabled."
+    ],
+    "executionInterpretation": "Reuse ordinary character-identity acquisition: retain existing races/rewards, run the new race's approved immediate/nested events, then return to the selected Mutant event and Backstory. Exactly one additional root draw, not a guarantee of exactly two total families when a wrapper/Hybrid opens descendants."
+  },
+  "followups": [
+    {
+      "type": "invoke-character-race",
+      "invocationTemplateId": "mutant-mutation-race",
+      "definitionFile": "mutant-events-design.json",
+      "canonicalWheelId": "race-family",
+      "invocationCount": 1,
+      "sourceArchetypeId": "mutant",
+      "followupStepId": "mutant-mutation-race",
+      "ordinal": 1,
+      "dispatchRaceEvents": true,
+      "returnTo": "saved Mutant continuation, then Backstory"
+    }
+  ],
+  "directEffects": [],
+  "powers": [],
+  "weapons": [],
+  "contracts": {
+    "order": "Actual Mutant result/reaction -> one canonical mutation-family draw from unused families -> commit owned root and global history before dispatch/reaction -> complete selected immediate/nested Race events -> restore Mutant continuation -> Backstory.",
+    "addition": "The earlier Race components and their original journals/grants remain owned. Link one new root to the actual Mutant source; do not replace the base race or activate the main Hybrid event just because two races are now owned.",
+    "noRepeat": "Use canonical family IDs, not display aliases or subtype IDs. Elf already used excludes the entire Elf family, not just the earlier Elf subtype. All preceding outer/nested families and newly committed mutation descendants share one usedRaceFamilyIds set. Vampire prey, Slayer victims, mentors and companions remain separate references.",
+    "raceEvents": "Run normal approved new-race mechanics with actual source provenance. If the result is Hybrid, run its two roots in order; Symbiote host, Raksasa base and Skeleton/Zombie origin use their ordinary bounded routes. Finish each child chain before returning. Selecting these families schedules no second Mutant/root invocation.",
+    "reward": "Mutant has no independent stat/power/weapon/mastery package. Gains come only from the actually acquired race and its approved events, source-once. Existing modifiers/inventory remain; source-scoped God maximum stays on its own Authority instance.",
+    "stageBoundary": "Archetype eligibility/result was already committed against the completed pre-mutation Race tree. Reuse that frozen decision; do not re-enter the gate, redraw Archetype, undo Mutant or retroactively skip it when mutation acquires a strong/always-skip race. Raksasa acquired during mutation still binds giant Size, but cannot erase a previously selected Archetype. New identity children return to the saved event, not the top-level Race->Archetype transition.",
+    "deferredStages": "Keep the original global Backstory->Size->five stats->Weapon/Power/mastery sequence. Mutation race events register approved later-stage effects/tickets without advancing stages. One global Size uses the completed current composition, including giant binding when applicable; no early/extra Size draw. Retain normal None ownership, per-weapon mastery/compatible Enchant and one common Power Mastery.",
+    "identityAndBody": "Keep a frozen pre-Archetype eligibility tree/decision separately from current acquired-race composition. Mutation roots and their descendants are owned identity records, not extra children patched into an ordinary Human/Elf gate-input node. Body/fusion/Size and equipment-fit profiles must explicitly cover the current components; missing profiles require configuration, never Human fallback or inferred immunity/form/bonus.",
+    "ledger": "Freeze rule version, canonical race catalog/weights, exclusion snapshot, selected family, owned root ID, source links and exact saved continuations. Atomically commit selection/history before child dispatch. Each inherited race effect uses its own source ledger; replay/media retry schedules no new root, repeat child event, grant or modifier.",
+    "bounded": "Each actual identity-family commit increases the one used set; the nineteen-family catalog bounds all original and mutation chains together. Exhaustion blocks the required child explicitly; never reopen a used family or erase a committed result.",
+    "reaction": "At Mutant reveal, only extra-race intent is known. After mutation result append the actual added race, then actual subtypes/grants as each result commits. Future Backstory/Size/stats/mastery remain unknown; no caption-derived funny-result tag.",
+    "return": "After every mandatory immediate mutation child returns and reacts, complete Mutant once and restore Backstory. Keep deferred tickets for their normal stages."
+  },
+  "resultContext": {
+    "facts": [
+      "Archetype: Mutant",
+      "Satu spin Mutasi Ras tambahan",
+      "Ras yang sudah dimiliki dinonaktifkan"
+    ],
+    "displayContext": "Mutant. Nambah ras dulu.",
+    "futureResultsUnknown": true
+  },
+  "examples": [
+    {
+      "priorUsedFamilyIds": [
+        "human"
+      ],
+      "event": "Mutant",
+      "excludedFromMutation": [
+        "human"
+      ],
+      "remainingIfNoOtherGuards": 17,
+      "equalProbabilityPerRemainingFamily": "1/17",
+      "hypotheticalResult": "elf",
+      "continuation": "Retain Manusia, add Elf, spin Jenis Elf/run that event, return to Mutant then Backstory."
+    },
+    {
+      "priorUsedFamilyIds": [
+        "hybrid",
+        "symbiote",
+        "raksasa",
+        "demon"
+      ],
+      "status": "Exclusion example only, not an eligibility claim: this strong Race tree normally skips Archetype.",
+      "excludedFromAnyAuthorizedMutation": [
+        "hybrid",
+        "symbiote",
+        "raksasa",
+        "demon"
+      ],
+      "remainingIfNoOtherGuards": 14,
+      "equalProbabilityPerRemainingFamily": "1/14"
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; race event executor and mutation persistence adapter not implemented",
+    "module": null,
+    "eligibilityGate": "Existing framework/archetype-eligibility.mjs applies before selection only; do not change its frozen-input contract for mutation."
+  },
+  "openConfiguration": [
+    "Implement approved AI-free body mix with source-backed Size/equipment profiles",
+    "existing unresolved acquired-race catalogs/profiles, including declared source/body profiles",
+    "final Archetype body-role fit/boost band before selection",
+    "race executor, source-ledger persistence and saved-continuation adapter"
+  ],
+  "mainWheelDistributionRef": "content/main-wheel-strength-design.json",
+  "invocationTemplate": {
+    "id": "mutant-mutation-race",
+    "label": "Mutasi Ras",
+    "kind": "race-invocation-template",
+    "canonicalWheelId": "race-family",
+    "definitionFile": "race-wheel-design.json",
+    "optionsRef": "race-wheel-design.json#mainWheel.options",
+    "role": "mutation",
+    "componentSlot": "mutation-1",
+    "drawCount": 1,
+    "baseWeightsAssigned": true,
+    "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+    "eligibilityRuleRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+    "guard": "Selected Mutant event source is active; familyId not in character.usedRaceFamilyIds, intersect separately approved caller eligibility.",
+    "odds": "Reuse current canonical Race strength weights under shared history/guards and approved modifiers; normalize/freeze survivors. Full band ratios may shift after exclusions; active Equalizer replaces final weights after guards.",
+    "commitRaceHistory": true,
+    "dispatchPolicy": "Execute the selected family's approved immediate events once under a new owned mutation root/source. Nested Hybrid/host/base/origin identity draws share the same character history and exclusions.",
+    "registration": "Reference invocation of the existing canonical pool, not a duplicate race catalog or a nineteenth family.",
+    "invocationKey": "runId/sourceArchetypeInvocationId/sourceArchetypeSpinId/profileId/followupStepId/childOrdinal",
+    "followupStepId": "mutant-mutation-race",
+    "childOrdinal": 1,
+    "returnTo": "saved Mutant event continuation, then Backstory",
+    "emptyPool": "needs_configuration; no actual draw or invented None, repeated race, reset of history, or silent success. Keep required invocation pending."
+  },
+  "bodyCompositionContractRef": "content/hybrid-events-design.json#bodyCompositionContract",
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

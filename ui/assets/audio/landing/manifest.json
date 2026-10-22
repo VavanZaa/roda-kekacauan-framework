@@ -1,0 +1,45 @@
+{
+  "version": "landing-impact/1",
+  "authorship": "Original procedural audio created for Roda Kekacauan",
+  "speech": false,
+  "variants": {
+    "ordinary": {
+      "asset": "ui/assets/audio/landing/ordinary.wav",
+      "sha256": "744e877c7db6797cfb0ea9db2a2e4be1254bad5e41b15921dce82c2ff0a17b04",
+      "duration": 0.72,
+      "peak": 0.07,
+      "sampleRate": 48000,
+      "channels": 1,
+      "description": "Soft impact + rising resonant chime"
+    },
+    "strong": {
+      "asset": "ui/assets/audio/landing/strong.wav",
+      "sha256": "735e3bf43c65fdb62a347f2d26148175ac1e7cfdf7fd2c02c71b4b6473f905c5",
+      "duration": 0.92,
+      "peak": 0.085,
+      "sampleRate": 48000,
+      "channels": 1,
+      "description": "Soft impact + rising resonant chime"
+    },
+    "funny": {
+      "asset": "ui/assets/audio/landing/funny.wav",
+      "sha256": "6f83cdc9003055eece93fb817d2228bea3092560aa6946c41dc7608eded2fe78",
+      "duration": 0.62,
+      "peak": 0.055,
+      "sampleRate": 48000,
+      "channels": 1,
+      "description": "Soft impact + rising resonant chime"
+    },
+    "none": {
+      "asset": "ui/assets/audio/landing/none.wav",
+      "sha256": "677d6243a73074ed8feaa80438a6eea0ebbe17ab124c5265a9e85cec54fd0b31",
+      "duration": 0.38,
+      "peak": 0.04,
+      "sampleRate": 48000,
+      "channels": 1,
+      "description": "Soft descending impact"
+    }
+  },
+  "noModelWorker": true,
+  "maximumPeak": 0.085
+}

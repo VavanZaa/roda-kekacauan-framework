@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "Anime rename, Genre-before-Role, seven MC routes and Technician own-Tech scope user-confirmed. Delegated catalogs authored; vehicle classification and duplicate sampling disclosed working interpretations.",
+  "familyId": "anime-lineage",
+  "displayLabel": "Anime",
+  "authority": "Latest user correction sets Genre first then MC/NPC 50:50. Only MC executes that already selected genre profile. Canonical family identity and no-repeat key are preserved.",
+  "raceDesign": "content/race-wheel-design.json",
+  "wheels": [
+    {
+      "id": "anime-genre",
+      "label": "Genre Anime",
+      "scope": "canonical-shared",
+      "drawCount": 1,
+      "outcomeCount": 7,
+      "weightPolicy": "equal-default",
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "isekai",
+          "label": "Isekai",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "isekai"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Isekai",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Pindah dunia dulu; belum tentu dapat posisi MC.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "fantasy",
+          "label": "Fantasy",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "fantasy"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Fantasy",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Dunia sihir, tetapi job plot belum keluar.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "romance",
+          "label": "Romance",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "romance"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Romance",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Masuk anime cinta; hasil ending belum kelihatan.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "sci-fi",
+          "label": "Sci-fi",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "sci-fi"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Sci-fi",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Dunia futuristis; gear belum otomatis ikut.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "action",
+          "label": "Action",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "action"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Action",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Genre berantem sudah keluar, pemeran belum diputuskan.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "sport",
+          "label": "Sport",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "sport"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Sport",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Opening sudah punya vibe latihan.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "slice-of-life",
+          "label": "Slice of Life",
+          "baseWeight": 1,
+          "followupWheelId": "anime-role",
+          "effect": {
+            "setScopedGenreId": "slice-of-life"
+          },
+          "resultContext": {
+            "facts": [
+              "Genre Anime: Slice of Life",
+              "MC/NPC: belum diputar"
+            ],
+            "displayContext": "Ada jatah kehidupan sehari-hari.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anime-role",
+      "label": "MC atau NPC?",
+      "scope": "canonical-shared",
+      "drawCount": 1,
+      "outcomeCount": 2,
+      "weightPolicy": "fixed-user-50-50",
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "mc",
+          "label": "MC",
+          "baseWeight": 1,
+          "probability": 0.5,
+          "dispatch": "Resolve profile for already committed Genre exactly once.",
+          "resultContext": {
+            "facts": [
+              "Posisi Anime: MC",
+              "Event mengikuti genre yang telah diputar"
+            ],
+            "displayContext": "Jatah spotlight turun; event genre sekarang kebuka.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "npc",
+          "label": "NPC",
+          "baseWeight": 1,
+          "probability": 0.5,
+          "dispatch": "No MC event; return saved caller with Genre and Role context retained.",
+          "resultContext": {
+            "facts": [
+              "Posisi Anime: NPC",
+              "Genre tersimpan; tidak ada event MC"
+            ],
+            "displayContext": "Genre sudah bagus, kameranya ternyata lewat doang.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        }
+      ],
+      "allowModifiers": false
+    },
+    {
+      "id": "anime-romance-ending",
+      "label": "Ending Romance",
+      "scope": "canonical-shared",
+      "drawCount": 1,
+      "outcomeCount": 5,
+      "weightPolicy": "fixed-user-ratio",
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "pacaran",
+          "label": "Pacaran",
+          "baseWeight": 1,
+          "probability": 0.14285714285714285,
+          "profileId": "anime-romance-pacaran",
+          "resultContext": {
+            "facts": [
+              "Ending Romance: Pacaran"
+            ],
+            "displayContext": "Akhirnya official; tambah satu Girlfriend weapon.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "tertolak",
+          "label": "Tertolak",
+          "baseWeight": 2,
+          "probability": 0.2857142857142857,
+          "profileId": "anime-romance-tertolak",
+          "resultContext": {
+            "facts": [
+              "Ending Romance: Tertolak"
+            ],
+            "displayContext": "Confess sudah, balasannya tidak sesuai harapan.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "ntr",
+          "label": "NTR",
+          "baseWeight": 1,
+          "probability": 0.14285714285714285,
+          "profileId": "anime-romance-ntr",
+          "resultContext": {
+            "facts": [
+              "Ending Romance: NTR"
+            ],
+            "displayContext": "Plot twist-nya bikin playlist galau kebuka.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "harem",
+          "label": "Harem",
+          "baseWeight": 1,
+          "probability": 0.14285714285714285,
+          "profileId": "anime-romance-harem",
+          "resultContext": {
+            "facts": [
+              "Ending Romance: Harem"
+            ],
+            "displayContext": "Bukan satu jalur; lanjut spin jumlah Girlfriend.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "digantung",
+          "label": "Digantung",
+          "baseWeight": 2,
+          "probability": 0.2857142857142857,
+          "profileId": "anime-romance-digantung",
+          "resultContext": {
+            "facts": [
+              "Ending Romance: Digantung"
+            ],
+            "displayContext": "Hubungannya loading, statusnya belum selesai.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        }
+      ],
+      "allowModifiers": false,
+      "distribution": {
+        "order": [
+          "pacaran",
+          "tertolak",
+          "ntr",
+          "harem",
+          "digantung"
+        ],
+        "weights": [
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "totalWeight": 7
+      }
+    },
+    {
+      "id": "anime-harem-count",
+      "label": "Jumlah Girlfriend",
+      "scope": "canonical-shared",
+      "drawCount": 1,
+      "outcomeCount": 5,
+      "weightPolicy": "equal-default",
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "girlfriend-count-1",
+          "label": "1",
+          "count": 1,
+          "baseWeight": 1,
+          "effect": {
+            "grantWeaponRef": "romance-girlfriend",
+            "instanceCount": 1
+          },
+          "resultContext": {
+            "facts": [
+              "Jumlah Girlfriend: 1",
+              "Masing-masing dicatat sebagai weapon instance terpisah"
+            ],
+            "displayContext": "Harem katanya, personelnya satu.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "girlfriend-count-2",
+          "label": "2",
+          "count": 2,
+          "baseWeight": 1,
+          "effect": {
+            "grantWeaponRef": "romance-girlfriend",
+            "instanceCount": 2
+          },
+          "resultContext": {
+            "facts": [
+              "Jumlah Girlfriend: 2",
+              "Masing-masing dicatat sebagai weapon instance terpisah"
+            ],
+            "displayContext": "Roster hubungan dapat 2 slot; mastery tiap weapon tetap diputar nanti.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "girlfriend-count-3",
+          "label": "3",
+          "count": 3,
+          "baseWeight": 1,
+          "effect": {
+            "grantWeaponRef": "romance-girlfriend",
+            "instanceCount": 3
+          },
+          "resultContext": {
+            "facts": [
+              "Jumlah Girlfriend: 3",
+              "Masing-masing dicatat sebagai weapon instance terpisah"
+            ],
+            "displayContext": "Roster hubungan dapat 3 slot; mastery tiap weapon tetap diputar nanti.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "girlfriend-count-4",
+          "label": "4",
+          "count": 4,
+          "baseWeight": 1,
+          "effect": {
+            "grantWeaponRef": "romance-girlfriend",
+            "instanceCount": 4
+          },
+          "resultContext": {
+            "facts": [
+              "Jumlah Girlfriend: 4",
+              "Masing-masing dicatat sebagai weapon instance terpisah"
+            ],
+            "displayContext": "Roster hubungan dapat 4 slot; mastery tiap weapon tetap diputar nanti.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "girlfriend-count-5",
+          "label": "5",
+          "count": 5,
+          "baseWeight": 1,
+          "effect": {
+            "grantWeaponRef": "romance-girlfriend",
+            "instanceCount": 5
+          },
+          "resultContext": {
+            "facts": [
+              "Jumlah Girlfriend: 5",
+              "Masing-masing dicatat sebagai weapon instance terpisah"
+            ],
+            "displayContext": "Roster hubungan dapat 5 slot; mastery tiap weapon tetap diputar nanti.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anime-scifi-role",
+      "label": "Peran Sci-fi",
+      "scope": "canonical-shared",
+      "drawCount": 1,
+      "outcomeCount": 3,
+      "weightPolicy": "equal-default",
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "technician",
+          "label": "Technician",
+          "baseWeight": 1,
+          "profileId": "anime-mc-technician",
+          "resultContext": {
+            "facts": [
+              "Peran MC Sci-fi: Technician"
+            ],
+            "displayContext": "Bengkel futuristis buka; spin satu Tech Weapon.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "pilot",
+          "label": "Pilot",
+          "baseWeight": 1,
+          "profileId": "anime-mc-pilot",
+          "resultContext": {
+            "facts": [
+              "Peran MC Sci-fi: Pilot"
+            ],
+            "displayContext": "Sekarang waktunya cari kendaraan mecha.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        },
+        {
+          "id": "cyborg",
+          "label": "Cyborg",
+          "baseWeight": 1,
+          "profileId": "anime-mc-cyborg",
+          "resultContext": {
+            "facts": [
+              "Peran MC Sci-fi: Cyborg"
+            ],
+            "displayContext": "Upgrade hardware; dua spin Tech Weapon berurutan.",
+            "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+          }
+        }
+      ]
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "anime-mc-isekai",
+      "genreId": "isekai",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "isekai-cheat-skill",
+          "count": 1,
+          "definitionDesign": "content/isekai-cheat-wheel-design.json"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-fantasy",
+      "genreId": "fantasy",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "register-stage-ticket",
+          "ticketRef": "anime-fantasy-extra-power"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-romance",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "anime-romance-ending",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-sci-fi",
+      "genreId": "sci-fi",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "anime-scifi-role",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-action",
+      "genreId": "action",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "register-stat-modifier",
+          "stat": "strength",
+          "operation": "add",
+          "amount": 1,
+          "unit": "numeric-point",
+          "effectId": "anime-action-strength"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-sport",
+      "genreId": "sport",
+      "roleGuard": "mc",
+      "steps": [
+        {
+          "type": "register-stat-modifier",
+          "stat": "speed",
+          "operation": "add",
+          "amount": 1,
+          "unit": "numeric-point",
+          "effectId": "anime-sport-speed"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-slice-of-life",
+      "genreId": "slice-of-life",
+      "roleGuard": "mc",
+      "steps": []
+    },
+    {
+      "id": "anime-romance-pacaran",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "endingGuard": "pacaran",
+      "steps": [
+        {
+          "type": "grant-weapon",
+          "definitionId": "romance-girlfriend",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "anime-romance-tertolak",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "endingGuard": "tertolak",
+      "steps": [],
+      "contextOnly": true
+    },
+    {
+      "id": "anime-romance-ntr",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "endingGuard": "ntr",
+      "steps": [],
+      "contextOnly": true
+    },
+    {
+      "id": "anime-romance-digantung",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "endingGuard": "digantung",
+      "steps": [],
+      "contextOnly": true
+    },
+    {
+      "id": "anime-romance-harem",
+      "genreId": "romance",
+      "roleGuard": "mc",
+      "endingGuard": "harem",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "anime-harem-count",
+          "count": 1,
+          "grantFromActualCount": true
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-technician",
+      "genreId": "sci-fi",
+      "roleGuard": "mc",
+      "scifiRoleGuard": "technician",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "tech-weapon",
+          "count": 1,
+          "definitionDesign": "content/universal-tech-weapon-wheel-design.json",
+          "attachModifierToSelectedGrant": "technician-tech-weapon-mastery"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-cyborg",
+      "genreId": "sci-fi",
+      "roleGuard": "mc",
+      "scifiRoleGuard": "cyborg",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "tech-weapon",
+          "count": 2,
+          "sequential": true,
+          "definitionDesign": "content/universal-tech-weapon-wheel-design.json"
+        }
+      ]
+    },
+    {
+      "id": "anime-mc-pilot",
+      "genreId": "sci-fi",
+      "roleGuard": "mc",
+      "scifiRoleGuard": "pilot",
+      "steps": [
+        {
+          "type": "spin",
+          "wheelId": "anime-mecha",
+          "count": 1,
+          "definitionDesign": "content/anime-mecha-wheel-design.json",
+          "grantKind": "rideable-mecha"
+        }
+      ]
+    }
+  ],
+  "weaponDefinitions": [
+    {
+      "id": "romance-girlfriend",
+      "label": "Girlfriend",
+      "equipmentKind": "weapon",
+      "status": "User-confirmed weapon classification for the comedic game.",
+      "scope": "Companion-style weapon slot; action, appearance and limits remain unspecified.",
+      "tags": [
+        "romance",
+        "companion-weapon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "Normal Weapon Mastery per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Ordinary compatible Master+ effective Weapon Mastery gate; compatible Enchant profile remains pending. Do not decide enchantability from the label alone.",
+      "personalPowerGrant": "none",
+      "statGrant": "none",
+      "ownership": "Pacaran grants exactly one; Harem grants the actual count 1..5, each a distinct instance ID with a separate scheduled weapon mastery. Do not merge same definition.",
+      "grantKey": "characterId/sourceAnimeComponentId/sourceEndingOrHaremCountSpinId/companionOrdinal",
+      "resultContext": {
+        "facts": [
+          "Weapon Girlfriend bertambah sesuai hasil yang benar-benar keluar",
+          "Weapon Mastery menunggu tahap Weapon"
+        ],
+        "displayContext": "Romance masuk build; roster weapon ikut berubah.",
+        "policy": "Only actual committed stacked facts and source-scoped effects. Suggested meme/caption is editable and creates no mechanics."
+      },
+      "notInferred": "No girlfriend-type selector, partner powers, stat penalty, enchant guarantee or named franchise companion unless approved later."
+    }
+  ],
+  "weaponMasteryModifiers": [
+    {
+      "id": "technician-tech-weapon-mastery",
+      "status": "User-confirmed +1 applies only to the actual Tech Weapon granted by Technician.",
+      "operation": "add-rank-steps",
+      "amount": 1,
+      "scope": "source-granted-weapon-instance-only",
+      "sourceProfileId": "anime-mc-technician",
+      "targetSelector": "Exact weapon instance created by this Technician tech-weapon child invocation/grant, never definition-wide or all-owned.",
+      "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+      "formula": "effectiveWeaponRankIndex = immutableRolledWeaponRankIndex + sum(distinct active modifiers matching this weaponInstanceId)",
+      "sourceKey": "characterId/modifierId/sourceAnimeComponentId/sourceTechSpinId/weaponInstanceId",
+      "lateActivation": "Register new source as pending. Before final phase do not project; within final phase refresh from the same retained immutable base plus current distinct sources, preserving God instance overrides. No mastery redraw or compounded bonus.",
+      "enchantment": "At final bonus phase, effective Weapon Mastery after this scoped bonus qualifies at Master=5 or above only with active enchantable weapon/unused compatible slot. Deduplicate slot activation; existing acquisition lock still applies.",
+      "excluded": [
+        "Cyborg Tech Weapons",
+        "Girlfriend weapons",
+        "other normal weapons",
+        "Gnome gadgets",
+        "Kinnara instrument",
+        "vehicle/mecha",
+        "all personal powers"
+      ],
+      "cap": "Configured ordered Weapon Mastery scale; +1 means one rank step, not a stat point or automatic fixed Master. Rank scale remains pending.",
+      "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+    }
+  ],
+  "stageBonusTickets": [
+    {
+      "id": "anime-fantasy-extra-power",
+      "sourceProfileId": "anime-mc-fantasy",
+      "stage": "power",
+      "wheelFamily": "power",
+      "extraSpins": 1,
+      "requiredGrant": null,
+      "emptyOutcomePolicy": "Normal Power pool, including None when allowed; extra spin is guaranteed, not a guaranteed power. Existing God 80/20 normal-pool rule also applies when its guard matches.",
+      "sequence": "Main Power acquisition and details -> every authorized bonus acquisition/details -> one shared Power Mastery if owned inventory nonempty.",
+      "sourceKey": "characterId/ticketId/sourceAnimeComponentId/sourceRoleSpinId",
+      "idempotence": "Register one ticket per actual Fantasy/MC source. Consume atomically with its actual bonus result. A late ticket runs the required subflow then restores saved caller."
+    }
+  ],
+  "catalogImports": [
+    {
+      "design": "content/isekai-cheat-wheel-design.json",
+      "wheelId": "isekai-cheat-skill",
+      "outcomeCount": 64
+    },
+    {
+      "design": "content/universal-tech-weapon-wheel-design.json",
+      "wheelId": "tech-weapon",
+      "outcomeCount": 20
+    },
+    {
+      "design": "content/anime-mecha-wheel-design.json",
+      "wheelId": "anime-mecha",
+      "outcomeCount": 20,
+      "franchiseCount": 20,
+      "rosterPolicyRef": "content/anime-mecha-wheel-design.json#rosterPolicy"
+    }
+  ],
+  "flowContract": {
+    "order": [
+      "anime-family commit/reaction",
+      "anime-genre actual spin/reaction",
+      "anime-role actual fixed 50/50 spin/reaction",
+      "if MC resolve only committed genre profile and its actual children",
+      "return saved caller"
+    ],
+    "npc": "Every Genre NPC retains Genre+Role only. No Cheat, Fantasy ticket, Romance ending/count, Sci-fi role, tech/mecha, Action Strength or Sport Speed event.",
+    "mcDispatch": "One profile keyed by this source component’s committed Genre and MC Role; no second Genre spin and no cross-component borrowed role/genre.",
+    "returnPolicy": "Nested origin/host/Hybrid calls finish this source Anime event then restore exact saved continuation. Main Archetype begins only after the outer race event tree completes.",
+    "raceHistory": "Anime consumes canonical anime-lineage once. Genre, role, title references, powers and vehicles create no extra family selection, no new no-repeat key and no automatic Hybrid/Skeleton/Heavenly/Demon events.",
+    "profileAuthority": "These profiles/wheels are canonical; race design imports are references, never second registrations or duplicate invocations.",
+    "idempotence": "Stable component/parent/step/ordinal invocation IDs; restore committed result and finish unfinished children on replay. One grant/ticket/modifier/stat effect per stable source key.",
+    "bonusTiming": "content/bonus-timing-design.json#contracts"
+  },
+  "numericEffects": {
+    "unit": "numeric-point",
+    "sourceKey": "characterId/effectId/sourceAnimeComponentId/sourceRoleSpinId",
+    "timing": "Register once at the committed MC Role result and project after its base stat. Late sources recompute final from immutable base plus distinct ledger entries.",
+    "action": {
+      "strength": 1
+    },
+    "sport": {
+      "speed": 1
+    },
+    "sadRomancePenalty": 0,
+    "npcBonus": 0
+  },
+  "masteryContract": {
+    "weapon": "Full owned inventory after main acquisition/details and queued bonuses; every GF and Tech instance receives ordinary per-instance Weapon Mastery once. Technician modifier targets only its actual Tech child grant.",
+    "power": "All Cheat and Fantasy-acquired powers retain the one shared character Power Mastery contract. No acquisition count multiplies mastery draws, no new power Enchant.",
+    "none": "Main None adds nothing and erases no early weapon or power."
+  },
+  "contextContract": {
+    "layers": [
+      "familyId/sourceAnimeComponentId",
+      "actual Genre + sourceGenreSpinId",
+      "actual MC/NPC + sourceRoleSpinId",
+      "actual Ending/Sci-fi Role/Count/Cheat/Tech/Mecha child results as applicable",
+      "actual owned grants, source stat modifiers and consumed/pending tickets",
+      "later mastery base/effective ranks when actually committed"
+    ],
+    "genreReaction": "Knows Genre, does not know MC/NPC or future grant.",
+    "roleReaction": "Knows actual Role and already selected Genre; fixed Role effects (Action/Sport/ticket) committed before narrator view; child results not invented.",
+    "childReaction": "Sees own actual grant/count and source component; Cyborg first reaction cannot use second result.",
+    "funnyHook": "Actual explicitly funny-result catalog tags may trigger existing Shrek hook once when already active. Captions alone do not trigger it."
+  },
+  "laterInfluenceDraft": {
+    "status": "Semantic target map only, numeric probability multipliers/eligibility profiles remain pending approval.",
+    "targets": [
+      "archetype",
+      "backstory",
+      "size-reference compatibility",
+      "stat eligibility where authorized",
+      "weapon compatibility",
+      "weapon.mastery",
+      "power compatibility"
+    ],
+    "basis": [
+      "committed Genre/Role",
+      "actual power/weapon/vehicle definitions and intrinsic tags"
+    ],
+    "policy": "Do not invent hidden boosts/penalties or leak unrolled choices. Fixed MC/NPC and Romance ratios remain exact."
+  },
+  "openBalance": [
+    "Power/main-stat/mastery scales",
+    "Individual Cheat limits and body-shape implications",
+    "Tech/girlfriend Enchant compatibility and actions",
+    "Mecha controls/crew/loadout/body-size relationship",
+    "Conditional later odds and catalog tuning"
+  ],
+  "history": {
+    "retiredNamedMcSelector": {
+      "status": "Archived inactive; replaced by Genre -> Role -> MC events",
+      "active": false,
+      "reason": "User renamed family Anime and changed selection flow; old named-character pool is not called.",
+      "previousBranch": {
+        "id": "anime-race-type",
+        "label": "Anime MC",
+        "status": "Standalone Anime MC structure confirmed; exact MC pool and events proposed",
+        "baseWeightsAssigned": true,
+        "outcomes": [
+          {
+            "id": "saiyan",
+            "label": "Goku (Saiyan)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "referenceCharacter": "Goku",
+            "choiceKind": "anime-mc-template",
+            "sourceRefs": [
+              "saiyan"
+            ],
+            "baseIdentity": {
+              "species": "Saiyan",
+              "lineage": [
+                "Saiyan"
+              ]
+            },
+            "eventDraft": [
+              "Bakat ras",
+              "Potensi awakening"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "strength",
+                "fight",
+                "power",
+                "apex"
+              ],
+              "description": "Saiyan-themed combat/ki/awakening candidates; no automatic peak-form stats."
+            },
+            "sourceIdentityKind": "species"
+          },
+          {
+            "id": "slime",
+            "label": "Rimuru (Slime)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "referenceCharacter": "Rimuru",
+            "choiceKind": "anime-mc-template",
+            "sourceRefs": [
+              "slime"
+            ],
+            "baseIdentity": {
+              "species": "Slime",
+              "lineage": [
+                "Slime"
+              ]
+            },
+            "eventDraft": [
+              "Sifat tubuh",
+              "Jalur evolution"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "durability",
+                "intelligence",
+                "weapon",
+                "power"
+              ],
+              "description": "Adaptive-body and evolution candidates; body-compatible weapon pool."
+            },
+            "sourceIdentityKind": "species"
+          },
+          {
+            "id": "half-ghoul",
+            "label": "Kaneki (Half-Ghoul)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "referenceCharacter": "Kaneki",
+            "choiceKind": "anime-mc-template",
+            "sourceRefs": [
+              "half-ghoul"
+            ],
+            "baseIdentity": {
+              "species": "Human/Ghoul Hybrid",
+              "lineage": [
+                "Human",
+                "Ghoul"
+              ]
+            },
+            "eventDraft": [
+              "Sifat hybrid",
+              "Kontrol naluri"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "strength",
+                "durability",
+                "power",
+                "weakness"
+              ],
+              "description": "Hybrid/natural-weapon and control/feeding-limit candidates."
+            },
+            "sourceIdentityKind": "hybrid-lineage"
+          },
+          {
+            "id": "half-demon",
+            "label": "Inuyasha (Half-Demon)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "referenceCharacter": "Inuyasha",
+            "choiceKind": "anime-mc-template",
+            "sourceRefs": [
+              "half-demon"
+            ],
+            "baseIdentity": {
+              "species": "Human/Demon Hybrid",
+              "lineage": [
+                "Human",
+                "Demon"
+              ]
+            },
+            "eventDraft": [
+              "Warisan demon",
+              "Kontrol wujud"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "strength",
+                "fight",
+                "weapon",
+                "weakness"
+              ],
+              "description": "Hybrid lineage and compatible weapon/form-control candidates."
+            },
+            "sourceIdentityKind": "hybrid-lineage"
+          },
+          {
+            "id": "shinigami",
+            "label": "Ichigo (Shinigami)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "referenceCharacter": "Ichigo",
+            "choiceKind": "anime-mc-template",
+            "sourceRefs": [
+              "shinigami"
+            ],
+            "baseIdentity": {
+              "species": "Human-origin spiritual identity",
+              "lineage": [
+                "Human"
+              ],
+              "spiritualRole": "Shinigami"
+            },
+            "eventDraft": [
+              "Potensi spiritual",
+              "Ikatan senjata"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "fight",
+                "weapon",
+                "power",
+                "apex"
+              ],
+              "description": "Soul Reaper spiritual/weapon candidates; optional lineage events can refine identity without assuming Ichigo's full ancestry."
+            },
+            "sourceIdentityKind": "spiritual-role"
+          },
+          {
+            "id": "naruto",
+            "label": "Naruto (Manusia)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "choiceKind": "anime-mc-template",
+            "baseIdentity": {
+              "species": "Human",
+              "familyIds": [
+                "human"
+              ],
+              "lineage": [
+                "Human"
+              ]
+            },
+            "sourceRefs": [
+              "naruto"
+            ],
+            "eventDraft": [
+              "Clan atau latihan"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "fight",
+                "power",
+                "backstory"
+              ],
+              "description": "Shinobi training/ability candidates; ninja is a role and clan details remain separate."
+            },
+            "referenceCharacter": "Naruto"
+          },
+          {
+            "id": "luffy",
+            "label": "Luffy (Manusia)",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "choiceKind": "anime-mc-template",
+            "baseIdentity": {
+              "species": "Human",
+              "familyIds": [
+                "human"
+              ],
+              "lineage": [
+                "Human"
+              ]
+            },
+            "sourceRefs": [
+              "luffy"
+            ],
+            "eventDraft": [
+              "Jalur bajak laut atau kemampuan"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "fight",
+                "power",
+                "weakness"
+              ],
+              "description": "Pirate/ability candidates; powers and swimming limitations belong to explicitly resolved profiles."
+            },
+            "referenceCharacter": "Luffy"
+          }
+        ],
+        "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights"
+      }
+    }
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

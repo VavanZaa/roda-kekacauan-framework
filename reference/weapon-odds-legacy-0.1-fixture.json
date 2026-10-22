@@ -1,0 +1,4707 @@
+{
+  "provenance": "Actual0.1 Human Paladin plan captured before weapon-affinity changes; immutable replay regression fixture, not replanned0.2 weights.",
+  "plan": {
+    "version": "weapon-odds/0.1.0",
+    "catalogVersion": "weapon-wheel/0.1.0",
+    "runId": "coverage-run",
+    "characterId": "coverage-hero",
+    "invocationId": "legacy-weapon",
+    "acquisitionKind": "main",
+    "bonusTicket": null,
+    "context": {
+      "status": "ready",
+      "version": "stat-odds/0.4.0",
+      "runId": "coverage-run",
+      "characterId": "coverage-hero",
+      "invocationId": "legacy-weapon",
+      "model": {
+        "id": "lore-stat-model",
+        "version": "2",
+        "maximumProbability": 0.25,
+        "sigma": [
+          1.1,
+          1.25,
+          1.2,
+          1.35,
+          1.3,
+          1.45,
+          1.6
+        ],
+        "luckyTailMass": 0.015,
+        "raceMaximumShare": 0.8,
+        "archetypeStrength": 1,
+        "evidenceStrength": 1,
+        "sizeStrength": 1,
+        "maximumShift": 2.5,
+        "sizeLogLimit": 10,
+        "sizePositiveShiftLimit": 5,
+        "sizeNegativeShiftLimit": 1.25,
+        "minimumCenter": 0,
+        "maximumCenter": 9,
+        "defaultReferenceMeters": 1.75,
+        "minimumProbability": 0.05
+      },
+      "statKeys": [
+        "strength",
+        "speed",
+        "durability",
+        "intelligence",
+        "fight",
+        "weapon-mastery",
+        "power-mastery"
+      ],
+      "hiddenAxes": [
+        "physicalPotential",
+        "mobility",
+        "resilience",
+        "cognition",
+        "combatTraining",
+        "weaponTraining",
+        "powerControl"
+      ],
+      "ownerContextKey": "[\"[[\\\"human\\\",\\\"identity:human\\\",[]]]\",[[\"paladin\",\"legacy-paladin\",[]]],\"legacy-size\",\"size-mm-1730\"]",
+      "identity": [
+        {
+          "familyId": "human",
+          "sourceId": "identity:human",
+          "committed": true,
+          "results": []
+        }
+      ],
+      "archetypeIds": [
+        "paladin"
+      ],
+      "archetypeFacts": [
+        {
+          "archetypeId": "paladin",
+          "sourceId": "legacy-paladin",
+          "committed": true,
+          "results": []
+        }
+      ],
+      "contextTokens": [
+        "race:human",
+        "archetype:paladin"
+      ],
+      "sourceRecords": [
+        {
+          "token": "race:human",
+          "sourceId": "identity:human"
+        },
+        {
+          "token": "archetype:paladin",
+          "sourceId": "legacy-paladin"
+        }
+      ],
+      "raceComponents": [
+        {
+          "id": "prior-human",
+          "familyId": "human",
+          "when": [],
+          "centers": [
+            2.6,
+            2.8,
+            2.4,
+            3.2,
+            2.4,
+            2.4,
+            1.5
+          ],
+          "sizeResponse": [
+            0.48,
+            -0.12,
+            0.32,
+            0,
+            -0.06,
+            0,
+            0
+          ],
+          "reason": "Editable lore game prior; seven distinct capacities, not final bonuses.",
+          "sourceId": "identity:human",
+          "encodedResults": [
+            "race:human"
+          ]
+        }
+      ],
+      "neutralContextSources": [],
+      "neutralContextPolicy": "Preserve unmodeled context; no numeric likelihood or direct effect is invented from its wording.",
+      "roleComponents": [
+        {
+          "id": "paladin",
+          "shift": [
+            0.25,
+            0,
+            0.3,
+            0.25,
+            0.5,
+            0.5,
+            0.7
+          ],
+          "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+        }
+      ],
+      "appliedRules": [],
+      "skippedRules": [],
+      "latent": {
+        "raceCenters": [
+          2.6,
+          2.8,
+          2.4,
+          3.2,
+          2.4,
+          2.4,
+          1.5
+        ],
+        "roleShift": [
+          0.25,
+          0,
+          0.3,
+          0.25,
+          0.5,
+          0.5,
+          0.7
+        ],
+        "eventShift": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sizeShift": [
+          0.0217946934147984,
+          -0.0054486733536996,
+          0.0145297956098656,
+          0,
+          -0.0027243366768498,
+          0,
+          0
+        ],
+        "centers": [
+          2.8717946934147984,
+          2.7945513266463,
+          2.7145297956098653,
+          3.45,
+          2.8972756633231502,
+          2.9,
+          2.2
+        ],
+        "sigma": [
+          1.1,
+          1.25,
+          1.2,
+          1.35,
+          1.3,
+          1.45,
+          1.6
+        ]
+      },
+      "size": {
+        "sourceId": "legacy-size",
+        "invocationId": "size",
+        "outcome": {
+          "id": "size-mm-1730",
+          "label": "173 cm",
+          "displayValue": 173,
+          "displayUnit": "cm",
+          "sizeMillimeters": 1730,
+          "sizeMeters": 1.73,
+          "metric": "height",
+          "baseWeight": 0.9795085868794554,
+          "sampleIndices": [
+            5
+          ],
+          "weight": 0.10081188764979405,
+          "probability": 0.10081188764979405,
+          "priorProbability": 0.10081188764979407,
+          "posteriorProbability": 0.10081188764979405,
+          "profile": {
+            "id": "human-range",
+            "version": "size/0.4.0",
+            "label": "Manusia",
+            "metric": "height",
+            "matches": {
+              "familyId": "human",
+              "results": [],
+              "archetypeIds": []
+            },
+            "range": {
+              "min": 150,
+              "max": 200,
+              "unit": "cm"
+            },
+            "spacing": "linear",
+            "outcomeCount": 12,
+            "quantum": 1,
+            "weighting": {
+              "mode": "broad-normal",
+              "center": 167.64,
+              "sigma": 25
+            },
+            "authority": "Source-anchored game prior; authored-envelope; distribution width authored",
+            "referenceAnchorId": "human-standard",
+            "calibration": {
+              "manifest": "reference/size-calibration-research.json",
+              "version": "size-lore-calibration/1",
+              "accessedAt": "2026-10-10",
+              "sourceRefs": [
+                "size-human-dnd-2014"
+              ],
+              "referenceSources": [
+                {
+                  "id": "size-human-dnd-2014",
+                  "url": "https://www.dndbeyond.com/species/1-human",
+                  "loreVersion": "Basic Rules 2014"
+                }
+              ],
+              "scope": "Chosen D&D adult humanoid reference; not measured Indonesian population statistics.",
+              "empiricallyFitted": false,
+              "supportBasis": "authored-envelope",
+              "centerBasis": "nominal-anchor-midpoint",
+              "widthBasis": "Authored broad-width policy: half the stated lore span when numeric bounds exist, otherwise half the chosen game support. This is not a measured standard deviation.",
+              "centerUnit": "cm",
+              "sigmaCoordinate": "linear-display-unit",
+              "publishedPopulationSigma": false
+            },
+            "compositionAxis": {
+              "fromMetric": "height",
+              "targetMetric": "characteristic-dimension",
+              "scale": 1,
+              "authority": "User-authorized editorial principal-dimension comparison for mixed bodies; not a conversion between biological height, length and volume."
+            },
+            "dimensionSemantics": "body-dimension",
+            "bodyForm": "normal"
+          }
+        },
+        "sizeVersion": "size/0.4.0",
+        "referenceMeters": 1.6764,
+        "logRatio": 0.045405611280830004,
+        "coefficients": [
+          0.48,
+          -0.12,
+          0.32,
+          0,
+          -0.06,
+          0,
+          0
+        ],
+        "shift": [
+          0.0217946934147984,
+          -0.0054486733536996,
+          0.0145297956098656,
+          0,
+          -0.0027243366768498,
+          0,
+          0
+        ],
+        "nonPhysical": false,
+        "transformationSizeUsed": false,
+        "referenceProfile": {
+          "id": "human-range",
+          "version": "size/0.4.0",
+          "label": "Manusia",
+          "metric": "height",
+          "matches": {
+            "familyId": "human",
+            "results": [],
+            "archetypeIds": []
+          },
+          "range": {
+            "min": 150,
+            "max": 200,
+            "unit": "cm"
+          },
+          "spacing": "linear",
+          "outcomeCount": 12,
+          "quantum": 1,
+          "weighting": {
+            "mode": "broad-normal",
+            "center": 167.64,
+            "sigma": 25
+          },
+          "authority": "Source-anchored game prior; authored-envelope; distribution width authored",
+          "referenceAnchorId": "human-standard",
+          "calibration": {
+            "manifest": "reference/size-calibration-research.json",
+            "version": "size-lore-calibration/1",
+            "accessedAt": "2026-10-10",
+            "sourceRefs": [
+              "size-human-dnd-2014"
+            ],
+            "referenceSources": [
+              {
+                "id": "size-human-dnd-2014",
+                "url": "https://www.dndbeyond.com/species/1-human",
+                "loreVersion": "Basic Rules 2014"
+              }
+            ],
+            "scope": "Chosen D&D adult humanoid reference; not measured Indonesian population statistics.",
+            "empiricallyFitted": false,
+            "supportBasis": "authored-envelope",
+            "centerBasis": "nominal-anchor-midpoint",
+            "widthBasis": "Authored broad-width policy: half the stated lore span when numeric bounds exist, otherwise half the chosen game support. This is not a measured standard deviation.",
+            "centerUnit": "cm",
+            "sigmaCoordinate": "linear-display-unit",
+            "publishedPopulationSigma": false
+          },
+          "compositionAxis": {
+            "fromMetric": "height",
+            "targetMetric": "characteristic-dimension",
+            "scale": 1,
+            "authority": "User-authorized editorial principal-dimension comparison for mixed bodies; not a conversion between biological height, length and volume."
+          },
+          "dimensionSemantics": "body-dimension",
+          "bodyForm": "normal"
+        },
+        "note": "Authored bounded log extent response; never a literal mass/speed conversion or direct bonus."
+      },
+      "inventory": {
+        "weapons": [],
+        "powers": []
+      },
+      "equalizerActive": false,
+      "resilientActive": false,
+      "freezeBeforeDraw": true,
+      "finalBonusInputsUsed": false,
+      "empiricallyFitted": false
+    },
+    "freezeBeforeDraw": true,
+    "bonusTiming": "final-only",
+    "tierDoesNotSetMastery": true,
+    "status": "ready",
+    "actualSpin": true,
+    "wheelId": "weapon",
+    "excludedWeaponIds": [],
+    "outcomes": [
+      {
+        "id": "weapon-none",
+        "label": "Tanpa weapon",
+        "tier": null,
+        "funnyResult": false,
+        "probability": 0.0804597701149425
+      },
+      {
+        "id": "weapon-bola-tenis",
+        "label": "Bola Tenis",
+        "tier": 1,
+        "catalogOrder": 1,
+        "tags": [
+          "funny-result",
+          "ranged"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-bola-tenis",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gigi-palsu",
+        "label": "Gigi Palsu",
+        "tier": 1,
+        "catalogOrder": 2,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gigi-palsu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-jebakan-tikus",
+        "label": "Jebakan Tikus",
+        "tier": 1,
+        "catalogOrder": 3,
+        "tags": [
+          "funny-result",
+          "trap",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-jebakan-tikus",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-batu-bata",
+        "label": "Batu Bata",
+        "tier": 1,
+        "catalogOrder": 4,
+        "tags": [
+          "funny-result",
+          "improvised",
+          "heavy"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-batu-bata",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-garpu",
+        "label": "Garpu",
+        "tier": 1,
+        "catalogOrder": 5,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-garpu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sendok",
+        "label": "Sendok",
+        "tier": 1,
+        "catalogOrder": 6,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sendok",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-centong-nasi",
+        "label": "Centong Nasi",
+        "tier": 1,
+        "catalogOrder": 7,
+        "tags": [
+          "funny-result",
+          "household",
+          "tool"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-centong-nasi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sandal-jepit",
+        "label": "Sandal Jepit",
+        "tier": 1,
+        "catalogOrder": 8,
+        "tags": [
+          "funny-result",
+          "household",
+          "ranged"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sandal-jepit",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sapu-lidi",
+        "label": "Sapu Lidi",
+        "tier": 1,
+        "catalogOrder": 9,
+        "tags": [
+          "funny-result",
+          "household",
+          "tool"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sapu-lidi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kemoceng",
+        "label": "Kemoceng",
+        "tier": 1,
+        "catalogOrder": 10,
+        "tags": [
+          "funny-result",
+          "household",
+          "tool"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kemoceng",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gantungan-baju",
+        "label": "Gantungan Baju",
+        "tier": 1,
+        "catalogOrder": 11,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gantungan-baju",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-penggaris-kayu",
+        "label": "Penggaris Kayu",
+        "tier": 1,
+        "catalogOrder": 12,
+        "tags": [
+          "funny-result",
+          "improvised"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-penggaris-kayu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pensil-2b",
+        "label": "Pensil 2B",
+        "tier": 1,
+        "catalogOrder": 13,
+        "tags": [
+          "funny-result",
+          "improvised",
+          "stealth"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pensil-2b",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-spidol-permanen",
+        "label": "Spidol Permanen",
+        "tier": 1,
+        "catalogOrder": 14,
+        "tags": [
+          "funny-result",
+          "improvised"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-spidol-permanen",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-botol-plastik",
+        "label": "Botol Plastik",
+        "tier": 1,
+        "catalogOrder": 15,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-botol-plastik",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gelas-plastik",
+        "label": "Gelas Plastik",
+        "tier": 1,
+        "catalogOrder": 16,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gelas-plastik",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-piring-plastik",
+        "label": "Piring Plastik",
+        "tier": 1,
+        "catalogOrder": 17,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-piring-plastik",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tutup-panci",
+        "label": "Tutup Panci",
+        "tier": 1,
+        "catalogOrder": 18,
+        "tags": [
+          "funny-result",
+          "household",
+          "shield"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tutup-panci",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-wajan-lengket",
+        "label": "Wajan Lengket",
+        "tier": 1,
+        "catalogOrder": 19,
+        "tags": [
+          "funny-result",
+          "household",
+          "heavy"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-wajan-lengket",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-bantal-guling",
+        "label": "Bantal Guling",
+        "tier": 1,
+        "catalogOrder": 20,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-bantal-guling",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sarung-gulung",
+        "label": "Sarung Gulung",
+        "tier": 1,
+        "catalogOrder": 21,
+        "tags": [
+          "funny-result",
+          "household",
+          "local"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sarung-gulung",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-payung-bolong",
+        "label": "Payung Bolong",
+        "tier": 1,
+        "catalogOrder": 22,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-payung-bolong",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kardus",
+        "label": "Kardus",
+        "tier": 1,
+        "catalogOrder": 23,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kardus",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-mi-instan-mentah",
+        "label": "Mi Instan Mentah",
+        "tier": 1,
+        "catalogOrder": 24,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-mi-instan-mentah",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kerupuk",
+        "label": "Kerupuk",
+        "tier": 1,
+        "catalogOrder": 25,
+        "tags": [
+          "funny-result",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kerupuk",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-timun",
+        "label": "Timun",
+        "tier": 1,
+        "catalogOrder": 26,
+        "tags": [
+          "funny-result",
+          "nature",
+          "household"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-timun",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-telur-mentah",
+        "label": "Telur Mentah",
+        "tier": 1,
+        "catalogOrder": 27,
+        "tags": [
+          "funny-result",
+          "nature",
+          "ranged"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-telur-mentah",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kulit-pisang",
+        "label": "Kulit Pisang",
+        "tier": 1,
+        "catalogOrder": 28,
+        "tags": [
+          "funny-result",
+          "nature",
+          "trap"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kulit-pisang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-balon-air",
+        "label": "Balon Air",
+        "tier": 1,
+        "catalogOrder": 29,
+        "tags": [
+          "funny-result",
+          "water",
+          "ranged"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-balon-air",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tongkat-selfie",
+        "label": "Tongkat Selfie",
+        "tier": 1,
+        "catalogOrder": 30,
+        "tags": [
+          "funny-result",
+          "technology",
+          "improvised"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-selfie",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.006130268199233717,
+        "withinTierProbability": 0.03333333333333333,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pisau-dapur",
+        "label": "Pisau Dapur",
+        "tier": 2,
+        "catalogOrder": 1,
+        "tags": [
+          "household",
+          "blade",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pisau-dapur",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-golok",
+        "label": "Golok",
+        "tier": 2,
+        "catalogOrder": 2,
+        "tags": [
+          "blade",
+          "tool",
+          "local"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-golok",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-celurit",
+        "label": "Celurit",
+        "tier": 2,
+        "catalogOrder": 3,
+        "tags": [
+          "blade",
+          "tool",
+          "local"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-celurit",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-parang",
+        "label": "Parang",
+        "tier": 2,
+        "catalogOrder": 4,
+        "tags": [
+          "blade",
+          "tool",
+          "local"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-parang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-belati",
+        "label": "Belati",
+        "tier": 2,
+        "catalogOrder": 5,
+        "tags": [
+          "blade",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-belati",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-kayu",
+        "label": "Pedang Kayu",
+        "tier": 2,
+        "catalogOrder": 6,
+        "tags": [
+          "blade",
+          "knight"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-kayu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.017241379310344824,
+        "withinTierProbability": 0.09374999999999999,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-tongkat-bambu",
+        "label": "Tongkat Bambu",
+        "tier": 2,
+        "catalogOrder": 7,
+        "tags": [
+          "nature",
+          "tool"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-bambu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-keris-biasa",
+        "label": "Keris Biasa",
+        "tier": 2,
+        "catalogOrder": 8,
+        "tags": [
+          "blade",
+          "local",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-keris-biasa",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tongkat-besi",
+        "label": "Tongkat Besi",
+        "tier": 2,
+        "catalogOrder": 9,
+        "tags": [
+          "heavy",
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-besi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-palu-godam",
+        "label": "Palu Godam",
+        "tier": 2,
+        "catalogOrder": 10,
+        "tags": [
+          "heavy",
+          "tool"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-palu-godam",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kunci-inggris",
+        "label": "Kunci Inggris",
+        "tier": 2,
+        "catalogOrder": 11,
+        "tags": [
+          "tool",
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kunci-inggris",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-linggis",
+        "label": "Linggis",
+        "tier": 2,
+        "catalogOrder": 12,
+        "tags": [
+          "tool",
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-linggis",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kapak-kayu",
+        "label": "Kapak Kayu",
+        "tier": 2,
+        "catalogOrder": 13,
+        "tags": [
+          "heavy",
+          "tool",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kapak-kayu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pacul",
+        "label": "Pacul",
+        "tier": 2,
+        "catalogOrder": 14,
+        "tags": [
+          "tool",
+          "nature",
+          "local"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pacul",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sabit",
+        "label": "Sabit",
+        "tier": 2,
+        "catalogOrder": 15,
+        "tags": [
+          "tool",
+          "blade",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sabit",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sekop",
+        "label": "Sekop",
+        "tier": 2,
+        "catalogOrder": 16,
+        "tags": [
+          "tool",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sekop",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-ketapel",
+        "label": "Ketapel",
+        "tier": 2,
+        "catalogOrder": 17,
+        "tags": [
+          "ranged",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-ketapel",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pemukul-baseball",
+        "label": "Pemukul Baseball",
+        "tier": 2,
+        "catalogOrder": 18,
+        "tags": [
+          "heavy",
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pemukul-baseball",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-raket-tenis",
+        "label": "Raket Tenis",
+        "tier": 2,
+        "catalogOrder": 19,
+        "tags": [
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-raket-tenis",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-rantai-besi",
+        "label": "Rantai Besi",
+        "tier": 2,
+        "catalogOrder": 20,
+        "tags": [
+          "heavy",
+          "trap"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-rantai-besi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tombak-bambu",
+        "label": "Tombak Bambu",
+        "tier": 2,
+        "catalogOrder": 21,
+        "tags": [
+          "nature",
+          "tool"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tombak-bambu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pecut",
+        "label": "Pecut",
+        "tier": 2,
+        "catalogOrder": 22,
+        "tags": [
+          "tool",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pecut",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gitar-akustik",
+        "label": "Gitar Akustik",
+        "tier": 2,
+        "catalogOrder": 23,
+        "tags": [
+          "musical",
+          "improvised"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "musical",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gitar-akustik",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pistol-angin",
+        "label": "Pistol Angin",
+        "tier": 2,
+        "catalogOrder": 24,
+        "tags": [
+          "ranged",
+          "technology"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pistol-angin",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pistol-flare",
+        "label": "Pistol Flare",
+        "tier": 2,
+        "catalogOrder": 25,
+        "tags": [
+          "ranged",
+          "technology",
+          "pirate"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pistol-flare",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-semprotan-merica",
+        "label": "Semprotan Merica",
+        "tier": 2,
+        "catalogOrder": 26,
+        "tags": [
+          "household",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-semprotan-merica",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-bom-asap",
+        "label": "Bom Asap",
+        "tier": 2,
+        "catalogOrder": 27,
+        "tags": [
+          "stealth",
+          "technology"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-bom-asap",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-jaring-penangkap",
+        "label": "Jaring Penangkap",
+        "tier": 2,
+        "catalogOrder": 28,
+        "tags": [
+          "trap",
+          "nature",
+          "pirate"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-jaring-penangkap",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pancing-ikan",
+        "label": "Pancing Ikan",
+        "tier": 2,
+        "catalogOrder": 29,
+        "tags": [
+          "tool",
+          "nature",
+          "water",
+          "pirate"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pancing-ikan",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kursi-lipat",
+        "label": "Kursi Lipat",
+        "tier": 2,
+        "catalogOrder": 30,
+        "tags": [
+          "funny-result",
+          "household",
+          "improvised"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "improvised",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kursi-lipat",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.005747126436781609,
+        "withinTierProbability": 0.03125,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-panjang",
+        "label": "Pedang Panjang",
+        "tier": 3,
+        "catalogOrder": 1,
+        "tags": [
+          "blade",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-panjang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-katana",
+        "label": "Katana",
+        "tier": 3,
+        "catalogOrder": 2,
+        "tags": [
+          "blade",
+          "stealth",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "katana",
+          "definitionFile": "content/goblin-orc-troll-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-besar",
+        "label": "Pedang Besar",
+        "tier": 3,
+        "catalogOrder": 3,
+        "tags": [
+          "blade",
+          "heavy",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-besar",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-rapier",
+        "label": "Rapier",
+        "tier": 3,
+        "catalogOrder": 4,
+        "tags": [
+          "blade",
+          "knight"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-rapier",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-saber",
+        "label": "Saber",
+        "tier": 3,
+        "catalogOrder": 5,
+        "tags": [
+          "blade",
+          "pirate",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-saber",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tombak",
+        "label": "Tombak",
+        "tier": 3,
+        "catalogOrder": 6,
+        "tags": [
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tombak",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-trident-trisula",
+        "label": "Trident / Trisula",
+        "tier": 3,
+        "catalogOrder": 7,
+        "tags": [
+          "water",
+          "pirate",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "trishula",
+          "definitionFile": "content/elf-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-halberd",
+        "label": "Halberd",
+        "tier": 3,
+        "catalogOrder": 8,
+        "tags": [
+          "heavy",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-halberd",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-kapak-perang",
+        "label": "Kapak Perang",
+        "tier": 3,
+        "catalogOrder": 9,
+        "tags": [
+          "heavy",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kapak-perang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gada-perang",
+        "label": "Gada Perang",
+        "tier": 3,
+        "catalogOrder": 10,
+        "tags": [
+          "heavy",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gada-perang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-palu-perang",
+        "label": "Palu Perang",
+        "tier": 3,
+        "catalogOrder": 11,
+        "tags": [
+          "heavy",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-palu-perang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-pedang-kembar",
+        "label": "Pedang Kembar",
+        "tier": 3,
+        "catalogOrder": 12,
+        "tags": [
+          "blade",
+          "stealth",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-kembar",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-buku-jari-besi",
+        "label": "Buku Jari Besi",
+        "tier": 3,
+        "catalogOrder": 13,
+        "tags": [
+          "improvised",
+          "heavy"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-buku-jari-besi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-shuriken",
+        "label": "Shuriken",
+        "tier": 3,
+        "catalogOrder": 14,
+        "tags": [
+          "ranged",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-shuriken",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kunai",
+        "label": "Kunai",
+        "tier": 3,
+        "catalogOrder": 15,
+        "tags": [
+          "blade",
+          "stealth",
+          "ranged"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kunai",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-nunchaku",
+        "label": "Nunchaku",
+        "tier": 3,
+        "catalogOrder": 16,
+        "tags": [
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-nunchaku",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-busur",
+        "label": "Busur",
+        "tier": 3,
+        "catalogOrder": 17,
+        "tags": [
+          "ranged",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-busur",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-crossbow",
+        "label": "Crossbow",
+        "tier": 3,
+        "catalogOrder": 18,
+        "tags": [
+          "ranged",
+          "knight"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-crossbow",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-busur-besar",
+        "label": "Busur Besar",
+        "tier": 3,
+        "catalogOrder": 19,
+        "tags": [
+          "ranged",
+          "nature",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-busur-besar",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-javelin",
+        "label": "Javelin",
+        "tier": 3,
+        "catalogOrder": 20,
+        "tags": [
+          "ranged",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-javelin",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tameng-besi",
+        "label": "Tameng Besi",
+        "tier": 3,
+        "catalogOrder": 21,
+        "tags": [
+          "shield",
+          "knight",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tameng-besi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.011494252873563218,
+        "withinTierProbability": 0.0625,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-cakram-lempar",
+        "label": "Cakram Lempar",
+        "tier": 3,
+        "catalogOrder": 22,
+        "tags": [
+          "ranged",
+          "local"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-cakram-lempar",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-revolver",
+        "label": "Revolver",
+        "tier": 3,
+        "catalogOrder": 23,
+        "tags": [
+          "ranged",
+          "technology",
+          "pirate"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-revolver",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-shotgun",
+        "label": "Shotgun",
+        "tier": 3,
+        "catalogOrder": 24,
+        "tags": [
+          "ranged",
+          "technology",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-shotgun",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-smg",
+        "label": "SMG",
+        "tier": 3,
+        "catalogOrder": 25,
+        "tags": [
+          "ranged",
+          "technology",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-smg",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-senapan-serbu",
+        "label": "Senapan Serbu",
+        "tier": 3,
+        "catalogOrder": 26,
+        "tags": [
+          "ranged",
+          "technology",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-senapan-serbu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-senapan-sniper",
+        "label": "Senapan Sniper",
+        "tier": 3,
+        "catalogOrder": 27,
+        "tags": [
+          "ranged",
+          "technology",
+          "stealth"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-senapan-sniper",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-peluncur-granat",
+        "label": "Peluncur Granat",
+        "tier": 3,
+        "catalogOrder": 28,
+        "tags": [
+          "ranged",
+          "technology",
+          "heavy",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-peluncur-granat",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-bazooka",
+        "label": "Bazooka",
+        "tier": 3,
+        "catalogOrder": 29,
+        "tags": [
+          "ranged",
+          "technology",
+          "heavy",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-bazooka",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-flamethrower",
+        "label": "Flamethrower",
+        "tier": 3,
+        "catalogOrder": 30,
+        "tags": [
+          "technology",
+          "elemental",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-flamethrower",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.003831417624521073,
+        "withinTierProbability": 0.020833333333333336,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sacred-sword",
+        "label": "Sacred Sword / Pedang Suci",
+        "tier": 4,
+        "catalogOrder": 1,
+        "tags": [
+          "blade",
+          "holy",
+          "knight",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sacred-sword",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.10114942528735633,
+        "withinTierProbability": 0.55,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-pedang-terkutuk",
+        "label": "Pedang Terkutuk",
+        "tier": 4,
+        "catalogOrder": 2,
+        "tags": [
+          "blade",
+          "cursed",
+          "demonic",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-terkutuk",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-api",
+        "label": "Pedang Api",
+        "tier": 4,
+        "catalogOrder": 3,
+        "tags": [
+          "blade",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-api",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-es",
+        "label": "Pedang Es",
+        "tier": 4,
+        "catalogOrder": 4,
+        "tags": [
+          "blade",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-es",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-petir",
+        "label": "Pedang Petir",
+        "tier": 4,
+        "catalogOrder": 5,
+        "tags": [
+          "blade",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-petir",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-bayangan",
+        "label": "Pedang Bayangan",
+        "tier": 4,
+        "catalogOrder": 6,
+        "tags": [
+          "blade",
+          "stealth",
+          "cursed",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-bayangan",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-darah",
+        "label": "Pedang Darah",
+        "tier": 4,
+        "catalogOrder": 7,
+        "tags": [
+          "blade",
+          "cursed",
+          "undead",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-darah",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pedang-pemburu-naga",
+        "label": "Pedang Pemburu Naga",
+        "tier": 4,
+        "catalogOrder": 8,
+        "tags": [
+          "blade",
+          "heavy",
+          "battlefield",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-pedang-pemburu-naga",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tombak-rune",
+        "label": "Tombak Rune",
+        "tier": 4,
+        "catalogOrder": 9,
+        "tags": [
+          "knight",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tombak-rune",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0052824651504035204,
+        "withinTierProbability": 0.028723404255319142,
+        "loreWeight": 2.9999999999999996
+      },
+      {
+        "id": "weapon-trisula-pengendali-air",
+        "label": "Trisula Pengendali Air",
+        "tier": 4,
+        "catalogOrder": 10,
+        "tags": [
+          "water",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-trisula-pengendali-air",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-busur-angin",
+        "label": "Busur Angin",
+        "tier": 4,
+        "catalogOrder": 11,
+        "tags": [
+          "ranged",
+          "nature",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-busur-angin",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-busur-cahaya",
+        "label": "Busur Cahaya",
+        "tier": 4,
+        "catalogOrder": 12,
+        "tags": [
+          "ranged",
+          "holy",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-busur-cahaya",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.00880410858400587,
+        "withinTierProbability": 0.047872340425531915,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-crossbow-peledak",
+        "label": "Crossbow Peledak",
+        "tier": 4,
+        "catalogOrder": 13,
+        "tags": [
+          "ranged",
+          "technology",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-crossbow-peledak",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kapak-magma",
+        "label": "Kapak Magma",
+        "tier": 4,
+        "catalogOrder": 14,
+        "tags": [
+          "heavy",
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kapak-magma",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-palu-gravitasi",
+        "label": "Palu Gravitasi",
+        "tier": 4,
+        "catalogOrder": 15,
+        "tags": [
+          "heavy",
+          "technology",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-palu-gravitasi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-cambuk-petir",
+        "label": "Cambuk Petir",
+        "tier": 4,
+        "catalogOrder": 16,
+        "tags": [
+          "elemental",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-cambuk-petir",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-sabit-roh",
+        "label": "Sabit Roh",
+        "tier": 4,
+        "catalogOrder": 17,
+        "tags": [
+          "blade",
+          "undead",
+          "cursed",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-sabit-roh",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-belati-penembus-armor",
+        "label": "Belati Penembus Armor",
+        "tier": 4,
+        "catalogOrder": 18,
+        "tags": [
+          "blade",
+          "stealth",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-belati-penembus-armor",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-perisai-pemantul",
+        "label": "Perisai Pemantul",
+        "tier": 4,
+        "catalogOrder": 19,
+        "tags": [
+          "shield",
+          "holy",
+          "knight",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-perisai-pemantul",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.00880410858400587,
+        "withinTierProbability": 0.047872340425531915,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-rantai-penyegel",
+        "label": "Rantai Penyegel",
+        "tier": 4,
+        "catalogOrder": 20,
+        "tags": [
+          "trap",
+          "holy",
+          "cursed",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-rantai-penyegel",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.00880410858400587,
+        "withinTierProbability": 0.047872340425531915,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-tongkat-sihir",
+        "label": "Tongkat Sihir",
+        "tier": 4,
+        "catalogOrder": 21,
+        "tags": [
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-sihir",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tongkat-healing",
+        "label": "Tongkat Healing",
+        "tier": 4,
+        "catalogOrder": 22,
+        "tags": [
+          "magic",
+          "holy",
+          "nature"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-healing",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.00880410858400587,
+        "withinTierProbability": 0.047872340425531915,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-tongkat-badai",
+        "label": "Tongkat Badai",
+        "tier": 4,
+        "catalogOrder": 23,
+        "tags": [
+          "magic",
+          "elemental",
+          "water"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-badai",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-tongkat-nekromansi",
+        "label": "Tongkat Nekromansi",
+        "tier": 4,
+        "catalogOrder": 24,
+        "tags": [
+          "magic",
+          "undead",
+          "cursed"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-tongkat-nekromansi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-buku-mantra",
+        "label": "Buku Mantra",
+        "tier": 4,
+        "catalogOrder": 25,
+        "tags": [
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-buku-mantra",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kitab-kutukan",
+        "label": "Kitab Kutukan",
+        "tier": 4,
+        "catalogOrder": 26,
+        "tags": [
+          "magic",
+          "cursed",
+          "demonic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kitab-kutukan",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-laser-sword",
+        "label": "Laser Sword",
+        "tier": 4,
+        "catalogOrder": 27,
+        "tags": [
+          "blade",
+          "technology"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "scifi-tech-laser-sword",
+          "definitionFile": "content/universal-tech-weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-railgun",
+        "label": "Railgun",
+        "tier": 4,
+        "catalogOrder": 28,
+        "tags": [
+          "ranged",
+          "technology",
+          "heavy"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "scifi-tech-railgun",
+          "definitionFile": "content/universal-tech-weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-plasma-rifle",
+        "label": "Plasma Rifle",
+        "tier": 4,
+        "catalogOrder": 29,
+        "tags": [
+          "ranged",
+          "technology",
+          "battlefield"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "scifi-tech-plasma-rifle",
+          "definitionFile": "content/universal-tech-weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-banana-peel-launcher",
+        "label": "Banana Peel Launcher",
+        "tier": 4,
+        "catalogOrder": 30,
+        "tags": [
+          "funny-result",
+          "shrek-comedy",
+          "trap",
+          "ranged",
+          "technology"
+        ],
+        "funnyResult": true,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "banana-peel-launcher",
+          "definitionFile": "content/goblin-orc-troll-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "authored-game-item",
+        "probability": 0.0017608217168011736,
+        "withinTierProbability": 0.009574468085106381,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-excalibur",
+        "label": "Excalibur",
+        "tier": 5,
+        "catalogOrder": 1,
+        "tags": [
+          "blade",
+          "holy",
+          "knight",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "legend-fate-excalibur",
+          "definitionFile": "content/legendary-hero-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-dragon-slayer-berserk",
+        "label": "Dragon Slayer (Berserk)",
+        "tier": 5,
+        "catalogOrder": 2,
+        "tags": [
+          "blade",
+          "heavy",
+          "battlefield",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-dragon-slayer-berserk",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-mjolnir",
+        "label": "Mjolnir",
+        "tier": 5,
+        "catalogOrder": 3,
+        "tags": [
+          "heavy",
+          "elemental",
+          "holy",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-mjolnir",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-stormbreaker",
+        "label": "Stormbreaker",
+        "tier": 5,
+        "catalogOrder": 4,
+        "tags": [
+          "heavy",
+          "elemental",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-stormbreaker",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gungnir",
+        "label": "Gungnir",
+        "tier": 5,
+        "catalogOrder": 5,
+        "tags": [
+          "ranged",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gungnir",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-trisula-poseidon",
+        "label": "Trisula Poseidon",
+        "tier": 5,
+        "catalogOrder": 6,
+        "tags": [
+          "water",
+          "elemental",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-trisula-poseidon",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kusanagi",
+        "label": "Kusanagi",
+        "tier": 5,
+        "catalogOrder": 7,
+        "tags": [
+          "blade",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kusanagi",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-masamune-ffvii",
+        "label": "Masamune (FFVII)",
+        "tier": 5,
+        "catalogOrder": 8,
+        "tags": [
+          "blade",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-masamune-ffvii",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-zangetsu",
+        "label": "Zangetsu",
+        "tier": 5,
+        "catalogOrder": 9,
+        "tags": [
+          "blade",
+          "undead",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-zangetsu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-ryujin-jakka",
+        "label": "Ryujin Jakka",
+        "tier": 5,
+        "catalogOrder": 10,
+        "tags": [
+          "blade",
+          "elemental",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-ryujin-jakka",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kyoka-suigetsu",
+        "label": "Kyoka Suigetsu",
+        "tier": 5,
+        "catalogOrder": 11,
+        "tags": [
+          "blade",
+          "stealth",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kyoka-suigetsu",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gada-rujakpala",
+        "label": "Gada Rujakpala",
+        "tier": 5,
+        "catalogOrder": 12,
+        "tags": [
+          "heavy",
+          "local",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gada-rujakpala",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-enma",
+        "label": "Enma",
+        "tier": 5,
+        "catalogOrder": 13,
+        "tags": [
+          "blade",
+          "cursed",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-enma",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-yoru",
+        "label": "Yoru",
+        "tier": 5,
+        "catalogOrder": 14,
+        "tags": [
+          "blade",
+          "heavy",
+          "pirate",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-yoru",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-samehada",
+        "label": "Samehada",
+        "tier": 5,
+        "catalogOrder": 15,
+        "tags": [
+          "blade",
+          "undead",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-samehada",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-kubikiribocho",
+        "label": "Kubikiribocho",
+        "tier": 5,
+        "catalogOrder": 16,
+        "tags": [
+          "blade",
+          "heavy",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-kubikiribocho",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-ea-fate",
+        "label": "Ea (Fate)",
+        "tier": 5,
+        "catalogOrder": 17,
+        "tags": [
+          "blade",
+          "magic",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-ea-fate",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-gae-bolg",
+        "label": "Gae Bolg",
+        "tier": 5,
+        "catalogOrder": 18,
+        "tags": [
+          "ranged",
+          "cursed",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gae-bolg",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-durandal",
+        "label": "Durandal",
+        "tier": 5,
+        "catalogOrder": 19,
+        "tags": [
+          "blade",
+          "holy",
+          "knight",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "legend-fate-durandal",
+          "definitionFile": "content/legendary-hero-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-gram",
+        "label": "Gram",
+        "tier": 5,
+        "catalogOrder": 20,
+        "tags": [
+          "blade",
+          "heavy",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-gram",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-pasopati-kit",
+        "label": "Busur & Panah Pasopati",
+        "tier": 5,
+        "catalogOrder": 21,
+        "tags": [
+          "ranged",
+          "holy",
+          "local",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "ranged",
+        "weaponDefinitionRef": {
+          "definitionId": "legend-pasopati-kit",
+          "definitionFile": "content/legendary-hero-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-ruyi-jingu-bang",
+        "label": "Ruyi Jingu Bang",
+        "tier": 5,
+        "catalogOrder": 22,
+        "tags": [
+          "heavy",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-ruyi-jingu-bang",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-blades-of-chaos",
+        "label": "Blades of Chaos",
+        "tier": 5,
+        "catalogOrder": 23,
+        "tags": [
+          "blade",
+          "cursed",
+          "demonic",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-blades-of-chaos",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-leviathan-axe",
+        "label": "Leviathan Axe",
+        "tier": 5,
+        "catalogOrder": 24,
+        "tags": [
+          "heavy",
+          "elemental",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "unclassified",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-leviathan-axe",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-master-sword",
+        "label": "Master Sword",
+        "tier": 5,
+        "catalogOrder": 25,
+        "tags": [
+          "blade",
+          "holy",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-master-sword",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-keyblade",
+        "label": "Keyblade",
+        "tier": 5,
+        "catalogOrder": 26,
+        "tags": [
+          "blade",
+          "holy",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-keyblade",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.017028522775649212,
+        "withinTierProbability": 0.09259259259259259,
+        "loreWeight": 5
+      },
+      {
+        "id": "weapon-spear-of-longinus-evangelion",
+        "label": "Spear of Longinus (Evangelion)",
+        "tier": 5,
+        "catalogOrder": 27,
+        "tags": [
+          "ranged",
+          "technology",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-spear-of-longinus-evangelion",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-keris-mpu-gandring",
+        "label": "Keris Mpu Gandring",
+        "tier": 5,
+        "catalogOrder": 28,
+        "tags": [
+          "blade",
+          "cursed",
+          "local",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "legend-gandring-keris",
+          "definitionFile": "content/legendary-hero-events-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-keris-nagasasra",
+        "label": "Keris Nagasasra",
+        "tier": 5,
+        "catalogOrder": 29,
+        "tags": [
+          "blade",
+          "local",
+          "legendary",
+          "magic"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "blade",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-keris-nagasasra",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      },
+      {
+        "id": "weapon-infinity-gauntlet",
+        "label": "Infinity Gauntlet",
+        "tier": 5,
+        "catalogOrder": 30,
+        "tags": [
+          "technology",
+          "magic",
+          "legendary"
+        ],
+        "funnyResult": false,
+        "trainingProfileId": "technology",
+        "weaponDefinitionRef": {
+          "definitionId": "weapon-infinity-gauntlet",
+          "definitionFile": "content/weapon-wheel-design.json"
+        },
+        "grantPolicy": "one-owned-weapon-instance; normal per-weapon mastery; intrinsic weapon Tier never grants a power/stat/mastery bonus",
+        "enchantPolicy": "pending-compatible-definition; final effective Weapon Mastery>=5 is necessary but does not decide artifact compatibility",
+        "loreStatus": "named-signature-reference; game tier authored, not a canon power-scaling claim",
+        "probability": 0.003405704555129842,
+        "withinTierProbability": 0.018518518518518517,
+        "loreWeight": 1
+      }
+    ],
+    "trace": {
+      "model": {
+        "version": "weapon-odds/0.1.0",
+        "calibration": "Authored fictional game balance; not empirical weapon ownership rates or canon power scale. Editable parameters.",
+        "tierMassGivenWeapon": {
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4": 0.2,
+          "5": 0.2
+        },
+        "defaultWithinTier": "Equal base per eligible item within each tier before explicit lore factors.",
+        "compositeNoneMinimumShare": 0.7,
+        "noneBounds": [
+          0.01,
+          0.99
+        ],
+        "maxCombinedItemFactor": 100,
+        "factorCombination": "Within one profile use maximum matching tag factor once, not product of overlapping tags. Composite race log factors average. Different actual role and Backstory sources add tempered log likelihoods, then cap total item factor100.",
+        "raceProfiles": [
+          {
+            "id": "weapon-race-human",
+            "familyId": "human",
+            "when": [],
+            "noneProbability": 0.2,
+            "tagFactors": {}
+          },
+          {
+            "id": "weapon-race-elf",
+            "familyId": "elf",
+            "when": [],
+            "noneProbability": 0.15,
+            "tagFactors": {
+              "ranged": 2.5,
+              "nature": 2,
+              "magic": 1.5
+            }
+          },
+          {
+            "id": "weapon-race-dwarf",
+            "familyId": "dwarf",
+            "when": [],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "heavy": 3,
+              "tool": 2,
+              "technology": 1.5
+            }
+          },
+          {
+            "id": "weapon-race-goblinoid",
+            "familyId": "goblinoid",
+            "when": [],
+            "noneProbability": 0.3,
+            "tagFactors": {
+              "improvised": 2,
+              "trap": 2,
+              "funny-result": 1.5
+            }
+          },
+          {
+            "id": "weapon-race-fae",
+            "familyId": "fae",
+            "when": [],
+            "noneProbability": 0.3,
+            "tagFactors": {
+              "magic": 3,
+              "nature": 2
+            }
+          },
+          {
+            "id": "weapon-race-beastfolk",
+            "familyId": "beastfolk",
+            "when": [],
+            "noneProbability": 0.2,
+            "tagFactors": {
+              "nature": 2,
+              "local": 1.5
+            }
+          },
+          {
+            "id": "weapon-race-lelembut",
+            "familyId": "lelembut",
+            "when": [],
+            "noneProbability": 0.45,
+            "tagFactors": {
+              "undead": 3,
+              "cursed": 2.5
+            }
+          },
+          {
+            "id": "weapon-race-mythical-beast",
+            "familyId": "mythical-beast",
+            "when": [],
+            "noneProbability": 0.8,
+            "tagFactors": {
+              "elemental": 2,
+              "heavy": 2
+            }
+          },
+          {
+            "id": "weapon-race-golem",
+            "familyId": "golem",
+            "when": [],
+            "noneProbability": 0.7,
+            "tagFactors": {
+              "heavy": 3,
+              "elemental": 2
+            }
+          },
+          {
+            "id": "weapon-race-elemental",
+            "familyId": "elemental",
+            "when": [],
+            "noneProbability": 0.85,
+            "tagFactors": {
+              "elemental": 4
+            }
+          },
+          {
+            "id": "weapon-race-heavenly-principle",
+            "familyId": "heavenly-principle",
+            "when": [],
+            "noneProbability": 0.3,
+            "tagFactors": {
+              "holy": 4,
+              "magic": 2
+            }
+          },
+          {
+            "id": "weapon-race-demon",
+            "familyId": "demon",
+            "when": [],
+            "noneProbability": 0.15,
+            "tagFactors": {
+              "demonic": 4,
+              "cursed": 3
+            }
+          },
+          {
+            "id": "weapon-race-anime-lineage",
+            "familyId": "anime-lineage",
+            "when": [],
+            "noneProbability": 0.2,
+            "tagFactors": {
+              "legendary": 2
+            }
+          },
+          {
+            "id": "weapon-race-legendary-warrior",
+            "familyId": "legendary-warrior",
+            "when": [],
+            "noneProbability": 0.05,
+            "tagFactors": {
+              "legendary": 4,
+              "blade": 2
+            }
+          },
+          {
+            "id": "weapon-race-machine",
+            "familyId": "machine",
+            "when": [],
+            "noneProbability": 0.4,
+            "tagFactors": {
+              "technology": 5
+            }
+          },
+          {
+            "id": "weapon-race-primordial",
+            "familyId": "primordial",
+            "when": [],
+            "noneProbability": 0.4,
+            "tagFactors": {
+              "legendary": 4,
+              "magic": 3
+            }
+          },
+          {
+            "id": "weapon-race-slime",
+            "familyId": "slime",
+            "when": [],
+            "noneProbability": 0.8,
+            "tagFactors": {
+              "funny-result": 2,
+              "improvised": 1.5
+            }
+          },
+          {
+            "id": "weapon-race-centaur",
+            "familyId": "centaur",
+            "when": [],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "ranged": 3,
+              "knight": 2
+            }
+          },
+          {
+            "id": "weapon-race-cosmic-warrior",
+            "familyId": "cosmic-warrior",
+            "when": [],
+            "noneProbability": 0.5,
+            "tagFactors": {
+              "technology": 3,
+              "legendary": 3
+            }
+          },
+          {
+            "id": "weapon-race-goblinoid-goblin",
+            "familyId": "goblinoid",
+            "when": [
+              {
+                "wheelId": "goblin-orc-troll-type",
+                "outcomeIds": [
+                  "goblin"
+                ]
+              }
+            ],
+            "noneProbability": 0.35,
+            "tagFactors": {
+              "trap": 3,
+              "improvised": 2
+            }
+          },
+          {
+            "id": "weapon-race-goblinoid-troll",
+            "familyId": "goblinoid",
+            "when": [
+              {
+                "wheelId": "goblin-orc-troll-type",
+                "outcomeIds": [
+                  "troll"
+                ]
+              }
+            ],
+            "noneProbability": 0.4,
+            "tagFactors": {
+              "heavy": 3
+            }
+          },
+          {
+            "id": "weapon-race-goblinoid-shrek",
+            "familyId": "goblinoid",
+            "when": [
+              {
+                "wheelId": "orc-role",
+                "outcomeIds": [
+                  "shrek"
+                ]
+              }
+            ],
+            "noneProbability": 0.15,
+            "tagFactors": {
+              "funny-result": 5,
+              "shrek-comedy": 5
+            }
+          },
+          {
+            "id": "weapon-race-mythical-beast-western",
+            "familyId": "mythical-beast",
+            "when": [
+              {
+                "wheelId": "dragon-form",
+                "outcomeIds": [
+                  "western",
+                  "wyvern",
+                  "drake",
+                  "wyrm",
+                  "lindwyrm",
+                  "amphiptere",
+                  "eastern",
+                  "sea-serpent"
+                ]
+              }
+            ],
+            "noneProbability": 0.8,
+            "tagFactors": {
+              "heavy": 2,
+              "elemental": 2
+            }
+          },
+          {
+            "id": "weapon-race-machine-household-appliance",
+            "familyId": "machine",
+            "when": [
+              {
+                "wheelId": "machine-type",
+                "outcomeIds": [
+                  "household-appliance"
+                ]
+              }
+            ],
+            "noneProbability": 0.95,
+            "tagFactors": {
+              "funny-result": 5,
+              "household": 4
+            }
+          },
+          {
+            "id": "weapon-race-machine-ai",
+            "familyId": "machine",
+            "when": [
+              {
+                "wheelId": "machine-type",
+                "outcomeIds": [
+                  "ai"
+                ]
+              }
+            ],
+            "noneProbability": 0.95,
+            "tagFactors": {
+              "technology": 5
+            }
+          },
+          {
+            "id": "weapon-race-machine-cyborg",
+            "familyId": "machine",
+            "when": [
+              {
+                "wheelId": "machine-type",
+                "outcomeIds": [
+                  "cyborg",
+                  "android"
+                ]
+              }
+            ],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "technology": 5
+            }
+          },
+          {
+            "id": "weapon-race-machine-mecha",
+            "familyId": "machine",
+            "when": [
+              {
+                "wheelId": "machine-type",
+                "outcomeIds": [
+                  "mecha"
+                ]
+              }
+            ],
+            "noneProbability": 0.5,
+            "tagFactors": {
+              "technology": 5,
+              "heavy": 3
+            }
+          },
+          {
+            "id": "weapon-race-lelembut-pocong",
+            "familyId": "lelembut",
+            "when": [
+              {
+                "wheelId": "lelembut-local-type",
+                "outcomeIds": [
+                  "pocong"
+                ]
+              }
+            ],
+            "noneProbability": 0.85,
+            "tagFactors": {
+              "funny-result": 3,
+              "cursed": 2
+            }
+          },
+          {
+            "id": "weapon-race-lelembut-tuyul",
+            "familyId": "lelembut",
+            "when": [
+              {
+                "wheelId": "lelembut-local-type",
+                "outcomeIds": [
+                  "tuyul"
+                ]
+              }
+            ],
+            "noneProbability": 0.4,
+            "tagFactors": {
+              "household": 3,
+              "stealth": 2
+            }
+          },
+          {
+            "id": "weapon-race-lelembut-vampire",
+            "familyId": "lelembut",
+            "when": [
+              {
+                "wheelId": "lelembut-imported-type",
+                "outcomeIds": [
+                  "vampire",
+                  "lich"
+                ]
+              }
+            ],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "cursed": 3,
+              "undead": 4,
+              "magic": 2
+            }
+          },
+          {
+            "id": "weapon-race-lelembut-skeleton",
+            "familyId": "lelembut",
+            "when": [
+              {
+                "wheelId": "lelembut-imported-type",
+                "outcomeIds": [
+                  "skeleton"
+                ]
+              }
+            ],
+            "noneProbability": 0.25,
+            "tagFactors": {
+              "undead": 3,
+              "blade": 2
+            }
+          },
+          {
+            "id": "weapon-race-elf-high-elf",
+            "familyId": "elf",
+            "when": [
+              {
+                "wheelId": "elf-type",
+                "outcomeIds": [
+                  "high-elf"
+                ]
+              }
+            ],
+            "noneProbability": 0.15,
+            "tagFactors": {
+              "holy": 3,
+              "magic": 2,
+              "ranged": 2
+            }
+          },
+          {
+            "id": "weapon-race-elf-dark-elf",
+            "familyId": "elf",
+            "when": [
+              {
+                "wheelId": "elf-type",
+                "outcomeIds": [
+                  "dark-elf"
+                ]
+              }
+            ],
+            "noneProbability": 0.15,
+            "tagFactors": {
+              "cursed": 3,
+              "stealth": 3,
+              "ranged": 2
+            }
+          },
+          {
+            "id": "weapon-race-mythical-beast-kinnara",
+            "familyId": "mythical-beast",
+            "when": [
+              {
+                "wheelId": "mythical-beast-local-type",
+                "outcomeIds": [
+                  "kinnara"
+                ]
+              }
+            ],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "musical": 5,
+              "magic": 2
+            }
+          },
+          {
+            "id": "weapon-race-lelembut-ghost",
+            "familyId": "lelembut",
+            "when": [
+              {
+                "wheelId": "lelembut-imported-type",
+                "outcomeIds": [
+                  "ghost"
+                ]
+              }
+            ],
+            "noneProbability": 0.95,
+            "tagFactors": {
+              "undead": 4,
+              "magic": 3
+            }
+          },
+          {
+            "id": "weapon-race-elf-atlantean",
+            "familyId": "elf",
+            "when": [
+              {
+                "wheelId": "sea-elf-form",
+                "outcomeIds": [
+                  "atlantean-warrior"
+                ]
+              }
+            ],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "water": 5,
+              "knight": 3
+            }
+          },
+          {
+            "id": "weapon-race-dwarf-gnome",
+            "familyId": "dwarf",
+            "when": [
+              {
+                "wheelId": "dwarf-gnome-type",
+                "outcomeIds": [
+                  "gnome"
+                ]
+              }
+            ],
+            "noneProbability": 0.1,
+            "tagFactors": {
+              "technology": 4,
+              "tool": 3,
+              "trap": 3
+            }
+          },
+          {
+            "id": "weapon-race-fae-pixie",
+            "familyId": "fae",
+            "when": [
+              {
+                "wheelId": "fairy-subrace",
+                "outcomeIds": [
+                  "element-pixie"
+                ]
+              }
+            ],
+            "noneProbability": 0.8,
+            "tagFactors": {
+              "nature": 3,
+              "magic": 4
+            }
+          },
+          {
+            "id": "weapon-race-cosmic-warrior-ultraman",
+            "familyId": "cosmic-warrior",
+            "when": [
+              {
+                "wheelId": "cosmic-warrior-group",
+                "outcomeIds": [
+                  "ultraman"
+                ]
+              }
+            ],
+            "noneProbability": 0.9,
+            "tagFactors": {
+              "technology": 4,
+              "legendary": 2
+            }
+          }
+        ],
+        "archetypeProfiles": [
+          {
+            "archetypeId": "npc",
+            "tagFactors": {
+              "household": 2,
+              "improvised": 2
+            },
+            "noneOddsMultiplier": 1.5
+          },
+          {
+            "archetypeId": "slayer",
+            "tagFactors": {
+              "battlefield": 3,
+              "heavy": 2
+            },
+            "noneOddsMultiplier": 0.5
+          },
+          {
+            "archetypeId": "disciple",
+            "tagFactors": {
+              "blade": 1.5
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "survivalist",
+            "tagFactors": {
+              "tool": 3,
+              "nature": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "archaeologist",
+            "tagFactors": {
+              "tool": 3,
+              "local": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "tamer",
+            "tagFactors": {
+              "nature": 3,
+              "trap": 2
+            },
+            "noneOddsMultiplier": 1.5
+          },
+          {
+            "archetypeId": "alchemist",
+            "tagFactors": {
+              "magic": 3,
+              "household": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "rider",
+            "tagFactors": {
+              "ranged": 2,
+              "heavy": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "priest",
+            "tagFactors": {
+              "holy": 4,
+              "magic": 3
+            },
+            "noneOddsMultiplier": 1.8
+          },
+          {
+            "archetypeId": "gambler",
+            "tagFactors": {
+              "funny-result": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "goliath",
+            "tagFactors": {
+              "heavy": 5
+            },
+            "noneOddsMultiplier": 0.6
+          },
+          {
+            "archetypeId": "pirate",
+            "tagFactors": {
+              "pirate": 5,
+              "water": 2
+            },
+            "noneOddsMultiplier": 0.4
+          },
+          {
+            "archetypeId": "mage",
+            "tagFactors": {
+              "magic": 5
+            },
+            "noneOddsMultiplier": 2.5
+          },
+          {
+            "archetypeId": "royal",
+            "tagFactors": {
+              "knight": 4,
+              "holy": 2
+            },
+            "noneOddsMultiplier": 0.6
+          },
+          {
+            "archetypeId": "apostle",
+            "tagFactors": {
+              "magic": 3
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "mutant",
+            "tagFactors": {},
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "resilient",
+            "tagFactors": {},
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "equaliser",
+            "tagFactors": {},
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "assassin",
+            "tagFactors": {
+              "stealth": 5,
+              "blade": 2
+            },
+            "noneOddsMultiplier": 0.4
+          },
+          {
+            "archetypeId": "paladin",
+            "tagFactors": {
+              "holy": 5,
+              "knight": 3
+            },
+            "noneOddsMultiplier": 0.35
+          },
+          {
+            "archetypeId": "druid",
+            "tagFactors": {
+              "nature": 5,
+              "magic": 2
+            },
+            "noneOddsMultiplier": 2
+          },
+          {
+            "archetypeId": "cursed",
+            "tagFactors": {
+              "cursed": 5,
+              "undead": 2
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "colossal-warmech",
+            "tagFactors": {
+              "technology": 5,
+              "heavy": 3
+            },
+            "noneOddsMultiplier": 0.5
+          },
+          {
+            "archetypeId": "vessel",
+            "tagFactors": {
+              "magic": 3
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "warlord",
+            "tagFactors": {
+              "battlefield": 4,
+              "heavy": 2
+            },
+            "noneOddsMultiplier": 0.5
+          },
+          {
+            "archetypeId": "primordial-champion",
+            "tagFactors": {
+              "legendary": 4,
+              "magic": 3
+            },
+            "noneOddsMultiplier": 1
+          },
+          {
+            "archetypeId": "hybrid",
+            "tagFactors": {},
+            "noneOddsMultiplier": 1
+          }
+        ],
+        "backstoryProfiles": [
+          {
+            "id": "weapon-backstory-from-nothing",
+            "backstoryId": "from-nothing",
+            "tagFactors": {
+              "improvised": 3,
+              "household": 2
+            }
+          },
+          {
+            "id": "weapon-backstory-farm-raised",
+            "backstoryId": "farm-raised",
+            "tagFactors": {
+              "tool": 5,
+              "nature": 3
+            }
+          },
+          {
+            "id": "weapon-backstory-former-merchant",
+            "backstoryId": "former-merchant",
+            "tagFactors": {
+              "household": 3,
+              "improvised": 2
+            }
+          },
+          {
+            "id": "weapon-backstory-fallen-knight",
+            "backstoryId": "fallen-knight",
+            "tagFactors": {
+              "knight": 5,
+              "blade": 2
+            }
+          },
+          {
+            "id": "weapon-backstory-war-born",
+            "backstoryId": "war-born",
+            "tagFactors": {
+              "battlefield": 4
+            }
+          },
+          {
+            "id": "weapon-backstory-enemy-raised",
+            "backstoryId": "enemy-raised",
+            "tagFactors": {
+              "cursed": 3,
+              "demonic": 2,
+              "stealth": 2
+            }
+          }
+        ],
+        "affinityAnchors": [
+          {
+            "id": "paladin-sacred-sword",
+            "archetypeId": "paladin",
+            "weaponId": "weapon-sacred-sword",
+            "scope": "55% of eligible Tier4 mass; typical Human Paladin about10.1% of the entire wheel, depending on None. Five tier masses remain equal.",
+            "suppressedBy": "Equalizer or hard weapon exclusion; never restore forbidden items.",
+            "tier": 4,
+            "withinTierShare": 0.55
+          }
+        ],
+        "tierPolicy": "Latest direct user: each weapon Tier has equal probability. None is outside the five tiers; each tier receives20% of non-None probability. Lore changes item odds within each tier, never total tier mass."
+      },
+      "raceProfiles": [
+        {
+          "id": "weapon-race-human",
+          "familyId": "human",
+          "when": [],
+          "noneProbability": 0.2,
+          "tagFactors": {}
+        }
+      ],
+      "roleProfiles": [
+        {
+          "archetypeId": "paladin",
+          "tagFactors": {
+            "holy": 5,
+            "knight": 3
+          },
+          "noneOddsMultiplier": 0.35
+        }
+      ],
+      "backstoryProfile": null,
+      "baseNone": 0.2,
+      "conditionalNoneBeforeOverride": 0.0804597701149425,
+      "noneProbability": 0.0804597701149425,
+      "noneAllowed": true,
+      "equalizerActive": false,
+      "anchorTrace": [
+        {
+          "id": "paladin-sacred-sword",
+          "weaponId": "weapon-sacred-sword",
+          "withinTierShare": 0.55,
+          "totalProbability": 0.10114942528735633,
+          "preservesEqualTierMass": true
+        }
+      ],
+      "suppressedAnchorIds": [],
+      "tierMasses": [
+        {
+          "tier": 1,
+          "probability": 0.18390804597701144
+        },
+        {
+          "tier": 2,
+          "probability": 0.18390804597701135
+        },
+        {
+          "tier": 3,
+          "probability": 0.18390804597701157
+        },
+        {
+          "tier": 4,
+          "probability": 0.18390804597701144
+        },
+        {
+          "tier": 5,
+          "probability": 0.18390804597701144
+        }
+      ],
+      "finalBonusInputsUsed": false,
+      "empiricalCalibration": false
+    },
+    "nextStageAfterWeaponSubflow": "power"
+  }
+}

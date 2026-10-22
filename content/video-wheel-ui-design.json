@@ -1,0 +1,150 @@
+{
+  "version": "wheel-ui/2.1.0",
+  "status": "authored-ui-prototype-for-review",
+  "userScope": "Research game UI, design a natural fun vertical TikTok wheel with distinct themes and layered accessories; no image generation. User-supplied guardian/bronze/ember brand and internet imagery permitted.",
+  "artDirection": "Mesin Takdir · attribute icons / bronze / obsidian",
+  "renderer": "ui/wheel-renderer.mjs",
+  "themes": "ui/wheel-themes.mjs",
+  "layerManifest": "ui/assets/manifest.json",
+  "preview": "preview/video-wheel-studio.html",
+  "gallery": "preview/video-wheel-gallery.html",
+  "densityComparison": "preview/wheel-density-comparison.html",
+  "guide": "docs/VIDEO-WHEEL-UI.md",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "9:16"
+  },
+  "themeCount": 26,
+  "childThemePolicy": "Stable visual variants from canonical wheelId and parent theme; no gameplay changes.",
+  "layerCount": 16,
+  "exportedLayersPerTheme": 15,
+  "spin": {
+    "direction": "anticlockwise",
+    "pivot": [
+      490,
+      785
+    ],
+    "defaultDurationMs": 3700,
+    "adjustableRangeMs": [
+      2400,
+      5200
+    ],
+    "fixedGuarantee": "reveal without spin",
+    "ordinarySingleton": "may animate; fixed must be explicit",
+    "probabilityPolicy": "Frozen positive probabilities must sum to1. Do not secretly reweight or fake sectors."
+  },
+  "safeZone": {
+    "x": 72,
+    "y": 180,
+    "width": 840,
+    "height": 1440,
+    "status": "authored-adjustable-guide-not-official-universal-template"
+  },
+  "compactRosterProposal": {
+    "status": "historical-proposal-superseded-by-approved-readable-roster",
+    "module": "ui/compact-wheel-proposal.mjs",
+    "maximumPositiveWeaponNames": 30,
+    "maximumPositivePowerNames": 20,
+    "minimumPositiveProbabilityForDemo": 0.01,
+    "averagePositiveProbabilityTarget": 0.02,
+    "none": "Keep exact fixture None mass; reduce candidate count when needed.",
+    "weaponTierMass": "Keep each original tier mass exactly.",
+    "powerTierMass": "May change in proposed compact pool; live engine unchanged.",
+    "timing": "Any eventual production roster is frozen BEFORE outcome RNG. Never shorten a pool after draw.",
+    "labelPolicy": "Short sector aliases only; canonical name remains in readout/result.",
+    "limits": "1–2% is an authored experiment, not an empirical readability guarantee. Long names and large None sectors need a bigger readout."
+  },
+  "readableRoster": {
+    "status": "user-approved-current-studio-and-episode-default",
+    "module": "framework/readable-acquisition.mjs",
+    "maximumPositiveWeaponNames": 30,
+    "maximumPositivePowerNames": 20,
+    "minimumPositiveProbability": 0.02,
+    "timing": "Seeded character-conditioned pool frozen BEFORE outcome selection; committed pools cannot be curated.",
+    "none": "Preserve canonical None except Equalizer uniform-all-live-leaves.",
+    "weaponTierMass": "Preserve each original Weapon tier mass.",
+    "powerTierMass": "Redistribute within the preselected readable pool.",
+    "catalogs": "Full catalogs retained as canonical grant definitions.",
+    "backstory": "video/backstory-roster.mjs:16 equal choices, short sector aliases and full canonical result names."
+  },
+  "media": {
+    "imageGenerationUsed": false,
+    "svgAccessoriesReady": true,
+    "memeSlot": [
+      93,
+      1480,
+      183,
+      119
+    ],
+    "memeClipsConnected": false,
+    "narratorConnected": false,
+    "narrationEnabled": false,
+    "audio": "Original procedural music, wheel ticks and result tones; no speech or external voice clips.",
+    "mechanismExplanations": "After each result/hype phase, followed by a final bonus summary.",
+    "enchantPlayback": "Immediately after matching Weapon Mastery and known bonuses, with the target weapon named.",
+    "episode": "renders/episode-001-r2/roda-kekacauan-episode-001-r2.mp4",
+    "timedCaptionsConnected": true,
+    "videoRendererConnected": true,
+    "importedImagesUsed": true
+  },
+  "productionStateTouched": false,
+  "sources": [
+    {
+      "url": "https://www.riotgames.com/en/artedu/user-interface-design",
+      "supports": "Cohesion, audience, information when needed; theme and motion specifics are authored inference."
+    },
+    {
+      "url": "https://gameaccessibilityguidelines.com/full-list/",
+      "supports": "Readable font, contrast, simple text, redundant visual cues, avoiding flicker."
+    },
+    {
+      "url": "https://ads.tiktok.com/business/en/guides/video-advertising-guide?redirected=1",
+      "supports": "Vertical9:16,1080x1920, mobile legibility and safe zones in ad guidance; organic application is design inference."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "supports": "Text contrast4.5:1; no claim about minimum wheel-sector probability."
+    },
+    {
+      "url": "https://www.riotgames.com/en/artedu/visual-effects",
+      "supports": "Restraint, clarity, coherent effects; specific timings are project design."
+    },
+    {
+      "url": "https://polyhaven.com/a/rusty_painted_metal",
+      "supports": "Imported CC0 diffuse texture asset by Amal Kumar."
+    },
+    {
+      "url": "https://polyhaven.com/license",
+      "supports": "CC0 for downloadable texture assets; site logos/render examples excluded."
+    }
+  ],
+  "brandRenderer": "ui/brand-art.mjs",
+  "assetReceipt": "ui/assets/brand/sources.json",
+  "reviewVideo": "ui/assets/brand/spin-demo.mp4",
+  "feedback": {
+    "phases": [
+      "idle",
+      "spinning",
+      "anticipation",
+      "result"
+    ],
+    "anticipationAtTimeFraction": 0.72,
+    "strong": "Actual Tier4–5, base>=7 or strong band; card scale reveal360ms",
+    "ordinary": "fade200ms",
+    "none": "neutral label; no big reward",
+    "funny": "explicit funnyResult metadata; hype text and original animated reaction deliver joke",
+    "fixed": "no spin, reward animation or jingle",
+    "reducedMotion": "direct reveal, no reward animation",
+    "audio": "optional synthesized tick/result; initially muted",
+    "browserInteractionQA": "not-verified"
+  },
+  "presentation": {
+    "hub": "Theme/attribute vector icon; no guardian face",
+    "statAndMasteryNumbers": "Internal only; show canonical level names",
+    "powerTierNumbers": "Internal only; omit T1–T5 from sectors, cards and default captions",
+    "catalogIndexes": "Editor only, omitted from video sectors",
+    "meaningfulNumbers": "Outcome quantities, physical size, probability and explicit +1/+2 bonus explanations remain available",
+    "gameplayValuesUnchanged": true
+  }
+}

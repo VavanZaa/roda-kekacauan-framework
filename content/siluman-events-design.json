@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "status": "User-confirmed twelve animal choices, exactly one animal spin per character, and humanoid normal form with animal traits; full-animal transformation uses the selected type.",
+  "raceDesign": "race-wheel-design.json",
+  "animalWheelId": "siluman-animal-type",
+  "confirmedAnimalIds": [
+    "harimau",
+    "serigala",
+    "babi",
+    "ayam",
+    "ular",
+    "buaya",
+    "kera",
+    "kerbau",
+    "rubah",
+    "kucing",
+    "kelelawar",
+    "elang"
+  ],
+  "powers": [
+    {
+      "id": "animal-transformation",
+      "label": "Animal Transformation (Transformasi Hewan)",
+      "scope": "Berubah menjadi hewan yang terikat secara eksplisit pada sumber grant dan kembali ke bentuk asal. Untuk Siluman, bentuk hanya mengikuti hewan hasil spin yang benar-benar tercatat.",
+      "affinityTags": [
+        "animal",
+        "transformation",
+        "siluman"
+      ],
+      "group": "siluman-fixed-power",
+      "contentStatus": "User-confirmed power; rolled-animal binding and one shared instance are design interpretations.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Durasi, biaya, kecepatan transformasi, perubahan bentuk perlengkapan, atribut saat berubah, bentuk parsial/gabungan, dan batas setiap mastery masih perlu ditetapkan.",
+      "allowedForms": {
+        "binding": "Source-scoped committed animal bindings. Siluman uses its actual animalComponents; an explicitly authored additional caller uses only the declared source-grant binding.",
+        "selection": "Only the actually rolled animal types; the wheel roster is not an automatically available form list.",
+        "multipleAnimals": "One shared power exposes the committed animal choices; extra animal results extend the form list without granting another copy of the power.",
+        "returnForm": "Siluman returns to its original humanoid-with-animal-traits body; other callers retain their declared return identity.",
+        "combinedOrPartialForms": "No combined or partial transformation granted by current Siluman flow.",
+        "silumanBinding": "The single committed animalComponents[0] type for this source Siluman component",
+        "additionalCallerBindings": [
+          {
+            "familyId": "legendary-warrior",
+            "profileId": "hero-prabu-siliwangi",
+            "definitionFile": "legendary-hero-events-design.json",
+            "grantAnimalIds": [
+              "harimau"
+            ],
+            "source": "Actual Prabu Siliwangi character grant only",
+            "status": "Authored scope clarification of the prior accepted Harimau transformation package.",
+            "policy": "This caller grants no Siluman selector, count, fusion event or new race history. Do not expose the full Siluman roster; original Siluman forms and return identity remain unchanged."
+          },
+          {
+            "archetypeId": "druid",
+            "profileId": "druid-wild-shape",
+            "definitionFile": "druid-events-design.json",
+            "grantAnimalBindingRef": "Actual committed druid-wild-shape-animal identity result for this source grant",
+            "formCount": 1,
+            "source": "Actual Druid Wild Shape path only",
+            "status": "User accepted one ordinary-animal form; authored identity-only modern Tamer view.",
+            "policy": "This source exposes only its one bound animal and original return form. No Siluman selector/count/fusion/race-history or Tamer companion grant. Existing other callers retain their own source forms."
+          }
+        ]
+      },
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Animal Transformation (Transformasi Hewan)",
+          "Bentuk hewan mengikuti hasil spin Siluman yang telah tercatat",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Siluman memperoleh Animal Transformation. Karakter dapat berubah menjadi hewan hasil spin dan kembali ke bentuk asal. Power ini mendapat spin mastery pada tahap Power nanti."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact later eligibility and odds effects pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "committed bound animal type IDs"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#animal-transformation"
+    }
+  ],
+  "sharedGrantContract": {
+    "id": "siluman-animal-transformation-grant",
+    "status": "User-confirmed fixed racial power; one-instance binding/timing are design interpretations.",
+    "sourceFamilyId": "beastfolk",
+    "trigger": "Siluman animal selection complete",
+    "grantCount": 1,
+    "effects": [
+      {
+        "type": "grant-power",
+        "definitionFile": "siluman-events-design.json",
+        "definitionId": "animal-transformation",
+        "masteryTiming": "main-power-stage",
+        "source": "committed Siluman identity and animal component results"
+      }
+    ],
+    "timing": "After the approved animal-selection sequence completes, commit one fixed power grant and its animal bindings before freezing that completion reaction and returning to archetype. It is a fixed reveal, not another spin.",
+    "bindingFields": [
+      "sourceSilumanComponentId",
+      "sourceRaceSpinId",
+      "animalComponentIds",
+      "animalTypeIds",
+      "sourceAnimalSpinIds"
+    ],
+    "idempotence": "One grant per source Siluman race component; runId + ruleId + sourceSilumanComponentId is the consumed key. Rendering/replay and additional animal components do not create more copies.",
+    "laterAnimal": "A newly authorized animal result for the same source component extends the recorded bindings; no new grant or mastery respin.",
+    "mainPowerNone": "Keep this power and resolve its pending normal Power Mastery even when main Power is None.",
+    "lateGrant": "After the Power stage, bind this grant to existing shared Power Mastery without another spin. If no result exists because mastery was skipped for empty inventory, invoke the first/only shared draw, then return to caller.",
+    "otherRacialForms": "Having several animals does not automatically grant partial/fused forms, other themed powers, stat points, or source-hero identity."
+  },
+  "contextContract": {
+    "asOfRule": "Each animal reaction sees committed components only. The transformation grant context is available after the fixed grant commits; before then do not describe a pending power as owned.",
+    "completion": "Freeze the last animal-selection completion reaction after the shared power grant so its actual grant and allowed animal forms can be narrated.",
+    "fixedGrant": "Attach the grant reveal to completion. No random result or extra wheel is fabricated.",
+    "animalSpecificGrant": "A committed Babi result includes its Nyolong fixed grant before that reaction freezes. Other animal results grant no Nyolong.",
+    "babiNarrationExample": "Babi dapet Nyolong. Barang lu aman? Coba cek lagi.",
+    "narrationStyleRef": "framework/spec.json reactionContract.voiceStyle"
+  },
+  "openBalance": [
+    "Form/duration/cost/control details by mastery",
+    "Animal form stat representation and equipment handling",
+    "Siluman body reference for global Size",
+    "Source-bound body/role profiles must implement the approved humanoid normal form. No multi-animal or fusion selector is active."
+  ],
+  "animalSpecificGrantContracts": [
+    {
+      "id": "siluman-babi-nyolong",
+      "sourceFamilyId": "beastfolk",
+      "animalTypeId": "babi",
+      "status": "Nyolong power requested for Babi Ngepet; routing through accepted Siluman Babi is a disclosed interpretation.",
+      "trigger": "committed Babi animal result for this Siluman race component",
+      "effects": [
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "nyolong",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Siluman Babi animal result"
+        }
+      ],
+      "grantCount": 1,
+      "idempotence": "One Nyolong grant per source Siluman component with Babi; consume runId/ruleId/sourceSilumanComponentId atomically. Additional animal results or retries do not duplicate this grant.",
+      "timing": "Attach the fixed grant to the actual Babi result reaction; no new wheel. Animal Transformation remains a separate completion grant.",
+      "definitionAuthority": "lelembut-events-design.json; same Nyolong definition as Tuyul",
+      "mainPowerNone": "Retain this owned power and resolve pending normal Power Mastery.",
+      "laterBabi": "If another Babi component for the same Siluman component is allowed later, retain the original grant and add provenance/binding; no mastery respin."
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "lelembut-events-design.json",
+      "definitionId": "nyolong",
+      "sourceAnimalTypeId": "babi",
+      "sharedWith": "Tuyul"
+    }
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "animalCountContract": {
+    "animalCount": 1,
+    "countMode": "fixed-exact",
+    "countSpinRequired": false,
+    "animalWheelId": "siluman-animal-type",
+    "approvedTypePoolCount": 12,
+    "selectionMode": "single",
+    "samplingPolicy": "single-draw",
+    "identityFlowReady": true,
+    "runtimeReady": false,
+    "unresolved": "Source-backed Size reference, detailed equipment/ability limits and the future race-event executor.",
+    "retiredCountOutcomes": [
+      1,
+      2,
+      3
+    ],
+    "retiredTwelveComponentInterpretation": true
+  },
+  "version": "siluman/0.2.0",
+  "baseForm": {
+    "approved": true,
+    "authority": "Direct user choice on 2026-10-10",
+    "kind": "humanoid-with-animal-traits",
+    "animalBinding": "animalComponents[0].animalTypeId",
+    "capabilities": [
+      "humanoid",
+      "hands",
+      "biological"
+    ],
+    "fullAnimalForm": "Only the selected animal via Animal Transformation",
+    "returnForm": "Original humanoid form",
+    "sizeReferencePolicy": "Humanoid normal-body reference at global Size; source-backed numerical reference remains to be assigned."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,781 @@
+{
+  "schemaVersion": "roda-kekacauan-golem-events/0.3",
+  "status": "Seven user-defined material manipulation types; Rock/Magma +1, Crystal +2, Diamond +3 numeric Durability. Element Golem +1 shared Power Mastery. Equal base weights; detailed balance pending.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "golem",
+  "typeWheelId": "golem-type",
+  "wheelDefinitionAuthority": "Inline Golem branch in race-wheel-design.json",
+  "typeIds": [
+    "sand-golem",
+    "rock-golem",
+    "magma-golem",
+    "crystal-golem",
+    "diamond-golem",
+    "element-golem",
+    "trash-golem"
+  ],
+  "typeWeights": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "wheelDefinitionRef": "element-universal",
+      "callers": [
+        "element-golem"
+      ],
+      "drawCount": 1
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "sand-golem",
+      "label": "Golem Pasir",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "sand-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "sand"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "sand-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Pasir",
+          "Bahan/tipe tubuh: sand",
+          "Power diperoleh: Sand Manipulation",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Pasir. Power diperoleh: Sand Manipulation. Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Pasir dapet Kendali Pasir. Build pantai mulai aktif.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "rock-golem",
+      "label": "Golem Batu",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "rock-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "rock"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "golem-events-design.json",
+          "definitionId": "rock-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed Golem type result and source component",
+          "timing": "Record once at the committed type result; add through the existing ledger after the immutable base Durability spin."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Batu",
+          "Bahan/tipe tubuh: rock",
+          "Power diperoleh: Rock Manipulation (Kendali Batu)",
+          "Bonus Durability: +1 poin angka",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Batu. Power diperoleh: Rock Manipulation (Kendali Batu). Bonus Durability: +1 poin angka. Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Batu: Kendali Batu, Durability +1. Batu kali naik kelas.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "magma-golem",
+      "label": "Golem Magma",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "magma-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "magma"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "golem-events-design.json",
+          "definitionId": "magma-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed Golem type result and source component",
+          "timing": "Record once at the committed type result; add through the existing ledger after the immutable base Durability spin."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Magma",
+          "Bahan/tipe tubuh: magma",
+          "Power diperoleh: Magma Manipulation (Kendali Magma)",
+          "Bonus Durability: +1 poin angka",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Magma. Power diperoleh: Magma Manipulation (Kendali Magma). Bonus Durability: +1 poin angka. Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Magma: Kendali Magma, Durability +1. Build panas, bodi ikut tebel.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "crystal-golem",
+      "label": "Golem Kristal",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "crystal-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "crystal"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "golem-events-design.json",
+          "definitionId": "crystal-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed Golem type result and source component",
+          "timing": "Record once at the committed type result; add through the existing ledger after the immutable base Durability spin."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Kristal",
+          "Bahan/tipe tubuh: crystal",
+          "Power diperoleh: Crystal Manipulation (Kendali Kristal)",
+          "Bonus Durability: +2 poin angka",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Kristal. Power diperoleh: Crystal Manipulation (Kendali Kristal). Bonus Durability: +2 poin angka. Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Kristal: Kendali Kristal, Durability +2. Bening tapi ada bonus bodi.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "diamond-golem",
+      "label": "Golem Berlian",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "diamond-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "diamond"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "golem-events-design.json",
+          "definitionId": "diamond-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 3,
+          "unit": "numeric point",
+          "source": "actual committed Golem type result and source component",
+          "timing": "Record once at the committed type result; add through the existing ledger after the immutable base Durability spin."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Berlian",
+          "Bahan/tipe tubuh: diamond",
+          "Power diperoleh: Diamond Manipulation (Kendali Berlian)",
+          "Bonus Durability: +3 poin angka",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Berlian. Power diperoleh: Diamond Manipulation (Kendali Berlian). Bonus Durability: +3 poin angka. Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Berlian: Kendali Berlian, Durability +3. Skin mahal, bodi ikut premium.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "element-golem",
+      "label": "Golem Elemen",
+      "status": "User-confirmed one universal Element spin, selected manipulation power and +1 shared character Power Mastery; detailed rank scale, limits, Size pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "element-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "element"
+        },
+        {
+          "type": "register-power-mastery-modifier",
+          "definitionFile": "golem-events-design.json",
+          "contractRef": "element-golem-power-mastery",
+          "amount": 1,
+          "operation": "add-rank-steps",
+          "scope": "all-owned-powers",
+          "source": "actual committed Element Golem type result and source component",
+          "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+          "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Elemen",
+          "Bahan/tipe tubuh: element",
+          "Satu spin Element universal berikutnya; elemen dan power kendali terkait belum diketahui",
+          "Bonus Power Mastery terdaftar: +1 pada satu rank bersama karakter",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Elemen. Bonus Power Mastery +1 buat rank bersama. Elemen dan power kendalinya menunggu satu spin Element universal.",
+        "narrationExample": "Golem Elemen dapet mastery +1. Elemen masih loading, tunggu spin dulu.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Canonical selected element outcome grants one linked manipulation power once, consistent with the shared wheel contract.",
+        "identityBinding": "Record the actual selected element as golemElementId for this source component while retaining Golem identity.",
+        "caller": "Golem / Element Golem with actual component/source provenance",
+        "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers",
+          "registered Element Golem shared mastery modifier"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size",
+          "power-mastery"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    },
+    {
+      "id": "trash-golem",
+      "label": "Golem Sampah",
+      "status": "User-confirmed material/element manipulation and declared Durability bonuses; detailed power limits, numeric scale, Size remain pending; base weights equal.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "golemTypeId",
+          "value": "trash-golem"
+        },
+        {
+          "type": "record-identity-detail",
+          "field": "golemMaterialId",
+          "value": "trash"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "golem-events-design.json",
+          "definitionId": "trash-manipulation",
+          "masteryTiming": "main-power-stage",
+          "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+          "source": "actual committed Golem type result and source component"
+        }
+      ],
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "resultContext": {
+        "facts": [
+          "Jenis Golem terpilih: Golem Sampah",
+          "Bahan/tipe tubuh: trash",
+          "Power diperoleh: Trash Manipulation (Kendali Sampah)",
+          "Power menggunakan satu hasil Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Golem Sampah. Power diperoleh: Trash Manipulation (Kendali Sampah). Power menggunakan satu hasil Power Mastery bersama karakter.",
+        "narrationExample": "Golem Sampah dapet Kendali Sampah. Build TPS siap turun arena.",
+        "availability": "Only after the actual type result and fixed grants/modifiers commit. Element outcome and base Durability value remain unknown until their own actual spins. Use shared mastery status/rank only when already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic future-profile proposal; exact odds and compatibility guards pending.",
+        "basis": [
+          "actual golemTypeId",
+          "material/element identity",
+          "committed owned powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use the selected type and declared owned power in later profiles. Only explicit type modifiers affect stats; additional effects require their own rule."
+      }
+    }
+  ],
+  "contracts": {
+    "routing": "Spin one of seven Golem types. Commit its material identity and approved fixed grants/modifiers, then react. Element Golem registers +1 shared Power Mastery, completes one universal Element spin and gains its canonical manipulation power once; restore saved caller.",
+    "fixedGrants": "Sand/Rock/Magma/Crystal/Diamond/Trash each grant one canonical material manipulation power without a separate Power acquisition spin. Element Golem grants only the canonical manipulation power from its selected Element outcome, without a second generic elemental power.",
+    "profileAuthority": "Profiles here are canonical; inline effects and pointers are mirrors, not extra independent invocations.",
+    "mastery": "framework/spec.json#powerMasteryContract",
+    "elementClassification": "An Element result remains a Golem component and does not dispatch the Elemental race or consume another race-family selection.",
+    "inheritedOrigins": "Authorized Skeleton/Zombie origin and Hybrid/host callers use the same approved profile, actual component provenance, saved return and race no-repeat history.",
+    "size": "All types retain global Size. Body metric and source-backed reference profiles remain unset; material names do not establish height/length or grant extra Size spins.",
+    "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization.",
+    "idempotence": "Each profile/caller effect and Element child invocation is consumed once by run/component/sourceSpinId/profile key. Replay and media retries create no extra grants or spins.",
+    "materialPowerAuthority": {
+      "localDefinitions": "Five Rock/Magma/Crystal/Diamond/Trash definitions live here; future authorized callers reference the same IDs.",
+      "sand": "Reuse sand-manipulation from lelembut-events-design.json; no copy or Lelembut family dispatch.",
+      "element": "Reuse element-universal and its canonical linked power; no caller-specific wheel or duplicate generic elemental grant."
+    },
+    "numericDurability": {
+      "unit": "numeric point",
+      "operation": "add-flat",
+      "byType": {
+        "rock-golem": 1,
+        "magma-golem": 1,
+        "crystal-golem": 2,
+        "diamond-golem": 3
+      },
+      "timing": "Append one source modifier on committed type selection and add after the actual immutable base Durability roll, using configured numeric bounds.",
+      "sourceKey": "runId/componentId/sourceSpinId/profileId/effectOrdinal",
+      "independence": "These user-set +1/+2/+3 amounts do not automatically scale with Power Mastery. Other Golem types have no declared flat Durability bonus."
+    },
+    "powerMasteryModifiers": [
+      {
+        "id": "element-golem-power-mastery",
+        "amount": 1,
+        "scope": "all-owned-powers",
+        "status": "User-confirmed +1 Power Mastery for Element Golem only; uses the established one shared character rank.",
+        "unit": "ordered mastery rank steps",
+        "operation": "add-rank-steps",
+        "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+        "qualifies": "The one shared character Power Mastery record and all current/future owned powers referring to it.",
+        "stackingRef": "framework/spec.json#powerMasteryContract.stacking",
+        "sourceKey": "characterId/modifierDefinitionId/sourceComponentId/sourceSpinId",
+        "emptyInventory": "No owned power means no mastery draw or phantom power. The modifier does not generate another Power acquisition.",
+        "cap": "No numeric final floor/cap; raw mastery0..9 remains separate.",
+        "enchantment": "never from Power Mastery",
+        "callerGuard": "Only an actual committed element-golem type result. The universal Element wheel and Elemental race do not grant this modifier.",
+        "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+      }
+    ],
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "openBalance": [
+    "Optional user override of equal Golem family/type base odds",
+    "Material manipulation limits, external/own-body targets, costs and effects by shared mastery",
+    "Canonical Element roster; base odds equal",
+    "Durability numeric scale and bounds",
+    "Body Size reference profiles and compatibility",
+    "Declared future odds and any additional traits"
+  ],
+  "powers": [
+    {
+      "id": "rock-manipulation",
+      "label": "Rock Manipulation (Kendali Batu)",
+      "group": "material-manipulation",
+      "materialBinding": "rock",
+      "scope": "Membentuk dan mengendalikan material batu.",
+      "contentStatus": "Material manipulation theme user-defined; wording is an adjustable game description, with targets/limits pending.",
+      "affinityTags": [
+        "rock",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, allowed materials, and mastery-dependent control limits remain pending. Body material does not grant additional powers or immunity.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Rock Manipulation (Kendali Batu)"
+        ],
+        "displayContext": "Rock Manipulation (Kendali Batu) udah masuk daftar power; penguasaannya memakai satu hasil Power Mastery karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "Exact future eligibility and probability profiles pending.",
+        "basis": [
+          "definitionId",
+          "materialBinding",
+          "actual grant source"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#rock-manipulation"
+    },
+    {
+      "id": "magma-manipulation",
+      "label": "Magma Manipulation (Kendali Magma)",
+      "group": "material-manipulation",
+      "materialBinding": "magma",
+      "scope": "Membentuk dan mengendalikan magma.",
+      "contentStatus": "Material manipulation theme user-defined; wording is an adjustable game description, with targets/limits pending.",
+      "affinityTags": [
+        "magma",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, allowed materials, and mastery-dependent control limits remain pending. Body material does not grant additional powers or immunity.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Magma Manipulation (Kendali Magma)"
+        ],
+        "displayContext": "Magma Manipulation (Kendali Magma) udah masuk daftar power; penguasaannya memakai satu hasil Power Mastery karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "Exact future eligibility and probability profiles pending.",
+        "basis": [
+          "definitionId",
+          "materialBinding",
+          "actual grant source"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#magma-manipulation"
+    },
+    {
+      "id": "crystal-manipulation",
+      "label": "Crystal Manipulation (Kendali Kristal)",
+      "group": "material-manipulation",
+      "materialBinding": "crystal",
+      "scope": "Membentuk dan mengendalikan material kristal yang memenuhi profil target power.",
+      "contentStatus": "Material manipulation theme user-defined; wording is an adjustable game description, with targets/limits pending.",
+      "affinityTags": [
+        "crystal",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, allowed materials, and mastery-dependent control limits remain pending. Body material does not grant additional powers or immunity.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Crystal Manipulation (Kendali Kristal)"
+        ],
+        "displayContext": "Crystal Manipulation (Kendali Kristal) udah masuk daftar power; penguasaannya memakai satu hasil Power Mastery karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "Exact future eligibility and probability profiles pending.",
+        "basis": [
+          "definitionId",
+          "materialBinding",
+          "actual grant source"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#crystal-manipulation"
+    },
+    {
+      "id": "diamond-manipulation",
+      "label": "Diamond Manipulation (Kendali Berlian)",
+      "group": "material-manipulation",
+      "materialBinding": "diamond",
+      "scope": "Membentuk dan mengendalikan material berlian.",
+      "contentStatus": "Material manipulation theme user-defined; wording is an adjustable game description, with targets/limits pending.",
+      "affinityTags": [
+        "diamond",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, allowed materials, and mastery-dependent control limits remain pending. Body material does not grant additional powers or immunity.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Diamond Manipulation (Kendali Berlian)"
+        ],
+        "displayContext": "Diamond Manipulation (Kendali Berlian) udah masuk daftar power; penguasaannya memakai satu hasil Power Mastery karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "Exact future eligibility and probability profiles pending.",
+        "basis": [
+          "definitionId",
+          "materialBinding",
+          "actual grant source"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#diamond-manipulation"
+    },
+    {
+      "id": "trash-manipulation",
+      "label": "Trash Manipulation (Kendali Sampah)",
+      "group": "material-manipulation",
+      "materialBinding": "trash",
+      "scope": "Menggerakkan, membentuk, dan mengendalikan sampah yang memenuhi aturan target power.",
+      "contentStatus": "Material manipulation theme user-defined; wording is an adjustable game description, with targets/limits pending.",
+      "affinityTags": [
+        "trash",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, allowed materials, and mastery-dependent control limits remain pending. Body material does not grant additional powers or immunity.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Trash Manipulation (Kendali Sampah)"
+        ],
+        "displayContext": "Trash Manipulation (Kendali Sampah) udah masuk daftar power; penguasaannya memakai satu hasil Power Mastery karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "Exact future eligibility and probability profiles pending.",
+        "basis": [
+          "definitionId",
+          "materialBinding",
+          "actual grant source"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#trash-manipulation"
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "lelembut-events-design.json",
+      "definitionId": "sand-manipulation",
+      "callers": [
+        "sand-golem"
+      ],
+      "mode": "fixed grant; same canonical Sand Manipulation as Mummy"
+    }
+  ],
+  "contextContract": {
+    "layers": "Actual Golem type/material -> committed fixed manipulation and numeric bonus, or pending Element child -> actual selected element/power -> shared Power Mastery only when available.",
+    "future": "At type result, report the known Durability modifier, not an unrolled final Durability value. A late grant can inherit already committed shared mastery immediately.",
+    "reaction": "Each actual type/Element spin has its own reaction. Fixed grants/modifiers are revealed with their source reaction and create no extra spin.",
+    "examples": "Narration examples add no powers, modifiers or Shrek funny-result tags."
+  },
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

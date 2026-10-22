@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "roda-kekacauan-resilient/0.1",
+  "version": "resilient/0.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "resilient",
+  "eventProfileId": "resilient-second-chance",
+  "status": "Core scope/threshold/keep-best approved; deferred algorithm design, runtime executor and final body-role fit pending.",
+  "authority": {
+    "confirmed": [
+      "Resilient grants a second chance to spin the stat wheel when the first result is <=5.",
+      "Include Weapon Mastery and Power Mastery.",
+      "Keep the higher number from the two spins.",
+      "All stat bonuses are calculated at the end.",
+      "Weapon Mastery and Power Mastery bonuses also apply at the end.",
+      "Weapon Mastery bonuses affect Enchant eligibility."
+    ],
+    "executionInterpretation": "Second chance is at most one additional actual draw per qualifying first draw. Compare immutable original mapped numeric results before all bonuses. A tie keeps the first source as a deterministic lineage convention."
+  },
+  "policy": {
+    "id": "resilient-second-chance",
+    "activation": "Register once from the actual Resilient Archetype source; no child wheel at Archetype, continue to Backstory.",
+    "scaleCatalog": "stat-scales-design.json",
+    "eligibleStages": [
+      "strength",
+      "speed",
+      "durability",
+      "intelligence",
+      "fight",
+      "weapon-mastery",
+      "power-mastery"
+    ],
+    "weaponScope": "Each active owned weapon with an unresolved normal mastery slot, including authorized later weapons.",
+    "powerScope": "One shared character mastery resolution for all owned powers, never a retry per power.",
+    "trigger": {
+      "basis": "first actual immutable raw mapped value, before every stat/mastery bonus, multiplier, cap, projection or fixed override",
+      "comparison": "<=",
+      "threshold": 5
+    },
+    "maxExtraDrawsPerSlot": 1,
+    "maxActualDrawsPerSlot": 2,
+    "mandatorySecondDrawWhenTriggered": true,
+    "secondDraw": {
+      "wheel": "Same originating eligible stat/mastery wheel and frozen mapping/pool/approved odds/constraints as first draw.",
+      "exclusion": "Do not disable the first result; same outcome may repeat. Race no-repeat is unrelated.",
+      "recursive": false
+    },
+    "resolution": {
+      "formula": "retainedRawValue = second exists ? max(firstRawValue, secondRawValue) : firstRawValue",
+      "tieWinner": "first",
+      "rawMutation": false,
+      "bonusApplication": "No bonuses during either attempt or keep-best selection. At final bonus phase calculate both mastery bonuses, then compatible effective Weapon Mastery Enchant; main-stat bonuses complete after all mandatory Enchant/late events."
+    },
+    "exclusions": [
+      "Copied/skipped/reused results and nonexistent inventory mastery slots",
+      "Fixed stat grants, God Authority maximum overrides, effective/projection values",
+      "Power acquisition or Power Tier 1..5, quantity/chance/decision selectors",
+      "Unconfigured Apex/late bonus-stat wheels; extending scope needs an explicit approved binding",
+      "Already settled slots; late activation never retroactively redraws committed outcomes"
+    ]
+  },
+  "followups": [],
+  "directEffects": [
+    {
+      "type": "register-deferred-roll-policy",
+      "policyId": "resilient-second-chance",
+      "sourceOnce": true
+    }
+  ],
+  "powers": [],
+  "weapons": [],
+  "contracts": {
+    "order": "Actual Resilient/reaction -> register deferred policy -> Backstory. At each eligible future slot: freeze pool -> first actual draw/commit/reaction -> if raw<=5 schedule and complete exactly one second actual draw/commit/reaction -> keep best raw source in separate resolution -> resume saved stage. All bonuses are accumulated for later calculation.",
+    "selection": "Keep both immutable actual source outcomes and a separate selected-base resolution. Record first/second source IDs and mapped values; never overwrite the first spin. No fixed +stat reward from Resilient itself.",
+    "bounded": "A retry is tagged attempt 2/parent resolution and cannot trigger another Resilient retry even at 0..5. At most two actual draws per slot. Deduplicate source registration and retry invocation; multiple duplicate policy references cannot stack retries.",
+    "constraints": "Both draws honor the same frozen approved hard guards, odds and scale. Kinnara minimum Master=5 applies before both draws; raw 5 still triggers retry, 6..9 do not. Lich constrained raw Durability=9 does not trigger. Missing pool/binding/compatible composite policy is needs_configuration, never bypass guards.",
+    "mastery": "Choose the retained raw mastery result before effective-rank projection or Enchant checks. One shared Power Mastery resolution has one default draw or, only for active Resilient with first raw<=5, two actual draws. Keep one shared selected base for every current/future power; no mastery per power, Power Enchant or acquisition follow-up.",
+    "latePower": "If empty inventory skips mastery, no retry exists. The first later owned power uses the first shared resolution with this policy if armed; subsequent grants reuse the settled shared result without reopening either draw.",
+    "hooks": "Each actual first/retry spin has its own committed-spin hooks and reaction. If an explicitly configured combined policy includes Lucky Number, every actual matching draw counts once, including a lower discarded retry. Reuse/best-selection/final projection creates no extra hit. No caption-derived funny tag.",
+    "pawn": "If explicitly combined with Pawn, qualifying category proof uses the retained actual raw numeric result before bonuses; max keeps any qualifying >=7 result. Keep one category per main stat, one active Weapon Mastery category and one common Power Mastery category. Do not count two attempts as two categories or grant a second evolution.",
+    "composition": "Ordinary runs have one primary Archetype; approved Archetype Hybrid explicitly authorizes two distinct child roles. Compatible Gambler/Resilient and other paired policy schedules remain explicit configuration. Passive observer hooks alone do not create another role or automatic stacking.",
+    "ledger": "Freeze source policy version, scale map, first eligible pool/odds, parent resolution ID, attempt ordinals, raw result IDs/values, consumed retry key, saved caller and retained source. Persist retry-pending status after first draw; resume completes the recorded retry rather than redrawing the first or reusing a provisional base as settled.",
+    "reaction": "Only committed result facts are available. After first<=5 announce one second chance; after retry show both results and retained higher raw result. Future bonuses/final scores remain unknown.",
+    "return": "After the slot settles restore its exact next-stat/mastery/event caller; Archetype itself returns to Backstory. Do not advance to Enchant/effective projection or finalization while a required retry remains pending.",
+    "migration": "Only new authorized policy invocations use this rule. Preserve pre-Resilient journals and original scale/bonus timing; replay/render retries add no draw or reward.",
+    "bonusTiming": "At final bonus phase only, project each active weapon from its retained raw base plus distinct matching instance modifiers without numeric clamps. Project the one common Power Mastery from its retained raw base plus distinct all-owned sources, never multiplied by owned power count. Preserve source-bound God Authority maximum, which is a fixed instance override, not a numeric bonus. Evaluate only in final bonus phase after effective Weapon Mastery calculation. Effective score >=5 (Master), enchantable active weapon and an unused compatible configured slot are all required. Earlier stages retain pending gate status even if raw already >=5 or raw+known bonuses would reach5; do not spin early or permanently skip from raw alone."
+  },
+  "examples": [
+    {
+      "first": 4,
+      "second": 2,
+      "retained": 4
+    },
+    {
+      "first": 5,
+      "second": 8,
+      "retained": 8
+    },
+    {
+      "first": 6,
+      "second": null,
+      "retained": 6
+    },
+    {
+      "first": 0,
+      "second": 0,
+      "retained": 0,
+      "additionalRetry": false
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; stat/mastery second-chance executor and persistence adapter not implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Final numeric bounds and mastery cap/overflow display",
+    "Final Resilient body-role fit/boost band",
+    "Explicit combined policy schedules if ever authorized",
+    "Runtime roll-policy executor and journal persistence"
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "migrationContract": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "Pre-revision committed journals preserve their frozen early-Enchant/timing policy. No automatic relabeling, new eligibility check, reward migration or Enchant spin on an old finalized character."
+  },
+  "hybridCompositionRef": "content/archetype-hybrid-events-design.json#contracts.policyComposition",
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

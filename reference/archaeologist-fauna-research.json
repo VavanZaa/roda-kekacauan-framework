@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "roda-kekacauan-fauna-research/1.0",
+  "checkedDate": "2026-10-09",
+  "scope": "Primary scientific sources for animal/timeline/fossil metadata, not source-video Archetype research or authority for fantasy bonuses.",
+  "sources": [
+    {
+      "id": "recent-thylacine",
+      "title": "National Museum of Australia — Extinction of thylacine",
+      "url": "https://www.nma.gov.au/defining-moments/resources/extinction-of-thylacine",
+      "support": "Recently extinct marsupial; skeleton material; last known captive individual died in 1936.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "recent-dodo",
+      "title": "Natural History Museum — Dodo facts",
+      "url": "https://www.nhm.ac.uk/discover/the-dodo-bird-the-real-facts-about-this-icon-of-extinction.html",
+      "support": "Recently extinct bird with preserved/subfossil bones.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "ice-age",
+      "title": "AMNH — Plio-Pleistocene",
+      "url": "https://research.amnh.org/paleontology/perissodactyl/concepts/deep-time/plio-pleistocene",
+      "support": "Pleistocene context for Smilodon, Mammuthus, dire wolf, Megatherium, Glyptodon and woolly rhino; group placement, not exact specimen age.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "giant-rhino",
+      "title": "AMNH — Oligocene",
+      "url": "https://research.amnh.org/paleontology/perissodactyl/concepts/deep-time/oligocene",
+      "support": "Oligocene giant hornless rhino shown under historical Indricotherium terminology.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "giant-rhino-paper",
+      "title": "Deng et al. — An Oligocene giant rhino provides insights into Paraceratherium evolution",
+      "url": "https://doi.org/10.1038/s42003-021-02170-6",
+      "support": "Primary research on Paraceratherium; same paper accessible from Rhino Resource Center at https://rhinoresourcecenter.com/wp-content/uploads/2021/06/1624346446.pdf.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "early-horse",
+      "title": "AMNH — Equoidea",
+      "url": "https://research.amnh.org/paleontology/perissodactyl/evolution/groups/equoidea",
+      "support": "Eocene Eohippus in true horse family; do not treat the restricted Hyracotherium genus as a duplicate alias outcome.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "titanoboa",
+      "title": "Smithsonian — World’s largest snake discovered in fossilized rainforest",
+      "url": "https://www.si.edu/newsdesk/releases/world-s-largest-snake-discovered-fossilized-rainforest",
+      "support": "Titanoboa vertebrate fossil bones in 58–60 million-year-old deposits; Paleocene.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "late-cretaceous",
+      "title": "NHM — Late Cretaceous Dino Directory",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/timeline/late-cretaceous/gallery.html",
+      "support": "Lists Tyrannosaurus, Triceratops, Ankylosaurus, Velociraptor and Spinosaurus in Late Cretaceous.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "tyrannosaurus",
+      "title": "NHM — Tyrannosaurus",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html",
+      "support": "Late Cretaceous and bone-bearing large predatory dinosaur.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "triceratops",
+      "title": "NHM — Triceratops",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/triceratops.html",
+      "support": "Late Cretaceous and three-horned skull.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "ankylosaurus",
+      "title": "NHM — Ankylosaurus",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/Ankylosaurus.html",
+      "support": "Late Cretaceous, bony body armour and tail club.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "mosasaurus",
+      "title": "NHM — What is a mosasaur?",
+      "url": "https://www.nhm.ac.uk/discover/what-is-a-mosasaur.html",
+      "support": "Late Cretaceous marine reptile with fossil bones; not a dinosaur.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "iguanodon",
+      "title": "NHM — Iguanodon",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/iguanodon.html",
+      "support": "Early Cretaceous bone-bearing herbivorous dinosaur.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "stegosaurus",
+      "title": "NHM — Stegosaurus",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/Stegosaurus.html",
+      "support": "Late Jurassic, bony plates and tail spikes.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "allosaurus",
+      "title": "NHM — Allosaurus",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/allosaurus.html",
+      "support": "Late Jurassic large predatory dinosaur.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "brachiosaurus",
+      "title": "NHM — Brachiosaurus",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html",
+      "support": "Late Jurassic large sauropod; distinct from Giraffatitan, not extra alias weight.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "coelophysis",
+      "title": "AMNH — Coelophysis",
+      "url": "https://www.amnh.org/explore/ology/ology-cards/263-coelophysis?view=modal",
+      "support": "Late Triassic, small early theropod with preserved skeletons.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "dimetrodon",
+      "title": "Smithsonian — Dimetrodon specimen",
+      "url": "https://www.si.edu/object/nmnhpaleobiology_3441111",
+      "support": "Early Permian synapsid; skull/vertebra/rib cage in collection.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    },
+    {
+      "id": "dimetrodon-class",
+      "title": "AMNH — Dimetrodon",
+      "url": "https://www.amnh.org/exhibitions/permanent/primitive-mammals/dimetrodon",
+      "support": "Synapsid and early mammal relative; sail functions are uncertain, so no factual thermal-control ability is asserted.",
+      "authority": "primary museum/research source",
+      "checkedDate": "2026-10-09"
+    }
+  ],
+  "exclusions": [
+    "Do not assert exact age for a generated specimen from the chosen animal alone.",
+    "Do not classify Mosasaurus or Dimetrodon as dinosaurs.",
+    "Do not call Paramecium a bone-bearing extinct animal.",
+    "Do not use sharks/invertebrates as bone discoveries without an explicit teeth/exoskeleton/fossil expansion."
+  ],
+  "nameClarification": {
+    "userText": "paramecium",
+    "acceptedLabel": "Paraceratherium",
+    "status": "user-confirmed",
+    "confirmedDate": "2026-10-09",
+    "authority": "Direct user clarification"
+  }
+}

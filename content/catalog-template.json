@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "roda-kekacauan-catalog/0.1",
+  "status": "Empty mechanics catalog with grouped race design linked; not ready for simulation",
+  "raceWheelDesign": "race-wheel-design.json",
+  "locale": "id-ID",
+  "contentPacks": [],
+  "statScales": {
+    "strength": [],
+    "speed": [],
+    "durability": [],
+    "intelligence": [],
+    "fight": []
+  },
+  "masteryRanks": [],
+  "masterRankId": null,
+  "races": [],
+  "archetypes": [],
+  "backstories": [],
+  "weapons": [],
+  "enchantments": [],
+  "powers": [],
+  "weaknesses": [],
+  "apexForces": [],
+  "boostPackages": [],
+  "titles": [],
+  "wheels": [],
+  "eventRules": [],
+  "probabilityModifiers": [],
+  "reactionTemplates": [],
+  "memeAssets": [],
+  "imageStyleProfiles": [],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  }
+}

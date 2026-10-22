@@ -1,0 +1,2917 @@
+{
+  "schemaVersion": 1,
+  "version": "backstory/0.6.2",
+  "updatedDate": "2026-10-11",
+  "stageId": "backstory",
+  "status": "All38 user-approved Backstory designs; immediate event/fixed-grant registration vs deferred general Power defined. Numeric current-stat likelihoods implemented; future pool/tag bindings and persistent executor remain.",
+  "authority": {
+    "sourceChoice": "Direct user: Pakai video kedua sebagai dasar.",
+    "defaultOdds": "User equal odds unless specified, including previous wheels.",
+    "wording": "Authored concise Indonesian adaptations; editable during review.",
+    "loreOnly": "Direct user: some results have no bonus and serve lore purposes while affecting later probability distribution.",
+    "approval": "User: I approve your design.",
+    "eventTiming": "User approves all38 designs; general Power spins wait for the general Power stage, all other Backstory effects/events resolve immediately."
+  },
+  "reference": "reference/backstory-video2-reference.json",
+  "wheel": {
+    "id": "backstory",
+    "label": "Backstory",
+    "enabled": false,
+    "enableWhen": "Production scheduler, acquisition/Weakness adapters and required future-pool bindings ready. Pure approved-recipe planner may inspect/freeze independent of production enablement.",
+    "orderPolicy": "Source adjacency retained. Backstory has lore-only results and mixed effects; no weakest/strongest order or band ratio is assigned.",
+    "outcomes": [
+      {
+        "id": "random-guy",
+        "label": "Orang random",
+        "sourceLabel": "Just some random guy",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "random-guy",
+          "summary": "Orang random. Tanpa bonus atau event; lore biasa.",
+          "source": "committed Backstory result",
+          "narrationExample": "Cuma orang random.",
+          "narrationIsMechanic": false
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [],
+        "oddsProfileStatus": "neutral",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "made-in-lab",
+        "label": "Dibikin di lab",
+        "sourceLabel": "Made in a lab",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "made-in-lab",
+          "summary": "Dibikin di lab. Intelligence +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "intelligence",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-made-in-lab-power",
+            "target": "power",
+            "intent": "Power bertema teknologi lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-made-in-lab",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "dumpster-power",
+        "label": "Nemu power di tempat sampah",
+        "sourceLabel": "Found their powers in a dumpster",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [
+          {
+            "id": "dumpster-extra-power",
+            "type": "general-power-spin",
+            "wheelId": "power",
+            "count": 1,
+            "timing": "deferred",
+            "stage": "power",
+            "requirePower": true,
+            "excludeNone": true,
+            "lowTierBiasIntent": "tier1-2-preferred-not-exclusive",
+            "sequence": "after-main-power-acquisition",
+            "reaction": "only-after-the-actual-deferred-result"
+          }
+        ],
+        "loreContext": {
+          "selectedBackstoryId": "dumpster-power",
+          "summary": "Nemu power di tempat sampah. Satu extra Power spin, pasti mendapat power.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "followup-event",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-dumpster-power-power",
+            "target": "power",
+            "intent": "Condong Tier1–2; lucky pull tetap mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-dumpster-power",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "embarrassing-origin",
+        "label": "Backstory malu-maluin, ogah cerita",
+        "sourceLabel": "Their origin story is so embarrassing they refuse to share it",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "embarrassing-origin",
+          "summary": "Backstory malu-maluin, ogah cerita. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [],
+        "oddsProfileStatus": "neutral",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "legend-trained",
+        "label": "Dilatih legenda",
+        "sourceLabel": "Trained by a legend",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "legend-trained",
+          "summary": "Dilatih legenda. Weapon Mastery +1 untuk semua weapon.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "mastery-flat-modifier",
+            "target": "weapon-mastery",
+            "amount": 1,
+            "scope": "all-owned-weapons",
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-legend-trained-fight",
+            "target": "fight",
+            "intent": "Fight dan mastery tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-legend-trained",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          },
+          {
+            "id": "backstory-legend-trained-weapon-mastery",
+            "target": "weapon-mastery",
+            "intent": "Fight dan mastery tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-legend-trained",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          },
+          {
+            "id": "backstory-legend-trained-power-mastery",
+            "target": "power-mastery",
+            "intent": "Fight dan mastery tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-legend-trained",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "from-nothing",
+        "label": "Mulai dari nol",
+        "sourceLabel": "Rose from absolute nothing",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "from-nothing",
+          "summary": "Mulai dari nol. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-from-nothing-weapon",
+            "target": "weapon",
+            "intent": "Condong weapon sederhana; mastery tetap berpeluang tinggi.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-from-nothing",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "ancient-lineage",
+        "label": "Keturunan makhluk kuno",
+        "sourceLabel": "Descended from something ancient",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "ancient-lineage",
+          "summary": "Keturunan makhluk kuno. Power Mastery +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "mastery-flat-modifier",
+            "target": "power-mastery",
+            "amount": 1,
+            "scope": "all-owned-powers",
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-ancient-lineage-power",
+            "target": "power",
+            "intent": "Power kuno/spiritual lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-ancient-lineage",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "exiled-return",
+        "label": "Dibuang, balik lebih kuat",
+        "sourceLabel": "Was exiled and came back stronger",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "exiled-return",
+          "summary": "Dibuang, balik lebih kuat. Strength +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "strength",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-exiled-return-title",
+            "target": "title",
+            "intent": "Title bertema penebusan atau balas dendam lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "self-made",
+        "label": "Bangun diri dari nol",
+        "sourceLabel": "Built themselves from scratch",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "self-made",
+          "summary": "Bangun diri dari nol. Fight +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-self-made-weapon-mastery",
+            "target": "weapon-mastery",
+            "intent": "Weapon Mastery tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-self-made",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "disgraced-warrior",
+        "label": "Pejuang tercela cari penebusan",
+        "sourceLabel": "Disgraced warrior seeking redemption",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "disgraced-warrior",
+          "summary": "Pejuang tercela cari penebusan. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-disgraced-warrior-fight",
+            "target": "fight",
+            "intent": "Fight cenderung terlatih; Title bertema penebusan lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-disgraced-warrior",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          },
+          {
+            "id": "backstory-disgraced-warrior-title",
+            "target": "title",
+            "intent": "Fight cenderung terlatih; Title bertema penebusan lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "farm-raised",
+        "label": "Anak peternakan",
+        "sourceLabel": "Grew up on a farm",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "farm-raised",
+          "summary": "Anak peternakan. Strength +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "strength",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-farm-raised-weapon",
+            "target": "weapon",
+            "intent": "Weapon berupa alat kerja lebih mungkin.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-farm-raised",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "former-merchant",
+        "label": "Mantan pedagang",
+        "sourceLabel": "Former merchant",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "former-merchant",
+          "summary": "Mantan pedagang. Intelligence +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "intelligence",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-former-merchant-weapon",
+            "target": "weapon",
+            "intent": "Weapon alat dagang atau improvisasi lebih mungkin.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-former-merchant",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "small-town-nobody",
+        "label": "Warga biasa kota kecil",
+        "sourceLabel": "Small town nobody",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "small-town-nobody",
+          "summary": "Warga biasa kota kecil. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [],
+        "oddsProfileStatus": "neutral",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "quiet-life",
+        "label": "Cuma pengen hidup tenang",
+        "sourceLabel": "Just wanted a quiet life",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "quiet-life",
+          "summary": "Cuma pengen hidup tenang. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-quiet-life-weakness",
+            "target": "weakness",
+            "intent": "Weakness bertema enggan bertarung lebih mungkin.",
+            "status": "implemented-current-weakness-likelihood",
+            "numericRuleRef": "weakness-backstory-quiet-life",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "weakness-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "runaway",
+        "label": "Kabur dari rumah",
+        "sourceLabel": "Ran away from home",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "runaway",
+          "summary": "Kabur dari rumah. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-runaway-speed",
+            "target": "speed",
+            "intent": "Speed tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-runaway",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "failed-magician",
+        "label": "Penyihir gagal",
+        "sourceLabel": "Failed magician",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "failed-magician",
+          "summary": "Penyihir gagal. Power Mastery -1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "mastery-flat-modifier",
+            "target": "power-mastery",
+            "amount": -1,
+            "scope": "all-owned-powers",
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-failed-magician-power",
+            "target": "power",
+            "intent": "Power Tier1–2 lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-failed-magician",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "looking-for-purpose",
+        "label": "Nyari tujuan hidup",
+        "sourceLabel": "Looking for purpose",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "looking-for-purpose",
+          "summary": "Nyari tujuan hidup. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-looking-for-purpose-title",
+            "target": "title",
+            "intent": "Title bertema pencari/petualang lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "searching-for-more",
+        "label": "Pengen lebih dari ini",
+        "sourceLabel": "Searching for more",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "searching-for-more",
+          "summary": "Pengen lebih dari ini. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-searching-for-more-power",
+            "target": "power",
+            "intent": "Power Tier3–5 lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-searching-for-more",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "endless-wanderer",
+        "label": "Keluyuran tanpa ujung",
+        "sourceLabel": "Wandered endlessly",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "endless-wanderer",
+          "summary": "Keluyuran tanpa ujung. Speed +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "speed",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-endless-wanderer-power",
+            "target": "power",
+            "intent": "Power mobilitas/perjalanan lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-endless-wanderer",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "hard-way",
+        "label": "Belajar lewat penderitaan",
+        "sourceLabel": "Learned the hard way",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "hard-way",
+          "summary": "Belajar lewat penderitaan. Durability +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "durability",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-hard-way-fight",
+            "target": "fight",
+            "intent": "Fight tinggi lebih mungkin.",
+            "status": "implemented-current-stat-likelihood",
+            "numericRuleRef": "backstory-lore-hard-way",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "test-subject",
+        "label": "Jadi kelinci percobaan",
+        "sourceLabel": "Was used as a test subject",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [
+          {
+            "id": "test-subject-extra-weakness",
+            "type": "extra-weakness-spin",
+            "wheelId": "weakness",
+            "count": 1,
+            "timing": "immediate",
+            "returnTo": "backstory-events",
+            "preserveNormalWeaknessStage": true,
+            "catalogBindingStatus": "weakness-wheel/1.0.0",
+            "catalogDesign": "content/weakness-wheel-design.json",
+            "module": "framework/weakness-wheel.mjs"
+          }
+        ],
+        "loreContext": {
+          "selectedBackstoryId": "test-subject",
+          "summary": "Jadi kelinci percobaan. Strength +1 dan satu Weakness tambahan.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "followup-event",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "strength",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-test-subject-power",
+            "target": "power",
+            "intent": "Power biologis lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-test-subject",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "refused-destiny",
+        "label": "Chosen One tapi nolak",
+        "sourceLabel": "Chosen one who said no",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "refused-destiny",
+          "summary": "Chosen One tapi nolak. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-refused-destiny-apex",
+            "target": "apex",
+            "intent": "None pada Roda Kekacauan lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "fallen-knight",
+        "label": "Mantan knight kehilangan kehormatan",
+        "sourceLabel": "Former knight who lost their honor",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "fallen-knight",
+          "summary": "Mantan knight kehilangan kehormatan. Weapon Mastery +1 untuk semua weapon.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "mastery-flat-modifier",
+            "target": "weapon-mastery",
+            "amount": 1,
+            "scope": "all-owned-weapons",
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-fallen-knight-weapon",
+            "target": "weapon",
+            "intent": "Weapon knight/armor-related lebih mungkin.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-fallen-knight",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "war-born",
+        "label": "Lahir pas perang",
+        "sourceLabel": "Born during a war",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "war-born",
+          "summary": "Lahir pas perang. Fight +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-war-born-weapon",
+            "target": "weapon",
+            "intent": "Weapon perang lebih mungkin.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-war-born",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "last-of-kind",
+        "label": "Terakhir dari kaumnya",
+        "sourceLabel": "Last of their kind",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "last-of-kind",
+          "summary": "Terakhir dari kaumnya. Durability +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "durability",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-last-of-kind-power",
+            "target": "power",
+            "intent": "Power bertema warisan ras lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-last-of-kind",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "enemy-raised",
+        "label": "Dibesarin musuh bebuyutan",
+        "sourceLabel": "Raised by their worst enemy",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "enemy-raised",
+          "summary": "Dibesarin musuh bebuyutan. Fight +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-enemy-raised-weapon",
+            "target": "weapon",
+            "intent": "Weapon/power bertema musuh atau kegelapan lebih mungkin.",
+            "status": "implemented-current-weapon-likelihood",
+            "numericRuleRef": "weapon-backstory-enemy-raised",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          },
+          {
+            "id": "backstory-enemy-raised-power",
+            "target": "power",
+            "intent": "Weapon/power bertema musuh atau kegelapan lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-enemy-raised",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "world-ended",
+        "label": "Saksi dunianya hancur",
+        "sourceLabel": "Watched their world end",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "world-ended",
+          "summary": "Saksi dunianya hancur. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-world-ended-apex",
+            "target": "apex",
+            "intent": "Roda Kekacauan sedikit lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "living-weapon",
+        "label": "Diciptakan jadi senjata",
+        "sourceLabel": "Created to be a weapon",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [
+          {
+            "id": "living-weapon-android",
+            "type": "special-power-spin",
+            "wheelId": "power-android",
+            "definitionFile": "content/machine-events-design.json",
+            "count": 1,
+            "timing": "immediate",
+            "dispatchRaceEvents": false,
+            "returnTo": "backstory-events"
+          }
+        ],
+        "loreContext": {
+          "selectedBackstoryId": "living-weapon",
+          "summary": "Diciptakan jadi senjata. Satu spin dari roda Android Power universal.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "followup-event",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-living-weapon-power",
+            "target": "power",
+            "intent": "Power teknologi/ofensif lebih mungkin; ras tetap.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-living-weapon",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "impossible-survivor",
+        "label": "Selamat dari kejadian mustahil",
+        "sourceLabel": "Survived something that sho...",
+        "sourceLabelComplete": false,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "impossible-survivor",
+          "summary": "Selamat dari kejadian mustahil. Durability +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "stat-flat-modifier",
+            "stat": "durability",
+            "amount": 1,
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-impossible-survivor-power",
+            "target": "power",
+            "intent": "Power survival/proteksi lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-impossible-survivor",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "lost-everything",
+        "label": "Kehilangan segalanya semalam",
+        "sourceLabel": "Lost everything in one night",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "lost-everything",
+          "summary": "Kehilangan segalanya semalam. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-lost-everything-power",
+            "target": "power",
+            "intent": "Power agresif dan Title balas dendam lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-lost-everything",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          },
+          {
+            "id": "backstory-lost-everything-title",
+            "target": "title",
+            "intent": "Power agresif dan Title balas dendam lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "unknown-origin",
+        "label": "Nggak tahu asal-usul sendiri",
+        "sourceLabel": "Never knew their origin",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "unknown-origin",
+          "summary": "Nggak tahu asal-usul sendiri. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-unknown-origin-power",
+            "target": "power",
+            "intent": "Power jiwa/rahasia lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-unknown-origin",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "betrayed",
+        "label": "Dikhianati orang paling dipercaya",
+        "sourceLabel": "Betrayed by the one they trusted most",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "betrayed",
+          "summary": "Dikhianati orang paling dipercaya. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-betrayed-weakness",
+            "target": "weakness",
+            "intent": "Weakness bertema susah percaya orang lebih mungkin.",
+            "status": "implemented-current-weakness-likelihood",
+            "numericRuleRef": "weakness-backstory-betrayed",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "weakness-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "mysterious-arrival",
+        "label": "Nggak ada yang tahu asalnya",
+        "sourceLabel": "Nobody knows where they came from",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "mysterious-arrival",
+          "summary": "Nggak ada yang tahu asalnya. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-mysterious-arrival-title",
+            "target": "title",
+            "intent": "Title bertema misterius lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "appeared-one-day",
+        "label": "Muncul tiba-tiba tanpa ingatan",
+        "sourceLabel": "Appeared one day with no m...",
+        "sourceLabelComplete": false,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "appeared-one-day",
+          "summary": "Muncul tiba-tiba tanpa ingatan. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-appeared-one-day-weakness",
+            "target": "weakness",
+            "intent": "Weakness bertema amnesia lebih mungkin.",
+            "status": "implemented-current-weakness-likelihood",
+            "numericRuleRef": "weakness-backstory-appeared-one-day",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "weakness-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "should-not-exist",
+        "label": "Harusnya nggak pernah ada",
+        "sourceLabel": "Was never supposed to exist",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "should-not-exist",
+          "summary": "Harusnya nggak pernah ada. Mendapat power Intangibility.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "grant-power",
+            "definitionId": "intangibility",
+            "definitionFile": "content/lelembut-events-design.json",
+            "registration": "immediate",
+            "mergePolicy": "merge-fixed-definition-with-all-source-provenance",
+            "surviveMainNone": true,
+            "masteryPolicy": "owner-shared-resolution"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-should-not-exist-power",
+            "target": "power",
+            "intent": "Power realitas/distorsi lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-should-not-exist",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "other-timeline",
+        "label": "Datang dari timeline lain",
+        "sourceLabel": "Comes from a timeline that...",
+        "sourceLabelComplete": false,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "other-timeline",
+          "summary": "Datang dari timeline lain. Tanpa bonus atau event.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "lore-and-odds",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-other-timeline-power",
+            "target": "power",
+            "intent": "Power waktu/dimensi lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-other-timeline",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "unsealed",
+        "label": "Baru bebas dari segel",
+        "sourceLabel": "Was sealed away and recently freed",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [],
+        "loreContext": {
+          "selectedBackstoryId": "unsealed",
+          "summary": "Baru bebas dari segel. Power Mastery +1.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "direct-gift",
+        "directEffects": [
+          {
+            "type": "mastery-flat-modifier",
+            "target": "power-mastery",
+            "amount": 1,
+            "scope": "all-owned-powers",
+            "registration": "immediate",
+            "calculation": "final-only"
+          }
+        ],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-unsealed-power",
+            "target": "power",
+            "intent": "Power kuno dan Weakness bertema segel lebih mungkin.",
+            "status": "implemented-current-power-likelihood",
+            "numericRuleRef": "power-backstory-unsealed",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "power-odds/1.0.0"
+          },
+          {
+            "id": "backstory-unsealed-weakness",
+            "target": "weakness",
+            "intent": "Power kuno dan Weakness bertema segel lebih mungkin.",
+            "status": "implemented-current-weakness-likelihood",
+            "numericRuleRef": "weakness-backstory-unsealed",
+            "applyBeforeFutureDraw": true,
+            "retroactive": false,
+            "numericModelVersion": "weakness-odds/1.0.0"
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      },
+      {
+        "id": "forgotten-prophecy",
+        "label": "Jawaban ramalan yang dilupain",
+        "sourceLabel": "Is the answer to a prophecy nobody remembers",
+        "sourceLabelComplete": true,
+        "baseWeight": 1,
+        "probability": 0.02631578947368421,
+        "eventStatus": "approved-user",
+        "eventRules": [
+          {
+            "id": "prophecy-divine",
+            "type": "special-power-spin",
+            "wheelId": "power-divine",
+            "definitionFile": "content/universal-power-wheels-design.json",
+            "count": 1,
+            "timing": "immediate",
+            "dispatchRaceEvents": false,
+            "returnTo": "backstory-events"
+          }
+        ],
+        "loreContext": {
+          "selectedBackstoryId": "forgotten-prophecy",
+          "summary": "Jawaban ramalan yang dilupain. Satu spin Divine Power universal.",
+          "source": "committed Backstory result"
+        },
+        "mechanicMode": "followup-event",
+        "directEffects": [],
+        "probabilityModifiers": [
+          {
+            "id": "backstory-forgotten-prophecy-title",
+            "target": "title",
+            "intent": "Title bertema takdir lebih mungkin.",
+            "status": "approved-intent-pending-pool-binding",
+            "numericRuleRef": null,
+            "applyBeforeFutureDraw": true,
+            "retroactive": false
+          }
+        ],
+        "oddsProfileStatus": "explicit-current-stat-rules-and-pending-future-pool-bindings",
+        "approval": "Full proposed roster approved by user."
+      }
+    ]
+  },
+  "contracts": {
+    "entry": "After outer Race/Archetype tree or gate skip; retain earlier identity/inventory/history and active policy sources.",
+    "reaction": "Each actual Backstory/event result adds committed context and a narrator/meme/text reaction; future results remain unknown.",
+    "probability": "Equal1/38 base before permitted conditional modifiers. Keep hard eligibility/frozen results. Active Equalizer makes the remaining eligible actual wheel uniform.",
+    "effects": "Lore context, future probability modifiers, direct grants/bonuses and additional wheel events are separate. A result may have lore/odds only with empty directEffects and eventRules. Names/AI narration never create an implicit gift.",
+    "bonusTiming": "Record declared numeric/mastery modifiers, calculate at finalization. Keep raw rolls immutable and final scores signed/unbounded.",
+    "inventory": "Exclude already-owned powers before acquisition draws; identical fixed grants merge source provenance. Normal shared Power Mastery/per-weapon mastery retained.",
+    "return": "Complete immediate events and restore saved callers, then Size once; deferred tickets wait for their own stage.",
+    "replay": "Freeze version,eligible IDs,odds,result,source ledger and caller before event execution; no redraw/double reward.",
+    "noEvent": "After actual Backstory commit and its normal reaction, a result with empty eventRules continues directly to Size; it may still retain a source-owned future-odds profile. Missing/null means undecided, not an approved no-event outcome.",
+    "oddsTiming": "Register approved source-owned probability modifiers when Backstory commits; apply only to configured future wheels before pool freeze/draw. Earlier Race/Archetype and other committed outcomes never change. Missing numeric profiles stay pending for later wheel design, never guessed from lore.",
+    "oddsVsBonus": "A greater probability of a high/low stat, power or weapon is not an automatic numeric bonus/debuff, guaranteed result or extra spin. Specific weight factors and target wheels must be authored explicitly.",
+    "oddsPrecedence": "Use framework/spec.json probabilityContract. Hard eligibility/owned-power exclusions/explicit guarantees apply; active Equalizer flattens remaining eligible odds and suppresses ordinary lore biases. No lore profile bypasses hard guards or rebalances a frozen pool.",
+    "eventTiming": {
+      "version": "backstory-timing/0.1.0",
+      "authority": "User approves all38 designs; general Power spins wait for the general Power stage, all other Backstory effects/events resolve immediately.",
+      "generalPower": "Register source-owned extra-spin ticket on Backstory commit; actual spin only at Power, after main acquisition under the existing stage sequence.",
+      "specialPower": "Invoke Android/Divine and other named themed wheels immediately; grant/reaction before returning to Backstory then Size.",
+      "fixedPower": "Grant fixed Intangibility immediately; merge duplicate fixed grants with provenance; no acquisition spin.",
+      "extraWeakness": "Test Subject extra Weakness is immediate, overriding earlier draft nanti. Normal later Weakness spin remains.",
+      "numericBonuses": "Register numeric stat/mastery modifiers immediately; calculation stays final-only. No early mastery draw or Enchant.",
+      "inventory": "Early powers survive main Power None and join the same shared mastery, including God guaranteed9/no spin.",
+      "continuation": "Finish every required immediate child and reaction before Size; deferred general Power ticket never blocks that return.",
+      "history": "Freeze selected recipe and unique source keys; no redraw, duplicate bonus/ticket or changes to older saved recipes."
+    }
+  },
+  "eventProfiles": [
+    {
+      "id": "random-guy",
+      "label": "Orang random",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "made-in-lab",
+      "label": "Dibikin di lab",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-made-in-lab-power",
+          "target": "power",
+          "intent": "Power bertema teknologi lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-made-in-lab",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "dumpster-power",
+      "label": "Nemu power di tempat sampah",
+      "mode": "followup-event",
+      "effects": [],
+      "followups": [
+        {
+          "id": "dumpster-extra-power",
+          "type": "general-power-spin",
+          "wheelId": "power",
+          "count": 1,
+          "timing": "deferred",
+          "stage": "power",
+          "requirePower": true,
+          "excludeNone": true,
+          "lowTierBiasIntent": "tier1-2-preferred-not-exclusive",
+          "sequence": "after-main-power-acquisition",
+          "reaction": "only-after-the-actual-deferred-result"
+        }
+      ],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-dumpster-power-power",
+          "target": "power",
+          "intent": "Condong Tier1–2; lucky pull tetap mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-dumpster-power",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "embarrassing-origin",
+      "label": "Backstory malu-maluin, ogah cerita",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "legend-trained",
+      "label": "Dilatih legenda",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "mastery-flat-modifier",
+          "target": "weapon-mastery",
+          "amount": 1,
+          "scope": "all-owned-weapons",
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-legend-trained-fight",
+          "target": "fight",
+          "intent": "Fight dan mastery tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-legend-trained",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        },
+        {
+          "id": "backstory-legend-trained-weapon-mastery",
+          "target": "weapon-mastery",
+          "intent": "Fight dan mastery tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-legend-trained",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        },
+        {
+          "id": "backstory-legend-trained-power-mastery",
+          "target": "power-mastery",
+          "intent": "Fight dan mastery tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-legend-trained",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "from-nothing",
+      "label": "Mulai dari nol",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-from-nothing-weapon",
+          "target": "weapon",
+          "intent": "Condong weapon sederhana; mastery tetap berpeluang tinggi.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-from-nothing",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "ancient-lineage",
+      "label": "Keturunan makhluk kuno",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "mastery-flat-modifier",
+          "target": "power-mastery",
+          "amount": 1,
+          "scope": "all-owned-powers",
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-ancient-lineage-power",
+          "target": "power",
+          "intent": "Power kuno/spiritual lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-ancient-lineage",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "exiled-return",
+      "label": "Dibuang, balik lebih kuat",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-exiled-return-title",
+          "target": "title",
+          "intent": "Title bertema penebusan atau balas dendam lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "self-made",
+      "label": "Bangun diri dari nol",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-self-made-weapon-mastery",
+          "target": "weapon-mastery",
+          "intent": "Weapon Mastery tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-self-made",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "disgraced-warrior",
+      "label": "Pejuang tercela cari penebusan",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-disgraced-warrior-fight",
+          "target": "fight",
+          "intent": "Fight cenderung terlatih; Title bertema penebusan lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-disgraced-warrior",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        },
+        {
+          "id": "backstory-disgraced-warrior-title",
+          "target": "title",
+          "intent": "Fight cenderung terlatih; Title bertema penebusan lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "farm-raised",
+      "label": "Anak peternakan",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-farm-raised-weapon",
+          "target": "weapon",
+          "intent": "Weapon berupa alat kerja lebih mungkin.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-farm-raised",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "former-merchant",
+      "label": "Mantan pedagang",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-former-merchant-weapon",
+          "target": "weapon",
+          "intent": "Weapon alat dagang atau improvisasi lebih mungkin.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-former-merchant",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "small-town-nobody",
+      "label": "Warga biasa kota kecil",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "quiet-life",
+      "label": "Cuma pengen hidup tenang",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-quiet-life-weakness",
+          "target": "weakness",
+          "intent": "Weakness bertema enggan bertarung lebih mungkin.",
+          "status": "implemented-current-weakness-likelihood",
+          "numericRuleRef": "weakness-backstory-quiet-life",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "weakness-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "runaway",
+      "label": "Kabur dari rumah",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-runaway-speed",
+          "target": "speed",
+          "intent": "Speed tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-runaway",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "failed-magician",
+      "label": "Penyihir gagal",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "mastery-flat-modifier",
+          "target": "power-mastery",
+          "amount": -1,
+          "scope": "all-owned-powers",
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-failed-magician-power",
+          "target": "power",
+          "intent": "Power Tier1–2 lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-failed-magician",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "looking-for-purpose",
+      "label": "Nyari tujuan hidup",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-looking-for-purpose-title",
+          "target": "title",
+          "intent": "Title bertema pencari/petualang lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "searching-for-more",
+      "label": "Pengen lebih dari ini",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-searching-for-more-power",
+          "target": "power",
+          "intent": "Power Tier3–5 lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-searching-for-more",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "endless-wanderer",
+      "label": "Keluyuran tanpa ujung",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-endless-wanderer-power",
+          "target": "power",
+          "intent": "Power mobilitas/perjalanan lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-endless-wanderer",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "hard-way",
+      "label": "Belajar lewat penderitaan",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-hard-way-fight",
+          "target": "fight",
+          "intent": "Fight tinggi lebih mungkin.",
+          "status": "implemented-current-stat-likelihood",
+          "numericRuleRef": "backstory-lore-hard-way",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "test-subject",
+      "label": "Jadi kelinci percobaan",
+      "mode": "followup-event",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [
+        {
+          "id": "test-subject-extra-weakness",
+          "type": "extra-weakness-spin",
+          "wheelId": "weakness",
+          "count": 1,
+          "timing": "immediate",
+          "returnTo": "backstory-events",
+          "preserveNormalWeaknessStage": true,
+          "catalogBindingStatus": "weakness-wheel/1.0.0",
+          "catalogDesign": "content/weakness-wheel-design.json",
+          "module": "framework/weakness-wheel.mjs"
+        }
+      ],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-test-subject-power",
+          "target": "power",
+          "intent": "Power biologis lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-test-subject",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "refused-destiny",
+      "label": "Chosen One tapi nolak",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-refused-destiny-apex",
+          "target": "apex",
+          "intent": "None pada Roda Kekacauan lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "fallen-knight",
+      "label": "Mantan knight kehilangan kehormatan",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "mastery-flat-modifier",
+          "target": "weapon-mastery",
+          "amount": 1,
+          "scope": "all-owned-weapons",
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-fallen-knight-weapon",
+          "target": "weapon",
+          "intent": "Weapon knight/armor-related lebih mungkin.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-fallen-knight",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "war-born",
+      "label": "Lahir pas perang",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-war-born-weapon",
+          "target": "weapon",
+          "intent": "Weapon perang lebih mungkin.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-war-born",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "last-of-kind",
+      "label": "Terakhir dari kaumnya",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-last-of-kind-power",
+          "target": "power",
+          "intent": "Power bertema warisan ras lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-last-of-kind",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "enemy-raised",
+      "label": "Dibesarin musuh bebuyutan",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-enemy-raised-weapon",
+          "target": "weapon",
+          "intent": "Weapon/power bertema musuh atau kegelapan lebih mungkin.",
+          "status": "implemented-current-weapon-likelihood",
+          "numericRuleRef": "weapon-backstory-enemy-raised",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        },
+        {
+          "id": "backstory-enemy-raised-power",
+          "target": "power",
+          "intent": "Weapon/power bertema musuh atau kegelapan lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-enemy-raised",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "world-ended",
+      "label": "Saksi dunianya hancur",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-world-ended-apex",
+          "target": "apex",
+          "intent": "Roda Kekacauan sedikit lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "living-weapon",
+      "label": "Diciptakan jadi senjata",
+      "mode": "followup-event",
+      "effects": [],
+      "followups": [
+        {
+          "id": "living-weapon-android",
+          "type": "special-power-spin",
+          "wheelId": "power-android",
+          "definitionFile": "content/machine-events-design.json",
+          "count": 1,
+          "timing": "immediate",
+          "dispatchRaceEvents": false,
+          "returnTo": "backstory-events"
+        }
+      ],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-living-weapon-power",
+          "target": "power",
+          "intent": "Power teknologi/ofensif lebih mungkin; ras tetap.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-living-weapon",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "impossible-survivor",
+      "label": "Selamat dari kejadian mustahil",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-impossible-survivor-power",
+          "target": "power",
+          "intent": "Power survival/proteksi lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-impossible-survivor",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "lost-everything",
+      "label": "Kehilangan segalanya semalam",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-lost-everything-power",
+          "target": "power",
+          "intent": "Power agresif dan Title balas dendam lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-lost-everything",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        },
+        {
+          "id": "backstory-lost-everything-title",
+          "target": "title",
+          "intent": "Power agresif dan Title balas dendam lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "unknown-origin",
+      "label": "Nggak tahu asal-usul sendiri",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-unknown-origin-power",
+          "target": "power",
+          "intent": "Power jiwa/rahasia lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-unknown-origin",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "betrayed",
+      "label": "Dikhianati orang paling dipercaya",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-betrayed-weakness",
+          "target": "weakness",
+          "intent": "Weakness bertema susah percaya orang lebih mungkin.",
+          "status": "implemented-current-weakness-likelihood",
+          "numericRuleRef": "weakness-backstory-betrayed",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "weakness-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "mysterious-arrival",
+      "label": "Nggak ada yang tahu asalnya",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-mysterious-arrival-title",
+          "target": "title",
+          "intent": "Title bertema misterius lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "appeared-one-day",
+      "label": "Muncul tiba-tiba tanpa ingatan",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-appeared-one-day-weakness",
+          "target": "weakness",
+          "intent": "Weakness bertema amnesia lebih mungkin.",
+          "status": "implemented-current-weakness-likelihood",
+          "numericRuleRef": "weakness-backstory-appeared-one-day",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "weakness-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "should-not-exist",
+      "label": "Harusnya nggak pernah ada",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "grant-power",
+          "definitionId": "intangibility",
+          "definitionFile": "content/lelembut-events-design.json",
+          "registration": "immediate",
+          "mergePolicy": "merge-fixed-definition-with-all-source-provenance",
+          "surviveMainNone": true,
+          "masteryPolicy": "owner-shared-resolution"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-should-not-exist-power",
+          "target": "power",
+          "intent": "Power realitas/distorsi lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-should-not-exist",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "other-timeline",
+      "label": "Datang dari timeline lain",
+      "mode": "lore-and-odds",
+      "effects": [],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-other-timeline-power",
+          "target": "power",
+          "intent": "Power waktu/dimensi lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-other-timeline",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "unsealed",
+      "label": "Baru bebas dari segel",
+      "mode": "direct-gift",
+      "effects": [
+        {
+          "type": "mastery-flat-modifier",
+          "target": "power-mastery",
+          "amount": 1,
+          "scope": "all-owned-powers",
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "followups": [],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-unsealed-power",
+          "target": "power",
+          "intent": "Power kuno dan Weakness bertema segel lebih mungkin.",
+          "status": "implemented-current-power-likelihood",
+          "numericRuleRef": "power-backstory-unsealed",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "power-odds/1.0.0"
+        },
+        {
+          "id": "backstory-unsealed-weakness",
+          "target": "weakness",
+          "intent": "Power kuno dan Weakness bertema segel lebih mungkin.",
+          "status": "implemented-current-weakness-likelihood",
+          "numericRuleRef": "weakness-backstory-unsealed",
+          "applyBeforeFutureDraw": true,
+          "retroactive": false,
+          "numericModelVersion": "weakness-odds/1.0.0"
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    },
+    {
+      "id": "forgotten-prophecy",
+      "label": "Jawaban ramalan yang dilupain",
+      "mode": "followup-event",
+      "effects": [],
+      "followups": [
+        {
+          "id": "prophecy-divine",
+          "type": "special-power-spin",
+          "wheelId": "power-divine",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "count": 1,
+          "timing": "immediate",
+          "dispatchRaceEvents": false,
+          "returnTo": "backstory-events"
+        }
+      ],
+      "probabilityModifiers": [
+        {
+          "id": "backstory-forgotten-prophecy-title",
+          "target": "title",
+          "intent": "Title bertema takdir lebih mungkin.",
+          "status": "approved-intent-pending-pool-binding",
+          "numericRuleRef": null,
+          "applyBeforeFutureDraw": true,
+          "retroactive": false
+        }
+      ],
+      "nextStage": "size",
+      "waitForImmediateEvents": true,
+      "source": "actual committed Backstory result"
+    }
+  ],
+  "reviewProgress": {
+    "mode": "approved-full-roster",
+    "approvedEventIds": [
+      "random-guy",
+      "made-in-lab",
+      "dumpster-power",
+      "embarrassing-origin",
+      "legend-trained",
+      "from-nothing",
+      "ancient-lineage",
+      "exiled-return",
+      "self-made",
+      "disgraced-warrior",
+      "farm-raised",
+      "former-merchant",
+      "small-town-nobody",
+      "quiet-life",
+      "runaway",
+      "failed-magician",
+      "looking-for-purpose",
+      "searching-for-more",
+      "endless-wanderer",
+      "hard-way",
+      "test-subject",
+      "refused-destiny",
+      "fallen-knight",
+      "war-born",
+      "last-of-kind",
+      "enemy-raised",
+      "world-ended",
+      "living-weapon",
+      "impossible-survivor",
+      "lost-everything",
+      "unknown-origin",
+      "betrayed",
+      "mysterious-arrival",
+      "appeared-one-day",
+      "should-not-exist",
+      "other-timeline",
+      "unsealed",
+      "forgotten-prophecy"
+    ],
+    "nextBackstoryId": null,
+    "wholeRosterEventsComplete": true,
+    "oddsReviewStage": "When each later wheel is authored; Backstory review records intended qualitative influence separately from fixed bonuses."
+  },
+  "pendingDecisions": [
+    "Bind approved qualitative Power/Weakness/Apex/Title intents to their future canonical pools/tags/weights.",
+    "Implement persistent scheduler and actual acquisition/Weakness event adapters."
+  ],
+  "runtimeReady": false,
+  "modeDefinitions": {
+    "lore-and-odds": {
+      "meaning": "Narrative context plus configured future weight modifiers; no direct reward or followup spin.",
+      "directEffects": [],
+      "eventRules": [],
+      "probabilityModifiers": "Explicit profile later; no mandatory buff or guaranteed result."
+    },
+    "direct-gift": {
+      "meaning": "Only declared fixed stat/power/weapon/condition rewards, optionally with lore/odds changes.",
+      "directEffects": "Explicit source-owned recipe",
+      "eventRules": "Empty unless a followup is independently declared."
+    },
+    "followup-event": {
+      "meaning": "Only declared additional wheels/events, optionally with fixed effects and future odds changes.",
+      "eventRules": "Explicit source-scoped steps and saved return to Size."
+    }
+  },
+  "proposalReviewContract": {
+    "status": "All38 suggestions approved; retained as review history, executable effects/timing now explicit.",
+    "scope": "Direct recipes, extra wheels and qualitative odds separated. No draft enables mechanics or adds numeric likelihoods.",
+    "probability": "Stat/mastery random bounds5%..25%, hard guards, Equalizer and fixed guarantees always apply. Other wheels keep existing odds until their approved profiles exist.",
+    "reuse": "Use existing canonical pools where available; Android Power grant does not dispatch Machine race events.",
+    "constraints": "Weapon-acquisition prohibition and guaranteed/no-None constraints remain. None increases cannot bypass hard no-None guarantees or rewrite God80/20 scarcity.",
+    "bonusTiming": "All numeric suggestions are end-only score points. Power Tier remains intrinsic; neither power grants nor names guarantee mastery.",
+    "reviewMode": "Approved full roster; no further individual event approval required."
+  },
+  "proposals": [
+    {
+      "outcomeId": "random-guy",
+      "label": "Orang random",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event; lore biasa.",
+      "suggestedQualitativeOdds": "Netral.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "made-in-lab",
+      "label": "Dibikin di lab",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Intelligence +1.",
+      "suggestedQualitativeOdds": "Power bertema teknologi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "dumpster-power",
+      "label": "Nemu power di tempat sampah",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Satu extra Power spin, pasti mendapat power.",
+      "suggestedQualitativeOdds": "Condong Tier1–2; lucky pull tetap mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "embarrassing-origin",
+      "label": "Backstory malu-maluin, ogah cerita",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Netral; konteks narasi saja.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "legend-trained",
+      "label": "Dilatih legenda",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Weapon Mastery +1 untuk semua weapon.",
+      "suggestedQualitativeOdds": "Fight dan mastery tinggi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "from-nothing",
+      "label": "Mulai dari nol",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Condong weapon sederhana; mastery tetap berpeluang tinggi.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "ancient-lineage",
+      "label": "Keturunan makhluk kuno",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Power Mastery +1.",
+      "suggestedQualitativeOdds": "Power kuno/spiritual lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "exiled-return",
+      "label": "Dibuang, balik lebih kuat",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Strength +1.",
+      "suggestedQualitativeOdds": "Title bertema penebusan atau balas dendam lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "self-made",
+      "label": "Bangun diri dari nol",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Fight +1.",
+      "suggestedQualitativeOdds": "Weapon Mastery tinggi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "disgraced-warrior",
+      "label": "Pejuang tercela cari penebusan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Fight cenderung terlatih; Title bertema penebusan lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "farm-raised",
+      "label": "Anak peternakan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Strength +1.",
+      "suggestedQualitativeOdds": "Weapon berupa alat kerja lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "former-merchant",
+      "label": "Mantan pedagang",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Intelligence +1.",
+      "suggestedQualitativeOdds": "Weapon alat dagang atau improvisasi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "small-town-nobody",
+      "label": "Warga biasa kota kecil",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Netral.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "quiet-life",
+      "label": "Cuma pengen hidup tenang",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Weakness bertema enggan bertarung lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "runaway",
+      "label": "Kabur dari rumah",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Speed tinggi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "failed-magician",
+      "label": "Penyihir gagal",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Power Mastery -1.",
+      "suggestedQualitativeOdds": "Power Tier1–2 lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "looking-for-purpose",
+      "label": "Nyari tujuan hidup",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Title bertema pencari/petualang lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "searching-for-more",
+      "label": "Pengen lebih dari ini",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Power Tier3–5 lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "endless-wanderer",
+      "label": "Keluyuran tanpa ujung",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Speed +1.",
+      "suggestedQualitativeOdds": "Power mobilitas/perjalanan lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "hard-way",
+      "label": "Belajar lewat penderitaan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Durability +1.",
+      "suggestedQualitativeOdds": "Fight tinggi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "test-subject",
+      "label": "Jadi kelinci percobaan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Strength +1 dan satu Weakness tambahan.",
+      "suggestedQualitativeOdds": "Power biologis lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "refused-destiny",
+      "label": "Chosen One tapi nolak",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "None pada Roda Kekacauan lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "fallen-knight",
+      "label": "Mantan knight kehilangan kehormatan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Weapon Mastery +1 untuk semua weapon.",
+      "suggestedQualitativeOdds": "Weapon knight/armor-related lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "war-born",
+      "label": "Lahir pas perang",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Fight +1.",
+      "suggestedQualitativeOdds": "Weapon perang lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "last-of-kind",
+      "label": "Terakhir dari kaumnya",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Durability +1.",
+      "suggestedQualitativeOdds": "Power bertema warisan ras lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "enemy-raised",
+      "label": "Dibesarin musuh bebuyutan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Fight +1.",
+      "suggestedQualitativeOdds": "Weapon/power bertema musuh atau kegelapan lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "world-ended",
+      "label": "Saksi dunianya hancur",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Roda Kekacauan sedikit lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "living-weapon",
+      "label": "Diciptakan jadi senjata",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Satu spin dari roda Android Power universal.",
+      "suggestedQualitativeOdds": "Power teknologi/ofensif lebih mungkin; ras tetap.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "impossible-survivor",
+      "label": "Selamat dari kejadian mustahil",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Durability +1.",
+      "suggestedQualitativeOdds": "Power survival/proteksi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "lost-everything",
+      "label": "Kehilangan segalanya semalam",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Power agresif dan Title balas dendam lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "unknown-origin",
+      "label": "Nggak tahu asal-usul sendiri",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Power jiwa/rahasia lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "betrayed",
+      "label": "Dikhianati orang paling dipercaya",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Weakness bertema susah percaya orang lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "mysterious-arrival",
+      "label": "Nggak ada yang tahu asalnya",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Title bertema misterius lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "appeared-one-day",
+      "label": "Muncul tiba-tiba tanpa ingatan",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Weakness bertema amnesia lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "should-not-exist",
+      "label": "Harusnya nggak pernah ada",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Mendapat power Intangibility.",
+      "suggestedQualitativeOdds": "Power realitas/distorsi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "other-timeline",
+      "label": "Datang dari timeline lain",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Tanpa bonus atau event.",
+      "suggestedQualitativeOdds": "Power waktu/dimensi lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "unsealed",
+      "label": "Baru bebas dari segel",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Power Mastery +1.",
+      "suggestedQualitativeOdds": "Power kuno dan Weakness bertema segel lebih mungkin.",
+      "numericLikelihood": null
+    },
+    {
+      "outcomeId": "forgotten-prophecy",
+      "label": "Jawaban ramalan yang dilupain",
+      "status": "approved-user",
+      "suggestedDirectEffect": "Satu spin Divine Power universal.",
+      "suggestedQualitativeOdds": "Title bertema takdir lebih mungkin.",
+      "numericLikelihood": null
+    }
+  ],
+  "designReady": true,
+  "eventTiming": {
+    "version": "backstory-timing/0.1.0",
+    "authority": "User approves all38 designs; general Power spins wait for the general Power stage, all other Backstory effects/events resolve immediately.",
+    "generalPower": "Register source-owned extra-spin ticket on Backstory commit; actual spin only at Power, after main acquisition under the existing stage sequence.",
+    "specialPower": "Invoke Android/Divine and other named themed wheels immediately; grant/reaction before returning to Backstory then Size.",
+    "fixedPower": "Grant fixed Intangibility immediately; merge duplicate fixed grants with provenance; no acquisition spin.",
+    "extraWeakness": "Test Subject extra Weakness is immediate, overriding earlier draft nanti. Normal later Weakness spin remains.",
+    "numericBonuses": "Register numeric stat/mastery modifiers immediately; calculation stays final-only. No early mastery draw or Enchant.",
+    "inventory": "Early powers survive main Power None and join the same shared mastery, including God guaranteed9/no spin.",
+    "continuation": "Finish every required immediate child and reaction before Size; deferred general Power ticket never blocks that return.",
+    "history": "Freeze selected recipe and unique source keys; no redraw, duplicate bonus/ticket or changes to older saved recipes."
+  },
+  "runtime": {
+    "module": "framework/backstory-event.mjs",
+    "status": "Pure freeze/select/resolve helpers, no persistent execution. Emits mandatory immediate child queue and source-keyed deferred general Power ticket.",
+    "functions": [
+      "planBackstoryWheel",
+      "selectBackstoryOutcome",
+      "resolveBackstoryResult"
+    ]
+  },
+  "numericCalibration": {
+    "status": "Authored editable game assumption, not user-specified numeric likelihood strength or measured data.",
+    "rawCenterShift": 0.35,
+    "approvedMeaning": "Five Backstories favor high current-stat/mastery results. Direct bonuses remain a separate final ledger; lore shifts are not derived by replaying bonus amounts.",
+    "futurePools": "No unspecified numerical/tag multipliers are inferred from wording."
+  },
+  "weaponOddsBinding": {
+    "version": "weapon-odds/0.2.0",
+    "design": "content/weapon-wheel-design.json",
+    "ruleCount": 6,
+    "scope": "Explicit approved weapon intents bound to editable positive tag likelihoods within each Tier. Latest equal20% per weapon Tier means no Backstory raises lower/higher tier mass. None retains race/role propensity."
+  },
+  "powerOddsBinding": {
+    "version": "power-odds/1.0.0",
+    "design": "content/main-power-wheel-design.json",
+    "ruleCount": 16,
+    "scope": "Approved qualitative Power intents now use explicit editable1..1.5 positive tag/tier factors; no retroactive changes to prior frozen recipes. General extra ticket remains deferred and guaranteed."
+  },
+  "weaknessOddsBinding": {
+    "version": "weakness-odds/1.0.0",
+    "design": "content/weakness-wheel-design.json",
+    "boundIntentCount": 4,
+    "status": "Four approved intents bind to current recipes; Test Subject one immediate extra now has a catalog/pure-helper adapter. Persistent execution remains pending."
+  },
+  "chaosStageRename": {
+    "displayName": "Roda Kekacauan",
+    "canonicalOddsTarget": "apex",
+    "labelOnly": true,
+    "status": "Seven-outcome root/None confirmed; approved None/non-None intentions are meaningful again. Numeric likelihood bindings remain pending; no Backstory odds/effect changes.",
+    "preserveFrozenPlans": true
+  }
+}

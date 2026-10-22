@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "roda-kekacauan-disciple/1.0",
+  "version": "disciple/1.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "disciple",
+  "eventProfileId": "disciple-inheritance",
+  "status": "Mentor inheritance flow preserved; empty eligible archive learns from God through one ordinary Divine Power spin.",
+  "authority": {
+    "confirmed": [
+      "Spin one previous character from the character database, then Weapon, Power or Best Stat.",
+      "If the selected category has multiple weapons, powers or tied best stats, pick exactly one randomly.",
+      "Best Stat gives +1 numeric point to the corresponding stat on the current character.",
+      "An empty selected category is zonk with no bonus; no reroll.",
+      "Inherited weapon/power uses the new character's normal mastery, not the mentor's mastery/enchantments.",
+      "If no completed prior character is available, Disciple learns from God and gets one Divine Power spin."
+    ],
+    "existingPolicy": "Unspecified odds are equal: mentors, three reward categories and candidates inside the selected category.",
+    "implementationInterpretations": [
+      "The mentor database snapshot contains completed previous characters, one immutable record per character; current/in-progress characters are excluded.",
+      "One reward is copied as a new recipient-owned grant; the mentor's inventory is not consumed or changed.",
+      "The random candidate pick is internal and journaled, not an additional visible wheel.",
+      "Best-stat keys must be saved with an approved comparison profile; do not compare incomparable raw stat units."
+    ]
+  },
+  "contracts": {
+    "order": "Actual Disciple/reaction -> valid archive: nonempty mentor/category/internal-pick flow; empty eligible archive one ordinary Divine Power lesson from God -> Backstory.",
+    "mentor": "Every eligible completed character has base weight 1. Use a snapshot captured before saving the current character. No stronger-mentor rarity, race exclusion, category availability filter or re-dispatch of mentor Race/Archetype events.",
+    "category": "Weapon : Power : Best Stat = 1:1:1, each 1/3, regardless of empty weapon/power inventory. Select exactly one category once.",
+    "candidate": "Uniform among actual owned weapon/power instances in that category, including distinct same-definition instances; Best Stat uniform among unique tied best-stat keys. Singleton gives that one result; zero weapon/power candidates is zonk. Do not select another category or give every candidate. Current power candidates exclude already-owned ordinary canonical definitions before the internal random pick; if none remain the chosen category is zonk.",
+    "weapon": "Create one new weapon instance from the selected intrinsic definition and bounded bindings/limitations. Copy no donor mastery, enchantments, stat effects or source-scoped bonuses. Queue recipient per-weapon normal mastery; compatible effective Master+ can later receive Enchant once.",
+    "power": "Create one ordinary power grant with the selected intrinsic definition and bounded bindings/limitations. Use recipient single common Power Mastery; do not copy donor mastery bonuses or a God Authority maximum override. Intrinsic ability constraints remain. No Power Enchant or extra mastery spin.",
+    "bestStat": "Use archived bestStatIds under bestStatComparisonProfileId. Multiple tied keys are equally eligible. Give only +1 numeric point on the selected key after immutable recipient base; do not copy the mentor's stat value, tier, scale, modifiers or conditional effects.",
+    "ownership": "Existing recipient grants remain; copied grant survives later main Weapon/Power None. Preserve bounded item/ability parameters, not a complete mentor package, summoned mentor, body, vehicle, title, followers or race identity.",
+    "emptyDatabase": "A valid empty eligible archive uses the fixed God-mentor fallback: one power-divine acquisition then Backstory, no mentor/category spin, no synthetic archived character. Missing archive provider is still configuration, not a claim that it is empty.",
+    "configuration": "Database storage, catalog bindings and best-stat comparison profile must be configured before production. Missing or invalid archive fields are configuration/input errors; never infer best stat from incomparable raw values or future outcomes.",
+    "ledger": "Freeze archive, selected mentor record, category and equal candidate pool before seeded sampling. Commit each actual spin once and internal pick once; grant/effect key is the Disciple invocation. Resume uses snapshots, without a fresh database query, redraw or duplicate reward.",
+    "reaction": "Nonempty archive: mentor and category actual visible spins. Empty eligible archive: one actual Divine lesson spin, fixed God mentor label. Reveal only committed facts; internal picks/fixed labels are not extra actual spins or Shrek triggers."
+  },
+  "wheels": [
+    {
+      "id": "disciple-mentor",
+      "label": "Siapa Gurunya?",
+      "source": "frozen completed previous-character archive",
+      "baseWeight": 1,
+      "allowModifiers": false,
+      "outcomes": [],
+      "dynamic": true
+    },
+    {
+      "id": "disciple-inheritance-category",
+      "label": "Dapat Warisan Apa?",
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "weapon",
+          "label": "Weapon",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "id": "power",
+          "label": "Power",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "id": "best-stat",
+          "label": "Best Stat",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333
+        }
+      ]
+    }
+  ],
+  "archiveContract": {
+    "snapshotFields": [
+      "id",
+      "catalogVersion",
+      "capturedBeforeCharacterId",
+      "records[]"
+    ],
+    "recordFields": [
+      "characterId",
+      "snapshotId",
+      "status",
+      "name",
+      "weaponInstances[]",
+      "powerInstances[]"
+    ],
+    "inheritableInstanceFields": [
+      "id",
+      "definitionId",
+      "label",
+      "bindings (optional)",
+      "limitations (optional)"
+    ],
+    "bestStatFields": [
+      "bestStatIds[]",
+      "bestStatComparisonProfileId"
+    ],
+    "stats": [
+      "strength",
+      "speed",
+      "durability",
+      "intelligence",
+      "fight"
+    ],
+    "snapshotBoundary": "Provider creates an immutable view before the current character is stored; completed status is complete. Duplicate completed character IDs are invalid, not extra weight.",
+    "scope": "Projection keeps intrinsic definition/bindings/limitations only. Normalized best-stat profile may be supplied later if category is Best Stat; missing profile is needs_configuration, not zonk. No actual prior-character database is fabricated by this design."
+  },
+  "runtimeInterface": {
+    "module": "framework/disciple-event.mjs",
+    "functions": [
+      "planDiscipleMentor",
+      "planDiscipleInheritance",
+      "planDiscipleReward",
+      "resolveDiscipleInheritance",
+      "resolveDiscipleGodLesson"
+    ],
+    "sampling": "Pure plans only; future engine uses seeded RNG and stores actual mentor/category spins and the internal candidate pick.",
+    "mutation": "Helper emits one ledger-keyed reward; engine atomically deduplicates/applies it and schedules normal mastery. No direct mutation or database I/O."
+  },
+  "resultContext": {
+    "afterRole": "Disciple. Gurunya siapa?",
+    "afterMentor": "Nama dan snapshot mentor sudah diketahui; warisannya belum.",
+    "afterCategory": "Tampilkan kategori aktual; pilih satu kandidat dalam kategori itu.",
+    "emptyCategory": "Warisan kosong. Zonk.",
+    "weapon": "Dapat weapon: {label}.",
+    "power": "Dapat power: {label}.",
+    "bestStat": "{stat} +1.",
+    "futureResults": "Backstory, Size, base stat dan mastery karakter baru belum diketahui."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "godMentorFallback": {
+    "approved": true,
+    "mentorLabel": "God",
+    "when": "Valid archive snapshot contains no eligible completed prior character.",
+    "wheelId": "power-divine",
+    "definitionFile": "content/universal-power-wheels-design.json",
+    "drawCount": 1,
+    "grantMode": "ordinary-power",
+    "mastery": "Recipient one shared Power Mastery; no God base9 override, scarcity, Concept, followers, race/body or full God event.",
+    "ownershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+    "returnTo": "backstory",
+    "reaction": "Disciple. Database kosong, langsung belajar dari God."
+  }
+}

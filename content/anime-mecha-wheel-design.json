@@ -1,0 +1,1739 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "Pilot one-spin event user-confirmed; broader franchise variety user-requested. Twenty curated representatives are editable; detailed vehicle handling remains pending.",
+  "wheel": {
+    "id": "anime-mecha",
+    "label": "Mecha Pilot",
+    "scope": "canonical-shared",
+    "outcomeCount": 20,
+    "drawCount": 1,
+    "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+    "outcomes": [
+      {
+        "id": "anime-mecha-rx78",
+        "label": "RX-78-2 Gundam",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-rx78",
+        "referenceSeries": "Mobile Suit Gundam",
+        "sourceRefs": [
+          "mecha-gundam-classics"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: RX-78-2 Gundam",
+            "Franchise referensi: Gundam",
+            "Jenis tampilan: Mobile Suit"
+          ],
+          "displayContext": "Gundam klasik masuk garasi.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "gundam",
+        "franchiseLabel": "Gundam",
+        "typeLabel": "Mobile Suit"
+      },
+      {
+        "id": "anime-mecha-eva01",
+        "label": "Evangelion Unit-01",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-eva01",
+        "referenceSeries": "Evangelion",
+        "sourceRefs": [
+          "mecha-eva"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Evangelion Unit-01",
+            "Franchise referensi: Evangelion",
+            "Jenis tampilan: EVA"
+          ],
+          "displayContext": "Dapat EVA. Aura pilot langsung penuh drama.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "evangelion",
+        "franchiseLabel": "Evangelion",
+        "typeLabel": "EVA"
+      },
+      {
+        "id": "anime-mecha-gipsy-danger",
+        "label": "Gipsy Danger",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-gipsy-danger",
+        "referenceSeries": "Pacific Rim",
+        "sourceRefs": [
+          "mecha-gipsy-danger"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Gipsy Danger",
+            "Franchise referensi: Pacific Rim",
+            "Jenis tampilan: Jaeger"
+          ],
+          "displayContext": "Dapat Jaeger. Parkiran kompleks auto penuh.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "pacific-rim",
+        "franchiseLabel": "Pacific Rim",
+        "typeLabel": "Jaeger"
+      },
+      {
+        "id": "anime-mecha-dino-megazord",
+        "label": "Dino Megazord / Daizyujin",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-dino-megazord",
+        "referenceSeries": "Mighty Morphin Power Rangers / Kyoryu Sentai Zyuranger",
+        "sourceRefs": [
+          "mecha-dino-megazord"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Dino Megazord / Daizyujin",
+            "Franchise referensi: Power Rangers / Zyuranger",
+            "Jenis tampilan: Robot gabungan"
+          ],
+          "displayContext": "Megazord masuk. Saatnya teriak nama robot.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "power-rangers-zyuranger",
+        "franchiseLabel": "Power Rangers / Zyuranger",
+        "typeLabel": "Robot gabungan"
+      },
+      {
+        "id": "anime-mecha-voltron",
+        "label": "GoLion / Lion Force Voltron",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-voltron",
+        "referenceSeries": "Beast King GoLion / Voltron",
+        "sourceRefs": [
+          "mecha-voltron"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: GoLion / Lion Force Voltron",
+            "Franchise referensi: Voltron / GoLion",
+            "Jenis tampilan: Robot gabungan"
+          ],
+          "displayContext": "Singa mekanik kumpul, kendaraan jadi satu.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "voltron-golion",
+        "franchiseLabel": "Voltron / GoLion",
+        "typeLabel": "Robot gabungan"
+      },
+      {
+        "id": "anime-mecha-liger-zero",
+        "label": "Liger Zero",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-liger-zero",
+        "referenceSeries": "Zoids: New Century",
+        "sourceRefs": [
+          "mecha-liger-zero",
+          "mecha-zoids-anime"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Liger Zero",
+            "Franchise referensi: Zoids",
+            "Jenis tampilan: Robot hewan"
+          ],
+          "displayContext": "Naik mecha, modelnya kucing besar.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "zoids",
+        "franchiseLabel": "Zoids",
+        "typeLabel": "Robot hewan"
+      },
+      {
+        "id": "anime-mecha-valkyrie",
+        "label": "VF-1S Valkyrie",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-valkyrie",
+        "referenceSeries": "Super Dimension Fortress Macross",
+        "sourceRefs": [
+          "mecha-valkyrie"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: VF-1S Valkyrie",
+            "Franchise referensi: Macross",
+            "Jenis tampilan: Variable Fighter"
+          ],
+          "displayContext": "Hari ini pilot pesawat, besok pilot robot.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "macross",
+        "franchiseLabel": "Macross",
+        "typeLabel": "Variable Fighter"
+      },
+      {
+        "id": "anime-mecha-gurren",
+        "label": "Gurren Lagann",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-gurren",
+        "referenceSeries": "Gurren Lagann",
+        "sourceRefs": [
+          "mecha-gurren"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Gurren Lagann",
+            "Franchise referensi: Gurren Lagann",
+            "Jenis tampilan: Gunmen"
+          ],
+          "displayContext": "Kendaraan ada, semangat tinggal gas.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "gurren-lagann",
+        "franchiseLabel": "Gurren Lagann",
+        "typeLabel": "Gunmen"
+      },
+      {
+        "id": "anime-mecha-mazinger",
+        "label": "Mazinger Z",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-mazinger",
+        "referenceSeries": "Mazinger Z",
+        "sourceRefs": [
+          "mecha-mazinger"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Mazinger Z",
+            "Franchise referensi: Mazinger Z",
+            "Jenis tampilan: Super robot"
+          ],
+          "displayContext": "Robot klasik, aura langsung veteran.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "mazinger",
+        "franchiseLabel": "Mazinger Z",
+        "typeLabel": "Super robot"
+      },
+      {
+        "id": "anime-mecha-getter",
+        "label": "Getter 1",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-getter",
+        "referenceSeries": "Getter Robo Armageddon",
+        "sourceRefs": [
+          "mecha-getter"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Getter 1",
+            "Franchise referensi: Getter Robo",
+            "Jenis tampilan: Super robot"
+          ],
+          "displayContext": "Dapat Getter. Garasi makin berasa opening anime.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "getter-robo",
+        "franchiseLabel": "Getter Robo",
+        "typeLabel": "Super robot"
+      },
+      {
+        "id": "anime-mecha-gaogaigar",
+        "label": "GaoGaiGar",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-gaogaigar",
+        "referenceSeries": "The King of Braves GaoGaiGar",
+        "sourceRefs": [
+          "mecha-gaogaigar"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: GaoGaiGar",
+            "Franchise referensi: GaoGaiGar",
+            "Jenis tampilan: Robot gabungan"
+          ],
+          "displayContext": "Final Fusion! Caption ikut teriak.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "gaogaigar",
+        "franchiseLabel": "GaoGaiGar",
+        "typeLabel": "Robot gabungan"
+      },
+      {
+        "id": "anime-mecha-gunbuster",
+        "label": "Gunbuster",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-gunbuster",
+        "referenceSeries": "Gunbuster / Aim for the Top!",
+        "sourceRefs": [
+          "mecha-gunbuster"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Gunbuster",
+            "Franchise referensi: Gunbuster",
+            "Jenis tampilan: Super robot"
+          ],
+          "displayContext": "Robot datang, vibe latihan anime ikut naik.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "gunbuster",
+        "franchiseLabel": "Gunbuster",
+        "typeLabel": "Super robot"
+      },
+      {
+        "id": "anime-mecha-lancelot",
+        "label": "Lancelot Albion",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-lancelot",
+        "referenceSeries": "Code Geass: Lelouch of the Rebellion R2",
+        "sourceRefs": [
+          "mecha-code-geass"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Lancelot Albion",
+            "Franchise referensi: Code Geass",
+            "Jenis tampilan: Knightmare Frame"
+          ],
+          "displayContext": "Dapat Knightmare. Parkirnya pasti mencolok.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "code-geass",
+        "franchiseLabel": "Code Geass",
+        "typeLabel": "Knightmare Frame"
+      },
+      {
+        "id": "anime-mecha-arbalest",
+        "label": "ARX-7 Arbalest",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-arbalest",
+        "referenceSeries": "Full Metal Panic!",
+        "sourceRefs": [
+          "mecha-arbalest"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: ARX-7 Arbalest",
+            "Franchise referensi: Full Metal Panic!",
+            "Jenis tampilan: Arm Slave"
+          ],
+          "displayContext": "Vibe mecha taktis masuk garasi.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "full-metal-panic",
+        "franchiseLabel": "Full Metal Panic!",
+        "typeLabel": "Arm Slave"
+      },
+      {
+        "id": "anime-mecha-ingram",
+        "label": "Ingram Unit 1",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-ingram",
+        "referenceSeries": "Mobile Police Patlabor",
+        "sourceRefs": [
+          "mecha-ingram"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Ingram Unit 1",
+            "Franchise referensi: Patlabor",
+            "Jenis tampilan: Labor"
+          ],
+          "displayContext": "Dapat robot patroli. Parkir liar makin susah.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "patlabor",
+        "franchiseLabel": "Patlabor",
+        "typeLabel": "Labor"
+      },
+      {
+        "id": "anime-mecha-nirvash",
+        "label": "Nirvash type ZERO",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-nirvash",
+        "referenceSeries": "Eureka Seven",
+        "sourceRefs": [
+          "mecha-nirvash"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Nirvash type ZERO",
+            "Franchise referensi: Eureka Seven",
+            "Jenis tampilan: LFO"
+          ],
+          "displayContext": "Garasi dapat unit dari Eureka Seven.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "eureka-seven",
+        "franchiseLabel": "Eureka Seven",
+        "typeLabel": "LFO"
+      },
+      {
+        "id": "anime-mecha-strelitzia",
+        "label": "Strelitzia",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-strelitzia",
+        "referenceSeries": "Darling in the Franxx",
+        "sourceRefs": [
+          "mecha-strelitzia"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Strelitzia",
+            "Franchise referensi: Darling in the Franxx",
+            "Jenis tampilan: FRANXX"
+          ],
+          "displayContext": "Strelitzia masuk garasi. Playlist opening siap.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "darling-in-the-franxx",
+        "franchiseLabel": "Darling in the Franxx",
+        "typeLabel": "FRANXX"
+      },
+      {
+        "id": "anime-mecha-solar-aquarion",
+        "label": "Solar Aquarion",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-solar-aquarion",
+        "referenceSeries": "Genesis of Aquarion",
+        "sourceRefs": [
+          "mecha-solar-aquarion"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Solar Aquarion",
+            "Franchise referensi: Aquarion",
+            "Jenis tampilan: Robot gabungan"
+          ],
+          "displayContext": "Aquarion datang. Vibe opening langsung berubah.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "aquarion",
+        "franchiseLabel": "Aquarion",
+        "typeLabel": "Robot gabungan"
+      },
+      {
+        "id": "anime-mecha-escaflowne",
+        "label": "Escaflowne",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-escaflowne",
+        "referenceSeries": "The Vision of Escaflowne",
+        "sourceRefs": [
+          "mecha-escaflowne"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Escaflowne",
+            "Franchise referensi: Escaflowne",
+            "Jenis tampilan: Guymelef / mecha fantasy"
+          ],
+          "displayContext": "Mecha fantasy masuk. Garasi berasa istana.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "escaflowne",
+        "franchiseLabel": "Escaflowne",
+        "typeLabel": "Guymelef / mecha fantasy"
+      },
+      {
+        "id": "anime-mecha-zanda-cross",
+        "label": "Zanda Cross",
+        "baseWeight": 1,
+        "vehicleRef": "anime-mecha-zanda-cross",
+        "referenceSeries": "Doraemon: Nobita and the New Steel Troops",
+        "sourceRefs": [
+          "mecha-zanda-cross"
+        ],
+        "resultContext": {
+          "facts": [
+            "Mecha untuk ditunggangi diperoleh: Zanda Cross",
+            "Franchise referensi: Doraemon",
+            "Jenis tampilan: Robot konstruksi"
+          ],
+          "displayContext": "Nobita aja punya robot. Sekarang giliran lu.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        },
+        "franchiseId": "doraemon",
+        "franchiseLabel": "Doraemon",
+        "typeLabel": "Robot konstruksi"
+      }
+    ],
+    "rosterPolicyRef": "content/anime-mecha-wheel-design.json#rosterPolicy"
+  },
+  "vehicles": [
+    {
+      "id": "anime-mecha-rx78",
+      "label": "RX-78-2 Gundam",
+      "catalogOrder": 1,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Mobile Suit Gundam",
+      "sourceRefs": [
+        "mecha-gundam-classics"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: RX-78-2 Gundam",
+          "Franchise referensi: Gundam",
+          "Jenis tampilan: Mobile Suit"
+        ],
+        "displayContext": "Gundam klasik masuk garasi.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "gundam",
+      "franchiseLabel": "Gundam",
+      "typeLabel": "Mobile Suit"
+    },
+    {
+      "id": "anime-mecha-eva01",
+      "label": "Evangelion Unit-01",
+      "catalogOrder": 2,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Evangelion",
+      "sourceRefs": [
+        "mecha-eva"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Evangelion Unit-01",
+          "Franchise referensi: Evangelion",
+          "Jenis tampilan: EVA"
+        ],
+        "displayContext": "Dapat EVA. Aura pilot langsung penuh drama.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "evangelion",
+      "franchiseLabel": "Evangelion",
+      "typeLabel": "EVA"
+    },
+    {
+      "id": "anime-mecha-gipsy-danger",
+      "label": "Gipsy Danger",
+      "catalogOrder": 3,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Pacific Rim",
+      "sourceRefs": [
+        "mecha-gipsy-danger"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Gipsy Danger",
+          "Franchise referensi: Pacific Rim",
+          "Jenis tampilan: Jaeger"
+        ],
+        "displayContext": "Dapat Jaeger. Parkiran kompleks auto penuh.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "pacific-rim",
+      "franchiseLabel": "Pacific Rim",
+      "typeLabel": "Jaeger"
+    },
+    {
+      "id": "anime-mecha-dino-megazord",
+      "label": "Dino Megazord / Daizyujin",
+      "catalogOrder": 4,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Mighty Morphin Power Rangers / Kyoryu Sentai Zyuranger",
+      "sourceRefs": [
+        "mecha-dino-megazord"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Dino Megazord / Daizyujin",
+          "Franchise referensi: Power Rangers / Zyuranger",
+          "Jenis tampilan: Robot gabungan"
+        ],
+        "displayContext": "Megazord masuk. Saatnya teriak nama robot.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "power-rangers-zyuranger",
+      "franchiseLabel": "Power Rangers / Zyuranger",
+      "typeLabel": "Robot gabungan",
+      "aliases": [
+        "Dino Megazord",
+        "Daizyujin"
+      ]
+    },
+    {
+      "id": "anime-mecha-voltron",
+      "label": "GoLion / Lion Force Voltron",
+      "catalogOrder": 5,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Beast King GoLion / Voltron",
+      "sourceRefs": [
+        "mecha-voltron"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: GoLion / Lion Force Voltron",
+          "Franchise referensi: Voltron / GoLion",
+          "Jenis tampilan: Robot gabungan"
+        ],
+        "displayContext": "Singa mekanik kumpul, kendaraan jadi satu.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "voltron-golion",
+      "franchiseLabel": "Voltron / GoLion",
+      "typeLabel": "Robot gabungan"
+    },
+    {
+      "id": "anime-mecha-liger-zero",
+      "label": "Liger Zero",
+      "catalogOrder": 6,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Zoids: New Century",
+      "sourceRefs": [
+        "mecha-liger-zero",
+        "mecha-zoids-anime"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Liger Zero",
+          "Franchise referensi: Zoids",
+          "Jenis tampilan: Robot hewan"
+        ],
+        "displayContext": "Naik mecha, modelnya kucing besar.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "zoids",
+      "franchiseLabel": "Zoids",
+      "typeLabel": "Robot hewan"
+    },
+    {
+      "id": "anime-mecha-valkyrie",
+      "label": "VF-1S Valkyrie",
+      "catalogOrder": 7,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Super Dimension Fortress Macross",
+      "sourceRefs": [
+        "mecha-valkyrie"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: VF-1S Valkyrie",
+          "Franchise referensi: Macross",
+          "Jenis tampilan: Variable Fighter"
+        ],
+        "displayContext": "Hari ini pilot pesawat, besok pilot robot.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "macross",
+      "franchiseLabel": "Macross",
+      "typeLabel": "Variable Fighter"
+    },
+    {
+      "id": "anime-mecha-gurren",
+      "label": "Gurren Lagann",
+      "catalogOrder": 8,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Gurren Lagann",
+      "sourceRefs": [
+        "mecha-gurren"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Gurren Lagann",
+          "Franchise referensi: Gurren Lagann",
+          "Jenis tampilan: Gunmen"
+        ],
+        "displayContext": "Kendaraan ada, semangat tinggal gas.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "gurren-lagann",
+      "franchiseLabel": "Gurren Lagann",
+      "typeLabel": "Gunmen"
+    },
+    {
+      "id": "anime-mecha-mazinger",
+      "label": "Mazinger Z",
+      "catalogOrder": 9,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Mazinger Z",
+      "sourceRefs": [
+        "mecha-mazinger"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Mazinger Z",
+          "Franchise referensi: Mazinger Z",
+          "Jenis tampilan: Super robot"
+        ],
+        "displayContext": "Robot klasik, aura langsung veteran.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "mazinger",
+      "franchiseLabel": "Mazinger Z",
+      "typeLabel": "Super robot"
+    },
+    {
+      "id": "anime-mecha-getter",
+      "label": "Getter 1",
+      "catalogOrder": 10,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Getter Robo Armageddon",
+      "sourceRefs": [
+        "mecha-getter"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Getter 1",
+          "Franchise referensi: Getter Robo",
+          "Jenis tampilan: Super robot"
+        ],
+        "displayContext": "Dapat Getter. Garasi makin berasa opening anime.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "getter-robo",
+      "franchiseLabel": "Getter Robo",
+      "typeLabel": "Super robot"
+    },
+    {
+      "id": "anime-mecha-gaogaigar",
+      "label": "GaoGaiGar",
+      "catalogOrder": 11,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "The King of Braves GaoGaiGar",
+      "sourceRefs": [
+        "mecha-gaogaigar"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: GaoGaiGar",
+          "Franchise referensi: GaoGaiGar",
+          "Jenis tampilan: Robot gabungan"
+        ],
+        "displayContext": "Final Fusion! Caption ikut teriak.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "gaogaigar",
+      "franchiseLabel": "GaoGaiGar",
+      "typeLabel": "Robot gabungan"
+    },
+    {
+      "id": "anime-mecha-gunbuster",
+      "label": "Gunbuster",
+      "catalogOrder": 12,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Gunbuster / Aim for the Top!",
+      "sourceRefs": [
+        "mecha-gunbuster"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Gunbuster",
+          "Franchise referensi: Gunbuster",
+          "Jenis tampilan: Super robot"
+        ],
+        "displayContext": "Robot datang, vibe latihan anime ikut naik.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "gunbuster",
+      "franchiseLabel": "Gunbuster",
+      "typeLabel": "Super robot"
+    },
+    {
+      "id": "anime-mecha-lancelot",
+      "label": "Lancelot Albion",
+      "catalogOrder": 13,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Code Geass: Lelouch of the Rebellion R2",
+      "sourceRefs": [
+        "mecha-code-geass"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Lancelot Albion",
+          "Franchise referensi: Code Geass",
+          "Jenis tampilan: Knightmare Frame"
+        ],
+        "displayContext": "Dapat Knightmare. Parkirnya pasti mencolok.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "code-geass",
+      "franchiseLabel": "Code Geass",
+      "typeLabel": "Knightmare Frame"
+    },
+    {
+      "id": "anime-mecha-arbalest",
+      "label": "ARX-7 Arbalest",
+      "catalogOrder": 14,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Full Metal Panic!",
+      "sourceRefs": [
+        "mecha-arbalest"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: ARX-7 Arbalest",
+          "Franchise referensi: Full Metal Panic!",
+          "Jenis tampilan: Arm Slave"
+        ],
+        "displayContext": "Vibe mecha taktis masuk garasi.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "full-metal-panic",
+      "franchiseLabel": "Full Metal Panic!",
+      "typeLabel": "Arm Slave"
+    },
+    {
+      "id": "anime-mecha-ingram",
+      "label": "Ingram Unit 1",
+      "catalogOrder": 15,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Mobile Police Patlabor",
+      "sourceRefs": [
+        "mecha-ingram"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Ingram Unit 1",
+          "Franchise referensi: Patlabor",
+          "Jenis tampilan: Labor"
+        ],
+        "displayContext": "Dapat robot patroli. Parkir liar makin susah.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "patlabor",
+      "franchiseLabel": "Patlabor",
+      "typeLabel": "Labor"
+    },
+    {
+      "id": "anime-mecha-nirvash",
+      "label": "Nirvash type ZERO",
+      "catalogOrder": 16,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Eureka Seven",
+      "sourceRefs": [
+        "mecha-nirvash"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Nirvash type ZERO",
+          "Franchise referensi: Eureka Seven",
+          "Jenis tampilan: LFO"
+        ],
+        "displayContext": "Garasi dapat unit dari Eureka Seven.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "eureka-seven",
+      "franchiseLabel": "Eureka Seven",
+      "typeLabel": "LFO"
+    },
+    {
+      "id": "anime-mecha-strelitzia",
+      "label": "Strelitzia",
+      "catalogOrder": 17,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Darling in the Franxx",
+      "sourceRefs": [
+        "mecha-strelitzia"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Strelitzia",
+          "Franchise referensi: Darling in the Franxx",
+          "Jenis tampilan: FRANXX"
+        ],
+        "displayContext": "Strelitzia masuk garasi. Playlist opening siap.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "darling-in-the-franxx",
+      "franchiseLabel": "Darling in the Franxx",
+      "typeLabel": "FRANXX"
+    },
+    {
+      "id": "anime-mecha-solar-aquarion",
+      "label": "Solar Aquarion",
+      "catalogOrder": 18,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Genesis of Aquarion",
+      "sourceRefs": [
+        "mecha-solar-aquarion"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Solar Aquarion",
+          "Franchise referensi: Aquarion",
+          "Jenis tampilan: Robot gabungan"
+        ],
+        "displayContext": "Aquarion datang. Vibe opening langsung berubah.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "aquarion",
+      "franchiseLabel": "Aquarion",
+      "typeLabel": "Robot gabungan"
+    },
+    {
+      "id": "anime-mecha-escaflowne",
+      "label": "Escaflowne",
+      "catalogOrder": 19,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "The Vision of Escaflowne",
+      "sourceRefs": [
+        "mecha-escaflowne"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Escaflowne",
+          "Franchise referensi: Escaflowne",
+          "Jenis tampilan: Guymelef / mecha fantasy"
+        ],
+        "displayContext": "Mecha fantasy masuk. Garasi berasa istana.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "escaflowne",
+      "franchiseLabel": "Escaflowne",
+      "typeLabel": "Guymelef / mecha fantasy"
+    },
+    {
+      "id": "anime-mecha-zanda-cross",
+      "label": "Zanda Cross",
+      "catalogOrder": 20,
+      "equipmentKind": "rideable-mecha",
+      "referenceSeries": "Doraemon: Nobita and the New Steel Troops",
+      "sourceRefs": [
+        "mecha-zanda-cross"
+      ],
+      "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+      "personalPowerGrant": "none",
+      "personalWeaponGrant": "none",
+      "statGrant": "none",
+      "pilotMasteryGrant": "none",
+      "powerMasteryGrant": "none",
+      "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+      "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+      "resultContext": {
+        "facts": [
+          "Mecha untuk ditunggangi diperoleh: Zanda Cross",
+          "Franchise referensi: Doraemon",
+          "Jenis tampilan: Robot konstruksi"
+        ],
+        "displayContext": "Nobita aja punya robot. Sekarang giliran lu.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "franchiseId": "doraemon",
+      "franchiseLabel": "Doraemon",
+      "typeLabel": "Robot konstruksi",
+      "aliases": [
+        "Zanda Cross",
+        "Zanda Claus",
+        "ザンダクロス",
+        "Judo / ジュド"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mecha-gundam-classics",
+      "title": "Mobile Change Haro official unit roster",
+      "publisher": "GUNDAM.INFO",
+      "url": "https://www.gundam.info/news/goods/01_9189.html",
+      "supports": "RX-78-2 Gundam, Wing Gundam Zero EW and Unicorn Gundam names and series.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-strike-freedom",
+      "title": "Gundam Universe official releases",
+      "publisher": "GUNDAM.INFO",
+      "url": "https://www.gundam.info/news/goods/01_15445.html",
+      "supports": "Strike Freedom Gundam Type II and Barbatos Lupus names.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-barbatos",
+      "title": "Gundam Universe Barbatos official announcement",
+      "publisher": "GUNDAM.INFO",
+      "url": "https://www.gundam.info/news/goods/news_goods_20190510_11.html",
+      "supports": "ASW-G-08 Gundam Barbatos name.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-aerial",
+      "title": "Full Mechanics Gundam Aerial",
+      "publisher": "GUNDAM.INFO",
+      "url": "https://www.gundam.info/product/gunpla/01_11342.html",
+      "supports": "Gundam Aerial and The Witch from Mercury association.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-eva",
+      "title": "Evangelion official product/series catalog",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item_character/evangelion/?sa=USA",
+      "supports": "Unit-01 and Unit-02 references; series description identifies piloted giant humanoid weapons.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-gurren",
+      "title": "Gurren Lagann official series catalog",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item_character/gurren-lagann/?wovn=en",
+      "supports": "Gurren Lagann anime and unit reference; no cosmic variant automatically granted.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-code-geass",
+      "title": "METAL ROBOT SPIRITS Shinkiro",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/13064/?dmode=pc&wovn=en",
+      "supports": "Code Geass reference explicitly mentions Lancelot Albion and Guren Seiten Hachigoku.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-liger-zero",
+      "title": "AZ-02 LIGER ZERO",
+      "publisher": "Takara Tomy",
+      "url": "https://www.takaratomy.co.jp/products/zoids40th/az02.html",
+      "supports": "Liger Zero unit name; anime association corroborated by official ZOIDS distribution catalog.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-blade-liger",
+      "title": "AZ-01 BLADE LIGER",
+      "publisher": "Takara Tomy",
+      "url": "https://www.takaratomy.co.jp/products/zoids40th/az01.html",
+      "supports": "Blade Liger unit name.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-zoids-anime",
+      "title": "ZOIDS official anime distribution",
+      "publisher": "Takara Tomy",
+      "url": "https://www.takaratomy.co.jp/products/zoids/delivery/",
+      "supports": "ZOIDS and New Century anime series names.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-valkyrie",
+      "title": "VF-1S Valkyrie Roy Focker Special",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/13309/?wovn=en",
+      "supports": "VF-1S Valkyrie, Macross series and pilot reference.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-mazinger",
+      "title": "Mazinger Z official product reference",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/10727/?dmode=pc&wovn=en",
+      "supports": "Mazinger Z unit reference, not this project’s stats.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-getter",
+      "title": "SOUL OF CHOGOKIN GX-52 GETTER 1 from SHIN GETTER ROBO",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/1213/?dmode=pc&wovn=es",
+      "supports": "Getter 1 and Getter Robo Armageddon OVA association.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-voltron",
+      "title": "SOUL OF CHOGOKIN GX-71 Beast King GOLION / VOLTRON",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/11469/?wovn=en",
+      "supports": "GoLion / Lion Force Voltron combined unit reference.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-arbalest",
+      "title": "ROBOT SPIRITS Arbalest",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/1152/",
+      "supports": "Arbalest / Full Metal Panic unit reference.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-ingram",
+      "title": "Mobile Police Patlabor official series catalog",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item_character/patlabor/?wovn=en",
+      "supports": "Patlabor and Ingram Unit 1 references.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-nirvash",
+      "title": "ROBOT SPIRITS Nirvash type ZERO",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/1292/?wovn=en",
+      "supports": "Nirvash type ZERO / Eureka Seven unit reference.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-gipsy-danger",
+      "title": "Pacific Rim: Jaeger Pilot",
+      "publisher": "Legendary",
+      "url": "https://www.legendary.com/legendary-vr/",
+      "supports": "Gipsy Danger is the named Jaeger in the Pacific Rim pilot experience.",
+      "checkedOn": "2026-10-08",
+      "access": "Official page text inspected, including the named co-piloted Jaeger. Dimensions are not imported into character Size.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-dino-megazord",
+      "title": "SOUL OF CHOGOKIN GX-72 MEGAZORD / Daizyujin review",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/topics/detail/t_item_115.html?dmode=pc&wovn=en",
+      "supports": "MEGAZORD/Daizyujin and the Zyuranger guardian-beast combination. Localized aliases share one game outcome.",
+      "checkedOn": "2026-10-08",
+      "access": "Official review body inspected. The article explicitly uses Zyuranger commentary; alias grouping is editorial, not two grants.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-gaogaigar",
+      "title": "GaoGaiGar official mecha profile",
+      "publisher": "Sunrise / GaoGaiGar official site",
+      "url": "https://www.gaogaigar.net/TV/mecha/01.html",
+      "supports": "GaoGaiGar unit and Final Fusion of Gaigar with three Gao Machines.",
+      "checkedOn": "2026-10-08",
+      "access": "Official Japanese profile read. Only name, series and combination motif used.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-gunbuster",
+      "title": "SOUL OF CHOGOKIN GX-34 GUNBUSTER",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/640/?wovn=en",
+      "supports": "Gunbuster unit associated with Aim for the Top / Gunbuster.",
+      "checkedOn": "2026-10-08",
+      "access": "Official indexed product excerpts inspected; full-page access was inconsistent. No cockpit or numerical performance claim imported.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-strelitzia",
+      "title": "ROBOT SPIRITS Darling in the Franxx fifth-anniversary set",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/14644/?wovn=en",
+      "supports": "Strelitzia reference in the Darling in the Franxx set.",
+      "checkedOn": "2026-10-08",
+      "access": "Official product page and indexed excerpt inspected; official episode-six reference also checked. No companion or personal-power grant implied.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-solar-aquarion",
+      "title": "Genesis of Aquarion official unit catalog",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item_character/genesis_of_aquarion/?wovn=en",
+      "supports": "Solar Aquarion unit associated with Genesis of Aquarion.",
+      "checkedOn": "2026-10-08",
+      "access": "Official catalog text read; product-scale values are not vehicle/body profiles.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-escaflowne",
+      "title": "MODEROID Escaflowne",
+      "publisher": "Good Smile Company",
+      "url": "https://www.goodsmile.com/en/product/6582/MODEROID%2BEscaflowne",
+      "supports": "Escaflowne Guymelef from The Vision of Escaflowne.",
+      "checkedOn": "2026-10-08",
+      "access": "Licensed manufacturer description and series field read. Included model-kit parts are not gameplay grants.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "mecha-zanda-cross",
+      "title": "Zanda Cross character profile, Doraemon movie 2011",
+      "publisher": "Doraemon movie official site",
+      "url": "https://doraeiga.com/2011/chara/chara8.html?TB_iframe=true&height=403&keepThis=true&width=698",
+      "supports": "ザンダクロス, the robot assembled and named by Nobita/Doraemon; actual name Judo, a construction robot from Mechatopia.",
+      "checkedOn": "2026-10-08",
+      "access": "Official Japanese character text read. Zanda Cross is the display romanization; controls/crew remain a future game profile.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    }
+  ],
+  "invocationContract": {
+    "callers": [
+      "anime-mc-pilot"
+    ],
+    "sequence": "After Sci-fi/MC/Pilot commits, draw once, grant one rideable-mecha instance, react and restore saved caller.",
+    "mastery": "No Pilot Mastery or Weapon Mastery spin invented for the vehicle; no shared Power Mastery effect. Mounted-weapon handling remains pending.",
+    "selection": "One direct draw among twenty units from twenty distinct franchise groups, all baseWeight 1 (5%). No franchise pre-spin or popularity-based rarity.",
+    "referenceBoundary": "Sources verify names/unit associations; folklore/franchise feats and full loadouts are not automatic gameplay grants."
+  },
+  "history": {
+    "retiredVariants": [
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-wing-zero",
+          "label": "Wing Gundam Zero (EW)",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-wing-zero",
+          "referenceSeries": "Gundam Wing: Endless Waltz",
+          "sourceRefs": [
+            "mecha-gundam-classics"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Wing Gundam Zero (EW)",
+              "Franchise referensi: Gundam Wing: Endless Waltz"
+            ],
+            "displayContext": "Parkiran mendadak punya sayap.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-wing-zero",
+          "label": "Wing Gundam Zero (EW)",
+          "catalogOrder": 2,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Gundam Wing: Endless Waltz",
+          "sourceRefs": [
+            "mecha-gundam-classics"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Wing Gundam Zero (EW)",
+              "Franchise referensi: Gundam Wing: Endless Waltz"
+            ],
+            "displayContext": "Parkiran mendadak punya sayap.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-strike-freedom",
+          "label": "Strike Freedom Gundam Type II",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-strike-freedom",
+          "referenceSeries": "Mobile Suit Gundam SEED Freedom",
+          "sourceRefs": [
+            "mecha-strike-freedom"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Strike Freedom Gundam Type II",
+              "Franchise referensi: Mobile Suit Gundam SEED Freedom"
+            ],
+            "displayContext": "Pilihannya mecha, siluetnya sudah siap poster.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-strike-freedom",
+          "label": "Strike Freedom Gundam Type II",
+          "catalogOrder": 3,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Mobile Suit Gundam SEED Freedom",
+          "sourceRefs": [
+            "mecha-strike-freedom"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Strike Freedom Gundam Type II",
+              "Franchise referensi: Mobile Suit Gundam SEED Freedom"
+            ],
+            "displayContext": "Pilihannya mecha, siluetnya sudah siap poster.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-barbatos",
+          "label": "Gundam Barbatos",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-barbatos",
+          "referenceSeries": "Mobile Suit Gundam: Iron-Blooded Orphans",
+          "sourceRefs": [
+            "mecha-barbatos"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Gundam Barbatos",
+              "Franchise referensi: Mobile Suit Gundam: Iron-Blooded Orphans"
+            ],
+            "displayContext": "Bengkel dapat pelanggan yang auranya barbar.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-barbatos",
+          "label": "Gundam Barbatos",
+          "catalogOrder": 4,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Mobile Suit Gundam: Iron-Blooded Orphans",
+          "sourceRefs": [
+            "mecha-barbatos"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Gundam Barbatos",
+              "Franchise referensi: Mobile Suit Gundam: Iron-Blooded Orphans"
+            ],
+            "displayContext": "Bengkel dapat pelanggan yang auranya barbar.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-unicorn",
+          "label": "Unicorn Gundam",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-unicorn",
+          "referenceSeries": "Mobile Suit Gundam Unicorn",
+          "sourceRefs": [
+            "mecha-gundam-classics"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Unicorn Gundam",
+              "Franchise referensi: Mobile Suit Gundam Unicorn"
+            ],
+            "displayContext": "Namanya Unicorn, bentuknya tetap robot.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-unicorn",
+          "label": "Unicorn Gundam",
+          "catalogOrder": 5,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Mobile Suit Gundam Unicorn",
+          "sourceRefs": [
+            "mecha-gundam-classics"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Unicorn Gundam",
+              "Franchise referensi: Mobile Suit Gundam Unicorn"
+            ],
+            "displayContext": "Namanya Unicorn, bentuknya tetap robot.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-aerial",
+          "label": "Gundam Aerial",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-aerial",
+          "referenceSeries": "Mobile Suit Gundam: The Witch from Mercury",
+          "sourceRefs": [
+            "mecha-aerial"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Gundam Aerial",
+              "Franchise referensi: Mobile Suit Gundam: The Witch from Mercury"
+            ],
+            "displayContext": "Mecha baru masuk; karakter masih perlu jadi pilot.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-aerial",
+          "label": "Gundam Aerial",
+          "catalogOrder": 6,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Mobile Suit Gundam: The Witch from Mercury",
+          "sourceRefs": [
+            "mecha-aerial"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Gundam Aerial",
+              "Franchise referensi: Mobile Suit Gundam: The Witch from Mercury"
+            ],
+            "displayContext": "Mecha baru masuk; karakter masih perlu jadi pilot.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-eva02",
+          "label": "Evangelion Unit-02",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-eva02",
+          "referenceSeries": "Evangelion",
+          "sourceRefs": [
+            "mecha-eva"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Evangelion Unit-02",
+              "Franchise referensi: Evangelion"
+            ],
+            "displayContext": "Garasi berubah jadi base EVA.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-eva02",
+          "label": "Evangelion Unit-02",
+          "catalogOrder": 8,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Evangelion",
+          "sourceRefs": [
+            "mecha-eva"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Evangelion Unit-02",
+              "Franchise referensi: Evangelion"
+            ],
+            "displayContext": "Garasi berubah jadi base EVA.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-guren",
+          "label": "Guren SEITEN Eight Elements",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-guren",
+          "referenceSeries": "Code Geass: Lelouch of the Rebellion R2",
+          "sourceRefs": [
+            "mecha-code-geass"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Guren SEITEN Eight Elements",
+              "Franchise referensi: Code Geass: Lelouch of the Rebellion R2"
+            ],
+            "displayContext": "Nama mecha panjang, caption harus napas dulu.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-guren",
+          "label": "Guren SEITEN Eight Elements",
+          "catalogOrder": 11,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Code Geass: Lelouch of the Rebellion R2",
+          "sourceRefs": [
+            "mecha-code-geass"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Guren SEITEN Eight Elements",
+              "Franchise referensi: Code Geass: Lelouch of the Rebellion R2"
+            ],
+            "displayContext": "Nama mecha panjang, caption harus napas dulu.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      },
+      {
+        "retiredIn": "2026-10-08-franchise-variety",
+        "active": false,
+        "reason": "Replaced duplicate-franchise variant with a representative from another franchise; retained for existing result references.",
+        "outcome": {
+          "id": "anime-mecha-blade-liger",
+          "label": "Blade Liger",
+          "baseWeight": 1,
+          "vehicleRef": "anime-mecha-blade-liger",
+          "referenceSeries": "Zoids",
+          "sourceRefs": [
+            "mecha-blade-liger",
+            "mecha-zoids-anime"
+          ],
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Blade Liger",
+              "Franchise referensi: Zoids"
+            ],
+            "displayContext": "Garasi dapat singa mekanik.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        },
+        "vehicle": {
+          "id": "anime-mecha-blade-liger",
+          "label": "Blade Liger",
+          "catalogOrder": 13,
+          "equipmentKind": "rideable-mecha",
+          "referenceSeries": "Zoids",
+          "sourceRefs": [
+            "mecha-blade-liger",
+            "mecha-zoids-anime"
+          ],
+          "contentStatus": "Source-backed reference unit; game handling and balance pending.",
+          "personalPowerGrant": "none",
+          "personalWeaponGrant": "none",
+          "statGrant": "none",
+          "pilotMasteryGrant": "none",
+          "powerMasteryGrant": "none",
+          "sizePolicy": "Character global Size measures body, not vehicle. Vehicle dimensions/reference profiles remain unset; toy dimensions never become canonical vehicle size.",
+          "controlPolicy": "One owned rideable unit as working inventory interpretation. Crew, controls, compatibility, mounted armaments and forms need explicit future profiles.",
+          "resultContext": {
+            "facts": [
+              "Mecha untuk ditunggangi diperoleh: Blade Liger",
+              "Franchise referensi: Zoids"
+            ],
+            "displayContext": "Garasi dapat singa mekanik.",
+            "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+          }
+        }
+      }
+    ]
+  },
+  "rosterPolicy": {
+    "version": "2026-10-08-franchise-variety",
+    "status": "User requested more franchise variety. This twenty-unit, one-representative-per-group roster is an editable curated design.",
+    "outcomeCount": 20,
+    "franchiseCount": 20,
+    "representation": "One representative per franchise group in the active roster. Gundam continuities share one group; localized adaptations such as GoLion/Voltron and Daizyujin/Megazord share one outcome.",
+    "selection": "One direct Pilot spin on the canonical twenty-unit wheel. Franchise metadata does not create another selector or follow-up.",
+    "classification": "typeLabel is an editorial display description, not a stat, eligibility rule or power grant.",
+    "probability": "Each active unit has baseWeight 1; base probability 1/20 (5%).",
+    "history": "Retired definitions remain historical evidence only; they do not enter active wheel probabilities."
+  }
+}

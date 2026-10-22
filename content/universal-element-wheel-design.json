@@ -1,0 +1,1020 @@
+{
+  "schemaVersion": "roda-kekacauan-universal-element-wheel/0.2",
+  "status": "User-requested expanded universal Element;12 equal outcomes curated within request, canonical power references reused, no extra race/stat/mastery grants.",
+  "contract": {
+    "wheelId": "element-universal",
+    "scope": "Every eligible character/race/event calls this same canonical Element selector; do not create a Fairy-only clone.",
+    "callerAccess": "Element Pixie, Naga, Element Golem, Elemental, Dragon and Elemental Slime call the same wheel once, record one element and grant its exact linked power.",
+    "starterPool": "Twelve current elements: Api, Air, Tanah, Angin, Petir, Es, Logam, Tumbuhan, Cahaya, Kegelapan, Bayangan, Void. Original four IDs retained.",
+    "weights": "Each of12 live Element outcomes has baseWeight1:1/12=8.333333% before explicit factors. Stat/mastery5%..25% bounds do not apply to this selector. Equalizer remains uniform after hard guards.",
+    "grant": "One selected element and one linked manipulation power; no bundle of all elements.",
+    "classification": "An Element result retains the caller family/component identity and does not restart race selection or dispatch another family. Elemental is a separately authorized caller of this same selector.",
+    "mastery": "Early power grants wait for normal Power Mastery; keep them when main Power is None. No power enchantment.",
+    "registry": "One canonical Element wheel. Five local power definitions and seven imports; each power keeps its original definitionFile/definitionId/tier. No caller-specific duplicate powers.",
+    "context": "Use actual caller provenance and committed element result. Shared power definitions import no other caller race, season or event; fixed Makara Water grants select no element.",
+    "fixedGrantAccess": "Makara receives canonical water-manipulation as a fixed grant with no Element selector and no fabricated element result. Phoenix receives canonical fire-manipulation as fixed Flame Control with no Element selector or fabricated rolled Element result. Chimera also receives fixed fire-manipulation as Flame Control without an Element selector.",
+    "callerModifiers": "The Element selector grants no mastery boost. Only the committed Element Golem type profile registers +1 shared Power Mastery; Elemental receives no such modifier. Dragon also receives no mastery modifier from its form or Element event.",
+    "powerIdentity": "Existing Ice/Shadow/Lightning/Metal/Forest Control/Light Concept/Primordial Void are reused by exact canonical reference. Light always uses ordinary power mode, never Authority. Repeated grants merge ownership by the existing power ownership contract.",
+    "distinctions": "Kegelapan controls reduction/absence of light; Bayangan controls shadow forms; Void uses the existing bounded fundamental void definition. No automatic Shadow Army, Demon identity, immunity, extra body form or maximum mastery.",
+    "tier": "Element odds are independent of intrinsic power tier. Eleven linked powers are Tier3; Void reuses existing Tier5. Mastery is shared and rolled normally; no max guarantee is introduced.",
+    "replay": "New invocations use element-wheel/0.2.0. Saved four-outcome pools/results/effects replay exactly as committed; never redraw or renormalize old spins."
+  },
+  "powers": [
+    {
+      "id": "fire-manipulation",
+      "label": "Fire Manipulation (Kendali Api)",
+      "group": "element-manipulation",
+      "potencyOrder": null,
+      "contentStatus": "Power grant user-confirmed; wording and scope are design descriptions open to refinement",
+      "scope": "Membentuk dan mengendalikan api.",
+      "affinityTags": [
+        "fire"
+      ],
+      "mechanicalBalance": "Ranges, costs, targets, duration, and rank-dependent limits pending.",
+      "masteryRank": null,
+      "enchantment": "never from power mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Fire Manipulation (Kendali Api)"
+        ],
+        "narrativeContext": "Karakter memiliki Kendali Api. Sumber grant dan penguasaannya mengikuti hasil yang benar-benar tercatat."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic routing proposal; complete probability/eligibility guards pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness"
+        ],
+        "basis": [
+          "power definitionId",
+          "affinityTags"
+        ]
+      },
+      "elementId": "fire",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#fire-manipulation"
+    },
+    {
+      "id": "water-manipulation",
+      "label": "Water Manipulation (Kendali Air)",
+      "group": "element-manipulation",
+      "elementId": "water",
+      "potencyOrder": null,
+      "contentStatus": "Water Manipulation grant explicitly user-confirmed for Makara; canonical shared elemental power, wording/limits remain game-design descriptions.",
+      "scope": "Membentuk dan mengendalikan air.",
+      "affinityTags": [
+        "water"
+      ],
+      "mechanicalBalance": "Range, cost, duration, target material, resistance, and mastery limits pending.",
+      "masteryRank": null,
+      "enchantment": "never from power mastery",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Water Manipulation (Kendali Air)"
+        ],
+        "narrativeContext": "Karakter memiliki Kendali Air. Sumber grant dan mastery mengikuti hasil yang tercatat; power ini tidak otomatis memberi Kendali Es atau power laut lain."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact guards and weight profiles pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon"
+        ],
+        "basis": [
+          "definitionId",
+          "elementId",
+          "affinityTags"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#water-manipulation"
+    },
+    {
+      "id": "earth-manipulation",
+      "label": "Earth Manipulation (Kendali Tanah)",
+      "group": "element-manipulation",
+      "elementId": "earth",
+      "potencyOrder": null,
+      "contentStatus": "Authored ability wording; active twelve-element universal selector.",
+      "scope": "Membentuk dan mengendalikan tanah serta batu dalam batas power yang ditetapkan.",
+      "affinityTags": [
+        "earth"
+      ],
+      "mechanicalBalance": "Range, cost, duration, target material, resistance, and mastery limits pending.",
+      "masteryRank": null,
+      "enchantment": "never from power mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Earth Manipulation (Kendali Tanah)"
+        ],
+        "narrativeContext": "Elemen Tanah memberi Kendali Tanah; cakupan dan kendalinya menunggu balance serta mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact guards and weight profiles pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon"
+        ],
+        "basis": [
+          "definitionId",
+          "elementId",
+          "affinityTags"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#earth-manipulation"
+    },
+    {
+      "id": "wind-manipulation",
+      "label": "Wind Manipulation (Kendali Angin)",
+      "group": "element-manipulation",
+      "elementId": "wind",
+      "potencyOrder": null,
+      "contentStatus": "Authored ability wording; active twelve-element universal selector.",
+      "scope": "Membentuk dan mengendalikan aliran udara serta angin.",
+      "affinityTags": [
+        "wind"
+      ],
+      "mechanicalBalance": "Range, cost, duration, target material, resistance, and mastery limits pending.",
+      "masteryRank": null,
+      "enchantment": "never from power mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Wind Manipulation (Kendali Angin)"
+        ],
+        "narrativeContext": "Elemen Angin memberi Kendali Angin; power ini tidak otomatis menjamin kemampuan terbang tanpa batas."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact guards and weight profiles pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon"
+        ],
+        "basis": [
+          "definitionId",
+          "elementId",
+          "affinityTags"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#wind-manipulation"
+    },
+    {
+      "id": "darkness-manipulation",
+      "label": "Darkness Manipulation (Kendali Kegelapan)",
+      "group": "element-manipulation",
+      "elementId": "darkness",
+      "contentStatus": "Authored within user-requested Element expansion; distinct scope from Shadow Manipulation.",
+      "scope": "Mengurangi atau menghalangi cahaya sehingga area menjadi gelap, dalam batas jangkauan, durasi dan resistansi profil.",
+      "affinityTags": [
+        "darkness"
+      ],
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali fenomena cahaya/gelap secara serbaguna tetapi terbatas; bukan manipulasi keberadaan atau Authority.",
+      "powerTierRef": "content/power-tier-design.json#darkness-manipulation",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage; one shared character result",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, duration, targets, costs, resistance and rank-dependent limits remain configurable.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Kendali Kegelapan"
+        ],
+        "narrativeContext": "Karakter memiliki Kendali Kegelapan dari sumber grant yang benar-benar tercatat; tidak otomatis mempunyai Manipulasi Bayangan atau Void."
+      }
+    }
+  ],
+  "wheels": [
+    {
+      "id": "element-universal",
+      "label": "Element",
+      "scope": "universal",
+      "selectorKind": "element",
+      "status": "Twelve equal canonical outcomes; user-requested expansion with authored complementary Es/Logam/Tumbuhan.",
+      "definitionFile": "universal-element-wheel-design.json",
+      "baseWeightsAssigned": true,
+      "drawCount": 1,
+      "outcomes": [
+        {
+          "id": "fire",
+          "label": "Api",
+          "inclusionStatus": "Retained active original element",
+          "baseWeight": 1,
+          "powerDefinitionId": "fire-manipulation",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "fire"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-element-wheel-design.json",
+              "definitionId": "fire-manipulation",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Api",
+              "Power tambahan: Fire Manipulation (Kendali Api)"
+            ],
+            "displayContext": "Karakter memperoleh elemen Api dan Kendali Api. Identitas pemanggil tetap sama; hasil ini tidak menambahkan musim Summer atau ras Elemental."
+          },
+          "influenceDraft": {
+            "status": "exact future eligibility and odds effects pending",
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "power.mastery",
+              "weakness"
+            ],
+            "basis": [
+              "elementId",
+              "powerDefinitionId"
+            ]
+          },
+          "probability": 0.08333333333333333,
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-element-wheel-design.json",
+            "definitionId": "fire-manipulation",
+            "grantMode": "power"
+          }
+        },
+        {
+          "id": "water",
+          "label": "Air",
+          "inclusionStatus": "Retained active original element",
+          "baseWeight": 1,
+          "powerDefinitionId": "water-manipulation",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "water"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-element-wheel-design.json",
+              "definitionId": "water-manipulation",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Air",
+              "Power tambahan: Water Manipulation (Kendali Air)"
+            ],
+            "displayContext": "Elemen Air memberi Kendali Air. Ini tidak otomatis memberi Kendali Es atau power laut lain."
+          },
+          "influenceDraft": {
+            "status": "exact future eligibility and odds effects pending",
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "power.mastery",
+              "weakness"
+            ],
+            "basis": [
+              "elementId",
+              "powerDefinitionId"
+            ]
+          },
+          "probability": 0.08333333333333333,
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-element-wheel-design.json",
+            "definitionId": "water-manipulation",
+            "grantMode": "power"
+          }
+        },
+        {
+          "id": "earth",
+          "label": "Tanah",
+          "inclusionStatus": "Retained active original element",
+          "baseWeight": 1,
+          "powerDefinitionId": "earth-manipulation",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "earth"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-element-wheel-design.json",
+              "definitionId": "earth-manipulation",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Tanah",
+              "Power tambahan: Earth Manipulation (Kendali Tanah)"
+            ],
+            "displayContext": "Elemen Tanah memberi Kendali Tanah; cakupan dan kendalinya menunggu balance serta mastery."
+          },
+          "influenceDraft": {
+            "status": "exact future eligibility and odds effects pending",
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "power.mastery",
+              "weakness"
+            ],
+            "basis": [
+              "elementId",
+              "powerDefinitionId"
+            ]
+          },
+          "probability": 0.08333333333333333,
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-element-wheel-design.json",
+            "definitionId": "earth-manipulation",
+            "grantMode": "power"
+          }
+        },
+        {
+          "id": "wind",
+          "label": "Angin",
+          "inclusionStatus": "Retained active original element",
+          "baseWeight": 1,
+          "powerDefinitionId": "wind-manipulation",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "wind"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-element-wheel-design.json",
+              "definitionId": "wind-manipulation",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Angin",
+              "Power tambahan: Wind Manipulation (Kendali Angin)"
+            ],
+            "displayContext": "Elemen Angin memberi Kendali Angin; power ini tidak otomatis menjamin kemampuan terbang tanpa batas."
+          },
+          "influenceDraft": {
+            "status": "exact future eligibility and odds effects pending",
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "power.mastery",
+              "weakness"
+            ],
+            "basis": [
+              "elementId",
+              "powerDefinitionId"
+            ]
+          },
+          "probability": 0.08333333333333333,
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-element-wheel-design.json",
+            "definitionId": "wind-manipulation",
+            "grantMode": "power"
+          }
+        },
+        {
+          "id": "lightning",
+          "label": "Petir",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "lightning-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/legendary-hero-events-design.json",
+            "definitionId": "lightning-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Petir",
+          "visualBrief": "Kilatan petir dan garis listrik; bukan auto Speed bonus atau immunity.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "lightning"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/legendary-hero-events-design.json",
+              "definitionId": "lightning-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Petir",
+              "Power diperoleh: Kendali Petir"
+            ],
+            "displayContext": "Dapet Petir. Kendali Petir masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "ice",
+          "label": "Es",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "ice-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/elf-events-design.json",
+            "definitionId": "ice-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Es",
+          "visualBrief": "Kristal es dan embun dingin; tidak otomatis memilih musim Winter.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "ice"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/elf-events-design.json",
+              "definitionId": "ice-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Es",
+              "Power diperoleh: Kendali Es"
+            ],
+            "displayContext": "Dapet Es. Kendali Es masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "metal",
+          "label": "Logam",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "metal-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "metal-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Manipulasi Logam",
+          "visualBrief": "Permukaan metal dan serpihan logam; bukan otomatis Machine atau armor tambahan.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "metal"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/video2-race-imports-design.json",
+              "definitionId": "metal-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Logam",
+              "Power diperoleh: Manipulasi Logam"
+            ],
+            "displayContext": "Dapet Logam. Manipulasi Logam masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "plant",
+          "label": "Tumbuhan",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "forest-control",
+          "powerDefinitionRef": {
+            "definitionFile": "content/elf-events-design.json",
+            "definitionId": "forest-control",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Tumbuhan",
+          "visualBrief": "Daun, akar, dan sulur; bukan transformasi menjadi Forest Elf.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "plant"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/elf-events-design.json",
+              "definitionId": "forest-control",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Tumbuhan",
+              "Power diperoleh: Kendali Tumbuhan"
+            ],
+            "displayContext": "Dapet Tumbuhan. Kendali Tumbuhan masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "light",
+          "label": "Cahaya",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "concept-light",
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-concept-wheel-design.json",
+            "definitionId": "concept-light",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Cahaya",
+          "visualBrief": "Sinar, kilau, dan bias cahaya; mode Power biasa, bukan God Authority.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "light"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/universal-concept-wheel-design.json",
+              "definitionId": "concept-light",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Cahaya",
+              "Power diperoleh: Kendali Cahaya"
+            ],
+            "displayContext": "Dapet Cahaya. Kendali Cahaya masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "darkness",
+          "label": "Kegelapan",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "darkness-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/universal-element-wheel-design.json",
+            "definitionId": "darkness-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Kegelapan",
+          "visualBrief": "Area redup/gelap karena cahaya dikurangi; tidak otomatis menjadi Demon.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "darkness"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/universal-element-wheel-design.json",
+              "definitionId": "darkness-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Kegelapan",
+              "Power diperoleh: Kendali Kegelapan"
+            ],
+            "displayContext": "Dapet Kegelapan. Kendali Kegelapan masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "shadow",
+          "label": "Bayangan",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "shadow-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/elf-events-design.json",
+            "definitionId": "shadow-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Manipulasi Bayangan",
+          "visualBrief": "Bayangan berbentuk siluet atau sulur; berbeda dari sekadar memadamkan cahaya.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "shadow"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/elf-events-design.json",
+              "definitionId": "shadow-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Bayangan",
+              "Power diperoleh: Manipulasi Bayangan"
+            ],
+            "displayContext": "Dapet Bayangan. Manipulasi Bayangan masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        },
+        {
+          "id": "void",
+          "label": "Void",
+          "inclusionStatus": "User-requested expansion or authored complementary familiar element",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "powerDefinitionId": "primordial-void-manipulation",
+          "powerDefinitionRef": {
+            "definitionFile": "content/primordial-events-design.json",
+            "definitionId": "primordial-void-manipulation",
+            "grantMode": "power"
+          },
+          "powerDisplayLabel": "Kendali Kekosongan",
+          "visualBrief": "Rongga kosong dan distorsi batas materi; bukan penghapusan semesta atau mastery maksimum.",
+          "effects": [
+            {
+              "type": "record-element-affinity",
+              "elementId": "void"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "content/primordial-events-design.json",
+              "definitionId": "primordial-void-manipulation",
+              "grantMode": "power",
+              "masteryTiming": "main-power-stage",
+              "source": "actual committed caller result"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Elemen terpilih: Void",
+              "Power diperoleh: Kendali Kekosongan"
+            ],
+            "displayContext": "Dapet Void. Kendali Kekosongan masuk build; mastery mengikuti hasil bersama karakter."
+          },
+          "influenceDraft": {
+            "status": "Authored element stat likelihoods and main-power affinities implemented; detailed combat limits remain separate.",
+            "targets": [
+              "stat",
+              "power"
+            ],
+            "basis": [
+              "elementId",
+              "exact canonical power reference"
+            ]
+          }
+        }
+      ],
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "version": "element-wheel/0.2.0",
+      "outcomeCount": 12
+    }
+  ],
+  "sharedConsumers": {
+    "fire-manipulation": [
+      "Fey Elf / Summer fixed grant",
+      "Element Pixie / Api result",
+      "Naga / Api result",
+      "Element Golem / Api result",
+      "Elemental / Api result",
+      "Dragon / Api result",
+      "Phoenix fixed Flame Control grant",
+      "Chimera fixed Flame Control grant",
+      "Elemental Slime / Api result"
+    ],
+    "water-manipulation": [
+      "Naga / Air result",
+      "Element Pixie / Air result",
+      "Makara fixed Water grant",
+      "Element Golem / Air result",
+      "Elemental / Air result",
+      "Dragon / Air result",
+      "Elemental Slime / Air result"
+    ],
+    "earth-manipulation": [
+      "Naga / Tanah result",
+      "Element Pixie / Tanah result",
+      "Element Golem / Tanah result",
+      "Elemental / Tanah result",
+      "Dragon / Tanah result",
+      "Elemental Slime / Tanah result"
+    ],
+    "wind-manipulation": [
+      "Naga / Angin result",
+      "Element Pixie / Angin result",
+      "Element Golem / Angin result",
+      "Elemental / Angin result",
+      "Dragon / Angin result",
+      "Elemental Slime / Angin result"
+    ],
+    "lightning-manipulation": [
+      "Element Pixie / Petir result",
+      "Naga / Petir result",
+      "Element Golem / Petir result",
+      "Elemental / Petir result",
+      "Dragon / Petir result",
+      "Elemental Slime / Petir result"
+    ],
+    "ice-manipulation": [
+      "Element Pixie / Es result",
+      "Naga / Es result",
+      "Element Golem / Es result",
+      "Elemental / Es result",
+      "Dragon / Es result",
+      "Elemental Slime / Es result"
+    ],
+    "metal-manipulation": [
+      "Element Pixie / Logam result",
+      "Naga / Logam result",
+      "Element Golem / Logam result",
+      "Elemental / Logam result",
+      "Dragon / Logam result",
+      "Elemental Slime / Logam result"
+    ],
+    "forest-control": [
+      "Element Pixie / Tumbuhan result",
+      "Naga / Tumbuhan result",
+      "Element Golem / Tumbuhan result",
+      "Elemental / Tumbuhan result",
+      "Dragon / Tumbuhan result",
+      "Elemental Slime / Tumbuhan result"
+    ],
+    "concept-light": [
+      "Element Pixie / Cahaya result",
+      "Naga / Cahaya result",
+      "Element Golem / Cahaya result",
+      "Elemental / Cahaya result",
+      "Dragon / Cahaya result",
+      "Elemental Slime / Cahaya result"
+    ],
+    "darkness-manipulation": [
+      "Element Pixie / Kegelapan result",
+      "Naga / Kegelapan result",
+      "Element Golem / Kegelapan result",
+      "Elemental / Kegelapan result",
+      "Dragon / Kegelapan result",
+      "Elemental Slime / Kegelapan result"
+    ],
+    "shadow-manipulation": [
+      "Element Pixie / Bayangan result",
+      "Naga / Bayangan result",
+      "Element Golem / Bayangan result",
+      "Elemental / Bayangan result",
+      "Dragon / Bayangan result",
+      "Elemental Slime / Bayangan result"
+    ],
+    "primordial-void-manipulation": [
+      "Element Pixie / Void result",
+      "Naga / Void result",
+      "Element Golem / Void result",
+      "Elemental / Void result",
+      "Dragon / Void result",
+      "Elemental Slime / Void result"
+    ]
+  },
+  "migrationContract": {
+    "definitionId": "fire-manipulation",
+    "from": "elf-events-design.json",
+    "to": "universal-element-wheel-design.json",
+    "preserved": [
+      "id",
+      "label",
+      "scope",
+      "potencyOrder",
+      "mechanicalBalance",
+      "masteryRank",
+      "enchantment",
+      "laterInfluenceDraft"
+    ],
+    "sourceTagChange": "summer is a grant-source/season fact on the Fey caller; the intrinsic shared power retains only fire affinity.",
+    "oldResultContext": {
+      "facts": [
+        "Power yang diperoleh: Fire Manipulation (Kendali Api)"
+      ],
+      "narrativeContext": "Summer memberi Kendali Api; kekuatan dan kontrolnya belum ditentukan oleh nama musim."
+    }
+  },
+  "openBalance": [
+    "Elemental manipulation limits and future influence profiles",
+    "Additional callers and their guards; the Elemental one-spin event is user-confirmed."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "version": "element-wheel/0.2.0",
+  "updatedDate": "2026-10-11",
+  "powerImports": [
+    {
+      "elementId": "lightning",
+      "powerDefinitionRef": {
+        "definitionFile": "content/legendary-hero-events-design.json",
+        "definitionId": "lightning-manipulation",
+        "grantMode": "power"
+      },
+      "displayLabel": "Kendali Petir"
+    },
+    {
+      "elementId": "ice",
+      "powerDefinitionRef": {
+        "definitionFile": "content/elf-events-design.json",
+        "definitionId": "ice-manipulation",
+        "grantMode": "power"
+      },
+      "displayLabel": "Kendali Es"
+    },
+    {
+      "elementId": "metal",
+      "powerDefinitionRef": {
+        "definitionFile": "content/video2-race-imports-design.json",
+        "definitionId": "metal-manipulation",
+        "grantMode": "power"
+      },
+      "displayLabel": "Manipulasi Logam"
+    },
+    {
+      "elementId": "plant",
+      "powerDefinitionRef": {
+        "definitionFile": "content/elf-events-design.json",
+        "definitionId": "forest-control",
+        "grantMode": "power"
+      },
+      "displayLabel": "Kendali Tumbuhan"
+    },
+    {
+      "elementId": "light",
+      "powerDefinitionRef": {
+        "definitionFile": "content/universal-concept-wheel-design.json",
+        "definitionId": "concept-light",
+        "grantMode": "power"
+      },
+      "displayLabel": "Kendali Cahaya"
+    },
+    {
+      "elementId": "shadow",
+      "powerDefinitionRef": {
+        "definitionFile": "content/elf-events-design.json",
+        "definitionId": "shadow-manipulation",
+        "grantMode": "power"
+      },
+      "displayLabel": "Manipulasi Bayangan"
+    },
+    {
+      "elementId": "void",
+      "powerDefinitionRef": {
+        "definitionFile": "content/primordial-events-design.json",
+        "definitionId": "primordial-void-manipulation",
+        "grantMode": "power"
+      },
+      "displayLabel": "Kendali Kekosongan"
+    }
+  ],
+  "expansion": {
+    "version": "element-wheel/0.2.0",
+    "authority": "User requests lightning/light/dark/void/shadow/etc; twelve-choice complementary curation.",
+    "recovery": "reference/before-element-wheel-expansion-2026-10-11.json",
+    "originalOutcomeIds": [
+      "fire",
+      "water",
+      "earth",
+      "wind"
+    ],
+    "addedOutcomeIds": [
+      "lightning",
+      "ice",
+      "metal",
+      "plant",
+      "light",
+      "darkness",
+      "shadow",
+      "void"
+    ],
+    "algorithm": "same equal universal selector; existing grants, stage timing and mastery policies retained"
+  }
+}

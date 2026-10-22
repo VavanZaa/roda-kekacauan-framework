@@ -1,0 +1,8061 @@
+{
+  "schemaVersion": "0.1",
+  "version": "stat-odds/0.4.0",
+  "updatedDate": "2026-10-10",
+  "status": "Pure conditional planner/draw resolution implemented; editable lore assumptions, not empirical frequencies.",
+  "authority": {
+    "userConfirmed": [
+      "No transformation Size.",
+      "Distinct stat/mastery distributions conditioned on race, Archetype and Size.",
+      "Every eligible random stat/mastery outcome has minimum5% and maximum25%; supersedes previous30% cap and illustrative God30/25/20.",
+      "Bonuses apply at end; final scores signed and unbounded.",
+      "Guaranteed maximum skips the wheel. God skips all shared Power Mastery and every owned power uses base9; final modifiers still apply."
+    ],
+    "assumptions": [
+      "Centers/widths/likelihoods are game design parameters, not measured populations or literal physical units.",
+      "5%..25% applies per actual random attempt after hard guards; forced Lich raw9 remains a named exception, retained Resilient/copy results are not new draws.",
+      "Ordinary eligible pools smaller than4 need configuration rather than breaking cap.",
+      "Physical Size response is bounded logarithmic; avatars/manifestations gain no mass."
+    ]
+  },
+  "statKeys": [
+    "strength",
+    "speed",
+    "durability",
+    "intelligence",
+    "fight",
+    "weapon-mastery",
+    "power-mastery"
+  ],
+  "hiddenAxes": [
+    "physicalPotential",
+    "mobility",
+    "resilience",
+    "cognition",
+    "combatTraining",
+    "weaponTraining",
+    "powerControl"
+  ],
+  "model": {
+    "id": "lore-stat-model",
+    "version": "2",
+    "maximumProbability": 0.25,
+    "sigma": [
+      1.1,
+      1.25,
+      1.2,
+      1.35,
+      1.3,
+      1.45,
+      1.6
+    ],
+    "luckyTailMass": 0.015,
+    "raceMaximumShare": 0.8,
+    "archetypeStrength": 1,
+    "evidenceStrength": 1,
+    "sizeStrength": 1,
+    "maximumShift": 2.5,
+    "sizeLogLimit": 10,
+    "sizePositiveShiftLimit": 5,
+    "sizeNegativeShiftLimit": 1.25,
+    "minimumCenter": 0,
+    "maximumCenter": 9,
+    "defaultReferenceMeters": 1.75,
+    "minimumProbability": 0.05
+  },
+  "raceProfiles": [
+    {
+      "id": "prior-human",
+      "familyId": "human",
+      "when": [],
+      "centers": [
+        2.6,
+        2.8,
+        2.4,
+        3.2,
+        2.4,
+        2.4,
+        1.5
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-elf",
+      "familyId": "elf",
+      "when": [],
+      "centers": [
+        3.3,
+        4.2,
+        3.1,
+        4.7,
+        3.8,
+        4.3,
+        4.8
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-dwarf",
+      "familyId": "dwarf",
+      "when": [],
+      "centers": [
+        3.6,
+        2.2,
+        4.2,
+        3.8,
+        3.6,
+        4.8,
+        2.5
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-goblinoid",
+      "familyId": "goblinoid",
+      "when": [],
+      "centers": [
+        3,
+        3.1,
+        3,
+        2.5,
+        3,
+        3.1,
+        2.2
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-fae",
+      "familyId": "fae",
+      "when": [],
+      "centers": [
+        1.4,
+        4.2,
+        2,
+        4.5,
+        2,
+        2.1,
+        5.3
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-beastfolk",
+      "familyId": "beastfolk",
+      "when": [],
+      "centers": [
+        3.8,
+        4.1,
+        3.5,
+        3.2,
+        3.4,
+        3,
+        2.6
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-lelembut",
+      "familyId": "lelembut",
+      "when": [],
+      "centers": [
+        2.6,
+        3,
+        3.6,
+        3.1,
+        2.5,
+        1.9,
+        4.6
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-mythical-beast",
+      "familyId": "mythical-beast",
+      "when": [],
+      "centers": [
+        4.8,
+        4.5,
+        4.8,
+        3.6,
+        4.2,
+        1.8,
+        4.6
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-golem",
+      "familyId": "golem",
+      "when": [],
+      "centers": [
+        4.5,
+        1.9,
+        5,
+        1.6,
+        2.9,
+        1.8,
+        3.4
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-elemental",
+      "familyId": "elemental",
+      "when": [],
+      "centers": [
+        3.8,
+        4.2,
+        4.6,
+        3.5,
+        2.8,
+        1.2,
+        5
+      ],
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-heavenly-principle",
+      "familyId": "heavenly-principle",
+      "when": [],
+      "centers": [
+        3.1,
+        3.2,
+        3.1,
+        4.5,
+        2.6,
+        2.8,
+        5
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-demon",
+      "familyId": "demon",
+      "when": [],
+      "centers": [
+        4.8,
+        4.4,
+        4.7,
+        4.4,
+        4.5,
+        4.1,
+        5.4
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-anime-lineage",
+      "familyId": "anime-lineage",
+      "when": [],
+      "centers": [
+        2.7,
+        2.9,
+        2.5,
+        3.3,
+        2.6,
+        2.6,
+        2.1
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-legendary-warrior",
+      "familyId": "legendary-warrior",
+      "when": [],
+      "centers": [
+        4.2,
+        4,
+        4.1,
+        4.5,
+        5.2,
+        5.3,
+        3.8
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-machine",
+      "familyId": "machine",
+      "when": [],
+      "centers": [
+        4.1,
+        3.1,
+        4.5,
+        4.6,
+        3.5,
+        3.9,
+        3.2
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-primordial",
+      "familyId": "primordial",
+      "when": [],
+      "centers": [
+        8.2,
+        6.7,
+        8.6,
+        7.9,
+        5.6,
+        4.2,
+        8.3
+      ],
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-slime",
+      "familyId": "slime",
+      "when": [],
+      "centers": [
+        1.4,
+        1.6,
+        3.2,
+        1.5,
+        1,
+        0.5,
+        2.4
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-centaur",
+      "familyId": "centaur",
+      "when": [],
+      "centers": [
+        3.9,
+        4.2,
+        3.8,
+        3.1,
+        3.5,
+        3.4,
+        2.1
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-cosmic-warrior",
+      "familyId": "cosmic-warrior",
+      "when": [],
+      "centers": [
+        6.8,
+        6.7,
+        6.9,
+        5.8,
+        6.5,
+        4.7,
+        6.7
+      ],
+      "sizeResponse": [
+        0.48,
+        -0.12,
+        0.32,
+        0,
+        -0.06,
+        0,
+        0
+      ],
+      "reason": "Editable lore game prior; seven distinct capacities, not final bonuses."
+    },
+    {
+      "id": "prior-elf-high-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "high-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.2,
+        4,
+        3.2,
+        5.2,
+        3.6,
+        4.4,
+        5.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-dark-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "dark-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        4.5,
+        3.1,
+        4.7,
+        4.4,
+        4.6,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-forest-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "forest-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.3,
+        4.7,
+        3.3,
+        4.1,
+        4.1,
+        4.6,
+        4.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-sea-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "sea-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        4.4,
+        3.5,
+        4,
+        3.8,
+        3.8,
+        4.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-blood-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "blood-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.7,
+        4.3,
+        3.8,
+        4.8,
+        4.1,
+        4,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-fey-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "fey-elf"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        4.6,
+        2.8,
+        5,
+        3.1,
+        3.2,
+        5.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-shadow-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "shadow-elf"
+          ]
+        }
+      ],
+      "centers": [
+        3.1,
+        5,
+        2.9,
+        4.6,
+        4.7,
+        4.7,
+        5.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-astral-elf",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "elf-type",
+          "outcomeIds": [
+            "astral-elf"
+          ]
+        }
+      ],
+      "centers": [
+        2.6,
+        4.8,
+        3,
+        5.6,
+        3.1,
+        3.4,
+        5.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-putri-duyung",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "sea-elf-form",
+          "outcomeIds": [
+            "putri-duyung"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        4.7,
+        3.1,
+        4.2,
+        2.7,
+        2.4,
+        5.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-elf-atlantean-warrior",
+      "familyId": "elf",
+      "when": [
+        {
+          "wheelId": "sea-elf-form",
+          "outcomeIds": [
+            "atlantean-warrior"
+          ]
+        }
+      ],
+      "centers": [
+        4.2,
+        4.2,
+        4,
+        4,
+        4.6,
+        5,
+        4.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-dwarf-gnome",
+      "familyId": "dwarf",
+      "when": [
+        {
+          "wheelId": "dwarf-gnome-type",
+          "outcomeIds": [
+            "gnome"
+          ]
+        }
+      ],
+      "centers": [
+        2,
+        2.7,
+        2.6,
+        5.4,
+        2.5,
+        4.6,
+        3.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-goblin",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "goblin-orc-troll-type",
+          "outcomeIds": [
+            "goblin"
+          ]
+        }
+      ],
+      "centers": [
+        2,
+        3.4,
+        2,
+        2.7,
+        2.6,
+        2.9,
+        1.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-orc",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "goblin-orc-troll-type",
+          "outcomeIds": [
+            "orc"
+          ]
+        }
+      ],
+      "centers": [
+        4.2,
+        3.2,
+        4,
+        2.5,
+        4.1,
+        4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-troll",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "goblin-orc-troll-type",
+          "outcomeIds": [
+            "troll"
+          ]
+        }
+      ],
+      "centers": [
+        4.8,
+        2.3,
+        5.2,
+        1.8,
+        3.4,
+        2.6,
+        2.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-orc-general",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "orc-role",
+          "outcomeIds": [
+            "orc-general"
+          ]
+        }
+      ],
+      "centers": [
+        4.5,
+        3.2,
+        4.3,
+        4.3,
+        5,
+        5.3,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-oni",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "orc-role",
+          "outcomeIds": [
+            "oni"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.3,
+        4.7,
+        3.6,
+        5.2,
+        5.4,
+        4.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-orc-warrior",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "orc-role",
+          "outcomeIds": [
+            "orc-warrior"
+          ]
+        }
+      ],
+      "centers": [
+        4.5,
+        3.4,
+        4.2,
+        2.7,
+        5,
+        5.2,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-shaman",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "orc-role",
+          "outcomeIds": [
+            "shaman"
+          ]
+        }
+      ],
+      "centers": [
+        3.2,
+        2.9,
+        3.4,
+        4.5,
+        3,
+        3.1,
+        5.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-goblinoid-shrek",
+      "familyId": "goblinoid",
+      "when": [
+        {
+          "wheelId": "orc-role",
+          "outcomeIds": [
+            "shrek"
+          ]
+        }
+      ],
+      "centers": [
+        4.8,
+        3.1,
+        4.7,
+        3.2,
+        4,
+        3.3,
+        3.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-fae-fairy-parents",
+      "familyId": "fae",
+      "when": [
+        {
+          "wheelId": "fairy-subrace",
+          "outcomeIds": [
+            "fairy-parents"
+          ]
+        }
+      ],
+      "centers": [
+        1.5,
+        4.2,
+        2.1,
+        5.2,
+        1.9,
+        1.8,
+        6.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-fae-element-pixie",
+      "familyId": "fae",
+      "when": [
+        {
+          "wheelId": "fairy-subrace",
+          "outcomeIds": [
+            "element-pixie"
+          ]
+        }
+      ],
+      "centers": [
+        1.1,
+        5.1,
+        1.7,
+        3.8,
+        2.4,
+        1.9,
+        5.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-fae-healer-fairy",
+      "familyId": "fae",
+      "when": [
+        {
+          "wheelId": "fairy-subrace",
+          "outcomeIds": [
+            "healer-fairy"
+          ]
+        }
+      ],
+      "centers": [
+        1.3,
+        3.9,
+        2,
+        4.8,
+        1.5,
+        1.6,
+        5.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-fae-fairy-king",
+      "familyId": "fae",
+      "when": [
+        {
+          "wheelId": "fairy-subrace",
+          "outcomeIds": [
+            "fairy-king"
+          ]
+        }
+      ],
+      "centers": [
+        2.9,
+        4.8,
+        3.6,
+        5.7,
+        3.9,
+        3.3,
+        6.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-harimau",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "harimau"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        4.6,
+        4,
+        3.2,
+        4.4,
+        3.1,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-serigala",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "serigala"
+          ]
+        }
+      ],
+      "centers": [
+        3.9,
+        4.8,
+        3.5,
+        3.5,
+        4.2,
+        3,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-babi",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "babi"
+          ]
+        }
+      ],
+      "centers": [
+        3.5,
+        3.1,
+        4,
+        3,
+        2.8,
+        2.6,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-ayam",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "ayam"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        3.8,
+        2.2,
+        3,
+        2.5,
+        2.5,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-ular",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "ular"
+          ]
+        }
+      ],
+      "centers": [
+        3.1,
+        3.9,
+        3,
+        3.7,
+        3.9,
+        2.7,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-buaya",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "buaya"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        2.9,
+        4.8,
+        3,
+        4.1,
+        2.8,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-kera",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "kera"
+          ]
+        }
+      ],
+      "centers": [
+        3.8,
+        4.3,
+        3.3,
+        4.2,
+        4,
+        3.8,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-kerbau",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "kerbau"
+          ]
+        }
+      ],
+      "centers": [
+        4.9,
+        2.8,
+        4.7,
+        3,
+        3.6,
+        2.9,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-rubah",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "rubah"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        4.7,
+        2.8,
+        4.6,
+        3.5,
+        3.1,
+        3.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-kucing",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "kucing"
+          ]
+        }
+      ],
+      "centers": [
+        2.9,
+        5,
+        2.7,
+        3.7,
+        3.8,
+        3,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-kelelawar",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "kelelawar"
+          ]
+        }
+      ],
+      "centers": [
+        2.4,
+        4.6,
+        2.5,
+        3.7,
+        3.1,
+        2.7,
+        2.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-beastfolk-elang",
+      "familyId": "beastfolk",
+      "when": [
+        {
+          "wheelId": "siluman-animal-type",
+          "outcomeIds": [
+            "elang"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        5,
+        3.1,
+        3.8,
+        4,
+        2.9,
+        2.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-pocong",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "pocong"
+          ]
+        }
+      ],
+      "centers": [
+        2.2,
+        2,
+        3.5,
+        2.5,
+        2,
+        1.3,
+        3.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-tuyul",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "tuyul"
+          ]
+        }
+      ],
+      "centers": [
+        0.8,
+        3.4,
+        1.1,
+        3.3,
+        1.1,
+        0.9,
+        3.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-kuntilanak",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "kuntilanak"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        4.3,
+        3.4,
+        3.1,
+        2.8,
+        1.7,
+        4.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-genderuwo",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "genderuwo"
+          ]
+        }
+      ],
+      "centers": [
+        4.6,
+        2.9,
+        4.5,
+        2.5,
+        3.7,
+        2.7,
+        4.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-wewe-gombel",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "wewe-gombel"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        3.2,
+        3.8,
+        3.5,
+        2.7,
+        2,
+        4.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-sundel-bolong",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "sundel-bolong"
+          ]
+        }
+      ],
+      "centers": [
+        3,
+        3.2,
+        4.1,
+        2.8,
+        2.8,
+        1.8,
+        4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-kuyang",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "kuyang"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        4.8,
+        3.6,
+        3.6,
+        3.1,
+        1.5,
+        4.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-leak",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "leak"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        4,
+        3.8,
+        4.8,
+        3.7,
+        2.4,
+        5.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-palasik",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "palasik"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        4.1,
+        3.3,
+        3.4,
+        2.9,
+        1.5,
+        4.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-banaspati",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "banaspati"
+          ]
+        }
+      ],
+      "centers": [
+        3.7,
+        4.3,
+        4.2,
+        2.8,
+        3.2,
+        0.8,
+        4.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-lelembut-jenglot",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "jenglot"
+          ]
+        }
+      ],
+      "centers": [
+        1,
+        1.2,
+        3.7,
+        3.8,
+        1.3,
+        0.7,
+        4.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-suster-ngesot",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-local-type",
+          "outcomeIds": [
+            "suster-ngesot"
+          ]
+        }
+      ],
+      "centers": [
+        1.8,
+        1,
+        2.8,
+        3.2,
+        1.6,
+        1.2,
+        3.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-vampire",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-imported-type",
+          "outcomeIds": [
+            "vampire"
+          ]
+        }
+      ],
+      "centers": [
+        4.5,
+        5,
+        4.7,
+        4.8,
+        4.3,
+        3.8,
+        5.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-lich",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-imported-type",
+          "outcomeIds": [
+            "lich"
+          ]
+        }
+      ],
+      "centers": [
+        2.6,
+        2.8,
+        7,
+        6.2,
+        3.1,
+        2.9,
+        6.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-lelembut-ghost",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-imported-type",
+          "outcomeIds": [
+            "ghost"
+          ]
+        }
+      ],
+      "centers": [
+        1.5,
+        4.4,
+        4.9,
+        3.6,
+        1.8,
+        0.9,
+        4.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-lelembut-mummy",
+      "familyId": "lelembut",
+      "when": [
+        {
+          "wheelId": "lelembut-imported-type",
+          "outcomeIds": [
+            "mummy"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        1.8,
+        4.7,
+        4.1,
+        2.7,
+        2.6,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-garuda",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "garuda"
+          ]
+        }
+      ],
+      "centers": [
+        5,
+        5.8,
+        4.7,
+        4.3,
+        4.7,
+        2,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-barong",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "barong"
+          ]
+        }
+      ],
+      "centers": [
+        5.5,
+        3.9,
+        5.2,
+        4.4,
+        4.8,
+        2.1,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-singa-barong-reog",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "singa-barong-reog"
+          ]
+        }
+      ],
+      "centers": [
+        5.5,
+        3.5,
+        5.6,
+        3.5,
+        4.7,
+        1.9,
+        3.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-naga",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "naga"
+          ]
+        }
+      ],
+      "centers": [
+        5.4,
+        4.3,
+        5.2,
+        5,
+        4.6,
+        1.8,
+        5.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-lembuswana",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "lembuswana"
+          ]
+        }
+      ],
+      "centers": [
+        4.9,
+        4.6,
+        5.1,
+        5.1,
+        4,
+        2.1,
+        5.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-kuda-sembrani",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "kuda-sembrani"
+          ]
+        }
+      ],
+      "centers": [
+        3.8,
+        5.7,
+        3.8,
+        3,
+        3.2,
+        1.1,
+        3.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-warak-ngendog",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "warak-ngendog"
+          ]
+        }
+      ],
+      "centers": [
+        3.6,
+        3.8,
+        3.9,
+        4.7,
+        2.9,
+        1.6,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-makara",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "makara"
+          ]
+        }
+      ],
+      "centers": [
+        4.9,
+        3.7,
+        5,
+        5.3,
+        4.2,
+        1.7,
+        4.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-kinnara",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "kinnara"
+          ]
+        }
+      ],
+      "centers": [
+        3.1,
+        4.1,
+        3.4,
+        4.7,
+        3.1,
+        5.2,
+        4.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-singa-ambara-raja",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-local-type",
+          "outcomeIds": [
+            "singa-ambara-raja"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        5,
+        4.3,
+        3.7,
+        4.4,
+        1.4,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-dragon",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "dragon"
+          ]
+        }
+      ],
+      "centers": [
+        5.6,
+        4.8,
+        5.5,
+        5,
+        4.8,
+        1.5,
+        5.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-phoenix",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "phoenix"
+          ]
+        }
+      ],
+      "centers": [
+        4.2,
+        5.5,
+        6,
+        4.3,
+        4,
+        1,
+        5.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-griffin",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "griffin"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        5,
+        4.2,
+        3,
+        4.5,
+        1.2,
+        3.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-unicorn",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "unicorn"
+          ]
+        }
+      ],
+      "centers": [
+        3.3,
+        4.5,
+        4,
+        4.2,
+        2.9,
+        1.1,
+        5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-pegasus",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "pegasus"
+          ]
+        }
+      ],
+      "centers": [
+        3.6,
+        5.4,
+        3.4,
+        3.2,
+        3.1,
+        1,
+        3.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-hydra",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "hydra"
+          ]
+        }
+      ],
+      "centers": [
+        5.6,
+        3.1,
+        6.2,
+        2.7,
+        4.8,
+        0.9,
+        4.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-cerberus",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "cerberus"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.7,
+        4.8,
+        3.2,
+        5,
+        1,
+        4.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-chimera",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "outcomeIds": [
+            "chimera"
+          ]
+        }
+      ],
+      "centers": [
+        5,
+        4.4,
+        4.7,
+        3.1,
+        4.7,
+        1,
+        4.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-western",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "western"
+          ]
+        }
+      ],
+      "centers": [
+        5.9,
+        5,
+        5.9,
+        5.4,
+        5,
+        1.5,
+        5.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-wyvern",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "wyvern"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        5.4,
+        4.8,
+        3.2,
+        4.8,
+        1,
+        3.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-drake",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "drake"
+          ]
+        }
+      ],
+      "centers": [
+        5.2,
+        3.9,
+        5.4,
+        3.4,
+        4.8,
+        1.1,
+        4.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-wyrm",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "wyrm"
+          ]
+        }
+      ],
+      "centers": [
+        6,
+        3.5,
+        6.2,
+        4.8,
+        4.6,
+        0.9,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-lindwyrm",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "lindwyrm"
+          ]
+        }
+      ],
+      "centers": [
+        5.2,
+        4.1,
+        5.3,
+        4.3,
+        4.6,
+        1,
+        4.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-amphiptere",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "amphiptere"
+          ]
+        }
+      ],
+      "centers": [
+        4.5,
+        5.9,
+        4.2,
+        3.9,
+        4.1,
+        0.7,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-eastern",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "eastern"
+          ]
+        }
+      ],
+      "centers": [
+        5.4,
+        5.3,
+        5.6,
+        6.2,
+        4.6,
+        1,
+        6.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-mythical-beast-sea-serpent",
+      "familyId": "mythical-beast",
+      "when": [
+        {
+          "wheelId": "dragon-form",
+          "outcomeIds": [
+            "sea-serpent"
+          ]
+        }
+      ],
+      "centers": [
+        5.8,
+        4.8,
+        5.5,
+        4,
+        4.6,
+        0.8,
+        5.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-sand-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "sand-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4,
+        2.4,
+        3.8,
+        1.5,
+        2.5,
+        1.3,
+        4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-rock-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "rock-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4.8,
+        1.4,
+        5.2,
+        1.3,
+        3,
+        2.1,
+        2.8
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-magma-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "magma-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4.8,
+        1.9,
+        5.1,
+        1.6,
+        3.2,
+        1.4,
+        4.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-crystal-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "crystal-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4.4,
+        2.2,
+        5.7,
+        2.6,
+        2.9,
+        1.8,
+        4.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-diamond-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "diamond-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4.9,
+        2.1,
+        6.2,
+        2.1,
+        3.2,
+        1.7,
+        3.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-element-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "element-golem"
+          ]
+        }
+      ],
+      "centers": [
+        4.1,
+        3.6,
+        4.8,
+        2.9,
+        2.8,
+        1.4,
+        5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-golem-trash-golem",
+      "familyId": "golem",
+      "when": [
+        {
+          "wheelId": "golem-type",
+          "outcomeIds": [
+            "trash-golem"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        1.3,
+        1.9,
+        1,
+        1.7,
+        1,
+        2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-heavenly-principle-god",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "god"
+          ]
+        }
+      ],
+      "centers": [
+        9,
+        8.1,
+        8.7,
+        8.9,
+        6.7,
+        6.4,
+        8.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "templates": {
+        "strength": [
+          0.005,
+          0.008,
+          0.012,
+          0.025,
+          0.04,
+          0.06,
+          0.1,
+          0.2,
+          0.25,
+          0.3
+        ]
+      }
+    },
+    {
+      "id": "prior-heavenly-principle-demigod",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "demigod"
+          ]
+        }
+      ],
+      "centers": [
+        6.6,
+        5.9,
+        6.4,
+        5.5,
+        5.8,
+        5.5,
+        6.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-heavenly-principle-angel",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "angel"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        6.1,
+        5.3,
+        6.1,
+        4.9,
+        4.7,
+        6.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-heavenly-principle-utusan-tuhan",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "utusan-tuhan"
+          ]
+        }
+      ],
+      "centers": [
+        3.2,
+        3.3,
+        3.4,
+        5.3,
+        3,
+        3.4,
+        5.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-heavenly-principle-pemuka-agama",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "pemuka-agama"
+          ]
+        }
+      ],
+      "centers": [
+        2.4,
+        2.6,
+        2.5,
+        5,
+        2.1,
+        2,
+        5.3
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-heavenly-principle-orang-saleh",
+      "familyId": "heavenly-principle",
+      "when": [
+        {
+          "wheelId": "heavenly-principle-type",
+          "outcomeIds": [
+            "orang-saleh"
+          ]
+        }
+      ],
+      "centers": [
+        2.6,
+        2.8,
+        2.4,
+        4.1,
+        2.2,
+        2.1,
+        4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-demon-lord",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "abyssal-axiom-type",
+          "outcomeIds": [
+            "demon-lord"
+          ]
+        }
+      ],
+      "centers": [
+        7.6,
+        6.3,
+        7.1,
+        6.6,
+        6.4,
+        5.7,
+        7.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-ordinary-demon",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "abyssal-axiom-type",
+          "outcomeIds": [
+            "ordinary-demon"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.7,
+        5,
+        4.7,
+        4.6,
+        4,
+        5.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-fallen-angel",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "abyssal-axiom-type",
+          "outcomeIds": [
+            "fallen-angel"
+          ]
+        }
+      ],
+      "centers": [
+        5.6,
+        6,
+        5.5,
+        6.1,
+        5.3,
+        4.8,
+        6.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-setan",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "abyssal-axiom-type",
+          "outcomeIds": [
+            "setan"
+          ]
+        }
+      ],
+      "centers": [
+        3.7,
+        4.1,
+        3.7,
+        4.1,
+        3.6,
+        2.8,
+        4.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-sinner",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "abyssal-axiom-type",
+          "outcomeIds": [
+            "sinner"
+          ]
+        }
+      ],
+      "centers": [
+        2.7,
+        2.9,
+        2.5,
+        3.5,
+        2.6,
+        2.6,
+        3.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-succubus",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "setan-type",
+          "outcomeIds": [
+            "succubus"
+          ]
+        }
+      ],
+      "centers": [
+        3,
+        4.5,
+        3.1,
+        5.3,
+        2.9,
+        2.6,
+        5.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-ifrit",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "setan-type",
+          "outcomeIds": [
+            "ifrit"
+          ]
+        }
+      ],
+      "centers": [
+        5.3,
+        4.1,
+        4.9,
+        4.2,
+        4.3,
+        2.9,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-asura",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "setan-type",
+          "outcomeIds": [
+            "asura"
+          ]
+        }
+      ],
+      "centers": [
+        5.5,
+        4.7,
+        5.1,
+        3.8,
+        5.6,
+        5.5,
+        4.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-demon-imp",
+      "familyId": "demon",
+      "when": [
+        {
+          "wheelId": "setan-type",
+          "outcomeIds": [
+            "imp"
+          ]
+        }
+      ],
+      "centers": [
+        1.7,
+        4,
+        2,
+        3.8,
+        2.7,
+        2.1,
+        4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-android",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "android"
+          ]
+        }
+      ],
+      "centers": [
+        4.6,
+        4.6,
+        4.8,
+        5.1,
+        4,
+        4.3,
+        4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-cyborg",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "cyborg"
+          ]
+        }
+      ],
+      "centers": [
+        4.1,
+        3.8,
+        4.2,
+        4.6,
+        3.9,
+        4.5,
+        3.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-mecha",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "mecha"
+          ]
+        }
+      ],
+      "centers": [
+        5.8,
+        3.9,
+        5.9,
+        4.1,
+        4.6,
+        4.8,
+        3.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-transformer",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "transformer"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.7,
+        5.1,
+        4.3,
+        4.4,
+        4.1,
+        3.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-nanobot",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "nanobot"
+          ]
+        }
+      ],
+      "centers": [
+        2.5,
+        4.3,
+        5.5,
+        5.4,
+        2.9,
+        1.7,
+        5.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-machine-ai",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "ai"
+          ]
+        }
+      ],
+      "centers": [
+        0.7,
+        3.8,
+        4,
+        7.8,
+        1.9,
+        1.3,
+        5.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-machine-household-appliance",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-type",
+          "outcomeIds": [
+            "household-appliance"
+          ]
+        }
+      ],
+      "centers": [
+        0.4,
+        0.35,
+        0.8,
+        0.6,
+        0.25,
+        0.2,
+        1.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-machine-machine-mecha-mechagodzilla",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-mechagodzilla"
+          ]
+        }
+      ],
+      "centers": [
+        6.8,
+        4.8,
+        6.9,
+        4.8,
+        5.8,
+        5.3,
+        4.6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-mecha-probe",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-mecha-probe"
+          ]
+        }
+      ],
+      "centers": [
+        3.6,
+        4.1,
+        3.8,
+        3.1,
+        3.2,
+        3.5,
+        2.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-gurren-lagann",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-gurren-lagann"
+          ]
+        }
+      ],
+      "centers": [
+        7.4,
+        6.1,
+        7.1,
+        4.1,
+        6.5,
+        5.4,
+        6.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-odong-odong",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-odong-odong"
+          ]
+        }
+      ],
+      "centers": [
+        0.7,
+        1.4,
+        1.1,
+        0.9,
+        0.5,
+        0.4,
+        1.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-bakso-cart",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-bakso-cart"
+          ]
+        }
+      ],
+      "centers": [
+        1.2,
+        0.8,
+        1.4,
+        1.4,
+        0.9,
+        0.8,
+        1.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-water-jug",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-water-jug"
+          ]
+        }
+      ],
+      "centers": [
+        1,
+        0.6,
+        1.3,
+        0.7,
+        0.6,
+        0.4,
+        1.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-machine-machine-mecha-cardboard",
+      "familyId": "machine",
+      "when": [
+        {
+          "wheelId": "machine-mecha-model",
+          "outcomeIds": [
+            "machine-mecha-cardboard"
+          ]
+        }
+      ],
+      "centers": [
+        0.8,
+        1.1,
+        0.35,
+        0.7,
+        0.6,
+        0.5,
+        1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-ordinary",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "ordinary"
+          ]
+        }
+      ],
+      "centers": [
+        1.4,
+        1.6,
+        3.2,
+        1.5,
+        1,
+        0.5,
+        2.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-acid",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "acid"
+          ]
+        }
+      ],
+      "centers": [
+        2.2,
+        2.1,
+        3.5,
+        1.8,
+        1.9,
+        0.7,
+        3.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-poison",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "poison"
+          ]
+        }
+      ],
+      "centers": [
+        1.8,
+        2.2,
+        3.3,
+        2,
+        1.7,
+        0.6,
+        3.7
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-healing",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "healing"
+          ]
+        }
+      ],
+      "centers": [
+        1.2,
+        1.7,
+        3.7,
+        2.8,
+        1,
+        0.5,
+        4.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-metal",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "metal"
+          ]
+        }
+      ],
+      "centers": [
+        3.5,
+        1.2,
+        5.2,
+        1.6,
+        2.6,
+        1,
+        3.2
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-slime-elemental",
+      "familyId": "slime",
+      "when": [
+        {
+          "wheelId": "slime-type",
+          "outcomeIds": [
+            "elemental"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        3.5,
+        4,
+        2.4,
+        2.3,
+        0.6,
+        4.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-horse",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "horse"
+          ]
+        }
+      ],
+      "centers": [
+        4,
+        4.7,
+        3.8,
+        3.1,
+        3.5,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-jaguar",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "jaguar"
+          ]
+        }
+      ],
+      "centers": [
+        4.3,
+        5,
+        3.6,
+        3.1,
+        4.1,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-chicken",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "chicken"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        3.6,
+        2.4,
+        3.1,
+        2.5,
+        3.2,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-capybara",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "capybara"
+          ]
+        }
+      ],
+      "centers": [
+        2.8,
+        2.8,
+        3,
+        3.3,
+        2.4,
+        3.2,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-wolf",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "wolf"
+          ]
+        }
+      ],
+      "centers": [
+        3.8,
+        4.6,
+        3.4,
+        3.2,
+        3.8,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-tiger",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "tiger"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        4.6,
+        4,
+        3.1,
+        4.3,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-bear",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "bear"
+          ]
+        }
+      ],
+      "centers": [
+        4.9,
+        3.3,
+        4.8,
+        3.1,
+        4,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-bull",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "bull"
+          ]
+        }
+      ],
+      "centers": [
+        5,
+        3.5,
+        4.7,
+        3.1,
+        3.8,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-deer",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "deer"
+          ]
+        }
+      ],
+      "centers": [
+        3.1,
+        5,
+        3.1,
+        3.1,
+        3.1,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-rabbit",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "rabbit"
+          ]
+        }
+      ],
+      "centers": [
+        2.1,
+        4.7,
+        2.2,
+        3.1,
+        2.3,
+        3.1,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-elephant",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "elephant"
+          ]
+        }
+      ],
+      "centers": [
+        5.5,
+        2.9,
+        5.1,
+        3.3,
+        3.7,
+        3.4,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-centaur-goat",
+      "familyId": "centaur",
+      "when": [
+        {
+          "wheelId": "centaur-lower-body",
+          "outcomeIds": [
+            "goat"
+          ]
+        }
+      ],
+      "centers": [
+        3.2,
+        4,
+        3.5,
+        3.1,
+        3.2,
+        3.3,
+        2.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-cosmic-warrior-alien-x",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "alien-x"
+          ]
+        }
+      ],
+      "centers": [
+        9,
+        8.6,
+        8.8,
+        8.7,
+        6.6,
+        3.4,
+        8.5
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-cosmic-warrior-ultraman",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "ultraman"
+          ]
+        }
+      ],
+      "centers": [
+        6.7,
+        6.2,
+        6.4,
+        5.1,
+        6.7,
+        4.2,
+        6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-cosmic-warrior-saiyan",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "saiyan"
+          ]
+        }
+      ],
+      "centers": [
+        7.1,
+        7.2,
+        6.6,
+        4.2,
+        7.2,
+        3.6,
+        6.4
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-cosmic-warrior-green-lantern",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "green-lantern"
+          ]
+        }
+      ],
+      "centers": [
+        4.7,
+        6.4,
+        5.3,
+        6.2,
+        5.1,
+        4.7,
+        6.9
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-cosmic-warrior-silver-surfer",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "silver-surfer"
+          ]
+        }
+      ],
+      "centers": [
+        6.9,
+        7.8,
+        7.2,
+        6.7,
+        6.2,
+        3.7,
+        7.1
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger.",
+      "sizeResponse": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "prior-cosmic-warrior-saint",
+      "familyId": "cosmic-warrior",
+      "when": [
+        {
+          "wheelId": "cosmic-warrior-group",
+          "outcomeIds": [
+            "saint"
+          ]
+        }
+      ],
+      "centers": [
+        5.8,
+        6.1,
+        5.9,
+        4.8,
+        6.5,
+        3.9,
+        6
+      ],
+      "reason": "Authored subtype lore; direct rewards stay in a separate final ledger."
+    },
+    {
+      "id": "prior-legendary-warrior-leonardo-da-vinci",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "leonardo-da-vinci",
+            "nikola-tesla",
+            "thomas-edison",
+            "charles-babbage",
+            "zhuge-liang",
+            "sima-yi",
+            "chen-gong",
+            "paracelsus",
+            "xu-fu"
+          ]
+        }
+      ],
+      "centers": [
+        2.5,
+        2.7,
+        2.8,
+        6.9,
+        2.6,
+        3.8,
+        4.6
+      ],
+      "reason": "Editorial scholar theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-william-shakespeare",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "william-shakespeare",
+            "hans-andersen",
+            "mozart",
+            "antonio-salieri",
+            "marie-antoinette",
+            "yang-guifei"
+          ]
+        }
+      ],
+      "centers": [
+        2.3,
+        2.8,
+        2.5,
+        5.7,
+        2.1,
+        2.9,
+        4.4
+      ],
+      "reason": "Editorial artist theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-semar",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "semar",
+            "kresna",
+            "si-pahit-lidah",
+            "aji-saka"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        3.6,
+        4.5,
+        6.3,
+        4.2,
+        4.1,
+        6.4
+      ],
+      "reason": "Editorial mystic theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-merlin",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "merlin",
+            "helena-blavatsky",
+            "grigori-rasputin",
+            "xuanzang-sanzang",
+            "scathach"
+          ]
+        }
+      ],
+      "centers": [
+        3.4,
+        3.6,
+        4.5,
+        6.3,
+        4.2,
+        4.1,
+        6.4
+      ],
+      "reason": "Editorial mystic theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-bima",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "bima",
+            "gatotkaca",
+            "antareja",
+            "antasena",
+            "wisanggeni",
+            "baladewa",
+            "sri-asih",
+            "hanoman"
+          ]
+        }
+      ],
+      "centers": [
+        6.2,
+        4.9,
+        5.9,
+        3.9,
+        5.9,
+        5.2,
+        4.7
+      ],
+      "reason": "Editorial titan theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-heracles",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "heracles",
+            "beowulf",
+            "lu-bu"
+          ]
+        }
+      ],
+      "centers": [
+        6.2,
+        4.9,
+        5.9,
+        3.9,
+        5.9,
+        5.2,
+        4.7
+      ],
+      "reason": "Editorial titan theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-si-buta",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "si-buta",
+            "wiro-sableng"
+          ]
+        }
+      ],
+      "centers": [
+        4.6,
+        5.5,
+        4.5,
+        4.1,
+        6.4,
+        6.5,
+        3.6
+      ],
+      "reason": "Editorial duelist theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-sasaki-kojiro",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "sasaki-kojiro",
+            "miyamoto-musashi",
+            "okita-souji",
+            "li-shuwen",
+            "lancelot",
+            "cu-chulainn",
+            "achilles"
+          ]
+        }
+      ],
+      "centers": [
+        4.6,
+        5.5,
+        4.5,
+        4.1,
+        6.4,
+        6.5,
+        3.6
+      ],
+      "reason": "Editorial duelist theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-arjuna",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "arjuna",
+            "srikandi",
+            "rama",
+            "karna"
+          ]
+        }
+      ],
+      "centers": [
+        4.1,
+        4.8,
+        4,
+        4.8,
+        5.5,
+        6.4,
+        4.3
+      ],
+      "reason": "Editorial ranged theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-arash",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "arash",
+            "william-tell",
+            "robin-hood",
+            "tristan"
+          ]
+        }
+      ],
+      "centers": [
+        4.1,
+        4.8,
+        4,
+        4.8,
+        5.5,
+        6.4,
+        4.3
+      ],
+      "reason": "Editorial ranged theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-si-pitung",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "si-pitung",
+            "ken-arok"
+          ]
+        }
+      ],
+      "centers": [
+        3.5,
+        5.4,
+        3.3,
+        5.1,
+        5.4,
+        5.4,
+        3.7
+      ],
+      "reason": "Editorial stealth theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-fuma-kotaro",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "fuma-kotaro",
+            "mata-hari",
+            "jing-ke"
+          ]
+        }
+      ],
+      "centers": [
+        3.5,
+        5.4,
+        3.3,
+        5.1,
+        5.4,
+        5.4,
+        3.7
+      ],
+      "reason": "Editorial stealth theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-prabu-siliwangi",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-local-character",
+          "outcomeIds": [
+            "prabu-siliwangi",
+            "gajah-mada"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.5,
+        5.1,
+        6,
+        5.4,
+        5.7,
+        5.4
+      ],
+      "reason": "Editorial king theme; other heroes have explicit trained-hero baseline."
+    },
+    {
+      "id": "prior-legendary-warrior-arthur-pendragon",
+      "familyId": "legendary-warrior",
+      "when": [
+        {
+          "wheelId": "legend-imported-character",
+          "outcomeIds": [
+            "arthur-pendragon",
+            "gilgamesh",
+            "ozymandias",
+            "qin-shi-huang",
+            "charlemagne",
+            "iskandar"
+          ]
+        }
+      ],
+      "centers": [
+        5.1,
+        4.5,
+        5.1,
+        6,
+        5.4,
+        5.7,
+        5.4
+      ],
+      "reason": "Editorial king theme; other heroes have explicit trained-hero baseline."
+    }
+  ],
+  "archetypeProfiles": [
+    {
+      "id": "npc",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "slayer",
+      "shift": [
+        0.3,
+        0.1,
+        0.15,
+        0,
+        0.6,
+        0.5,
+        0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "disciple",
+      "shift": [
+        0,
+        0,
+        0,
+        0.2,
+        0.2,
+        0.25,
+        0.25
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "survivalist",
+      "shift": [
+        0.1,
+        0.15,
+        0.6,
+        0.1,
+        0.1,
+        0,
+        0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "archaeologist",
+      "shift": [
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0.1,
+        0.25
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "tamer",
+      "shift": [
+        0,
+        0.1,
+        0.1,
+        0.45,
+        0.1,
+        0,
+        0.6
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "alchemist",
+      "shift": [
+        0,
+        0,
+        0,
+        0.9,
+        -0.1,
+        0.15,
+        0.6
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "rider",
+      "shift": [
+        0,
+        0.2,
+        0.1,
+        0.2,
+        0.2,
+        0.25,
+        0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "priest",
+      "shift": [
+        0,
+        0,
+        0.1,
+        0.45,
+        -0.1,
+        -0.1,
+        0.9
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "gambler",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "goliath",
+      "shift": [
+        0.7,
+        -0.15,
+        0.25,
+        0,
+        0.25,
+        0.1,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "pirate",
+      "shift": [
+        0.1,
+        0.2,
+        0.1,
+        0.25,
+        0.6,
+        0.65,
+        0.05
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "gladiator",
+      "shift": [
+        0.25,
+        0.2,
+        0.2,
+        0,
+        0.8,
+        0.75,
+        -0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "mage",
+      "shift": [
+        -0.1,
+        0,
+        0,
+        0.9,
+        0,
+        -0.2,
+        1.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "royal",
+      "shift": [
+        0.1,
+        0.1,
+        0.1,
+        0.5,
+        0.25,
+        0.35,
+        0.35
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "apostle",
+      "shift": [
+        0,
+        0,
+        0.1,
+        0.5,
+        0,
+        0.1,
+        0.8
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "mutant",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "resilient",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "equaliser",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "assassin",
+      "shift": [
+        0,
+        0.65,
+        0,
+        0.3,
+        0.8,
+        0.7,
+        0.15
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "paladin",
+      "shift": [
+        0.25,
+        0,
+        0.3,
+        0.25,
+        0.5,
+        0.5,
+        0.7
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "druid",
+      "shift": [
+        0,
+        0.1,
+        0.2,
+        0.55,
+        0,
+        -0.1,
+        0.85
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "cursed",
+      "shift": [
+        0,
+        0,
+        0.1,
+        0.1,
+        0,
+        0,
+        0.5
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "colossal-warmech",
+      "shift": [
+        0,
+        0,
+        0,
+        0.45,
+        0.1,
+        0.65,
+        0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "vessel",
+      "shift": [
+        0,
+        0,
+        0.1,
+        0.15,
+        0,
+        0,
+        0.5
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "warlord",
+      "shift": [
+        0.1,
+        0,
+        0.15,
+        0.8,
+        0.4,
+        0.4,
+        0.1
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "primordial-champion",
+      "shift": [
+        0.3,
+        0.1,
+        0.3,
+        0.3,
+        0.2,
+        0.2,
+        0.6
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    },
+    {
+      "id": "hybrid",
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored lore/training likelihood, not automatic duplication of final bonuses."
+    }
+  ],
+  "evidenceRules": [
+    {
+      "id": "mage-master",
+      "version": "1",
+      "group": "mage-form",
+      "when": [
+        "archetype:mage",
+        "result:mage-master-sihir-chance:master-sihir"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0.7
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "goliath-rage",
+      "version": "1",
+      "group": "goliath-form",
+      "when": [
+        "archetype:goliath",
+        "result:goliath-berserker-chance:berserker"
+      ],
+      "shift": [
+        0.4,
+        0.1,
+        0.2,
+        -0.35,
+        0.4,
+        0,
+        -0.1
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "paladin-nirvana",
+      "version": "1",
+      "group": "paladin-form",
+      "when": [
+        "archetype:paladin",
+        "result:paladin-ascension-chance:nirvana-high-paladin"
+      ],
+      "shift": [
+        0.2,
+        0.2,
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.7
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-king",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:king"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0.4,
+        0.1,
+        0.1,
+        0.5
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-queen",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:queen"
+      ],
+      "shift": [
+        0.15,
+        0.2,
+        0.1,
+        0.4,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-bishop",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:bishop"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0.3,
+        0,
+        0,
+        0.5
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-knight",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:knight"
+      ],
+      "shift": [
+        0.1,
+        0.3,
+        0.1,
+        0,
+        0.4,
+        0.4,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-rook",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:rook"
+      ],
+      "shift": [
+        0.2,
+        -0.1,
+        0.4,
+        0,
+        0.2,
+        0.1,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "royal-pawn",
+      "version": "1",
+      "group": "royal-piece",
+      "when": [
+        "archetype:royal",
+        "result:royal-chess-piece:pawn"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "warmech-brawler",
+      "version": "1",
+      "group": "warmech-class",
+      "when": [
+        "archetype:colossal-warmech",
+        "result:colossal-warmech-class:brawler"
+      ],
+      "shift": [
+        0.2,
+        0,
+        0.1,
+        0,
+        0.3,
+        0.2,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "warmech-fortress",
+      "version": "1",
+      "group": "warmech-class",
+      "when": [
+        "archetype:colossal-warmech",
+        "result:colossal-warmech-class:fortress"
+      ],
+      "shift": [
+        0,
+        -0.1,
+        0.4,
+        0.1,
+        0,
+        0.15,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "warmech-blitz",
+      "version": "1",
+      "group": "warmech-class",
+      "when": [
+        "archetype:colossal-warmech",
+        "result:colossal-warmech-class:blitz"
+      ],
+      "shift": [
+        0,
+        0.4,
+        0,
+        0.1,
+        0.15,
+        0.2,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "warmech-artillery",
+      "version": "1",
+      "group": "warmech-class",
+      "when": [
+        "archetype:colossal-warmech",
+        "result:colossal-warmech-class:artillery"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0.4,
+        0.1,
+        0.3,
+        0
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "element-fire",
+      "version": "1",
+      "group": "element-fire",
+      "when": [
+        "result:element-universal:fire"
+      ],
+      "shift": [
+        0.15,
+        0.1,
+        0,
+        0,
+        0.15,
+        0,
+        0.15
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "element-water",
+      "version": "1",
+      "group": "element-water",
+      "when": [
+        "result:element-universal:water"
+      ],
+      "shift": [
+        0,
+        0.2,
+        0.1,
+        0.1,
+        0,
+        0,
+        0.2
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "element-earth",
+      "version": "1",
+      "group": "element-earth",
+      "when": [
+        "result:element-universal:earth"
+      ],
+      "shift": [
+        0.25,
+        -0.15,
+        0.3,
+        0,
+        0.1,
+        0,
+        0.1
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "element-wind",
+      "version": "1",
+      "group": "element-wind",
+      "when": [
+        "result:element-universal:wind"
+      ],
+      "shift": [
+        -0.1,
+        0.4,
+        -0.05,
+        0.1,
+        0.1,
+        0,
+        0.2
+      ],
+      "reason": "Editable event likelihood; no direct bonus."
+    },
+    {
+      "id": "skeleton-body",
+      "version": "1",
+      "group": "undead-origin-form",
+      "when": [
+        "result:lelembut-imported-type:skeleton"
+      ],
+      "shift": [
+        0.05,
+        0,
+        0.35,
+        -0.1,
+        0.1,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "zombie-body",
+      "version": "1",
+      "group": "undead-origin-form",
+      "when": [
+        "result:lelembut-imported-type:zombie"
+      ],
+      "shift": [
+        0.15,
+        -0.45,
+        0.3,
+        -0.65,
+        -0.1,
+        -0.1,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-0",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-0"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-10",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-10"
+      ],
+      "shift": [
+        0.025,
+        0.015,
+        0.020000000000000004,
+        -0.020000000000000004,
+        0.034999999999999996,
+        0,
+        0.03
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-20",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-20"
+      ],
+      "shift": [
+        0.05,
+        0.03,
+        0.04000000000000001,
+        -0.04000000000000001,
+        0.06999999999999999,
+        0,
+        0.06
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-30",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-30"
+      ],
+      "shift": [
+        0.075,
+        0.045,
+        0.06,
+        -0.06,
+        0.105,
+        0,
+        0.09
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-40",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-40"
+      ],
+      "shift": [
+        0.1,
+        0.06,
+        0.08000000000000002,
+        -0.08000000000000002,
+        0.13999999999999999,
+        0,
+        0.12
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-50",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-50"
+      ],
+      "shift": [
+        0.125,
+        0.075,
+        0.1,
+        -0.1,
+        0.175,
+        0,
+        0.15
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-60",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-60"
+      ],
+      "shift": [
+        0.15,
+        0.09,
+        0.12,
+        -0.12,
+        0.21,
+        0,
+        0.18
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-70",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-70"
+      ],
+      "shift": [
+        0.175,
+        0.105,
+        0.13999999999999999,
+        -0.13999999999999999,
+        0.24499999999999997,
+        0,
+        0.21
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-80",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-80"
+      ],
+      "shift": [
+        0.2,
+        0.12,
+        0.16000000000000003,
+        -0.16000000000000003,
+        0.27999999999999997,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-90",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-90"
+      ],
+      "shift": [
+        0.225,
+        0.135,
+        0.18000000000000002,
+        -0.18000000000000002,
+        0.315,
+        0,
+        0.27
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "symbiote-control-100",
+      "version": "1",
+      "group": "symbiote-control",
+      "when": [
+        "race:symbiote",
+        "result:symbiote-takeover:takeover-100"
+      ],
+      "shift": [
+        0.25,
+        0.15,
+        0.2,
+        -0.2,
+        0.35,
+        0,
+        0.3
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-isekai",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:isekai"
+      ],
+      "shift": [
+        0.15,
+        0.1,
+        0.15,
+        0.1,
+        0.2,
+        0.1,
+        0.65
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-fantasy",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:fantasy"
+      ],
+      "shift": [
+        0.1,
+        0.1,
+        0.1,
+        0.15,
+        0.15,
+        0.2,
+        0.45
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-romance",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:romance"
+      ],
+      "shift": [
+        0,
+        0.1,
+        0,
+        0.25,
+        -0.1,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-sci-fi",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:sci-fi"
+      ],
+      "shift": [
+        0.1,
+        0.1,
+        0.15,
+        0.65,
+        0.1,
+        0.45,
+        0.15
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-action",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:action"
+      ],
+      "shift": [
+        0.35,
+        0.25,
+        0.2,
+        0.1,
+        0.55,
+        0.4,
+        0.1
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-sport",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:sport"
+      ],
+      "shift": [
+        0.1,
+        0.45,
+        0.2,
+        0.2,
+        0.25,
+        0.05,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "anime-mc-slice-of-life",
+      "version": "1",
+      "group": "anime-mc-genre",
+      "when": [
+        "race:anime-lineage",
+        "result:anime-role:mc",
+        "result:anime-genre:slice-of-life"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "ultra-red",
+      "version": "1",
+      "group": "ultra-color",
+      "when": [
+        "result:cosmic-warrior-group:ultraman",
+        "result:ultraman-color:red"
+      ],
+      "shift": [
+        0.3,
+        0,
+        0.1,
+        0,
+        0.2,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "ultra-blue",
+      "version": "1",
+      "group": "ultra-color",
+      "when": [
+        "result:cosmic-warrior-group:ultraman",
+        "result:ultraman-color:blue"
+      ],
+      "shift": [
+        0,
+        0.3,
+        0,
+        0.1,
+        0,
+        0,
+        0.15
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "ultra-mixed",
+      "version": "1",
+      "group": "ultra-color",
+      "when": [
+        "result:cosmic-warrior-group:ultraman",
+        "result:ultraman-color:mixed"
+      ],
+      "shift": [
+        0.15,
+        0.15,
+        0.05,
+        0,
+        0.1,
+        0,
+        0.05
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-andromeda",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-andromeda"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-bear",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-bear"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-chameleon",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-chameleon"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-cygnus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-cygnus"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-dragon",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-dragon"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-hydra",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-hydra"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-lionet",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-lionet"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-pegasus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-pegasus"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-phoenix",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-phoenix"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-unicorn",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-unicorn"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-bronze-wolf",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:bronze-wolf"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-auriga",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-auriga"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-centaurus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-centaurus"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-cerberus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-cerberus"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-cetus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-cetus"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-crow",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-crow"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-eagle",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-eagle"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-heracles",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-heracles"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-hound",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-hound"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-lizard",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-lizard"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-lyra",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-lyra"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-ophiuchus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-ophiuchus"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-silver-perseus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:silver-perseus"
+      ],
+      "shift": [
+        0.1,
+        0.15,
+        0.2,
+        0,
+        0.25,
+        0,
+        0.2
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-aquarius",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-aquarius"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-aries",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-aries"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-cancer",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-cancer"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-capricorn",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-capricorn"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-gemini",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-gemini"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-leo",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-leo"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-libra",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-libra"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-pisces",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-pisces"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-sagittarius",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-sagittarius"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-scorpio",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-scorpio"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-taurus",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-taurus"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "saint-gold-virgo",
+      "version": "1",
+      "group": "saint-armor",
+      "when": [
+        "result:cosmic-warrior-group:saint",
+        "result:saint-cosmic-armor:gold-virgo"
+      ],
+      "shift": [
+        0.2,
+        0.3,
+        0.4,
+        0,
+        0.5,
+        0,
+        0.4
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-30",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-30"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-40",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-40"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-50",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-50"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-30",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-30"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-40",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-40"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-50",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-50"
+      ],
+      "shift": [
+        0.24,
+        0.09,
+        0.21,
+        0.15,
+        0.09,
+        0,
+        0.24
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-60",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-60"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-70",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-70"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-80",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-80"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-60",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-60"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-70",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-70"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-80",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-80"
+      ],
+      "shift": [
+        0.48,
+        0.18,
+        0.42,
+        0.3,
+        0.18,
+        0,
+        0.48
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-90",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-90"
+      ],
+      "shift": [
+        0.8,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0,
+        0.8
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-god-100",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:god",
+        "result:vessel-compatibility:compatibility-100"
+      ],
+      "shift": [
+        0.8,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0,
+        0.8
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-90",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-90"
+      ],
+      "shift": [
+        0.8,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0,
+        0.8
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "vessel-demon-lord-100",
+      "version": "1",
+      "group": "vessel-compatibility",
+      "when": [
+        "archetype:vessel",
+        "result:vessel-patron:demon-lord",
+        "result:vessel-compatibility:compatibility-100"
+      ],
+      "shift": [
+        0.8,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0,
+        0.8
+      ],
+      "reason": "Authored context likelihood; separate from all flat final rewards."
+    },
+    {
+      "id": "backstory-lore-legend-trained",
+      "version": "1",
+      "group": "backstory-lore",
+      "when": [
+        "backstory:legend-trained"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "reason": "Approved qualitative Backstory lore; authored adjustable0.35 raw-center likelihood shift, not its separate final numeric bonus."
+    },
+    {
+      "id": "backstory-lore-self-made",
+      "version": "1",
+      "group": "backstory-lore",
+      "when": [
+        "backstory:self-made"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.35,
+        0
+      ],
+      "reason": "Approved qualitative Backstory lore; authored adjustable0.35 raw-center likelihood shift, not its separate final numeric bonus."
+    },
+    {
+      "id": "backstory-lore-disgraced-warrior",
+      "version": "1",
+      "group": "backstory-lore",
+      "when": [
+        "backstory:disgraced-warrior"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0.35,
+        0,
+        0
+      ],
+      "reason": "Approved qualitative Backstory lore; authored adjustable0.35 raw-center likelihood shift, not its separate final numeric bonus."
+    },
+    {
+      "id": "backstory-lore-runaway",
+      "version": "1",
+      "group": "backstory-lore",
+      "when": [
+        "backstory:runaway"
+      ],
+      "shift": [
+        0,
+        0.35,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Approved qualitative Backstory lore; authored adjustable0.35 raw-center likelihood shift, not its separate final numeric bonus."
+    },
+    {
+      "id": "backstory-lore-hard-way",
+      "version": "1",
+      "group": "backstory-lore",
+      "when": [
+        "backstory:hard-way"
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0.35,
+        0,
+        0
+      ],
+      "reason": "Approved qualitative Backstory lore; authored adjustable0.35 raw-center likelihood shift, not its separate final numeric bonus."
+    },
+    {
+      "id": "element-lightning",
+      "version": "1",
+      "group": "element-lightning",
+      "when": [
+        "result:element-universal:lightning"
+      ],
+      "shift": [
+        0.1,
+        0.35,
+        0,
+        0.05,
+        0.1,
+        0,
+        0.2
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-ice",
+      "version": "1",
+      "group": "element-ice",
+      "when": [
+        "result:element-universal:ice"
+      ],
+      "shift": [
+        0.05,
+        -0.1,
+        0.2,
+        0.1,
+        0.1,
+        0,
+        0.2
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-metal",
+      "version": "1",
+      "group": "element-metal",
+      "when": [
+        "result:element-universal:metal"
+      ],
+      "shift": [
+        0.2,
+        -0.1,
+        0.25,
+        0.05,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-plant",
+      "version": "1",
+      "group": "element-plant",
+      "when": [
+        "result:element-universal:plant"
+      ],
+      "shift": [
+        0,
+        0.1,
+        0.1,
+        0.1,
+        0,
+        0,
+        0.2
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-light",
+      "version": "1",
+      "group": "element-light",
+      "when": [
+        "result:element-universal:light"
+      ],
+      "shift": [
+        0,
+        0.15,
+        0,
+        0.15,
+        0.05,
+        0,
+        0.25
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-darkness",
+      "version": "1",
+      "group": "element-darkness",
+      "when": [
+        "result:element-universal:darkness"
+      ],
+      "shift": [
+        0.05,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0,
+        0.25
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-shadow",
+      "version": "1",
+      "group": "element-shadow",
+      "when": [
+        "result:element-universal:shadow"
+      ],
+      "shift": [
+        0,
+        0.25,
+        0,
+        0.1,
+        0.2,
+        0,
+        0.2
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    },
+    {
+      "id": "element-void",
+      "version": "1",
+      "group": "element-void",
+      "when": [
+        "result:element-universal:void"
+      ],
+      "shift": [
+        0.15,
+        0.05,
+        0.15,
+        0.2,
+        0.05,
+        0,
+        0.4
+      ],
+      "reason": "Authored small element-specific likelihood in seven distinct stat/mastery axes; not a flat bonus or empirical observation."
+    }
+  ],
+  "raceResultWheels": {
+    "demon": {
+      "abyssal-axiom-type": [
+        "asura",
+        "demon-lord",
+        "devil",
+        "fallen-angel",
+        "ifrit",
+        "imp",
+        "ordinary-demon",
+        "setan",
+        "sinner",
+        "succubus-incubus"
+      ],
+      "setan-type": [
+        "asura",
+        "ifrit",
+        "imp",
+        "succubus"
+      ],
+      "seven-deadly-sin": [
+        "envy",
+        "gluttony",
+        "greed",
+        "lust",
+        "pride",
+        "sloth",
+        "wrath"
+      ],
+      "follower-count": [
+        "followers-0",
+        "followers-10",
+        "followers-100",
+        "followers-1000",
+        "followers-10000",
+        "followers-100000",
+        "followers-1000000",
+        "followers-10000000",
+        "followers-100000000"
+      ]
+    },
+    "anime-lineage": {
+      "anime-genre": [
+        "action",
+        "fantasy",
+        "isekai",
+        "romance",
+        "sci-fi",
+        "slice-of-life",
+        "sport"
+      ],
+      "anime-role": [
+        "mc",
+        "npc"
+      ],
+      "anime-romance-ending": [
+        "digantung",
+        "harem",
+        "ntr",
+        "pacaran",
+        "tertolak"
+      ],
+      "anime-harem-count": [
+        "girlfriend-count-1",
+        "girlfriend-count-2",
+        "girlfriend-count-3",
+        "girlfriend-count-4",
+        "girlfriend-count-5"
+      ],
+      "anime-scifi-role": [
+        "cyborg",
+        "pilot",
+        "technician"
+      ],
+      "anime-race-type": [
+        "half-demon",
+        "half-ghoul",
+        "luffy",
+        "naruto",
+        "saiyan",
+        "shinigami",
+        "slime"
+      ],
+      "isekai-cheat-skill": [
+        "isekai-cheat-8thson",
+        "isekai-cheat-alchemist",
+        "isekai-cheat-aristocrat",
+        "isekai-cheat-assassin",
+        "isekai-cheat-average",
+        "isekai-cheat-beginning",
+        "isekai-cheat-bookworm",
+        "isekai-cheat-cautious",
+        "isekai-cheat-cleric",
+        "isekai-cheat-company",
+        "isekai-cheat-cooking",
+        "isekai-cheat-deathmarch",
+        "isekai-cheat-drugstore",
+        "isekai-cheat-eminence",
+        "isekai-cheat-evil-lord",
+        "isekai-cheat-exorcist",
+        "isekai-cheat-fluffy",
+        "isekai-cheat-fruit",
+        "isekai-cheat-gold",
+        "isekai-cheat-grace",
+        "isekai-cheat-grandchild",
+        "isekai-cheat-grimgar",
+        "isekai-cheat-instant-death",
+        "isekai-cheat-isekai-life",
+        "isekai-cheat-journey",
+        "isekai-cheat-konosuba",
+        "isekai-cheat-level1",
+        "isekai-cheat-level2",
+        "isekai-cheat-level99",
+        "isekai-cheat-loner",
+        "isekai-cheat-magician",
+        "isekai-cheat-million",
+        "isekai-cheat-moon",
+        "isekai-cheat-mushoku",
+        "isekai-cheat-mynoghra",
+        "isekai-cheat-no-game",
+        "isekai-cheat-overlord",
+        "isekai-cheat-pharmacy",
+        "isekai-cheat-pig",
+        "isekai-cheat-potions",
+        "isekai-cheat-problem-children",
+        "isekai-cheat-prodigies",
+        "isekai-cheat-ragnarok",
+        "isekai-cheat-realist",
+        "isekai-cheat-rezero",
+        "isekai-cheat-saint",
+        "isekai-cheat-shield",
+        "isekai-cheat-shirohiyo",
+        "isekai-cheat-skeleton",
+        "isekai-cheat-slime",
+        "isekai-cheat-slimes300",
+        "isekai-cheat-smartphone",
+        "isekai-cheat-spider",
+        "isekai-cheat-spirits",
+        "isekai-cheat-strongest",
+        "isekai-cheat-summoner",
+        "isekai-cheat-sweet",
+        "isekai-cheat-sword",
+        "isekai-cheat-tanya",
+        "isekai-cheat-uglymug",
+        "isekai-cheat-vending",
+        "isekai-cheat-villainess",
+        "isekai-cheat-water",
+        "isekai-cheat-zenshu"
+      ],
+      "tech-weapon": [
+        "scifi-tech-banana-launcher",
+        "scifi-tech-capture-net",
+        "scifi-tech-cryo-gun",
+        "scifi-tech-drone-swarm",
+        "scifi-tech-emp-launcher",
+        "scifi-tech-energy-whip",
+        "scifi-tech-gravity-gun",
+        "scifi-tech-hardlight-projector",
+        "scifi-tech-hologram-decoy",
+        "scifi-tech-ion-blaster",
+        "scifi-tech-laser-sword",
+        "scifi-tech-magnetic-launcher",
+        "scifi-tech-monowire",
+        "scifi-tech-nanobot-launcher",
+        "scifi-tech-plasma-rifle",
+        "scifi-tech-railgun",
+        "scifi-tech-smart-missile",
+        "scifi-tech-sonic-cannon",
+        "scifi-tech-teleport-anchor",
+        "scifi-tech-tesla-gauntlet"
+      ],
+      "anime-mecha": [
+        "anime-mecha-arbalest",
+        "anime-mecha-dino-megazord",
+        "anime-mecha-escaflowne",
+        "anime-mecha-eva01",
+        "anime-mecha-gaogaigar",
+        "anime-mecha-getter",
+        "anime-mecha-gipsy-danger",
+        "anime-mecha-gunbuster",
+        "anime-mecha-gurren",
+        "anime-mecha-ingram",
+        "anime-mecha-lancelot",
+        "anime-mecha-liger-zero",
+        "anime-mecha-mazinger",
+        "anime-mecha-nirvash",
+        "anime-mecha-rx78",
+        "anime-mecha-solar-aquarion",
+        "anime-mecha-strelitzia",
+        "anime-mecha-valkyrie",
+        "anime-mecha-voltron",
+        "anime-mecha-zanda-cross"
+      ]
+    },
+    "mythical-beast": {
+      "dragon-form": [
+        "amphiptere",
+        "drake",
+        "eastern",
+        "lindwyrm",
+        "sea-serpent",
+        "western",
+        "wyrm",
+        "wyvern"
+      ],
+      "mythical-beast-origin": [
+        "imported",
+        "local"
+      ],
+      "mythical-beast-local-type": [
+        "barong",
+        "garuda",
+        "kinnara",
+        "kuda-sembrani",
+        "lembuswana",
+        "makara",
+        "naga",
+        "singa-ambara-raja",
+        "singa-barong-reog",
+        "warak-ngendog"
+      ],
+      "mythical-beast-imported-type": [
+        "cerberus",
+        "chimera",
+        "dragon",
+        "griffin",
+        "hydra",
+        "pegasus",
+        "phoenix",
+        "unicorn"
+      ],
+      "element-universal": [
+        "darkness",
+        "earth",
+        "fire",
+        "ice",
+        "light",
+        "lightning",
+        "metal",
+        "plant",
+        "shadow",
+        "void",
+        "water",
+        "wind"
+      ]
+    },
+    "hybrid": {
+      "hybrid-first-race": [
+        "anime-lineage",
+        "beastfolk",
+        "demon",
+        "dwarf",
+        "elemental",
+        "elf",
+        "fae",
+        "goblinoid",
+        "golem",
+        "heavenly-principle",
+        "human",
+        "lelembut",
+        "mythical-beast",
+        "raksasa",
+        "symbiote"
+      ],
+      "hybrid-second-race": [
+        "anime-lineage",
+        "beastfolk",
+        "demon",
+        "dwarf",
+        "elemental",
+        "elf",
+        "fae",
+        "goblinoid",
+        "golem",
+        "heavenly-principle",
+        "human",
+        "lelembut",
+        "mythical-beast",
+        "raksasa",
+        "symbiote"
+      ],
+      "hybrid-fusion-stability": [
+        "stable",
+        "unstable"
+      ],
+      "hybrid-dominance": [
+        "balanced",
+        "first-dominant",
+        "second-dominant"
+      ]
+    },
+    "legendary-warrior": {
+      "legend-origin": [
+        "imported",
+        "local"
+      ],
+      "legend-local-character": [
+        "abimanyu",
+        "aji-saka",
+        "antareja",
+        "antasena",
+        "arjuna",
+        "baladewa",
+        "bima",
+        "ciung-wanara",
+        "cut-nyak-dien",
+        "gajah-mada",
+        "gatotkaca",
+        "gundala",
+        "hanoman",
+        "jaka-tingkir",
+        "karna",
+        "ken-arok",
+        "kresna",
+        "prabu-siliwangi",
+        "raden-wijaya",
+        "rama",
+        "semar",
+        "si-buta",
+        "si-pahit-lidah",
+        "si-pitung",
+        "sri-asih",
+        "srikandi",
+        "sultan-hasanuddin",
+        "virgo",
+        "wiro-sableng",
+        "wisanggeni"
+      ],
+      "legend-imported-character": [
+        "aang",
+        "achilles",
+        "antonio-salieri",
+        "aragorn",
+        "arash",
+        "arthur-pendragon",
+        "ashoka",
+        "attila",
+        "bartholomew-roberts",
+        "ben-tennyson",
+        "beowulf",
+        "black-rx",
+        "boudica",
+        "charlemagne",
+        "charles-babbage",
+        "chen-gong",
+        "chevalier-deon",
+        "christopher-columbus",
+        "cleopatra",
+        "cu-chulainn",
+        "dante",
+        "edward-teach",
+        "enkidu",
+        "ezio",
+        "florence-nightingale",
+        "francis-drake",
+        "fuma-kotaro",
+        "gao-changgong",
+        "gawain",
+        "geralt",
+        "geronimo",
+        "gilgamesh",
+        "grigori-rasputin",
+        "hans-andersen",
+        "harry-potter",
+        "hector",
+        "helena-blavatsky",
+        "heracles",
+        "iskandar",
+        "jeanne-darc",
+        "jing-ke",
+        "julius-caesar",
+        "kratos",
+        "lancelot",
+        "leonardo",
+        "leonardo-da-vinci",
+        "leonidas",
+        "li-shuwen",
+        "link",
+        "lu-bu",
+        "luke-skywalker",
+        "marie-antoinette",
+        "mata-hari",
+        "medusa",
+        "merlin",
+        "minamoto-raikou",
+        "miyamoto-musashi",
+        "mordred",
+        "mozart",
+        "napoleon",
+        "nero-claudius",
+        "nikola-tesla",
+        "oda-nobunaga",
+        "odysseus",
+        "okita-souji",
+        "optimus-prime",
+        "ozymandias",
+        "paracelsus",
+        "percy-jackson",
+        "po",
+        "qin-liangyu",
+        "qin-shi-huang",
+        "richard-i",
+        "robin-hood",
+        "roland",
+        "sasaki-kojiro",
+        "scathach",
+        "scorpion",
+        "siegfried",
+        "sima-yi",
+        "spartacus",
+        "spider-man",
+        "superman",
+        "takeda-shingen",
+        "thomas-edison",
+        "tommy-oliver",
+        "tomoe-gozen",
+        "tristan",
+        "uesugi-kenshin",
+        "ultraman",
+        "ushiwakamaru",
+        "vlad-iii",
+        "william-shakespeare",
+        "william-tell",
+        "wu-zetian",
+        "xu-fu",
+        "xuanzang-sanzang",
+        "yang-guifei",
+        "zenobia",
+        "zhuge-liang"
+      ]
+    },
+    "machine": {
+      "machine-type": [
+        "ai",
+        "android",
+        "cyborg",
+        "household-appliance",
+        "mecha",
+        "nanobot",
+        "transformer"
+      ],
+      "machine-appliance-item": [
+        "air-conditioner",
+        "air-fryer",
+        "blender",
+        "coffee-machine",
+        "electric-fan",
+        "electric-iron",
+        "electric-kettle",
+        "electric-oven",
+        "hair-dryer",
+        "induction-stove",
+        "microwave",
+        "mixer",
+        "refrigerator",
+        "rice-cooker",
+        "robot-vacuum",
+        "television",
+        "toaster",
+        "vacuum-cleaner",
+        "washing-machine",
+        "water-dispenser"
+      ],
+      "power-android": [
+        "android-autotune-voice",
+        "android-disco-lights",
+        "android-electric-discharge",
+        "android-energy-absorption",
+        "android-energy-force-field",
+        "android-hologram-projection",
+        "android-laser-eye",
+        "android-local-hotspot",
+        "android-magnetism-control",
+        "android-power-negation",
+        "android-receipt-printing",
+        "android-sonic-blast"
+      ],
+      "cyborg-weapon": [
+        "cyborg-arm-cannon",
+        "cyborg-electric-fist",
+        "cyborg-flamethrower-arm",
+        "cyborg-grappling-hook-arm",
+        "cyborg-laser-blade",
+        "cyborg-railgun-arm",
+        "cyborg-receipt-printer-chest",
+        "cyborg-retractable-claws",
+        "cyborg-selfie-stick-arm",
+        "cyborg-shoulder-missile-launcher",
+        "cyborg-stapler-arm",
+        "cyborg-thumb-usb"
+      ],
+      "machine-mecha-model": [
+        "machine-mecha-bakso-cart",
+        "machine-mecha-cardboard",
+        "machine-mecha-gipsy-danger",
+        "machine-mecha-gurren-lagann",
+        "machine-mecha-mazinger-z",
+        "machine-mecha-mecha-probe",
+        "machine-mecha-mechagodzilla",
+        "machine-mecha-megazord",
+        "machine-mecha-odong-odong",
+        "machine-mecha-rx78",
+        "machine-mecha-voltron",
+        "machine-mecha-water-jug"
+      ],
+      "machine-transformer-form": [
+        "machine-transformer-angkot",
+        "machine-transformer-bajaj",
+        "machine-transformer-bakso-cart",
+        "machine-transformer-fighter-jet",
+        "machine-transformer-helicopter",
+        "machine-transformer-high-speed-train",
+        "machine-transformer-odong-odong",
+        "machine-transformer-racing-bike",
+        "machine-transformer-sports-car",
+        "machine-transformer-submarine",
+        "machine-transformer-tank",
+        "machine-transformer-trailer-truck"
+      ],
+      "machine-nanobot-model": [
+        "machine-nanobot-anti-dandruff",
+        "machine-nanobot-armor",
+        "machine-nanobot-blade",
+        "machine-nanobot-builder",
+        "machine-nanobot-deodorant",
+        "machine-nanobot-dust-remover",
+        "machine-nanobot-medic",
+        "machine-nanobot-mimic",
+        "machine-nanobot-saboteur",
+        "machine-nanobot-scout",
+        "machine-nanobot-shield",
+        "machine-nanobot-tooth-cleaner"
+      ]
+    },
+    "primordial": {
+      "primordial-identity": [
+        "amun",
+        "apsu",
+        "atum",
+        "chaos",
+        "gaia",
+        "khepri",
+        "namma",
+        "neith",
+        "ptah",
+        "tiamat",
+        "ymir"
+      ]
+    },
+    "symbiote": {
+      "symbiote-takeover": [
+        "takeover-0",
+        "takeover-10",
+        "takeover-100",
+        "takeover-20",
+        "takeover-30",
+        "takeover-40",
+        "takeover-50",
+        "takeover-60",
+        "takeover-70",
+        "takeover-80",
+        "takeover-90"
+      ],
+      "power-symbiote": [
+        "symbiote-blade-morph",
+        "symbiote-body-stretch",
+        "symbiote-camouflage",
+        "symbiote-clone",
+        "symbiote-hive-link",
+        "symbiote-organic-web",
+        "symbiote-regeneration",
+        "symbiote-sense",
+        "symbiote-shield-morph",
+        "symbiote-tendril-control",
+        "symbiote-venom-spit",
+        "symbiote-wall-crawl"
+      ]
+    },
+    "elf": {
+      "elf-type": [
+        "astral-elf",
+        "blood-elf",
+        "dark-elf",
+        "fey-elf",
+        "forest-elf",
+        "high-elf",
+        "sea-elf",
+        "shadow-elf"
+      ],
+      "sea-elf-form": [
+        "atlantean-warrior",
+        "putri-duyung"
+      ],
+      "fey-elf-season": [
+        "autumn",
+        "spring",
+        "summer",
+        "winter"
+      ],
+      "power-holy": [
+        "divine-miracle",
+        "divine-restoration",
+        "healing-touch",
+        "holy-arrow",
+        "holy-shield",
+        "holy-spark",
+        "judgment-bolt",
+        "purify",
+        "resurrection",
+        "sacred-flame",
+        "sanctuary",
+        "seraph-form"
+      ],
+      "power-cursed": [
+        "abyss-domain",
+        "bad-luck",
+        "causality-curse",
+        "curse-transfer",
+        "death-hex",
+        "demonic-possession",
+        "devil-avatar",
+        "devils-whisper",
+        "eternal-damnation",
+        "fate-blight",
+        "fear-glare",
+        "hellfire",
+        "hex-mark",
+        "hiccup-hex",
+        "infernal-claw",
+        "infernal-sovereignty",
+        "itch-curse",
+        "life-drain",
+        "nightmare-prison",
+        "soul-shackles",
+        "stench-curse",
+        "torment-chains"
+      ],
+      "power-blood": [
+        "blood-claw",
+        "blood-dominion",
+        "blood-drain",
+        "blood-needle",
+        "blood-plague",
+        "blood-puppetry",
+        "blood-sense",
+        "blood-shield",
+        "blood-whip",
+        "crimson-legion",
+        "crimson-mist",
+        "crimson-regeneration"
+      ]
+    },
+    "dwarf": {
+      "dwarf-gnome-type": [
+        "dwarf",
+        "gnome"
+      ],
+      "dwarf-armor-count": [
+        "armor-count-1",
+        "armor-count-2",
+        "armor-count-3",
+        "armor-count-4",
+        "armor-count-5"
+      ],
+      "dwarf-armor-piece": [
+        "body-armor",
+        "boots",
+        "gloves",
+        "helmet",
+        "leggings"
+      ],
+      "gnome-tech": [
+        "alchemy-sprayer",
+        "clockwork-decoy",
+        "clockwork-scorpion",
+        "clockwork-spider",
+        "clockwork-turret",
+        "drill-lance",
+        "firefly-bomb",
+        "gear-disc-launcher",
+        "gearblade",
+        "glue-sprayer",
+        "grapple-launcher",
+        "illusion-projector",
+        "magnet-glove",
+        "net-launcher",
+        "shrink-ray",
+        "smoke-bomb-launcher",
+        "spring-puncher",
+        "spring-trap",
+        "steam-hammer",
+        "stun-whistle"
+      ]
+    },
+    "goblinoid": {
+      "goblin-orc-troll-type": [
+        "goblin",
+        "orc",
+        "troll"
+      ],
+      "goblinoid-army-count": [
+        "army-0",
+        "army-100",
+        "army-1000",
+        "army-10000",
+        "army-20",
+        "army-5"
+      ],
+      "goblin-position": [
+        "bos",
+        "kacung"
+      ],
+      "orc-role": [
+        "oni",
+        "orc-general",
+        "orc-warrior",
+        "shaman",
+        "shrek"
+      ],
+      "troll-disease": [
+        "anemia",
+        "asthma",
+        "fever",
+        "flu",
+        "gastric-trouble",
+        "gout",
+        "insomnia",
+        "joint-inflammation",
+        "migraine",
+        "poor-vision",
+        "skin-disease",
+        "swamp-infection"
+      ]
+    },
+    "fae": {
+      "fairy-subrace": [
+        "element-pixie",
+        "fairy-king",
+        "fairy-parents",
+        "healer-fairy"
+      ],
+      "element-universal": [
+        "darkness",
+        "earth",
+        "fire",
+        "ice",
+        "light",
+        "lightning",
+        "metal",
+        "plant",
+        "shadow",
+        "void",
+        "water",
+        "wind"
+      ]
+    },
+    "beastfolk": {
+      "siluman-animal-type": [
+        "ayam",
+        "babi",
+        "buaya",
+        "elang",
+        "harimau",
+        "kelelawar",
+        "kera",
+        "kerbau",
+        "kucing",
+        "rubah",
+        "serigala",
+        "ular"
+      ]
+    },
+    "lelembut": {
+      "lelembut-origin": [
+        "imported",
+        "local"
+      ],
+      "lelembut-local-type": [
+        "banaspati",
+        "genderuwo",
+        "jenglot",
+        "kuntilanak",
+        "kuyang",
+        "leak",
+        "palasik",
+        "pocong",
+        "sundel-bolong",
+        "suster-ngesot",
+        "tuyul",
+        "wewe-gombel"
+      ],
+      "lelembut-imported-type": [
+        "ghost",
+        "lich",
+        "mummy",
+        "skeleton",
+        "vampire",
+        "zombie"
+      ],
+      "power-cursed": [
+        "abyss-domain",
+        "bad-luck",
+        "causality-curse",
+        "curse-transfer",
+        "death-hex",
+        "demonic-possession",
+        "devil-avatar",
+        "devils-whisper",
+        "eternal-damnation",
+        "fate-blight",
+        "fear-glare",
+        "hellfire",
+        "hex-mark",
+        "hiccup-hex",
+        "infernal-claw",
+        "infernal-sovereignty",
+        "itch-curse",
+        "life-drain",
+        "nightmare-prison",
+        "soul-shackles",
+        "stench-curse",
+        "torment-chains"
+      ],
+      "vampire-victim-count": [
+        "victims-0",
+        "victims-1",
+        "victims-10",
+        "victims-100",
+        "victims-1000",
+        "victims-5"
+      ],
+      "vampire-prey-race": [
+        "anime-lineage",
+        "beastfolk",
+        "demon",
+        "dwarf",
+        "elemental",
+        "elf",
+        "fae",
+        "goblinoid",
+        "golem",
+        "heavenly-principle",
+        "human",
+        "hybrid",
+        "legendary-warrior",
+        "lelembut",
+        "machine",
+        "mythical-beast",
+        "raksasa",
+        "symbiote"
+      ]
+    },
+    "golem": {
+      "golem-type": [
+        "crystal-golem",
+        "diamond-golem",
+        "element-golem",
+        "magma-golem",
+        "rock-golem",
+        "sand-golem",
+        "trash-golem"
+      ],
+      "element-universal": [
+        "darkness",
+        "earth",
+        "fire",
+        "ice",
+        "light",
+        "lightning",
+        "metal",
+        "plant",
+        "shadow",
+        "void",
+        "water",
+        "wind"
+      ]
+    },
+    "elemental": {
+      "element-universal": [
+        "darkness",
+        "earth",
+        "fire",
+        "ice",
+        "light",
+        "lightning",
+        "metal",
+        "plant",
+        "shadow",
+        "void",
+        "water",
+        "wind"
+      ]
+    },
+    "heavenly-principle": {
+      "heavenly-principle-type": [
+        "angel",
+        "demigod",
+        "god",
+        "orang-saleh",
+        "pemuka-agama",
+        "utusan-tuhan"
+      ],
+      "power-divine": [
+        "blessed-water",
+        "comforting-prayer",
+        "divine-decree",
+        "divine-miracle",
+        "divine-reality-rewrite",
+        "divine-restoration",
+        "divine-soul-dominion",
+        "healing-touch",
+        "holy-arrow",
+        "holy-constructs",
+        "holy-shield",
+        "holy-spark",
+        "judgment-bolt",
+        "purify",
+        "resurrection",
+        "sacred-binding",
+        "sacred-flame",
+        "sacred-sense",
+        "sanctuary",
+        "seraph-form"
+      ],
+      "god-concept": [
+        "death",
+        "fate",
+        "knowledge",
+        "life",
+        "light",
+        "love",
+        "nature",
+        "sea",
+        "space",
+        "storm",
+        "time",
+        "war"
+      ],
+      "follower-count": [
+        "followers-0",
+        "followers-10",
+        "followers-100",
+        "followers-1000",
+        "followers-10000",
+        "followers-100000",
+        "followers-1000000",
+        "followers-10000000",
+        "followers-100000000"
+      ]
+    },
+    "slime": {
+      "slime-type": [
+        "acid",
+        "elemental",
+        "healing",
+        "metal",
+        "ordinary",
+        "poison"
+      ],
+      "element-universal": [
+        "darkness",
+        "earth",
+        "fire",
+        "ice",
+        "light",
+        "lightning",
+        "metal",
+        "plant",
+        "shadow",
+        "void",
+        "water",
+        "wind"
+      ]
+    },
+    "centaur": {
+      "centaur-lower-body": [
+        "bear",
+        "bull",
+        "capybara",
+        "chicken",
+        "deer",
+        "elephant",
+        "goat",
+        "horse",
+        "jaguar",
+        "rabbit",
+        "tiger",
+        "wolf"
+      ]
+    },
+    "cosmic-warrior": {
+      "cosmic-warrior-group": [
+        "alien-x",
+        "green-lantern",
+        "saint",
+        "saiyan",
+        "silver-surfer",
+        "ultraman"
+      ],
+      "ultraman-color": [
+        "blue",
+        "mixed",
+        "red"
+      ],
+      "saint-cosmic-armor": [
+        "bronze-andromeda",
+        "bronze-bear",
+        "bronze-chameleon",
+        "bronze-cygnus",
+        "bronze-dragon",
+        "bronze-hydra",
+        "bronze-lionet",
+        "bronze-pegasus",
+        "bronze-phoenix",
+        "bronze-unicorn",
+        "bronze-wolf",
+        "gold-aquarius",
+        "gold-aries",
+        "gold-cancer",
+        "gold-capricorn",
+        "gold-gemini",
+        "gold-leo",
+        "gold-libra",
+        "gold-pisces",
+        "gold-sagittarius",
+        "gold-scorpio",
+        "gold-taurus",
+        "gold-virgo",
+        "silver-auriga",
+        "silver-centaurus",
+        "silver-cerberus",
+        "silver-cetus",
+        "silver-crow",
+        "silver-eagle",
+        "silver-heracles",
+        "silver-hound",
+        "silver-lizard",
+        "silver-lyra",
+        "silver-ophiuchus",
+        "silver-perseus"
+      ],
+      "lantern-ring-color": [
+        "black",
+        "blue",
+        "green",
+        "indigo",
+        "orange",
+        "red",
+        "violet",
+        "white",
+        "yellow"
+      ]
+    }
+  },
+  "archetypeResultWheels": {
+    "alchemist": {
+      "alchemist-jamu": [
+        "jamu-otot-loyo",
+        "jamu-kaki-lemes",
+        "jamu-tulang-kerupuk",
+        "jamu-otak-nge-lag",
+        "montalin",
+        "kuda-mesir",
+        "air-putih",
+        "kopi-tubruk",
+        "teh-tawar",
+        "es-sirup",
+        "jamu-otot-kawat",
+        "jamu-sat-set",
+        "jamu-otak-encer",
+        "jamu-jago-gelut",
+        "jamu-otot-beton",
+        "jamu-ngebut",
+        "jamu-badak",
+        "jamu-jago-siasat",
+        "el-dorado-potion",
+        "philosopher-stone-elixir"
+      ]
+    },
+    "apostle": {
+      "apostle-patron": [
+        "god",
+        "devil"
+      ]
+    },
+    "archaeologist": {
+      "archaeologist-bone-discovered": [
+        "chicken",
+        "rabbit",
+        "cat",
+        "dog",
+        "goat",
+        "pig",
+        "cow",
+        "horse",
+        "elephant",
+        "thylacine",
+        "dodo",
+        "smilodon",
+        "woolly-mammoth",
+        "dire-wolf",
+        "woolly-rhino",
+        "megatherium",
+        "glyptodon",
+        "paraceratherium",
+        "eohippus",
+        "titanoboa",
+        "tyrannosaurus-rex",
+        "triceratops",
+        "ankylosaurus",
+        "mosasaurus",
+        "velociraptor",
+        "spinosaurus",
+        "iguanodon",
+        "stegosaurus",
+        "allosaurus",
+        "brachiosaurus",
+        "coelophysis",
+        "dimetrodon"
+      ]
+    },
+    "assassin": {
+      "assassin-type": [
+        "ninja",
+        "alamut-assassins",
+        "sicarii",
+        "black-hand-serbia",
+        "narodnaya-volya",
+        "murder-inc"
+      ]
+    },
+    "colossal-warmech": {
+      "colossal-warmech-class": [
+        "brawler",
+        "fortress",
+        "blitz",
+        "artillery"
+      ]
+    },
+    "cursed": {
+      "cursed-percentage": [
+        "cursed-0",
+        "cursed-10",
+        "cursed-20",
+        "cursed-30",
+        "cursed-40",
+        "cursed-50",
+        "cursed-60",
+        "cursed-70",
+        "cursed-80",
+        "cursed-90",
+        "cursed-100"
+      ],
+      "weakness-cursed": [
+        "sunlight-taboo",
+        "holy-water",
+        "silver-contact",
+        "salt-ward",
+        "curse-seal",
+        "true-name",
+        "curse-reflection",
+        "daily-ritual",
+        "broken-oath",
+        "bound-shadow",
+        "voodoo-link",
+        "energy-hunger"
+      ]
+    },
+    "disciple": {
+      "disciple-mentor": [],
+      "disciple-inheritance-category": [
+        "weapon",
+        "power",
+        "best-stat"
+      ]
+    },
+    "druid": {
+      "druid-path": [
+        "wild-shape",
+        "forest-guardian",
+        "nature-tamer",
+        "nature-healer"
+      ]
+    },
+    "gambler": {
+      "gambler-type": [
+        "all-in",
+        "double-or-nothing",
+        "high-roller",
+        "lucky-number"
+      ],
+      "gambler-double-or-nothing": [
+        "double",
+        "nothing"
+      ],
+      "gambler-lucky-number": [
+        "lucky-number-0",
+        "lucky-number-1",
+        "lucky-number-2",
+        "lucky-number-3",
+        "lucky-number-4",
+        "lucky-number-5",
+        "lucky-number-6",
+        "lucky-number-7",
+        "lucky-number-8",
+        "lucky-number-9"
+      ]
+    },
+    "gladiator": {
+      "gladiator-weapon": [
+        "gladiator-gladius",
+        "gladiator-sica",
+        "gladiator-pugio",
+        "gladiator-trishula",
+        "gladiator-arena-spear",
+        "gladiator-arena-net",
+        "gladiator-scutum",
+        "gladiator-rudis"
+      ]
+    },
+    "goliath": {
+      "goliath-berserker-chance": [
+        "berserker",
+        "not-berserker"
+      ]
+    },
+    "mage": {
+      "mage-master-sihir-chance": [
+        "master-sihir",
+        "mage-biasa"
+      ]
+    },
+    "paladin": {
+      "paladin-ascension-chance": [
+        "nirvana-high-paladin",
+        "paladin-biasa"
+      ]
+    },
+    "pirate": {
+      "pirate-rank": [
+        "king-pirate",
+        "captain",
+        "quartermaster",
+        "first-mate",
+        "boatswain",
+        "crew"
+      ],
+      "pirate-ship": [
+        "queen-annes-revenge",
+        "whydah-gally",
+        "fancy-every",
+        "royal-fortune-roberts",
+        "adventure-galley-kidd",
+        "revenge-royal-james-bonnet",
+        "adventure-blackbeard",
+        "adventure-prize-kidd",
+        "satisfaction-morgan",
+        "golden-fleece-bannister",
+        "speaker-bowen",
+        "flying-dragon-condent",
+        "cassandra-england-taylor",
+        "happy-delivery-lowther",
+        "good-fortune-anstis",
+        "morning-star-fenn",
+        "great-ranger-roberts-fleet",
+        "revenge-phillips"
+      ]
+    },
+    "rider": {
+      "rider-category": [
+        "animal",
+        "transportation",
+        "mecha-giant",
+        "unusual"
+      ],
+      "rider-mount-animal": [
+        "rider-animal-keong",
+        "rider-animal-ayam",
+        "rider-animal-kambing",
+        "rider-animal-keledai",
+        "rider-animal-kuda",
+        "rider-animal-unta",
+        "rider-animal-rusa",
+        "rider-animal-burung-unta",
+        "rider-animal-gajah",
+        "rider-animal-badak",
+        "rider-animal-t-rex",
+        "rider-animal-garuda"
+      ],
+      "rider-mount-transportation": [
+        "rider-transportation-sepeda",
+        "rider-transportation-becak",
+        "rider-transportation-odong-odong",
+        "rider-transportation-gerobak",
+        "rider-transportation-motor",
+        "rider-transportation-atv",
+        "rider-transportation-mobil-balap",
+        "rider-transportation-helikopter",
+        "rider-transportation-fighter-jet",
+        "rider-transportation-gustav-cannon",
+        "rider-transportation-warship",
+        "rider-transportation-tank"
+      ],
+      "rider-mount-mecha-giant": [
+        "rider-mecha-giant-mecha-kardus",
+        "rider-mecha-giant-mecha-galon",
+        "rider-mecha-giant-mecha-gerobak-bakso",
+        "rider-mecha-giant-mecha-odong-odong",
+        "rider-mecha-giant-mecha-probe",
+        "rider-mecha-giant-titan-attack-on-titan",
+        "rider-mecha-giant-zaku-ii",
+        "rider-mecha-giant-hulkbuster",
+        "rider-mecha-giant-mechagodzilla",
+        "rider-mecha-giant-rx-78-2-gundam",
+        "rider-mecha-giant-evangelion-unit-01",
+        "rider-mecha-giant-gurren-lagann"
+      ],
+      "rider-mount-unusual": [
+        "rider-unusual-sapu-lidi",
+        "rider-unusual-keset-terbang",
+        "rider-unusual-kursi-plastik",
+        "rider-unusual-ban-pelampung",
+        "rider-unusual-sapu-terbang",
+        "rider-unusual-karpet-terbang",
+        "rider-unusual-awan-kinton",
+        "rider-unusual-peti-mati-terbang",
+        "rider-unusual-papan-portal",
+        "rider-unusual-singgasana-terbang",
+        "rider-unusual-kereta-hantu",
+        "rider-unusual-kapal-langit"
+      ]
+    },
+    "royal": {
+      "royal-chess-piece": [
+        "king",
+        "queen",
+        "bishop",
+        "knight",
+        "rook",
+        "pawn"
+      ]
+    },
+    "slayer": {
+      "swarm": [
+        "slayer-swarm-victims-0",
+        "slayer-swarm-victims-1",
+        "slayer-swarm-victims-5",
+        "slayer-swarm-victims-10",
+        "slayer-swarm-victims-50",
+        "slayer-swarm-victims-100",
+        "slayer-swarm-victims-500",
+        "slayer-swarm-victims-1000",
+        "slayer-swarm-victims-5000",
+        "slayer-swarm-victims-10000"
+      ],
+      "common": [
+        "slayer-common-victims-0",
+        "slayer-common-victims-1",
+        "slayer-common-victims-2",
+        "slayer-common-victims-5",
+        "slayer-common-victims-10",
+        "slayer-common-victims-20",
+        "slayer-common-victims-50",
+        "slayer-common-victims-100",
+        "slayer-common-victims-500",
+        "slayer-common-victims-1000"
+      ],
+      "trained": [
+        "slayer-trained-victims-0",
+        "slayer-trained-victims-1",
+        "slayer-trained-victims-2",
+        "slayer-trained-victims-3",
+        "slayer-trained-victims-5",
+        "slayer-trained-victims-10",
+        "slayer-trained-victims-20",
+        "slayer-trained-victims-50",
+        "slayer-trained-victims-100",
+        "slayer-trained-victims-500"
+      ],
+      "elite": [
+        "slayer-elite-victims-0",
+        "slayer-elite-victims-1",
+        "slayer-elite-victims-2",
+        "slayer-elite-victims-3",
+        "slayer-elite-victims-5",
+        "slayer-elite-victims-10",
+        "slayer-elite-victims-20",
+        "slayer-elite-victims-30",
+        "slayer-elite-victims-50",
+        "slayer-elite-victims-100"
+      ],
+      "formidable": [
+        "slayer-formidable-victims-0",
+        "slayer-formidable-victims-1",
+        "slayer-formidable-victims-2",
+        "slayer-formidable-victims-3",
+        "slayer-formidable-victims-5",
+        "slayer-formidable-victims-7",
+        "slayer-formidable-victims-10",
+        "slayer-formidable-victims-15",
+        "slayer-formidable-victims-20",
+        "slayer-formidable-victims-50"
+      ],
+      "apex": [
+        "slayer-apex-victims-0",
+        "slayer-apex-victims-1",
+        "slayer-apex-victims-2",
+        "slayer-apex-victims-3",
+        "slayer-apex-victims-4",
+        "slayer-apex-victims-5",
+        "slayer-apex-victims-7",
+        "slayer-apex-victims-10",
+        "slayer-apex-victims-15",
+        "slayer-apex-victims-20"
+      ],
+      "legendary": [
+        "slayer-legendary-victims-0",
+        "slayer-legendary-victims-1",
+        "slayer-legendary-victims-2",
+        "slayer-legendary-victims-3",
+        "slayer-legendary-victims-4",
+        "slayer-legendary-victims-5",
+        "slayer-legendary-victims-6",
+        "slayer-legendary-victims-7",
+        "slayer-legendary-victims-8",
+        "slayer-legendary-victims-10"
+      ],
+      "divine": [
+        "slayer-divine-victims-0",
+        "slayer-divine-victims-1",
+        "slayer-divine-victims-2",
+        "slayer-divine-victims-3",
+        "slayer-divine-victims-4",
+        "slayer-divine-victims-5",
+        "slayer-divine-victims-6",
+        "slayer-divine-victims-7",
+        "slayer-divine-victims-8",
+        "slayer-divine-victims-9"
+      ]
+    },
+    "survivalist": {
+      "survivalist-environment": [
+        "freezing-tundra",
+        "volcano-core",
+        "acid-pool",
+        "nuclear-wasteland",
+        "outer-space",
+        "deep-ocean-trench",
+        "waterless-desert",
+        "poisoned-forest",
+        "lightning-storm",
+        "high-gravity-planet",
+        "shadow-dimension",
+        "eternal-battlefield"
+      ],
+      "survivalist-chance": [
+        "survivalist-chance-0",
+        "survivalist-chance-1",
+        "survivalist-chance-2",
+        "survivalist-chance-3",
+        "survivalist-chance-4",
+        "survivalist-chance-5",
+        "survivalist-chance-6",
+        "survivalist-chance-7",
+        "survivalist-chance-8"
+      ]
+    },
+    "tamer": {
+      "tamer-animal-to-tame": [
+        "ant",
+        "mosquito",
+        "fly",
+        "cockroach",
+        "earthworm",
+        "snail",
+        "spider",
+        "scorpion",
+        "chicken",
+        "duck",
+        "pigeon",
+        "owl",
+        "eagle",
+        "cat",
+        "dog",
+        "rabbit",
+        "rat",
+        "civet",
+        "goat",
+        "pig",
+        "cow",
+        "horse",
+        "catfish",
+        "betta",
+        "cobra",
+        "komodo-dragon",
+        "crocodile",
+        "wolf",
+        "tiger",
+        "elephant",
+        "orca",
+        "blue-whale",
+        "dire-wolf",
+        "glyptodon",
+        "smilodon",
+        "woolly-mammoth",
+        "woolly-rhino",
+        "megatherium",
+        "paraceratherium",
+        "titanoboa",
+        "velociraptor",
+        "iguanodon",
+        "triceratops",
+        "ankylosaurus",
+        "spinosaurus",
+        "tyrannosaurus-rex",
+        "mosasaurus",
+        "megalodon",
+        "kuda-sembrani",
+        "garuda",
+        "makara",
+        "naga",
+        "dragon",
+        "phoenix",
+        "griffin",
+        "cerberus",
+        "kurama",
+        "pikachu",
+        "agumon",
+        "toothless",
+        "appa",
+        "chopper",
+        "totoro",
+        "scooby-doo"
+      ]
+    },
+    "vessel": {
+      "vessel-patron": [
+        "god",
+        "demon-lord"
+      ],
+      "vessel-compatibility": [
+        "compatibility-0",
+        "compatibility-10",
+        "compatibility-20",
+        "compatibility-30",
+        "compatibility-40",
+        "compatibility-50",
+        "compatibility-60",
+        "compatibility-70",
+        "compatibility-80",
+        "compatibility-90",
+        "compatibility-100"
+      ]
+    },
+    "warlord": {
+      "warlord-army-type": [
+        "human",
+        "elf",
+        "dwarf",
+        "goblinoid",
+        "raksasa",
+        "fae",
+        "beastfolk",
+        "lelembut",
+        "mythical-beast",
+        "golem",
+        "elemental",
+        "symbiote",
+        "heavenly-principle",
+        "demon",
+        "hybrid",
+        "anime-lineage",
+        "legendary-warrior",
+        "machine",
+        "multi-race",
+        "primordial",
+        "slime",
+        "centaur",
+        "cosmic-warrior"
+      ],
+      "warlord-race-group-count": [
+        "army-races-1",
+        "army-races-2",
+        "army-races-3"
+      ]
+    }
+  },
+  "weaponTrainingProfiles": {
+    "unclassified": {
+      "shift": 0,
+      "sigmaMultiplier": 1
+    },
+    "blade": {
+      "shift": 0.15,
+      "sigmaMultiplier": 1
+    },
+    "ranged": {
+      "shift": 0.05,
+      "sigmaMultiplier": 1.05
+    },
+    "musical": {
+      "shift": 0.1,
+      "sigmaMultiplier": 1
+    },
+    "technology": {
+      "shift": -0.15,
+      "sigmaMultiplier": 1.15
+    },
+    "mecha": {
+      "shift": -0.35,
+      "sigmaMultiplier": 1.2
+    },
+    "improvised": {
+      "shift": -0.1,
+      "sigmaMultiplier": 1.1
+    }
+  },
+  "powerControlInventory": {
+    "tierAverageShift": 0,
+    "reason": "Tier measures intrinsic ability, not mastery; inventory frozen, no automatic Tier-to-mastery conversion."
+  },
+  "constraints": {
+    "lichDurability": {
+      "familyId": "lelembut",
+      "wheelId": "lelembut-imported-type",
+      "outcomeId": "lich",
+      "value": 9,
+      "resolution": "fixed-base-no-rng",
+      "legacyCapException": "approved-forced-lich-durability"
+    },
+    "kinnaraInstrument": {
+      "familyId": "mythical-beast",
+      "wheelId": "mythical-beast-local-type",
+      "outcomeId": "kinnara",
+      "definitionId": "music-instrument",
+      "minimumValue": 5,
+      "requiresOwnedGrantSource": true
+    },
+    "godPowerMastery": {
+      "familyId": "heavenly-principle",
+      "wheelId": "heavenly-principle-type",
+      "outcomeId": "god",
+      "value": 9,
+      "scope": "all-owned-powers",
+      "resolution": "fixed-base-no-rng"
+    },
+    "vesselGodPowerMastery": {
+      "archetypeId": "vessel",
+      "patron": "god",
+      "compatibilityValues": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "value": 9,
+      "scope": "all-owned-powers",
+      "resolution": "fixed-base-no-rng"
+    }
+  },
+  "runtime": {
+    "module": "framework/stat-odds.mjs",
+    "functions": [
+      "buildStatContext",
+      "planStatWheel",
+      "planStatSuite",
+      "capProbabilities",
+      "selectStatOutcome",
+      "resolveStatDraw",
+      "projectFinalScore"
+    ],
+    "sizeInput": "Frozen Size plan and its recorded draw with matching owner identity. No transformation Size.",
+    "freeze": "Identity/source IDs, selected hidden profiles, model, role/event likelihoods, Size/reference/shift, inventory, hard guards, prior, posterior and minimum/maximum bounds and bounded odds saved before external RNG. Fixed plans preserve guarantee/source, base9 and no sampled attempts; replay original saved resolution mode.",
+    "replay": "Resolve saved plans without recomputing current parameters. Caller persists plans/draws and consumes source keys atomically.",
+    "pending": [
+      "Persistent mechanics scheduler/inventory adapters.",
+      "Final Enchant queues and aggregate Lucky Number/Pawn settlement.",
+      "Intelligence labels1..9.",
+      "Future Power/Weapon/Weakness/Apex/Title Backstory pool bindings."
+    ]
+  },
+  "unmodeledContextPolicy": "Record unmatched event sources without guessing numeric effects. Explicit likelihoods can be added; plain narrator text, victim/army identities, follower counts, final bonus ledgers and power-tier metadata are not automatically converted to parameters.",
+  "probabilityBounds": {
+    "minimum": 0.05,
+    "maximum": 0.25,
+    "scope": "Only eligible actual raw stat/mastery outcomes, including each Resilient attempt.",
+    "algorithm": "p(i)=minimum+min(lambda*weight(i),maximum-minimum); solve shared lambda in log space so total=1, preserving free-sector excess odds ratios above the floor.",
+    "feasibility": "N*minimum<=1<=N*maximum; hard-excluded outcomes never receive the floor.",
+    "history": "God original template stays an unbounded prior; every new final wheel uses the new bounds. Saved previous plans retain frozen probabilities."
+  },
+  "maximumGuaranteeContract": {
+    "version": "fixed-maximum/0.1.0",
+    "scope": "Actual committed maximum guarantees for stats or mastery skip the random wheel.",
+    "God": "Actual God subtype fixes the one shared Power Mastery base9 for all owned present/future powers, including Authority, Divine and ordinary grants.",
+    "VesselGod": "God patron at compatibility60/70/80/90/100 inherits the existing maximum guarantee; all owned Power Mastery base9. Lower bands and demon patron do not qualify.",
+    "Lich": "Committed Lich fixes Durability base9; no singleton100% spin in new runs.",
+    "notGuarantees": "High lore probability, intrinsic Tier5, matching power names and Kinnara minimumMaster are not maximum guarantees.",
+    "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+    "hooks": "No random sample, actual attempt, spin ID, Lucky hit, Resilient retry, Double/Nothing decision or sampled Pawn category for automatic bases.",
+    "precedence": "Explicit maximum before random shaping/Equalizer/Gambler. Contradictory hard exclusions require configuration. Empty power inventory creates no phantom mastery.",
+    "history": "Existing frozen actual God/ordinary mastery and Lich singleton draws replay unchanged; no retroactive guarantee rewriting."
+  },
+  "powerContextRegistryAddition": {
+    "version": "main-power-wheel/1.0.0",
+    "policy": "Append currently canonical themed outcome IDs to existing owner-context caller wheels; retain every old ID, frozen prior/calibration/version unchanged. No new caller permission or stat shift."
+  },
+  "elementExpansion": {
+    "version": "element-wheel/0.2.0",
+    "ruleCount": 8,
+    "axisOrder": [
+      "strength",
+      "speed",
+      "durability",
+      "intelligence",
+      "fight",
+      "weapon-mastery",
+      "power-mastery"
+    ],
+    "probabilityBoundsUnchanged": true
+  }
+}

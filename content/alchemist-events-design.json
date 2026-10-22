@@ -1,0 +1,763 @@
+{
+  "schemaVersion": "roda-kekacauan-alchemist/0.1",
+  "version": "alchemist/0.2.1",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "alchemist",
+  "eventProfileId": "alchemist-jamu",
+  "status": "Core event approved: exactly one potion spin and consumption, then Backstory. Twenty editable recipes; expanded equal odds remain the authored working interpretation. Runtime helper not yet implemented.",
+  "authority": {
+    "confirmed": [
+      "Alchemist drinks one potion from the recipe wheel: debuff -1, neutral normal drinks, buff +1 and buff +2 groups at 4:4:4:4. User delegates names and stat allocation, then requests jamu/funny naming. Quantity is now user-confirmed as exactly one.",
+      "User requests actual jamu product names documented by news or official sources as problematic medical products for satire, plus one local alcohol-misuse outcome. Current authored debuff selection is Urat Madu Black, Pemersatu Bangsa, Tawon Liar and Ciu Oplosan; numeric -1 packages and existing odds stay unchanged. Sources establish specific reported cases, not game effects or blanket current-brand claims. Quantity is now user-confirmed as exactly one.",
+      "User adds two debuff slots and two superpower potions. Classic-legend direction: El Dorado grants Gold Touch; Philosopher Stone grants Creation or Molecular Manipulation. Current draft chooses one Molecular Manipulation grant; no Frieren or Sabatiel mechanics. Total twenty slots; quantity is now user-confirmed as exactly one.",
+      "User confirms: only 1 potion, then continue to the next Archetype. Alchemist has exactly one potion spin/consumption/reaction, no quantity selector; next review is Rider."
+    ],
+    "authoredChoices": "Twenty recipes: six debuff/four neutral/four +1/four +2/two superpower. New Montalin/Kuda Mesir -1 effects authored. Philosopher Stone chooses the user-permitted Molecular Manipulation. Twenty flat sectors at 5% are a working equal-default interpretation of new slot counts; old sixteen-slot ratio preserved inactive.",
+    "research": "reference/alchemist-jamu-research.json",
+    "retiredNamingInterpretations": [
+      {
+        "date": "2026-10-09",
+        "statement": "User corrects Alchemist naming: use real jamu names such as Temulawak for buffs, and fictional satirical fake-jamu labels for debuffs. Stat packages are authored game rules, not health claims. Quantity remains unconfirmed.",
+        "authority": "Previous assistant interpretation, superseded by explicit user request for actual names.",
+        "active": false
+      }
+    ]
+  },
+  "quantityContract": {
+    "status": "confirmed-user",
+    "mode": "fixed",
+    "count": 1,
+    "wheel": null,
+    "authority": "Direct user instruction: only 1 potion. go to next archtype",
+    "confirmedDate": "2026-10-09"
+  },
+  "groups": [
+    {
+      "id": "debuff",
+      "label": "Debuff −1",
+      "weight": 6,
+      "outcomeCount": 6,
+      "probability": 0.3
+    },
+    {
+      "id": "neutral",
+      "label": "Minuman Netral",
+      "weight": 4,
+      "outcomeCount": 4,
+      "probability": 0.2
+    },
+    {
+      "id": "buff-one",
+      "label": "Buff +1",
+      "weight": 4,
+      "outcomeCount": 4,
+      "probability": 0.2
+    },
+    {
+      "id": "buff-two",
+      "label": "Buff +2",
+      "weight": 4,
+      "outcomeCount": 4,
+      "probability": 0.2
+    },
+    {
+      "id": "superpower",
+      "label": "Superpower",
+      "weight": 2,
+      "outcomeCount": 2,
+      "probability": 0.1
+    }
+  ],
+  "wheel": {
+    "id": "alchemist-jamu",
+    "label": "Minum Apa?",
+    "outcomeCount": 20,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "jamu-otot-loyo",
+        "label": "Urat Madu Black",
+        "groupId": "debuff",
+        "displayOrder": 1,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "strength",
+            "amount": -1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Urat Madu Black",
+            "Strength -1"
+          ],
+          "displayContext": "Urat Madu Black",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-jamu-product-case",
+          "labelHistory": [
+            "Jamu Otot Loyo",
+            "Jamu Kuat Semalam"
+          ],
+          "sourceIds": [
+            "bpom-banjarmasin-2024"
+          ],
+          "reportedCaseDate": "2024-02-27",
+          "sourceScope": "Exact named products in the reported 27 February 2024 BPOM seizure; no blanket statement about every current product under a similar name.",
+          "statPackageAuthority": "Retained authored game balance only; the source supplies no numeric medical/stat effect."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-kaki-lemes",
+        "label": "Pemersatu Bangsa",
+        "groupId": "debuff",
+        "displayOrder": 2,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "speed",
+            "amount": -1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Pemersatu Bangsa",
+            "Speed -1"
+          ],
+          "displayContext": "Pemersatu Bangsa",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-jamu-product-case",
+          "labelHistory": [
+            "Jamu Kaki Lemes",
+            "Jamu Langsing Instan"
+          ],
+          "sourceIds": [
+            "bpom-banjarmasin-2024"
+          ],
+          "reportedCaseDate": "2024-02-27",
+          "sourceScope": "Exact named products in the reported 27 February 2024 BPOM seizure; no blanket statement about every current product under a similar name.",
+          "statPackageAuthority": "Retained authored game balance only; the source supplies no numeric medical/stat effect."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-tulang-kerupuk",
+        "label": "Tawon Liar",
+        "groupId": "debuff",
+        "displayOrder": 3,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "durability",
+            "amount": -1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Tawon Liar",
+            "Durability -1"
+          ],
+          "displayContext": "Tawon Liar",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-jamu-product-case",
+          "labelHistory": [
+            "Jamu Tulang Kerupuk",
+            "Jamu Segala Penyakit"
+          ],
+          "sourceIds": [
+            "bpom-banjarmasin-2024"
+          ],
+          "reportedCaseDate": "2024-02-27",
+          "sourceScope": "Exact named products in the reported 27 February 2024 BPOM seizure; no blanket statement about every current product under a similar name.",
+          "statPackageAuthority": "Retained authored game balance only; the source supplies no numeric medical/stat effect."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-otak-nge-lag",
+        "label": "Ciu Oplosan",
+        "groupId": "debuff",
+        "displayOrder": 4,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "intelligence",
+            "amount": -1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Ciu Oplosan",
+            "Intelligence -1"
+          ],
+          "displayContext": "Ciu Oplosan",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-local-alcohol-misuse-case",
+          "labelHistory": [
+            "Jamu Otak Nge-lag",
+            "Jamu Testimoni Settingan"
+          ],
+          "sourceIds": [
+            "polri-danurejan-ciu-2025"
+          ],
+          "reportedCaseDate": "2025-07-30",
+          "sourceScope": "Ciu Oplosan is the local-alcohol misuse variant named in a reported seizure; no general claim that all ciu is adulterated.",
+          "statPackageAuthority": "Retained authored game balance only; the source supplies no numeric medical/stat effect."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "montalin",
+        "label": "Montalin",
+        "groupId": "debuff",
+        "displayOrder": 5,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "durability",
+            "amount": -1
+          }
+        ],
+        "effectKind": "stat-modifiers",
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Montalin",
+            "durability -1"
+          ],
+          "displayContext": "Montalin",
+          "futureResults": "Quantity/mastery/uncommitted results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-jamu-product-case",
+          "sourceIds": [
+            "bpom-banjarmasin-2024"
+          ],
+          "reportedCaseDate": "2024-02-27",
+          "sourceScope": "Exact products in this dated BPOM finding, not every current same-name product.",
+          "statPackageAuthority": "Authored game effect only."
+        }
+      },
+      {
+        "id": "kuda-mesir",
+        "label": "Kuda Mesir",
+        "groupId": "debuff",
+        "displayOrder": 6,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": -1,
+        "statModifiers": [
+          {
+            "stat": "fight",
+            "amount": -1
+          }
+        ],
+        "effectKind": "stat-modifiers",
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Kuda Mesir",
+            "fight -1"
+          ],
+          "displayContext": "Kuda Mesir",
+          "futureResults": "Quantity/mastery/uncommitted results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "documented-jamu-product-case",
+          "sourceIds": [
+            "bpom-banjarmasin-2024"
+          ],
+          "reportedCaseDate": "2024-02-27",
+          "sourceScope": "Exact products in this dated BPOM finding, not every current same-name product.",
+          "statPackageAuthority": "Authored game effect only."
+        }
+      },
+      {
+        "id": "air-putih",
+        "label": "Air Putih",
+        "groupId": "neutral",
+        "displayOrder": 7,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 0,
+        "statModifiers": [],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Air Putih"
+          ],
+          "displayContext": "Air Putih",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "kopi-tubruk",
+        "label": "Kopi Tubruk",
+        "groupId": "neutral",
+        "displayOrder": 8,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 0,
+        "statModifiers": [],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Kopi Tubruk"
+          ],
+          "displayContext": "Kopi Tubruk",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "teh-tawar",
+        "label": "Teh Tawar",
+        "groupId": "neutral",
+        "displayOrder": 9,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 0,
+        "statModifiers": [],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Teh Tawar"
+          ],
+          "displayContext": "Teh Tawar",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "es-sirup",
+        "label": "Es Sirup",
+        "groupId": "neutral",
+        "displayOrder": 10,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 0,
+        "statModifiers": [],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Es Sirup"
+          ],
+          "displayContext": "Es Sirup",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-otot-kawat",
+        "label": "Beras Kencur",
+        "groupId": "buff-one",
+        "displayOrder": 11,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 1,
+        "statModifiers": [
+          {
+            "stat": "strength",
+            "amount": 1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Beras Kencur",
+            "Strength +1"
+          ],
+          "displayContext": "Beras Kencur",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Otot Kawat",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-sat-set",
+        "label": "Kunyit Asam",
+        "groupId": "buff-one",
+        "displayOrder": 12,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 1,
+        "statModifiers": [
+          {
+            "stat": "speed",
+            "amount": 1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Kunyit Asam",
+            "Speed +1"
+          ],
+          "displayContext": "Kunyit Asam",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Sat-set",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-otak-encer",
+        "label": "Sinom",
+        "groupId": "buff-one",
+        "displayOrder": 13,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 1,
+        "statModifiers": [
+          {
+            "stat": "intelligence",
+            "amount": 1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Sinom",
+            "Intelligence +1"
+          ],
+          "displayContext": "Sinom",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Otak Encer",
+          "sourceIds": [
+            "indrodelik-sinom"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-jago-gelut",
+        "label": "Cabe Puyang",
+        "groupId": "buff-one",
+        "displayOrder": 14,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 1,
+        "statModifiers": [
+          {
+            "stat": "fight",
+            "amount": 1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Cabe Puyang",
+            "Fight +1"
+          ],
+          "displayContext": "Cabe Puyang",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Jago Gelut",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-otot-beton",
+        "label": "Temulawak",
+        "groupId": "buff-two",
+        "displayOrder": 15,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 2,
+        "statModifiers": [
+          {
+            "stat": "strength",
+            "amount": 2
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Temulawak",
+            "Strength +2"
+          ],
+          "displayContext": "Temulawak",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Otot Beton",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-ngebut",
+        "label": "Galian Singset",
+        "groupId": "buff-two",
+        "displayOrder": 16,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 2,
+        "statModifiers": [
+          {
+            "stat": "speed",
+            "amount": 2
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Galian Singset",
+            "Speed +2"
+          ],
+          "displayContext": "Galian Singset",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Ngebut",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-badak",
+        "label": "Pahitan",
+        "groupId": "buff-two",
+        "displayOrder": 17,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 2,
+        "statModifiers": [
+          {
+            "stat": "durability",
+            "amount": 2
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Pahitan",
+            "Durability +2"
+          ],
+          "displayContext": "Pahitan",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Badak",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "jamu-jago-siasat",
+        "label": "Kudu Laos",
+        "groupId": "buff-two",
+        "displayOrder": 18,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": 2,
+        "statModifiers": [
+          {
+            "stat": "intelligence",
+            "amount": 1
+          },
+          {
+            "stat": "fight",
+            "amount": 1
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Kudu Laos",
+            "Intelligence +1",
+            "Fight +1"
+          ],
+          "displayContext": "Kudu Laos",
+          "futureResults": "Final quantity/base stats/other uncommitted potion results are not inferred."
+        },
+        "namingProvenance": {
+          "kind": "real-jamu-name",
+          "previousDraftLabel": "Jamu Jago Siasat",
+          "sourceIds": [
+            "kemenkes-jamu-names"
+          ],
+          "statPackageAuthority": "Authored game balance only; source names do not supply stat effects."
+        },
+        "effectKind": "stat-modifiers"
+      },
+      {
+        "id": "el-dorado-potion",
+        "label": "El Dorado Potion",
+        "groupId": "superpower",
+        "displayOrder": 19,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": null,
+        "statModifiers": [],
+        "effectKind": "grant-power",
+        "powerRef": {
+          "definitionId": "gold-touch",
+          "definitionFile": "content/alchemist-events-design.json"
+        },
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: El Dorado Potion",
+            "Power diperoleh: Gold Touch (Sentuhan Emas)",
+            "Tier Power: 4"
+          ],
+          "displayContext": "El Dorado Potion",
+          "futureResults": "Quantity/mastery/uncommitted results are not inferred."
+        }
+      },
+      {
+        "id": "philosopher-stone-elixir",
+        "label": "Philosopher’s Stone Elixir",
+        "groupId": "superpower",
+        "displayOrder": 20,
+        "baseWeight": 1,
+        "probability": 0.05,
+        "effectValue": null,
+        "statModifiers": [],
+        "effectKind": "grant-power",
+        "powerRef": {
+          "definitionId": "molecular-manipulation",
+          "definitionFile": "content/alchemist-events-design.json"
+        },
+        "resultContext": {
+          "facts": [
+            "Ramuan diminum: Philosopher’s Stone Elixir",
+            "Power diperoleh: Molecular Manipulation (Manipulasi Molekul)",
+            "Tier Power: 5"
+          ],
+          "displayContext": "Philosopher’s Stone Elixir",
+          "futureResults": "Quantity/mastery/uncommitted results are not inferred."
+        }
+      }
+    ]
+  },
+  "contracts": {
+    "order": "Actual Alchemist -> one Minum Apa? spin -> consume that one potion/apply declared effects -> one actual result reaction -> Backstory. No count or category wheel.",
+    "probability": "Working twenty-slot equal default: 5% each, groups 6:4:4:4:2. User requested added slots, not an explicit new probability ratio. Earlier sixteen-slot snapshots retain their original odds.",
+    "stat": "Numeric recipes retain -1/0/+1/+2 totals. Two superpower recipes instead grant one linked fixed power, no numeric stat bonus. Freeze exact recipe and apply once per consumed source/ordinal.",
+    "neutral": "Ordinary drinks yield zero stat effect, still count as consumed potion result/reaction; no reroll or implied healing/caffeine bonus.",
+    "repetition": "Exactly one consumed dose per Alchemist event invocation. No second potion, replacement sequence or uniqueness reroll. Replaying that invocation preserves its result without another consumption or reward.",
+    "ownership": "Ordinary consumable recipes apply only declared modifiers. Each actual superpower dose grants its one linked owned power under normal shared mastery and main None retention; no permanent weapon/race/franchise dispatch.",
+    "ledger": "Freeze count=1, catalog version, pool and exact recipe before the draw. Dose ordinal 1 has one actual source/ledger key; replay never applies its signed stat modifier or power grant twice.",
+    "reaction": "One short actual result/effect reaction per consumed potion. Jamu labels/minuman names are captions; no joke explanation or new funny-result mechanics tag.",
+    "naming": "Buff names are real jamu; five exact jamu product names from the dated BPOM finding and one Ciu Oplosan misuse variant are debuffs. Fantasy elixirs follow the user classic-legend direction, not Frieren/Sabatiel. Names/captions/source reports create no new funny tags or extra reward.",
+    "power": "El Dorado -> Gold Touch; Philosopher Stone -> Molecular Manipulation. The selected elixir grants one fixed power once, no selector/mastery respin/Enchant. This event has no repeated-dose stacking."
+  },
+  "powers": [
+    {
+      "id": "gold-touch",
+      "label": "Gold Touch (Sentuhan Emas)",
+      "scope": "Mengubah materi atau target yang disentuh menjadi emas. Batas sasaran, biaya, durasi, resistensi dan kendali mengikuti profil serta mastery.",
+      "affinityTags": [
+        "gold",
+        "transmutation",
+        "touch"
+      ],
+      "group": "alchemist-potion-power",
+      "contentStatus": "User-confirmed Gold Touch/classic-legend direction; bounded wording editable.",
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "No automatic victory/stat/weapon/race grant or Midas food curse.",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Transmutasi emas melalui sentuhan; hasil spesifik lebih sempit daripada manipulasi materi umum.",
+      "powerTierRef": "content/power-tier-design.json#gold-touch",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Gold Touch (Sentuhan Emas)",
+          "Tier Power: 4"
+        ],
+        "displayContext": "Gold Touch (Sentuhan Emas)"
+      }
+    },
+    {
+      "id": "molecular-manipulation",
+      "label": "Molecular Manipulation (Manipulasi Molekul)",
+      "scope": "Menyusun ulang struktur dan komposisi materi pada tingkat molekuler untuk mengubah bahan atau membentuk benda; batas materi, biaya, jangkauan dan resistensi mengikuti profil/mastery.",
+      "affinityTags": [
+        "matter",
+        "molecular",
+        "creation"
+      ],
+      "group": "alchemist-potion-power",
+      "contentStatus": "User permits Creation or Molecular Manipulation; this draft chooses one Molecular Manipulation grant, without a selector.",
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Creation through reshaping matter is the chosen expression; no automatic creation from nothing/life/souls, immortality or Sabatiel LP/card mechanics.",
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Menyusun ulang struktur dan komposisi materi umum pada tingkat molekuler.",
+      "powerTierRef": "content/power-tier-design.json#molecular-manipulation",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Molecular Manipulation (Manipulasi Molekul)",
+          "Tier Power: 5"
+        ],
+        "displayContext": "Molecular Manipulation (Manipulasi Molekul)"
+      }
+    }
+  ],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "one-potion design approved; pure event helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "final editable recipes/stat allocations",
+    "final body/role-fit and boost band",
+    "any revision to working twenty-slot equal odds",
+    "final capability limits; repeated-source stacking is a separate future policy, not an extra dose in this event"
+  ],
+  "expandedOddsAuthority": "Working twenty-slot equal default: 5% each, groups 6:4:4:4:2. User requested added slots, not an explicit new probability ratio. Earlier sixteen-slot snapshots retain their original odds.",
+  "retiredDistributions": [
+    {
+      "version": "alchemist/0.1.2",
+      "outcomeCount": 16,
+      "distribution": "4:4:4:4; 25% per group, 6.25% per recipe",
+      "reference": "reference/alchemist-retired-roster-v1.json",
+      "active": false
+    }
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,760 @@
+{
+  "schemaVersion": "roda-kekacauan-universal-concept-wheel/0.1",
+  "status": "God/Demigod/Utusan Tuhan share one user-requested Concept selector. Twelve concept entries are an assistant-proposed starter; count/roster and detailed capacities remain adjustable; base weights equal.",
+  "contract": {
+    "wheelId": "god-concept",
+    "scope": "One canonical Concept selector for all authorized callers; caller-specific grant role, maximum override and saved return are explicit bindings, not copies of the wheel.",
+    "starterPool": "Twelve assistant-proposed familiar concepts; user has not specified a count or complete concept roster.",
+    "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization. Current twelve-entry roster remains proposed.",
+    "callerModes": {
+      "god": "authority plus its explicit per-instance maximum mastery override",
+      "demigod": "ordinary concept power, no maximum override",
+      "utusan-tuhan": "ordinary concept power; +1 shared mastery comes from subtype profile, not this selector",
+      "vessel-god-full": "Actual Vessel God compatibility90/100: Authority mode with its explicit vessel-god-authority-max-mastery source-instance binding.",
+      "vessel-god-half": "Actual Vessel God compatibility60/70/80: one Authority-mode Concept/no Divine, with explicitly inherited source-instance maximum binding."
+    },
+    "grant": "Record one actual selected concept and grant its one linked concept-bound ability in the authorized caller mode. No bundle of other concepts or wheels.",
+    "classification": "Keep caller subtype/component identity; concept selection dispatches no God, Demigod, Elemental or Hybrid family event.",
+    "context": "Reveal only selected Concept, authorized role and actual source. Maximum belongs only to explicit God or eligible God Vessel source-instance Authority grants; ordinary grants retain common mastery.",
+    "additionalCallerBindings": [
+      {
+        "callerId": "vessel-god-full",
+        "archetypeId": "vessel",
+        "patronId": "god",
+        "allowedCompatibilityValues": [
+          90,
+          100
+        ],
+        "definitionFile": "content/vessel-events-design.json",
+        "grantMode": "authority",
+        "masteryOverrideRef": "content/vessel-events-design.json#godAuthorityOverride",
+        "identityPolicy": "Actual Vessel only; no God race component or Heavenly subtype dispatch."
+      },
+      {
+        "callerId": "vessel-god-half",
+        "archetypeId": "vessel",
+        "patronId": "god",
+        "allowedCompatibilityValues": [
+          60,
+          70,
+          80
+        ],
+        "definitionFile": "content/vessel-events-design.json",
+        "grantMode": "authority",
+        "masteryOverrideRef": "content/vessel-events-design.json#godAuthorityOverride",
+        "identityPolicy": "Actual Vessel only; no God race component or Heavenly subtype dispatch."
+      }
+    ]
+  },
+  "powers": [
+    {
+      "id": "concept-life",
+      "label": "Kehidupan Concept",
+      "group": "concept",
+      "conceptId": "life",
+      "catalogOrder": 1,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi pertumbuhan dan pemulihan kehidupan yang memenuhi syarat.",
+        "authority": "Mengatur ekspresi kehidupan dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "life"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#concept-life",
+      "powerTierByGrantMode": {
+        "power": 4,
+        "authority": 5
+      }
+    },
+    {
+      "id": "concept-death",
+      "label": "Kematian Concept",
+      "group": "concept",
+      "conceptId": "death",
+      "catalogOrder": 2,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi energi/ikatan bertema kematian pada sasaran yang memenuhi syarat.",
+        "authority": "Mengatur aspek kematian pada domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "death"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#concept-death",
+      "powerTierByGrantMode": {
+        "power": 4,
+        "authority": 5
+      }
+    },
+    {
+      "id": "concept-time",
+      "label": "Waktu Concept",
+      "group": "concept",
+      "conceptId": "time",
+      "catalogOrder": 3,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi laju atau urutan temporal lokal menurut limits konsep.",
+        "authority": "Mengatur aspek waktu dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "time"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#concept-time",
+      "powerTierByGrantMode": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "id": "concept-space",
+      "label": "Ruang Concept",
+      "group": "concept",
+      "conceptId": "space",
+      "catalogOrder": 4,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi jarak dan keterhubungan ruang dalam limits konsep.",
+        "authority": "Mengatur aspek ruang dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "space"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#concept-space",
+      "powerTierByGrantMode": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "id": "concept-fate",
+      "label": "Takdir Concept",
+      "group": "concept",
+      "conceptId": "fate",
+      "catalogOrder": 5,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi kemungkinan jalur kejadian yang diizinkan profil.",
+        "authority": "Mengatur jalur kejadian dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "fate"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#concept-fate",
+      "powerTierByGrantMode": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "id": "concept-knowledge",
+      "label": "Pengetahuan Concept",
+      "group": "concept",
+      "conceptId": "knowledge",
+      "catalogOrder": 6,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memperoleh/menghubungkan informasi yang memenuhi batas power.",
+        "authority": "Mengatur akses/ekspresi pengetahuan dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "knowledge"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-knowledge",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-war",
+      "label": "Perang Concept",
+      "group": "concept",
+      "conceptId": "war",
+      "catalogOrder": 7,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi dinamika konflik/tempur melalui power konsep yang dibatasi.",
+        "authority": "Mengatur aspek konflik dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "war"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-war",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-love",
+      "label": "Cinta Concept",
+      "group": "concept",
+      "conceptId": "love",
+      "catalogOrder": 8,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi ikatan atau resonansi emosional menurut aturan sasaran dan resistance.",
+        "authority": "Mengatur aspek ikatan dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "love"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-love",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-nature",
+      "label": "Alam Concept",
+      "group": "concept",
+      "conceptId": "nature",
+      "catalogOrder": 9,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi fenomena alam yang masuk cakupan profil konsep.",
+        "authority": "Mengatur aspek alam dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "nature"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-nature",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-sea",
+      "label": "Laut Concept",
+      "group": "concept",
+      "conceptId": "sea",
+      "catalogOrder": 10,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi fenomena bertema laut dalam limits konsep.",
+        "authority": "Mengatur aspek laut dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "sea"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-sea",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-storm",
+      "label": "Badai Concept",
+      "group": "concept",
+      "conceptId": "storm",
+      "catalogOrder": 11,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi fenomena badai dalam limits konsep.",
+        "authority": "Mengatur aspek badai dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "storm"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-storm",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "id": "concept-light",
+      "label": "Cahaya Concept",
+      "group": "concept",
+      "conceptId": "light",
+      "catalogOrder": 12,
+      "contentStatus": "Assistant-proposed original game concept; no claim about real deities/religions or automatic lore powers.",
+      "scopeModes": {
+        "power": "Memengaruhi fenomena cahaya dalam limits konsep.",
+        "authority": "Mengatur aspek cahaya dalam domain Authority yang ditetapkan."
+      },
+      "affinityTags": [
+        "concept",
+        "light"
+      ],
+      "mechanicalBalance": "Domain, range, duration, cost, target resistance, limits and rank scale pending. Maximum mastery means the configured top rank, not unlimited scale, every concept, or automatic main stats.",
+      "masteryTiming": "caller mode: normal shared mastery for power; explicit God Authority max override for authority",
+      "enchantment": "never from power mastery",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#concept-light",
+      "powerTierByGrantMode": {
+        "power": 3,
+        "authority": 4
+      }
+    }
+  ],
+  "wheels": [
+    {
+      "id": "god-concept",
+      "label": "God Concept",
+      "scope": "universal",
+      "definitionFile": "universal-concept-wheel-design.json",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "orderedBy": "catalog order only",
+      "outcomes": [
+        {
+          "id": "life",
+          "label": "Kehidupan",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 1,
+          "powerDefinitionId": "concept-life",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "life",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-life",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Kehidupan"
+            ],
+            "displayContext": "Concept Kehidupan keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "death",
+          "label": "Kematian",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 2,
+          "powerDefinitionId": "concept-death",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "death",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-death",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Kematian"
+            ],
+            "displayContext": "Concept Kematian keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "time",
+          "label": "Waktu",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 3,
+          "powerDefinitionId": "concept-time",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "time",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-time",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Waktu"
+            ],
+            "displayContext": "Concept Waktu keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "space",
+          "label": "Ruang",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 4,
+          "powerDefinitionId": "concept-space",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "space",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-space",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Ruang"
+            ],
+            "displayContext": "Concept Ruang keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "fate",
+          "label": "Takdir",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 5,
+          "powerDefinitionId": "concept-fate",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "fate",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-fate",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Takdir"
+            ],
+            "displayContext": "Concept Takdir keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "knowledge",
+          "label": "Pengetahuan",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 6,
+          "powerDefinitionId": "concept-knowledge",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "knowledge",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-knowledge",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Pengetahuan"
+            ],
+            "displayContext": "Concept Pengetahuan keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "war",
+          "label": "Perang",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 7,
+          "powerDefinitionId": "concept-war",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "war",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-war",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Perang"
+            ],
+            "displayContext": "Concept Perang keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "love",
+          "label": "Cinta",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 8,
+          "powerDefinitionId": "concept-love",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "love",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-love",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Cinta"
+            ],
+            "displayContext": "Concept Cinta keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "nature",
+          "label": "Alam",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 9,
+          "powerDefinitionId": "concept-nature",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "nature",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-nature",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Alam"
+            ],
+            "displayContext": "Concept Alam keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "sea",
+          "label": "Laut",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 10,
+          "powerDefinitionId": "concept-sea",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "sea",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-sea",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Laut"
+            ],
+            "displayContext": "Concept Laut keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "storm",
+          "label": "Badai",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 11,
+          "powerDefinitionId": "concept-storm",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "storm",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-storm",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Badai"
+            ],
+            "displayContext": "Concept Badai keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        },
+        {
+          "id": "light",
+          "label": "Cahaya",
+          "inclusionStatus": "assistant-proposed-starter",
+          "baseWeight": 1,
+          "catalogOrder": 12,
+          "powerDefinitionId": "concept-light",
+          "effects": [
+            {
+              "type": "record-concept-affinity",
+              "conceptId": "light",
+              "source": "actual committed concept result and caller component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-concept-wheel-design.json",
+              "definitionId": "concept-light",
+              "grantRole": "from authorized caller binding: authority or power",
+              "masteryPolicy": "from explicit caller grant binding; default ordinary shared mastery, God Authority override only for God mode",
+              "source": "actual committed concept result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Concept terpilih: Cahaya"
+            ],
+            "displayContext": "Concept Cahaya keluar. Role grant dan mastery mengikuti caller yang sebenarnya.",
+            "exampleMode": "No import of unselected subtype, fixed max, divine power bundle or source religion."
+          }
+        }
+      ],
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights"
+    }
+  ],
+  "openBalance": [
+    "Confirm/update the twelve proposed concept choices or their count.",
+    "Set Concept domain/cost/range/limits; base odds equal."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

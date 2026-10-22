@@ -1,0 +1,297 @@
+{
+  "schemaVersion": "roda-kekacauan-druid/0.1",
+  "version": "druid/0.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "druid",
+  "eventProfileId": "druid-nature-path",
+  "status": "User accepted four equal nature paths, one Tier3 power worth two design points. Wild Shape animal roster is an editable authored identity-only reference view. Algorithm design; capability/body-fit/executor pending.",
+  "authority": {
+    "confirmed": [
+      "User accepts the four-path Druid proposal with a two-point design budget.",
+      "Wild Shape gets one ordinary animal form and Animal Transformation; Penjaga Hutan Forest Control; Pawang Alam Taming Power; Penyembuh Alam Healing Power.",
+      "Unspecified wheels use equal base probabilities."
+    ],
+    "authoredChoices": [
+      "Wild Shape references the 32 modern Tamer animals, with conditional weights recomputed to 1/32. This count/roster was not separately specified for Druid."
+    ],
+    "budget": {
+      "total": 2,
+      "interpretation": "One existing Tier3 power consumes the two-point proposed budget; no numeric stat/mastery bonus."
+    }
+  },
+  "wheel": {
+    "id": "druid-path",
+    "label": "Jalur Druid",
+    "outcomeCount": 4,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "wild-shape",
+        "label": "Wild Shape",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "druid-wild-shape",
+        "resultContext": {
+          "facts": [
+            "Archetype: Druid",
+            "Jalur: Wild Shape"
+          ],
+          "caption": "Satu bentuk hewan hasil spin.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "forest-guardian",
+        "label": "Penjaga Hutan",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "druid-forest-guardian",
+        "resultContext": {
+          "facts": [
+            "Archetype: Druid",
+            "Jalur: Penjaga Hutan"
+          ],
+          "caption": "Forest Control masuk build.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "nature-tamer",
+        "label": "Pawang Alam",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "druid-nature-tamer",
+        "resultContext": {
+          "facts": [
+            "Archetype: Druid",
+            "Jalur: Pawang Alam"
+          ],
+          "caption": "Dapat Taming Power.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "nature-healer",
+        "label": "Penyembuh Alam",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "druid-nature-healer",
+        "resultContext": {
+          "facts": [
+            "Archetype: Druid",
+            "Jalur: Penyembuh Alam"
+          ],
+          "caption": "Dapat Healing Power.",
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "animalWheelReference": {
+    "id": "druid-wild-shape-animal",
+    "label": "Bentuk Hewan",
+    "kind": "filtered-identity-only-view",
+    "definitionFile": "content/tamer-events-design.json",
+    "sourceWheelId": "tamer-animal-to-tame",
+    "sourceCatalogVersion": "tamer/1.2.0",
+    "selector": {
+      "field": "groupId",
+      "equals": "modern"
+    },
+    "projection": [
+      "id",
+      "label",
+      "baseWeight"
+    ],
+    "outcomeCount": 32,
+    "drawCount": 1,
+    "baseWeight": 1,
+    "probabilityPerEligibleOutcome": 0.03125,
+    "probabilityPolicy": "Normalize the selected identity view anew; never copy source 1/64 probabilities.",
+    "rosterStatus": "Editable authored reuse of the existing modern-animal identities.",
+    "dispatchSourceEvents": false,
+    "copySourceEffects": false,
+    "binding": "Only the single actually committed animal ID becomes available to this source Wild Shape power. Freeze its canonical identity reference and catalog version.",
+    "forbiddenProjection": [
+      "companionProfile",
+      "effects",
+      "source probabilities",
+      "Taming grant",
+      "stat modifiers",
+      "race history or body identity"
+    ]
+  },
+  "rewardProfiles": [
+    {
+      "id": "druid-wild-shape",
+      "pathId": "wild-shape",
+      "label": "Wild Shape",
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "druid-wild-shape-animal",
+          "definitionFile": "content/druid-events-design.json",
+          "invocationCount": 1,
+          "stepId": "druid-wild-shape-animal-1",
+          "ordinal": 1,
+          "mode": "identity-only",
+          "returnTo": "saved-druid-reward-continuation"
+        }
+      ],
+      "grant": {
+        "type": "grant-power",
+        "definitionFile": "content/siluman-events-design.json",
+        "definitionId": "animal-transformation",
+        "powerTier": 3,
+        "powerTierPolicyVersion": "power-tier/1.0.0",
+        "grantMode": "power",
+        "masteryTiming": "main-power-stage",
+        "binding": {
+          "source": "actual committed druid-wild-shape-animal result",
+          "formCount": 1,
+          "returnForm": "character original resolved body identity"
+        }
+      },
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "druid-forest-guardian",
+      "pathId": "forest-guardian",
+      "label": "Penjaga Hutan",
+      "steps": [],
+      "grant": {
+        "type": "grant-power",
+        "definitionFile": "content/elf-events-design.json",
+        "definitionId": "forest-control",
+        "powerTier": 3,
+        "powerTierPolicyVersion": "power-tier/1.0.0",
+        "grantMode": "power",
+        "masteryTiming": "main-power-stage"
+      },
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "druid-nature-tamer",
+      "pathId": "nature-tamer",
+      "label": "Pawang Alam",
+      "steps": [],
+      "grant": {
+        "type": "grant-power",
+        "definitionFile": "content/tamer-events-design.json",
+        "definitionId": "taming",
+        "powerTier": 3,
+        "powerTierPolicyVersion": "power-tier/1.0.0",
+        "grantMode": "power",
+        "masteryTiming": "main-power-stage"
+      },
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "druid-nature-healer",
+      "pathId": "nature-healer",
+      "label": "Penyembuh Alam",
+      "steps": [],
+      "grant": {
+        "type": "grant-power",
+        "definitionFile": "content/fairy-events-design.json",
+        "definitionId": "healing-power",
+        "powerTier": 3,
+        "powerTierPolicyVersion": "power-tier/1.0.0",
+        "grantMode": "power",
+        "masteryTiming": "main-power-stage"
+      },
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "returnTo": "backstory"
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "druid-path",
+      "definitionFile": "content/druid-events-design.json",
+      "invocationCount": 1,
+      "stepId": "druid-path-1",
+      "ordinal": 1,
+      "returnTo": "selected-druid-reward"
+    }
+  ],
+  "followupSpinCountByResult": {
+    "wild-shape": 2,
+    "forest-guardian": 1,
+    "nature-tamer": 1,
+    "nature-healer": 1
+  },
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "content/siluman-events-design.json",
+      "definitionId": "animal-transformation",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "grantMode": "power",
+      "masteryTiming": "main-power-stage"
+    },
+    {
+      "definitionFile": "content/elf-events-design.json",
+      "definitionId": "forest-control",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "grantMode": "power",
+      "masteryTiming": "main-power-stage"
+    },
+    {
+      "definitionFile": "content/tamer-events-design.json",
+      "definitionId": "taming",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "grantMode": "power",
+      "masteryTiming": "main-power-stage"
+    },
+    {
+      "definitionFile": "content/fairy-events-design.json",
+      "definitionId": "healing-power",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "grantMode": "power",
+      "masteryTiming": "main-power-stage"
+    }
+  ],
+  "contracts": {
+    "order": "Actual Druid/reaction -> one Jalur Druid -> path reaction -> Wild Shape only: one ordinary animal identity spin -> exactly one selected recipe power grant/reaction -> Backstory.",
+    "probability": "Four paths baseWeight1/25%; Wild Shape projected ordinary animal view baseWeight1/1 per 32. Retain hard eligibility and authorized future distribution policies; no implicit tier rarity.",
+    "recipeAuthority": "Execute only selected rewardProfiles steps, then its one grant after required binding is committed. Selector references/context are metadata, not additional grants.",
+    "references": "Resolve the four existing canonical Tier3 powers, their grant modes and ratings. Import intrinsic scope only; do not dispatch Siluman/Elf/Fairy/Tamer events or copy caller-specific racial bonuses, identity narration, companions or mastery.",
+    "wildShape": "Source binds exactly one actual ordinary animal, not the entire 32-animal pool. Original character identity/return form remains; no Siluman count/fusion, race change/history update, creature summon, copied animal stats or extra Size spin. Form capacity/body-fit profiles remain configuration.",
+    "taming": "Pawang Alam grants the existing ability only. No free companion, success wheel or Tamer event; a separate Tamer companion remains owned under its own source.",
+    "budget": "One Tier3 power fulfills the accepted two-point design budget; no additional stat/mastery bonus or weapon grant.",
+    "ownership": "Retain early owned power after normal main Power None. Use the normal single shared Power Mastery resolution for all powers; normal main acquisitions and final bonus/Enchant timing remain unchanged.",
+    "ledger": "Freeze path/animal pools, odds, rules, actual results, canonical definitions/tiers and one source binding. Commit once under runId/sourceArchetypeInvocationId/sourcePathSpinId/rewardProfileId. Replay resumes the saved child/grant/reaction without another draw or duplicate reward.",
+    "reaction": "Stack only actual path, committed animal if applicable and granted power. Future main stats/mastery remain unknown; canonical source-race narration is not this caller. No implicit funny-result tags from labels/fixed grants.",
+    "return": "Finish actual children and grant/reactions before Backstory; preserve the accepted gate, race history and global main stage order.",
+    "runtime": "Core accepted; ordinary animal identities are editable authored choices. Capability/form/equipment/body-role profiles and event executor remain configuration; final roster stays inactive."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only",
+    "module": null
+  },
+  "openConfiguration": [
+    "Wild Shape ordinary-animal roster may be edited; conditional single-form capacity/visual/equipment fit.",
+    "Existing power range/cost/duration/targets/resistance; Taming alone does not create a companion.",
+    "Final Druid body-role fit and event persistence/executor."
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-druid-cursed-2026-10-10.json",
+    "policy": "New invocations use druid/0.1.0; old frozen runs keep their committed versions and rewards."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,1193 @@
+{
+  "schemaVersion": 1,
+  "status": "User-confirmed two sequential race components with normal events and shared nested history.",
+  "familyId": "hybrid",
+  "raceDesign": "race-wheel-design.json",
+  "componentCount": 2,
+  "canonicalWheelId": "race-family",
+  "invocationTemplates": [
+    {
+      "id": "hybrid-first-race",
+      "label": "Ras Pertama Hybrid",
+      "status": "User-confirmed invocation of the existing canonical race-family pool",
+      "kind": "race-invocation-template",
+      "canonicalWheelId": "race-family",
+      "definitionFile": "race-wheel-design.json",
+      "optionsRef": "race-wheel-design.json#mainWheel.options",
+      "role": "parent",
+      "componentSlot": 1,
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "eligibilityRuleRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+      "guard": "familyId not in character.usedRaceFamilyIds, intersect only separately approved caller guards",
+      "odds": "Use canonical main weights (currently 1 each), approved modifiers, then normalize/freeze eligible pool. Used family weights are zero regardless of modifiers.",
+      "commitRaceHistory": true,
+      "dispatchPolicy": "Execute selected family approved events normally, exactly once, under new source component and saved continuation.",
+      "registration": "Invocation template reuses main pool; not a new option catalog or duplicate active canonical wheel.",
+      "invocationKey": "runId/sourceComponentId/sourceParentSpinId/rootHybridSlot/followupStepId/childOrdinal",
+      "emptyPool": "Configuration error; never reset history, silently skip required draw or reroll a committed result.",
+      "followupStepId": "hybrid-first-race",
+      "rootSlotBinding": "Use this root slot"
+    },
+    {
+      "id": "hybrid-second-race",
+      "label": "Ras Kedua Hybrid",
+      "status": "User-confirmed invocation of the existing canonical race-family pool",
+      "kind": "race-invocation-template",
+      "canonicalWheelId": "race-family",
+      "definitionFile": "race-wheel-design.json",
+      "optionsRef": "race-wheel-design.json#mainWheel.options",
+      "role": "parent",
+      "componentSlot": 2,
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "eligibilityRuleRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+      "guard": "familyId not in character.usedRaceFamilyIds, intersect only separately approved caller guards",
+      "odds": "Use canonical main weights (currently 1 each), approved modifiers, then normalize/freeze eligible pool. Used family weights are zero regardless of modifiers.",
+      "commitRaceHistory": true,
+      "dispatchPolicy": "Execute selected family approved events normally, exactly once, under new source component and saved continuation.",
+      "registration": "Invocation template reuses main pool; not a new option catalog or duplicate active canonical wheel.",
+      "invocationKey": "runId/sourceComponentId/sourceParentSpinId/rootHybridSlot/followupStepId/childOrdinal",
+      "emptyPool": "Configuration error; never reset history, silently skip required draw or reroll a committed result.",
+      "followupStepId": "hybrid-second-race",
+      "rootSlotBinding": "Use this root slot"
+    }
+  ],
+  "resolvePlan": [
+    {
+      "action": "spin-race-and-run-events",
+      "invocationTemplateId": "hybrid-first-race",
+      "rootSlot": 1,
+      "awaitImmediateChain": true
+    },
+    {
+      "action": "spin-race-and-run-events",
+      "invocationTemplateId": "hybrid-second-race",
+      "rootSlot": 2,
+      "awaitImmediateChain": true
+    },
+    {
+      "action": "record-hybrid-completion",
+      "extraSpin": false,
+      "returnTo": "saved caller; archetype for ordinary main race-stage chain"
+    }
+  ],
+  "contracts": {
+    "componentCount": 2,
+    "status": "User-confirmed two sequential race components with normal events and shared nested history.",
+    "eligibleFamilyPolicy": "Use the complete canonical main race pool, including Reinkarnasi Pahlawan Legendaris, Anime MC and Heavenly Principle. Filter all previously selected families; Hybrid is already used when its event starts, so it cannot select itself.",
+    "componentResolution": "Spin component 1, commit its family/history before dispatch, and finish every immediate event and nested race chain. Register later-stage tickets without advancing main stages. Only then spin component 2 using the accumulated history and run its events the same way.",
+    "distinctnessPolicy": "Before every identity-family draw disable ALL previously committed families across both roots and every nested host/origin, not just the first root or final leaf. Filter before draw, never reroll forbidden results.",
+    "poolExhaustion": "A required draw with no eligible positive-weight candidate is an explicit configuration error. Never reset history, restore used sections, silently skip, or reroll a committed result.",
+    "eventOrder": "Hybrid result/reaction → component 1 result/reaction and complete immediate nested chain → component 2 result/reaction and complete immediate chain → record completion → saved caller. No fusion stability or dominance wheel.",
+    "eventScope": "Only an actual explicit Hybrid family selection opens this two-root sequence; lore Half-Ghoul/Half-Demon/Demigod or reference ancestry does not dispatch it automatically.",
+    "journalPolicy": "Two stable root slots 1/2, with separately linked host/origin descendants. Every invocation carries component/parent/root-slot and return continuation. History is shared globally.",
+    "effectsPolicy": "Retain every explicitly approved grant, modifier, guarantee and deferred ticket from both actual chains. Apply each source once under source-once additive stacking with no numeric floor/cap. No blanket stat addition, halving, automatic power package, suppression or extra mastery spin.",
+    "anatomyPolicy": "Store both root identities and nested modifiers in one body brief. Anatomical conflict/body-reference policy remains pending; do not invent stability/dominance results or discard committed race rewards.",
+    "returnTo": "saved caller; initial main Race completion enters Archetype gate, while a Hybrid selected inside Mutant returns to the saved mutation event after both roots/events complete",
+    "size": "One global Size spin. Any committed Raksasa component binds existing giant variant; otherwise use explicit sourced body/reference composition rules. Do not average unknown measurements.",
+    "mastery": "All owned powers share the existing single character mastery and scoped Authority exception. Weapons keep their normal per-weapon mastery/Enchant.",
+    "context": "Append actual roots, nested families, grants, modifiers and upcoming steps with provenance. Future second race and final stats remain unknown until committed.",
+    "idempotence": "Keys include root slot and nested component/step. Resume restores a committed result and continues its unfinished children, never applies history to reroll it or executes an event twice.",
+    "budgets": "Validate configured event budgets can support required chains. Current numerical limits are proposed; on required overflow fail configuration, never truncate the two-root sequence."
+  },
+  "example": {
+    "chain1": [
+      "symbiote",
+      "raksasa",
+      "demon"
+    ],
+    "labels": [
+      "Symbiote",
+      "Raksasa",
+      "Abyssal Axiom"
+    ],
+    "usedBeforeSecond": [
+      "hybrid",
+      "symbiote",
+      "raksasa",
+      "demon"
+    ],
+    "disabledBeforeSecond": [
+      "hybrid",
+      "symbiote",
+      "raksasa",
+      "demon"
+    ],
+    "remainingCountIfNoOtherExclusions": 14,
+    "probabilityPerRemainingIfEqualAndNoModifiers": {
+      "numerator": 1,
+      "denominator": 14
+    },
+    "secondResult": "Not predetermined. Every actual family in any other first-root event would also be excluded."
+  },
+  "resultContext": {
+    "facts": [
+      "Ras terpilih: Hybrid",
+      "Dua spin ras utama, berurutan dengan event masing-masing",
+      "Semua ras yang sudah muncul ikut dikeluarkan dari spin berikutnya"
+    ],
+    "displayContext": "Hybrid punya dua cabang ras. Cabang pertama selesai dulu; cabang kedua memakai seluruh riwayat yang sudah terbentuk.",
+    "narrationExample": "Dua ras satu badan. Slot kedua nggak boleh nyomot ras yang sudah kepakai.",
+    "futureGuard": "Names of first/second families and descendants are shown only after actual results; no final stat/Size/mastery before its stage.",
+    "exampleMode": "Narration only, no mechanics funny-result tag."
+  },
+  "retiredProposals": [
+    {
+      "reason": "User defined Hybrid as two normal sequential race chains; previous fusion/dominance and Legendary exclusion were assistant proposals.",
+      "registration": "History only, never register or execute.",
+      "family": {
+        "id": "hybrid",
+        "label": "Hybrid",
+        "selectionKind": "race-family",
+        "status": "Standalone race and event user-confirmed; two-component recipe and fusion selectors proposed",
+        "baseWeight": 1,
+        "sourceRaceIds": [
+          "hybrid"
+        ],
+        "subtypeExamples": [
+          "Elf + Demon",
+          "Manusia + Demigod",
+          "Siluman + Vampire"
+        ],
+        "identityOutput": "hybridComponents[]; resolved composite race identity",
+        "branch": {
+          "id": "hybrid-event",
+          "label": "Event Hybrid",
+          "kind": "bounded-sequence",
+          "status": "Hybrid event confirmed; detailed sequence proposed",
+          "resolvePlan": [
+            {
+              "action": "spin",
+              "wheelId": "hybrid-first-race"
+            },
+            {
+              "action": "spin",
+              "wheelId": "hybrid-second-race"
+            },
+            {
+              "action": "merge-component-identity",
+              "deduplicateTraits": true
+            },
+            {
+              "action": "spin",
+              "wheelId": "hybrid-fusion-stability"
+            },
+            {
+              "action": "spin",
+              "wheelId": "hybrid-dominance"
+            },
+            {
+              "action": "resolve-compatible-component-events",
+              "oncePerComponent": true,
+              "returnTo": "archetype"
+            }
+          ]
+        },
+        "hybridContract": {
+          "componentCount": 2,
+          "status": "proposed starting recipe",
+          "eligibleFamilyPolicy": "Choose supported base-identity families, including Anime MC and Heavenly Principle. Exclude Hybrid itself and the Reinkarnasi Pahlawan Legendaris legacy family.",
+          "componentResolution": "Resolve each selected family identity selector before the next component. A resolved Anime MC template or divine subtype keeps its identity metadata; it does not restart main race selection.",
+          "distinctnessPolicy": "Second-family candidates exclude the first selected family in the starter recipe. Pre-filter their descendant outcomes to retain a distinct normalized resolved race signature; never reroll a committed result.",
+          "poolExhaustion": "A required empty family/subtype pool is a configuration error. Do not silently skip a component or reroll.",
+          "eventOrder": "After both identities resolve, merge traits once, resolve fusion stability and dominance, then compatible component events once per stable component slot.",
+          "eventScope": "The hybrid fusion event belongs only to an explicit Hybrid selection. Existing Half-Ghoul, Half-Demon, Demigod, or mixed wayang ancestry does not auto-dispatch it.",
+          "journalPolicy": "Record each parent selector with its own stable component slot and full family/subtype provenance. Repeated selector IDs do not share one consumed-event key.",
+          "effectsPolicy": "Use bounded/normalized component profiles with deduplicated traits and explicit anatomy/ability conflicts. Hybrid does not automatically add every stat, grant every source power, or bypass weapon/power mastery.",
+          "anatomyPolicy": "Produce one coherent final body brief from both resolved identities, their body forms, and dominance outcome.",
+          "returnTo": "archetype"
+        }
+      },
+      "wheels": [
+        {
+          "id": "hybrid-first-race",
+          "label": "Race Pertama",
+          "status": "Retired Hybrid proposal",
+          "baseWeightsAssigned": true,
+          "outcomes": [
+            {
+              "id": "human",
+              "label": "Manusia",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "human",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "human",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "elf",
+              "label": "Elf",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "elf",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "elf",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "dwarf",
+              "label": "Kurcaci",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "dwarf",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "dwarf",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "goblinoid",
+              "label": "Goblin & Orc",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "goblinoid",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "goblinoid",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "raksasa",
+              "label": "Raksasa",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "raksasa",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "raksasa",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "fae",
+              "label": "Peri",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "fae",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "fae",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "beastfolk",
+              "label": "Siluman",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "beastfolk",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "beastfolk",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "lelembut",
+              "label": "Lelembut",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "lelembut",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "lelembut",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "mythical-beast",
+              "label": "Mythical Beast",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "mythical-beast",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "mythical-beast",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "golem",
+              "label": "Golem",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "golem",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "golem",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "elemental",
+              "label": "Elemental",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "elemental",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "elemental",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "symbiote",
+              "label": "Symbiote",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "symbiote",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "symbiote",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "heavenly-principle",
+              "label": "Heavenly Principle",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "heavenly-principle",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "heavenly-principle",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "demon",
+              "label": "Abyssal Axiom",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "demon",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "demon",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "anime-lineage",
+              "label": "Anime MC",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "anime-lineage",
+              "guard": "Family has a complete eligible base-identity profile AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "anime-lineage",
+                  "componentSlot": 1,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            }
+          ],
+          "eligibilityRuleRef": "race-family-no-repeat",
+          "commitRaceHistory": true,
+          "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+          "active": false
+        },
+        {
+          "id": "hybrid-second-race",
+          "label": "Race Kedua",
+          "status": "Retired Hybrid proposal",
+          "baseWeightsAssigned": true,
+          "outcomes": [
+            {
+              "id": "human",
+              "label": "Manusia",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "human",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "human",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "elf",
+              "label": "Elf",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "elf",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "elf",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "dwarf",
+              "label": "Kurcaci",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "dwarf",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "dwarf",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "goblinoid",
+              "label": "Goblin & Orc",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "goblinoid",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "goblinoid",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "raksasa",
+              "label": "Raksasa",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "raksasa",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "raksasa",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "fae",
+              "label": "Peri",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "fae",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "fae",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "beastfolk",
+              "label": "Siluman",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "beastfolk",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "beastfolk",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "lelembut",
+              "label": "Lelembut",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "lelembut",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "lelembut",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "mythical-beast",
+              "label": "Mythical Beast",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "mythical-beast",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "mythical-beast",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "golem",
+              "label": "Golem",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "golem",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "golem",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "elemental",
+              "label": "Elemental",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "elemental",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "elemental",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "symbiote",
+              "label": "Symbiote",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "symbiote",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "symbiote",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "heavenly-principle",
+              "label": "Heavenly Principle",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "heavenly-principle",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "heavenly-principle",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "demon",
+              "label": "Abyssal Axiom",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "demon",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "demon",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            },
+            {
+              "id": "anime-lineage",
+              "label": "Anime MC",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "familyId": "anime-lineage",
+              "guard": "Different first-component family AND at least one eligible distinct resolved descendant identity AND familyId not in character.usedRaceFamilyIds",
+              "resolvePlan": [
+                {
+                  "action": "resolve-family-identity",
+                  "familyId": "anime-lineage",
+                  "componentSlot": 2,
+                  "inheritEligibilityGuards": true,
+                  "returnTo": "hybrid-event"
+                }
+              ],
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "race.hybridComposition",
+                  "archetype",
+                  "weapon",
+                  "power",
+                  "weakness"
+                ],
+                "description": "Resolve and record this component, then use its bounded profile in the final hybrid composition."
+              }
+            }
+          ],
+          "eligibilityRuleRef": "race-family-no-repeat",
+          "commitRaceHistory": true,
+          "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+          "active": false
+        },
+        {
+          "id": "hybrid-fusion-stability",
+          "label": "Stabilitas Hybrid",
+          "status": "Retired Hybrid proposal",
+          "baseWeightsAssigned": true,
+          "outcomes": [
+            {
+              "id": "stable",
+              "label": "Stabil",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "power",
+                  "weakness"
+                ],
+                "description": "Compatible composite control profile; numerical effects pending."
+              }
+            },
+            {
+              "id": "unstable",
+              "label": "Tidak Stabil",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "power",
+                  "weakness"
+                ],
+                "description": "Control strain changes compatible mastery/control and weakness candidates; numerical effects pending."
+              }
+            }
+          ],
+          "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+          "active": false
+        },
+        {
+          "id": "hybrid-dominance",
+          "label": "Dominasi Ras",
+          "status": "Retired Hybrid proposal",
+          "baseWeightsAssigned": true,
+          "outcomes": [
+            {
+              "id": "balanced",
+              "label": "Seimbang",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "power",
+                  "weapon",
+                  "weakness"
+                ],
+                "description": "Balanced component expression with normalized influence profiles."
+              }
+            },
+            {
+              "id": "first-dominant",
+              "label": "Ras Pertama Dominan",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "power",
+                  "weapon",
+                  "weakness"
+                ],
+                "description": "First resolved component leads anatomy and compatible ability candidates."
+              }
+            },
+            {
+              "id": "second-dominant",
+              "label": "Ras Kedua Dominan",
+              "inclusionStatus": "proposed",
+              "baseWeight": 1,
+              "influenceDraft": {
+                "status": "semantic proposal; numerical values and eligibility guards pending",
+                "targets": [
+                  "power",
+                  "weapon",
+                  "weakness"
+                ],
+                "description": "Second resolved component leads anatomy and compatible ability candidates."
+              }
+            }
+          ],
+          "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+          "active": false
+        }
+      ]
+    }
+  ],
+  "openBalance": [
+    "Source-backed mixed-body Size references, explicit equipment fit and future body-generator validation.",
+    "Future declared conditional odds and event executors. Numeric bounds and ordinary power dedup are now settled."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1
+  },
+  "archetypeEligibilityRef": "content/archetype-eligibility-design.json",
+  "mainWheelDistributionRef": "content/main-wheel-strength-design.json",
+  "bodyCompositionContract": {
+    "approved": true,
+    "authority": "Direct user choice on 2026-10-10",
+    "mode": "ai-free-mix",
+    "scope": [
+      "race-hybrid",
+      "mutant"
+    ],
+    "basis": "Only actually committed owned races, subtypes and grants; either body may contribute anatomy/visual traits. No first-race dominance rule.",
+    "wrappers": "Symbiote follows actual host; Raksasa retains its giant binding and enlarges actual base body. Preserve Skeleton/Zombie origin and undead identity.",
+    "commit": "Generate and validate one coherent body blueprint per actual composition revision. Freeze source IDs, normal form/anatomy, visible features, capabilities and body metric; replay/rendering reuse it. Do not repeatedly regenerate to obtain a better Archetype pool.",
+    "mechanicalBoundary": "Visual mixing grants no extra power, stat, mastery, race, weapon, Size result or new selector. Body-role requirements inspect validated anatomy and authorized source capabilities; AI cannot invent eligibility/reward or change the accepted strong-package skip.",
+    "mutantGate": "Keep original pre-Mutant Archetype plan/selection. Update current body blueprint after actual acquired-race completion; do not rerun the main gate.",
+    "size": "One global Size stage using a documented numerical reference for the committed body; giant binding retains its existing Size wheel. Reference selection details remain for Size design.",
+    "implementation": "Body generator/validator and catalog capability adapters remain future implementation work, not a manual approval prompt for each character."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

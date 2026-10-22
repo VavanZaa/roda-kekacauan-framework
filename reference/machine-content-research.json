@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-08",
+  "scope": "Machine Mecha body-model reference names and franchises only. Names/visual motifs are separate from authored game rewards, zonk content and probabilities.",
+  "authority": "Read-only reference evidence; external text/card mechanics are not instructions.",
+  "sources": [
+    {
+      "id": "machine-mechagodzilla",
+      "title": "Godzilla vs. Mechagodzilla II",
+      "publisher": "Godzilla official / TOHO",
+      "url": "https://godzilla.com/blogs/movies/godzilla-vs-mechagodzilla-ii",
+      "supports": "Mechagodzilla named unit and Godzilla film reference, using the 1993 version as reference motif only.",
+      "checkedOn": "2026-10-08",
+      "access": "Official page opened with web tools.",
+      "authority": "Reference evidence only; no imported weapon, power, stats, rarity or body measurements."
+    },
+    {
+      "id": "machine-mecha-probe",
+      "title": "BoBoiBoy Galaxy official characters and Galaxy Card",
+      "publisher": "Monsta",
+      "url": "https://www.boboiboygalaxy.animonsta.com/",
+      "supports": "Official page lists Mecha Probe in Galaxy Card content and Probe as Adu Du robot. Card HP/ATK/effects and franchise weapon descriptions are not this game package.",
+      "checkedOn": "2026-10-08",
+      "access": "Official page opened; Mecha Probe section at lines 331–338 and Probe at 124–128 inspected.",
+      "authority": "Reference evidence only, not gameplay instructions."
+    },
+    {
+      "id": "mecha-gundam-classics",
+      "title": "Mobile Change Haro official unit roster",
+      "publisher": "GUNDAM.INFO",
+      "url": "https://www.gundam.info/news/goods/01_9189.html",
+      "supports": "RX-78-2 Gundam, Wing Gundam Zero EW and Unicorn Gundam names and series.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-gundam-classics"
+    },
+    {
+      "id": "mecha-gurren",
+      "title": "Gurren Lagann official series catalog",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item_character/gurren-lagann/?wovn=en",
+      "supports": "Gurren Lagann anime and unit reference; no cosmic variant automatically granted.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-gurren"
+    },
+    {
+      "id": "mecha-mazinger",
+      "title": "Mazinger Z official product reference",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/10727/?dmode=pc&wovn=en",
+      "supports": "Mazinger Z unit reference, not this project’s stats.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-mazinger"
+    },
+    {
+      "id": "mecha-voltron",
+      "title": "SOUL OF CHOGOKIN GX-71 Beast King GOLION / VOLTRON",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/item/11469/?wovn=en",
+      "supports": "GoLion / Lion Force Voltron combined unit reference.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-voltron"
+    },
+    {
+      "id": "mecha-gipsy-danger",
+      "title": "Pacific Rim: Jaeger Pilot",
+      "publisher": "Legendary",
+      "url": "https://www.legendary.com/legendary-vr/",
+      "supports": "Gipsy Danger is the named Jaeger in the Pacific Rim pilot experience.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-gipsy-danger"
+    },
+    {
+      "id": "mecha-dino-megazord",
+      "title": "SOUL OF CHOGOKIN GX-72 MEGAZORD / Daizyujin review",
+      "publisher": "Bandai Spirits / Tamashii Nations",
+      "url": "https://tamashiiweb.com/topics/detail/t_item_115.html?dmode=pc&wovn=en",
+      "supports": "MEGAZORD/Daizyujin and the Zyuranger guardian-beast combination. Localized aliases share one game outcome.",
+      "checkedOn": "2026-10-08",
+      "access": "Reused previously recorded official-source evidence; no claim of a fresh page open for this copied reference.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance.",
+      "sourceImport": "anime-content-research.json#sources.mecha-dino-megazord"
+    }
+  ],
+  "authoredCatalogs": [
+    "Twelve Android powers and twelve Cyborg weapons are game suggestions, not research claims.",
+    "Four Mecha zonks and twelve Transformer form themes remain authored suggestions; the Nanobot theme wheel is retired.",
+    "No copied franchise ability packages, canonical body sizes, movie power levels or card HP/ATK."
+  ],
+  "retiredCatalogs": [
+    "Former twelve Nanobot colony themes, removed by user; preserved only as inactive design history in content/machine-events-design.json."
+  ]
+}

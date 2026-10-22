@@ -1,0 +1,1304 @@
+{
+  "schemaVersion": "roda-kekacauan-archaeologist/1.0",
+  "version": "archaeologist/1.0.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "archaeologist",
+  "eventProfileId": "archaeologist-bone-discovery",
+  "status": "User-confirmed one Bone Discovered wheel, approximately 32 animals, modern zero and older/stronger packages 1..3 points; Paraceratherium name confirmed. Exact roster/packages remain editable authored curation.",
+  "authority": {
+    "confirmed": [
+      "Spin Bone Discovered from about 32 animals spanning different timelines.",
+      "Order choices by distance from present day and how common they are.",
+      "Current-timeline animal discoveries grant no bonus.",
+      "Older and stronger animal discoveries grant packages worth +1..+3 in power, stats or combinations.",
+      "User explicitly confirms Paraceratherium as the intended animal on 2026-10-09."
+    ],
+    "existingPolicy": "Unspecified odds equal; 1 power is valued at 2 numeric stat points under the prior user-defined budget convention.",
+    "authoredInterpretations": [
+      "Use broad representative finding timeline groups newest to oldest, then editable familiarity/commonness ordering inside each group. Commonness is display curation, not a measured population/fossil frequency or unequal probability.",
+      "A modern animal is a present-timeline discovery, regardless of how ancient its evolutionary lineage is; no retrospective dinosaur bonus from Chicken.",
+      "Apply one fixed bounded package at actual finding result, not another age/strength/power selector."
+    ]
+  },
+  "contracts": {
+    "order": "Actual Archaeologist role/reaction -> one Bone Discovered spin -> commit finding reference and its exact bounded stat/power package -> reaction with known reward -> Backstory.",
+    "probability": "Exactly 32 current draft outcomes, base weight 1 each, probability 1/32 = 3.125%. Ordering, scientific age, authored power/strength tier and commonness do not bias odds. Slayer count-only 5% floor does not apply here.",
+    "ordering": "Stable displayOrder; broad represented timeline group is primary, familiarity/commonness curation secondary. Eras overlap across taxa; this is not exact specimen dating, the complete taxon lifetime, earliest clade origin or a universally measured abundance rank.",
+    "budget": "Current timeline zero. Past discoveries package budget 1..3: sum of positive integer numeric main-stat buffs + 2 per granted power. Budget is metadata/validation, never an extra all-stat bonus. +1 = one point on a main stat; +2 = two stat points or one power; +3 = three stat points or one power plus one stat point.",
+    "ageStrength": "Age alone does not force maximum reward. Authored packages consider represented era and animal prowess together: small ancient Coelophysis/Eohippus can be +1, robust/predatory extinct animals +2, selected formidable ancient giants +3. Exact allocation remains editable rather than a numerical biological strength formula.",
+    "ownership": "Finding is a separate narrative discovery reference. No animal becomes a Race component, pet, summoned creature, weapon, Dwarf armor item, body/Size replacement or actual revived animal. Do not dispatch target Race/Animal Transformation/events or consume usedRaceFamilyIds.",
+    "stat": "Apply the declared numeric modifiers once after immutable main-stat bases without numeric clamps; do not add the budget value separately.",
+    "power": "Fixed intrinsic finding-linked power grants; no additional Power/Element/Cosmic selector. Bind discovery animal as visual/theme provenance, without powers/stats from other animals or unapproved transformations. Powers persist after main Power None and use one ordinary shared Power Mastery; no rank boost, Authority override or Enchant.",
+    "ledger": "Freeze version/catalog, display pool and exact finding packages before seeded spin. Commit result/reference/grants/stat effects and consumed source ledger key atomically once. Replay uses the stored package without redraw or current catalog re-query.",
+    "reaction": "Narrator knows the actual finding and its deterministic package after the finding commit. Modern result still gets a result/reaction and continues without bonus/reroll. Joke caption and fixed rewards are not extra spins or new funny-result mechanics tags.",
+    "source": "Primary museum/research sources establish broad fauna/timeline/anatomy context only. Fantasy ability definitions, stat packages, commonness ordering and gameplay budget are authored, not scientific claims."
+  },
+  "timelineGroups": [
+    {
+      "id": "present",
+      "label": "Masa Kini",
+      "order": 0,
+      "meaning": "Modern-bone result from an extant animal; not the age of its evolutionary lineage."
+    },
+    {
+      "id": "recent-extinction",
+      "label": "Kepunahan Terbaru",
+      "order": 1,
+      "meaning": "Recently extinct historical fauna; ordered by recentness then authored familiarity."
+    },
+    {
+      "id": "pleistocene",
+      "label": "Ice Age / Pleistosen",
+      "order": 2,
+      "meaning": "Representative Ice Age fossil context; some taxa continued into the Holocene."
+    },
+    {
+      "id": "oligocene",
+      "label": "Oligosen",
+      "order": 3,
+      "meaning": "Oligocene fossil context."
+    },
+    {
+      "id": "eocene",
+      "label": "Eosen",
+      "order": 4,
+      "meaning": "Eocene fossil context."
+    },
+    {
+      "id": "paleocene",
+      "label": "Paleosen",
+      "order": 5,
+      "meaning": "Paleocene fossil context."
+    },
+    {
+      "id": "late-cretaceous",
+      "label": "Kapur Akhir",
+      "order": 6,
+      "meaning": "Late Cretaceous fossil context; marine reptiles stay distinct from dinosaurs."
+    },
+    {
+      "id": "early-cretaceous",
+      "label": "Kapur Awal",
+      "order": 7,
+      "meaning": "Early Cretaceous fossil context."
+    },
+    {
+      "id": "late-jurassic",
+      "label": "Jura Akhir",
+      "order": 8,
+      "meaning": "Late Jurassic fossil context."
+    },
+    {
+      "id": "late-triassic",
+      "label": "Trias Akhir",
+      "order": 9,
+      "meaning": "Late Triassic fossil context."
+    },
+    {
+      "id": "early-permian",
+      "label": "Perm Awal",
+      "order": 10,
+      "meaning": "Early Permian, before dinosaurs; includes non-dinosaur synapsid."
+    }
+  ],
+  "wheel": {
+    "id": "archaeologist-bone-discovered",
+    "label": "Bone Discovered",
+    "outcomeCount": 32,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "chicken",
+        "label": "Ayam",
+        "displayOrder": 1,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Ayam",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang ayam. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "rabbit",
+        "label": "Kelinci",
+        "displayOrder": 2,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Kelinci",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang kelinci. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "cat",
+        "label": "Kucing",
+        "displayOrder": 3,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Kucing",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang kucing. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "dog",
+        "label": "Anjing",
+        "displayOrder": 4,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Anjing",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang anjing. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "goat",
+        "label": "Kambing",
+        "displayOrder": 5,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Kambing",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang kambing. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "pig",
+        "label": "Babi",
+        "displayOrder": 6,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Babi",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang babi. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "cow",
+        "label": "Sapi",
+        "displayOrder": 7,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Sapi",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang sapi. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "horse",
+        "label": "Kuda",
+        "displayOrder": 8,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Kuda",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang kuda. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "elephant",
+        "label": "Gajah",
+        "displayOrder": 9,
+        "timelineId": "present",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": true,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [],
+        "reward": {
+          "budgetPoints": 0,
+          "statBuffs": [],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Gajah",
+            "Timeline: Masa Kini"
+          ],
+          "displayContext": "Tulang gajah. Lanjut.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "thylacine",
+        "label": "Thylacine / Harimau Tasmania",
+        "displayOrder": 10,
+        "timelineId": "recent-extinction",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "recent-thylacine"
+        ],
+        "reward": {
+          "budgetPoints": 1,
+          "statBuffs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Thylacine / Harimau Tasmania",
+            "Timeline: Kepunahan Terbaru"
+          ],
+          "displayContext": "Dapat Thylacine / Harimau Tasmania.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "dodo",
+        "label": "Dodo",
+        "displayOrder": 11,
+        "timelineId": "recent-extinction",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "recent-dodo"
+        ],
+        "reward": {
+          "budgetPoints": 1,
+          "statBuffs": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Dodo",
+            "Timeline: Kepunahan Terbaru"
+          ],
+          "displayContext": "Dapat Dodo.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "smilodon",
+        "label": "Smilodon / Sabertooth Tiger",
+        "displayOrder": 12,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [],
+          "powerRefs": [
+            {
+              "definitionId": "fossil-fangs",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Smilodon / Sabertooth Tiger",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Smilodon / Sabertooth Tiger.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "woolly-mammoth",
+        "label": "Woolly Mammoth",
+        "displayOrder": 13,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Woolly Mammoth",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Woolly Mammoth.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "dire-wolf",
+        "label": "Dire Wolf",
+        "displayOrder": 14,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            },
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Dire Wolf",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Dire Wolf.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "woolly-rhino",
+        "label": "Woolly Rhino",
+        "displayOrder": 15,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [],
+          "powerRefs": [
+            {
+              "definitionId": "ancestral-charge",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Woolly Rhino",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Woolly Rhino.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "megatherium",
+        "label": "Megatherium / Giant Sloth",
+        "displayOrder": 16,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Megatherium / Giant Sloth",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Megatherium / Giant Sloth.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "glyptodon",
+        "label": "Glyptodon",
+        "displayOrder": 17,
+        "timelineId": "pleistocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ice-age"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [],
+          "powerRefs": [
+            {
+              "definitionId": "bone-armor",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Glyptodon",
+            "Timeline: Ice Age / Pleistosen"
+          ],
+          "displayContext": "Dapat Glyptodon.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "paraceratherium",
+        "label": "Paraceratherium",
+        "displayOrder": 18,
+        "timelineId": "oligocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "giant-rhino",
+          "giant-rhino-paper"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 2
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "nameResolution": {
+          "userText": "paramecium",
+          "acceptedLabel": "Paraceratherium",
+          "status": "user-confirmed",
+          "confirmedDate": "2026-10-09",
+          "authority": "Direct user clarification: you already correct on the paraceratherium."
+        },
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Paraceratherium",
+            "Timeline: Oligosen"
+          ],
+          "displayContext": "Dapat Paraceratherium.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "eohippus",
+        "label": "Eohippus / Kuda Purba",
+        "displayOrder": 19,
+        "timelineId": "eocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "early-horse"
+        ],
+        "reward": {
+          "budgetPoints": 1,
+          "statBuffs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Eohippus / Kuda Purba",
+            "Timeline: Eosen"
+          ],
+          "displayContext": "Dapat Eohippus / Kuda Purba.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "titanoboa",
+        "label": "Titanoboa",
+        "displayOrder": 20,
+        "timelineId": "paleocene",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "titanoboa"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "ancestral-constriction",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Titanoboa",
+            "Timeline: Paleosen"
+          ],
+          "displayContext": "Dapat Titanoboa.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "tyrannosaurus-rex",
+        "label": "T-rex",
+        "displayOrder": 21,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "tyrannosaurus",
+          "late-cretaceous"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "fossil-fangs",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: T-rex",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat T-rex.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "triceratops",
+        "label": "Triceratops",
+        "displayOrder": 22,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "triceratops"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "ancestral-charge",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Triceratops",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat Triceratops.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "ankylosaurus",
+        "label": "Ankylosaurus",
+        "displayOrder": 23,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "ankylosaurus"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "bone-armor",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Ankylosaurus",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat Ankylosaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "mosasaurus",
+        "label": "Mosasaurus",
+        "displayOrder": 24,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "mosasaurus"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "aquatic-adaptation",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Mosasaurus",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat Mosasaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "velociraptor",
+        "label": "Velociraptor",
+        "displayOrder": 25,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "late-cretaceous"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            },
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Velociraptor",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat Velociraptor.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "spinosaurus",
+        "label": "Spinosaurus",
+        "displayOrder": 26,
+        "timelineId": "late-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "late-cretaceous"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "aquatic-adaptation",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Spinosaurus",
+            "Timeline: Kapur Akhir"
+          ],
+          "displayContext": "Dapat Spinosaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "iguanodon",
+        "label": "Iguanodon",
+        "displayOrder": 27,
+        "timelineId": "early-cretaceous",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "iguanodon"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Iguanodon",
+            "Timeline: Kapur Awal"
+          ],
+          "displayContext": "Dapat Iguanodon.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "stegosaurus",
+        "label": "Stegosaurus",
+        "displayOrder": 28,
+        "timelineId": "late-jurassic",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "stegosaurus"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [],
+          "powerRefs": [
+            {
+              "definitionId": "bone-armor",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Stegosaurus",
+            "Timeline: Jura Akhir"
+          ],
+          "displayContext": "Dapat Stegosaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "allosaurus",
+        "label": "Allosaurus",
+        "displayOrder": 29,
+        "timelineId": "late-jurassic",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "allosaurus"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "fossil-fangs",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Allosaurus",
+            "Timeline: Jura Akhir"
+          ],
+          "displayContext": "Dapat Allosaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "brachiosaurus",
+        "label": "Brachiosaurus",
+        "displayOrder": 30,
+        "timelineId": "late-jurassic",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "brachiosaurus"
+        ],
+        "reward": {
+          "budgetPoints": 3,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "powerRefs": [
+            {
+              "definitionId": "ancestral-stomp",
+              "definitionFile": "content/archaeologist-events-design.json"
+            }
+          ]
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Brachiosaurus",
+            "Timeline: Jura Akhir"
+          ],
+          "displayContext": "Dapat Brachiosaurus.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "coelophysis",
+        "label": "Coelophysis",
+        "displayOrder": 31,
+        "timelineId": "late-triassic",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "coelophysis"
+        ],
+        "reward": {
+          "budgetPoints": 1,
+          "statBuffs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Coelophysis",
+            "Timeline: Trias Akhir"
+          ],
+          "displayContext": "Dapat Coelophysis.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      },
+      {
+        "id": "dimetrodon",
+        "label": "Dimetrodon",
+        "displayOrder": 32,
+        "timelineId": "early-permian",
+        "baseWeight": 1,
+        "probability": 0.03125,
+        "isCurrentTimeline": false,
+        "findingKind": "bone-or-bony-fossil",
+        "contentAuthority": "Editable authored roster and reward allocation within user-requested 32-animal design",
+        "sourceIds": [
+          "dimetrodon",
+          "dimetrodon-class"
+        ],
+        "reward": {
+          "budgetPoints": 2,
+          "statBuffs": [
+            {
+              "stat": "strength",
+              "amount": 1
+            },
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "powerRefs": []
+        },
+        "rewardAuthority": "Authored balance package; age and animal prowess considered qualitatively. Power counts as two points; no scientific strength ranking or rarity is inferred.",
+        "resultContext": {
+          "facts": [
+            "Temuan aktual: Dimetrodon",
+            "Timeline: Perm Awal"
+          ],
+          "displayContext": "Dapat Dimetrodon.",
+          "futureResults": "Backstory, Size, base stat dan mastery yang belum diputar tetap belum diketahui."
+        }
+      }
+    ]
+  },
+  "powers": [
+    {
+      "id": "fossil-fangs",
+      "label": "Fossil Fangs (Taring Purba)",
+      "scope": "Memanifestasikan rahang/taring energi bertema temuan untuk serangan gigitan dalam batas power.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#fossil-fangs"
+    },
+    {
+      "id": "bone-armor",
+      "label": "Bone Armor (Armor Tulang)",
+      "scope": "Memanifestasikan lapisan pelindung tulang/energi pada tubuh sendiri. Power defensif, bukan item armor Dwarf atau bonus Durability otomatis.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#bone-armor"
+    },
+    {
+      "id": "ancestral-charge",
+      "label": "Ancestral Charge (Seruduk Purba)",
+      "scope": "Serudukan energi bertema temuan, dengan target dan dampak sesuai batas power. Tidak otomatis memberi weapon, Speed atau Strength tambahan.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#ancestral-charge"
+    },
+    {
+      "id": "ancestral-constriction",
+      "label": "Ancestral Constriction (Lilitan Purba)",
+      "scope": "Memanifestasikan lilitan energi bertema ular temuan untuk menahan target sesuai kapasitas dan resistance yang dikonfigurasi.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#ancestral-constriction"
+    },
+    {
+      "id": "aquatic-adaptation",
+      "label": "Aquatic Adaptation",
+      "scope": "Adaptasi tubuh sendiri untuk bergerak dan bertahan di air sesuai batas power. Bukan Water Control, kendali laut, semua-pressure immunity atau bonus stat otomatis.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Adaptasi air/gerak tubuh sendiri lebih luas daripada hanya Water Breathing.",
+      "powerTierRef": "content/power-tier-design.json#aquatic-adaptation"
+    },
+    {
+      "id": "ancestral-stomp",
+      "label": "Ancestral Stomp (Geprek Purba)",
+      "scope": "Hentakan energi ke area terbatas bertema temuan sauropod. Tidak mengubah Size atau memberikan Strength tambahan di luar modifier eksplisit.",
+      "group": "fossil-echo-power",
+      "contentStatus": "Authored fantasy reward inspired by the finding, not a real biological ability or scientific result",
+      "bindingContract": "Bind findingAnimalId from the committed discovery for theme/visuals; targets, outputs and duration follow configured intrinsic power limits. No animal revival, Race identity, Size or transformation grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, capacity and rank limits remain pending; numeric buffs exist only when explicitly in the finding package.",
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#ancestral-stomp"
+    }
+  ],
+  "researchReference": "reference/archaeologist-fauna-research.json",
+  "runtimeInterface": {
+    "module": "framework/archaeologist-event.mjs",
+    "functions": [
+      "planArchaeologistDiscovery",
+      "resolveArchaeologistDiscovery"
+    ],
+    "sampling": "Pure frozen plan; future engine performs one seeded actual draw and journals it.",
+    "mutation": "Emit bounded reward effects and stable ledger key only; future engine applies effects atomically and schedules ordinary mastery."
+  },
+  "openConfiguration": [
+    "Final editable 32-animal roster and rewards",
+    "Final Archetype inclusion/body-fit/boost bands",
+    "Intrinsic power limits and versioned catalog runtime"
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

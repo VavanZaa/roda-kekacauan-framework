@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "status": "User-defined universal Seven Deadly Sin selector; seven power capacities authored within delegated scope; detailed balance pending.",
+  "contract": {
+    "scope": "One universal seven-deadly-sin wheel shared by Iblis, Pendosa and any later authorized caller.",
+    "drawCountPerInvocation": 1,
+    "grant": "Exactly one canonical linked power from the selected sin. No extra acquisition wheel.",
+    "weights": "Seven equal base weights of 1; 1/7 before approved modifiers.",
+    "ownership": "Owned immediately, retained after main Power None, ordinary one shared character mastery; no Enchant.",
+    "caller": "Selecting a sin changes no race, archetype or real-world religious identity. Use true source provenance and saved return.",
+    "fixedReuse": "Succubus and Asura reuse Lust/Wrath definitions through fixed grants without a sin spin.",
+    "balance": "Names are sourced, powers are authored game capacities. Range, duration, cost, resistance and rank scale remain unset."
+  },
+  "powers": [
+    {
+      "id": "aura-superioritas",
+      "label": "Aura Superioritas",
+      "group": "seven-deadly-sin",
+      "sinId": "pride",
+      "catalogOrder": 1,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Memancarkan tekanan kehendak yang mengintimidasi target yang memenuhi syarat.",
+      "affinityTags": [
+        "aura",
+        "will"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Aura Superioritas",
+          "Tema: Pride (Kesombongan)",
+          "Memancarkan tekanan kehendak yang mengintimidasi target yang memenuhi syarat."
+        ],
+        "displayContext": "Power yang diperoleh: Aura Superioritas. Tema: Pride (Kesombongan). Memancarkan tekanan kehendak yang mengintimidasi target yang memenuhi syarat..",
+        "narrationExample": "Auranya bilang final boss. CV-nya belum kita cek.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#aura-superioritas"
+    },
+    {
+      "id": "rampasan-energi",
+      "label": "Rampasan Energi",
+      "group": "seven-deadly-sin",
+      "sinId": "greed",
+      "catalogOrder": 2,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Menyerap sebagian energi target yang memenuhi syarat untuk digunakan sementara; tidak mengambil seluruh power, stat, atau inventori.",
+      "affinityTags": [
+        "energy",
+        "drain"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Rampasan Energi",
+          "Tema: Greed (Keserakahan)",
+          "Menyerap sebagian energi target yang memenuhi syarat untuk digunakan sementara; tidak mengambil seluruh power, stat, atau inventori."
+        ],
+        "displayContext": "Power yang diperoleh: Rampasan Energi. Tema: Greed (Keserakahan). Menyerap sebagian energi target yang memenuhi syarat untuk digunakan sementara; tidak mengambil seluruh power, stat, atau inventori..",
+        "narrationExample": "Energi lawan masuk dompet. Dompet sendiri tetap belum tentu isi.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#rampasan-energi"
+    },
+    {
+      "id": "pesona-hasrat",
+      "label": "Pesona Hasrat",
+      "group": "seven-deadly-sin",
+      "sinId": "lust",
+      "catalogOrder": 3,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Memengaruhi perhatian dan emosi lewat pesona atau charm; efektivitas mengikuti kendali dan resistensi target.",
+      "affinityTags": [
+        "charm",
+        "emotion"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Pesona Hasrat",
+          "Tema: Lust (Hasrat)",
+          "Memengaruhi perhatian dan emosi lewat pesona atau charm; efektivitas mengikuti kendali dan resistensi target."
+        ],
+        "displayContext": "Power yang diperoleh: Pesona Hasrat. Tema: Lust (Hasrat). Memengaruhi perhatian dan emosi lewat pesona atau charm; efektivitas mengikuti kendali dan resistensi target..",
+        "narrationExample": "Belum nyerang, musuh sudah salah fokus.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#pesona-hasrat"
+    },
+    {
+      "id": "tiru-skill",
+      "label": "Tiru Skill",
+      "group": "seven-deadly-sin",
+      "sinId": "envy",
+      "catalogOrder": 4,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Meniru sementara teknik yang benar-benar diamati dan kompatibel; tidak menyalin ras, semua power, stat, mastery atau title.",
+      "affinityTags": [
+        "mimic",
+        "technique"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Tiru Skill",
+          "Tema: Envy (Iri)",
+          "Meniru sementara teknik yang benar-benar diamati dan kompatibel; tidak menyalin ras, semua power, stat, mastery atau title."
+        ],
+        "displayContext": "Power yang diperoleh: Tiru Skill. Tema: Envy (Iri). Meniru sementara teknik yang benar-benar diamati dan kompatibel; tidak menyalin ras, semua power, stat, mastery atau title..",
+        "narrationExample": "Build lawan bagus? Tombol copy langsung dicari.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#tiru-skill"
+    },
+    {
+      "id": "devour",
+      "label": "Devour",
+      "group": "seven-deadly-sin",
+      "sinId": "gluttony",
+      "catalogOrder": 5,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Melahap materi atau energi yang kompatibel dan mengolahnya dalam kapasitas power; tidak otomatis memperoleh stat atau kemampuan target.",
+      "affinityTags": [
+        "consume",
+        "energy"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Devour",
+          "Tema: Gluttony (Kerakusan)",
+          "Melahap materi atau energi yang kompatibel dan mengolahnya dalam kapasitas power; tidak otomatis memperoleh stat atau kemampuan target."
+        ],
+        "displayContext": "Power yang diperoleh: Devour. Tema: Gluttony (Kerakusan). Melahap materi atau energi yang kompatibel dan mengolahnya dalam kapasitas power; tidak otomatis memperoleh stat atau kemampuan target..",
+        "narrationExample": "Lihat serangan masuk, malah nanya: ini bisa dimakan?",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#devour"
+    },
+    {
+      "id": "berserk-amuk",
+      "label": "Berserk (Amuk)",
+      "group": "seven-deadly-sin",
+      "sinId": "wrath",
+      "catalogOrder": 6,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Memanifestasikan amarah menjadi aura dan serangan agresif; tidak memberi bonus angka main stat di luar aturan yang dinyatakan.",
+      "affinityTags": [
+        "rage",
+        "combat"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Berserk (Amuk)",
+          "Tema: Wrath (Amarah)",
+          "Memanifestasikan amarah menjadi aura dan serangan agresif; tidak memberi bonus angka main stat di luar aturan yang dinyatakan."
+        ],
+        "displayContext": "Power yang diperoleh: Berserk (Amuk). Tema: Wrath (Amarah). Memanifestasikan amarah menjadi aura dan serangan agresif; tidak memberi bonus angka main stat di luar aturan yang dinyatakan..",
+        "narrationExample": "Emosi jadi jurus. Tombol sabar lagi maintenance.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#berserk-amuk"
+    },
+    {
+      "id": "zona-mager",
+      "label": "Zona Mager",
+      "group": "seven-deadly-sin",
+      "sinId": "sloth",
+      "catalogOrder": 7,
+      "contentStatus": "Assistant-authored within user-delegated scope; abilities are game adaptations.",
+      "scope": "Menciptakan area yang memperlambat aksi atau gerak target yang memenuhi syarat; bukan kendali waktu kosmik atau pengurangan otomatis stat.",
+      "affinityTags": [
+        "slow",
+        "area"
+      ],
+      "mechanicalBalance": "Targets, ranges, duration, costs, resistance and mastery-dependent limits pending; no unlisted stat, army, equipment or other power grant.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power yang diperoleh: Zona Mager",
+          "Tema: Sloth (Kemalasan)",
+          "Menciptakan area yang memperlambat aksi atau gerak target yang memenuhi syarat; bukan kendali waktu kosmik atau pengurangan otomatis stat."
+        ],
+        "displayContext": "Power yang diperoleh: Zona Mager. Tema: Sloth (Kemalasan). Menciptakan area yang memperlambat aksi atau gerak target yang memenuhi syarat; bukan kendali waktu kosmik atau pengurangan otomatis stat..",
+        "narrationExample": "Yang masuk area langsung: bentar, rebahan dulu.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing draft only; numerical modifiers pending.",
+        "basis": [
+          "actual sin",
+          "actual power definitionId",
+          "affinityTags"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "title"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#zona-mager"
+    }
+  ],
+  "wheels": [
+    {
+      "id": "seven-deadly-sin",
+      "label": "Tujuh Dosa Besar",
+      "scope": "universal",
+      "status": "User-confirmed selector; delegated power mapping",
+      "definitionFile": "universal-sin-wheel-design.json",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "pride",
+          "label": "Pride (Kesombongan)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "pride",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "aura-superioritas",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Pride (Kesombongan)",
+              "Power didapat: Aura Superioritas",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Pride (Kesombongan). Power didapat: Aura Superioritas. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Auranya bilang final boss. CV-nya belum kita cek.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "greed",
+          "label": "Greed (Keserakahan)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "greed",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "rampasan-energi",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Greed (Keserakahan)",
+              "Power didapat: Rampasan Energi",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Greed (Keserakahan). Power didapat: Rampasan Energi. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Energi lawan masuk dompet. Dompet sendiri tetap belum tentu isi.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "lust",
+          "label": "Lust (Hasrat)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "lust",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "pesona-hasrat",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Lust (Hasrat)",
+              "Power didapat: Pesona Hasrat",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Lust (Hasrat). Power didapat: Pesona Hasrat. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Belum nyerang, musuh sudah salah fokus.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "envy",
+          "label": "Envy (Iri)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "envy",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "tiru-skill",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Envy (Iri)",
+              "Power didapat: Tiru Skill",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Envy (Iri). Power didapat: Tiru Skill. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Build lawan bagus? Tombol copy langsung dicari.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "gluttony",
+          "label": "Gluttony (Kerakusan)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "gluttony",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "devour",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Gluttony (Kerakusan)",
+              "Power didapat: Devour",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Gluttony (Kerakusan). Power didapat: Devour. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Lihat serangan masuk, malah nanya: ini bisa dimakan?",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "wrath",
+          "label": "Wrath (Amarah)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "wrath",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "berserk-amuk",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Wrath (Amarah)",
+              "Power didapat: Berserk (Amuk)",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Wrath (Amarah). Power didapat: Berserk (Amuk). Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Emosi jadi jurus. Tombol sabar lagi maintenance.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        },
+        {
+          "id": "sloth",
+          "label": "Sloth (Kemalasan)",
+          "inclusionStatus": "user-delegated-content",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "sinAffinities",
+              "value": "sloth",
+              "source": "actual committed sin result and component",
+              "operation": "append-source-scoped-record"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "zona-mager",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Dosa terpilih: Sloth (Kemalasan)",
+              "Power didapat: Zona Mager",
+              "Mastery mengikuti satu hasil bersama nanti"
+            ],
+            "displayContext": "Dosa terpilih: Sloth (Kemalasan). Power didapat: Zona Mager. Mastery mengikuti satu hasil bersama nanti.",
+            "narrationExample": "Yang masuk area langsung: bentar, rebahan dulu.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          }
+        }
+      ]
+    }
+  ],
+  "researchSourceRefs": [
+    "abyssal-seven-deadly-sins"
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1
+  }
+}

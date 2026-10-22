@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "version": "archetype-hybrid/0.2.0",
+  "updatedDate": "2026-10-10",
+  "namespace": "archetype",
+  "archetypeId": "hybrid",
+  "eventProfileId": "hybrid-two-archetypes",
+  "status": "Two distinct roles and no-conflict rule approved; authored symmetric matrix and pure pool planner implemented. Body bindings and child-event/journal executors remain future implementation.",
+  "authority": {
+    "confirmed": [
+      "Hybrid Archetype receives two Archetypes and runs their own events.",
+      "The two child Archetypes must differ.",
+      "Archetypes skipped from the roster are removed from the wheel.",
+      "Unspecified probabilities are equal; numeric/mastery bonuses calculate at the end.",
+      "Remove mutually limiting pairs before child two."
+    ],
+    "authoredInterpretations": [
+      "Hybrid cannot select itself in either child spin; prevents unbounded recursive expansion.",
+      "Resolve child one and all immediate events before child two, preserving declared later-odds effects and saved continuations.",
+      "Reuse the canonical body-compatible approved Archetype pool; no duplicate copy of role definitions.",
+      "Coexisting policies require an explicitly compatible execution schedule; do not guess unresolved body/pair/stat-policy composition."
+    ]
+  },
+  "canonicalWheelId": "archetype",
+  "catalogRef": "content/archetype-wheel-design.json#wheel",
+  "eventProfilesRef": "content/archetype-wheel-design.json#eventProfiles",
+  "childCount": 2,
+  "excludeSelf": true,
+  "distinctChildren": true,
+  "invocationTemplates": [
+    {
+      "stepId": "archetype-hybrid-child-1",
+      "ordinal": 1,
+      "canonicalWheelId": "archetype",
+      "selectionNamespace": "archetype",
+      "kind": "filtered-canonical-archetype-invocation",
+      "optionsRef": "content/archetype-wheel-design.json#wheel",
+      "guard": "Role is approved/enabled/body-compatible, not roster-excluded, not Hybrid, and not an earlier Hybrid child. Any required composed policy profile is approved.",
+      "invocationKey": "runId/parentArchetypeInvocationId/parentSpinId/profileId/stepId/ordinal",
+      "returnTo": "saved Hybrid continuation: child two selection"
+    },
+    {
+      "stepId": "archetype-hybrid-child-2",
+      "ordinal": 2,
+      "canonicalWheelId": "archetype",
+      "selectionNamespace": "archetype",
+      "kind": "filtered-canonical-archetype-invocation",
+      "optionsRef": "content/archetype-wheel-design.json#wheel",
+      "guard": "Role is approved/enabled/body-compatible, not roster-excluded, not Hybrid, and not an earlier Hybrid child. Any required composed policy profile is approved.",
+      "invocationKey": "runId/parentArchetypeInvocationId/parentSpinId/profileId/stepId/ordinal",
+      "returnTo": "saved Hybrid completion: Backstory"
+    }
+  ],
+  "contracts": {
+    "entry": "Enter only after an actual selected Hybrid Archetype spin, commit and reaction. Preserve initial Race gate decision and parent source. Main Race Hybrid never invokes this role by name alone.",
+    "order": "Primary Hybrid reaction -> child one actual selection/commit/reaction -> its complete immediate event chain -> child two selection/commit/reaction -> its complete immediate event chain -> Hybrid completion -> Backstory.",
+    "pool": "Reuse approved canonical role definitions and explicit body compatibility, including NPC. Apply current roster removals, disable Hybrid and already-used child IDs before sampling. No selected-then-rerolled duplicate or silently substituted result. Apply pairCompatibility static exclusions before sampling child2.",
+    "probability": "Reuse current canonical main-wheel-strength per-sector weights after roster/body/self/used-child guards, then normalize/freeze. Active Equalizer from child one replaces future final weights with1; no band rebalance after exclusions. No child event odds changed.",
+    "history": "Use local Hybrid usedChildArchetypeIds, initialized with Hybrid. Commit child one before dispatching its event; exclude it from child two. Do not read/write usedRaceFamilyIds, mentor/army/prey history or past-character Archetypes for these draws.",
+    "minimumPool": "Require an approved compatible two-role schedule. Fewer than two eligible distinct children, missing compatibility/policy data, or a second-child pool made invalid by the first event requires configuration. Retain committed outcomes; do not reset history, reroll child one, invent None or silently finish with one child.",
+    "events": "Each selected child executes its existing approved event definition once, including only that event’s declared child spins and deferred tickets. NPC occupies one child and has no follow-up. Hybrid adds no intrinsic power, weapon, stat, mastery, army, weakness or count/type selector.",
+    "return": "Pass a saved caller frame to each child. Its logical Backstory return resumes the Hybrid frame instead of advancing the global stage. Nested race/power/weapon events restore their own caller first; after both children fully return, advance to Backstory once.",
+    "identity": "Retain Hybrid as the source wrapper and record two distinct owned child Archetype records. This adds roles, not races. No Race Hybrid event, no giant second-slot revival, no extra primary gate and no automatic body/Size change.",
+    "mutation": "Mutant selected as a child may acquire its normal extra race. Its return resumes Hybrid. Keep the initial gate snapshot frozen; the later second child is authorized by Hybrid, not a Mutant re-entry. Current body/equipment composition needs an explicit compatible profile before any dependent role selection.",
+    "rewards": "Apply each child’s source-owned recipe once. Keep fixed gifts and distinct numeric modifiers with provenance; calculate bonuses at final bonus phase. Normal inventory/None retention, one shared Power Mastery, per-weapon mastery and compatible final Enchant remain. Duplicate definitions follow existing canonical inventory policy, not automatic rerolls.",
+    "locks": "Avoid conflicting partner recipes with the pair filter before selection. Gladiator normal lock still applies to earlier race weapons; Hybrid grants no compensation or bypass.",
+    "policyComposition": "Distinct roles may coexist through this explicitly approved wrapper. Preserve each role’s exact triggers, counts, guarantees, raw-result observers and modifier scope. Do not double normal stages/mastery, activate every Gambler type, stack duplicate Resilient retries or invent an order for incompatible policies. An approved compatible schedule is required where existing contracts leave combination unspecified.",
+    "context": "Every actual primary/child/event spin receives its own reaction using only committed facts. After child one, child two is still unknown. Wrapper captions/fixed grants are not actual extra spins or funny-result tags.",
+    "ledger": "Atomically commit each selected child and local exclusion history before scheduling its event. Freeze source/version/pool/odds/body/policy references, ordinal, chosen ID, child completion and exact saved caller. Resume/re-render reuses committed records, schedules only unfinished work and grants no reward twice.",
+    "migration": "Use this design for new invocations. Preserve older source-only Hybrid records and frozen runs; do not execute the new event merely by reading or rendering historical labels."
+  },
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "module": "framework/archetype-hybrid.mjs",
+    "status": "Pure compatible-pool/odds planner only; child event execution and journal orchestration remain future implementation.",
+    "exports": [
+      "planHybridArchetypeChoices",
+      "HybridArchetypeInputError"
+    ]
+  },
+  "resultContext": {
+    "caption": "Dua role beda, dua event.",
+    "facts": [
+      "actual Hybrid result",
+      "committed child one",
+      "committed child two only after its selection",
+      "source-owned child gifts and pending tickets"
+    ],
+    "noFutureGuess": true
+  },
+  "migrationContract": {
+    "snapshot": "reference/before-archetype-hybrid-2026-10-10.json"
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json",
+  "mainWheelDistributionRef": "content/main-wheel-strength-design.json",
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "pairCompatibility": {
+    "approvedRule": true,
+    "authority": "User requires mutually limiting pairs removed before child2.",
+    "matrixAuthority": "Authored consequence of existing guaranteed/possible event packages; editable without changing the user no-conflict rule.",
+    "mode": "symmetric-static-exclusions",
+    "incompatiblePairs": [
+      {
+        "ids": [
+          "gladiator",
+          "disciple"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "gladiator",
+          "rider"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "gladiator",
+          "assassin"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "gladiator",
+          "colossal-warmech"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "gladiator",
+          "primordial-champion"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "gladiator",
+          "mutant"
+        ],
+        "reason": "The partner can grant a weapon; Gladiator would discard/block that partner reward. Mutant can acquire weapon-granting races."
+      },
+      {
+        "ids": [
+          "equaliser",
+          "mage"
+        ],
+        "reason": "Equalizer would suppress Master Sihir Tier3–5 weight boost; reject the possible conflict before the second draw."
+      }
+    ],
+    "compatibleSchedules": [
+      {
+        "ids": [
+          "gambler",
+          "resilient"
+        ],
+        "schedule": "For each applicable main-stat raw roll, perform required Resilient retry and keep higher raw first; then apply Gambler Double/Nothing once if that subtype is active. All In has one Strength raw procedure then raw copies; High Roller chooses its four normal0..9 extremes before hard guarantees; Lucky Number observes each actual raw attempt, never copy/projection."
+      },
+      {
+        "ids": [
+          "equaliser",
+          "gambler"
+        ],
+        "schedule": "Gambler structural eligible-value/copy/multiplier policies remain. Equalizer makes each remaining hard-eligible actual wheel uniform; it does not create skipped rolls or restore hard-excluded values."
+      },
+      {
+        "ids": [
+          "royal",
+          "gambler"
+        ],
+        "schedule": "Pawn inspects the original pre-bonus base values for seven stat/mastery categories. A copied All In stat retains its original Strength raw reference and numerical base; Lucky Number still counts the one actual roll only. Weapon Mastery remains one category."
+      }
+    ],
+    "selection": "Before first draw remove children without any compatible partner in the body-eligible pool. Before child2 exclude self/Hybrid and matrix partners of child1, then canonical weights/modifiers/normalization. Preserve committed child1 and never redraw to get a better child2.",
+    "futureOutcomes": "Static exclusions consider the partner possible authorized branches without reading future results; never silently cancel a required reward after selection."
+  }
+}

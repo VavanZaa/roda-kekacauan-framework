@@ -1,0 +1,740 @@
+{
+  "race-family": [
+    {
+      "familyId": "human",
+      "label": "Manusia",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 1,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "human",
+      "shortLabel": "Manusia",
+      "reason": "Tidak ada hadiah ras."
+    },
+    {
+      "familyId": "goblinoid",
+      "label": "Goblin & Orc",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 2,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "goblinoid",
+      "shortLabel": "Goblin & Orc",
+      "reason": "Gabungan Goblin/Kacung/Troll memberi banyak hasil kecil atau debuff; Oni/Shrek tetap bisa melonjak."
+    },
+    {
+      "familyId": "dwarf",
+      "label": "Kurcaci",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 3,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "dwarf",
+      "shortLabel": "Kurcaci",
+      "reason": "Armor1–5 poin atau satu alat Gnome; kapasitas paket umumnya terbatas."
+    },
+    {
+      "familyId": "centaur",
+      "label": "Centaur",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 4,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "centaur",
+      "shortLabel": "Centaur",
+      "reason": "Hanya1–2 poin stat tubuh bawah."
+    },
+    {
+      "familyId": "slime",
+      "label": "Slime",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 5,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "slime",
+      "shortLabel": "Slime",
+      "reason": "Tubuh Jelly lemah atau satu power spesialis; tanpa paket stat tambahan."
+    },
+    {
+      "familyId": "anime-lineage",
+      "label": "Anime",
+      "selectionKind": "source-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 6,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "anime-lineage",
+      "shortLabel": "Anime",
+      "reason": "NPC50% memberi nol event genre; MC bisa tinggi tetapi tidak dijamin."
+    },
+    {
+      "familyId": "elf",
+      "label": "Elf",
+      "selectionKind": "race-family",
+      "baseWeight": 0.42857142857142855,
+      "strengthOrder": 7,
+      "distributionBand": "weak",
+      "probability": 0.05714285714285715,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "elf",
+      "shortLabel": "Elf",
+      "reason": "Satu power/type specialization atau bonus Sea Elf; hasil child tetap bervariasi."
+    },
+    {
+      "familyId": "beastfolk",
+      "label": "Siluman",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 8,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "beastfolk",
+      "shortLabel": "Siluman",
+      "reason": "Satu jenis dari 12 pilihan; Animal Transformation, Babi juga Nyolong."
+    },
+    {
+      "familyId": "lelembut",
+      "label": "Lelembut",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 9,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "lelembut",
+      "shortLabel": "Lelembut",
+      "reason": "Mayoritas power lokal sempit; Vampire/Lich/undead origin dapat menaikkan paket."
+    },
+    {
+      "familyId": "elemental",
+      "label": "Elemental",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 10,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "elemental",
+      "shortLabel": "Elemental",
+      "reason": "Satu kendali elemen universal."
+    },
+    {
+      "familyId": "golem",
+      "label": "Golem",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 11,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "golem",
+      "shortLabel": "Golem",
+      "reason": "Manipulasi material plus0–3 Durability atau mastery Element Golem."
+    },
+    {
+      "familyId": "machine",
+      "label": "Machine",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 12,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "machine",
+      "shortLabel": "Machine",
+      "reason": "Appliance sangat lemah; AI/Android/Cyborg/Mecha dapat memberi paket lebih kuat."
+    },
+    {
+      "familyId": "fae",
+      "label": "Peri",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 13,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "fae",
+      "shortLabel": "Peri",
+      "reason": "Healing/Element/Wish atau Fairy King; hasil unggulan berada di child."
+    },
+    {
+      "familyId": "legendary-warrior",
+      "label": "Reinkarnasi Pahlawan Legendaris",
+      "selectionKind": "legacy-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 14,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "legendary-warrior",
+      "shortLabel": "Pahlawan",
+      "reason": "Paket hero empat poin konsisten dengan power/weapon/stat sesuai tokoh."
+    },
+    {
+      "familyId": "mythical-beast",
+      "label": "Mythical Beast",
+      "selectionKind": "race-family",
+      "baseWeight": 0.3125,
+      "strengthOrder": 15,
+      "distributionBand": "moderate",
+      "probability": 0.041666666666666664,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "mythical-beast",
+      "shortLabel": "Mythical Beast",
+      "reason": "Paket beast kuat, umumnya3–4 poin atau dua power Phoenix."
+    },
+    {
+      "familyId": "symbiote",
+      "label": "Symbiote",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 16,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "symbiote",
+      "shortLabel": "Symbiote",
+      "reason": "Menambahkan host Race beserta bonus takeover/power, hasil persentase tetap berisiko."
+    },
+    {
+      "familyId": "demon",
+      "label": "Abyssal Axiom",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 17,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "demon",
+      "shortLabel": "Abyssal Axiom",
+      "reason": "Dosa/Setan sampai Raja dengan empat Demonic dan pengikut."
+    },
+    {
+      "familyId": "heavenly-principle",
+      "label": "Heavenly Principle",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 18,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "heavenly-principle",
+      "shortLabel": "Heavenly",
+      "reason": "Komunikasi/Pemuka sampai God Authority maksimum, Divine dan pengikut."
+    },
+    {
+      "familyId": "cosmic-warrior",
+      "label": "Cosmic Warrior",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 19,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "cosmic-warrior",
+      "shortLabel": "Cosmic",
+      "reason": "Power media2–5 plus dua poin stat; Alien X membawa Reality Rewrite."
+    },
+    {
+      "familyId": "raksasa",
+      "label": "Raksasa",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 20,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "raksasa",
+      "shortLabel": "Raksasa",
+      "reason": "Ras dasar lengkap plus skala Size raksasa sampai ambang Cosmic."
+    },
+    {
+      "familyId": "hybrid",
+      "label": "Hybrid",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 21,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "hybrid",
+      "shortLabel": "Hybrid",
+      "reason": "Dua ras berbeda beserta event dan nested composition."
+    },
+    {
+      "familyId": "primordial",
+      "label": "Primordial",
+      "selectionKind": "race-family",
+      "baseWeight": 0.2857142857142857,
+      "strengthOrder": 22,
+      "distributionBand": "strong",
+      "probability": 0.03809523809523809,
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "id": "primordial",
+      "shortLabel": "Primordial",
+      "reason": "Paket ras enam poin dengan signature power/weapon sesuai legenda."
+    }
+  ],
+  "archetype": [
+    {
+      "id": "npc",
+      "label": "NPC",
+      "eventProfileRef": "npc-no-event",
+      "eventDefinitionRef": {
+        "definitionFile": "content/archetype-wheel-design.json",
+        "definitionId": "npc-no-event"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 1,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "NPC",
+      "reason": "Nol event dan nol hadiah."
+    },
+    {
+      "id": "pirate",
+      "label": "Pirate",
+      "eventProfileRef": "pirate-rank-and-ship",
+      "eventDefinitionRef": {
+        "definitionFile": "content/pirate-events-design.json",
+        "definitionId": "pirate-rank-and-ship"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 2,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Pirate",
+      "reason": "Rank0–2 poin; kapal hanya desain."
+    },
+    {
+      "id": "alchemist",
+      "label": "Alchemist",
+      "eventProfileRef": "alchemist-jamu",
+      "eventDefinitionRef": {
+        "definitionFile": "content/alchemist-events-design.json",
+        "definitionId": "alchemist-jamu"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 3,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Alchemist",
+      "reason": "Satu ramuan: debuff/neutral sering, buff atau superpower mungkin."
+    },
+    {
+      "id": "disciple",
+      "label": "Disciple",
+      "eventProfileRef": "disciple-inheritance",
+      "eventDefinitionRef": {
+        "definitionFile": "content/disciple-events-design.json",
+        "definitionId": "disciple-inheritance"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 4,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Disciple",
+      "reason": "Satu hadiah mentor atau kategori kosong zonk; Best Stat hanya+1."
+    },
+    {
+      "id": "archaeologist",
+      "label": "Archaeologist",
+      "eventProfileRef": "archaeologist-bone-discovery",
+      "eventDefinitionRef": {
+        "definitionFile": "content/archaeologist-events-design.json",
+        "definitionId": "archaeologist-bone-discovery"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 5,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Archaeologist",
+      "reason": "Temuan kini nol; purba1–3 poin paket."
+    },
+    {
+      "id": "slayer",
+      "label": "Slayer",
+      "eventProfileRef": "slayer-victim-hunt",
+      "eventDefinitionRef": {
+        "definitionFile": "content/slayer-events-design.json",
+        "definitionId": "slayer-victim-hunt"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 6,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Slayer",
+      "reason": "Jumlah korban memberi0–3 Strength saja."
+    },
+    {
+      "id": "druid",
+      "label": "Druid",
+      "eventProfileRef": "druid-nature-path",
+      "eventDefinitionRef": {
+        "definitionFile": "content/druid-events-design.json",
+        "definitionId": "druid-nature-path"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 7,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Druid",
+      "reason": "Satu power alam Tier3; paket dua poin."
+    },
+    {
+      "id": "rider",
+      "label": "Rider",
+      "eventProfileRef": "rider-mount",
+      "eventDefinitionRef": {
+        "definitionFile": "content/rider-events-design.json",
+        "definitionId": "rider-mount"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 8,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Rider",
+      "reason": "Weak/moderate memberi1–2 poin; strong juga mount-as-weapon."
+    },
+    {
+      "id": "goliath",
+      "label": "Goliath",
+      "eventProfileRef": "goliath-berserker-chance",
+      "eventDefinitionRef": {
+        "definitionFile": "content/goliath-events-design.json",
+        "definitionId": "goliath-berserker-chance"
+      },
+      "baseWeight": 0.3333333333333333,
+      "probability": 0.044444444444444446,
+      "strengthOrder": 9,
+      "distributionBand": "weak",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Goliath",
+      "reason": "90% Strength2;10% Strength4 dengan Rage."
+    },
+    {
+      "id": "gladiator",
+      "label": "Gladiator",
+      "eventProfileRef": "gladiator-exclusive-weapon",
+      "eventDefinitionRef": {
+        "definitionFile": "content/gladiator-events-design.json",
+        "definitionId": "gladiator-exclusive-weapon"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 10,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Gladiator",
+      "reason": "Satu weapon/mastery+2 tetapi mengganti dan mengunci semua weapon lain."
+    },
+    {
+      "id": "survivalist",
+      "label": "Survivalist",
+      "eventProfileRef": "survivalist-environment",
+      "eventDefinitionRef": {
+        "definitionFile": "content/survivalist-events-design.json",
+        "definitionId": "survivalist-environment"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 11,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Survivalist",
+      "reason": "Satu stat, power, atau keduanya; band chance menentukan hasil."
+    },
+    {
+      "id": "priest",
+      "label": "Priest",
+      "eventProfileRef": "priest-angelic-power",
+      "eventDefinitionRef": {
+        "definitionFile": "content/priest-events-design.json",
+        "definitionId": "priest-angelic-power"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 12,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Priest",
+      "reason": "Satu Angelic Power; tier hasil tetap bervariasi."
+    },
+    {
+      "id": "assassin",
+      "label": "Assassin",
+      "eventProfileRef": "assassin-type-reward",
+      "eventDefinitionRef": {
+        "definitionFile": "content/assassin-events-design.json",
+        "definitionId": "assassin-type-reward"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 13,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Assassin",
+      "reason": "Speed1 dan satu weapon/power3–4."
+    },
+    {
+      "id": "cursed",
+      "label": "Cursed",
+      "eventProfileRef": "cursed-percentage",
+      "eventDefinitionRef": {
+        "definitionFile": "content/cursed-events-design.json",
+        "definitionId": "cursed-percentage"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 14,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Cursed",
+      "reason": "Persentase menghasilkan0–3 Cursed Power dengan weakness pada band tinggi."
+    },
+    {
+      "id": "equaliser",
+      "label": "Equalizer",
+      "eventProfileRef": "equalizer-future-uniform-wheels",
+      "eventDefinitionRef": {
+        "definitionFile": "content/equalizer-events-design.json",
+        "definitionId": "equalizer-future-uniform-wheels"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 15,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Equalizer",
+      "reason": "Mengubah semua peluang setelah aktif menjadi seragam; dapat memperbaiki atau menurunkan bias semula."
+    },
+    {
+      "id": "paladin",
+      "label": "Paladin",
+      "eventProfileRef": "paladin-ascension",
+      "eventDefinitionRef": {
+        "definitionFile": "content/paladin-events-design.json",
+        "definitionId": "paladin-ascension"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 16,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Paladin",
+      "reason": "90% satu Angelic/all-weapon mastery1;10% tiga Angelic."
+    },
+    {
+      "id": "apostle",
+      "label": "Apostle",
+      "eventProfileRef": "apostle-patron-power",
+      "eventDefinitionRef": {
+        "definitionFile": "content/apostle-events-design.json",
+        "definitionId": "apostle-patron-power"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 17,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Apostle",
+      "reason": "Satu Divine/Demonic dan shared Power Mastery1."
+    },
+    {
+      "id": "primordial-champion",
+      "label": "Primordial Champion",
+      "eventProfileRef": "primordial-champion-patron",
+      "eventDefinitionRef": {
+        "definitionFile": "content/primordial-champion-events-design.json",
+        "definitionId": "primordial-champion-patron"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 18,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Primordial C.",
+      "reason": "Signature patron tiga poin; bukan paket ras enam poin."
+    },
+    {
+      "id": "colossal-warmech",
+      "label": "Colossal Warmech",
+      "eventProfileRef": "colossal-warmech-class",
+      "eventDefinitionRef": {
+        "definitionFile": "content/colossal-warmech-events-design.json",
+        "definitionId": "colossal-warmech-class"
+      },
+      "baseWeight": 0.25,
+      "probability": 0.03333333333333333,
+      "strengthOrder": 19,
+      "distributionBand": "moderate",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Warmech",
+      "reason": "Satu mech-as-weapon dan dua poin stat kelas."
+    },
+    {
+      "id": "tamer",
+      "label": "Tamer",
+      "eventProfileRef": "tamer-companion",
+      "eventDefinitionRef": {
+        "definitionFile": "content/tamer-events-design.json",
+        "definitionId": "tamer-companion"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 20,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Tamer",
+      "reason": "Taming Power plus companion yang dapat mencapai Mythical/Pop Culture."
+    },
+    {
+      "id": "mage",
+      "label": "Mage",
+      "eventProfileRef": "mage-deferred-power",
+      "eventDefinitionRef": {
+        "definitionFile": "content/mage-events-design.json",
+        "definitionId": "mage-deferred-power"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 21,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Mage",
+      "reason": "Dua/ tiga power dijamin; Master Sihir meningkatkan bobot tier3–5."
+    },
+    {
+      "id": "gambler",
+      "label": "Gambler",
+      "eventProfileRef": "gambler-stat-rules",
+      "eventDefinitionRef": {
+        "definitionFile": "content/gambler-events-design.json",
+        "definitionId": "gambler-stat-rules"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 22,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Gambler",
+      "reason": "Mekanika stat/Lucky Number bisa memberi lonjakan besar; bukan buff yang selalu positif."
+    },
+    {
+      "id": "resilient",
+      "label": "Resilient",
+      "eventProfileRef": "resilient-second-chance",
+      "eventDefinitionRef": {
+        "definitionFile": "content/resilient-events-design.json",
+        "definitionId": "resilient-second-chance"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 23,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Resilient",
+      "reason": "Keep-best retry raw<=5 berlaku untuk lima stat dan kedua mastery."
+    },
+    {
+      "id": "warlord",
+      "label": "Warlord",
+      "eventProfileRef": "warlord-army",
+      "eventDefinitionRef": {
+        "definitionFile": "content/warlord-events-design.json",
+        "definitionId": "warlord-army"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 24,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Warlord",
+      "reason": "Satu sampai tiga kelompok pasukan dengan jumlah spesifik ras."
+    },
+    {
+      "id": "vessel",
+      "label": "Vessel",
+      "eventProfileRef": "vessel-patron-compatibility",
+      "eventDefinitionRef": {
+        "definitionFile": "content/vessel-events-design.json",
+        "definitionId": "vessel-patron-compatibility"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 25,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Vessel",
+      "reason": "Compatibility tinggi membuka Authority atau paket God/Raja lengkap; rendah overload."
+    },
+    {
+      "id": "royal",
+      "label": "Royal",
+      "eventProfileRef": "royal-chess-piece",
+      "eventDefinitionRef": {
+        "definitionFile": "content/royal-events-design.json",
+        "definitionId": "royal-chess-piece"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 26,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Royal",
+      "reason": "King Authority5, Queen all-stat1, Pawn evolusi all-stat2 bersyarat."
+    },
+    {
+      "id": "mutant",
+      "label": "Mutant",
+      "eventProfileRef": "mutant-race-mutation",
+      "eventDefinitionRef": {
+        "definitionFile": "content/mutant-events-design.json",
+        "definitionId": "mutant-race-mutation"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 27,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Mutant",
+      "reason": "Satu ras tambahan berikut event lengkap dan nested race outcomes."
+    },
+    {
+      "id": "hybrid",
+      "label": "Hybrid",
+      "eventProfileRef": "hybrid-two-archetypes",
+      "eventDefinitionRef": {
+        "definitionFile": "content/archetype-hybrid-events-design.json",
+        "definitionId": "hybrid-two-archetypes"
+      },
+      "baseWeight": 0.2222222222222222,
+      "probability": 0.02962962962962963,
+      "strengthOrder": 28,
+      "distributionBand": "strong",
+      "weightAuthority": "main-wheel-strength/1.0.0",
+      "shortLabel": "Hybrid",
+      "reason": "Dua Archetype berbeda dan kedua event; kekuatan bergantung pasangan."
+    }
+  ]
+}

@@ -1,0 +1,1751 @@
+{
+  "schemaVersion": "roda-kekacauan-weakness/1.0",
+  "version": "weakness-wheel/1.0.0",
+  "updatedDate": "2026-10-11",
+  "stageId": "weakness",
+  "designReady": true,
+  "runtimeReady": false,
+  "status": "Forty editable authored game weaknesses; Human50% None confirmed; pure planner/receipt ready, persistent/combat/media adapters pending.",
+  "authority": {
+    "confirmed": [
+      "About40 weakness outcomes.",
+      "Human50% Weakness/50% None.",
+      "Replace Buta/Silau Berat with Mata Silinder.",
+      "Avoid demeaning audience members; use familiar light humor."
+    ],
+    "authoredChoices": [
+      "Exactly40 game recipes, one default final Speed-1 on Stamina Cepat Habis; all other restrictions conditional/lore.",
+      "Human50% spread equally over40 by default.",
+      "Non-Human leaf weights remain equal until separately configured, not a new50% assumption.",
+      "Body-capability adapters must explicitly supply non-Human traits.",
+      "Extra Weakness retains the same None possibility unless caller explicitly guarantees a weakness."
+    ]
+  },
+  "wheel": {
+    "id": "weakness",
+    "label": "Weakness",
+    "outcomeCount": 41,
+    "drawCount": 1,
+    "noneOutcome": {
+      "id": "weakness-none",
+      "label": "Tanpa Weakness Tambahan",
+      "baseWeight": 1,
+      "effect": "Weakness sebelumnya tetap dimiliki.",
+      "funnyResult": false
+    }
+  },
+  "categoryLabels": {
+    "receh": "Receh",
+    "fisik": "Fisik",
+    "kebiasaan": "Kebiasaan",
+    "fantasi": "Fantasi"
+  },
+  "recipes": [
+    {
+      "id": "stage-fright",
+      "label": "Demam Panggung",
+      "catalogOrder": 1,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "receh",
+        "attention-delay",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "attention-delay",
+        "label": "Saat jadi pusat perhatian",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Awal aksi sedikit terlambat saat ditonton banyak orang.",
+      "restrictions": [
+        {
+          "ruleId": "attention-delay",
+          "scope": "owner-only",
+          "description": "Awal aksi sedikit terlambat saat ditonton banyak orang."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Demam Panggung",
+          "Aktif: Saat jadi pusat perhatian"
+        ],
+        "caption": "Demam Panggung",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "itchy-groin",
+      "label": "Selangkangan Gatal",
+      "catalogOrder": 2,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "skin"
+      ],
+      "tags": [
+        "receh",
+        "brief-distraction",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "brief-distraction",
+        "label": "Saat pakaian lembap atau gerah",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Gerakan terputus sebentar untuk membetulkan pakaian.",
+      "restrictions": [
+        {
+          "ruleId": "brief-distraction",
+          "scope": "owner-only",
+          "description": "Gerakan terputus sebentar untuk membetulkan pakaian."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Selangkangan Gatal",
+          "Aktif: Saat pakaian lembap atau gerah"
+        ],
+        "caption": "Selangkangan Gatal",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "body-odor",
+      "label": "Bau Badan",
+      "catalogOrder": 3,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "skin"
+      ],
+      "tags": [
+        "receh",
+        "close-range-detection",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "close-range-detection",
+        "label": "Saat mendekat atau mengendap-endap",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Lebih mudah terdeteksi dari dekat.",
+      "restrictions": [
+        {
+          "ruleId": "close-range-detection",
+          "scope": "owner-only",
+          "description": "Lebih mudah terdeteksi dari dekat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Bau Badan",
+          "Aktif: Saat mendekat atau mengendap-endap"
+        ],
+        "caption": "Bau Badan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "empty-wallet",
+      "label": "Kantong Kering",
+      "catalogOrder": 4,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "economy"
+      ],
+      "tags": [
+        "receh",
+        "limited-shopping-budget",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "limited-shopping-budget",
+        "label": "Saat perlu membeli perlengkapan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Tidak punya dana cadangan untuk belanja perlengkapan.",
+      "restrictions": [
+        {
+          "ruleId": "limited-shopping-budget",
+          "scope": "owner-only",
+          "description": "Tidak punya dana cadangan untuk belanja perlengkapan."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Kantong Kering",
+          "Aktif: Saat perlu membeli perlengkapan"
+        ],
+        "caption": "Kantong Kering",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "always-hungry",
+      "label": "Laperan",
+      "catalogOrder": 5,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "digestion"
+      ],
+      "tags": [
+        "receh",
+        "food-break",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "food-break",
+        "label": "Saat telat makan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Butuh jeda ngemil sebelum aktivitas panjang.",
+      "restrictions": [
+        {
+          "ruleId": "food-break",
+          "scope": "owner-only",
+          "description": "Butuh jeda ngemil sebelum aktivitas panjang."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Laperan",
+          "Aktif: Saat telat makan"
+        ],
+        "caption": "Laperan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "sleepy",
+      "label": "Gampang Ngantuk",
+      "catalogOrder": 6,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "stamina"
+      ],
+      "tags": [
+        "receh",
+        "tired-response",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "tired-response",
+        "label": "Saat kurang istirahat",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Respons melambat saat kurang istirahat.",
+      "restrictions": [
+        {
+          "ruleId": "tired-response",
+          "scope": "owner-only",
+          "description": "Respons melambat saat kurang istirahat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Ngantuk",
+          "Aktif: Saat kurang istirahat"
+        ],
+        "caption": "Gampang Ngantuk",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "masuk-angin",
+      "label": "Masuk Angin",
+      "catalogOrder": 7,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "receh",
+        "rest-break",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "rest-break",
+        "label": "Setelah misi malam yang berangin",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Perlu jeda sebelum kembali beraksi.",
+      "restrictions": [
+        {
+          "ruleId": "rest-break",
+          "scope": "owner-only",
+          "description": "Perlu jeda sebelum kembali beraksi."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Masuk Angin",
+          "Aktif: Setelah misi malam yang berangin"
+        ],
+        "caption": "Masuk Angin",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "toilet-break",
+      "label": "Kebelet",
+      "catalogOrder": 8,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "digestion"
+      ],
+      "tags": [
+        "receh",
+        "toilet-break",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "toilet-break",
+        "label": "Saat butuh ke toilet",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Harus mengambil jeda toilet.",
+      "restrictions": [
+        {
+          "ruleId": "toilet-break",
+          "scope": "owner-only",
+          "description": "Harus mengambil jeda toilet."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Kebelet",
+          "Aktif: Saat butuh ke toilet"
+        ],
+        "caption": "Kebelet",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "hiccups",
+      "label": "Cegukan",
+      "catalogOrder": 9,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "voice"
+      ],
+      "tags": [
+        "receh",
+        "voice-interruption",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "voice-interruption",
+        "label": "Saat cegukan aktif",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Jurus yang perlu ucapan bisa terputus.",
+      "restrictions": [
+        {
+          "ruleId": "voice-interruption",
+          "scope": "owner-only",
+          "description": "Jurus yang perlu ucapan bisa terputus."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Cegukan",
+          "Aktif: Saat cegukan aktif"
+        ],
+        "caption": "Cegukan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "tight-shoes",
+      "label": "Sepatu Kekecilan",
+      "catalogOrder": 10,
+      "category": "receh",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "footwear"
+      ],
+      "tags": [
+        "receh",
+        "restricted-footwork",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "restricted-footwork",
+        "label": "Saat memakai sepatu sempit",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Gerak kaki kurang leluasa selama sepatu itu dipakai.",
+      "restrictions": [
+        {
+          "ruleId": "restricted-footwork",
+          "scope": "owner-only",
+          "description": "Gerak kaki kurang leluasa selama sepatu itu dipakai."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Sepatu Kekecilan",
+          "Aktif: Saat memakai sepatu sempit"
+        ],
+        "caption": "Sepatu Kekecilan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "skin-irritation",
+      "label": "Kulit Gampang Iritasi",
+      "catalogOrder": 11,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "skin"
+      ],
+      "tags": [
+        "fisik",
+        "contact-discomfort"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "contact-discomfort",
+        "label": "Saat kontak dengan pemicu iritasi",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Tidak nyaman bergerak selama pemicu masih menempel.",
+      "restrictions": [
+        {
+          "ruleId": "contact-discomfort",
+          "scope": "owner-only",
+          "description": "Tidak nyaman bergerak selama pemicu masih menempel."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Kulit Gampang Iritasi",
+          "Aktif: Saat kontak dengan pemicu iritasi"
+        ],
+        "caption": "Kulit Gampang Iritasi",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "astigmatism",
+      "label": "Mata Silinder",
+      "catalogOrder": 12,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "vision"
+      ],
+      "tags": [
+        "fisik",
+        "aiming-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "aiming-limit",
+        "label": "Saat kacamata andalannya ketinggalan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Bidikan kurang presisi tanpa kacamata andalannya.",
+      "restrictions": [
+        {
+          "ruleId": "aiming-limit",
+          "scope": "owner-only",
+          "description": "Bidikan kurang presisi tanpa kacamata andalannya."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Mata Silinder",
+          "Aktif: Saat kacamata andalannya ketinggalan"
+        ],
+        "caption": "Mata Silinder",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "heat-sensitive",
+      "label": "Gampang Kepanasan",
+      "catalogOrder": 13,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "fisik",
+        "heat-break"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "heat-break",
+        "label": "Saat lingkungan terlalu panas",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Aktivitas panjang membutuhkan lebih banyak jeda.",
+      "restrictions": [
+        {
+          "ruleId": "heat-break",
+          "scope": "owner-only",
+          "description": "Aktivitas panjang membutuhkan lebih banyak jeda."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Kepanasan",
+          "Aktif: Saat lingkungan terlalu panas"
+        ],
+        "caption": "Gampang Kepanasan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "cold-sensitive",
+      "label": "Gampang Kedinginan",
+      "catalogOrder": 14,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "fisik",
+        "cold-movement-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "cold-movement-limit",
+        "label": "Saat lingkungan terlalu dingin",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Gerakan melambat sampai mendapat perlindungan hangat.",
+      "restrictions": [
+        {
+          "ruleId": "cold-movement-limit",
+          "scope": "owner-only",
+          "description": "Gerakan melambat sampai mendapat perlindungan hangat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Kedinginan",
+          "Aktif: Saat lingkungan terlalu dingin"
+        ],
+        "caption": "Gampang Kedinginan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "motion-sickness",
+      "label": "Mabuk Kendaraan",
+      "catalogOrder": 15,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "fisik",
+        "unstable-ride-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "unstable-ride-limit",
+        "label": "Saat kendaraan bergerak tidak stabil",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Kurang efektif beraksi selama perjalanan berguncang.",
+      "restrictions": [
+        {
+          "ruleId": "unstable-ride-limit",
+          "scope": "owner-only",
+          "description": "Kurang efektif beraksi selama perjalanan berguncang."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Mabuk Kendaraan",
+          "Aktif: Saat kendaraan bergerak tidak stabil"
+        ],
+        "caption": "Mabuk Kendaraan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "choking",
+      "label": "Gampang Keselek",
+      "catalogOrder": 16,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "digestion"
+      ],
+      "tags": [
+        "fisik",
+        "meal-interruption"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "meal-interruption",
+        "label": "Saat makan sambil terburu-buru",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Perlu menghentikan aksi sebentar.",
+      "restrictions": [
+        {
+          "ruleId": "meal-interruption",
+          "scope": "owner-only",
+          "description": "Perlu menghentikan aksi sebentar."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Keselek",
+          "Aktif: Saat makan sambil terburu-buru"
+        ],
+        "caption": "Gampang Keselek",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "sitting-ache",
+      "label": "Pegal Kelamaan Duduk",
+      "catalogOrder": 17,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "fisik",
+        "stretch-break",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "stretch-break",
+        "label": "Setelah duduk terlalu lama",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Butuh peregangan sebelum gerak penuh.",
+      "restrictions": [
+        {
+          "ruleId": "stretch-break",
+          "scope": "owner-only",
+          "description": "Butuh peregangan sebelum gerak penuh."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Pegal Kelamaan Duduk",
+          "Aktif: Setelah duduk terlalu lama"
+        ],
+        "caption": "Pegal Kelamaan Duduk",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "cramp",
+      "label": "Gampang Kram",
+      "catalogOrder": 18,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "living-body"
+      ],
+      "tags": [
+        "fisik",
+        "temporary-movement-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "temporary-movement-limit",
+        "label": "Saat gerakan berat tanpa persiapan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Gerak anggota tubuh yang kram terbatas sementara.",
+      "restrictions": [
+        {
+          "ruleId": "temporary-movement-limit",
+          "scope": "owner-only",
+          "description": "Gerak anggota tubuh yang kram terbatas sementara."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Kram",
+          "Aktif: Saat gerakan berat tanpa persiapan"
+        ],
+        "caption": "Gampang Kram",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "dust-sneeze",
+      "label": "Bersin Kena Debu",
+      "catalogOrder": 19,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "voice"
+      ],
+      "tags": [
+        "fisik",
+        "dust-interruption",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "dust-interruption",
+        "label": "Saat terkena debu",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Suara bersin mengganggu aksi senyap dan ucapan jurus.",
+      "restrictions": [
+        {
+          "ruleId": "dust-interruption",
+          "scope": "owner-only",
+          "description": "Suara bersin mengganggu aksi senyap dan ucapan jurus."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Bersin Kena Debu",
+          "Aktif: Saat terkena debu"
+        ],
+        "caption": "Bersin Kena Debu",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "low-stamina",
+      "label": "Stamina Cepat Habis",
+      "catalogOrder": 20,
+      "category": "fisik",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "stamina"
+      ],
+      "tags": [
+        "fisik",
+        "flat-speed-minus-one"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "flat-speed-minus-one",
+        "label": "Selalu aktif",
+        "mode": "always",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Speed akhir -1; butuh jeda lebih sering.",
+      "restrictions": [],
+      "directEffects": [
+        {
+          "type": "stat-flat-modifier",
+          "stat": "speed",
+          "amount": -1,
+          "registration": "immediate",
+          "calculation": "final-only"
+        }
+      ],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Stamina Cepat Habis",
+          "Aktif: Selalu aktif"
+        ],
+        "caption": "Stamina Cepat Habis",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "overthinking",
+      "label": "Kebanyakan Mikir",
+      "catalogOrder": 21,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "decision-delay",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "decision-delay",
+        "label": "Saat harus memutuskan cepat",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Keputusan pertama terlambat karena terlalu banyak pertimbangan.",
+      "restrictions": [
+        {
+          "ruleId": "decision-delay",
+          "scope": "owner-only",
+          "description": "Keputusan pertama terlambat karena terlalu banyak pertimbangan."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Kebanyakan Mikir",
+          "Aktif: Saat harus memutuskan cepat"
+        ],
+        "caption": "Kebanyakan Mikir",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "distracted",
+      "label": "Gampang Terdistraksi",
+      "catalogOrder": 22,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "attention-switch",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "attention-switch",
+        "label": "Saat muncul gangguan mencolok",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Perhatian mudah beralih dari target utama.",
+      "restrictions": [
+        {
+          "ruleId": "attention-switch",
+          "scope": "owner-only",
+          "description": "Perhatian mudah beralih dari target utama."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gampang Terdistraksi",
+          "Aktif: Saat muncul gangguan mencolok"
+        ],
+        "caption": "Gampang Terdistraksi",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "noisy-focus",
+      "label": "Susah Fokus Saat Ramai",
+      "catalogOrder": 23,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "noisy-focus-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "noisy-focus-limit",
+        "label": "Saat suasana ramai",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Aksi yang membutuhkan konsentrasi lebih mudah terganggu.",
+      "restrictions": [
+        {
+          "ruleId": "noisy-focus-limit",
+          "scope": "owner-only",
+          "description": "Aksi yang membutuhkan konsentrasi lebih mudah terganggu."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Susah Fokus Saat Ramai",
+          "Aktif: Saat suasana ramai"
+        ],
+        "caption": "Susah Fokus Saat Ramai",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "trust-issues",
+      "label": "Susah Percaya Orang",
+      "catalogOrder": 24,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "new-team-delay"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "new-team-delay",
+        "label": "Saat kerja sama dengan orang baru",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Koordinasi awal membutuhkan waktu lebih lama.",
+      "restrictions": [
+        {
+          "ruleId": "new-team-delay",
+          "scope": "owner-only",
+          "description": "Koordinasi awal membutuhkan waktu lebih lama."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Susah Percaya Orang",
+          "Aktif: Saat kerja sama dengan orang baru"
+        ],
+        "caption": "Susah Percaya Orang",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "small-talk",
+      "label": "Kebanyakan Basa-basi",
+      "catalogOrder": 25,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "voice"
+      ],
+      "tags": [
+        "kebiasaan",
+        "conversation-delay",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "conversation-delay",
+        "label": "Saat membuka interaksi",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Persiapan aksi tertunda karena pembicaraan terlalu panjang.",
+      "restrictions": [
+        {
+          "ruleId": "conversation-delay",
+          "scope": "owner-only",
+          "description": "Persiapan aksi tertunda karena pembicaraan terlalu panjang."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Kebanyakan Basa-basi",
+          "Aktif: Saat membuka interaksi"
+        ],
+        "caption": "Kebanyakan Basa-basi",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "too-polite",
+      "label": "Gak Enakan",
+      "catalogOrder": 26,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "refusal-delay",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "refusal-delay",
+        "label": "Saat harus menolak permintaan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Sulit segera menolak permintaan yang mengganggu rencana.",
+      "restrictions": [
+        {
+          "ruleId": "refusal-delay",
+          "scope": "owner-only",
+          "description": "Sulit segera menolak permintaan yang mengganggu rencana."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Gak Enakan",
+          "Aktif: Saat harus menolak permintaan"
+        ],
+        "caption": "Gak Enakan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "go-home",
+      "label": "Pengen Cepat Pulang",
+      "catalogOrder": 27,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "avoids-optional-conflict",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "avoids-optional-conflict",
+        "label": "Saat konflik bisa dihindari",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Enggan mengejar konflik yang tidak wajib.",
+      "restrictions": [
+        {
+          "ruleId": "avoids-optional-conflict",
+          "scope": "owner-only",
+          "description": "Enggan mengejar konflik yang tidak wajib."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Pengen Cepat Pulang",
+          "Aktif: Saat konflik bisa dihindari"
+        ],
+        "caption": "Pengen Cepat Pulang",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "forgot-move",
+      "label": "Lupa Nama Jurus",
+      "catalogOrder": 28,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "move-name-delay",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "move-name-delay",
+        "label": "Saat jurus membutuhkan nama",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Jurus verbal tertunda sampai nama jurus diingat.",
+      "restrictions": [
+        {
+          "ruleId": "move-name-delay",
+          "scope": "owner-only",
+          "description": "Jurus verbal tertunda sampai nama jurus diingat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Lupa Nama Jurus",
+          "Aktif: Saat jurus membutuhkan nama"
+        ],
+        "caption": "Lupa Nama Jurus",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "chased-panic",
+      "label": "Panik Kalau Dikejar",
+      "catalogOrder": 29,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "chase-route-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "chase-route-limit",
+        "label": "Saat sedang dikejar",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Pemilihan rute kurang terencana.",
+      "restrictions": [
+        {
+          "ruleId": "chase-route-limit",
+          "scope": "owner-only",
+          "description": "Pemilihan rute kurang terencana."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Panik Kalau Dikejar",
+          "Aktif: Saat sedang dikejar"
+        ],
+        "caption": "Panik Kalau Dikejar",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "height-fear",
+      "label": "Takut Ketinggian",
+      "catalogOrder": 30,
+      "category": "kebiasaan",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "kebiasaan",
+        "height-movement-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "height-movement-limit",
+        "label": "Saat berada jauh di atas tanah",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Enggan bergerak mendekati tepi atau melompat.",
+      "restrictions": [
+        {
+          "ruleId": "height-movement-limit",
+          "scope": "owner-only",
+          "description": "Enggan bergerak mendekati tepi atau melompat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Takut Ketinggian",
+          "Aktif: Saat berada jauh di atas tanah"
+        ],
+        "caption": "Takut Ketinggian",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "wet-slip",
+      "label": "Licin Kalau Basah",
+      "catalogOrder": 31,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "physical-body"
+      ],
+      "tags": [
+        "fantasi",
+        "wet-grip-limit",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "wet-grip-limit",
+        "label": "Saat permukaan tubuh basah",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Pegangan dan pijakan kurang stabil.",
+      "restrictions": [
+        {
+          "ruleId": "wet-grip-limit",
+          "scope": "owner-only",
+          "description": "Pegangan dan pijakan kurang stabil."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Licin Kalau Basah",
+          "Aktif: Saat permukaan tubuh basah"
+        ],
+        "caption": "Licin Kalau Basah",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "lightning-weak",
+      "label": "Lemah Terhadap Petir",
+      "catalogOrder": 32,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "lightning-vulnerability"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "lightning-vulnerability",
+        "label": "Saat terkena serangan petir",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Petir menembus pertahanan lebih efektif dari serangan biasa.",
+      "restrictions": [
+        {
+          "ruleId": "lightning-vulnerability",
+          "scope": "owner-only",
+          "description": "Petir menembus pertahanan lebih efektif dari serangan biasa."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Lemah Terhadap Petir",
+          "Aktif: Saat terkena serangan petir"
+        ],
+        "caption": "Lemah Terhadap Petir",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "seal-weak",
+      "label": "Lemes Kena Segel",
+      "catalogOrder": 33,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "seal-output-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "seal-output-limit",
+        "label": "Saat terkena segel yang sesuai",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Output serangan melemah selama segel aktif.",
+      "restrictions": [
+        {
+          "ruleId": "seal-output-limit",
+          "scope": "owner-only",
+          "description": "Output serangan melemah selama segel aktif."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Lemes Kena Segel",
+          "Aktif: Saat terkena segel yang sesuai"
+        ],
+        "caption": "Lemes Kena Segel",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "warmup-power",
+      "label": "Power Butuh Pemanasan",
+      "catalogOrder": 34,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "power-warmup",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "power-warmup",
+        "label": "Saat akan memakai power pertama kali dalam adegan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": true
+      },
+      "effect": "Power belum dapat dipakai sebelum persiapan singkat.",
+      "restrictions": [
+        {
+          "ruleId": "power-warmup",
+          "scope": "owner-only",
+          "description": "Power belum dapat dipakai sebelum persiapan singkat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Power Butuh Pemanasan",
+          "Aktif: Saat akan memakai power pertama kali dalam adegan"
+        ],
+        "caption": "Power Butuh Pemanasan",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "cooldown-power",
+      "label": "Power Ada Cooldown",
+      "catalogOrder": 35,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "power-cooldown"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "power-cooldown",
+        "label": "Setelah memakai power",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": true
+      },
+      "effect": "Power yang dipakai perlu jeda sebelum digunakan lagi.",
+      "restrictions": [
+        {
+          "ruleId": "power-cooldown",
+          "scope": "owner-only",
+          "description": "Power yang dipakai perlu jeda sebelum digunakan lagi."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Power Ada Cooldown",
+          "Aktif: Setelah memakai power"
+        ],
+        "caption": "Power Ada Cooldown",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "costly-power",
+      "label": "Power Bikin Capek",
+      "catalogOrder": 36,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "power-fatigue"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "power-fatigue",
+        "label": "Setelah memakai power berulang",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": true
+      },
+      "effect": "Pemakaian berulang membutuhkan istirahat.",
+      "restrictions": [
+        {
+          "ruleId": "power-fatigue",
+          "scope": "owner-only",
+          "description": "Pemakaian berulang membutuhkan istirahat."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Power Bikin Capek",
+          "Aktif: Setelah memakai power berulang"
+        ],
+        "caption": "Power Bikin Capek",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "spoken-move",
+      "label": "Harus Nyebut Nama Jurus",
+      "catalogOrder": 37,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "voice"
+      ],
+      "tags": [
+        "fantasi",
+        "spoken-move-requirement",
+        "funny-result"
+      ],
+      "funnyResult": true,
+      "condition": {
+        "id": "spoken-move-requirement",
+        "label": "Saat menggunakan jurus andalan",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Jurus andalan gagal diaktifkan jika nama jurus tidak diucapkan.",
+      "restrictions": [
+        {
+          "ruleId": "spoken-move-requirement",
+          "scope": "owner-only",
+          "description": "Jurus andalan gagal diaktifkan jika nama jurus tidak diucapkan."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Harus Nyebut Nama Jurus",
+          "Aktif: Saat menggunakan jurus andalan"
+        ],
+        "caption": "Harus Nyebut Nama Jurus",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "concentration",
+      "label": "Perlu Konsentrasi",
+      "catalogOrder": 38,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "mind"
+      ],
+      "tags": [
+        "fantasi",
+        "sustained-focus"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "sustained-focus",
+        "label": "Saat mempertahankan jurus atau power",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Jurus berkelanjutan terputus jika konsentrasi terpecah.",
+      "restrictions": [
+        {
+          "ruleId": "sustained-focus",
+          "scope": "owner-only",
+          "description": "Jurus berkelanjutan terputus jika konsentrasi terpecah."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Perlu Konsentrasi",
+          "Aktif: Saat mempertahankan jurus atau power"
+        ],
+        "caption": "Perlu Konsentrasi",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "sun-dependent",
+      "label": "Lemes Tanpa Matahari",
+      "catalogOrder": 39,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "sun-dependent-output"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "sun-dependent-output",
+        "label": "Saat tidak mendapat cahaya matahari",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Output berkurang di tempat tanpa matahari.",
+      "restrictions": [
+        {
+          "ruleId": "sun-dependent-output",
+          "scope": "owner-only",
+          "description": "Output berkurang di tempat tanpa matahari."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Lemes Tanpa Matahari",
+          "Aktif: Saat tidak mendapat cahaya matahari"
+        ],
+        "caption": "Lemes Tanpa Matahari",
+        "futureResultsUnknown": true
+      }
+    },
+    {
+      "id": "water-weak",
+      "label": "Lemes Kena Air",
+      "catalogOrder": 40,
+      "category": "fantasi",
+      "baseWeight": 1,
+      "requiredCapabilities": [
+        "energy"
+      ],
+      "tags": [
+        "fantasi",
+        "water-output-limit"
+      ],
+      "funnyResult": false,
+      "condition": {
+        "id": "water-output-limit",
+        "label": "Saat terkena air",
+        "mode": "conditional",
+        "evaluator": "combat-condition-adapter",
+        "powerRequired": false
+      },
+      "effect": "Output serangan melemah saat tubuh atau sumber energinya basah.",
+      "restrictions": [
+        {
+          "ruleId": "water-output-limit",
+          "scope": "owner-only",
+          "description": "Output serangan melemah saat tubuh atau sumber energinya basah."
+        }
+      ],
+      "directEffects": [],
+      "eventRules": [],
+      "resultContext": {
+        "facts": [
+          "Weakness: Lemes Kena Air",
+          "Aktif: Saat terkena air"
+        ],
+        "caption": "Lemes Kena Air",
+        "futureResultsUnknown": true
+      }
+    }
+  ],
+  "probabilityModel": {
+    "version": "weakness-odds/1.0.0",
+    "humanNoneProbability": 0.5,
+    "otherRacePolicy": "equal-eligible-leaves-until-explicit-race-prior",
+    "humanCapabilities": [
+      "mind",
+      "skin",
+      "economy",
+      "digestion",
+      "stamina",
+      "living-body",
+      "voice",
+      "footwear",
+      "vision",
+      "physical-body",
+      "energy"
+    ],
+    "backstoryMaxFactor": 1.5,
+    "backstoryProfiles": [
+      {
+        "id": "weakness-backstory-quiet-life",
+        "backstoryId": "quiet-life",
+        "outcomeFactors": {
+          "go-home": 1.5,
+          "too-polite": 1.2
+        }
+      },
+      {
+        "id": "weakness-backstory-betrayed",
+        "backstoryId": "betrayed",
+        "outcomeFactors": {
+          "trust-issues": 1.5
+        }
+      },
+      {
+        "id": "weakness-backstory-appeared-one-day",
+        "backstoryId": "appeared-one-day",
+        "outcomeFactors": {
+          "forgot-move": 1.5
+        }
+      },
+      {
+        "id": "weakness-backstory-unsealed",
+        "backstoryId": "unsealed",
+        "outcomeFactors": {
+          "seal-weak": 1.5
+        }
+      }
+    ],
+    "equalizer": "Uniform every compatible eligible leaf including None, after hard guards. Suppress Human50% and Backstory factors.",
+    "numericStatMasteryBoundsApplied": false
+  },
+  "contracts": {
+    "scope": "One main draw after Power; approved immediate Backstory extra uses same pool and saved return before Size.",
+    "none": "No extra weakness, never clear previous Cursed/Rage/Overload/Backstory weaknesses.",
+    "duplicate": "Same canonical definition merges distinct source provenance, never doubles penalties; independent actual draws may repeat.",
+    "conditional": "Only an explicit active combat-condition guard applies a conditional restriction. Never subtract it from always-on final stats.",
+    "powerRestriction": "Power constraints dormant without an owned usable power; grant no power and do not lower numeric mastery.",
+    "source": "Actual committed owner identity and role only; no prey/army/companion/mentor/caption/future evidence.",
+    "context": "Neutral condition/effect wording for health/vision; no disability or mental-health insult, body-shaming narration or real diagnosis.",
+    "funny": "Only explicit funnyResult on actual spin supplies existing Shrek source-once hook; fixed grants/projections are not spins.",
+    "timing": "Register once; numeric effects apply final-only and remain signed/unbounded. No new mastery/Enchant/Size spin.",
+    "extraWheels": "None of these forty recipes automatically invokes severity, activation-chance or countermeasure wheel.",
+    "freeze": "Freeze current eligibility, odds and recipes before external RNG; preserve old frozen draws.",
+    "atomic": "Caller persists selected receipt and consumed request together, comparing current ownership fingerprint. Pure helper does not persist."
+  },
+  "runtimeInterface": {
+    "module": "framework/weakness-wheel.mjs",
+    "planner": "planWeaknessWheel",
+    "selector": "selectWeaknessOutcome",
+    "resolver": "resolveWeaknessResult",
+    "bodyCapabilities": "Human sole physical ancestry auto profile; otherwise committed owner body-capability profile with matching identity fingerprint required.",
+    "stages": [
+      "weakness",
+      "backstory"
+    ],
+    "nextMainStage": "apex"
+  },
+  "openConfiguration": [
+    "Non-Human body capability adapters and explicit race-specific None/affinities if desired.",
+    "Combat execution/effect magnitudes, duration, counters and body output adapters.",
+    "Persistent event scheduler/store, narration/meme/image/video production."
+  ]
+}

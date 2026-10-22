@@ -1,0 +1,684 @@
+{
+  "schemaVersion": "roda-kekacauan-vessel/0.1",
+  "version": "vessel/0.2.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "vessel",
+  "eventProfileId": "vessel-patron-compatibility",
+  "status": "User-approved Vessel packages; latest God60–80 reward is one Concept Authority/no Divine, valued as two Divine. God90–100 full package and Raja bands retained. Existing God Authority semantics reuse source-instance maximum; body/capability/executor configuration remains.",
+  "authority": {
+    "confirmed": [
+      "Vessel first selects God or Demon King, then compatibility from 0 to 100.",
+      "90–100 receives the selected God or Demon King race boost.",
+      "60–80 receives half of the power;30–50 gets one power spin; lower compatibility receives body-destruction/overload weakness.",
+      "Unspecified probabilities are equal and numeric/mastery bonuses calculate at the end.",
+      "For90–100 God Vessel, user explicitly confirms the complete God package including80% None/20% power on normal Power acquisitions.",
+      "Vessel compatibility60–80: God receives one Concept Authority and no Divine; Raja retains two Demonic. User values one Authority as two Divine powers for this Vessel package. Power capability/tier is not halved."
+    ],
+    "interpretations": [
+      "Demon King refers to the existing Raja Iblis Agung/demon-lord profile.",
+      "Use eleven compatibility results in steps of10, consistent with the existing percentage wheels and supplied bands.",
+      "30–50 invokes one canonical Divine for God or Demonic for Demon King.",
+      "The requested God Authority reuses the existing God Concept Authority package, including fixed maximum on its actual source power instance. This is inherited package semantics, not a new main-stat/follower/scarcity grant."
+    ],
+    "pending": [],
+    "clarifications": {
+      "halfPower": "Latest user correction supersedes God1 Divine: God60–80 gets1 Authority/no Divine, worth2 Divine; Raja60–80 remains2 Demonic.",
+      "fullGod": "User chooses complete package including80% None on normal Power."
+    }
+  },
+  "patronWheel": {
+    "id": "vessel-patron",
+    "label": "Vessel Siapa?",
+    "drawCount": 1,
+    "outcomeCount": 2,
+    "outcomes": [
+      {
+        "id": "god",
+        "label": "God",
+        "baseWeight": 1,
+        "probability": 0.5,
+        "patronProfileRef": "vessel-god"
+      },
+      {
+        "id": "demon-lord",
+        "label": "Raja Iblis Agung",
+        "baseWeight": 1,
+        "probability": 0.5,
+        "patronProfileRef": "vessel-demon-lord"
+      }
+    ]
+  },
+  "compatibilityWheel": {
+    "id": "vessel-compatibility",
+    "label": "Compatibility",
+    "drawCount": 1,
+    "outcomeCount": 11,
+    "outcomes": [
+      {
+        "id": "compatibility-0",
+        "label": "0%",
+        "percentage": 0,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "overload"
+      },
+      {
+        "id": "compatibility-10",
+        "label": "10%",
+        "percentage": 10,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "overload"
+      },
+      {
+        "id": "compatibility-20",
+        "label": "20%",
+        "percentage": 20,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "overload"
+      },
+      {
+        "id": "compatibility-30",
+        "label": "30%",
+        "percentage": 30,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "one-power"
+      },
+      {
+        "id": "compatibility-40",
+        "label": "40%",
+        "percentage": 40,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "one-power"
+      },
+      {
+        "id": "compatibility-50",
+        "label": "50%",
+        "percentage": 50,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "one-power"
+      },
+      {
+        "id": "compatibility-60",
+        "label": "60%",
+        "percentage": 60,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "half-power"
+      },
+      {
+        "id": "compatibility-70",
+        "label": "70%",
+        "percentage": 70,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "half-power"
+      },
+      {
+        "id": "compatibility-80",
+        "label": "80%",
+        "percentage": 80,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "half-power"
+      },
+      {
+        "id": "compatibility-90",
+        "label": "90%",
+        "percentage": 90,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "full-package"
+      },
+      {
+        "id": "compatibility-100",
+        "label": "100%",
+        "percentage": 100,
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "bandId": "full-package"
+      }
+    ]
+  },
+  "patronProfiles": [
+    {
+      "id": "vessel-god",
+      "patronId": "god",
+      "canonicalPackageRef": {
+        "definitionFile": "content/heavenly-principle-events-design.json",
+        "profileId": "god"
+      },
+      "thematicPowerWheelId": "power-divine"
+    },
+    {
+      "id": "vessel-demon-lord",
+      "patronId": "demon-lord",
+      "canonicalPackageRef": {
+        "definitionFile": "content/abyssal-axiom-design.json",
+        "profileId": "demon-lord"
+      },
+      "thematicPowerWheelId": "power-demonic"
+    }
+  ],
+  "bandProfiles": [
+    {
+      "id": "overload",
+      "minimumPercentage": 0,
+      "maximumPercentage": 20,
+      "powerSpinCount": 0,
+      "fixedWeaknessRef": "vessel-body-overload"
+    },
+    {
+      "id": "one-power",
+      "minimumPercentage": 30,
+      "maximumPercentage": 50,
+      "powerSpinCount": 1,
+      "wheelSelector": "actual patron thematicPowerWheelId"
+    },
+    {
+      "id": "half-power",
+      "minimumPercentage": 60,
+      "maximumPercentage": 80,
+      "rewardStatus": "God gets one Concept Authority/no Divine, worth two Divine; Raja gets two Demonic. No followers or new scarcity in this band. God Authority retains its canonical maximum semantics."
+    },
+    {
+      "id": "full-package",
+      "minimumPercentage": 90,
+      "maximumPercentage": 100,
+      "rewardStatus": "Confirmed complete selected God/Raja package, including God normal-Power80% None."
+    }
+  ],
+  "weaknesses": [
+    {
+      "id": "vessel-body-overload",
+      "label": "Tubuh Jebol",
+      "grantMode": "additional source-owned weakness",
+      "scope": "Kerusakan tubuh akibat daya God/Raja Iblis melampaui kapasitas wadah.",
+      "numericStatPenalty": null,
+      "activationProfileStatus": "Exact structural injury, power-load guard, duration/recovery and resistance need capability profiles. No unrequested numeric penalty, death/elimination, severity or extra weakness spin."
+    }
+  ],
+  "powers": [],
+  "weapons": [],
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "status": "design-only; patron/compatibility/recipe executor not implemented",
+    "module": null
+  },
+  "returnTo": "backstory after mandatory Vessel children",
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "fullPackageDecision": {
+    "god": {
+      "conceptInvocationCount": 1,
+      "conceptGrantMode": "authority",
+      "conceptMasteryOverride": "source-instance maximum",
+      "divineInvocationCount": 2,
+      "followerInvocationCount": 1,
+      "followerRewardProfileId": "god",
+      "registerGodNormalPowerScarcity": true
+    },
+    "demon-lord": {
+      "demonicInvocationCount": 4,
+      "followerInvocationCount": 1,
+      "followerRewardProfileId": "demon-lord"
+    }
+  },
+  "halfPowerDecision": {
+    "mode": "patron-specific-half-package",
+    "god": {
+      "divineInvocationCount": 0,
+      "conceptInvocationCount": 1,
+      "conceptGrantMode": "authority",
+      "masteryOverrideRef": "content/vessel-events-design.json#godAuthorityOverride",
+      "followerInvocationCount": 0,
+      "authorityValueInDivinePowers": 2
+    },
+    "demon-lord": {
+      "demonicInvocationCount": 2,
+      "followerInvocationCount": 0
+    },
+    "capabilityMultiplier": 1,
+    "valuationScope": "Vessel package selection only; does not alter intrinsic power tiers, odds, main stats, other callers or general power budget."
+  },
+  "godAuthorityOverride": {
+    "id": "vessel-god-authority-max-mastery",
+    "definitionFile": "content/vessel-events-design.json",
+    "scope": "all-owned-powers",
+    "operation": "set-shared-power-mastery-base-to-9",
+    "semanticReference": "content/heavenly-principle-events-design.json#contracts.godAuthorityMaximum",
+    "guard": "Actual committed Vessel patron god AND compatibility60/70/80/90/100 AND its actual god-concept Authority child grant from the selected half/full recipe.",
+    "target": "God patron at compatibility60/70/80/90/100 inherits the existing maximum guarantee; all owned Power Mastery base9. Lower bands and demon patron do not qualify.",
+    "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+    "formula": "All owned powers use fixed shared9 + distinct applicable shared modifiers at finalize.",
+    "sourceKey": "runId/sourceArchetypeInvocationId/sourcePatronSpinId/sourceCompatibilitySpinId/sourceConceptChildId/sourceGrantId/powerInstanceId/overrideId",
+    "limits": "Base9 guarantee on shared mastery; final signed/unbounded. Intrinsic power scope and selected package unchanged.",
+    "projectionGuard": "Actual committed God patron and approved compatibility band; no name-based transfer.",
+    "enchantment": "Never from Power Mastery.",
+    "allowedCompatibilityValues": [
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "scorePolicyRef": "content/heavenly-principle-events-design.json#contracts.godAuthorityMaximum",
+    "baseValue": 9,
+    "runtimeRuleId": "vessel-god-all-power-mastery-max"
+  },
+  "godNormalPowerScarcityBinding": {
+    "id": "vessel-god-normal-power-scarcity",
+    "definitionFile": "content/vessel-events-design.json",
+    "policyReference": {
+      "definitionFile": "content/heavenly-principle-events-design.json",
+      "contractRef": "contracts.godPowerScarcity"
+    },
+    "importedFields": [
+      "target",
+      "excluded",
+      "distribution",
+      "formula",
+      "resolution",
+      "validation"
+    ],
+    "guard": "Actual Vessel patron god AND compatibility90 or100 only.",
+    "registrationTiming": "Register once on the committed full-God compatibility recipe; no acquisition or preliminary success spin here.",
+    "sourceKey": "runId/sourceArchetypeInvocationId/sourcePatronSpinId/sourceCompatibilitySpinId/policyId",
+    "provenance": "True Vessel source, no fabricated God race component/subtype commit.",
+    "stacking": "Reuse the canonical80% None/20% power group distribution once per applicable normal invocation; independent references/sources do not multiply80% or create extra rolls. Themed/fixed/guaranteed acquisitions keep canonical exclusions; named Equalizer precedence remains unchanged."
+  },
+  "recipeProfiles": [
+    {
+      "id": "vessel-god-overload",
+      "patronId": "god",
+      "bandId": "overload",
+      "registerEffects": [],
+      "fixedGrants": [
+        {
+          "type": "grant-weakness",
+          "definitionId": "vessel-body-overload",
+          "definitionFile": "content/vessel-events-design.json",
+          "source": "actual committed Vessel compatibility result"
+        }
+      ],
+      "steps": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-god-one-power",
+      "patronId": "god",
+      "bandId": "one-power",
+      "registerEffects": [],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-divine",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-one-power-power-divine-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-god-half-power",
+      "patronId": "god",
+      "bandId": "half-power",
+      "registerEffects": [],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "god-concept",
+          "definitionFile": "content/universal-concept-wheel-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-half-power-god-concept-1",
+          "ordinal": 1,
+          "returnTo": "saved-vessel-recipe-continuation",
+          "grantPolicy": {
+            "role": "authority",
+            "scopeMode": "authority",
+            "masteryOverrideRef": "content/vessel-events-design.json#godAuthorityOverride"
+          }
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-god-full-package",
+      "patronId": "god",
+      "bandId": "full-package",
+      "registerEffects": [
+        {
+          "type": "register-normal-power-odds-variant",
+          "definitionFile": "content/vessel-events-design.json",
+          "contractRef": "godNormalPowerScarcityBinding"
+        }
+      ],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "god-concept",
+          "definitionFile": "content/universal-concept-wheel-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-full-package-god-concept-1",
+          "ordinal": 1,
+          "returnTo": "saved-vessel-recipe-continuation",
+          "grantPolicy": {
+            "role": "authority",
+            "scopeMode": "authority",
+            "masteryOverrideRef": "content/vessel-events-design.json#godAuthorityOverride"
+          }
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-divine",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-full-package-power-divine-2",
+          "ordinal": 2,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-divine",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-full-package-power-divine-3",
+          "ordinal": 3,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "follower-count",
+          "definitionFile": "content/universal-follower-wheel-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-god-full-package-follower-count-4",
+          "ordinal": 4,
+          "returnTo": "saved-vessel-recipe-continuation",
+          "rewardProfileId": "god",
+          "callerBindingId": "vessel-full-god",
+          "sourceKind": "vessel-patron-followers"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-demon-lord-overload",
+      "patronId": "demon-lord",
+      "bandId": "overload",
+      "registerEffects": [],
+      "fixedGrants": [
+        {
+          "type": "grant-weakness",
+          "definitionId": "vessel-body-overload",
+          "definitionFile": "content/vessel-events-design.json",
+          "source": "actual committed Vessel compatibility result"
+        }
+      ],
+      "steps": [],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-demon-lord-one-power",
+      "patronId": "demon-lord",
+      "bandId": "one-power",
+      "registerEffects": [],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-one-power-power-demonic-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-demon-lord-half-power",
+      "patronId": "demon-lord",
+      "bandId": "half-power",
+      "registerEffects": [],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-half-power-power-demonic-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-half-power-power-demonic-2",
+          "ordinal": 2,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "vessel-demon-lord-full-package",
+      "patronId": "demon-lord",
+      "bandId": "full-package",
+      "registerEffects": [],
+      "fixedGrants": [],
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-full-package-power-demonic-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-full-package-power-demonic-2",
+          "ordinal": 2,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-full-package-power-demonic-3",
+          "ordinal": 3,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-demonic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-full-package-power-demonic-4",
+          "ordinal": 4,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-vessel-recipe-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "follower-count",
+          "definitionFile": "content/universal-follower-wheel-design.json",
+          "invocationCount": 1,
+          "stepId": "vessel-demon-lord-full-package-follower-count-5",
+          "ordinal": 5,
+          "returnTo": "saved-vessel-recipe-continuation",
+          "rewardProfileId": "demon-lord",
+          "callerBindingId": "vessel-full-demon-lord",
+          "sourceKind": "vessel-patron-followers"
+        }
+      ],
+      "returnTo": "backstory"
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "vessel-patron",
+      "definitionFile": "content/vessel-events-design.json",
+      "invocationCount": 1,
+      "stepId": "vessel-patron-1",
+      "ordinal": 1,
+      "returnTo": "vessel-compatibility"
+    },
+    {
+      "type": "spin-wheel",
+      "wheelId": "vessel-compatibility",
+      "definitionFile": "content/vessel-events-design.json",
+      "invocationCount": 1,
+      "stepId": "vessel-compatibility-1",
+      "ordinal": 2,
+      "returnTo": "selected-vessel-recipe"
+    }
+  ],
+  "followupSpinCountByPatronAndBand": {
+    "god": {
+      "overload": 2,
+      "one-power": 3,
+      "half-power": 3,
+      "full-package": 6
+    },
+    "demon-lord": {
+      "overload": 2,
+      "one-power": 3,
+      "half-power": 4,
+      "full-package": 7
+    }
+  },
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-divine",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "catalogVersion": "universal-power/0.2.0",
+      "callerGuard": "Actual God Vessel; one/half/full bands1/0/2 Divine calls; half invokes Concept Authority instead."
+    },
+    {
+      "wheelId": "power-demonic",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "catalogVersion": "universal-power/0.2.0",
+      "callerGuard": "Actual Raja Vessel; one/half/full bands1/2/4 actual calls."
+    },
+    {
+      "wheelId": "god-concept",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "outcomeCount": 12,
+      "rosterStatus": "Existing editable starter pool, not new user-approved count.",
+      "callerGuard": "God Vessel60/70/80/90/100 only, one actual Authority-mode Concept call from the selected recipe."
+    },
+    {
+      "wheelId": "follower-count",
+      "definitionFile": "content/universal-follower-wheel-design.json",
+      "outcomeCount": 9,
+      "callerGuard": "Either full Vessel patron only, one actual call with matching existing reward profile."
+    }
+  ],
+  "followerCallerBindings": [
+    {
+      "id": "vessel-full-god",
+      "archetypeId": "vessel",
+      "definitionFile": "content/vessel-events-design.json",
+      "ruleVersion": "vessel/0.2.0",
+      "patronId": "god",
+      "bandId": "full-package",
+      "allowedCompatibilityValues": [
+        90,
+        100
+      ],
+      "rewardProfileId": "god",
+      "guard": "Actual committed Vessel patron god, compatibility90 or100, and this recipe's actual follower child.",
+      "projection": "Use the existing matching byFollowerCount row and modifier amounts; bind all records/effects to actual Vessel/compatibility/follower source, never fabricate a God/Raja owned-race component. Follower display/context belongs to the selected patron.",
+      "masteryModifierAccess": "No follower mastery bonus."
+    },
+    {
+      "id": "vessel-full-demon-lord",
+      "archetypeId": "vessel",
+      "definitionFile": "content/vessel-events-design.json",
+      "ruleVersion": "vessel/0.2.0",
+      "patronId": "demon-lord",
+      "bandId": "full-package",
+      "allowedCompatibilityValues": [
+        90,
+        100
+      ],
+      "rewardProfileId": "demon-lord",
+      "guard": "Actual committed Vessel patron demon-lord, compatibility90 or100, and this recipe's actual follower child.",
+      "projection": "Use the existing matching byFollowerCount row and modifier amounts; bind all records/effects to actual Vessel/compatibility/follower source, never fabricate a God/Raja owned-race component. Follower display/context belongs to the selected patron.",
+      "masteryModifierAccess": "Existing raja-iblis-agung-follower-mastery at100/1000 +1 or10000/100000 +2, once on shared rank at final phase; other counts none."
+    }
+  ],
+  "contracts": {
+    "order": "Actual Vessel/reaction -> God/Raja patron spin/reaction -> one compatibility spin -> commit exactly selected recipe source/registrations/fixed weakness -> compatibility reaction -> each actual ordered Concept/themed/follower child with grant/reaction -> Backstory.",
+    "probability": "Patrons baseWeight1/50% each; compatibility0..100 by10, eleven equal1/11. Bands0–20/30–50/60–80/90–100 have masses3/11,3/11,3/11,2/11. Themed children reuse20 equal5%; Concept uses existing editable starter pool; followers retain3:3:3:3:3:2:2:2:1 before named authorized distribution policies. No count/rarity/success extra spin.",
+    "exclusive": "Apply only selected patron/band recipe. Low gets fixed overload weakness;30–50 one matching thematic;60–80 God1 Concept Authority/no Divine or Raja2 Demonic;90–100 complete God/Raja package. Authority equals2 Divine in this Vessel package valuation. No cumulative thresholds, low weakness on successful bands, fractional mastery/stat or50% capability multiplier.",
+    "fullGod": "One Concept Authority with its authorized Vessel source-instance maximum, two sequential Divine calls, one existing God follower reward row, and canonical normal-Power80% None/20% power scarcity from this Vessel source. God followers give only high-count main-stat bonuses, not mastery. All owned powers use the inherited fixed shared mastery9; no mastery spin.",
+    "fullRaja": "Four sequential Demonic calls then one existing demon-lord follower reward row. Exact selected row supplies mastery+1/+2 at100..100000 or all-stat+1/+2 at1M..100M; never both from earlier thresholds. No unrelated Iblis/Sin/Setan subtype package.",
+    "halfAndOne": "30–50 grants one matching thematic power.60–80 God grants one canonical Concept Authority valued as2 Divine and keeps God Authority source-instance maximum semantics; Raja grants2 canonical Demonic. These bands grant no follower or new God scarcity. Independently active other-source effects remain under their own sources.",
+    "weakness": "0–20 directly grants one source-owned Tubuh Jebol weakness describing overload/body damage. It persists alongside later main Weakness. Exact damage/load guard/recovery requires capability profile; no guessed numeric stat debuff, instant death/elimination, random severity or extra Weakness wheel.",
+    "identity": "God/Raja is the entity inside the Vessel and reward source, not an owned race selection. Execute the explicit projected reward recipe only: no Heavenly/Abyssal subtype/parent identity dispatch, race-history mutation, extra Archetype/gate/owner Size. Keep the frozen accepted gate/result and true Vessel source.",
+    "mastery": "Ordinary powers retain one shared resolution. Vessel God at60/70/80/90/100 instead fixes all owned shared Power Mastery base9 without a spin. Raja follower modifiers still final-only; no Enchant.",
+    "scarcity": "Register full-God scarcity once at compatibility commit; import canonical God distribution/targets/exclusions. Applicable later normal Power rolls use80% None; themed/fixed/guaranteed calls excluded. Multiple source references do not multiply80% or add rolls. Named Equalizer precedence stays its prior contract.",
+    "repeatedCalls": "Each child is a separate actual invocation with unique step/ordinal/source and saved continuation. Same canonical pool; no unrequested unique-result exclusion/reroll. Preserve actual duplicates; global source ownership policy remains, Authority/ordinary modes never merge to transfer maximum.",
+    "recipeAuthority": "Only selected recipeProfiles registerEffects/fixedGrants/steps execute once. Package references, counts, context and band labels describe that same recipe, not another parent dispatch/reward schedule.",
+    "ledger": "Freeze patron/compatibility pools, odds, rules, actual results, recipe and child schedule. Source key runId/sourceArchetypeInvocationId/sourcePatronSpinId/sourceCompatibilitySpinId/recipeId; children/grants have actual invocation IDs. Snapshot canonical definitions/modes/tiers, follower row, override/scarcity source. Replay/media retry resumes unfinished child/transaction/reaction, never duplicates or redraws.",
+    "timing": "All numeric/mastery bonuses register in original source ledgers and calculate only in final bonus phase. Preserve raw Lucky/Resilient/Pawn evidence and final compatible Weapon Enchant ordering. Source-instance Authority maximum is its fixed exception, not a sampled bonus.",
+    "context": "Stack actual Vessel/patron/compatibility, acquired children and known pending bonuses/weakness. Future child/stat/mastery values remain unknown. Canonical God/Raja race narration is not automatically copied; no implicit funny tag/Shrek hook from labels or fixed grants.",
+    "return": "Finish both selectors and the chosen recipe children/transactions/reactions before Backstory. Normal later Weapon/Power/Weakness stages remain; low branch still proceeds with its weakness.",
+    "runtime": "Core counts/full-package/scarcity clarified and approved. Overload/body capability, Concept starter identities, intrinsic power/target/size/control profiles and event executor remain configuration; final Archetype roster stays inactive."
+  },
+  "openConfiguration": [
+    "Exact overload structural injury, power-load/activation/recovery/resistance profile; no numerical penalty specified.",
+    "Existing Concept starter roster/capability, intrinsic Divine/Demonic limits and Vessel body-role fit.",
+    "Source-only Authority/scarcity/follower binding, saved continuation, duplicate ownership and persistence/event executor."
+  ],
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-vessel-authority-2026-10-10.json",
+    "policy": "New Vessel invocations use vessel/0.2.0. Existing committed vessel/0.1.0 God-half recipes remain one Divine under their frozen schedule/source version; no reroll, retroactive replacement or added Authority."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "maximumGuaranteeContract": {
+    "version": "fixed-maximum/0.1.0",
+    "scope": "Actual committed maximum guarantees for stats or mastery skip the random wheel.",
+    "God": "Actual God subtype fixes the one shared Power Mastery base9 for all owned present/future powers, including Authority, Divine and ordinary grants.",
+    "VesselGod": "God patron at compatibility60/70/80/90/100 inherits the existing maximum guarantee; all owned Power Mastery base9. Lower bands and demon patron do not qualify.",
+    "Lich": "Committed Lich fixes Durability base9; no singleton100% spin in new runs.",
+    "notGuarantees": "High lore probability, intrinsic Tier5, matching power names and Kinnara minimumMaster are not maximum guarantees.",
+    "timing": "Check owned inventory/guarantee before RNG; fixed base then applicable bonuses/debuffs only at finalize. Final scores remain signed/unbounded.",
+    "hooks": "No random sample, actual attempt, spin ID, Lucky hit, Resilient retry, Double/Nothing decision or sampled Pawn category for automatic bases.",
+    "precedence": "Explicit maximum before random shaping/Equalizer/Gambler. Contradictory hard exclusions require configuration. Empty power inventory creates no phantom mastery.",
+    "history": "Existing frozen actual God/ordinary mastery and Lich singleton draws replay unchanged; no retroactive guarantee rewriting."
+  }
+}

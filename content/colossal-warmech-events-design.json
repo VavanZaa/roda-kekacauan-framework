@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "roda-kekacauan-colossal-warmech/0.1",
+  "version": "colossal-warmech/0.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "colossal-warmech",
+  "eventProfileId": "colossal-warmech-class",
+  "status": "Core four-class/mech-weapon/two-point package accepted by the user moving to next after the Artillery Intelligence correction. Algorithm design; equipment capability/body-fit/size/executor profiles remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Artillery uses Intelligence +2 in place of the proposed Fight +2.",
+      "Previously confirmed: numeric stat bonuses calculate at the end; unspecified wheel probabilities are equal.",
+      "One Kelas Warmech spin with Brawler, Fortress, Blitz and Artillery.",
+      "One owned external combat mech counted as one weapon, with its class loadout and two numeric stat points.",
+      "Normal per-weapon mastery and compatible final effective-Master Enchant apply."
+    ],
+    "acceptance": {
+      "date": "2026-10-10",
+      "evidence": "User says next after the corrected four-class proposal, accepting it for the one-by-one Archetype workflow."
+    }
+  },
+  "wheel": {
+    "id": "colossal-warmech-class",
+    "label": "Kelas Warmech",
+    "drawCount": 1,
+    "outcomeCount": 4,
+    "status": "Accepted four-class core roster; base odds follow equal-default rule.",
+    "outcomes": [
+      {
+        "id": "brawler",
+        "label": "Brawler",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "warmech-brawler"
+      },
+      {
+        "id": "fortress",
+        "label": "Fortress",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "warmech-fortress"
+      },
+      {
+        "id": "blitz",
+        "label": "Blitz",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "warmech-blitz"
+      },
+      {
+        "id": "artillery",
+        "label": "Artillery",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "rewardProfileRef": "warmech-artillery"
+      }
+    ]
+  },
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "status": "design-only; class planner/grant executor not implemented",
+    "module": null
+  },
+  "returnTo": "backstory",
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "rewardProfiles": [
+    {
+      "id": "warmech-brawler",
+      "classId": "brawler",
+      "loadout": "Tinju mekanik raksasa",
+      "statModifiers": [
+        {
+          "stat": "strength",
+          "operation": "add-numeric-points",
+          "amount": 2,
+          "timing": "final-bonus-phase"
+        }
+      ],
+      "weaponGrant": {
+        "type": "grant-weapon",
+        "definitionFile": "content/colossal-warmech-events-design.json",
+        "definitionId": "warmech-brawler",
+        "entityType": "external-combat-mech",
+        "weaponCount": 1,
+        "loadoutIsSeparateWeapon": false,
+        "masteryTiming": "main-weapon-stage"
+      },
+      "returnTo": "backstory"
+    },
+    {
+      "id": "warmech-fortress",
+      "classId": "fortress",
+      "loadout": "Meriam berat dan armor tebal",
+      "statModifiers": [
+        {
+          "stat": "durability",
+          "operation": "add-numeric-points",
+          "amount": 2,
+          "timing": "final-bonus-phase"
+        }
+      ],
+      "weaponGrant": {
+        "type": "grant-weapon",
+        "definitionFile": "content/colossal-warmech-events-design.json",
+        "definitionId": "warmech-fortress",
+        "entityType": "external-combat-mech",
+        "weaponCount": 1,
+        "loadoutIsSeparateWeapon": false,
+        "masteryTiming": "main-weapon-stage"
+      },
+      "returnTo": "backstory"
+    },
+    {
+      "id": "warmech-blitz",
+      "classId": "blitz",
+      "loadout": "Plasma blade dan booster",
+      "statModifiers": [
+        {
+          "stat": "speed",
+          "operation": "add-numeric-points",
+          "amount": 2,
+          "timing": "final-bonus-phase"
+        }
+      ],
+      "weaponGrant": {
+        "type": "grant-weapon",
+        "definitionFile": "content/colossal-warmech-events-design.json",
+        "definitionId": "warmech-blitz",
+        "entityType": "external-combat-mech",
+        "weaponCount": 1,
+        "loadoutIsSeparateWeapon": false,
+        "masteryTiming": "main-weapon-stage"
+      },
+      "returnTo": "backstory"
+    },
+    {
+      "id": "warmech-artillery",
+      "classId": "artillery",
+      "loadout": "Railgun dan rudal pelacak",
+      "statModifiers": [
+        {
+          "stat": "intelligence",
+          "operation": "add-numeric-points",
+          "amount": 2,
+          "timing": "final-bonus-phase",
+          "authority": "direct user correction"
+        }
+      ],
+      "weaponGrant": {
+        "type": "grant-weapon",
+        "definitionFile": "content/colossal-warmech-events-design.json",
+        "definitionId": "warmech-artillery",
+        "entityType": "external-combat-mech",
+        "weaponCount": 1,
+        "loadoutIsSeparateWeapon": false,
+        "masteryTiming": "main-weapon-stage"
+      },
+      "returnTo": "backstory"
+    }
+  ],
+  "powers": [],
+  "weapons": [
+    {
+      "id": "warmech-brawler",
+      "label": "Warmech Brawler",
+      "entityType": "external-combat-mech",
+      "inventoryType": "weapon",
+      "loadout": "Tinju mekanik raksasa",
+      "scope": "One owned external mech unit with its selected linked loadout. Included weapons/armor/booster are components of this one weapon record, not additional separate grants.",
+      "weaponMasteryTiming": "main-weapon-stage",
+      "enchantPolicy": "Compatible final effective Weapon Mastery >=5 and unused slot, under existing rules.",
+      "capabilityStatus": "Unit size, operating/control/body fit, fuel/ammunition/output/range/defenses and Enchant compatibility require explicit profiles; loadout label grants no guessed immunity, flight power or additional stat bonus."
+    },
+    {
+      "id": "warmech-fortress",
+      "label": "Warmech Fortress",
+      "entityType": "external-combat-mech",
+      "inventoryType": "weapon",
+      "loadout": "Meriam berat dan armor tebal",
+      "scope": "One owned external mech unit with its selected linked loadout. Included weapons/armor/booster are components of this one weapon record, not additional separate grants.",
+      "weaponMasteryTiming": "main-weapon-stage",
+      "enchantPolicy": "Compatible final effective Weapon Mastery >=5 and unused slot, under existing rules.",
+      "capabilityStatus": "Unit size, operating/control/body fit, fuel/ammunition/output/range/defenses and Enchant compatibility require explicit profiles; loadout label grants no guessed immunity, flight power or additional stat bonus."
+    },
+    {
+      "id": "warmech-blitz",
+      "label": "Warmech Blitz",
+      "entityType": "external-combat-mech",
+      "inventoryType": "weapon",
+      "loadout": "Plasma blade dan booster",
+      "scope": "One owned external mech unit with its selected linked loadout. Included weapons/armor/booster are components of this one weapon record, not additional separate grants.",
+      "weaponMasteryTiming": "main-weapon-stage",
+      "enchantPolicy": "Compatible final effective Weapon Mastery >=5 and unused slot, under existing rules.",
+      "capabilityStatus": "Unit size, operating/control/body fit, fuel/ammunition/output/range/defenses and Enchant compatibility require explicit profiles; loadout label grants no guessed immunity, flight power or additional stat bonus."
+    },
+    {
+      "id": "warmech-artillery",
+      "label": "Warmech Artillery",
+      "entityType": "external-combat-mech",
+      "inventoryType": "weapon",
+      "loadout": "Railgun dan rudal pelacak",
+      "scope": "One owned external mech unit with its selected linked loadout. Included weapons/armor/booster are components of this one weapon record, not additional separate grants.",
+      "weaponMasteryTiming": "main-weapon-stage",
+      "enchantPolicy": "Compatible final effective Weapon Mastery >=5 and unused slot, under existing rules.",
+      "capabilityStatus": "Unit size, operating/control/body fit, fuel/ammunition/output/range/defenses and Enchant compatibility require explicit profiles; loadout label grants no guessed immunity, flight power or additional stat bonus."
+    }
+  ],
+  "flow": [
+    "Actual Colossal Warmech result/reaction",
+    "One Kelas Warmech spin",
+    "Commit one selected mech/loadout and register its source-owned pending stat modifier",
+    "Actual class/grant reaction",
+    "Backstory"
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "colossal-warmech-class",
+      "definitionFile": "content/colossal-warmech-events-design.json",
+      "invocationCount": 1,
+      "stepId": "colossal-warmech-class-1",
+      "ordinal": 1,
+      "returnTo": "backstory after selected reward transaction/reaction"
+    }
+  ],
+  "followupSpinCount": 1,
+  "contracts": {
+    "order": "Actual Colossal Warmech/reaction -> one Kelas Warmech spin -> atomic selected unit/weapon grant and pending stat-source registration -> actual result/grant reaction -> Backstory.",
+    "probability": "Exactly four accepted classes at baseWeight1/25% each before authorized eligibility/distribution policies; no extra model/loadout/count/success spin.",
+    "reward": "Selected recipe gives exactly one external mech counted as one weapon and two numeric main-stat points: Brawler Strength+2; Fortress Durability+2; Blitz Speed+2; Artillery Intelligence+2. Fight+2 is superseded for Artillery. Package is exclusive; no other class reward or universal all-stat+2.",
+    "recipeAuthority": "Execute only the selected rewardProfiles entry, its one weaponGrant and statModifiers once. Loadout/weapon/context definitions are metadata for the same unit, not another reward instruction.",
+    "ownership": "Mech is one separate source-owned unit linked to one weapon instance. Included fists/cannon/railgun/missiles/blade/armor/booster are loadout parts; do not create additional owned weapons or armor pieces. Preserve earlier inventory and normal main acquisition/None retention; normal main Weapon remains scheduled.",
+    "character": "Owner identity/body/race history stays sourced by actual Race results. This equipment grant dispatches no Machine/Raksasa/Rider/Anime event, pilot/crew reward, extra Archetype or extra owner Size spin. Unit dimensions/control/fit use explicit equipment profiles, never a guessed Human body reference or owner enlargement.",
+    "stats": "Register the selected +2 numeric modifier once under its source ledger at class commit. Calculate only in final bonus phase from retained immutable raw stat and distinct active modifiers/the signed, unbounded score policys; raw Resilient/Lucky/Pawn evidence stays unchanged.",
+    "mastery": "Selected active unit uses one ordinary per-weapon raw mastery at the normal stage, with final matching source bonuses and compatible effective-Master5+ Enchant. No new mastery guarantee/boost, extra component mastery or Power grant. Preserve central inventory/acquisition guards; missing profiles require configuration.",
+    "ledger": "Freeze class pool/odds, rule/version/result, selected recipe and unit/weapon definition. Atomic source key runId/sourceArchetypeInvocationId/sourceClassSpinId/eventProfileId; link one unitInstanceId to one weaponInstanceId and distinct modifier source. Replay/media retries restore existing transaction and reaction without redraw, duplicate weapon or compound bonus.",
+    "context": "Stack actual class/loadout/owned unit and pending selected stat bonus with provenance. Future Backstory/Size/stat/mastery results remain unknown. No funny-result tag or Shrek hook inferred from names/fixed grants.",
+    "return": "Complete selected transaction and reaction before restoring Backstory; preserve accepted gate, source race exclusions and main sequence.",
+    "runtime": "Core accepted; explicit unit capability/dimensions/control/body-role compatibility and persistence executor remain configuration. Whole Archetype roster remains inactive."
+  },
+  "openConfiguration": [
+    "Unit size, operator/control, fuel/ammunition/output/range/defense and compatible Enchant profiles.",
+    "Final Colossal Warmech body-role/equipment fit and central inventory guards.",
+    "One-unit/one-weapon linking, source modifier transaction, saved continuation and runtime executor."
+  ],
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-colossal-warmech-2026-10-10.json",
+    "policy": "New invocations use colossal-warmech/0.1.0. Preserve frozen old drafts/journals/rules/results; no retroactive unit or bonus grants."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

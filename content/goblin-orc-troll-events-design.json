@@ -1,0 +1,835 @@
+{
+  "schemaVersion": "roda-kekacauan-goblin-orc-troll-events-design/0.1",
+  "status": "User-defined routes and probabilities; creative Shrek/disease content drafted; full balance pending",
+  "raceDesign": "race-wheel-design.json",
+  "armyContract": {
+    "counts": [
+      0,
+      5,
+      20,
+      100,
+      1000,
+      10000
+    ],
+    "weights": [
+      5,
+      10,
+      15,
+      10,
+      5,
+      1
+    ],
+    "totalWeight": 46,
+    "mode": "fixed-weight-ratio",
+    "allowModifiers": false,
+    "consumers": [
+      "Goblin",
+      "Orc General"
+    ],
+    "generalWeightsStatus": "Reuse the same army-count wheel for Orc General as the working interpretation of its army spin.",
+    "goblinOrder": "Army count -> Bos/Kacung -> archetype. Both spins occur even when army count is 0.",
+    "goblinPosition": {
+      "outcomes": [
+        "bos",
+        "kacung"
+      ],
+      "weights": [
+        1,
+        1
+      ],
+      "probabilities": [
+        0.5,
+        0.5
+      ]
+    },
+    "state": [
+      "associatedArmyCount",
+      "position",
+      "controlledArmyCount",
+      "sourceSpinIds",
+      "componentSlot"
+    ],
+    "control": "Goblin Bos and Orc General control the rolled count. Goblin Kacung belongs to the associated unit but controls 0 soldiers; do not present the unit as their personal army.",
+    "zero": "Bos with 0 has the boss title and an empty army; Kacung with 0 remains a valid comic result. Never reroll either.",
+    "stats": "Army size does not add to personal Strength, Speed, Durability, Intelligence, or Fight. Troop profiles and battle contribution need separate design."
+  },
+  "orcRoleDistribution": {
+    "roles": [
+      "orc-general",
+      "oni",
+      "orc-warrior",
+      "shaman",
+      "shrek"
+    ],
+    "weights": [
+      1,
+      2,
+      3,
+      3,
+      1
+    ],
+    "probabilities": [
+      0.1,
+      0.2,
+      0.3,
+      0.3,
+      0.1
+    ],
+    "allowModifiers": false
+  },
+  "weapons": [
+    {
+      "id": "katana",
+      "label": "Katana",
+      "equipmentKind": "weapon",
+      "contentStatus": "user-confirmed Oni grant",
+      "scope": "Pedang Katana untuk senjata Oni.",
+      "tags": [
+        "blade",
+        "melee"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata tambahan: Katana"
+        ],
+        "displayContext": "Katana sudah masuk inventori Oni; Weapon Mastery diputar pada tahap senjata nanti."
+      }
+    },
+    {
+      "id": "banana-peel-launcher",
+      "label": "Banana Peel Launcher",
+      "equipmentKind": "weapon",
+      "catalogOrder": 1,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Pelontar kulit pisang yang memasang jebakan licin.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "trap",
+        "ranged"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Banana Peel Launcher",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Dapat senjata pelontar kulit pisang. Hasil ini bertag lucu, sehingga Shrek mendapat +1 pada kelima stat.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Banana Peel Launcher. Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "onion-cannon",
+      "label": "Onion Cannon (Meriam Bawang)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 2,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Meriam fantasi yang melontarkan bawang sebagai proyektil pengganggu.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "projectile",
+        "ranged"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Onion Cannon (Meriam Bawang)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Meriamnya menembakkan bawang; Shrek tetap menerima bonus lima stat dari hasil lucu ini.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Onion Cannon (Meriam Bawang). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "giant-frying-pan",
+      "label": "Giant Frying Pan (Wajan Raksasa)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 3,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Wajan besar sebagai senjata pukul.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "impact"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Giant Frying Pan (Wajan Raksasa)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Wajan besar masuk daftar senjata. Bonus Shrek berasal dari tag hasil lucunya, bukan besar damage yang belum ditentukan.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Giant Frying Pan (Wajan Raksasa). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "rubber-chicken-mace",
+      "label": "Rubber Chicken Mace (Gada Ayam Karet)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 4,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Gada berbentuk ayam karet yang berbunyi saat dipakai.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "sound"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Rubber Chicken Mace (Gada Ayam Karet)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Senjata ayam karet menjadi hasil lucu yang mengaktifkan bonus Shrek.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Rubber Chicken Mace (Gada Ayam Karet). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "plunger-spear",
+      "label": "Plunger Spear (Tombak Sedot WC)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 5,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Tombak kocak dengan kepala penyedot untuk menahan atau menarik benda.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "control"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Plunger Spear (Tombak Sedot WC)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Tombak sedot WC didapat. Bentuk absurdnya sudah ditandai sebagai hasil lucu di katalog.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Plunger Spear (Tombak Sedot WC). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "baguette-club",
+      "label": "Baguette Club (Pentungan Roti)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 6,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Roti fantasi keras berbentuk pentungan.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "impact"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Baguette Club (Pentungan Roti)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Pentungan roti masuk inventori; ini satu hasil lucu, jadi bonus lima stat diterapkan satu kali.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Baguette Club (Pentungan Roti). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "swamp-slingshot",
+      "label": "Swamp Slingshot (Ketapel Lumpur)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 7,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Ketapel yang melontarkan gumpalan lumpur pengganggu.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "ranged",
+        "disruption"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Swamp Slingshot (Ketapel Lumpur)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Ketapel lumpur didapat sebagai senjata bertema rawa dan hasil lucu bagi Shrek.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Swamp Slingshot (Ketapel Lumpur). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "squeaky-hammer",
+      "label": "Squeaky Hammer (Palu Cit-Cit)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 8,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Palu kocak yang mengeluarkan suara cit-cit.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "sound"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Squeaky Hammer (Palu Cit-Cit)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Palu cit-cit masuk daftar senjata; hasil ini menambah kelima stat Shrek meski daya senjatanya masih perlu balance.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Squeaky Hammer (Palu Cit-Cit). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "burp-bazooka",
+      "label": "Burp Bazooka (Bazoka Sendawa)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 9,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Alat fantasi yang melontarkan gelombang suara sendawa.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "ranged",
+        "sound"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Burp Bazooka (Bazoka Sendawa)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Bazoka sendawa diperoleh sebagai alat senjata. Hasil lucunya mengaktifkan bonus Shrek tanpa memberi power suara terpisah.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Burp Bazooka (Bazoka Sendawa). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "slipper-boomerang",
+      "label": "Slipper Boomerang (Bumerang Sandal)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 10,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Sandal fantasi sebagai proyektil yang kembali.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "ranged",
+        "projectile"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Slipper Boomerang (Bumerang Sandal)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Sandal menjadi senjata bumerang; bonus hasil lucu Shrek dicatat sebelum reaksi dibuat.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Slipper Boomerang (Bumerang Sandal). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "rolling-pin",
+      "label": "Rolling Pin (Penggilas Adonan)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 11,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Penggilas adonan besar sebagai senjata pukul.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "impact"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Rolling Pin (Penggilas Adonan)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Alat dapur menjadi senjata tempur dan satu pemicu bonus hasil lucu Shrek.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Rolling Pin (Penggilas Adonan). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    },
+    {
+      "id": "giant-spoon",
+      "label": "Giant Spoon (Sendok Raksasa)",
+      "equipmentKind": "weapon",
+      "catalogOrder": 12,
+      "contentStatus": "assistant-authored funny weapon content; Banana Peel Launcher supplied as user example",
+      "scope": "Sendok besar untuk pukulan atau pengungkit.",
+      "tags": [
+        "funny-result",
+        "shrek-comedy",
+        "melee",
+        "impact"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "resultContext": {
+        "facts": [
+          "Senjata diperoleh: Giant Spoon (Sendok Raksasa)",
+          "Hasil katalog: funny-result",
+          "Bonus Shrek bila trait aktif: +1 tiap main stat"
+        ],
+        "displayContext": "Sendok raksasa didapat; label lucu pada hasil ini memicu +1 untuk kelima stat Shrek.",
+        "bonusSentenceGuard": "Committed shrek-funny-result-growth effects exist for this same spin invocation.",
+        "withoutActiveShrek": "Senjata diperoleh: Giant Spoon (Sendok Raksasa). Belum ada bonus Shrek yang tercatat untuk hasil ini."
+      },
+      "balance": "Damage, range, conditions, and weapon mastery/enchantability pending."
+    }
+  ],
+  "powers": [
+    {
+      "id": "shrek-power",
+      "label": "Shrek Power — Comedy Ascension (Tenaga Kekacauan)",
+      "contentStatus": "Shrek power requested; name authored; repeat funny-spin bonus clarified by user",
+      "tags": [
+        "shrek",
+        "comedy",
+        "passive-growth"
+      ],
+      "scope": "Every later committed funny-result spin adds +1 numeric point to all five main stats through the declared hook.",
+      "hookId": "shrek-funny-result-growth",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "masteryPolicy": "The user-defined passive point reward is active on acquisition; Power Mastery still resolves later and does not silently change the +1 reward.",
+      "sourceRefs": [
+        "shrek-dreamworks-ogre"
+      ],
+      "sourcePolicy": "Shrek is an Ogre reference; this named power and stat mechanic are game inventions.",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Pertumbuhan berulang dari actual funny spin; tidak menciptakan realitas.",
+      "powerTierRef": "content/power-tier-design.json#shrek-power"
+    }
+  ],
+  "shrekContract": {
+    "strongestProfile": "Shrek is the intended strongest Orc-wheel profile through repeat five-stat growth. Actual final rolls and mastery remain independent.",
+    "resolvedSpecies": "Ogre",
+    "powerId": "shrek-power",
+    "hook": {
+      "id": "shrek-funny-result-growth",
+      "status": "user-confirmed repeat bonus per funny spin",
+      "activeWhen": "Character owns the active Shrek Power profile",
+      "qualifies": "A later actual committed spin outcome has the catalog mechanics tag funny-result.",
+      "start": "Only results after Shrek Power acquisition; no acquisition bonus or retroactive bonus.",
+      "timing": "After applying the committed outcome, apply this hook before making its reaction/context snapshot.",
+      "effects": [
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point"
+        }
+      ],
+      "consumptionKey": "runId + hookId + qualifying spin invocation ID",
+      "repeat": "Once for every distinct qualifying spin, even across several later stages. Re-rendering, fixed reveals, memes, captions, and repeated evaluation do not count as new spins.",
+      "powerMastery": "The user-defined passive point reward is active on acquisition; Power Mastery still resolves later and does not silently change the +1 reward.",
+      "loopPolicy": "The hook adds five modifiers, not another spin; its own modifiers cannot trigger it again.",
+      "truth": "A narrator saying an outcome is funny cannot add the mechanics tag or activate this hook."
+    },
+    "funnyWeaponPool": {
+      "wheelId": "shrek-funny-weapon",
+      "phase": "weapon",
+      "role": "main-stage-variant",
+      "placementStatus": "Design interpretation: use this funny pool for the normal main Weapon spin when Shrek is active; do not manufacture a separate race-stage spin.",
+      "candidateCount": 12,
+      "allOutcomesTagged": "funny-result",
+      "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization."
+    },
+    "otherFunnySpins": "Any later catalog-tagged funny-result spin can qualify, not just this weapon pool. Other funny entries need explicit approved tags."
+  },
+  "bonusSpinContract": {
+    "register": "A role result records a stage bonus ticket with its source invocation and component slot; register each once.",
+    "ticketFields": [
+      "id",
+      "sourceSpinId",
+      "sourceRoleId",
+      "componentSlot",
+      "stage",
+      "wheelFamily",
+      "requiredGrant",
+      "status",
+      "consumedByInvocationId"
+    ],
+    "sequence": "At the target stage: main acquisition spin and its immediate details -> each pending bonus acquisition spin and details -> mastery for every owned instance still unresolved -> eligible weapon enchantment -> next main stage.",
+    "eligibility": "Freeze fresh odds at each bonus spin using current build/declared eligible pool. Do not carry a race-stage frozen weapon/power draw.",
+    "idempotence": "Consume the ticket when its bonus result commits; resuming cannot create a second spin or erase earlier grants.",
+    "warrior": {
+      "stage": "weapon",
+      "wheelFamily": "weapon",
+      "extraSpins": 1,
+      "requiredGrant": "weapon",
+      "emptyOutcomePolicy": "Exclude None/no-weapon results before drawing because the user requests an extra weapon. Error if no eligible weapon remains."
+    },
+    "shaman": {
+      "stage": "power",
+      "wheelFamily": "power",
+      "extraSpins": 1,
+      "requiredGrant": null,
+      "emptyOutcomePolicy": "The extra spin uses the normal Power outcome rules, including None if the approved pool allows it. The request guarantees a spin, not an extra power regardless of result."
+    },
+    "lateActivation": "If a role ticket is acquired after its target stage, dispatch its acquisition/mastery subflow from the current caller and return; never restart the main sequence."
+  },
+  "diseases": [
+    {
+      "id": "asthma",
+      "label": "Asma",
+      "contentStatus": "user-specified example",
+      "statPenalty": {
+        "target": "speed",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Asma",
+          "Modifier permainan: -1 speed"
+        ],
+        "displayContext": "Troll mendapat hasil Asma. Dalam build permainan ini, -1 poin speed dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "skin-disease",
+      "label": "Penyakit Kulit",
+      "contentStatus": "user-specified example",
+      "statPenalty": {
+        "target": "durability",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Penyakit Kulit",
+          "Modifier permainan: -1 durability"
+        ],
+        "displayContext": "Troll mendapat hasil Penyakit Kulit. Dalam build permainan ini, -1 poin durability dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "anemia",
+      "label": "Anemia",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "strength",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Anemia",
+          "Modifier permainan: -1 strength"
+        ],
+        "displayContext": "Troll mendapat hasil Anemia. Dalam build permainan ini, -1 poin strength dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "gastric-trouble",
+      "label": "Maag",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "strength",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Maag",
+          "Modifier permainan: -1 strength"
+        ],
+        "displayContext": "Troll mendapat hasil Maag. Dalam build permainan ini, -1 poin strength dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "flu",
+      "label": "Flu",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "speed",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Flu",
+          "Modifier permainan: -1 speed"
+        ],
+        "displayContext": "Troll mendapat hasil Flu. Dalam build permainan ini, -1 poin speed dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "joint-inflammation",
+      "label": "Radang Sendi",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "fight",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Radang Sendi",
+          "Modifier permainan: -1 fight"
+        ],
+        "displayContext": "Troll mendapat hasil Radang Sendi. Dalam build permainan ini, -1 poin fight dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "migraine",
+      "label": "Migrain",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "intelligence",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Migrain",
+          "Modifier permainan: -1 intelligence"
+        ],
+        "displayContext": "Troll mendapat hasil Migrain. Dalam build permainan ini, -1 poin intelligence dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "insomnia",
+      "label": "Insomnia",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "intelligence",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Insomnia",
+          "Modifier permainan: -1 intelligence"
+        ],
+        "displayContext": "Troll mendapat hasil Insomnia. Dalam build permainan ini, -1 poin intelligence dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "poor-vision",
+      "label": "Rabun",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "fight",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Rabun",
+          "Modifier permainan: -1 fight"
+        ],
+        "displayContext": "Troll mendapat hasil Rabun. Dalam build permainan ini, -1 poin fight dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "gout",
+      "label": "Asam Urat",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "speed",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Asam Urat",
+          "Modifier permainan: -1 speed"
+        ],
+        "displayContext": "Troll mendapat hasil Asam Urat. Dalam build permainan ini, -1 poin speed dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "fever",
+      "label": "Demam",
+      "contentStatus": "assistant-authored game mapping",
+      "statPenalty": {
+        "target": "strength",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Demam",
+          "Modifier permainan: -1 strength"
+        ],
+        "displayContext": "Troll mendapat hasil Demam. Dalam build permainan ini, -1 poin strength dicatat sebelum stat dasar diputar."
+      }
+    },
+    {
+      "id": "swamp-infection",
+      "label": "Infeksi Rawa",
+      "contentStatus": "fictional game condition",
+      "statPenalty": {
+        "target": "durability",
+        "operation": "add-flat",
+        "amount": -1,
+        "unit": "numeric point"
+      },
+      "mappingScope": "Arbitrary fantasy-game stat effect, not a statement about real patients or medical consequences.",
+      "resultContext": {
+        "facts": [
+          "Kondisi Troll terpilih: Infeksi Rawa",
+          "Modifier permainan: -1 durability"
+        ],
+        "displayContext": "Troll mendapat hasil Infeksi Rawa. Dalam build permainan ini, -1 poin durability dicatat sebelum stat dasar diputar."
+      }
+    }
+  ],
+  "trollContract": {
+    "drawCount": 1,
+    "candidateCount": 12,
+    "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization.",
+    "penalty": "Each selected condition adds exactly one -1 numeric-point modifier to its mapped main stat.",
+    "timing": "Record disease and modifier once at its result; apply against later base stats with the configured stat scale bounds.",
+    "weaknessStage": "Keep the normal later Weakness spin. This race condition does not consume that stage.",
+    "mappingScope": "These penalties are game rules rather than medical advice or measurements."
+  },
+  "classificationContract": "Orc is a game selection branch. Store Oni or Shrek/Ogre identity separately; neither selection auto-dispatches Demon, Raksasa, Heavenly, Anime MC, or Reinkarnasi Pahlawan Legendaris events.",
+  "openBalance": [
+    "Goblin/Orc/Troll subtype weights",
+    "Cursed Power, disease, and funny-weapon weights",
+    "Main weapon and power catalogs and compatibility variants",
+    "Army unit profiles and troop contribution",
+    "Explicit extra-spin eligibility and repeated item handling",
+    "All five numeric stat scales or mappings and bounds",
+    "Detailed later odds effects and any additional catalog funny-result tags"
+  ],
+  "contextContract": {
+    "facts": "Narration receives the current as-of-spin committed projection, including actual hook effects and command position, rather than unconditional template claims.",
+    "conditionalWeaponBonus": "The funny weapon bonus sentence is valid only when the Shrek hook actually applied for this invocation. Otherwise include weapon acquisition/function only.",
+    "army": "Before Goblin position, control is unresolved. After Kacung, controlledArmyCount is zero.",
+    "timing": "Outcome, stage-ticket consumption, and hook effects/keys commit together, then context is built."
+  },
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

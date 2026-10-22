@@ -1,0 +1,2405 @@
+{
+  "schemaVersion": "roda-kekacauan-power-tier/1.0",
+  "version": "power-tier/1.0.0",
+  "updatedDate": "2026-10-11",
+  "status": "User requests tier 1–5 for all powers; descriptors and exact ratings authored/editable.",
+  "authority": {
+    "confirmed": "Every power needs tier 1–5; Water Breathing and Creation must not be equivalent.",
+    "authored": "Five capability bands and explicit per-definition ratings follow documented scope, not name/source race/wheel order/rarity/stat/mastery.",
+    "userSetDefinitions": [
+      {
+        "definitionId": "royal-authority",
+        "definitionFile": "content/royal-events-design.json",
+        "powerTier": 5,
+        "scope": "Perintah mutlak / dominasi kehendak",
+        "authority": "Direct user confirmation 2026-10-09"
+      },
+      {
+        "definitionId": "ultraman-power",
+        "definitionFile": "content/video2-race-imports-design.json",
+        "powerTier": 4,
+        "scope": "Power named Ultraman shared by all three game colors.",
+        "authority": "Direct user instruction2026-10-10"
+      },
+      {
+        "definitionId": "cosmic-armor-bronze",
+        "definitionFile": "content/video2-race-imports-design.json",
+        "powerTier": 2,
+        "scope": "Armor kosmik kelas Bronze: perlindungan dan penyaluran energi kosmik sesuai Tier2. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+        "authority": "Direct user Cosmic Armor class instruction2026-10-10"
+      },
+      {
+        "definitionId": "cosmic-armor-silver",
+        "definitionFile": "content/video2-race-imports-design.json",
+        "powerTier": 3,
+        "scope": "Armor kosmik kelas Silver: perlindungan dan penyaluran energi kosmik sesuai Tier3. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+        "authority": "Direct user Cosmic Armor class instruction2026-10-10"
+      },
+      {
+        "definitionId": "cosmic-armor-gold",
+        "definitionFile": "content/video2-race-imports-design.json",
+        "powerTier": 4,
+        "scope": "Armor kosmik kelas Gold: perlindungan dan penyaluran energi kosmik sesuai Tier4. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+        "authority": "Direct user Cosmic Armor class instruction2026-10-10"
+      }
+    ]
+  },
+  "tiers": [
+    {
+      "tier": 1,
+      "label": "Utility",
+      "description": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "tier": 2,
+      "label": "Basic",
+      "description": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "tier": 3,
+      "label": "Advanced",
+      "description": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "tier": 4,
+      "label": "Legendary",
+      "description": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "tier": 5,
+      "label": "Broken",
+      "description": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    }
+  ],
+  "benchmarks": [
+    {
+      "label": "Water Breathing",
+      "powerTier": 1,
+      "scope": "Hanya bernapas di air.",
+      "catalogRole": "Selectable main Power definition: content/main-power-wheel-design.json#water-breathing; prior benchmark value unchanged."
+    },
+    {
+      "label": "Creation",
+      "powerTier": 5,
+      "scope": "Penciptaan materi/objek sebagai kemampuan luas.",
+      "catalogRole": "Reference example only; Philosopher Stone currently grants Molecular Manipulation."
+    }
+  ],
+  "definitionCount": 303,
+  "definitionFiles": [
+    "content/abyssal-axiom-design.json",
+    "content/alchemist-events-design.json",
+    "content/archaeologist-events-design.json",
+    "content/elf-events-design.json",
+    "content/fairy-events-design.json",
+    "content/goblin-orc-troll-events-design.json",
+    "content/golem-events-design.json",
+    "content/heavenly-principle-events-design.json",
+    "content/isekai-cheat-wheel-design.json",
+    "content/legendary-hero-events-design.json",
+    "content/lelembut-events-design.json",
+    "content/machine-events-design.json",
+    "content/mythical-beast-events-design.json",
+    "content/siluman-events-design.json",
+    "content/survivalist-events-design.json",
+    "content/tamer-events-design.json",
+    "content/universal-concept-wheel-design.json",
+    "content/universal-element-wheel-design.json",
+    "content/universal-power-wheels-design.json",
+    "content/universal-sin-wheel-design.json",
+    "content/royal-events-design.json",
+    "content/assassin-events-design.json",
+    "content/primordial-events-design.json",
+    "content/video2-race-imports-design.json",
+    "content/main-power-wheel-design.json"
+  ],
+  "countsByBaseTier": {
+    "1": 46,
+    "2": 60,
+    "3": 99,
+    "4": 66,
+    "5": 32
+  },
+  "contracts": {
+    "identity": "One explicit rating per exact definitionId+definitionFile; aliases/repeated grants inherit it. Canonical definition metadata and registry must match; no caption-derived rating.",
+    "mastery": "Tier measures intrinsic capability; mastery measures proficiency and cannot increase tier. Existing Concept power/authority scopes may have separate mode ratings, independent of source-bound God maximum rank.",
+    "capacity": "Tier grants no automatic area/damage/immunity/victory/new effect; existing scope and configured limitations still apply.",
+    "probability": "No automatic tier rarity/reweighting. Only the separately expanded Alchemist working draft changes odds; other wheels remain unchanged.",
+    "balance": "Rating metadata is not main stat or automatic budget conversion. Preserve explicit grants/bonuses and existing power=2-point reward budgets until a separately approved tier-to-budget rule.",
+    "household": "All twenty ordinary Household functions stay tier 1 with ordinary household capacity, regardless of Size or mastery.",
+    "journal": "Freeze tierPolicyVersion/reference/grantMode/rating for newly owned power. Old outcomes/effects remain frozen; unlabelled old powers need versioned annotation, never newest-catalog mechanical upgrade.",
+    "missing": "Unknown definition/file or undeclared grant mode returns needs_configuration; no default tier or AI guessing.",
+    "acquisition": "Alchemy elixirs grant fixed linked owned powers under normal shared mastery, None retention, no mastery-triggered Enchant.",
+    "retiredDefinitionAcquisition": "Retired definitions retain exact lookup/old-journal ratings but activeForNewAcquisition:false excludes new rewards/catalog generation; no silent alias promotion."
+  },
+  "runtimeInterface": {
+    "module": "framework/power-tier.mjs",
+    "export": "resolvePowerTier",
+    "purpose": "Explicit metadata lookup only; no spins/grants/combat/odds mutations."
+  },
+  "ratings": [
+    {
+      "definitionId": "invisibility",
+      "definitionFile": "content/abyssal-axiom-design.json",
+      "label": "Invisibility (Mode Ngilang)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "gold-touch",
+      "definitionFile": "content/alchemist-events-design.json",
+      "label": "Gold Touch (Sentuhan Emas)",
+      "powerTier": 4,
+      "reason": "Transmutasi emas melalui sentuhan; hasil spesifik lebih sempit daripada manipulasi materi umum."
+    },
+    {
+      "definitionId": "molecular-manipulation",
+      "definitionFile": "content/alchemist-events-design.json",
+      "label": "Molecular Manipulation (Manipulasi Molekul)",
+      "powerTier": 5,
+      "reason": "Menyusun ulang struktur dan komposisi materi umum pada tingkat molekuler."
+    },
+    {
+      "definitionId": "fossil-fangs",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Fossil Fangs (Taring Purba)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "bone-armor",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Bone Armor (Armor Tulang)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "ancestral-charge",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Ancestral Charge (Seruduk Purba)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "ancestral-constriction",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Ancestral Constriction (Lilitan Purba)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "aquatic-adaptation",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Aquatic Adaptation",
+      "powerTier": 2,
+      "reason": "Adaptasi air/gerak tubuh sendiri lebih luas daripada hanya Water Breathing."
+    },
+    {
+      "definitionId": "ancestral-stomp",
+      "definitionFile": "content/archaeologist-events-design.json",
+      "label": "Ancestral Stomp (Geprek Purba)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "forest-control",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Forest Control (Kendali Hutan)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "mermaid-song",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Mermaid Song (Nyanyian Putri Duyung)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "decay-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Decay Manipulation (Kendali Pelapukan)",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "ice-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Ice Manipulation (Kendali Es)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "life-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Life Manipulation (Kendali Kehidupan)",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "shadow-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Shadow Manipulation (Manipulasi Bayangan)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "astral-projection",
+      "definitionFile": "content/elf-events-design.json",
+      "label": "Astral Projection (Proyeksi Astral)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "wish-granting",
+      "definitionFile": "content/fairy-events-design.json",
+      "label": "Wish Granting (Pengabul Harapan)",
+      "powerTier": 5,
+      "reason": "Pengabul harapan dapat melintasi fungsi power biasa; batas wish tetap wajib."
+    },
+    {
+      "definitionId": "healing-power",
+      "definitionFile": "content/fairy-events-design.json",
+      "label": "Healing Power (Pemulihan)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "shrek-power",
+      "definitionFile": "content/goblin-orc-troll-events-design.json",
+      "label": "Shrek Power — Comedy Ascension (Tenaga Kekacauan)",
+      "powerTier": 4,
+      "reason": "Pertumbuhan berulang dari actual funny spin; tidak menciptakan realitas."
+    },
+    {
+      "definitionId": "rock-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "label": "Rock Manipulation (Kendali Batu)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "magma-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "label": "Magma Manipulation (Kendali Magma)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "crystal-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "label": "Crystal Manipulation (Kendali Kristal)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "diamond-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "label": "Diamond Manipulation (Kendali Berlian)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "trash-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "label": "Trash Manipulation (Kendali Sampah)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "communication-with-god",
+      "definitionFile": "content/heavenly-principle-events-design.json",
+      "label": "Komunikasi dengan Tuhan",
+      "powerTier": 2,
+      "reason": "Komunikasi/petunjuk terbatas; tema ilahi tidak memberi kendali ilahi."
+    },
+    {
+      "definitionId": "isekai-cheat-vending",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Vending Machine Sultan",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "isekai-cheat-sword",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Pedang Hidup",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-slime",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Predator Adaptif",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-spider",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Jaring Evolusi",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-pig",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Telepati Babi",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "isekai-cheat-level1",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Loot Level 1 Sultan",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-level2",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Level 2 Kebuka Cheat",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-level99",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Hidden Boss Level 99",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-potions",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Potion Sesuka Hati",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-gold",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Bolak-balik Dunia",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "isekai-cheat-slimes300",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Grind Santai 300 Tahun",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-average",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Average Salah Hitung",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-drugstore",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Racik Obat Cheat",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-pharmacy",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Farmasi Sihir",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-cooking",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Belanja Online Antar-Dunia",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-bookworm",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Knowledge Craft",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-cleric",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Recovery Training",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-grace",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Slime Utility",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-fluffy",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Disayang Makhluk",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-sweet",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Magic Pastry",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-smartphone",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Smartphone Cheat",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-deathmarch",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "EXP Kebanjiran",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-magician",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Mana Kebanyakan",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-summoner",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Kontrak Summon",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-exorcist",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Onmyoji Lintas Server",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-assassin",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Assassin Craft",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-aristocrat",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Berkah Kebanyakan",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-strongest",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Barrier Cheat",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-8thson",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Mana Pewaris Bungsu",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-grandchild",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Sihir Pakai Logika",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-spirits",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Resonansi Roh",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-moon",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Ruang Saku",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "isekai-cheat-skeleton",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Knight Spectral",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-realist",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Multitasking Kerajaan",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-prodigies",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Blueprint Genius",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-villainess",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Radar Bad Ending",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-saint",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Saint Healing",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-ragnarok",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Strategi Masa Depan",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-fruit",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Buah Auto-Evolve",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-company",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Kontrak Dungeon",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-shirohiyo",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Skill Bekal Hidup Lama",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "isekai-cheat-mynoghra",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "RTS Civilization",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-uglymug",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Build Anti-Standar",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-evil-lord",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Command Imperial",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-beginning",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Memori Raja",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-water",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Water Precision",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-alchemist",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Alkimia Cheat",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-journey",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Guardian Adventure",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-overlord",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Overlord Spellcraft",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-rezero",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Return by Death",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "isekai-cheat-konosuba",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Steal Cheat",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-mushoku",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Sihir Tanpa Chant",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-tanya",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Aerial Spell Combat",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-zenshu",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Gambar Jadi Nyata",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "isekai-cheat-problem-children",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Gift Breaker",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-grimgar",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Survival Sense",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-million",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Quest Class Adaptation",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-eminence",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Atomic Burst",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-isekai-life",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Slime Magic Network",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-loner",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Skill Sisa OP",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "isekai-cheat-no-game",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Game Theory Cheat",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "isekai-cheat-shield",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Shield Evolution",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "isekai-cheat-instant-death",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Instant Death",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "isekai-cheat-cautious",
+      "definitionFile": "content/isekai-cheat-wheel-design.json",
+      "label": "Overprepared Prediction",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "earth-dive",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Earth Dive (Menembus Tanah)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "petrification-curse",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Kutukan Membatu",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "aksara-seal",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Segel Aksara",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "animal-command",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Kendali Hewan",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "lightning-manipulation",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Lightning Manipulation (Kendali Petir)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "alchemy",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Alchemy (Alkimia)",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "illusion",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Illusion (Ilusi)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "inspiration",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Inspiration (Inspirasi)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "sound-manipulation",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "label": "Sound Manipulation (Kendali Suara)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "jump",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Jump",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "nyolong",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Nyolong",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "flight",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Flight",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "size-manipulation",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Size Manipulation",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "child-protection",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Child Protection",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "mukbang",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Mukbang",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "organ-control",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Organ Control",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "head-detachment",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Head Detachment",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "pesugihan",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Pesugihan",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "ngesot",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Ngesot",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "intangibility",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Intangibility",
+      "powerTier": 4,
+      "reason": "Menembus benda padat melewati pertahanan material biasa."
+    },
+    {
+      "definitionId": "sand-manipulation",
+      "definitionFile": "content/lelembut-events-design.json",
+      "label": "Sand Manipulation",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-power-negation",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Power Negation",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "android-laser-eye",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Laser Eye",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-energy-absorption",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Energy Absorption",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-energy-force-field",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Force Field",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-magnetism-control",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Magnetism Control",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-hologram-projection",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Hologram Projection",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "android-sonic-blast",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Sonic Blast",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-electric-discharge",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Electric Discharge",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "android-receipt-printing",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Print Struk",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "android-disco-lights",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Lampu Disko",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "android-autotune-voice",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Auto-Tune Voice",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "android-local-hotspot",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Hotspot Gratis",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "digital-being",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Digital Being",
+      "powerTier": 3,
+      "reason": "Interaksi dalam wadah digital kompatibel; bukan kendali semua perangkat."
+    },
+    {
+      "definitionId": "appliance-rice-cooker",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Masak Nasi",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-microwave",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Angetin Sisa Makan",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-refrigerator",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Dingin-Dingin Kulkas",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-washing-machine",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Cuci Baju",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-electric-fan",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Angin Sepoi",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-air-conditioner",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Ademin Kamar",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-vacuum-cleaner",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Sedot Debu",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-electric-iron",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Rapiin Baju",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-blender",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Ngejus",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-air-fryer",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Goreng Tanpa Minyak",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-toaster",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Panggang Roti",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-electric-kettle",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Rebus Air",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-water-dispenser",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Tuang Air",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-hair-dryer",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Tiup Rambut",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-mixer",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Ngaduk Adonan",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-electric-oven",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Panggang Kue",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-induction-stove",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Panasin Panci",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-coffee-machine",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Seduh Kopi",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-television",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Nonton Siaran",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "appliance-robot-vacuum",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Bersihin Lantai",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "shapeshifting",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Shapeshifting",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "vehicle-shifting",
+      "definitionFile": "content/machine-events-design.json",
+      "label": "Vehicle Shifting",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "unity-inducement",
+      "definitionFile": "content/mythical-beast-events-design.json",
+      "label": "Unity Inducement",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "spirit-control",
+      "definitionFile": "content/mythical-beast-events-design.json",
+      "label": "Spirit Control",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "purity-power",
+      "definitionFile": "content/mythical-beast-events-design.json",
+      "label": "Purity Power",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "hydra-regeneration",
+      "definitionFile": "content/mythical-beast-events-design.json",
+      "label": "Regeneration (Tumbuh Lagi)",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "animal-transformation",
+      "definitionFile": "content/siluman-events-design.json",
+      "label": "Animal Transformation (Transformasi Hewan)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "acid-manipulation",
+      "definitionFile": "content/survivalist-events-design.json",
+      "label": "Acid Control",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "radiation-manipulation",
+      "definitionFile": "content/survivalist-events-design.json",
+      "label": "Radiation Control",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "space-adaptation",
+      "definitionFile": "content/survivalist-events-design.json",
+      "label": "Space Adaptation",
+      "powerTier": 2,
+      "reason": "Adaptasi lingkungan diri sendiri; tanpa kendali ruang-waktu."
+    },
+    {
+      "definitionId": "poison-manipulation",
+      "definitionFile": "content/survivalist-events-design.json",
+      "label": "Poison Control",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "battle-instinct",
+      "definitionFile": "content/survivalist-events-design.json",
+      "label": "Battle Instinct",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "taming",
+      "definitionFile": "content/tamer-events-design.json",
+      "label": "Taming Power",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "concept-life",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Kehidupan Concept",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "grantModeTiers": {
+        "power": 4,
+        "authority": 5
+      }
+    },
+    {
+      "definitionId": "concept-death",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Kematian Concept",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "grantModeTiers": {
+        "power": 4,
+        "authority": 5
+      }
+    },
+    {
+      "definitionId": "concept-time",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Waktu Concept",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "grantModeTiers": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "definitionId": "concept-space",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Ruang Concept",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "grantModeTiers": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "definitionId": "concept-fate",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Takdir Concept",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "grantModeTiers": {
+        "power": 5,
+        "authority": 5
+      }
+    },
+    {
+      "definitionId": "concept-knowledge",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Pengetahuan Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-war",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Perang Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-love",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Cinta Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-nature",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Alam Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-sea",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Laut Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-storm",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Badai Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "concept-light",
+      "definitionFile": "content/universal-concept-wheel-design.json",
+      "label": "Cahaya Concept",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "grantModeTiers": {
+        "power": 3,
+        "authority": 4
+      }
+    },
+    {
+      "definitionId": "fire-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "label": "Fire Manipulation (Kendali Api)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "water-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "label": "Water Manipulation (Kendali Air)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "earth-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "label": "Earth Manipulation (Kendali Tanah)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "wind-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "label": "Wind Manipulation (Kendali Angin)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "holy-spark",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Holy Spark",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "healing-touch",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Healing Touch",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "purify",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Purify",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "holy-shield",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Holy Shield",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "holy-arrow",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Holy Arrow",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "sacred-flame",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sacred Flame",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "sanctuary",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sanctuary",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "judgment-bolt",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Judgment Bolt",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "divine-restoration",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Divine Restoration",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "seraph-form",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Seraph Form",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "resurrection",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Resurrection",
+      "powerTier": 5,
+      "reason": "Membalik kematian dengan syarat, lebih mendasar daripada pemulihan luka."
+    },
+    {
+      "definitionId": "divine-miracle",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Divine Miracle",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "devils-whisper",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Devil’s Whisper",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "hex-mark",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Hex Mark",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "infernal-claw",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Infernal Claw",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "hellfire",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Hellfire",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "life-drain",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Life Drain",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "torment-chains",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Torment Chains",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "nightmare-prison",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Nightmare Prison",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "demonic-possession",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Demonic Possession",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "soul-shackles",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Soul Shackles",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "abyss-domain",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Abyss Domain",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "devil-avatar",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Devil Avatar",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "infernal-sovereignty",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Infernal Sovereignty",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "blood-sense",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Sense",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "blood-claw",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Claw",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "blood-needle",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Needle",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "blood-whip",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Whip",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "blood-shield",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Shield",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "crimson-regeneration",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Crimson Regeneration",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "blood-drain",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Drain",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "crimson-mist",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Crimson Mist",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "blood-puppetry",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Puppetry",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "blood-plague",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Plague",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "crimson-legion",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Crimson Legion",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "blood-dominion",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blood Dominion",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "cosmic-sense",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Cosmic Sense",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "cosmic-ray",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Cosmic Ray",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "stardust-manipulation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Stardust Manipulation",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "cosmic-barrier",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Cosmic Barrier",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "meteor-summon",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Meteor Summon",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "solar-flame",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Solar Flame",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "gravity-manipulation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Gravity Manipulation",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "orbital-dominion",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Orbital Dominion",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "space-fold",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Space Fold",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "cosmic-time-dilation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Cosmic Time Dilation",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "black-hole-manifestation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Black Hole Manifestation",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "celestial-forge",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Celestial Forge",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "symbiote-tendril-control",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Tendril Control (Tentakel Ngaret)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-wall-crawl",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Wall Crawl (Nempel Tembok)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "symbiote-body-stretch",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Body Stretch (Badan Ngaret)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-blade-morph",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blade Morph (Badan Jadi Sajam)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-shield-morph",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Shield Morph (Tameng Organik)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-organic-web",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Organic Web (Jaring Organik)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-camouflage",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Camouflage (Mode Nyamar)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-sense",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Symbiote Sense (Radar Bahaya)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-venom-spit",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Venom Spit (Ludah Toxic)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "symbiote-regeneration",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Regeneration (Auto Tambal)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "symbiote-clone",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Symbiote Clone (Pecah Badan)",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "symbiote-hive-link",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Hive Link (Grup Chat Symbiote)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "divine-reality-rewrite",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Reality Rewrite (Edit Realitas)",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "divine-decree",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Divine Decree (Titah Ilahi)",
+      "powerTier": 5,
+      "reason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas."
+    },
+    {
+      "definitionId": "divine-soul-dominion",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Soul Dominion (Kendali Jiwa)",
+      "powerTier": 4,
+      "reason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat."
+    },
+    {
+      "definitionId": "aura-superioritas",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Aura Superioritas",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "rampasan-energi",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Rampasan Energi",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "pesona-hasrat",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Pesona Hasrat",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "tiru-skill",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Tiru Skill",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "devour",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Devour",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "berserk-amuk",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Berserk (Amuk)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas."
+    },
+    {
+      "definitionId": "zona-mager",
+      "definitionFile": "content/universal-sin-wheel-design.json",
+      "label": "Zona Mager",
+      "powerTier": 3,
+      "reason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna."
+    },
+    {
+      "definitionId": "royal-authority",
+      "definitionFile": "content/royal-events-design.json",
+      "label": "Authority",
+      "powerTier": 5,
+      "reason": "User explicitly sets Authority to Tier 5 and clarifies absolute command / will domination; not inferred from mastery or chess rank."
+    },
+    {
+      "definitionId": "sacred-sense",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sacred Sense (Peka Energi Suci)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "blessed-water",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Blessed Water (Air Berkat)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "comforting-prayer",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Comforting Prayer (Doa Penenang)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "sacred-binding",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sacred Binding (Segel Suci)",
+      "powerTier": 3,
+      "reason": "Kemampuan tempur/dukungan serbaguna dengan kapasitas lebih luas."
+    },
+    {
+      "definitionId": "holy-constructs",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Holy Constructs (Bentuk Cahaya Suci)",
+      "powerTier": 3,
+      "reason": "Kemampuan tempur/dukungan serbaguna dengan kapasitas lebih luas."
+    },
+    {
+      "definitionId": "bad-luck",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Bad Luck (Apes Kecil)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "itch-curse",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Itch Curse (Gatal)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "hiccup-hex",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Hiccup Hex (Cegukan)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "stench-curse",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Stench Curse (Bau)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "fear-glare",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Fear Glare (Tatapan Takut)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran terbatas."
+    },
+    {
+      "definitionId": "curse-transfer",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Curse Transfer (Pindah Kutukan)",
+      "powerTier": 3,
+      "reason": "Kemampuan tempur/dukungan serbaguna dengan kapasitas lebih luas."
+    },
+    {
+      "definitionId": "causality-curse",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Causality Curse (Kutukan Sebab Akibat)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "fate-blight",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Fate Blight (Kutukan Takdir)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "death-hex",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Death Hex (Kutukan Kematian)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "eternal-damnation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Eternal Damnation (Kutukan Abadi)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "demon-scent",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Demon Scent (Aroma Iblis)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "imp-light",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Imp Light (Lampu Neraka)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "sin-taste",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sin Taste (Rasa Dosa)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "hell-voice",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Hell Voice (Suara Iblis)",
+      "powerTier": 1,
+      "reason": "Fungsi kecil atau sensor sempit; tanpa kendali tempur luas."
+    },
+    {
+      "definitionId": "demon-skin",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Demon Skin (Kulit Iblis)",
+      "powerTier": 2,
+      "reason": "Kemampuan personal atau tempur dasar dengan sasaran terbatas."
+    },
+    {
+      "definitionId": "infernal-body",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Infernal Body (Tubuh Infernal)",
+      "powerTier": 3,
+      "reason": "Kemampuan tempur/dukungan serbaguna dengan kapasitas lebih luas."
+    },
+    {
+      "definitionId": "demonic-regeneration",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Demonic Regeneration (Regenerasi Iblis)",
+      "powerTier": 3,
+      "reason": "Kemampuan tempur/dukungan serbaguna dengan kapasitas lebih luas."
+    },
+    {
+      "definitionId": "shadow-army",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Shadow Army (Pasukan Bayangan)",
+      "powerTier": 4,
+      "reason": "Kendali besar, pemulihan berat atau dominasi domain yang masih dibatasi."
+    },
+    {
+      "definitionId": "demonic-domination",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Demonic Domination (Dominasi Iblis)",
+      "powerTier": 4,
+      "reason": "Kendali besar, pemulihan berat atau dominasi domain yang masih dibatasi."
+    },
+    {
+      "definitionId": "soul-contract",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Soul Contract (Kontrak Jiwa)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "infernal-reality",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Infernal Reality (Realitas Neraka)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "sin-authority",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Sin Authority (Authority Dosa)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "abyss-genesis",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Abyss Genesis (Penciptaan Neraka)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "absolute-protection",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Absolute Protection (Perlindungan Mutlak)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "rebirth-grace",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "label": "Rebirth Grace (Anugerah Kelahiran Ulang)",
+      "powerTier": 5,
+      "reason": "Kemampuan konseptual yang mengubah aturan jiwa, sebab-akibat, realitas atau keberadaan."
+    },
+    {
+      "definitionId": "assassin-kage-bunshin",
+      "definitionFile": "content/assassin-events-design.json",
+      "label": "Kage Bunshin",
+      "powerTier": 3,
+      "reason": "Clone/body control with several useful tactical forms is an authored Tier 3 capability."
+    },
+    {
+      "definitionId": "assassin-death-mark",
+      "definitionFile": "content/assassin-events-design.json",
+      "label": "Death Mark (Tanda Maut)",
+      "powerTier": 4,
+      "reason": "An authored target-bound supernatural vitality curse is Tier 4 hax, without absolute death authority."
+    },
+    {
+      "definitionId": "assassin-presence-concealment",
+      "definitionFile": "content/assassin-events-design.json",
+      "label": "Presence Concealment",
+      "powerTier": 3,
+      "reason": "Broader supernatural masking of presence and aura is authored Tier 3, distinct from the existing personal Invisibility Tier 2."
+    },
+    {
+      "definitionId": "primordial-creation",
+      "definitionFile": "content/primordial-events-design.json",
+      "label": "Creation (Penciptaan)",
+      "powerTier": 5,
+      "reason": "Membentuk materi/bentuk baru, kemampuan fundamental; lingkup tidak sama dengan mastery atau omnipotensi."
+    },
+    {
+      "definitionId": "primordial-void-manipulation",
+      "definitionFile": "content/primordial-events-design.json",
+      "label": "Void Manipulation (Kendali Kekosongan)",
+      "powerTier": 5,
+      "reason": "Manipulasi keberadaan ruang kosong/batas materi; efek fundamental dengan batas profil."
+    },
+    {
+      "definitionId": "primordial-monster-genesis",
+      "definitionFile": "content/primordial-events-design.json",
+      "label": "Monster Genesis (Penciptaan Monster)",
+      "powerTier": 4,
+      "reason": "Mencipta/mengendalikan monster bertarung sebagai efek signature yang dibatasi."
+    },
+    {
+      "definitionId": "slime-jelly-body",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Tubuh Jelly",
+      "powerTier": 1,
+      "reason": "Fungsi tubuh jelly sederhana dan lemah."
+    },
+    {
+      "definitionId": "metal-manipulation",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Manipulasi Logam",
+      "powerTier": 3,
+      "reason": "Kendali material/energi dengan fungsi serbaguna dan lingkup terbatas."
+    },
+    {
+      "definitionId": "ultraman-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Ultraman",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-ki-control",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Ki Control",
+      "powerTier": 3,
+      "reason": "Kendali material/energi dengan fungsi serbaguna dan lingkup terbatas."
+    },
+    {
+      "definitionId": "cosmic-solar-empowerment",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Solar Empowerment",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-asgardian-force",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Asgardian Force",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-lantern-constructs",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Energy Constructs",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-power-cosmic",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Power Cosmic",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-cosmo",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Cosmo",
+      "powerTier": 4,
+      "reason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental."
+    },
+    {
+      "definitionId": "cosmic-armor-bronze",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Cosmic Armor (Bronze)",
+      "powerTier": 2,
+      "reason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier."
+    },
+    {
+      "definitionId": "cosmic-armor-silver",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Cosmic Armor (Silver)",
+      "powerTier": 3,
+      "reason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier."
+    },
+    {
+      "definitionId": "cosmic-armor-gold",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Cosmic Armor (Gold)",
+      "powerTier": 4,
+      "reason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier."
+    },
+    {
+      "definitionId": "lantern-green-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Energy Constructs",
+      "powerTier": 3,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-yellow-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Fear Manipulation",
+      "powerTier": 3,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-red-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Rage Plasma",
+      "powerTier": 3,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-blue-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Hope Energy",
+      "powerTier": 3,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-orange-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Avarice Constructs",
+      "powerTier": 4,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-indigo-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Emotional Mimicry",
+      "powerTier": 4,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-violet-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Love Binding",
+      "powerTier": 3,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-black-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Death Energy",
+      "powerTier": 4,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "lantern-white-power",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "label": "Life Energy",
+      "powerTier": 4,
+      "reason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier."
+    },
+    {
+      "definitionId": "water-breathing",
+      "definitionFile": "content/main-power-wheel-design.json",
+      "label": "Water Breathing (Napas di Air)",
+      "powerTier": 1,
+      "reason": "Bernapas di dalam air; tidak otomatis berenang cepat atau mengendalikan air."
+    },
+    {
+      "definitionId": "time-stop",
+      "definitionFile": "content/main-power-wheel-design.json",
+      "label": "Time Stop (Stop Waktu)",
+      "powerTier": 5,
+      "reason": "Menghentikan waktu sementara dalam area terbatas; bukan penghentian seluruh semesta."
+    },
+    {
+      "definitionId": "darkness-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "label": "Darkness Manipulation (Kendali Kegelapan)",
+      "powerTier": 3,
+      "reason": "Kendali fenomena cahaya/gelap secara serbaguna tetapi terbatas; bukan manipulasi keberadaan atau Authority."
+    }
+  ],
+  "catalogAdditions": [
+    {
+      "date": "2026-10-09",
+      "definitionId": "royal-authority",
+      "scope": "Append one user-rated Royal King command power; all prior ratings and rating-policy version remain unchanged. This does not add the power to unrelated selection pools."
+    },
+    {
+      "date": "2026-10-09",
+      "catalogVersion": "universal-power/0.2.0",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "count": 30,
+      "definitionIds": [
+        "sacred-sense",
+        "blessed-water",
+        "comforting-prayer",
+        "sacred-binding",
+        "holy-constructs",
+        "bad-luck",
+        "itch-curse",
+        "hiccup-hex",
+        "stench-curse",
+        "fear-glare",
+        "curse-transfer",
+        "causality-curse",
+        "fate-blight",
+        "death-hex",
+        "eternal-damnation",
+        "demon-scent",
+        "imp-light",
+        "sin-taste",
+        "hell-voice",
+        "demon-skin",
+        "infernal-body",
+        "demonic-regeneration",
+        "shadow-army",
+        "demonic-domination",
+        "soul-contract",
+        "infernal-reality",
+        "sin-authority",
+        "abyss-genesis",
+        "absolute-protection",
+        "rebirth-grace"
+      ],
+      "policy": "Compatible thirty-definition append; all previous 243 ratings/policy unchanged. Shared Flight is already rated; no duplicate rating."
+    },
+    {
+      "date": "2026-10-10",
+      "catalogVersion": "assassin/0.2.0",
+      "definitionFile": "content/assassin-events-design.json",
+      "count": 3,
+      "definitionIds": [
+        "assassin-kage-bunshin",
+        "assassin-death-mark",
+        "assassin-presence-concealment"
+      ],
+      "policy": "Append three authored Assassin powers Tier3/4 under the accepted reward brief; previous ratings and rating-policy version unchanged. No unrelated acquisition-wheel membership added."
+    },
+    {
+      "version": "primordial/0.1.0",
+      "definitionFile": "content/primordial-events-design.json",
+      "count": 3
+    },
+    {
+      "version": "video2-race-imports/0.2.0",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "count": 9,
+      "authority": "User Slime acceptance, explicit Ultraman4 and delegated cosmic recipe curation."
+    },
+    {
+      "version": "video2-race-imports/0.3.0",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "count": 12,
+      "authority": "User armor-class2/3/4 and Lantern3/4; roster/individual Lantern tiers authored under delegation. Legacy ratings unchanged."
+    },
+    {
+      "version": "main-power-wheel/1.0.0",
+      "definitionFile": "content/main-power-wheel-design.json",
+      "count": 2,
+      "definitionIds": [
+        "water-breathing",
+        "time-stop"
+      ],
+      "policy": "Compatible append; all300 earlier ratings and rating-policy version unchanged."
+    },
+    {
+      "version": "element-wheel/0.2.0",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "count": 1,
+      "definitionIds": [
+        "darkness-manipulation"
+      ],
+      "policy": "Compatible append; all302 earlier ratings unchanged. Seven additional Element choices reuse existing exact definitions/tier metadata."
+    }
+  ]
+}

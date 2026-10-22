@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "roda-kekacauan-gladiator/0.1",
+  "version": "gladiator/0.1.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "gladiator",
+  "eventProfileId": "gladiator-exclusive-weapon",
+  "status": "Core one-weapon replacement/lock and +2 mastery approved; eight-item roster authored editable, body/role fit, weapon limits and runtime helper pending.",
+  "authority": {
+    "confirmed": [
+      "Gladiator spins one Gladiator-related weapon and later skips the normal main Weapon acquisition spin.",
+      "User clarifies all previously owned weapons are ditched; the character may own only the selected Gladiator weapon and cannot gain additional weapons.",
+      "User changes the Gladiator Weapon Mastery bonus from +1 to +2.",
+      "Existing equal-default rule applies to the Gladiator weapon wheel."
+    ],
+    "clarification": "Latest direct answer discards previous weapons and replaces the original +1 with +2. No inventory-retention interpretation remains active.",
+    "authoredChoices": "Eight arena-themed game choices are editable curation, not a claim of exhaustive historical gladiator equipment. No category/count/type/success spin."
+  },
+  "weaponWheel": {
+    "id": "gladiator-weapon",
+    "label": "Weapon Gladiator",
+    "outcomeCount": 8,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "gladiator-gladius",
+        "label": "Gladius",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-gladius"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Gladius",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-gladius"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-sica",
+        "label": "Sica",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-sica"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Sica",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-sica"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-pugio",
+        "label": "Pugio",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-pugio"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Pugio",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-pugio"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-trishula",
+        "label": "Trisula",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "elf-events-design.json",
+          "definitionId": "trishula"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Trisula",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "trishula"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-arena-spear",
+        "label": "Tombak Arena",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-arena-spear"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Tombak Arena",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-arena-spear"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-arena-net",
+        "label": "Jaring Arena",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-arena-net"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Jaring Arena",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-arena-net"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-scutum",
+        "label": "Scutum (Perisai)",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-scutum"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Scutum (Perisai)",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-scutum"
+          }
+        ]
+      },
+      {
+        "id": "gladiator-rudis",
+        "label": "Rudis (Pedang Kayu)",
+        "baseWeight": 1,
+        "probability": 0.125,
+        "weaponDefinitionRef": {
+          "definitionFile": "gladiator-events-design.json",
+          "definitionId": "gladiator-rudis"
+        },
+        "resultContext": {
+          "facts": [
+            "Weapon Gladiator: Rudis (Pedang Kayu)",
+            "Weapon sebelumnya dibuang",
+            "Weapon Mastery +2",
+            "Tidak bisa mendapat weapon tambahan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": [
+          {
+            "type": "grant-weapon",
+            "scope": "one selected instance",
+            "definitionId": "gladiator-rudis"
+          }
+        ]
+      }
+    ],
+    "containsNone": false
+  },
+  "weapons": [
+    {
+      "id": "gladiator-gladius",
+      "label": "Gladius",
+      "kind": "short sword",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-sica",
+      "label": "Sica",
+      "kind": "curved blade",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-pugio",
+      "label": "Pugio",
+      "kind": "dagger",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-arena-spear",
+      "label": "Tombak Arena",
+      "kind": "spear",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-arena-net",
+      "label": "Jaring Arena",
+      "kind": "net",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-scutum",
+      "label": "Scutum (Perisai)",
+      "kind": "shield",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    },
+    {
+      "id": "gladiator-rudis",
+      "label": "Rudis (Pedang Kayu)",
+      "kind": "wooden sword",
+      "masteryRank": null,
+      "enchantable": null,
+      "enchantmentStatus": "Compatibility/slots require configured intrinsic weapon profile; no guaranteed enchant.",
+      "grantStatus": "Authored editable Gladiator wheel choice; one active owned instance."
+    }
+  ],
+  "sharedWeaponReferences": [
+    {
+      "definitionFile": "elf-events-design.json",
+      "definitionId": "trishula",
+      "scope": "Definition only; fresh Gladiator-owned source instance, no Atlantean race/Strength grant/event."
+    }
+  ],
+  "weaponMasteryModifier": {
+    "id": "gladiator-weapon-mastery",
+    "operation": "add-rank-steps",
+    "amount": 2,
+    "scope": "source-granted-weapon-instance-only",
+    "sourceProfileId": "gladiator-exclusive-weapon",
+    "targetSelector": "Exact weaponInstanceId created by the one Gladiator weapon spin, not all definitions or discarded weapons.",
+    "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+    "formula": "effectiveWeaponRankIndex = immutableRolledWeaponRankIndex + sum(distinct matching active modifiers)",
+    "sourceKey": "runId/sourceArchetypeInvocationId/sourceGladiatorSpinId/targetWeaponInstanceId/modifierId",
+    "enchantment": "At final bonus phase, effective Weapon Mastery after this scoped bonus qualifies at Master=5 or above only with active enchantable weapon/unused compatible slot. Deduplicate slot activation; existing acquisition lock still applies.",
+    "cap": "Configured ordered mastery scale; +2 is two rank steps, not a main-stat bonus or automatic Master.",
+    "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+  },
+  "weaponAcquisitionPolicy": {
+    "id": "gladiator-exclusive-weapon-lock",
+    "activation": "Atomic commit of actual Gladiator weapon result and replacement package",
+    "allowedWeaponInstanceId": "Exact selected grant instance",
+    "maximumActiveOwnedWeapons": 1,
+    "discardPreviousWeapons": true,
+    "discardStatus": "discarded-by-gladiator",
+    "skipMainWeaponAcquisition": true,
+    "blockAdditionalWeapons": true,
+    "blockedSources": [
+      "normal main Weapon acquisition",
+      "queued extra Weapon acquisitions from earlier Race events",
+      "Backstory, Apex, Title and all other later weapon grants",
+      "weapon granted as a side effect of another event or enchantment"
+    ],
+    "allowedOperations": [
+      "normal mastery for the selected active weapon",
+      "source-scoped +2 mastery projection",
+      "compatible enchantment or upgrade of that same weapon"
+    ],
+    "blockedAcquisitionHandling": "Skip a weapon-only acquisition spin before sampling, record skipped-by-gladiator with its source/continuation. Reject additional weapon creation in mixed-effect events but retain other explicitly declared effects. No replacement draw, conversion to power/stats or compensation.",
+    "discardHistory": "Keep previous grant/result/mastery/enchant provenance in immutable journals and inactive inventory records; remove these weapons and their instance-bound effects from active loadout/final image. Do not erase independent Race stats, powers, armor or companions.",
+    "replay": "No previous weapon is revived/regranted by replay; no second Gladiator grant. Lock persists through all later stages."
+  },
+  "contracts": {
+    "order": "Actual Gladiator result/reaction -> one equal gladiator-weapon spin -> atomically ditch previous weapons, grant selected one, register +2 modifier and activate exclusive lock -> actual child reaction -> Backstory.",
+    "probability": "Eight authored equal outcomes at 1/8, no None, extra weapon quantity or success wheel; freeze actual eligible pool/weights before sampling.",
+    "grant": "Exactly one new weapon instance. Reusing a canonical definition imports no original source event. No bundled second weapon, inherent power, stat bonus, extra weapon acquisition or body/Size grant.",
+    "discard": "All earlier active owned weapons are ditched at the committed selected weapon result, even when obtained by Race events. Retain their historical records only; weapon-instance-bound modifiers/enchantments become inactive. Unrelated earlier Race rewards remain.",
+    "laterWeaponStage": "Skip main Weapon acquisition and queued weapon acquisition tickets; journal their reasons without fake None/actual spins. Resolve the selected weapon normal mastery once, apply +2 after immutable raw base and the signed, unbounded score policy, resolve compatible effective-Master+ Enchant, then Power.",
+    "lock": "All later weapon grants are blocked at acquisition scheduling and central inventory creation. Mixed events can apply other explicit nonweapon effects; no guessed compensation. Replay restores lock and one active selected instance.",
+    "mastery": "Only the Gladiator-granted instance receives +2. No early mastery spin, guaranteed Master, extra shared Power Mastery draw or mastery effect on discarded items. Enchant modifies the same instance and grants no extra weapon.",
+    "ledger": "Freeze rule version, eligible pool/weights, selected definition, prior active inventory IDs, replacement recipe and continuation. Commit discard/new grant/modifier/lock atomically once with runId/sourceArchetypeInvocationId/sourceGladiatorSpinId/eventProfileId. Media retries/replay never repeat grant/discard/modifier/spin.",
+    "reaction": "Stack actual weapon, discarded inventory, +2 modifier and active restriction. Future raw mastery, Backstory and stat outcomes remain unknown; no caption-derived funny tag.",
+    "return": "Actual Gladiator and its selected weapon/reaction return to Backstory. At later Weapon stage resolve only that active weapon raw mastery/optional Resilient retry, then Power; bonus +2 and compatible Enchant defer to final bonus phase. Lock blocks every additional weapon grant throughout.",
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "gladiator-weapon",
+      "definitionFile": "gladiator-events-design.json",
+      "invocationCount": 1,
+      "stepId": "gladiator-weapon-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; event helper and central weapon acquisition guard not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "editable eight-item weapon roster and intrinsic capability/enchantment compatibility",
+    "Raw mastery0..9 mapping approved; final values signed and unbounded.",
+    "final Archetype body/role fit and boost band",
+    "runtime replacement transaction, all-source acquisition guard and persistence adapter"
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

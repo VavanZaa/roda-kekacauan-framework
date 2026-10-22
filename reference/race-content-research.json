@@ -1,0 +1,2665 @@
+{
+  "schemaVersion": "roda-kekacauan-content-research/0.1",
+  "researchedOn": "2026-10-07",
+  "scope": "Race, Gnome tinkering, Elf subtype, mythical-beast, anime protagonist, and legendary-warrior references; Shrek identity for the Orc role branch; sourced ordinary Size anchors and NASA celestial dimensions",
+  "authority": "Sources support reference identities and cultural context. Proposed event trees, gameplay categories, odds, stats, rarity, and crossovers are game design decisions.",
+  "audienceFamiliarity": "Known-word choices are editorial judgments, not measured Indonesian audience popularity.",
+  "sources": [
+    {
+      "id": "barong",
+      "title": "Tari Barong dan Kris",
+      "publisher": "Indonesia Travel",
+      "url": "https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/bali/the-barong-and-the-kris-dance-the-eternal-battle-between-good-and-evil",
+      "supports": "Barong has several regional animal/figure forms, including Ket, Macan, Celeng, Naga, and Landung.",
+      "access": "full page"
+    },
+    {
+      "id": "garuda",
+      "title": "Krishna on Garuda",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/37609",
+      "supports": "Garuda appears in Central Javanese art as a part-human, part-bird figure associated with Vishnu/Krishna.",
+      "access": "full search passage"
+    },
+    {
+      "id": "naga",
+      "title": "Visiting Pura Besakih",
+      "publisher": "Indonesia Travel",
+      "url": "https://www.indonesia.travel/au/en/travel-ideas/pilgrimage/pura-besakih",
+      "supports": "Basuki is a naga figure in Balinese Hindu reference traditions.",
+      "access": "full search passage"
+    },
+    {
+      "id": "naga-lineages",
+      "title": "Dramatari Aruna Capa",
+      "publisher": "Institut Seni Indonesia Yogyakarta repository",
+      "url": "https://digilib.isi.ac.id/6558/",
+      "supports": "The performance abstract names Anantaboga, Basuki, and Taksaka among its naga figures.",
+      "access": "repository abstract"
+    },
+    {
+      "id": "lembuswana",
+      "title": "Drama Indonesia di Kalimantan Timur 2007",
+      "publisher": "Kementerian Pendidikan dan Kebudayaan repository",
+      "url": "https://repositori.kemendikdasmen.go.id/7903/1/Drama%20Indonesia%20di%20Kalimantan%20Timur%202007.pdf",
+      "supports": "Lembuswana is a composite creature in the Putri Karang Melenu tradition, associated with Kutai.",
+      "access": "indexed passage; full PDF fetch timed out"
+    },
+    {
+      "id": "myth-eastern",
+      "title": "Spirited Creatures",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2017/spirited-creatures",
+      "supports": "Dragon and phoenix imagery appears among the exhibition's mythical animals.",
+      "access": "full page"
+    },
+    {
+      "id": "myth-western",
+      "title": "A Magical Menagerie",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/zh/exhibitions/a-magical-menagerie",
+      "supports": "The exhibition names dragons, griffins, and unicorns.",
+      "access": "full search passage"
+    },
+    {
+      "id": "pegasus-chimera",
+      "title": "The Chimaera of Arezzo",
+      "publisher": "Getty",
+      "url": "https://www.getty.edu/art/exhibitions/chimaera/english.html",
+      "supports": "Chimaera combines lion, goat, and serpent features; Pegasus is Bellerophon's winged mount.",
+      "access": "full page"
+    },
+    {
+      "id": "hydra-cerberus",
+      "title": "A Hunt for Herakles",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/ru/-/media/files/learn/for-educators/publications-for-educators/greek.pdf",
+      "supports": "The educational guide identifies Hydra and Cerberus among Herakles' labors.",
+      "access": "indexed passage"
+    },
+    {
+      "id": "wayang",
+      "title": "Wayang Kulit",
+      "publisher": "Indonesia Travel",
+      "url": "https://www.indonesia.travel/id/id/travel-ideas/culture/wayang-kulit",
+      "supports": "Arjuna and Hanoman are among the wayang figures described.",
+      "access": "full search passage"
+    },
+    {
+      "id": "wayang-roster",
+      "title": "Katalog Naskah Kuno di Jawa Timur",
+      "publisher": "Kementerian Pendidikan dan Kebudayaan repository",
+      "url": "https://repositori.kemendikdasmen.go.id/17718/1/katalog%20naskah%20kuno.pdf",
+      "supports": "The catalog records Bima, Arjuna, Gatotkaca, and Srikandi in its narrative references.",
+      "access": "indexed passage"
+    },
+    {
+      "id": "gatotkaca-lineage",
+      "title": "Analisis Struktur dan Nilai Budaya 1998",
+      "publisher": "Kementerian Pendidikan dan Kebudayaan repository",
+      "url": "https://repositori.kemendikdasmen.go.id/1409/1/Analisis%20Struktur%20%26%20Nilai%20Budaya%281998%29.pdf",
+      "supports": "A passage identifies Gatotkaca as the child of Bima and the raksasa Arimbi.",
+      "access": "indexed passage"
+    },
+    {
+      "id": "gajah-mada",
+      "title": "Situs Pendopo Agung",
+      "publisher": "Balai Pelestarian Kebudayaan Wilayah XI",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpkw11/situs-pendopo-agung/",
+      "supports": "The heritage site has a relief of Gajah Mada taking the Palapa oath; this is a historical-figure reference.",
+      "access": "indexed full passage; direct fetch unavailable"
+    },
+    {
+      "id": "si-pitung",
+      "title": "Si Pitung The Story of Pitung",
+      "publisher": "Perpustakaan Jakarta",
+      "url": "https://perpustakaan.jakarta.go.id/book/detail?cn=INLIS000000000000985",
+      "supports": "The public library catalogs the Si Pitung story; this supports selecting a folk-hero reference, not specific powers.",
+      "access": "catalog entry"
+    },
+    {
+      "id": "si-pahit-lidah",
+      "title": "Mengenal Legenda Si Pahit Lidah",
+      "publisher": "Balai Pelestarian Kebudayaan Wilayah V",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpkw5/mengenal-legenda-si-pahit-lidah/",
+      "supports": "The article describes versions of Serunting Sakti's Si Pahit Lidah legend and its curse narrative.",
+      "access": "indexed full passage; direct fetch unavailable"
+    },
+    {
+      "id": "saiyan",
+      "title": "Monthly Dragon Ball Report 4",
+      "publisher": "Dragon Ball Official Site",
+      "url": "https://en.dragon-ball-official.com/news/01_2455.html",
+      "supports": "Goku is identified as a Saiyan, an alien race.",
+      "access": "full page"
+    },
+    {
+      "id": "slime",
+      "title": "Rimuru Tempest",
+      "publisher": "TenSura official portal",
+      "url": "https://www.ten-sura.com/character/rimuru",
+      "supports": "Rimuru was reincarnated as a slime.",
+      "access": "full page"
+    },
+    {
+      "id": "half-ghoul",
+      "title": "Tokyo Ghoul",
+      "publisher": "VIZ",
+      "url": "https://www.viz.com/tokyo-ghoul",
+      "supports": "Kaneki becomes a half-human, half-Ghoul hybrid.",
+      "access": "full page"
+    },
+    {
+      "id": "half-demon",
+      "title": "Inuyasha",
+      "publisher": "VIZ",
+      "url": "https://www.viz.com/inuyasha",
+      "supports": "Inuyasha is described as a dog-eared half demon.",
+      "access": "full page"
+    },
+    {
+      "id": "shinigami",
+      "title": "Bleach",
+      "publisher": "VIZ",
+      "url": "https://www.viz.com/bleach",
+      "supports": "Ichigo gains Soul Reaper powers; the reference supports a spiritual role/ability, not a claim of a separate biological species.",
+      "access": "full page"
+    },
+    {
+      "id": "naruto",
+      "title": "Naruto",
+      "publisher": "VIZ",
+      "url": "https://www.viz.com/naruto",
+      "supports": "Naruto is described as a shinobi; use this as a hero/training path.",
+      "access": "full page"
+    },
+    {
+      "id": "luffy",
+      "title": "One Piece",
+      "publisher": "VIZ",
+      "url": "https://www.viz.com/one-piece",
+      "supports": "Luffy is a pirate protagonist with rubber-like powers and a swimming limitation; use this as a hero/power path.",
+      "access": "full page"
+    },
+    {
+      "id": "jedi",
+      "title": "Jedi Order",
+      "publisher": "Star Wars Databank",
+      "url": "https://www.starwars.com/databank/jedi-order/",
+      "supports": "Jedi are an order connected by their ability to use the Force.",
+      "access": "full search passage"
+    },
+    {
+      "id": "superhero-tech",
+      "title": "Iron Man in Comics",
+      "publisher": "Marvel",
+      "url": "https://www.marvel.com/characters/iron-man-tony-stark/in-comics",
+      "supports": "Tony Stark's Iron Man identity centers on powered armor; the selected version is the comics profile.",
+      "access": "full search passage"
+    },
+    {
+      "id": "power-ranger",
+      "title": "Power Rangers franchise description",
+      "publisher": "Hasbro",
+      "url": "https://corp.hasbro.com/news-releases/news-release-details/hasbro-named-global-master-toy-licensee-sabans-power-rangers",
+      "supports": "The franchise description includes ordinary teens transforming into superheroes; no claim that all Rangers share one species.",
+      "access": "full page"
+    },
+    {
+      "id": "ranger-dino",
+      "title": "Power Rangers Dino Fury",
+      "publisher": "Hasbro",
+      "url": "https://newsroom.hasbro.com/news-releases/news-release-details/power-rangers-dino-fury-premieres-feb-20th-nickelodeon",
+      "supports": "The official announcement names the Dino Fury Morpher and dinosaur theme.",
+      "access": "full search passage"
+    },
+    {
+      "id": "rider-kabuto",
+      "title": "Rider Belt",
+      "publisher": "Toei Kamen Rider encyclopedia",
+      "url": "https://www.kamen-rider-official.com/zukan/items/1671",
+      "supports": "Kabuto/Gatack transformations use the Rider Belt and Zecters.",
+      "access": "full search passage"
+    },
+    {
+      "id": "rider-build",
+      "title": "Build Driver",
+      "publisher": "Toei Kamen Rider encyclopedia",
+      "url": "https://www.kamen-rider-official.com/zukan/items/1",
+      "supports": "Build's transformation uses the Build Driver and two Fullbottles, with an eligibility condition.",
+      "access": "full search passage"
+    },
+    {
+      "id": "elf-dnd-lineages",
+      "title": "Elf Species Details",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/1751437-elf",
+      "supports": "High Elf, Drow (Dark Elf reference), and Wood Elf; Forest Elf is a Wood Elf name. Drow usually relate to the Underdark. Sun/Moon labels can fall under High Elf, so they are not separate starter slots.",
+      "access": "official species text"
+    },
+    {
+      "id": "elf-dnd-multiverse",
+      "title": "Character Species for Dungeons & Dragons",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species",
+      "supports": "The official directory lists Sea Elf, Eladrin as elves of the Feywild, and Shadar-kai as elven kin transformed by the Shadowfell. Fey Elf and Shadow Elf are this project’s proposed display aliases. Trait rules from the source are not imported.",
+      "access": "official directory descriptions; linked full species rules redirect to marketplace"
+    },
+    {
+      "id": "elf-dnd-astral",
+      "title": "Sneak Peek: Play as the Immortal Astral Elf From Spelljammer: Adventures in Space!",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/posts/1291-sneak-peek-play-as-the-immortal-astral-elf-from",
+      "supports": "Astral Elf is an Elf option associated with the Astral Plane in Spelljammer. Source mechanics, immortality conditions, and outlook are not adopted as game traits.",
+      "access": "official editorial article"
+    },
+    {
+      "id": "elf-warcraft-blood",
+      "title": "Blood Elf",
+      "publisher": "Blizzard Entertainment / World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/game/races/blood-elf",
+      "supports": "Blood Elf or Sin’dorei from Quel’Thalas is an official Warcraft race reference, historically descended from that setting’s high elves. It is a separate thematic game option here; source powers and racial traits are not adopted.",
+      "access": "official race page search extract; direct page open returned an error"
+    },
+    {
+      "id": "gnome-dnd-lineage",
+      "title": "Gnome Species Details",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/1751438-gnome",
+      "supports": "Rock Gnome has a small clockwork-device tradition; Forest Gnome has an illusion theme. Supports the broad creative direction only, not the invented gadgets or their combat effects.",
+      "access": "official species text inspected in the preceding research turn"
+    },
+    {
+      "id": "gnome-warcraft-mechagon",
+      "title": "Preview: Mechagon Island Visitor’s Guide",
+      "publisher": "Blizzard Entertainment / World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/en-gb/news/23021204",
+      "supports": "Mechagon features mechanically augmented gnomes, workshops, and custom combat robots. Supports mechanical Gnome flavor; no individual gadget in the game pool is claimed as a canonical item.",
+      "access": "official publisher article inspected in the preceding research turn"
+    },
+    {
+      "id": "shrek-dreamworks-ogre",
+      "title": "Shrek Forever After — official synopsis",
+      "publisher": "DreamWorks Animation",
+      "url": "https://www.dreamworks.com/movies/shrek-forever-after",
+      "supports": "Shrek is identified as an ogre. This does not establish the authored Shrek Power, funny weapons, or numeric game bonuses.",
+      "access": "official indexed synopsis",
+      "additionalPrimarySource": "https://www.universalpicturesathome.com/movies/shrek"
+    },
+    {
+      "id": "size-human-dnd-2014",
+      "title": "Human size — Basic Rules 2014",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/sources/dnd/basic-rules-2014/races",
+      "supports": "Approximate Human height range around five to above six feet; the game center is derived, not a published mean.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-elf-dnd-2014",
+      "title": "Elf size — Basic Rules 2014",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/3-elf",
+      "supports": "Elf height spans below five to above six feet; a nominal range-center is an authored estimate.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-dwarf-dnd-2014",
+      "title": "Dwarf size — Basic Rules 2014",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/13-dwarf",
+      "supports": "Dwarf height range is four to five feet; its midpoint is a derived game reference.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-gnome-dnd-2014",
+      "title": "Gnome size — Basic Rules 2014",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/18-gnome",
+      "supports": "Gnome lore describes a mean just above three feet and a three-to-four-foot range.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-goblin-pathfinder",
+      "title": "Goblin physical description — Player Core",
+      "publisher": "Paizo / Archives of Nethys rules reproduction",
+      "url": "https://2e.aonprd.com/Ancestries.aspx?ID=62",
+      "supports": "The selected Pathfinder Goblin reference gives a three-foot average height.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-orc-dnd-2024",
+      "title": "Orc size — Player Handbook 2024",
+      "publisher": "Wizards of the Coast / D&D Beyond",
+      "url": "https://www.dndbeyond.com/species/1751442-orc",
+      "supports": "Orc height is described as approximately six to seven feet; a midpoint is derived for the game.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-troll-srd35",
+      "title": "Troll description — D&D 3.5 SRD",
+      "publisher": "Wizards of the Coast SRD text reproduced by d20srd.org",
+      "url": "https://www.d20srd.org/srd/monsters/troll.htm",
+      "supports": "This specific reference describes a typical adult Troll at nine feet tall.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-earth-nasa",
+      "title": "Facts About Earth",
+      "publisher": "NASA",
+      "url": "https://science.nasa.gov/earth/facts/",
+      "supports": "Earth equatorial diameter is 12,756 kilometers; this is the selected Planet Size reference.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "size-sun-nasa",
+      "title": "Sun Facts",
+      "publisher": "NASA",
+      "url": "https://science.nasa.gov/sun/facts/",
+      "supports": "Solar diameter is approximately 1.4 million kilometers; this is the selected Sun Size reference.",
+      "access": "relevant full-page source passage read",
+      "gameBoundary": "Source supports dimension/reference identity only; wheel parameters, stat effects, events, and fictional cosmic powers are game design."
+    },
+    {
+      "id": "siluman-harimau-inyiak",
+      "title": "Dialog Kemerdekaan Konservasi Harimau Melalui Pendekatan Budaya dan Spiritualitas",
+      "publisher": "PPI Universitas Nasional",
+      "url": "https://ppi.unas.ac.id/dialog-kemerdekaan-konservasi-harimau-melalui-pendekatan-budaya-dan-spiritualitas-di-uin-imam-bonjol/",
+      "supports": "Special local respect/ethics toward harimau called inyiak in Minangkabau; no universal national supernatural classification.",
+      "access": "full page",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-werewolf",
+      "title": "Werewolf",
+      "publisher": "University of New Mexico Libraries",
+      "url": "https://ehillerman.unm.edu/3076",
+      "supports": "Werewolf refers generally to a person who changes into a wolf; imported reference only. No copied skinwalker or specific moon-trigger rules.",
+      "access": "full page",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-babi-ngepet",
+      "title": "Asal usul Teror Babi Ngepet Kisah Mistis yang Sering Dikaitkan Pesugihan",
+      "publisher": "Liputan6",
+      "url": "https://www.liputan6.com/regional/read/6036110/asal-usul-teror-babi-ngepet-kisah-mistis-yang-sering-dikaitkan-pesugihan",
+      "supports": "Popular Indonesian/Javanese Babi Ngepet myth associated with pesugihan and pig transformation. No claim about a single factual origin or real-world efficacy.",
+      "access": "full page",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-ayam-cemani",
+      "title": "Pemkot Kediri Bagikan Hasil Bumi Selesai Upacara Manusuk Sima",
+      "publisher": "Pemerintah Kota Kediri",
+      "url": "https://www.kedirikota.go.id/p/dalamberita/9955/pemkot-kediri-bagikan-hasil-bumi-selesai-upacara-manusuk-sima-peringati-hari-jadi-ke-1142",
+      "supports": "Cemani/black chicken appears in reported Manusuk Sima ritual. Does not establish chickens as traditional Siluman or guarantee supernatural powers.",
+      "access": "full page",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-ular-badan-bahasa",
+      "title": "Siluman Ular",
+      "publisher": "Badan Pengembangan dan Pembinaan Bahasa",
+      "url": "https://badanbahasa.kemendikdasmen.go.id/resource/doc/files/SMP-Siluman_Ular.pdf",
+      "supports": "Published Indonesian folktale titled Siluman Ular; snake-spirit narrative motif only, not a power bundle.",
+      "access": "PDF title and front matter",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-buaya-putih",
+      "title": "Kisah Anak Seberang Sungai",
+      "publisher": "Badan Pengembangan dan Pembinaan Bahasa",
+      "url": "https://repositori.kemendikdasmen.go.id/7308/1/Kisah%20Anak%20Seberang%20Sungai.pdf",
+      "supports": "Embedded Aji Saka folktale includes Dewata Cengkar transforming into Buaya Putih and describes Siluman Buaya Putih; PDF pages 22-23. No automatic giant/hero routing.",
+      "access": "PDF matched passage, pages 22-23",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-kera-putih",
+      "title": "Tari Kecak yang Dramatis Adegan dari Epik Ramayana",
+      "publisher": "Indonesia Travel",
+      "url": "https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/bali/ubud---kecak-dance",
+      "supports": "Hanoman described as a white monkey in Ramayana performance context. Kera-inspired Siluman is an authored adaptation, not the Hanoman hero identity.",
+      "access": "full search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-kerbau-bule",
+      "title": "Ribuan Warga Saksikan Kirab Pusaka Malam Satu Suro di Surakarta",
+      "publisher": "Diskominfo SP Kota Surakarta",
+      "url": "https://diskominfosp.surakarta.go.id/detail-berita/ribuan-warga-saksikan-kirab-pusaka-malam-satu-suro-di-surakarta-7537",
+      "supports": "Ceremonial respect for albino buffalo Kyai Slamet in Kirab Pusaka. Does not classify a real ceremonial animal as Siluman.",
+      "access": "full search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-kitsune",
+      "title": "Pokemon Spiele und ihre Verbindung zur japanischen Folklore",
+      "publisher": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/de/gaming-in-japan/pokemon-und-japanische-mythen/",
+      "supports": "Kitsune is a Japanese fox-spirit folklore motif. Tail count, fox fire, Inari relation, and franchise powers are not automatically transferred.",
+      "access": "full page and search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "siluman-nekomata-bakeneko",
+      "title": "A Trail of Cats Journey Through Culture Folklore and Hidden Destinations",
+      "publisher": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/japan-magazine/a-trail-of-cats-journey-through-culture-folklore-and-hidden-dest/",
+      "supports": "Bakeneko and nekomata are Japanese supernatural-cat folktale figures. Imported context, no two-tail or power grant rule.",
+      "access": "full page and search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Cultural reference only; rarity, stats, powers, body forms, and wheel events are authored game rules."
+    },
+    {
+      "id": "lelembut-local-lexicon",
+      "title": "Leksikon Hantu dalam Bahasa Indonesia Kajian Linguistik Antropologis",
+      "publisher": "Chyndy Febrindasari, Jurnal Handayani UNIMED",
+      "url": "https://jurnal.unimed.ac.id/2012/index.php/handayani/article/download/10493/9488",
+      "supports": "Pages 3-4 enumerate local ghost lexemes including the twelve candidate names/variants. Supports names in folklore vocabulary, not universal species or combat traits.",
+      "access": "PDF pages 3-4 matched passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-local-popular",
+      "title": "10 Jenis Hantu Indonesia Paling Seram dan Terkenal",
+      "publisher": "Kompas",
+      "url": "https://buku.kompas.com/read/2595/10-jenis-hantu-indonesia-paling-seram-dan-terkenal",
+      "supports": "Popular depictions include Genderuwo, Wewe Gombel, Sundel Bolong, Suster Ngesot, Kuyang, and Leak. Regional traditions and versions differ.",
+      "access": "full page and matched passages",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-local-regional",
+      "title": "Parade Hantu Perempuan di Nusantara",
+      "publisher": "Tirto",
+      "url": "https://tirto.id/parade-hantu-perempuan-di-nusantara-ckcd",
+      "supports": "Discusses Palasik in Sumatera Barat and several related local/popular ghost representations; motif selection does not assert identical tradition or ancestry.",
+      "access": "full search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-banaspati",
+      "title": "Mitos Banaspati Sosok Bola Api yang Konon Bisa Mencelakai dan Melindungi",
+      "publisher": "Detik Jateng",
+      "url": "https://www.detik.com/jateng/budaya/d-8147949/mitos-banaspati-sosok-bola-api-yang-konon-bisa-mencelakai-dan-melindungi",
+      "supports": "Banaspati fire-apparition motif in stories; not an automatic Fire Manipulation grant or a Barong route.",
+      "access": "full search passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-undead-fantasy",
+      "title": "Creature Stat Blocks D&D Beyond Basic Rules",
+      "publisher": "Wizards of the Coast, D&D Beyond",
+      "url": "https://www.dndbeyond.com/sources/dnd/br-2024/creature-stat-blocks",
+      "supports": "Official fantasy catalog contains Skeleton, Vampire, Zombie, Mummy, Ghost, Ghoul, Wraith, and Lich. Names/themes only; no stats, spells, immunities, alignments, or equipment imported.",
+      "access": "full page and matched names",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-poltergeist",
+      "title": "Poltergeist English Meaning",
+      "publisher": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/poltergeist",
+      "supports": "Ghost/phenomenon motif involving unexplained sounds and moving objects; roster inclusion does not grant telekinesis.",
+      "access": "indexed dictionary passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-banshee",
+      "title": "Banshee Definition",
+      "publisher": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/banshee",
+      "supports": "Female spirit and wailing/death-omen motif in traditional Irish stories; no instant death or attack power copied.",
+      "access": "full indexed definition",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-dullahan",
+      "title": "Halloween in Old Ireland",
+      "publisher": "Dublin Castle",
+      "url": "https://dublincastle.ie/halloween-in-old-ireland/",
+      "supports": "Dullahan as headless horseman in Irish folklore; no mount/whip, automatic kill, or Fairy race event granted.",
+      "access": "full page and matched passage",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "lelembut-jiangshi",
+      "title": "Jiangshi",
+      "publisher": "Wikipedia, sources cited on page",
+      "url": "https://en.wikipedia.org/wiki/Jiangshi",
+      "supports": "Chinese reanimated/hopping-corpse folklore and cinema motif. Vampir China is an explanatory popular label; blood-drinking, life-energy power, clothing, and weaknesses remain ungranted.",
+      "access": "full page and matched introduction",
+      "researchedOn": "2026-10-07",
+      "claimBoundary": "Reference vocabulary and motifs only; no gameplay rarity, mechanics, powers, stats, or shared supernatural taxonomy inferred."
+    },
+    {
+      "id": "myth-local-sembrani",
+      "title": "Kuda Sembrani",
+      "publisher": "KBBI VI Daring, Badan Pengembangan dan Pembinaan Bahasa",
+      "url": "https://kbbi.kemendikdasmen.go.id/entri/kuda%20sembrani",
+      "supports": "The dictionary entry defines Kuda Sembrani as a winged horse capable of flight. This supports the reference identity, not a granted gameplay power.",
+      "access": "Indexed entry text; live page redirects to limited mode",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-sembrani-jogja",
+      "title": "Tapak Jaran Sembrani",
+      "publisher": "Dinas Pariwisata Daerah Istimewa Yogyakarta",
+      "url": "https://visitingjogja.jogjaprov.go.id/39921/tapak-jaran-sembrani/",
+      "supports": "Local story about Kuda Sembrani and a hoofprint site around Kampung Pitu/Tlogo Guyangan. Supports Indonesian story context, not an exclusive worldwide origin or a numeric size.",
+      "access": "full page",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-warak",
+      "title": "Warak Quiz, Adopsi Mainan Khas Semarang",
+      "publisher": "Balai Besar POM di Semarang",
+      "url": "https://semarang.pom.go.id/berita/warak-quiz-adopsi-mainan-khas-semarang",
+      "supports": "Warak Ngendog is described as a Semarang composite mythological/cultural figure and icon; its visual references express cultural mixture.",
+      "access": "Indexed article text; live open/fetch unavailable during this research",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-makara",
+      "title": "Temuan Makara Hiasan Pintu Masuk Candi",
+      "publisher": "Balai Konservasi Borobudur",
+      "url": "https://kebudayaan.kemdikbud.go.id/bkborobudur/makara-sebagai-hiasan-di-pintu-masuk-candi/",
+      "supports": "Makara is a composite aquatic creature in Indian mythology represented in Indonesian temple ornamentation, including elephant-like imagery. Supports local artistic adaptation, not an exclusively Indonesian origin or fixed powers.",
+      "access": "Indexed article text; live open/fetch unavailable during this research",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-kinnara",
+      "title": "Kinnara-Kinnari",
+      "publisher": "Museum Sonobudoyo Yogyakarta",
+      "url": "https://sonobudoyo.jogjaprov.go.id/id/tulisan/read/kinnara-kinnari",
+      "supports": "Human/bird figures in Hindu-Buddhist mythology and Indonesian temple reliefs; Kinnara and Kinnari are paired male/female figure references associated with music and Kalpataru. Supports visual/story identity, not automatic Heaven/Angel status, instrument weapon or stat grants.",
+      "access": "full page",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-singa-ambara",
+      "title": "Lambang Daerah Singa Ambara Raja",
+      "publisher": "Kecamatan Kubutambahan, Pemerintah Kabupaten Buleleng",
+      "url": "https://kubutambahan.bulelengkab.go.id/informasi/detail/artikel/lambang-daerah-singa-ambara-raja-76",
+      "supports": "Singa Ambara Raja is the winged-lion emblem of Singaraja/Buleleng. It is a regional symbolic/artistic reference; a playable Mythical Beast profile is an original game adaptation.",
+      "access": "full page",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-baru-klinting",
+      "title": "Labuh Ageng Rawapening",
+      "publisher": "Audiovisual BRIN",
+      "url": "https://penerbit.brin.go.id/audiovisual/brin/article/view/41",
+      "supports": "Naga Baru Klinting is a folk-story figure among communities around Ambarawa/Rawa Pening. Supports a named Naga story/legacy reference, not a separate obligatory species or copied hero identity.",
+      "access": "full page",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "myth-local-singa-barong-reog",
+      "title": "Ragam Topeng Jawa Timur",
+      "publisher": "Museum Kementerian Kebudayaan",
+      "url": "https://museum.kemenbud.go.id/kajian/detail/ragam%2Btopeng%2Bjawa%2Btimur_115",
+      "supports": "Reog Ponorogo includes Singa Barong, depicted as a tiger head/mask with peacock feathers. Supports this distinct performing-art reference, not a claim that it is the same tradition/species as Balinese Barong.",
+      "access": "full article fetched directly; relevant passage read",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-imp",
+      "title": "Imp",
+      "publisher": "D&D Beyond, Basic Rules 2014",
+      "url": "https://www.dndbeyond.com/monsters/16933-imp",
+      "supports": "A small fiend/devil with deception and stealth in this D&D version. Reference supports the small trickster motif, not game stats or automatic abilities.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-demon-devil",
+      "title": "Learn about the Blood War in Mordenkainen's Tome of Foes",
+      "publisher": "D&D Beyond",
+      "url": "https://www.dndbeyond.com/posts/148-learn-about-the-blood-war-in-mordenkainens-tome-of",
+      "supports": "This D&D version distinguishes chaotic demons and orderly devils. Supports distinct fantasy themes, not a universal religious taxonomy or fixed combat alignment.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-infernal-options",
+      "title": "The Infernal Options in D&D's Mordenkainen's Tome of Foes",
+      "publisher": "D&D Beyond",
+      "url": "https://www.dndbeyond.com/posts/180-the-infernal-options-in-d-ds-mordenkainens-tome-of",
+      "supports": "Discusses demon lords, archdevils, fiendish agreements, cambions and cult followers. Supports fantasy ruler and contract motifs, not an automatic army or subtype event.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-succubus",
+      "title": "Succubus",
+      "publisher": "D&D Beyond, Basic Rules 2014",
+      "url": "https://www.dndbeyond.com/monsters/17027-succubus",
+      "supports": "The cited version depicts a fiend with charm and altered appearance. Succubus/Incubus are grouped as one proposed game section; no imported charm mechanics, gender selector or sexual content is required.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-efreeti",
+      "title": "Efreeti",
+      "publisher": "D&D Beyond, Basic Rules 2014",
+      "url": "https://www.dndbeyond.com/monsters/16854-efreeti",
+      "supports": "A genie-tagged Elemental with fire-themed abilities in this D&D version. Ifrit/Jin Api is an authored fantasy adaptation; inclusion under Abyssal Axiom does not claim every jinn is a demon or dispatch Elemental race events.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-asura",
+      "title": "Asura",
+      "publisher": "Encyclopedia of Buddhism",
+      "url": "https://encyclopediaofbuddhism.org/wiki/Asura",
+      "supports": "Describes asuras as a class in Buddhist cosmology, often translated as demi-gods, with power, ambition and conflict motifs; includes an Indonesian Borobudur depiction. This supports a battle-oriented fantasy adaptation, not a universal claim that asuras are evil demons.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-fallen-angel",
+      "title": "Fallen angel",
+      "publisher": "Wikipedia, sourced overview",
+      "url": "https://en.wikipedia.org/wiki/Fallen_angel",
+      "supports": "The fallen-angel motif involves angels cast out or fallen from heavenly standing. A proposed game type, not a universal lineage requirement or automatic Heavenly Principle event.",
+      "access": "Relevant web article passages read; source material is evidence only",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "abyssal-seven-deadly-sins",
+      "title": "Catholic Encyclopedia: Sin — Capital sins",
+      "publisher": "New Advent / Catholic Encyclopedia",
+      "url": "https://www.newadvent.org/cathen/14004b.htm",
+      "supports": "Seven names: pride/vainglory, avarice/greed, gluttony, lust, sloth, envy and anger/wrath. Does not establish game powers or numerical bonuses.",
+      "access": "Relevant Capital sins section read with web tools; evidence only.",
+      "checkedOn": "2026-10-08"
+    },
+    {
+      "id": "legend-antareja",
+      "title": "Antareja",
+      "publisher": "UGM Wayang Kita",
+      "url": "https://wayangkita.sv.ugm.ac.id/antareja/",
+      "supports": "Antareja can enter the earth in this wayang reference.",
+      "access": "Official university profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-anoman-flight",
+      "title": "Anoman",
+      "publisher": "UGM Wayang Kita",
+      "url": "https://wayangkita.sv.ugm.ac.id/anoman/",
+      "supports": "The retelling describes Anoman flying over the sea.",
+      "access": "Official university retelling read; use only the specific motif, not the modern comic embellishments.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-arjuna-weapons",
+      "title": "Raden Arjuna",
+      "publisher": "UGM Wayang Kita",
+      "url": "https://wayangkita.sv.ugm.ac.id/raden-arjuna/",
+      "supports": "Arjuna weapon list includes Panah Pasopati; bow/arrow-set handling is proposed game design.",
+      "access": "Official university profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-werkudara",
+      "title": "Werkudara",
+      "publisher": "UGM Wayang Kita",
+      "url": "https://wayangkita.sv.ugm.ac.id/werkudara/",
+      "supports": "Bimasena/Werkudara identity and listed weapons.",
+      "access": "Official university profile read; no source numeric stats imported.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-wayang-roster-ugm",
+      "title": "Wayang Golek Purwa",
+      "publisher": "UGM Wayang Kita",
+      "url": "https://wayangkita.sv.ugm.ac.id/wayang-golek-purwa/",
+      "supports": "Names of Arjuna, Bima, Gatotkaca, Srikandi and Antareja.",
+      "access": "Official indexed catalog passage inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-siliwangi-maung",
+      "title": "MUDIK 2 Tentang Nini Dasih",
+      "publisher": "BBPMP Jawa Tengah",
+      "url": "https://bbpmpjateng.kemendikdasmen.go.id/mudik-2-tentang-nini-dasih/",
+      "supports": "The retelling links Prabu Siliwangi to the human-tiger myth; a folklore variant, not historical supernatural fact.",
+      "access": "Full official article read after initial verification page.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-pahit-lidah-stone",
+      "title": "Legenda Putri Dayang Merindu",
+      "publisher": "Disparbud Ogan Komering Ulu",
+      "url": "https://disparbud.okukab.go.id/legenda-putri-dayang-merindu/",
+      "supports": "Stone transformation attributed to Si Pahit Lidah in a local legend.",
+      "access": "Official indexed excerpt inspected; direct page returned forbidden.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-luke",
+      "title": "Luke Skywalker",
+      "publisher": "Star Wars Databank",
+      "url": "https://www.starwars.com/databank/luke-skywalker",
+      "supports": "Luke as Jedi/Force user and lightsaber owner; selected game skills are adaptations.",
+      "access": "Official character profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-obiwan",
+      "title": "Obi-Wan Kenobi",
+      "publisher": "Star Wars Databank",
+      "url": "https://www.starwars.com/databank/obi-wan-kenobi",
+      "supports": "Obi-Wan Jedi Master and lightsaber references.",
+      "access": "Official character profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-mind-trick",
+      "title": "Jedi Mind Trick",
+      "publisher": "Star Wars Databank",
+      "url": "https://www.starwars.com/databank/jedi-mind-trick",
+      "supports": "Force suggestion affecting susceptible minds, including Obi-Wan example; not unlimited control.",
+      "access": "Full official ability page read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-superman",
+      "title": "Superman",
+      "publisher": "DC",
+      "url": "https://www.dc.com/characters/superman",
+      "supports": "Official list includes flight and super strength; no whole list granted by selecting the reference.",
+      "access": "Full official character profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-batman",
+      "title": "Batman",
+      "publisher": "DC",
+      "url": "https://www.dc.com/characters/batman",
+      "supports": "Detective/tactician themes and Batarangs in utility belt.",
+      "access": "Full official character profile read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-spiderman",
+      "title": "Spider-Man Peter Parker in comics",
+      "publisher": "Marvel",
+      "url": "https://www.marvel.com/characters/spider-man-peter-parker/in-comics",
+      "supports": "Mechanical web-shooters and spider-sense reference in the comics profile.",
+      "access": "Official indexed excerpts inspected; direct page unavailable.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-ironman-repulsor",
+      "title": "Marvel Avengers Superior Seminar Iron Man",
+      "publisher": "Marvel",
+      "url": "https://www.marvel.com/watch/trailers-and-extras/marvel-s-avengers-superior-seminar-iron-man",
+      "supports": "Iron Man repulsor-beam motif.",
+      "access": "Official indexed excerpt inspected; game gauntlet/kit limits remain proposed.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-tommy-dagger",
+      "title": "Mighty Morphin Green Dragon Dagger",
+      "publisher": "Hasbro",
+      "url": "https://instructions.hasbro.com/en-us/instruction/power-rangers-lightning-collection-mighty-morphin-green-dragon-dagger-premium-collectible-with-lights-and-sounds",
+      "supports": "Tommy Oliver/Green Ranger Dragon Dagger association. Reference mentions Dragonzord, but a weapon proposal does not automatically grant a vehicle.",
+      "access": "Official product description read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-jason-sword",
+      "title": "Mighty Morphin Red Ranger Power Sword Jason MMPR",
+      "publisher": "Hasbro",
+      "url": "https://instructions.hasbro.com/en-us/instruction/power-rangers-lightning-collection-mighty-morphin-red-ranger-power-sword-premium-roleplay-cosplay-collectible-jason-mmpr",
+      "supports": "Jason/Red Ranger Power Sword association.",
+      "access": "Official product title/page read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-black-rx",
+      "title": "Kamen Rider BLACK RX",
+      "publisher": "Toei Kamen Rider encyclopedia",
+      "url": "https://www.kamen-rider-official.com/zukan/forms/937",
+      "supports": "BLACK RX and Revolcane reference; special attacks/forms are not all granted.",
+      "access": "Official indexed Japanese profile inspected and page opened.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-build-sento",
+      "title": "Sento Kiryu",
+      "publisher": "Toei Kamen Rider encyclopedia",
+      "url": "https://www.kamen-rider-official.com/zukan/characters/1",
+      "supports": "Sento scientist/intellect motif for the Build reference.",
+      "access": "Official indexed Japanese profile inspected and page opened.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-build-drill",
+      "title": "DX Drill Crusher",
+      "publisher": "Bandai",
+      "url": "https://toy.bandai.co.jp/ja/series/rider/item/01_10367/",
+      "supports": "Drill Crusher is used by Kamen Rider Build.",
+      "access": "Licensed manufacturer page opened and official indexed excerpt inspected; toy size/accessories do not become gameplay stats.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only; numerical upgrade values and balance budgets are authored proposals, not canon or user-confirmed mechanics."
+    },
+    {
+      "id": "legend-wayang-additional-names",
+      "title": "Wayang teaching material",
+      "publisher": "Universitas Negeri Yogyakarta",
+      "url": "https://eprints.uny.ac.id/46777/47/rpp%202%20wayang.pdf",
+      "supports": "Names Ramawijaya, Abimanyu and Semar in wayang teaching material. Game equipment and protection package are authored adaptations.",
+      "access": "Institutional indexed PDF passage inspected; no full-page visual inspection.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-karna-kunta",
+      "title": "Satria dari Pringgadani",
+      "publisher": "Badan Bahasa repository",
+      "url": "https://repositori.kemendikdasmen.go.id/3538/1/Satria%20dari%20pringgadani.pdf",
+      "supports": "Indexed narrative identifies Karna and his Kunta weapon. Weapon shape varies across retellings; catalog uses the neutral name Kunta.",
+      "access": "Official indexed narrative passage inspected; equipment mechanics are not inferred.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-baladewa-nanggala",
+      "title": "Album Wayang Kulit Banjar",
+      "publisher": "Ministry of Education and Culture repository",
+      "url": "https://repositori.kemendikdasmen.go.id/8166/1/ALBUM%20WAYANG%20KULIT%20BANJAR.pdf",
+      "supports": "Baladewa and the weapon Nanggala, in the documented Banjar wayang variant.",
+      "access": "Official indexed English passage inspected; direct PDF fetch failed.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-kresna-cakra",
+      "title": "Prabu Kresna",
+      "publisher": "Wayang Kita, Sekolah Vokasi UGM",
+      "url": "https://wayangkita.sv.ugm.ac.id/prabu-kresna/",
+      "supports": "Kresna reference identity and Cakra among his weapons. Catalog grants only Cakra and authored Intelligence bonus.",
+      "access": "Institutional page body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-antasena-water",
+      "title": "Raden Antasena",
+      "publisher": "Wayang Kita, Sekolah Vokasi UGM",
+      "url": "https://wayangkita.sv.ugm.ac.id/raden-antasena/",
+      "supports": "Indexed narrative associates Antasena with water and protective scaled skin; motivates a game Water Manipulation/Durability package.",
+      "access": "Institutional indexed narrative inspected. Current direct page contains name/images; it does not expose that narrative in the returned body.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-wisanggeni-fire",
+      "title": "Media Pusdiklat, edisi 3/2018",
+      "publisher": "BMKG",
+      "url": "https://content.bmkg.go.id/wp-content/uploads/MEDIA-PUSDIKLAT-EDISI-3-2018.pdf",
+      "supports": "Indexed discussion of Wisanggeni fire-birth motif; Fire Manipulation is an authored game adaptation.",
+      "access": "Institutional indexed PDF passage inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-aji-saka",
+      "title": "Makna Simbolik Legenda Aji Saka (2007)",
+      "publisher": "Badan Bahasa repository",
+      "url": "https://repositori.kemendikdasmen.go.id/2240/1/Makna%20Simbolik%20Legenda%20Aji%20Saka%20%282007%29.pdf",
+      "supports": "Aji Saka legend reference. Segel Aksara is original game content inspired by the familiar alphabet motif, not a source-attested canonical spell.",
+      "access": "Official indexed book record inspected; direct fetch exceeded size limit.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-jaka-tingkir",
+      "title": "Langen Carita Jaka Tingkir",
+      "publisher": "ISI Surakarta, Dr. Slamet",
+      "url": "https://repository.isi-ska.ac.id/id/eprint/3018/",
+      "supports": "Primary performance description places Jaka Tingkir with crocodiles and a crocodile troop. Catalog adapts this to bounded Kendali Buaya, with no granted army or count.",
+      "access": "Primary deposited performance description and abstract read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-ciung-wanara",
+      "title": "Comparative folklore research including Ciung Wanara",
+      "publisher": "Sirok Bastra, Badan Bahasa",
+      "url": "https://sirokbastra.kemendikdasmen.go.id/index.php/sirokbastra/article/view/189",
+      "supports": "Ciung Wanara as a regional folk-hero reference; no personal game stat values established.",
+      "access": "Official indexed research abstract inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-ken-arok-gandring",
+      "title": "Ken Arok literary entry",
+      "publisher": "Badan Bahasa, Dapobas",
+      "url": "https://dapobas.kemendikdasmen.go.id/home?id=1388&show=isidata",
+      "supports": "Literary treatment linking Ken Arok and the Gandring keris. Curse motifs do not automatically grant another game power or Weakness.",
+      "access": "Official indexed literary entry inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-raden-wijaya",
+      "title": "Raden Wijaya (2000)",
+      "publisher": "Ministry of Education and Culture repository",
+      "url": "https://repositori.kemendikdasmen.go.id/2039/1/Raden%20Wijaya%202000.pdf",
+      "supports": "Historical character reference; numeric strategy/combat bonuses are game adaptations.",
+      "access": "Official indexed book record inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-sultan-hasanuddin",
+      "title": "Sultan Hasanuddin",
+      "publisher": "Balai Bahasa Sulawesi Selatan",
+      "url": "https://balaibahasasulsel.kemendikdasmen.go.id/duta-bahasa/pindai-pandai-pin-pan/bahasa-makassar/sultan-hasanuddin/",
+      "supports": "Gowa historical hero and resistance/leadership context. No automatic followers or army awarded.",
+      "access": "Government biography body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-cut-nyak-dien",
+      "title": "Rekam Jejak Pahlawan Nasional Indonesia",
+      "publisher": "Dinas Perpustakaan dan Kearsipan Sleman",
+      "url": "https://perpusarsip.slemankab.go.id/rekam-jejak-pahlawan-nasional-indonesia",
+      "supports": "Cut Nyak Dien historical-hero reference. Numeric bonuses are game adaptations, not historical measurements.",
+      "access": "Government library indexed biographical passage inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-gundala",
+      "title": "Gundala / Sancaka",
+      "publisher": "Bumilangit",
+      "url": "https://www.bumilangit.com/id/characters/gundala",
+      "supports": "Sancaka comic identity and lightning-manipulation motif. Numeric Speed bonus is authored.",
+      "access": "Official character page body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-sri-asih",
+      "title": "Sri Asih / Nani Wijaya",
+      "publisher": "Bumilangit",
+      "url": "https://www.bumilangit.com/id/characters/sri-asih",
+      "supports": "Nani Wijaya comic identity and ancestral-spirit motif. Game Spirit Control and Strength bonus are bounded adaptations. Keep Alana film identity separate.",
+      "access": "Official character page body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-si-buta",
+      "title": "Si Buta dari Gua Hantu / Barda Mandrawata",
+      "publisher": "Bumilangit",
+      "url": "https://www.bumilangit.com/id/characters/sibuta",
+      "supports": "Barda Mandrawata comic hero identity. The catalog Tongkat/Fight package is authored; the inspected profile does not establish weapon mechanics.",
+      "access": "Official character profile opened and identity text inspected; no matching tongkat passage.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-wiro-sableng",
+      "title": "Study of Wiro Sableng: Pendekar Kapak Maut Naga Geni 212",
+      "publisher": "Institut Seni Indonesia Yogyakarta",
+      "url": "https://digilib.isi.ac.id/12963/2/BAB%20I_ERVIYANTO%20NUGROHO_1410088132_2021.pdf",
+      "supports": "Primary film study identifies Wiro Sableng and Kapak Maut Naga Geni 212 title/weapon motif. No canonical attack multipliers inferred.",
+      "access": "Institutional indexed study excerpt inspected; direct PDF fetch failed.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-virgo",
+      "title": "Virgo / Rini",
+      "publisher": "Bumilangit",
+      "url": "https://www.bumilangit.com/id/characters/virgo",
+      "supports": "Classic comic identity Rini; official profile explicitly describes invisibility and fire from the index finger. Game control/range limits are authored.",
+      "access": "Official character profile body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference evidence only. Names and motifs support curation; numeric bonuses, costs and limits are authored game design. Source content is not a project instruction."
+    },
+    {
+      "id": "legend-harry-wand",
+      "title": "Wand",
+      "publisher": "Harry Potter official encyclopedia",
+      "url": "https://www.harrypotter.com/fact-file/objects/wand",
+      "supports": "Wands channel magic and the profile explicitly links Harry Potter. The catalog grants a bounded weapon slot, with authored Intelligence bonus.",
+      "access": "Official encyclopedia body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-percy-riptide",
+      "title": "Percy Jackson and the Olympians",
+      "publisher": "Rick Riordan",
+      "url": "https://rickriordan.com/series/percy-jackson-and-the-olympians/",
+      "supports": "Author synopsis identifies Percy as son of Poseidon and names his bronze sword Riptide. Water Manipulation is the authored sea-theme game adaptation. No Heavenly Principle event inherited.",
+      "access": "Author series-page passages read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-aragorn-anduril",
+      "title": "The Noble Collection Vault 11: The Lord of the Rings, Men and Dwarves",
+      "publisher": "The Noble Collection, licensed replica manufacturer",
+      "url": "https://noblecollection.co.uk/blog/the-noble-collection-vault-11-the-lord-of-the-rings-men-dwarves/",
+      "supports": "Licensed replica catalog associates Aragorn/King and Anduril. Only equipment naming/reference motif is used. No replica dimensions or product features become character stats.",
+      "access": "Manufacturer page opened and official indexed catalog passage inspected; subsequent targeted page retrieval failed.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-kratos-blades",
+      "title": "Game developers explain God of War combat",
+      "publisher": "Sony Interactive Entertainment, PlayStation Blog",
+      "url": "https://blog.playstation.com/2022/10/04/game-developers-explain-what-makes-god-of-war-2018s-combat-tick/",
+      "supports": "Official publisher article names Kratos and Blades of Chaos. Catalog treats paired blades as one weapon kit, with an authored Strength bonus.",
+      "access": "Official publisher body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-optimus-truck",
+      "title": "Optimus Prime G1 Autobot",
+      "publisher": "Hasbro Transformers bios",
+      "url": "https://transformers-bios.hasbro.com/en-us/optimus-prime-g1-autobot",
+      "supports": "G1 Optimus Prime and Truck alt mode. Catalog grants truck-bound transformation only; listed Ion blaster and numeric source skills are not copied.",
+      "access": "Official character profile body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-ultraman-beam",
+      "title": "Ultraman",
+      "publisher": "Tsuburaya Productions",
+      "url": "https://tsuburaya-prod.com/heroes/ultraman",
+      "supports": "Original Ultraman/Hayata reference and Spacium Beam. Source body height is reference metadata, not a fixed Size result or Raksasa event.",
+      "access": "Official character profile body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-ultraman-beam-alias",
+      "title": "Ultraman Day collector pins",
+      "publisher": "Ultraman Connection",
+      "url": "https://www.ultramanconnection.com/news/ultraman-day-collector-pins/",
+      "supports": "Official franchise platform calls Spacium Beam also Specium ray; supports familiar display alias.",
+      "access": "Official indexed article passage inspected.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-aang-airbending",
+      "title": "Aang",
+      "publisher": "Nickelodeon",
+      "url": "https://www.nick.com/info-page/udnx2v/aang",
+      "supports": "Official profile lists airbending among Aang abilities. Catalog grants only canonical Wind Manipulation, displayed Airbending, plus authored Fight bonus.",
+      "access": "Official indexed character body inspected; direct reads timed out.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-ben-four-arms",
+      "title": "Ben 10: Power Trip",
+      "publisher": "Outright Games, licensed publisher",
+      "url": "https://outrightgames.com/game/ben-10-power-trip/",
+      "supports": "Official publisher text explicitly names Four Arms as a transformable alien. Current package uses Power Trip/reboot reference and one fixed Four Arms binding, not every Omnitrix form.",
+      "access": "Official game page body read, including transformation list.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-po-chi",
+      "title": "Kung Fu Panda franchise",
+      "publisher": "DreamWorks Animation",
+      "url": "https://www.dreamworks.com/kung-fu-panda",
+      "supports": "Po hero identity and chi theme. Chi Manipulation with explicit limits is an authored game adaptation; no full kung-fu arsenal or automatic spirit-realm travel.",
+      "access": "Official franchise body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-leonardo-katana",
+      "title": "Leonardo with Storage Shell",
+      "publisher": "Playmates Toys, licensed TMNT manufacturer",
+      "url": "https://playmatestoys.com/product/leonardo-w-storage-shell/",
+      "supports": "Classic animated Leonardo reference and two signature katanas. Catalog grants one paired weapon kit; no other toy accessories or toy-scale Size.",
+      "access": "Licensed manufacturer page body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-link-master-sword",
+      "title": "Master Sword trivia",
+      "publisher": "Nintendo",
+      "url": "https://play.nintendo.com/activities/skill-quizzes/master-sword-online-trivia-quiz/",
+      "supports": "Nintendo identifies Link using the Master Sword. Reference motif only; no automatic Triforce, Shield or mastery maximum.",
+      "access": "Official publisher text read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-dante-rebellion",
+      "title": "Devil May Cry 4 manual",
+      "publisher": "Capcom",
+      "url": "https://static.capcom.com/manuals/dmc4/DMC4_PS3_DMNL_EN.pdf",
+      "supports": "Primary game manual lists Rebellion under Dante weapons. Use main-series DMC4 reference, separate from the DmC reboot and animation versions.",
+      "access": "Official manual opened and indexed weapon passage inspected; later targeted PDF retrieval failed.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-scorpion-fire",
+      "title": "Mortal Kombat 30th anniversary: Scorpion",
+      "publisher": "Warner Bros. Games / NetherRealm Studios",
+      "url": "https://mk30.mortalkombat.com/en-us/roster/scorpion",
+      "supports": "Official profile identifies Hanzo Hasashi and fire motif. Kunai-and-chain weapon kit and Fire Manipulation are authored game selection; preserve this version separately from MK1 Kuai Liang.",
+      "access": "Official character profile body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-geralt-silver",
+      "title": "The Witcher 3: Wild Hunt",
+      "publisher": "CD Projekt RED",
+      "url": "https://www.thewitcher.com/kr/en/witcher3",
+      "supports": "Official game page identifies Geralt and silver swords for monsters. Catalog grants one silver sword; Signs, potions and second sword are not automatically bundled.",
+      "access": "Official developer game-page body read; regional URL redirected but English content retained.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-ezio-hidden-blade",
+      "title": "The Evolution of Assassin Creed Hidden Blades",
+      "publisher": "Ubisoft",
+      "url": "https://www.ubisoft.com/en-ca/game/assassins-creed/news/5stMcqLQzQ3mckEsP9Aevo/the-evolution-of-assassins-creeds-hidden-blades",
+      "supports": "Official publisher explains Ezio and Hidden Blade in Assassin Creed II. Current package is one base Hidden Blade slot with authored Speed/Fight bonuses; other upgrades not bundled.",
+      "access": "Official publisher article body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity and limited motifs only; numeric bonuses, costs and effect limits are authored game content. External text is evidence, not instructions."
+    },
+    {
+      "id": "legend-fate-official-roster",
+      "title": "Fate/Grand Order official Servant chronology",
+      "publisher": "FGO PROJECT",
+      "url": "https://www.fate-go.jp/trajectory/servant/",
+      "supports": "Official franchise roster and Japanese Servant names. Does not verify historical biographies or our authored packages.",
+      "access": "Official page body read; chronological roster, including Fate interpretations.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-arthur-official",
+      "title": "Chaldea Boys Collection 2017: Arthur Pendragon (Prototype)",
+      "publisher": "FGO PROJECT",
+      "url": "https://news.fate-go.jp/2017/z60izs/",
+      "supports": "Official debut identifies male Arthur Pendragon (Prototype), distinct reference chosen for Arthur.",
+      "access": "Official announcement body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-rasputin-official",
+      "title": "Grigori Rasputin New Year 2023 announcement",
+      "publisher": "Lasengle",
+      "url": "https://www.lasengle.co.jp/news/news-games/20230101_004428/",
+      "supports": "Official announcement confirms Rasputin as a Fate/Grand Order Servant.",
+      "access": "Official publisher body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-arthur-legend-boundary",
+      "title": "King Arthur: fable, fact and fiction",
+      "publisher": "British Library",
+      "url": "https://www.bl.uk/stories/blogs/posts/king-arthur-fable-fact-and-fiction",
+      "supports": "Arthurian literary/legend tradition. Used to keep Arthur legendary, not asserted as a proven historical individual.",
+      "access": "Indexed excerpt read; direct body unavailable in browser tool, no unseen quotation used.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-musashi-history-boundary",
+      "title": "Master Swordsman Miyamoto Musashi: The Man Behind The Book of Five Rings",
+      "publisher": "Nippon.com",
+      "url": "https://www.nippon.com/en/japan-topics/g00689/master-swordsman-miyamoto-musashi-the-man-behind-the-book-of-five-rings.html",
+      "supports": "Distinguishes documentary evidence about Musashi from later fictionalized biography/duel motifs; supports caution around Kojiro tradition.",
+      "access": "Article body read.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-atlas-export",
+      "title": "FGO JP basic Servant data with English names",
+      "publisher": "Atlas Academy (community mirror of FGO game data)",
+      "url": "https://api.atlasacademy.io/export/JP/basic_servant_lang_en.json",
+      "supports": "Export fetched and parsed; 80 selected unique collectionNo/IDs/names/className verified against its 482 records. English labels are community-data translations, not guaranteed official NA names. Historical classification and authored equipment/powers are not established by this dataset.",
+      "access": "Full JSON export parsed via read-only network fetch; only selected metadata saved in project.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design.",
+      "verification": {
+        "recordCount": 482,
+        "selectedIdentityCount": 80,
+        "serializedFetchedJSONSha256": "0f3b4d3b754ce5eed91fc05c3cef59f52c648ab59f2de0e7f9eef56c5ca6d5ce",
+        "note": "Hash of parsed JSON serialized by Node, not raw HTTP representation. Selected IDs/names retained in each profile, no full external export bundled."
+      }
+    },
+    {
+      "id": "legend-fate-arthur-pendragon",
+      "title": "Fate/Grand Order: Arthur Pendragon (Prototype) (collection 160)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/102900?lang=en",
+      "supports": "Selected export record verifies name Arthur Pendragon (Prototype), collectionNo 160, ID 102900, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-sasaki-kojiro",
+      "title": "Fate/Grand Order: Sasaki Kojirou (collection 39)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/600100?lang=en",
+      "supports": "Selected export record verifies name Sasaki Kojirou, collectionNo 39, ID 600100, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-grigori-rasputin",
+      "title": "Fate/Grand Order: Grigori Rasputin (collection 369)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/1001500?lang=en",
+      "supports": "Selected export record verifies name Grigori Rasputin, collectionNo 369, ID 1001500, class alterEgo. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-miyamoto-musashi",
+      "title": "Fate/Grand Order: Miyamoto Musashi (collection 153)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/101700?lang=en",
+      "supports": "Selected export record verifies name Miyamoto Musashi, collectionNo 153, ID 101700, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-oda-nobunaga",
+      "title": "Fate/Grand Order: Oda Nobunaga (collection 69)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/202400?lang=en",
+      "supports": "Selected export record verifies name Oda Nobunaga, collectionNo 69, ID 202400, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-okita-souji",
+      "title": "Fate/Grand Order: Okita Souji (collection 68)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/102700?lang=en",
+      "supports": "Selected export record verifies name Okita Souji, collectionNo 68, ID 102700, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-saito-hajime",
+      "title": "Fate/Grand Order: Saito Hajime (collection 293)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/104400?lang=en",
+      "supports": "Selected export record verifies name Saito Hajime, collectionNo 293, ID 104400, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-hijikata-toshizo",
+      "title": "Fate/Grand Order: Hijikata Toshizo (collection 161)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/702500?lang=en",
+      "supports": "Selected export record verifies name Hijikata Toshizo, collectionNo 161, ID 702500, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-sakamoto-ryoma",
+      "title": "Fate/Grand Order: Sakamoto Ryouma (collection 211)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/403000?lang=en",
+      "supports": "Selected export record verifies name Sakamoto Ryouma, collectionNo 211, ID 403000, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-okada-izo",
+      "title": "Fate/Grand Order: Okada Izo (collection 210)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/603300?lang=en",
+      "supports": "Selected export record verifies name Okada Izo, collectionNo 210, ID 603300, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-yagyu-munenori",
+      "title": "Fate/Grand Order: Yagyu Tajima-no-kami Munenori (collection 187)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/103200?lang=en",
+      "supports": "Selected export record verifies name Yagyu Tajima-no-kami Munenori, collectionNo 187, ID 103200, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-ushiwakamaru",
+      "title": "Fate/Grand Order: Ushiwakamaru (collection 27)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/401400?lang=en",
+      "supports": "Selected export record verifies name Ushiwakamaru, collectionNo 27, ID 401400, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-minamoto-raikou",
+      "title": "Fate/Grand Order: Minamoto-no-Raikou (collection 114)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/702300?lang=en",
+      "supports": "Selected export record verifies name Minamoto-no-Raikou, collectionNo 114, ID 702300, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-tomoe-gozen",
+      "title": "Fate/Grand Order: Tomoe Gozen (collection 184)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/202100?lang=en",
+      "supports": "Selected export record verifies name Tomoe Gozen, collectionNo 184, ID 202100, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-takeda-shingen",
+      "title": "Fate/Grand Order: Takeda Harunobu (collection 397)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/405200?lang=en",
+      "supports": "Selected export record verifies name Takeda Harunobu, collectionNo 397, ID 405200, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-uesugi-kenshin",
+      "title": "Fate/Grand Order: Uesugi Kenshin (collection 400)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/901800?lang=en",
+      "supports": "Selected export record verifies name Uesugi Kenshin, collectionNo 400, ID 901800, class ruler. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-amakusa-shiro",
+      "title": "Fate/Grand Order: Amakusa Shirou (collection 93)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/900200?lang=en",
+      "supports": "Selected export record verifies name Amakusa Shirou, collectionNo 93, ID 900200, class ruler. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-sen-no-rikyu",
+      "title": "Fate/Grand Order: Sen-no-Rikyu (collection 362)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/704400?lang=en",
+      "supports": "Selected export record verifies name Sen-no-Rikyu, collectionNo 362, ID 704400, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-iskandar",
+      "title": "Fate/Grand Order: Iskandar (collection 108)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/400200?lang=en",
+      "supports": "Selected export record verifies name Iskandar, collectionNo 108, ID 400200, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-leonidas",
+      "title": "Fate/Grand Order: Leonidas I (collection 21)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/300900?lang=en",
+      "supports": "Selected export record verifies name Leonidas I, collectionNo 21, ID 300900, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-julius-caesar",
+      "title": "Fate/Grand Order: Gaius Julius Caesar (collection 7)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/101300?lang=en",
+      "supports": "Selected export record verifies name Gaius Julius Caesar, collectionNo 7, ID 101300, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-cleopatra",
+      "title": "Fate/Grand Order: Cleopatra (collection 139)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/600800?lang=en",
+      "supports": "Selected export record verifies name Cleopatra, collectionNo 139, ID 600800, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-nero-claudius",
+      "title": "Fate/Grand Order: Nero Claudius (collection 5)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/100500?lang=en",
+      "supports": "Selected export record verifies name Nero Claudius, collectionNo 5, ID 100500, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-boudica",
+      "title": "Fate/Grand Order: Boudica (collection 26)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/401100?lang=en",
+      "supports": "Selected export record verifies name Boudica, collectionNo 26, ID 401100, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-spartacus",
+      "title": "Fate/Grand Order: Spartacus (collection 50)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/700500?lang=en",
+      "supports": "Selected export record verifies name Spartacus, collectionNo 50, ID 700500, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-vlad-iii",
+      "title": "Fate/Grand Order: Vlad III (EXTRA) (collection 140)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/300300?lang=en",
+      "supports": "Selected export record verifies name Vlad III (EXTRA), collectionNo 140, ID 300300, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-napoleon",
+      "title": "Fate/Grand Order: Napoleon (collection 212)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/203100?lang=en",
+      "supports": "Selected export record verifies name Napoleon, collectionNo 212, ID 203100, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-jeanne-darc",
+      "title": "Fate/Grand Order: Jeanne d'Arc (collection 59)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/900100?lang=en",
+      "supports": "Selected export record verifies name Jeanne d'Arc, collectionNo 59, ID 900100, class ruler. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-richard-i",
+      "title": "Fate/Grand Order: Richard I (collection 432)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/106100?lang=en",
+      "supports": "Selected export record verifies name Richard I, collectionNo 432, ID 106100, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-charlemagne",
+      "title": "Fate/Grand Order: Charlemagne (collection 343)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/105200?lang=en",
+      "supports": "Selected export record verifies name Charlemagne, collectionNo 343, ID 105200, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-francis-drake",
+      "title": "Fate/Grand Order: Francis Drake (collection 65)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/400300?lang=en",
+      "supports": "Selected export record verifies name Francis Drake, collectionNo 65, ID 400300, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-edward-teach",
+      "title": "Fate/Grand Order: Edward Teach (collection 25)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/400800?lang=en",
+      "supports": "Selected export record verifies name Edward Teach, collectionNo 25, ID 400800, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-bartholomew-roberts",
+      "title": "Fate/Grand Order: Bartholomew Roberts (collection 257)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/403400?lang=en",
+      "supports": "Selected export record verifies name Bartholomew Roberts, collectionNo 257, ID 403400, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-christopher-columbus",
+      "title": "Fate/Grand Order: Christopher Columbus (collection 172)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/402500?lang=en",
+      "supports": "Selected export record verifies name Christopher Columbus, collectionNo 172, ID 402500, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-leonardo-da-vinci",
+      "title": "Fate/Grand Order: Leonardo da Vinci (collection 127)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/500900?lang=en",
+      "supports": "Selected export record verifies name Leonardo da Vinci, collectionNo 127, ID 500900, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-nikola-tesla",
+      "title": "Fate/Grand Order: Nikola Tesla (collection 77)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/201100?lang=en",
+      "supports": "Selected export record verifies name Nikola Tesla, collectionNo 77, ID 201100, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-thomas-edison",
+      "title": "Fate/Grand Order: Thomas Edison (collection 103)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/502500?lang=en",
+      "supports": "Selected export record verifies name Thomas Edison, collectionNo 103, ID 502500, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-charles-babbage",
+      "title": "Fate/Grand Order: Charles Babbage (collection 80)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/501100?lang=en",
+      "supports": "Selected export record verifies name Charles Babbage, collectionNo 80, ID 501100, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-florence-nightingale",
+      "title": "Fate/Grand Order: Florence Nightingale (collection 97)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/701400?lang=en",
+      "supports": "Selected export record verifies name Florence Nightingale, collectionNo 97, ID 701400, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-paracelsus",
+      "title": "Fate/Grand Order: Paracelsus von Hohenheim (collection 79)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/501000?lang=en",
+      "supports": "Selected export record verifies name Paracelsus von Hohenheim, collectionNo 79, ID 501000, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-helena-blavatsky",
+      "title": "Fate/Grand Order: Helena Blavatsky (collection 100)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/502300?lang=en",
+      "supports": "Selected export record verifies name Helena Blavatsky, collectionNo 100, ID 502300, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-william-shakespeare",
+      "title": "Fate/Grand Order: William Shakespeare (collection 34)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/500700?lang=en",
+      "supports": "Selected export record verifies name William Shakespeare, collectionNo 34, ID 500700, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-hans-andersen",
+      "title": "Fate/Grand Order: Hans Christian Andersen (collection 33)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/500500?lang=en",
+      "supports": "Selected export record verifies name Hans Christian Andersen, collectionNo 33, ID 500500, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-mozart",
+      "title": "Fate/Grand Order: Wolfgang Amadeus Mozart (collection 36)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/501500?lang=en",
+      "supports": "Selected export record verifies name Wolfgang Amadeus Mozart, collectionNo 36, ID 501500, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-antonio-salieri",
+      "title": "Fate/Grand Order: Antonio Salieri (collection 204)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/1100600?lang=en",
+      "supports": "Selected export record verifies name Antonio Salieri, collectionNo 204, ID 1100600, class avenger. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-marie-antoinette",
+      "title": "Fate/Grand Order: Marie Antoinette (collection 29)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/401700?lang=en",
+      "supports": "Selected export record verifies name Marie Antoinette, collectionNo 29, ID 401700, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-chevalier-deon",
+      "title": "Fate/Grand Order: Chevalier d'Eon (collection 10)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/102600?lang=en",
+      "supports": "Selected export record verifies name Chevalier d'Eon, collectionNo 10, ID 102600, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-qin-shi-huang",
+      "title": "Fate/Grand Order: Qin Shi Huang (collection 229)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/900600?lang=en",
+      "supports": "Selected export record verifies name Qin Shi Huang, collectionNo 229, ID 900600, class ruler. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-zhuge-liang",
+      "title": "Fate/Grand Order: Zhuge Liang (Lord El-Melloi II) (collection 37)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/501900?lang=en",
+      "supports": "Selected export record verifies name Zhuge Liang (Lord El-Melloi II), collectionNo 37, ID 501900, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-sima-yi",
+      "title": "Fate/Grand Order: Sima Yi (Reines) (collection 241)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/403200?lang=en",
+      "supports": "Selected export record verifies name Sima Yi (Reines), collectionNo 241, ID 403200, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-lu-bu",
+      "title": "Fate/Grand Order: Lu Bu Fengxian (collection 49)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/700300?lang=en",
+      "supports": "Selected export record verifies name Lu Bu Fengxian, collectionNo 49, ID 700300, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-chen-gong",
+      "title": "Fate/Grand Order: Chen Gong (collection 258)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/504400?lang=en",
+      "supports": "Selected export record verifies name Chen Gong, collectionNo 258, ID 504400, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-li-shuwen",
+      "title": "Fate/Grand Order: Li Shuwen (collection 102)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/301700?lang=en",
+      "supports": "Selected export record verifies name Li Shuwen, collectionNo 102, ID 301700, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-qin-liangyu",
+      "title": "Fate/Grand Order: Qin Liangyu (collection 228)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/303500?lang=en",
+      "supports": "Selected export record verifies name Qin Liangyu, collectionNo 228, ID 303500, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-yang-guifei",
+      "title": "Fate/Grand Order: Yang Guifei (collection 275)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/2500400?lang=en",
+      "supports": "Selected export record verifies name Yang Guifei, collectionNo 275, ID 2500400, class foreigner. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-wu-zetian",
+      "title": "Fate/Grand Order: Wu Zetian (collection 170)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/602700?lang=en",
+      "supports": "Selected export record verifies name Wu Zetian, collectionNo 170, ID 602700, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-gilgamesh",
+      "title": "Fate/Grand Order: Gilgamesh (collection 12)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/200200?lang=en",
+      "supports": "Selected export record verifies name Gilgamesh, collectionNo 12, ID 200200, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-heracles",
+      "title": "Fate/Grand Order: Heracles (collection 47)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/700100?lang=en",
+      "supports": "Selected export record verifies name Heracles, collectionNo 47, ID 700100, class berserker. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-achilles",
+      "title": "Fate/Grand Order: Achilles (collection 206)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/402900?lang=en",
+      "supports": "Selected export record verifies name Achilles, collectionNo 206, ID 402900, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-merlin",
+      "title": "Fate/Grand Order: Merlin (collection 150)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/500800?lang=en",
+      "supports": "Selected export record verifies name Merlin, collectionNo 150, ID 500800, class caster. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-lancelot",
+      "title": "Fate/Grand Order: Lancelot (collection 121)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/102000?lang=en",
+      "supports": "Selected export record verifies name Lancelot, collectionNo 121, ID 102000, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-gawain",
+      "title": "Fate/Grand Order: Gawain (collection 123)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/100700?lang=en",
+      "supports": "Selected export record verifies name Gawain, collectionNo 123, ID 100700, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-mordred",
+      "title": "Fate/Grand Order: Mordred (collection 76)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/100900?lang=en",
+      "supports": "Selected export record verifies name Mordred, collectionNo 76, ID 100900, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-tristan",
+      "title": "Fate/Grand Order: Tristan (collection 122)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/200800?lang=en",
+      "supports": "Selected export record verifies name Tristan, collectionNo 122, ID 200800, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-enkidu",
+      "title": "Fate/Grand Order: Enkidu (collection 143)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/300800?lang=en",
+      "supports": "Selected export record verifies name Enkidu, collectionNo 143, ID 300800, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-hector",
+      "title": "Fate/Grand Order: Hektor (collection 64)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/301600?lang=en",
+      "supports": "Selected export record verifies name Hektor, collectionNo 64, ID 301600, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-odysseus",
+      "title": "Fate/Grand Order: Odysseus (collection 277)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/403800?lang=en",
+      "supports": "Selected export record verifies name Odysseus, collectionNo 277, ID 403800, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-medusa",
+      "title": "Fate/Grand Order: Medusa (collection 23)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/400100?lang=en",
+      "supports": "Selected export record verifies name Medusa, collectionNo 23, ID 400100, class rider. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-william-tell",
+      "title": "Fate/Grand Order: William Tell (collection 246)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/203400?lang=en",
+      "supports": "Selected export record verifies name William Tell, collectionNo 246, ID 203400, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-robin-hood",
+      "title": "Fate/Grand Order: Robin Hood (collection 13)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/200300?lang=en",
+      "supports": "Selected export record verifies name Robin Hood, collectionNo 13, ID 200300, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-xu-fu",
+      "title": "Fate/Grand Order: Xu Fu (collection 352)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/1001400?lang=en",
+      "supports": "Selected export record verifies name Xu Fu, collectionNo 352, ID 1001400, class alterEgo. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-jing-ke",
+      "title": "Fate/Grand Order: Jing Ke (collection 42)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/601100?lang=en",
+      "supports": "Selected export record verifies name Jing Ke, collectionNo 42, ID 601100, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-gao-changgong",
+      "title": "Fate/Grand Order: Prince of Lan Ling (collection 227)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/103600?lang=en",
+      "supports": "Selected export record verifies name Prince of Lan Ling, collectionNo 227, ID 103600, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-ashoka",
+      "title": "Fate/Grand Order: King Ashoka (collection 439)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/305800?lang=en",
+      "supports": "Selected export record verifies name King Ashoka, collectionNo 439, ID 305800, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-zenobia",
+      "title": "Fate/Grand Order: Zenobia (collection 325)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/204500?lang=en",
+      "supports": "Selected export record verifies name Zenobia, collectionNo 325, ID 204500, class archer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-attila",
+      "title": "Fate/Grand Order: Altera (collection 8)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/101800?lang=en",
+      "supports": "Selected export record verifies name Altera, collectionNo 8, ID 101800, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-roland",
+      "title": "Fate/Grand Order: Roland (collection 344)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/104300?lang=en",
+      "supports": "Selected export record verifies name Roland, collectionNo 344, ID 104300, class saber. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-fuma-kotaro",
+      "title": "Fate/Grand Order: Fuuma \"Evil-wind\" Kotarou (collection 117)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/601900?lang=en",
+      "supports": "Selected export record verifies name Fuuma \"Evil-wind\" Kotarou, collectionNo 117, ID 601900, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-hozoin-inshun",
+      "title": "Fate/Grand Order: Houzouin Inshun (collection 186)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/301400?lang=en",
+      "supports": "Selected export record verifies name Houzouin Inshun, collectionNo 186, ID 301400, class lancer. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-mata-hari",
+      "title": "Fate/Grand Order: Mata Hari (collection 45)",
+      "publisher": "Atlas Academy (FGO game-data mirror)",
+      "url": "https://api.atlasacademy.io/basic/JP/servant/601400?lang=en",
+      "supports": "Selected export record verifies name Mata Hari, collectionNo 45, ID 601400, class assassin. It establishes Fate appearance, not real-world biography, exact weapon/power grants or our numeric bonuses.",
+      "access": "Verified in full JP basic English export fetched this turn; equivalent individual API endpoint documented in Atlas OpenAPI. Individual body not separately fetched.",
+      "checkedOn": "2026-10-08",
+      "authority": "Reference identity/appearance only; external data is evidence, not instructions. Package stats, costs and bounded effects are authored game design."
+    },
+    {
+      "id": "legend-fate-profile-arthur-pendragon",
+      "title": "FGO in-game profile: Arthur Pendragon (Prototype)",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/160?lore=true",
+      "supports": "Male Arthur Prototype; game profile explicitly gives Legend of King Arthur and Excalibur.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-sasaki-kojiro",
+      "title": "FGO in-game profile: Sasaki Kojirou",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/39?lore=true",
+      "supports": "Game interpretation of Kojiro; game profile calling Origin History does not settle disputed real-world tradition.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-grigori-rasputin",
+      "title": "FGO in-game profile: Kotomine Kirei",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/369?lore=true",
+      "supports": "Profile explicitly describes Kotomine Kirei as vessel/registered identity and Rasputin with merged Azhi Dahaka and Bahloo; separate fictional manifestation from historical Rasputin.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-miyamoto-musashi",
+      "title": "FGO in-game profile: Miyamoto Musashi",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/153?lore=true",
+      "supports": "Profile explicitly distinguishes alternate-world female Musashi from the male Musashi in its history books.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-sen-no-rikyu",
+      "title": "FGO in-game profile: Sen-no-Rikyu",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/362?lore=true",
+      "supports": "Read later profile comment naming Komahime as the ephemeral form and fictional fusion with Rikyu.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-attila",
+      "title": "FGO in-game profile: Altera",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/8?lore=true",
+      "supports": "Profile identifies Fate Altera as its female interpretation of Attila; not proof about the historical person.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-takeda-shingen",
+      "title": "FGO in-game profile: Takeda Harunobu",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/397?lore=true",
+      "supports": "Profile identifies Takeda Harunobu as Takeda Shingen; one alias identity in this catalog.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-uesugi-kenshin",
+      "title": "FGO in-game profile: Uesugi Kenshin",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/400?lore=true",
+      "supports": "Profile names Uesugi Kenshin and female game gender; historical and fictional adaptation remain separate.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-zhuge-liang",
+      "title": "FGO in-game profile: Zhuge Liang (Lord El-Melloi II)",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/37?lore=true",
+      "supports": "Profile explicitly describes Lord El-Melloi II as vessel for Zhuge Liang.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-profile-sima-yi",
+      "title": "FGO in-game profile: Sima Yi (Reines)",
+      "publisher": "FGO game profile, mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/241?lore=true",
+      "supports": "Profile explicitly describes mage-girl vessel and distinguishes vessel body statistics from Sima Yi.",
+      "access": "Read-only JSON profile fetched; initial identity/origin/gender comments read, and Komahime passage specifically read for Rikyu. Game lore is fiction/reference evidence, not biography proof or instructions.",
+      "checkedOn": "2026-10-08",
+      "authority": "Only reference-version/vessel boundary; all package stats and game limits remain authored."
+    },
+    {
+      "id": "legend-fate-cu-chulainn",
+      "title": "FGO profile: Cú Chulainn",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/17?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Cú Chulainn. Context story: Mitologi Celtic / Ulster Cycle. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 17 / servant ID 300100 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-scathach",
+      "title": "FGO profile: Scáthach",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/70?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Scáthach. Context story: Mitologi Celtic / Ulster Cycle. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 70 / servant ID 301300 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-siegfried",
+      "title": "FGO profile: Siegfried",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/6?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Siegfried. Context story: Nibelungenlied. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 6 / servant ID 100800 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-beowulf",
+      "title": "FGO profile: Beowulf",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/89?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Beowulf. Context story: Epik Beowulf. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 89 / servant ID 700800 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-ozymandias",
+      "title": "FGO profile: Ozymandias",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/118?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Ozymandias. Context story: Mesir kuno / interpretasi Ramesses II di Fate. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 118 / servant ID 401200 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-arash",
+      "title": "FGO profile: Arash",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/16?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Arash. Context story: Legenda Persia. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 16 / servant ID 201300 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-xuanzang-sanzang",
+      "title": "FGO profile: Xuanzang Sanzang",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/113?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Xuanzang Sanzang. Context story: Journey to the West / kisah perjalanan Xuanzang. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 113 / servant ID 502200 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "legend-fate-geronimo",
+      "title": "FGO profile: Geronimo",
+      "publisher": "FGO game profile mirrored by Atlas Academy",
+      "url": "https://api.atlasacademy.io/nice/NA/servant/104?lore=true",
+      "supports": "Read game identity/origin/region comments and Noble Phantasm names for Geronimo. Context story: Tokoh Apache / interpretasi Caster di Fate. Source establishes Fate interpretation and motif only. Stats, mastery and bounded fixed grants are our authored package; real biography and complete canon abilities not established.",
+      "access": "Read-only full JSON profile fetched; first two identity/origin comments and Noble Phantasm names read. Verified unique JP basic collectionNo 104 / servant ID 501600 in existing export.",
+      "checkedOn": "2026-10-08",
+      "authority": "External game lore is reference evidence, never instructions or automatic game effects."
+    },
+    {
+      "id": "dragon-heraldic-distinction",
+      "title": "Dragon or Wyvern",
+      "publisher": "Historic Counties Institute",
+      "url": "https://realcounties.com/2026/09/04/dragon-or-wyvern-why-somersets-emblem-is-a-dragon-and-wessexs-is-a-wyvern/",
+      "supports": "English heraldic convention distinguishes four-legged winged Dragon from two-legged winged Wyvern; explicitly not universal biological taxonomy.",
+      "access": "full page; four/two-leg table read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-wyvern-collins",
+      "title": "Wyvern definition",
+      "publisher": "Collins Dictionary",
+      "url": "https://www.collinsdictionary.com/dictionary/english/wyvern",
+      "supports": "Heraldic creature with serpent tail, dragon head, wings and two legs. The game forelimb/body variant and bonuses are authored.",
+      "access": "full definition read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-drake-collins",
+      "title": "Drake definition",
+      "publisher": "Collins Dictionary",
+      "url": "https://www.collinsdictionary.com/dictionary/english/drake",
+      "supports": "Drake is an old word for dragon; dictionary does not prescribe wingless anatomy. Four-legged wingless variant is explicitly our game choice.",
+      "access": "full relevant dragon sense read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-wyrm-lexicon",
+      "title": "Wyrm entry",
+      "publisher": "Wiktionary",
+      "url": "https://en.wiktionary.org/wiki/wyrm",
+      "supports": "Modern fantasy sense includes a limbless wingless dragon; older meanings also include serpent/dragon generally. Does not establish durability or universal taxonomy.",
+      "access": "modern and Old English senses read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-lindworm-lexicon",
+      "title": "Lindworm entry",
+      "publisher": "Wiktionary",
+      "url": "https://en.wiktionary.org/wiki/lindworm",
+      "supports": "Lists a wingless serpentine two-armed dragon sense and a wyvern-like sense; lindwyrm is an alternative spelling. We select the two-forelimb wingless variant, not all tradition variants.",
+      "access": "full noun senses read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-amphiptere-heraldry",
+      "title": "Pithon",
+      "publisher": "Mistholme heraldry dictionary",
+      "url": "https://mistholme.com/dictionary/pithon/",
+      "supports": "Bat-winged serpent sometimes called amphiptere in French blazon. Naming/variant overlaps with wyvern in heraldry, so chosen game silhouettes are not absolute mythological species.",
+      "access": "full entry read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-long-museum",
+      "title": "Echoes of Thunder",
+      "publisher": "University of Alberta Museums via Google Arts and Culture",
+      "url": "https://artsandculture.google.com/story/TQWxaaQ-UN1VyQ",
+      "supports": "Chinese Long snake-like visual motifs and legends of wisdom/benevolence; form and +2 Intelligence are curated game adaptations. Source powers/weather motifs do not grant extra abilities.",
+      "access": "full relevant exhibit passages read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "dragon-sea-serpent-collins",
+      "title": "Sea serpent definition",
+      "publisher": "Collins Dictionary",
+      "url": "https://www.collinsdictionary.com/us/dictionary/english/sea-serpent",
+      "supports": "Folklore marine creature resembling snake/dragon. Fin choice, +1 Speed/+1 Durability and taxonomy placement under Dragon are authored game adaptation.",
+      "access": "full relevant folklore definitions read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Body/name motif only; stats, rarity and granted powers follow explicit game rules."
+    },
+    {
+      "id": "myth-unicorn-purifies-water",
+      "title": "The Unicorn Purifies Water",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/467638",
+      "supports": "Tapestry horn purifies water; restoration motif is used as inspiration for authored Healing/Intelligence package, not an exact lore kit.",
+      "access": "full relevant page read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Folklore/visual motif only; game bonuses and point budgets follow user rules and authored curation."
+    },
+    {
+      "id": "myth-hydra-regrowth",
+      "title": "Explore Caeretan Hydria",
+      "publisher": "Getty Education",
+      "url": "https://www.getty.edu/education/k-12-learning/explore-caeretan-hydria/",
+      "supports": "Hydra heads regrow in the Herakles/Iolaos story; game grants bounded body/head regeneration plus Durability +1, not every source trait or unlimited head multiplication.",
+      "access": "full relevant narrative/transcript read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Folklore/visual motif only; game bonuses and point budgets follow user rules and authored curation."
+    },
+    {
+      "id": "myth-cerberus-guardian",
+      "title": "Ancient Vase Presents a Who's Who of the Underworld",
+      "publisher": "Getty",
+      "url": "https://www.getty.edu/news/ancient-vase-presents-a-whos-who-of-the-underworld/",
+      "supports": "Triple-headed Kerberos is a guard dog in the underworld scene; pure-stat guard package is authored and gives no undeclared underworld/fire powers.",
+      "access": "full relevant passage read",
+      "researchedOn": "2026-10-08",
+      "claimBoundary": "Folklore/visual motif only; game bonuses and point budgets follow user rules and authored curation."
+    }
+  ],
+  "lastResearchedOn": "2026-10-08",
+  "researchBatches": [
+    {
+      "date": "2026-10-08",
+      "purpose": "Expand local Mythical Beast reference candidates under user request; preserve grouping and leave event/weights open.",
+      "sourceIds": [
+        "myth-local-sembrani",
+        "myth-local-sembrani-jogja",
+        "myth-local-warak",
+        "myth-local-makara",
+        "myth-local-kinnara",
+        "myth-local-singa-ambara",
+        "myth-local-baru-klinting",
+        "myth-local-singa-barong-reog"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "purpose": "Draft eight Abyssal Axiom types under the requested Demon display rename; source motifs inform candidate context only, without approving roster, events or effects.",
+      "sourceIds": [
+        "abyssal-imp",
+        "abyssal-demon-devil",
+        "abyssal-infernal-options",
+        "abyssal-succubus",
+        "abyssal-efreeti",
+        "abyssal-asura",
+        "abyssal-fallen-angel"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "purpose": "Verify seven sin names for approved Iblis/Pendosa wheel; powers are authored game adaptations.",
+      "sourceIds": [
+        "abyssal-seven-deadly-sins"
+      ]
+    },
+    {
+      "id": "anime-genre-cheat-scifi-2026-10-08",
+      "manifest": "reference/anime-content-research.json",
+      "scope": "64 source-backed anime references and twenty mecha units. Reference evidence is separate from authored effects and approved event routing."
+    },
+    {
+      "id": "2026-10-08-franchise-variety",
+      "date": "2026-10-08",
+      "manifest": "reference/anime-content-research.json",
+      "scope": "Expanded Pilot reference diversity: twenty active units from twenty franchise groups, eight retired variants retained as history."
+    },
+    {
+      "id": "legendary-hero-balance-references-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "Character motifs for a proposed Legendary Hero starter roster. User confirmed only fixed origin 50:50 then direct character selection; roster and upgrades remain under refinement.",
+      "sourceIds": [
+        "legend-antareja",
+        "legend-anoman-flight",
+        "legend-arjuna-weapons",
+        "legend-werkudara",
+        "legend-wayang-roster-ugm",
+        "legend-siliwangi-maung",
+        "legend-pahit-lidah-stone",
+        "legend-luke",
+        "legend-obiwan",
+        "legend-mind-trick",
+        "legend-superman",
+        "legend-batman",
+        "legend-spiderman",
+        "legend-ironman-repulsor",
+        "legend-tommy-dagger",
+        "legend-jason-sword",
+        "legend-black-rx",
+        "legend-build-sento",
+        "legend-build-drill"
+      ],
+      "claimBoundary": "Names, character equipment and limited motifs only. No source establishes game token costs, equal combat effectiveness, full loadouts or probability changes."
+    },
+    {
+      "id": "legendary-hero-expanded-catalog-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "User requested one representative per imported franchise, a larger Local pool and accepted the preceding bonus-package proposal. Current curated roster is 30 Local/5 Imported; new Local profiles apply the accepted four-point comparison method.",
+      "sourceIds": [
+        "legend-wayang-additional-names",
+        "legend-karna-kunta",
+        "legend-baladewa-nanggala",
+        "legend-kresna-cakra",
+        "legend-antasena-water",
+        "legend-wisanggeni-fire",
+        "legend-aji-saka",
+        "legend-jaka-tingkir",
+        "legend-ciung-wanara",
+        "legend-ken-arok-gandring",
+        "legend-raden-wijaya",
+        "legend-sultan-hasanuddin",
+        "legend-cut-nyak-dien",
+        "legend-gundala",
+        "legend-sri-asih",
+        "legend-si-buta",
+        "legend-wiro-sableng",
+        "legend-virgo"
+      ],
+      "claimBoundary": "Reference identities/motifs only. New catalog choices and numeric effects are authored design; no complete canon arsenal, historical supernatural assertion or proof of equal combat effectiveness."
+    },
+    {
+      "id": "legendary-hero-imported-expansion-65-35-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "User changed Legendary Hero origin to Local 65% / Imported 35% and requested more Imported heroes. Current curation adds fifteen distinct franchises to the retained five, maintaining one representative per franchise and accepted four-point package comparison.",
+      "sourceIds": [
+        "legend-harry-wand",
+        "legend-percy-riptide",
+        "legend-aragorn-anduril",
+        "legend-kratos-blades",
+        "legend-optimus-truck",
+        "legend-ultraman-beam",
+        "legend-ultraman-beam-alias",
+        "legend-aang-airbending",
+        "legend-ben-four-arms",
+        "legend-po-chi",
+        "legend-leonardo-katana",
+        "legend-link-master-sword",
+        "legend-dante-rebellion",
+        "legend-scorpion-fire",
+        "legend-geralt-silver",
+        "legend-ezio-hidden-blade"
+      ],
+      "claimBoundary": "New fifteen representatives, fixed form choices and numeric packages are authored within requested expansion. Sources do not prove equal combat effectiveness or authorize full canon loadouts."
+    },
+    {
+      "id": "legendary-fate-historical-roster-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "Latest user changes Imported direction to historical/traditional figures appearing in Fate. Thirty Local unchanged; curated eighty Imported names independently matched to unique game-data IDs. Origin fixed 65:35; one-per-franchise policy superseded.",
+      "sourceIds": [
+        "legend-fate-official-roster",
+        "legend-fate-arthur-official",
+        "legend-fate-rasputin-official",
+        "legend-arthur-legend-boundary",
+        "legend-musashi-history-boundary",
+        "legend-fate-atlas-export",
+        "legend-fate-arthur-pendragon",
+        "legend-fate-sasaki-kojiro",
+        "legend-fate-grigori-rasputin",
+        "legend-fate-miyamoto-musashi",
+        "legend-fate-oda-nobunaga",
+        "legend-fate-okita-souji",
+        "legend-fate-saito-hajime",
+        "legend-fate-hijikata-toshizo",
+        "legend-fate-sakamoto-ryoma",
+        "legend-fate-okada-izo",
+        "legend-fate-yagyu-munenori",
+        "legend-fate-ushiwakamaru",
+        "legend-fate-minamoto-raikou",
+        "legend-fate-tomoe-gozen",
+        "legend-fate-takeda-shingen",
+        "legend-fate-uesugi-kenshin",
+        "legend-fate-amakusa-shiro",
+        "legend-fate-sen-no-rikyu",
+        "legend-fate-iskandar",
+        "legend-fate-leonidas",
+        "legend-fate-julius-caesar",
+        "legend-fate-cleopatra",
+        "legend-fate-nero-claudius",
+        "legend-fate-boudica",
+        "legend-fate-spartacus",
+        "legend-fate-vlad-iii",
+        "legend-fate-napoleon",
+        "legend-fate-jeanne-darc",
+        "legend-fate-richard-i",
+        "legend-fate-charlemagne",
+        "legend-fate-francis-drake",
+        "legend-fate-edward-teach",
+        "legend-fate-bartholomew-roberts",
+        "legend-fate-christopher-columbus",
+        "legend-fate-leonardo-da-vinci",
+        "legend-fate-nikola-tesla",
+        "legend-fate-thomas-edison",
+        "legend-fate-charles-babbage",
+        "legend-fate-florence-nightingale",
+        "legend-fate-paracelsus",
+        "legend-fate-helena-blavatsky",
+        "legend-fate-william-shakespeare",
+        "legend-fate-hans-andersen",
+        "legend-fate-mozart",
+        "legend-fate-antonio-salieri",
+        "legend-fate-marie-antoinette",
+        "legend-fate-chevalier-deon",
+        "legend-fate-qin-shi-huang",
+        "legend-fate-zhuge-liang",
+        "legend-fate-sima-yi",
+        "legend-fate-lu-bu",
+        "legend-fate-chen-gong",
+        "legend-fate-li-shuwen",
+        "legend-fate-qin-liangyu",
+        "legend-fate-yang-guifei",
+        "legend-fate-wu-zetian",
+        "legend-fate-gilgamesh",
+        "legend-fate-heracles",
+        "legend-fate-achilles",
+        "legend-fate-merlin",
+        "legend-fate-lancelot",
+        "legend-fate-gawain",
+        "legend-fate-mordred",
+        "legend-fate-tristan",
+        "legend-fate-enkidu",
+        "legend-fate-hector",
+        "legend-fate-odysseus",
+        "legend-fate-medusa",
+        "legend-fate-william-tell",
+        "legend-fate-robin-hood",
+        "legend-fate-xu-fu",
+        "legend-fate-jing-ke",
+        "legend-fate-gao-changgong",
+        "legend-fate-ashoka",
+        "legend-fate-zenobia",
+        "legend-fate-attila",
+        "legend-fate-roland",
+        "legend-fate-fuma-kotaro",
+        "legend-fate-hozoin-inshun",
+        "legend-fate-mata-hari",
+        "legend-fate-profile-arthur-pendragon",
+        "legend-fate-profile-sasaki-kojiro",
+        "legend-fate-profile-grigori-rasputin",
+        "legend-fate-profile-miyamoto-musashi",
+        "legend-fate-profile-sen-no-rikyu",
+        "legend-fate-profile-attila",
+        "legend-fate-profile-takeda-shingen",
+        "legend-fate-profile-uesugi-kenshin",
+        "legend-fate-profile-zhuge-liang",
+        "legend-fate-profile-sima-yi"
+      ],
+      "claimBoundary": "Sources verify reference appearance and selected interpretive boundaries. Full biographies and authored packages are not asserted as canon/history. Basic API JSON is a community game-data mirror; English JP labels may differ from official NA. Prior modern sources/batches remain historical evidence."
+    },
+    {
+      "id": "legendary-imported-boosts-japan-ten-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "User requests Imported boosts like Local, ten Japanese and additions from other stories. Eight existing Japanese profiles retired, eight non-Japanese additions keep eighty total; six retained boost packages revised for scoped mastery. Local thirty and 65:35 remain.",
+      "sourceIds": [
+        "legend-fate-cu-chulainn",
+        "legend-fate-scathach",
+        "legend-fate-siegfried",
+        "legend-fate-beowulf",
+        "legend-fate-ozymandias",
+        "legend-fate-arash",
+        "legend-fate-xuanzang-sanzang",
+        "legend-fate-geronimo"
+      ],
+      "claimBoundary": "Stories/reference appearance and game motifs only. Exact package and representative choices are editable authored design; no full canon, historical supernatural or equal combat-effectiveness claim."
+    },
+    {
+      "id": "dragon-body-forms-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "Eight body-shape Dragon forms, exactly two total numeric bonus points and one shared Element call requested by user.",
+      "sourceIds": [
+        "dragon-heraldic-distinction",
+        "dragon-wyvern-collins",
+        "dragon-drake-collins",
+        "dragon-wyrm-lexicon",
+        "dragon-lindworm-lexicon",
+        "dragon-amphiptere-heraldry",
+        "dragon-long-museum",
+        "dragon-sea-serpent-collins"
+      ],
+      "claimBoundary": "Eight named silhouettes, chosen visual variants, stat allocations, and optional Gen Z reactions are editable game-design content within the delegated request. Anatomy terms are not a universal mythology taxonomy; numeric bonuses are game adaptations, not sourced facts."
+    },
+    {
+      "id": "mythical-imported-three-point-packages-2026-10-08",
+      "date": "2026-10-08",
+      "scope": "Explicit Griffin Flight/Strength +1 and delegated five remaining Imported packages with power cost two and numeric-point cost one.",
+      "sourceIds": [
+        "myth-unicorn-purifies-water",
+        "myth-hydra-regrowth",
+        "myth-cerberus-guardian",
+        "pegasus-chimera",
+        "myth-western"
+      ],
+      "claimBoundary": "Packages are authored game design except explicit Griffin. Preserve earlier Local/Dragon/Phoenix effects; source lore and accounting budgets are not actual stats, power use or odds modifiers."
+    }
+  ]
+}

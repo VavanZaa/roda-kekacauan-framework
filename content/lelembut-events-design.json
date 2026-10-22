@@ -1,0 +1,1843 @@
+{
+  "schemaVersion": 1,
+  "status": "algorithm-design; twelve local and six imported type events, source inheritance and no-repeat rule confirmed; base weights equal; scales and detailed balance pending",
+  "raceDesign": "race-wheel-design.json",
+  "confirmedLocalIds": [
+    "pocong",
+    "tuyul",
+    "kuntilanak",
+    "genderuwo",
+    "wewe-gombel",
+    "sundel-bolong",
+    "kuyang",
+    "leak",
+    "palasik",
+    "banaspati",
+    "jenglot",
+    "suster-ngesot"
+  ],
+  "confirmedImportedIds": [
+    "skeleton",
+    "vampire",
+    "zombie",
+    "lich",
+    "ghost",
+    "mummy"
+  ],
+  "powers": [
+    {
+      "id": "jump",
+      "label": "Jump",
+      "scope": "Kemampuan melompat.",
+      "affinityTags": [
+        "movement",
+        "jump"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Jump",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Jump udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#jump"
+    },
+    {
+      "id": "nyolong",
+      "label": "Nyolong",
+      "scope": "Kemampuan mengambil barang secara gaib.",
+      "affinityTags": [
+        "theft",
+        "stealth"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Nyolong",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Nyolong udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#nyolong"
+    },
+    {
+      "id": "flight",
+      "label": "Flight",
+      "scope": "Kemampuan bergerak melalui udara.",
+      "affinityTags": [
+        "movement",
+        "flight"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Flight",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Flight udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#flight"
+    },
+    {
+      "id": "size-manipulation",
+      "label": "Size Manipulation",
+      "scope": "Kemampuan mengubah ukuran tubuh.",
+      "affinityTags": [
+        "size",
+        "transformation"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Size Manipulation",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Size Manipulation udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "scopeInterpretation": {
+        "status": "proposed self-body scope; detailed limits pending",
+        "baseSize": "The global Size draw remains the recorded baseline; owning this power alone changes no committed size.",
+        "activation": "An actually applied approved size change uses the existing Size effect and strict Cosmic-threshold contract. No automatic Raksasa identity or second archetype."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#size-manipulation"
+    },
+    {
+      "id": "child-protection",
+      "label": "Child Protection",
+      "scope": "Kemampuan melindungi anak.",
+      "affinityTags": [
+        "protection",
+        "children"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Child Protection",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Child Protection udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#child-protection"
+    },
+    {
+      "id": "mukbang",
+      "label": "Mukbang",
+      "scope": "Kemampuan melahap makanan dalam jumlah besar.",
+      "affinityTags": [
+        "consumption",
+        "food"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Mukbang",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Mukbang udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "scopeInterpretation": {
+        "status": "Consumption capacity interpretation; absorbed powers and numeric bonuses are not established"
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#mukbang"
+    },
+    {
+      "id": "organ-control",
+      "label": "Organ Control",
+      "scope": "Kemampuan mengendalikan organ tubuh.",
+      "affinityTags": [
+        "body",
+        "organ"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Organ Control",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Organ Control udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "scopeInterpretation": {
+        "status": "proposed own-organ control; control of other targets not established"
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#organ-control"
+    },
+    {
+      "id": "head-detachment",
+      "label": "Head Detachment",
+      "scope": "Kemampuan melepas kepala dari tubuh dan menyambungkannya kembali.",
+      "affinityTags": [
+        "body",
+        "detachment"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Head Detachment",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Head Detachment udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#head-detachment"
+    },
+    {
+      "id": "pesugihan",
+      "label": "Pesugihan",
+      "scope": "Kemampuan bertema kekayaan gaib dalam dunia fantasi.",
+      "affinityTags": [
+        "wealth",
+        "occult"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Pesugihan",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Pesugihan udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "scopeInterpretation": {
+        "status": "Fantasy wealth theme confirmed; resource economy/costs and effects pending"
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#pesugihan"
+    },
+    {
+      "id": "ngesot",
+      "label": "Ngesot",
+      "scope": "Kemampuan bergerak dengan menggeser atau menyeret tubuh di permukaan.",
+      "affinityTags": [
+        "movement",
+        "ground"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Ngesot",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Ngesot udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#ngesot"
+    },
+    {
+      "id": "intangibility",
+      "label": "Intangibility",
+      "scope": "Kemampuan menembus benda padat.",
+      "affinityTags": [
+        "phasing",
+        "intangibility"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-confirmed Intangibility meaning; label normalized.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Intangibility",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Intangibility udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "inclusionProvenance": "User clarified Ghost see through means Menembus Benda / Intangibility.",
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Menembus benda padat melewati pertahanan material biasa.",
+      "powerTierRef": "content/power-tier-design.json#intangibility"
+    },
+    {
+      "id": "sand-manipulation",
+      "label": "Sand Manipulation",
+      "scope": "Kemampuan membentuk dan mengendalikan pasir.",
+      "affinityTags": [
+        "sand",
+        "control"
+      ],
+      "group": "shared-fixed-power",
+      "contentStatus": "User-defined power theme; wording normalized, detailed scope/balance pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Sand Manipulation",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Sand Manipulation udah masuk daftar power. Mastery-nya nanti.",
+        "voiceStyleRef": "framework/spec.json reactionContract.voiceStyle"
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic affinities only; exact eligibility and probability factors pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "weapon",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#sand-manipulation"
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "fire-manipulation",
+      "callers": [
+        "banaspati"
+      ]
+    },
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "wheelDefinitionRef": "power-cursed",
+      "callers": [
+        "leak",
+        "vampire victims-1000"
+      ]
+    }
+  ],
+  "wheels": [
+    {
+      "id": "undead-origin-race",
+      "label": "Ras Asal?",
+      "scope": "main-race-wheel-reference",
+      "sourceDefinitionFile": "race-wheel-design.json",
+      "sourceWheelRef": "race-family",
+      "resolutionRole": "origin-inheritance",
+      "dispatchSelectedFamilyEvents": true,
+      "contractId": "undead-origin-reference",
+      "outcomeMaterialization": "Use canonical mainWheel.options with its familyId and selectionKind; this reference has no duplicate outcome list.",
+      "probabilityPolicy": {
+        "mode": "canonical-source-with-declared-context",
+        "copyWeights": false
+      },
+      "status": "User-confirmed source race and inherited source events; previous character race families excluded.",
+      "resultContextTemplate": {
+        "facts": [
+          "Jenis undead tetap: {sourceLelembutTypeLabel}",
+          "Ras asal hasil spin: {selectedFamilyLabel}",
+          "Family asal telah masuk raceSelectionHistory; event asal akan dijalankan"
+        ],
+        "displayContext": "Asal {sourceLelembutTypeLabel} dapet {selectedFamilyLabel}. Event ras asal lanjut, identitas undead tetap.",
+        "narrationExample": "Plot twist, dulu rasnya {selectedFamilyLabel}. Sekarang tinggal versi {sourceLelembutTypeLabel}. Lanjut event asalnya!",
+        "availability": "After the origin commits and before dispatching origin-family child events; subtype and power outcomes are not known yet.",
+        "selectionKind": "Use the selected canonical family selectionKind; lore/MC/legacy themes preserve their declared identity/event rules."
+      },
+      "referenceResultEffects": [
+        {
+          "type": "record-source-race-reference",
+          "collection": "undeadOrigins[]",
+          "fields": [
+            "sourceLelembutComponentId",
+            "sourceSpinId",
+            "originFamilyId",
+            "selectionKind"
+          ],
+          "dispatchPolicy": "inherit"
+        },
+        {
+          "type": "record-used-race-family",
+          "contractId": "race-family-no-repeat",
+          "commitTiming": "atomic with origin result before child dispatch"
+        }
+      ],
+      "eligibilityRuleRef": "race-family-no-repeat",
+      "dispatchContractRef": "undead-origin-reference"
+    },
+    {
+      "id": "vampire-prey-race",
+      "label": "Ras Mangsa?",
+      "scope": "main-race-wheel-reference",
+      "sourceDefinitionFile": "race-wheel-design.json",
+      "sourceWheelRef": "race-family",
+      "resolutionRole": "prey-reference",
+      "dispatchSelectedFamilyEvents": false,
+      "contractId": "vampire-prey-reference",
+      "outcomeMaterialization": "Use canonical mainWheel.options with its familyId and selectionKind; this reference has no duplicate outcome list.",
+      "probabilityPolicy": {
+        "mode": "canonical-source-with-declared-context",
+        "copyWeights": false
+      },
+      "status": "Requested race-wheel feeding preference; reference-only dispatch is a disclosed interpretation.",
+      "resultContextTemplate": {
+        "facts": [
+          "Ras pribadi tetap Vampire",
+          "Pilihan mangsa: {selectedFamilyLabel}",
+          "Jumlah korban belum diputar"
+        ],
+        "displayContext": "Vampire memilih mangsa {selectedFamilyLabel}. Sekarang jumlah korbannya akan diputar; bonus belum diketahui.",
+        "availability": "After the prey result commits and before victim count.",
+        "selectionKind": "Use selected canonical family selectionKind; thematic MC/legacy options are reference identities, not silently converted to biology.",
+        "narrationExample": "Menu incaran: {selectedFamilyLabel}. Sekarang cek udah berapa korban."
+      },
+      "referenceResultEffects": [
+        {
+          "type": "record-prey-race-reference",
+          "collection": "feedingHistory[]",
+          "fields": [
+            "sourceVampireComponentId",
+            "preyFamilyId",
+            "preySelectionKind",
+            "preySpinId"
+          ],
+          "dispatchSelectedFamilyEvents": false
+        }
+      ]
+    },
+    {
+      "id": "vampire-victim-count",
+      "label": "Jumlah Korban",
+      "status": "User-defined pool/ratio; trailing ! interpreted as 1 and disclosed.",
+      "baseWeightsAssigned": true,
+      "probabilityPolicy": {
+        "mode": "fixed-weight-ratio",
+        "modifiable": false,
+        "totalWeight": 18
+      },
+      "outcomes": [
+        {
+          "id": "victims-0",
+          "label": "0 Korban",
+          "victimCount": 0,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 5,
+          "probability": 0.2777777777777778,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 0,
+              "scope": "source Vampire component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 0",
+              "Tidak ada bonus main stat dari jumlah korban ini"
+            ],
+            "displayContext": "Vampire belum memiliki korban. Ras mangsa tetap tercatat; tidak ada bonus stat.",
+            "narrationExample": "Nol korban. Vampire-nya masih masa probation.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        },
+        {
+          "id": "victims-1",
+          "label": "1 Korban",
+          "victimCount": 1,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 4,
+          "probability": 0.2222222222222222,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 1,
+              "scope": "source Vampire component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 1",
+              "Tidak ada bonus main stat dari jumlah korban ini"
+            ],
+            "displayContext": "Vampire memiliki 1 korban. Hasil ini belum memberi bonus stat.",
+            "narrationExample": "Satu korban. Baru mulai karier.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        },
+        {
+          "id": "victims-5",
+          "label": "5 Korban",
+          "victimCount": 5,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 3,
+          "probability": 0.16666666666666666,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 5,
+              "scope": "source Vampire component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 5",
+              "Tidak ada bonus main stat dari jumlah korban ini"
+            ],
+            "displayContext": "Vampire memiliki 5 korban. Hasil ini belum memberi bonus stat.",
+            "narrationExample": "Lima korban. Bonus stat masih belum kebuka.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        },
+        {
+          "id": "victims-10",
+          "label": "10 Korban",
+          "victimCount": 10,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 3,
+          "probability": 0.16666666666666666,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 10,
+              "scope": "source Vampire component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 10",
+              "Tidak ada bonus main stat dari jumlah korban ini"
+            ],
+            "displayContext": "Vampire memiliki 10 korban. Hasil ini belum memberi bonus stat.",
+            "narrationExample": "Sepuluh korban. CV nambah, stat belum.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        },
+        {
+          "id": "victims-100",
+          "label": "100 Korban",
+          "victimCount": 100,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 2,
+          "probability": 0.1111111111111111,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 100,
+              "scope": "source Vampire component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 100",
+              "Bonus +1 poin pada setiap main stat"
+            ],
+            "displayContext": "Vampire memiliki 100 korban dan mendapat +1 poin pada Strength, Speed, Durability, Intelligence, dan Fight.",
+            "narrationExample": "Seratus korban. Akhirnya kelima stat dapet +1.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        },
+        {
+          "id": "victims-1000",
+          "label": "1.000 Korban",
+          "victimCount": 1000,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "probability": 0.05555555555555555,
+          "effects": [
+            {
+              "type": "record-feeding-count",
+              "victimCount": 1000,
+              "scope": "source Vampire component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "committed Vampire victim-count result",
+              "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+            }
+          ],
+          "followupWheelId": "power-cursed",
+          "narrationContext": {
+            "facts": [
+              "Jumlah korban: 1.000",
+              "Bonus +1 poin pada setiap main stat",
+              "Satu spin Cursed Power berikutnya"
+            ],
+            "displayContext": "Vampire memiliki 1.000 korban dan mendapat +1 poin pada kelima stat, lalu satu spin Cursed Power.",
+            "narrationExample": "Seribu korban. Kelima stat +1, terus gacha Cursed Power. Paketnya naik kelas.",
+            "exampleMode": "Narration only; apply just the actual selected outcome effects."
+          },
+          "influenceDraft": {
+            "status": "Later semantic influences pending numerical balance; fixed count odds stay unchanged.",
+            "targets": [
+              "archetype",
+              "backstory",
+              "power",
+              "weakness",
+              "title"
+            ],
+            "basis": [
+              "actual prey reference",
+              "victimCount"
+            ]
+          }
+        }
+      ],
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights"
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "pocong",
+      "label": "Pocong",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "pocong"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "jump",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Pocong",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Jump",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Pocong. Power-nya Jump. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Pocong dapet Jump. Kaki boleh dibungkus, mobilitas tetap diusahakan.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "tuyul",
+      "label": "Tuyul",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "tuyul"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "nyolong",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Tuyul",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Nyolong",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Tuyul. Power-nya Nyolong. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Tuyul dapet Nyolong. Barang lu aman? Kata dia sih aman.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "kuntilanak",
+      "label": "Kuntilanak",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "kuntilanak"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Kuntilanak",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Flight",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Kuntilanak. Power-nya Flight. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Kuntilanak dapet Flight. Yang lain cari jalan, dia cari angin.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "genderuwo",
+      "label": "Genderuwo",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "genderuwo"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "size-manipulation",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Genderuwo",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Size Manipulation",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Genderuwo. Power-nya Size Manipulation. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Genderuwo dapet Size Manipulation. Urusan ukuran ada tombol setting-nya. Size awal tetap kita spin nanti.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "wewe-gombel",
+      "label": "Wewe Gombel",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "wewe-gombel"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "child-protection",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Wewe Gombel",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Child Protection",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Wewe Gombel. Power-nya Child Protection. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Wewe Gombel dapet Child Protection. Bocil sekarang ada bodyguard gaibnya.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "sundel-bolong",
+      "label": "Sundel Bolong",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "sundel-bolong"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "mukbang",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Sundel Bolong",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Mukbang",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Sundel Bolong. Power-nya Mukbang. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Sundel Bolong dapet Mukbang. Masuk dunia fantasy, malah buka konten makan.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "kuyang",
+      "label": "Kuyang",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "kuyang"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "organ-control",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Kuyang",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Flight",
+          "Power diperoleh: Organ Control",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Kuyang. Power-nya Flight plus Organ Control. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Kuyang dapet Flight plus Organ Control. Bisa terbang, dalemannya juga bisa diatur.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "leak",
+      "label": "Leak",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "leak"
+        }
+      ],
+      "followupWheelId": "power-cursed",
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Leak",
+          "Asal rujukan: Lokal",
+          "Membuka satu spin Cursed Power universal."
+        ],
+        "displayContext": "Dapet Leak. Lanjut satu spin Cursed Power.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Leak buka Cursed Power. Oke, kita gacha kutukan dulu.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "palasik",
+      "label": "Palasik",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "palasik"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "head-detachment",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Palasik",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Head Detachment",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Palasik. Power-nya Head Detachment. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Palasik dapet Head Detachment. Kepala bisa dilepas. Ternyata build bongkar-pasang.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "banaspati",
+      "label": "Banaspati",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "banaspati"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "universal-element-wheel-design.json",
+          "definitionId": "fire-manipulation",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Banaspati",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Fire Manipulation (Kendali Api)",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Banaspati. Power-nya Fire Manipulation. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Banaspati dapet Fire Manipulation. Aura panasnya kali ini ada skill benerannya.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "jenglot",
+      "label": "Jenglot",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "jenglot"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "pesugihan",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Jenglot",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Pesugihan",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Jenglot. Power-nya Pesugihan. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Jenglot dapet Pesugihan. Urusan saldo masuk skill tree.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "suster-ngesot",
+      "label": "Suster Ngesot",
+      "sourceOrigin": "local",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "suster-ngesot"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "ngesot",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": -1,
+          "unit": "numeric point",
+          "source": "committed Suster Ngesot result",
+          "timing": "Record once at the source result; apply through the ledger after the target base stat is rolled."
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Suster Ngesot",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Ngesot",
+          "Penalti Speed: -1 poin angka",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Suster Ngesot. Power-nya Ngesot. Speed -1 poin. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Suster Ngesot dapet Ngesot. Speed -1. Lantai jadi rekan seperjuangan.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "skeleton",
+      "label": "Skeleton",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "skeleton"
+        }
+      ],
+      "followupWheelId": "undead-origin-race",
+      "status": "User-confirmed source-race spin and full source-event inheritance with no repeated character race families.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Skeleton",
+          "Asal rujukan: Impor",
+          "Spin ras asal Skeleton, dengan ras karakter sebelumnya dinonaktifkan",
+          "Event ras asal terpilih akan dijalankan; identitas undead tetap dimiliki"
+        ],
+        "displayContext": "Dapet Skeleton. Spin ras asal, lalu jalanin event ras asalnya.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Skeleton. Tinggal tulang, lore-nya belum tentu tipis. Dulu ras apa? Spin!",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "vampire",
+      "label": "Vampire",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "vampire"
+        }
+      ],
+      "resolvePlan": [
+        {
+          "action": "spin-wheel",
+          "wheelId": "vampire-prey-race",
+          "saveReturn": true
+        },
+        {
+          "action": "spin-wheel",
+          "wheelId": "vampire-victim-count",
+          "resolveImmediateFollowups": true,
+          "saveReturn": true
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Vampire",
+          "Asal rujukan: Impor",
+          "Membuka spin “Ras mangsa?”, lalu “Jumlah korban”. Bonus ditetapkan dari hasil jumlah korban yang sebenarnya."
+        ],
+        "displayContext": "Dapet Vampire. Spin ras mangsa, baru jumlah korban. Bonus ngikut hasil jumlahnya.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Vampire. Sebelum sok misterius, kita cek dulu target menunya siapa.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "zombie",
+      "label": "Zombie",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "zombie"
+        }
+      ],
+      "followupWheelId": "undead-origin-race",
+      "status": "User-confirmed source-race spin and full source-event inheritance with no repeated character race families.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Zombie",
+          "Asal rujukan: Impor",
+          "Spin ras asal Zombie, dengan ras karakter sebelumnya dinonaktifkan",
+          "Event ras asal terpilih akan dijalankan; identitas undead tetap dimiliki"
+        ],
+        "displayContext": "Dapet Zombie. Spin ras asal, lalu jalanin event ras asalnya.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Zombie. Lore sebelum jadi mayat berjalan, kita bongkar dulu. Ras asalnya apa?",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "lich",
+      "label": "Lich",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "lich"
+        },
+        {
+          "type": "defer-bonus-spin",
+          "stage": "power",
+          "wheelFamily": "power",
+          "extraSpins": 1,
+          "requiredGrant": null,
+          "emptyOutcomePolicy": "Uses the approved normal Power pool, including None if configured. The user requests one extra spin.",
+          "sequence": "Main Power acquisition and immediate details -> pending bonus acquisitions and details -> mastery for all unresolved owned powers -> Weakness.",
+          "idempotence": "One ticket per committed Lich source result/component; consume atomically with the bonus result.",
+          "ticketSource": "committed Lich type result"
+        },
+        {
+          "type": "register-stat-guarantee",
+          "contractId": "lich-max-durability",
+          "target": "durability",
+          "stage": "durability",
+          "operation": "fixed-base-no-rng",
+          "source": "committed Lich type result",
+          "value": 9
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Lich",
+          "Asal rujukan: Impor",
+          "Mendapat satu extra Power spin pada tahap Power dan jaminan Durability maksimum pada tahap stat."
+        ],
+        "displayContext": "Dapet Lich. Durability dijamin maksimum pada tahap stat, plus satu extra Power spin nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Lich. Durability dijamin mentok, plus satu extra Power spin nanti. Undead paket premium.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "ghost",
+      "label": "Ghost",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "ghost"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "intangibility",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Ghost",
+          "Asal rujukan: Impor",
+          "Power diperoleh: Intangibility",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Ghost. Power-nya Intangibility. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Ghost dapet Intangibility. Pintu? Formalitas.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    },
+    {
+      "id": "mummy",
+      "label": "Mummy",
+      "sourceOrigin": "imported",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "lelembutTypeId",
+          "value": "mummy"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "sand-manipulation",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Lelembut type result"
+        }
+      ],
+      "status": "User-confirmed event/grant; detailed balance and unspecified interpretations remain pending.",
+      "resultContext": {
+        "facts": [
+          "Jenis Lelembut terpilih: Mummy",
+          "Asal rujukan: Impor",
+          "Power diperoleh: Sand Manipulation",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Mummy. Power-nya Sand Manipulation. Mastery nanti.",
+        "themeIsGameplayGrant": false,
+        "availability": "Only after the type result and actual effects/tickets commit; follow-up outcomes are not known yet.",
+        "narrationExample": "Mummy dapet Sand Manipulation. Sekarang pasirnya bisa dia atur.",
+        "exampleMode": "Optional narration-only wording; not a new event or funny-result mechanics tag."
+      },
+      "returnPoint": "saved caller; archetype for the race-stage chain"
+    }
+  ],
+  "contracts": {
+    "sourceRace": {
+      "id": "undead-origin-reference",
+      "callerTypeIds": [
+        "skeleton",
+        "zombie"
+      ],
+      "wheelId": "undead-origin-race",
+      "sourceDefinitionFile": "race-wheel-design.json",
+      "sourceWheelRef": "race-family",
+      "questionTemplate": "Ras asal {lelembutTypeLabel}?",
+      "status": "User-confirmed source race and inherited source events; previous character race families excluded.",
+      "pool": "Reference the active canonical main race wheel, intersect caller guards and race-family-no-repeat, then normalize remaining declared weights.",
+      "record": "Keep Skeleton/Zombie as the undead identity. Add a scoped origin component and source family to the shared character race-selection history; retain actual family/selection-kind/spin provenance.",
+      "dispatchSelectedFamilyEvents": true,
+      "executionStatus": "Inheritance and non-repetition decisions settled. Full executable configuration still needs the ordinary unresolved catalog weights, size profiles, scales and family event details.",
+      "returnPoint": "After inherited immediate events, restore saved caller; race-stage root returns to archetype. Deferred stage effects remain queued.",
+      "resolutionRole": "origin-inheritance",
+      "eligibilityRuleRef": "race-family-no-repeat",
+      "eventInheritance": "Dispatch the selected family complete approved subtype and event plan once as an inherited origin component. Fixed grants, modifiers, hooks and deferred stage tickets use their own canonical contracts and caller return; do not invent unresolved family content.",
+      "dispatchOrder": [
+        "freeze eligible non-repeating origin pool",
+        "commit origin result and shared race history atomically",
+        "record inherited origin component while preserving undead identity",
+        "react to the origin result using committed facts",
+        "dispatch the origin family approved subtype/events with scoped provenance",
+        "resolve immediate child reactions; keep deferred tickets for normal stages",
+        "return to the saved caller"
+      ],
+      "provenance": "Each inherited family owns a componentId and source origin invocation; carry root undead componentId and parent componentId through child events. Consumed keys prevent replay from dispatching twice.",
+      "sizeAndArchetype": "An inherited Raksasa binds giant Size and makes the final character skip Archetype under policy 1.0.0. Retain undead identity and all origin grants; other origins use explicit body profiles without a Human fallback."
+    },
+    "vampirePrey": {
+      "id": "vampire-prey-reference",
+      "callerTypeId": "vampire",
+      "wheelId": "vampire-prey-race",
+      "sourceDefinitionFile": "race-wheel-design.json",
+      "sourceWheelRef": "race-family",
+      "question": "Ras mangsa?",
+      "status": "Requested race-wheel feeding preference; reference-only dispatch is a disclosed interpretation.",
+      "pool": "Use the canonical active main race wheel with base weight 1 per family unless user-specified, then apply this reference caller guards and approved modifiers. Freeze fresh actual odds without acquiring the prey race or consuming personal race history.",
+      "resolutionRole": "prey-reference",
+      "dispatchSelectedFamilyEvents": false,
+      "record": "Store prey selection family, selection kind, source invocation and Vampire component separately from personal identity.",
+      "sequence": [
+        "vampire-prey-race",
+        "vampire-victim-count",
+        "power-cursed only when victim count is 1000"
+      ],
+      "zeroVictims": "Retain the earlier prey result and its reaction even if count is zero; do not reroll or erase it.",
+      "ownership": "The prey selection does not grant its powers, race events, traits or owned units.",
+      "returnPoint": "After victim-count and eligible Cursed reaction, return to saved caller; race-stage caller returns to archetype."
+    },
+    "vampireFeeding": {
+      "wheelId": "vampire-victim-count",
+      "counts": [
+        0,
+        1,
+        5,
+        10,
+        100,
+        1000
+      ],
+      "weights": [
+        5,
+        4,
+        3,
+        3,
+        2,
+        1
+      ],
+      "totalWeight": 18,
+      "allowModifiers": false,
+      "typoInterpretation": "5:4:3:3:2:! is read as 5:4:3:3:2:1; assumption disclosed.",
+      "bonusRule": "0/1/5/10: no bonus. 100: +1 each of five stats. 1000: +1 each of five stats and exactly one canonical Cursed spin.",
+      "exclusiveOutcomes": "Use only the effects of the committed outcome. 1000 does not also apply a separate 100-tier bonus; total is +1 each, not +2.",
+      "provenance": "feedingHistory[] per Vampire source component; victim count is backstory context and does not spawn owned army units.",
+      "returnPoint": "After victim-count and eligible Cursed reaction, return to saved caller; race-stage caller returns to archetype."
+    },
+    "lichPowerSpin": {
+      "stage": "power",
+      "wheelFamily": "power",
+      "extraSpins": 1,
+      "requiredGrant": null,
+      "emptyOutcomePolicy": "Uses the approved normal Power pool, including None if configured. The user requests one extra spin.",
+      "sequence": "Main Power acquisition and immediate details -> pending bonus acquisitions and details -> mastery for all unresolved owned powers -> Weakness.",
+      "idempotence": "One ticket per committed Lich source result/component; consume atomically with the bonus result."
+    },
+    "lichDurability": {
+      "id": "lich-max-durability",
+      "target": "durability",
+      "amount": null,
+      "operation": "constrain-base-outcome-to-maximum",
+      "status": "User confirmed raw Durability9 guarantee, with ordinary final signed bonuses/debuffs; no minimum9 final guarantee.",
+      "trigger": "committed Lich type result",
+      "stage": "durability",
+      "maximumSource": "content/stat-scales-design.json#knownBindings.lichMaximumDurability: regenerative/value9",
+      "selection": "At the scheduled Durability stage intersect all declared eligibility constraints with the maximum base outcome. Empty intersection is a configuration conflict; never bypass a forbidden guard.",
+      "scheduledSpin": "Perform the actual normal Durability spin even if the constrained pool has one outcome at 100%; preserve invocation, frozen odds, result, and reaction.",
+      "base": "Store the maximum as the actual immutable rolled base outcome, not a post-roll replacement or an infinite numeric value.",
+      "ledger": "Final Durability = raw9 + distinct Durability modifiers, without numeric cap/floor. Example9 minus1 =8. Guarantee does not override final penalties.",
+      "idempotence": "Register once per committed source component. Multiple sources refer to the same scheduled maximum constraint and create no extra Durability spin.",
+      "lateActivation": "If acquired after Durability, retain the committed base and flag the late-guarantee resolution as pending design. Do not silently reroll or replace it.",
+      "context": "At Lich selection report a future Durability maximum guarantee, not an already rolled value; reveal the actual maximum value only at Durability.",
+      "baseValue": 9
+    },
+    "silumanBabi": {
+      "id": "siluman-babi-nyolong",
+      "sourceFamilyId": "beastfolk",
+      "animalTypeId": "babi",
+      "status": "Nyolong power requested for Babi Ngepet; routing through accepted Siluman Babi is a disclosed interpretation.",
+      "trigger": "committed Babi animal result for this Siluman race component",
+      "effects": [
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "nyolong",
+          "masteryTiming": "main-power-stage",
+          "source": "committed Siluman Babi animal result"
+        }
+      ],
+      "grantCount": 1,
+      "idempotence": "One Nyolong grant per source Siluman component with Babi; consume runId/ruleId/sourceSilumanComponentId atomically. Additional animal results or retries do not duplicate this grant.",
+      "timing": "Attach the fixed grant to the actual Babi result reaction; no new wheel. Animal Transformation remains a separate completion grant.",
+      "definitionAuthority": "lelembut-events-design.json; same Nyolong definition as Tuyul",
+      "mainPowerNone": "Retain this owned power and resolve pending normal Power Mastery.",
+      "laterBabi": "If another Babi component for the same Siluman component is allowed later, retain the original grant and add provenance/binding; no mastery respin."
+    },
+    "raceNoRepeat": {
+      "id": "race-family-no-repeat",
+      "status": "User-confirmed exclusion of previous character races; all previously committed selection families is the explicit design interpretation.",
+      "scope": "Every character-identity race draw/respin, including Skeleton/Zombie origin and proposed Hybrid parent or host selections.",
+      "key": "Canonical selectionFamilyId / option.familyId; enforce at the level selected by the race-family wheel.",
+      "state": "raceSelectionHistory[] and usedRaceFamilyIds[] shared by the whole character across all origin/parent branches.",
+      "initial": "The first main race result is committed to history before its subtype or other race events run. Selecting Skeleton/Zombie therefore already marks Lelembut used.",
+      "beforeDraw": "Intersect existing caller eligibility with familyId not in usedRaceFamilyIds. Disable all used sections before drawing; do not sample them then reroll.",
+      "weights": "Use user-specified weights where present, otherwise base weight 1. Apply approved modifiers and normalize over eligible positive weights. All previously selected race families have probability zero; exclusion dominates modifiers.",
+      "commit": "Atomically append invocation/role/family/component provenance and add the selected family to usedRaceFamilyIds before dispatching any child race events.",
+      "resume": "A resumed committed invocation reuses its result. It does not apply the exclusion to itself and reroll; history and consumed-event keys restore atomically.",
+      "bounded": "Each new identity-family result strictly enlarges the used set. At most the number of unique eligible catalog families can commit (17 in the current main pool), so race-family cycles cannot repeat indefinitely.",
+      "emptyPool": "A required draw with no eligible positive-weight candidate is an explicit configuration error. Never reset history, restore used sections, silently skip, or reroll a committed result.",
+      "subtypes": "Selecting a subtype/form is resolving the already-selected family, not selecting that family again. Known lore ancestry is not added to history unless it was actually selected by an identity race wheel.",
+      "referenceBoundary": "Vampire prey is a reference to a target, not a character race acquisition; it keeps its existing separate reference contract and does not consume personal race history.",
+      "archetypeBoundary": "Race no-repeat applies only to identity-family draws. Archetype is evaluated once after the complete Race tree; Raksasa skips and registers no second-Archetype ticket under policy 1.0.0. Preserve older committed journals under their original policy."
+    }
+  },
+  "contextContract": {
+    "layers": [
+      "selected family",
+      "Lokal/Impor result",
+      "selected Lelembut type and committed fixed grants/tickets/modifiers",
+      "actual source/prey race result when reached",
+      "actual feeding count and bonuses",
+      "actual Cursed power result if reached"
+    ],
+    "asOf": "Record source invocation/component scope for each layer; reaction sees committed facts only.",
+    "fixedGrants": "Attach fixed power/penalty reveals to their source reaction; no random spin is fabricated.",
+    "powerMastery": "All early grants remain owned for normal Power Mastery, even if main Power is None. No power enchantment.",
+    "funnyResult": "Narrator jokes or memes do not classify gameplay funny-result outcomes. Shrek bonuses require existing approved actual-result catalog tags.",
+    "narrationStyleRef": "framework/spec.json reactionContract.voiceStyle"
+  },
+  "openBalance": [
+    "Complete inherited origin body/component compatibility and declared family profiles; no-repeat guards and event-inheritance decisions are settled.",
+    "Equal Lelembut origin/type, main race and Cursed base weights confirmed; optional user overrides",
+    "Detailed scopes, numeric scales and limits; max base Durability vs final guarantee and late acquisition",
+    "Later probability/eligibility profiles for committed race and ability traits",
+    "Lelembut body reference profiles for global Size",
+    "Repeated identical power definitions from independent sources: merge/exclusion policy",
+    "Detailed wealth/resources, consumption, child protection, organ targets and transformation activation rules"
+  ],
+  "narrationStyle": {
+    "locale": "id-ID",
+    "status": "User-confirmed funny Gen Z Indonesian style; individual lines are editable examples.",
+    "voice": "Santai, lucu, kayak temen lagi nge-roast hasil gacha karakter. Campur Indonesia dan English yang familiar.",
+    "protectedLabels": [
+      "Ngesot",
+      "Mukbang",
+      "Nyolong",
+      "Pesugihan"
+    ],
+    "labels": "Pertahankan nama yang sudah enak dipakai. Ngesot tetap Ngesot; Mukbang tetap Mukbang. Penjelasan makna tinggal di scope/konteks AI, tanpa tambahan terjemahan baku pada label layar.",
+    "delivery": "Utamakan satu kalimat reaksi dan satu punchline pendek. Pakai slang secukupnya: dapet, mentok, build, gacha, bocil; jangan setiap kalimat dipaksa pakai slang yang sama.",
+    "facts": "Konteks fakta terstruktur menjadi sumber kebenaran; celetukan memakai hasil yang sudah tercatat dan tidak memberi power/stat/kejadian baru.",
+    "humorMechanics": "Contoh narasi bukan tag funny-result, tidak mengubah odds, dan tidak memicu bonus Shrek sendiri.",
+    "examples": "Boleh divariasikan dengan callback dari hasil sebelumnya; contoh bukan skrip wajib atau fakta kejadian tambahan."
+  },
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "maximumGuaranteeContract": {
+    "target": "durability",
+    "id": "lich-durability-max",
+    "value": 9,
+    "actualSpin": false,
+    "bonusTiming": "final-only",
+    "history": "Old saved singleton spins replay unchanged."
+  }
+}

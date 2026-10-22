@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "roda-kekacauan-goliath/0.1",
+  "version": "goliath/0.1.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "goliath",
+  "eventProfileId": "goliath-berserker-chance",
+  "status": "Core single 1:9 chance spin and exclusive Strength/weakness packages approved. Weakness combat activation/control profile, body-role fit and runtime helper remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Goliath spins whether it becomes Berserker or not, at Berserker : Not Berserker = 1:9.",
+      "Berserker grants +4 numeric Strength and Uncontrollable Rage weakness.",
+      "Not Berserker grants +2 numeric Strength."
+    ],
+    "interpretation": "Each result grants one mutually exclusive flat Strength amount (+4 total or +2 total). Uncontrollable Rage is an additional source-owned weakness; preserve the normal later Weakness spin."
+  },
+  "chanceWheel": {
+    "id": "goliath-berserker-chance",
+    "label": "Jadi Berserker?",
+    "outcomeCount": 2,
+    "drawCount": 1,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "berserker",
+        "label": "Berserker",
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "strength",
+            "amount": 4,
+            "unit": "numeric point"
+          },
+          {
+            "type": "grant-weakness",
+            "definitionRef": "goliath-events-design.json#weaknesses/0",
+            "weaknessId": "uncontrollable-rage"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Archetype: Goliath",
+            "Jadi Berserker",
+            "Strength +4",
+            "Weakness: Uncontrollable Rage"
+          ],
+          "caption": "Ngamuk nggak kekontrol.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "not-berserker",
+        "label": "Bukan Berserker",
+        "baseWeight": 9,
+        "probability": 0.9,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "strength",
+            "amount": 2,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Archetype: Goliath",
+            "Tidak menjadi Berserker",
+            "Strength +2"
+          ],
+          "caption": "Masih bisa kalem.",
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "weaknesses": [
+    {
+      "id": "uncontrollable-rage",
+      "label": "Uncontrollable Rage",
+      "context": "Amarah sulit dikendalikan.",
+      "grantMode": "additional source-owned weakness",
+      "numericStatPenalty": null,
+      "activationProfileStatus": "Pending detailed combat/control conditions; no extra numeric penalty or activation-chance wheel inferred."
+    }
+  ],
+  "contracts": {
+    "order": "Actual Goliath result/reaction -> exactly one Berserker chance spin -> atomically apply only its selected package -> child result/reaction -> Backstory.",
+    "probability": "Fixed user 1:9 weights: Berserker 10%, Not Berserker 90%. No equal-default replacement or unapproved odds modifiers.",
+    "strength": "Berserker +4 total or Not Berserker +2 total, never +2 plus +4. Register a source-scoped numeric flat modifier before main stats; preserve immutable raw results and independent existing modifiers.",
+    "weakness": "Only Berserker grants Uncontrollable Rage once, independently owned and retained through the normal later Weakness spin. Not Berserker grants no Goliath weakness and does not remove any previously owned weakness. No invented numeric debuff, severity/activation draw or penalty.",
+    "ledger": "Freeze wheel/rule version, pool, weights, outcome and selected package. Stable key runId/sourceArchetypeInvocationId/sourceChanceSpinId/eventProfileId; commit selected Strength and optional weakness atomically once. Replay/media retries add no spin, stat points, weakness or hook.",
+    "reaction": "Append actual Goliath and selected chance result, exact Strength package and any weakness to stacked context. No future Backstory/stat/mastery values or funny-result tag inferred from captions.",
+    "scope": "Berserker is a Goliath outcome flag, not another Archetype spin/dispatch. No Race/Size/body transformation, weapon, power, mastery or second chance spin. Fixed Strength/weakness grants are not stat spins and produce no Lucky Number hit.",
+    "return": "Restore Backstory after the one child package/reaction. Preserve all earlier source-owned grants and the remaining main flow."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only; pure event helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Uncontrollable Rage combat/control activation profile; no additional numeric penalty specified",
+    "final Archetype body/role fit and boost band",
+    "runtime event planner/resolver and persistence adapter"
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

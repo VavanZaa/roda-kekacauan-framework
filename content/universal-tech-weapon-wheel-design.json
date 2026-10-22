@@ -1,0 +1,917 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "Tech wheel/count/weapon classification user-confirmed; twenty original sci-fi choices authored within delegated scope.",
+  "wheel": {
+    "id": "tech-weapon",
+    "label": "Tech Weapon",
+    "scope": "canonical-shared",
+    "outcomeCount": 20,
+    "drawCount": 1,
+    "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+    "outcomes": [
+      {
+        "id": "scifi-tech-railgun",
+        "label": "Railgun",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-railgun",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Railgun",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Kecil badannya, niat recoil-nya besar.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-plasma-rifle",
+        "label": "Plasma Rifle",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-plasma-rifle",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Plasma Rifle",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Ammo biasa kurang, sekarang pakai plasma.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-laser-sword",
+        "label": "Laser Sword",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-laser-sword",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Laser Sword",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Blade nyala, tagihan daya ikut nyala.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-gravity-gun",
+        "label": "Gravity Gun",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-gravity-gun",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Gravity Gun",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Benda berat sekarang bisa diajak debat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-emp-launcher",
+        "label": "EMP Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-emp-launcher",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: EMP Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Musuh teknologi kena mode mati listrik.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-drone-swarm",
+        "label": "Drone Swarm",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-drone-swarm",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Drone Swarm",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Solo player, tetapi lobby-nya drone semua.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-nanobot-launcher",
+        "label": "Nanobot Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-nanobot-launcher",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Nanobot Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Serangannya kecil, masalahnya ramai.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-sonic-cannon",
+        "label": "Sonic Cannon",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-sonic-cannon",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Sonic Cannon",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Sound system berubah jadi loadout.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-cryo-gun",
+        "label": "Cryo Gun",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-cryo-gun",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Cryo Gun",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Lawan dipaksa chill dulu.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-ion-blaster",
+        "label": "Ion Blaster",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-ion-blaster",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Ion Blaster",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Kalau debat gagal, ion ikut bicara.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-tesla-gauntlet",
+        "label": "Tesla Gauntlet",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-tesla-gauntlet",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Tesla Gauntlet",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Salaman bisa beda cerita.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-monowire",
+        "label": "Monowire",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-monowire",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Monowire",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Tipis tampilannya, tidak tipis urusannya.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-smart-missile",
+        "label": "Smart Missile Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-smart-missile",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Smart Missile Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Ammo-nya punya GPS sendiri.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-hardlight-projector",
+        "label": "Hard-Light Projector",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-hardlight-projector",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Hard-Light Projector",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Lampu sekarang bisa dijadikan cover.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-hologram-decoy",
+        "label": "Hologram Decoy Kit",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-hologram-decoy",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Hologram Decoy Kit",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Bait-nya HD, pemainnya sudah cabut.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-teleport-anchor",
+        "label": "Teleport Anchor Gun",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-teleport-anchor",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Teleport Anchor Gun",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Kabur pakai fitur pindah tempat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-magnetic-launcher",
+        "label": "Magnetic Disc Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-magnetic-launcher",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Magnetic Disc Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Bumerang versi bengkel masa depan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-energy-whip",
+        "label": "Energy Whip",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-energy-whip",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Energy Whip",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Melee, tetapi jangkauannya punya ambisi.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-capture-net",
+        "label": "Capture Net Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-capture-net",
+        "tags": [
+          "scifi-tech"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Capture Net Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Lawan masuk inventori tangkapan dulu.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "scifi-tech-banana-launcher",
+        "label": "Banana Peel Launcher",
+        "baseWeight": 1,
+        "weaponRef": "scifi-tech-banana-launcher",
+        "tags": [
+          "scifi-tech",
+          "funny-result"
+        ],
+        "resultContext": {
+          "facts": [
+            "Tech Weapon diperoleh: Banana Peel Launcher",
+            "Weapon Mastery: belum diputar"
+          ],
+          "displayContext": "Teknologinya maju, amunisinya dari dapur.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      }
+    ]
+  },
+  "techWeapons": [
+    {
+      "id": "scifi-tech-railgun",
+      "label": "Railgun",
+      "catalogOrder": 1,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Peluncur proyektil elektromagnetik.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Railgun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kecil badannya, niat recoil-nya besar.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-plasma-rifle",
+      "label": "Plasma Rifle",
+      "catalogOrder": 2,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Senapan energi plasma fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Plasma Rifle",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Ammo biasa kurang, sekarang pakai plasma.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-laser-sword",
+      "label": "Laser Sword",
+      "catalogOrder": 3,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Pedang dengan bilah energi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Laser Sword",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Blade nyala, tagihan daya ikut nyala.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-gravity-gun",
+      "label": "Gravity Gun",
+      "catalogOrder": 4,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Perangkat untuk menarik atau mendorong objek lewat gaya gravitasi fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Gravity Gun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Benda berat sekarang bisa diajak debat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-emp-launcher",
+      "label": "EMP Launcher",
+      "catalogOrder": 5,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Peluncur gangguan energi untuk perangkat elektronik fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: EMP Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Musuh teknologi kena mode mati listrik.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-drone-swarm",
+      "label": "Drone Swarm",
+      "catalogOrder": 6,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Satu kit kontrol kawanan drone taktis.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Drone Swarm",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Solo player, tetapi lobby-nya drone semua.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-nanobot-launcher",
+      "label": "Nanobot Launcher",
+      "catalogOrder": 7,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Perangkat penyebar nanobot fiksi untuk sabotase atau kendali material.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Nanobot Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Serangannya kecil, masalahnya ramai.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-sonic-cannon",
+      "label": "Sonic Cannon",
+      "catalogOrder": 8,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Meriam gelombang suara terarah.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Sonic Cannon",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Sound system berubah jadi loadout.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-cryo-gun",
+      "label": "Cryo Gun",
+      "catalogOrder": 9,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Perangkat pembeku melalui teknologi fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Cryo Gun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Lawan dipaksa chill dulu.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-ion-blaster",
+      "label": "Ion Blaster",
+      "catalogOrder": 10,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Blaster energi ion fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Ion Blaster",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kalau debat gagal, ion ikut bicara.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-tesla-gauntlet",
+      "label": "Tesla Gauntlet",
+      "catalogOrder": 11,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Sarung tangan penghasil serangan listrik fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Tesla Gauntlet",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Salaman bisa beda cerita.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-monowire",
+      "label": "Monowire",
+      "catalogOrder": 12,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Benang pemotong futuristis terikat pada perangkat kontrol.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Monowire",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Tipis tampilannya, tidak tipis urusannya.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-smart-missile",
+      "label": "Smart Missile Launcher",
+      "catalogOrder": 13,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Peluncur proyektil dengan pemandu target fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Smart Missile Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Ammo-nya punya GPS sendiri.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-hardlight-projector",
+      "label": "Hard-Light Projector",
+      "catalogOrder": 14,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Pembentuk konstruksi cahaya padat fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Hard-Light Projector",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Lampu sekarang bisa dijadikan cover.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-hologram-decoy",
+      "label": "Hologram Decoy Kit",
+      "catalogOrder": 15,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Satu kit pembuat umpan hologram.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Hologram Decoy Kit",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Bait-nya HD, pemainnya sudah cabut.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-teleport-anchor",
+      "label": "Teleport Anchor Gun",
+      "catalogOrder": 16,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Perangkat penanda pasangan titik perpindahan berjangkauan terbatas.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Teleport Anchor Gun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kabur pakai fitur pindah tempat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-magnetic-launcher",
+      "label": "Magnetic Disc Launcher",
+      "catalogOrder": 17,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Pelontar cakram dengan kontrol magnetik fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Magnetic Disc Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Bumerang versi bengkel masa depan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-energy-whip",
+      "label": "Energy Whip",
+      "catalogOrder": 18,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Cambuk energi untuk serangan dan pengekangan fiksi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Energy Whip",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Melee, tetapi jangkauannya punya ambisi.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-capture-net",
+      "label": "Capture Net Launcher",
+      "catalogOrder": 19,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Pelontar jaring taktis berenergi.",
+      "tags": [
+        "scifi-tech"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Capture Net Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Lawan masuk inventori tangkapan dulu.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    },
+    {
+      "id": "scifi-tech-banana-launcher",
+      "label": "Banana Peel Launcher",
+      "catalogOrder": 20,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original sci-fi game gadget, user-delegated twenty-entry pool; independent of Gnome tinkering catalog.",
+      "scope": "Pelontar kulit pisang sebagai gadget perangkap komedi.",
+      "tags": [
+        "scifi-tech",
+        "funny-result"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage per owned instance",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible Master-or-higher effective Weapon Mastery gate, one unconsumed configured slot. Compatibility and slots pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Device effects, range, damage, duration, ammunition, recharge and compatible Enchant profiles remain pending.",
+      "resultContext": {
+        "facts": [
+          "Tech Weapon diperoleh: Banana Peel Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Teknologinya maju, amunisinya dari dapur.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      }
+    }
+  ],
+  "invocationContract": {
+    "callers": [
+      {
+        "id": "anime-mc-technician",
+        "drawCount": 1,
+        "modifierRef": "technician-tech-weapon-mastery"
+      },
+      {
+        "id": "anime-mc-cyborg",
+        "drawCount": 2,
+        "modifierRef": null
+      }
+    ],
+    "sampling": "Working interpretation: replacement between calls. Two Cyborg calls are sequential actual spins; keep repeated definitions as distinct weapon instances and no uniqueness reroll.",
+    "grants": "One weapon kit per committed result. Drones/nanobots/controllers do not add extra weapons or personal powers.",
+    "gnomeBoundary": "Do not replace content/dwarf-gnome-events-design.json#techWeapons or invoke Gnome events.",
+    "funnyResultPolicy": "Banana Peel Launcher explicitly authored funny-result for the existing Shrek hook; the hook applies only when Shrek is already active before this actual spin and once per spin. Other captions alone create no hook.",
+    "returnPolicy": "Finish required actual draw(s)/reactions then saved caller; mastery follows main Weapon acquisitions."
+  }
+}

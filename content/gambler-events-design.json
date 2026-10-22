@@ -1,0 +1,550 @@
+{
+  "schemaVersion": "roda-kekacauan-gambler/0.1",
+  "version": "gambler/0.3.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "gambler",
+  "eventProfileId": "gambler-stat-rules",
+  "status": "Four user-defined modes approved; Lucky Number replaces Lucky 7 and includes actual stat/weapon-mastery/shared-power-mastery spins. Numeric scales/mastery match mapping/runtime helper remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Gambler has exactly four types: All In, Double or Nothing, High Roller and Lucky Number; unspecified type odds use the user equal default.",
+      "All In rolls only one main stat and the rest share its rolled number.",
+      "Double or Nothing makes one 1:1 Double/Nothing spin immediately after each main-stat roll; Double doubles the rolled stat number, Nothing resolves that base to zero.",
+      "User clarifies Double or Nothing affects the raw rolled number only: roll 4 plus bonus 1 -> Double final 9 or Nothing final 1 before other configured effects/bounds.",
+      "High Roller restricts each stat wheel to its two highest point values and two lowest point values.",
+      "Lucky Number replaces Lucky 7: select one number 0..9; every actual stat spin, including Weapon Mastery and Power Mastery, matching that number contributes +1 to all five main stats, applied at the end."
+    ],
+    "authoredChoices": "All In uses the first main stat Strength and copies its raw base only, retaining independent per-stat bonuses. High Roller uses distinct numeric point order and equal base weights for its four eligible points. These interpretations are disclosed; no numeric range or final stat cap is invented. Lucky Number counts immutable raw values/mapped mastery outcome numbers, not effective boosted ranks. Finish all mandatory late events before one final settlement. Mastery label-to-number mapping must be explicit; video label counts do not establish numeric indices."
+  },
+  "statKeys": [
+    "strength",
+    "speed",
+    "durability",
+    "intelligence",
+    "fight"
+  ],
+  "typeWheel": {
+    "id": "gambler-type",
+    "label": "Tipe Gambler",
+    "outcomeCount": 4,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "all-in",
+        "label": "All In",
+        "policyId": "gambler-all-in",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "effects": [
+          {
+            "type": "register-stat-roll-policy",
+            "policyId": "gambler-all-in",
+            "source": "actual Gambler type result"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Tipe Gambler: All In"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "double-or-nothing",
+        "label": "Double or Nothing",
+        "policyId": "gambler-double-or-nothing",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "effects": [
+          {
+            "type": "register-stat-roll-policy",
+            "policyId": "gambler-double-or-nothing",
+            "source": "actual Gambler type result"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Tipe Gambler: Double or Nothing"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "high-roller",
+        "label": "High Roller",
+        "policyId": "gambler-high-roller",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "effects": [
+          {
+            "type": "register-stat-roll-policy",
+            "policyId": "gambler-high-roller",
+            "source": "actual Gambler type result"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Tipe Gambler: High Roller"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number",
+        "label": "Lucky Number",
+        "policyId": "gambler-lucky-number",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "effects": [
+          {
+            "type": "register-stat-roll-policy",
+            "policyId": "gambler-lucky-number",
+            "source": "actual Gambler type result"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Tipe Gambler: Lucky Number"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "decisionWheel": {
+    "id": "gambler-double-or-nothing",
+    "label": "Double or Nothing",
+    "outcomeCount": 2,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "double",
+        "label": "Double",
+        "baseWeight": 1,
+        "probability": 0.5,
+        "rawBaseMultiplier": 2
+      },
+      {
+        "id": "nothing",
+        "label": "Nothing",
+        "baseWeight": 1,
+        "probability": 0.5,
+        "rawBaseMultiplier": 0
+      }
+    ]
+  },
+  "statPolicies": [
+    {
+      "id": "gambler-all-in",
+      "typeId": "all-in",
+      "rawStatDrawCount": 1,
+      "sourceStat": "strength",
+      "sourceStatAuthority": "Authored working interpretation: first stat in the existing main order; no extra stat-picker wheel.",
+      "copiedStatKeys": [
+        "speed",
+        "durability",
+        "intelligence",
+        "fight"
+      ],
+      "operations": [
+        {
+          "type": "raw-stat-spin",
+          "stat": "strength"
+        },
+        {
+          "type": "copy-raw-base",
+          "sourceStat": "strength",
+          "targets": [
+            "speed",
+            "durability",
+            "intelligence",
+            "fight"
+          ],
+          "actualSpin": false
+        }
+      ],
+      "baseFormula": "resolvedBaseValue[stat] = rawStrengthRoll.value for all five stats",
+      "flatBonusPolicy": "Keep each stat own preexisting numeric modifiers after copying the raw base. Final values can differ through those declared modifiers; do not copy Strength bonuses to other stats.",
+      "skipJournal": "Four later stat draw slots are explicit copied-base skips, referencing the one actual Strength spin; never fabricated spins/outcomes or additional committed-spin hooks."
+    },
+    {
+      "id": "gambler-double-or-nothing",
+      "typeId": "double-or-nothing",
+      "rawStatDrawCount": 5,
+      "postRawStatDrawCount": 5,
+      "afterEachRawRoll": {
+        "wheelId": "gambler-double-or-nothing",
+        "drawCount": 1,
+        "returnTo": "saved next-stat continuation"
+      },
+      "baseFormula": "resolvedBaseValue = decisionMultiplier * rawStatRoll.value",
+      "bonusOrder": "Resolve raw-only multiplier first, then apply each stat normal independent flat modifiers and later configured multipliers/bounds. Do not multiply race/Archetype/equipment/Lucky bonuses or mutate raw journals.",
+      "decisionMultipliers": {
+        "double": 2,
+        "nothing": 0
+      }
+    },
+    {
+      "id": "gambler-high-roller",
+      "typeId": "high-roller",
+      "rawStatDrawCount": 5,
+      "selection": {
+        "source": "That stat configured eligible numeric point wheel",
+        "lowestDistinctPointCount": 2,
+        "highestDistinctPointCount": 2,
+        "outcomeCount": 4,
+        "baseWeightPerPoint": 1,
+        "probabilityBeforeApprovedModifiers": 0.25,
+        "sortBy": "numeric value",
+        "requiresDistinctNumericPoints": 4,
+        "noInventedScale": true,
+        "unconstrainedPointValues": [
+          0,
+          1,
+          8,
+          9
+        ]
+      },
+      "baseFormula": "resolvedBaseValue = actual selected extreme point",
+      "constraints": "Keep declared hard eligibility/guarantees and approved conditional modifiers. Require four distinct eligible numeric points; fewer points, ambiguous duplicate-point aliases or an incompatible guarantee are explicit needs_configuration, not a silent guard bypass or invented point. Final scale/constraint composition remains configuration."
+    },
+    {
+      "id": "gambler-lucky-number",
+      "typeId": "lucky-number",
+      "rawStatDrawCount": 5,
+      "numberSelection": {
+        "wheelId": "gambler-lucky-number",
+        "drawCount": 1,
+        "timing": "After the actual Lucky Number type result/reaction; before Backstory and any main-stat/mastery roll",
+        "field": "luckyNumber",
+        "immutable": true
+      },
+      "trigger": {
+        "source": "actual committed raw stat or mastery spin result",
+        "eligibleSpinKinds": [
+          "main-stat",
+          "bonus-stat",
+          "weapon-mastery",
+          "power-mastery"
+        ],
+        "guard": "Active Lucky Number source; actual spin with explicitly typed stat/mastery purpose, frozen match-number binding, committed before final settlement",
+        "match": "exact numeric equality with saved luckyNumber",
+        "statValue": "Immutable raw numeric stat outcome value",
+        "masteryValue": "Immutable raw outcome luckyMatchNumber from the configured label-to-number map, before bonuses without numeric floor/caps/guarantee overrides",
+        "mapping": {
+          "masteryMatchNumberRange": [
+            0,
+            9
+          ],
+          "configurationRequired": false,
+          "noLabelParsing": true,
+          "noImplicitSectorIndex": true,
+          "freezeMapWithPool": true,
+          "missingBinding": "needs_configuration",
+          "scaleCatalogRef": "stat-scales-design.json",
+          "version": "stat-scales/0.2.0"
+        },
+        "dedupBy": "runId + Gambler source invocation ID + actual source spin ID",
+        "powerMasteryScope": "One shared mastery resolution: each actually spun attempt can count once if explicitly combined with Resilient; never a hit per owned power/projection. Default single draw otherwise."
+      },
+      "counter": {
+        "field": "luckyNumberHitCount",
+        "minimum": 0,
+        "maximum": null,
+        "maximumReason": "Depends on the number of actual eligible stat/mastery spins; not capped at five",
+        "processedSourcesField": "processedEligibleRawSpinIds"
+      },
+      "settlement": {
+        "timing": "At finalize, after Title and every mandatory late stat/mastery/event/reaction, before final stats are frozen and before image generation",
+        "requires": [
+          "Lucky Number target committed",
+          "All five main-stat bases resolved",
+          "All mandatory event/mastery continuations complete",
+          "Every eligible actual spin classified and processed"
+        ],
+        "amountPerHitPerStat": 1,
+        "targets": [
+          "strength",
+          "speed",
+          "durability",
+          "intelligence",
+          "fight"
+        ],
+        "drawCount": 0,
+        "formula": "bonusPerStat = distinctActualMatchingSpinCount",
+        "ledgerKey": "runId + Gambler source invocation + lucky-number-settlement",
+        "recursiveTrigger": false,
+        "commit": "One atomic source-keyed package of five flat modifiers; do not settle at Fight or on each hit"
+      },
+      "baseFormula": "resolvedBaseValue = actual raw statRoll.value",
+      "exclusions": [
+        "The lucky-number selector itself, type selection, race/Size, power acquisition and Power Tier 1..5 metadata",
+        "Skipped/copy/reused results, fixed stat/mastery grants, derived/final boosted values and bonus projection onto multiple powers",
+        "Double/Nothing decision wheels, reactions, renders, replay and the Lucky bonus itself"
+      ],
+      "bonusStatBinding": "A late/Apex numeric stat-result wheel is eligible only when declared as an actual bonus-stat spin with an immutable numeric outcome. Selecting an Apex force or applying a fixed modifier is not a stat draw."
+    }
+  ],
+  "contracts": {
+    "order": "Actual Gambler -> one four-type spin/reaction -> register selected policy -> only for Lucky Number, one 0..9 selector/reaction -> Backstory -> Size/Cosmic -> selected main-stat schedule -> Weapon/mastery/Enchant -> Power/shared mastery -> Weakness -> Apex -> Title and mandatory late events -> finalize Lucky Number once -> freeze/image/final card. Main stage order unchanged.",
+    "exclusivity": "Exactly one selected Gambler type per actual Gambler event. Approved Archetype Hybrid may add one different child role; it cannot select Gambler twice. Do not activate all four types, copy source-video The Lucky Fool or silently combine incompatible policy sources. Use an approved compatible composition schedule.",
+    "raw": "Preserve every actual raw stat outcome, scale, odds and source spin immutable. Store resolvedBaseValue and its copy/Double/Nothing provenance separately; then apply independent stat modifiers. Missing numeric scale/mapping is needs_configuration, never arithmetic on lore-tier labels. Lucky Number also preserves actual mastery outcome and its frozen explicit match-number map; no matching against effective rank.",
+    "zeroAndDouble": "Nothing derives a base of exactly zero even if zero is absent from the normal draw wheel. Double can derive above the ordinary wheel maximum. Do not constrain derived values back to draw outcomes; final configured numeric bounds are a separate policy still pending.",
+    "ledger": "Journal selected type and conditional lucky-number target once; freeze each actual pool/outcome/value/map/odds/version. Base/decision resolution remains source-once. Lucky Number records each matching actual stat/mastery source spin once, including late draws; settle one all-stat package only at finalize after all mandatory events. Replay/media retries add no spins/hits/modifiers.",
+    "reaction": "React to each actual type/number/stat/decision/mastery spin from committed facts. Announce a known hit/running count without predicting future results or final total. Copies and final Lucky settlement are fixed reveals/effects, not spins or funny-result triggers.",
+    "scope": "Only the selected Gambler policy operates. Lucky Number adds its one conditional target selector and passive committed stat/mastery bookkeeping; it creates no extra acquisition/mastery draw or Power Mastery follow-up wheel. Existing five stats, inventory, race bonuses, normal mastery and Enchant remain.",
+    "sourceBoundary": "Source-video gambling beats remain preserved evidence. These four modes and odds derive from the direct user instruction, not inferred video rules. The second supplied video visually has ten Power Mastery choices and ten Weapon Mastery choices, including Darwizzy; labels/count only, no source numeric indexing or odds adopted. Latest project adoption binds Noob=0 and the nine regular labels=1..9 explicitly in stat-scales-design.json; source evidence remains unchanged.",
+    "bonusTiming": "All five main-stat bonuses/debuffs accumulate in source ledgers during generation and are calculated only at finalize, after all mandatory spins/reactions. Raw/copy/Double-Nothing bases resolve earlier without adding bonuses."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "algorithm design only; pure stat-policy helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Raw0..9 approved; final numeric values signed and unbounded, including zero/doubled derived bases.",
+    "All In source-stat or bonus-copy interpretation may be refined; current first-Strength/raw-only choice is disclosed",
+    "High Roller duplicate-point normalization and hard-constraint composition",
+    "final Archetype body/role fit and boost band",
+    "runtime stat-policy planner/resolver and frozen journal persistence",
+    "Intelligence 1..9 display labels and typed bonus-stat bindings; numeric mapping is explicit in stat-scales/0.2.0"
+  ],
+  "luckyNumberWheel": {
+    "id": "gambler-lucky-number",
+    "label": "Angka Hoki",
+    "guard": "Only actual selected Lucky Number type",
+    "outcomeCount": 10,
+    "drawCount": 1,
+    "allowModifiers": false,
+    "returnTo": "saved Archetype event continuation, then Backstory",
+    "outcomes": [
+      {
+        "id": "lucky-number-0",
+        "label": "0",
+        "value": 0,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 0,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 0"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-1",
+        "label": "1",
+        "value": 1,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 1,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 1"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-2",
+        "label": "2",
+        "value": 2,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 2,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 2"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-3",
+        "label": "3",
+        "value": 3,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 3,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 3"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-4",
+        "label": "4",
+        "value": 4,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 4,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 4"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-5",
+        "label": "5",
+        "value": 5,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 5,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 5"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-6",
+        "label": "6",
+        "value": 6,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 6,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 6"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-7",
+        "label": "7",
+        "value": 7,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 7,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 7"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-8",
+        "label": "8",
+        "value": 8,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 8,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 8"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "lucky-number-9",
+        "label": "9",
+        "value": 9,
+        "baseWeight": 1,
+        "probability": 0.1,
+        "effects": [
+          {
+            "type": "record-lucky-number",
+            "value": 9,
+            "source": "actual lucky-number selection spin"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Angka hoki: 9"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "retiredProfiles": [
+    {
+      "version": "gambler/0.1.0",
+      "active": false,
+      "definitionFile": "../reference/gambler-retired-profile-0.1.0.json",
+      "reason": "User replaces fixed Lucky 7/main-stat-only early settlement with Lucky Number/stat-and-mastery final settlement. Preserve committed old journals without migration."
+    }
+  ],
+  "referenceAudit": "../reference/stat-mastery-video2-reference.json",
+  "scaleCatalogRef": "stat-scales-design.json",
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-stat-scales-resilient-2026-10-09.json",
+    "policy": "New invocations use explicit stat-scales/0.2.0 bindings and this version; committed old journals retain original pools/maps/results/rewards and timing."
+  },
+  "hybridCompositionRef": "content/archetype-hybrid-events-design.json#contracts.policyComposition",
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "statOddsRuntimeRef": {
+    "design": "content/stat-odds-design.json",
+    "module": "framework/stat-odds.mjs",
+    "version": "stat-odds/0.4.0",
+    "status": "Pure planner and actual raw/retry/decision resolver implemented; persistence/final aggregate settlement remains future.",
+    "maximumRandomTierProbability": 0.25,
+    "decisionWheelProbabilityCapApplies": false,
+    "minimumRandomTierProbability": 0.05
+  }
+}

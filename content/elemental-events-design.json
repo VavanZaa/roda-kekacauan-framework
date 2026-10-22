@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "roda-kekacauan-elemental-events/0.1",
+  "status": "User-confirmed one universal Element spin and its selected manipulation power. Elemental has no Power Mastery boost; Element roster and detailed balance remain pending.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "elemental",
+  "eventProfileId": "elemental",
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "wheelId": "element-universal",
+      "callers": [
+        "Elemental"
+      ],
+      "drawCount": 1
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "elemental",
+      "label": "Elemental",
+      "status": "User-confirmed selector and selected power; no mastery bonus.",
+      "effects": [],
+      "resultContext": {
+        "facts": [
+          "Ras terpilih: Elemental",
+          "Satu spin Element universal berikutnya; elemen dan power spesifik belum diketahui",
+          "Tidak ada bonus Power Mastery dari ras Elemental",
+          "Power hasil elemen memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Dapet Elemental. Spin Element dulu buat nentuin power kendalinya. Ras ini tidak memberi bonus mastery.",
+        "narrationExample": "Elemental masuk lobby. Elemennya masih loading, spin dulu bos.",
+        "availability": "Only after the actual Elemental family selection commits. Reveal the element/power only after the canonical Element result and linked grant commit. Shared mastery rank is available only if already recorded.",
+        "exampleMode": "Optional Gen Z Indonesian narration only; no new power/stat or funny-result mechanics tag."
+      },
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome grants its one linked manipulation power once; no separate generic elemental power or Power acquisition spin.",
+        "identityBinding": "Record the actual selected element as elementalElementId and the existing component-scoped element affinity, retaining Elemental family identity.",
+        "caller": "Elemental with actual source component/family spin provenance",
+        "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Semantic profile basis only; exact future odds remain pending.",
+        "basis": [
+          "actual selected element",
+          "owned canonical manipulation power",
+          "actual Elemental component provenance"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Apply only explicitly configured eligibility/weight rules. Elemental itself grants no main-stat or mastery modifier."
+      }
+    }
+  ],
+  "contracts": {
+    "routing": "Commit/react to Elemental family result, call element-universal exactly once, commit its selected element and linked power, react to that actual result, then restore the saved caller.",
+    "profileAuthority": "The profile here is canonical. Race branch and specification pointers are references/mirrors, not extra independent invocations.",
+    "selectedPower": "Use one canonical power from universal-element-wheel-design.json. No cloned Element wheel, bundled elements or generic elemental power.",
+    "mastery": "framework/spec.json#powerMasteryContract",
+    "masteryBoost": {
+      "amount": 0,
+      "status": "Explicit user correction: Elemental has no Power Mastery boost.",
+      "policy": "Register no mastery modifier for Elemental or a generic Element result. Other independently acquired approved source bonuses still affect the common character rank."
+    },
+    "classification": "Elemental keeps its own family identity. An Element Golem, Pixie or Naga selecting the same element remains its original family and does not dispatch this profile.",
+    "ownedInventory": "Keep selected elemental power after main Power None. It participates in the one shared character mastery; late grants inherit an existing rank. Normal main Weapon/Power acquisitions remain.",
+    "inheritedOrigins": "Authorized Skeleton/Zombie origin or Hybrid/host callers execute this same approved profile with actual component provenance, shared race-family exclusion history and saved return.",
+    "idempotence": "Consume the profile and Element child invocation once per run/sourceComponentId/sourceSpinId/profileId. Replay or media retry duplicates no grants/spins.",
+    "size": "Participate in the global Size stage. Sourced body metric and reference profiles remain pending; an element name does not grant another Size spin or immunity.",
+    "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization."
+  },
+  "contextContract": {
+    "committedFacts": [
+      "actual selected family/component",
+      "actual selected element after its result",
+      "actual owned linked manipulation power",
+      "shared mastery status/rank only when recorded"
+    ],
+    "notAvailableYet": "Future element, main stat, mastery, weapon and title outcomes must not appear in an earlier reaction.",
+    "reactionPolicy": "Every actual family/Element spin receives one reaction. Shared grant/context references are not extra spins."
+  },
+  "openBalance": [
+    "Complete the universal Element roster and weights; retain current proposed starter until revised.",
+    "Set material/element control ranges, costs, duration, limits and rank scale.",
+    "Source Elemental Size body metrics/reference profiles and define later odds."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

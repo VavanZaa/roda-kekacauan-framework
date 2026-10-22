@@ -1,0 +1,1123 @@
+{
+  "schemaVersion": 1,
+  "status": "Five user-confirmed types/events and equal base odds; canonical twenty-outcome Demonic/Angelic routes. Follower/sin/Setan rewards unchanged; exact power roster authored editable.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "demon",
+  "displayLabel": "Abyssal Axiom",
+  "previousDisplayLabel": "Demon",
+  "renameContract": {
+    "status": "Display rename applied under user request",
+    "identity": "The existing demon family keeps its canonical ID and race no-repeat key. This is the same main option, not an eighteenth race or a separate Demon/Devil identity draw.",
+    "historical": "Keep video roster, source names, existing reference identity strings and committed journals unchanged."
+  },
+  "classification": "User-defined fantasy family mixing creature, rank and status profiles; source motifs are context only.",
+  "subtypeWheelId": "abyssal-axiom-type",
+  "subtypeIds": [
+    "demon-lord",
+    "ordinary-demon",
+    "fallen-angel",
+    "setan",
+    "sinner"
+  ],
+  "subtypeWeights": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "subtypeTotalWeight": 5,
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "wheelId": "power-demonic",
+      "displayLabel": "Demonic Power",
+      "outcomeCount": 20,
+      "callers": [
+        "demon-lord:4",
+        "ordinary-demon:2",
+        "fallen-angel:1"
+      ],
+      "catalogVersion": "universal-power/0.2.0",
+      "orderedBy": "powerTier ascending 1..5; four results per tier"
+    },
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "wheelId": "power-angelic",
+      "outcomeCount": 20,
+      "callers": [
+        "fallen-angel:1"
+      ],
+      "catalogVersion": "universal-power/0.2.0",
+      "orderedBy": "powerTier ascending 1..5; four results per tier"
+    },
+    {
+      "definitionFile": "universal-sin-wheel-design.json",
+      "wheelId": "seven-deadly-sin",
+      "outcomeCount": 7,
+      "callers": [
+        "ordinary-demon:1",
+        "sinner:1"
+      ]
+    },
+    {
+      "definitionFile": "universal-follower-wheel-design.json",
+      "wheelId": "follower-count",
+      "outcomeCount": 9,
+      "callers": [
+        "demon-lord:1"
+      ]
+    }
+  ],
+  "powers": [
+    {
+      "id": "invisibility",
+      "label": "Invisibility (Mode Ngilang)",
+      "group": "abyssal-fixed",
+      "contentStatus": "Authored within delegated Setan scope; broad motif supported by Imp reference.",
+      "scope": "Menyembunyikan tubuh dari penglihatan pada target/spektrum yang kompatibel; tidak otomatis menembus benda, menghilangkan jejak atau kebal serangan.",
+      "affinityTags": [
+        "invisibility",
+        "stealth"
+      ],
+      "mechanicalBalance": "Duration, targets, cost, counter-detection and rank limits pending.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from Power Mastery",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Invisibility (Mode Ngilang)",
+          "Mastery mengikuti hasil bersama"
+        ],
+        "displayContext": "Power diperoleh: Invisibility (Mode Ngilang). Mastery mengikuti hasil bersama.",
+        "narrationExample": "Kelihatan kecil? Sekarang malah nggak kelihatan.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#invisibility"
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "demon-lord",
+      "label": "Raja Iblis Agung",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype/event; delegated power definitions.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "abyssalSubtypeId",
+          "value": "demon-lord",
+          "source": "actual committed subtype and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "power-demonic",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 4,
+          "invocationCount": 4,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "demonic-power-grants",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "displayLabel": "Demonic Power",
+          "aliasPolicy": "Canonical independent Demonic wheel, not a Cursed display alias.",
+          "catalogVersion": "universal-power/0.2.0"
+        },
+        {
+          "wheelId": "follower-count",
+          "definitionFile": "universal-follower-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "follower-count",
+          "sequenceIndex": 2,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "rewardProfileId": "demon-lord"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Abyssal Axiom terpilih: Raja Iblis Agung",
+          "Empat spin Demonic Power berikutnya",
+          "Lalu jumlah pengikut; bonus mengikuti hasil terpilih"
+        ],
+        "displayContext": "Abyssal Axiom terpilih: Raja Iblis Agung. Empat spin Demonic Power berikutnya. Lalu jumlah pengikut; bonus mengikuti hasil terpilih.",
+        "narrationExample": "Gelar final boss sudah. Cek pengikutnya, jangan-jangan cuma akun sendiri.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "returnPoint": "saved caller; archetype for normal race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+        "basis": [
+          "actual subtype",
+          "actual powers",
+          "scoped follower results"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "ordinary-demon",
+      "label": "Iblis",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype/event; delegated power definitions.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "abyssalSubtypeId",
+          "value": "ordinary-demon",
+          "source": "actual committed subtype and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "seven-deadly-sin",
+          "definitionFile": "universal-sin-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "sin-power",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain"
+        },
+        {
+          "wheelId": "power-demonic",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 2,
+          "invocationCount": 2,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "demonic-power-grants",
+          "sequenceIndex": 2,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "displayLabel": "Demonic Power",
+          "aliasPolicy": "Canonical independent Demonic wheel, not a Cursed display alias.",
+          "catalogVersion": "universal-power/0.2.0"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Abyssal Axiom terpilih: Iblis",
+          "Satu Tujuh Dosa Besar memberi power dosa terpilih",
+          "Lalu dua Demonic Power spin"
+        ],
+        "displayContext": "Abyssal Axiom terpilih: Iblis. Satu Tujuh Dosa Besar memberi power dosa terpilih. Lalu dua Demonic Power spin.",
+        "narrationExample": "Dosa dulu, dua Demonic kemudian. Paket villain tinggal tunggu roda.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "returnPoint": "saved caller; archetype for normal race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+        "basis": [
+          "actual subtype",
+          "actual powers",
+          "scoped follower results"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "fallen-angel",
+      "label": "Fallen Angel",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype/event; delegated power definitions.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "abyssalSubtypeId",
+          "value": "fallen-angel",
+          "source": "actual committed subtype and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "power-demonic",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "demonic-power-grant",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "displayLabel": "Demonic Power",
+          "aliasPolicy": "Canonical independent Demonic wheel, not a Cursed display alias.",
+          "catalogVersion": "universal-power/0.2.0"
+        },
+        {
+          "wheelId": "power-angelic",
+          "definitionFile": "universal-power-wheels-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "angelic-power-grant",
+          "sequenceIndex": 2,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain",
+          "catalogVersion": "universal-power/0.2.0"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Abyssal Axiom terpilih: Fallen Angel",
+          "Satu Demonic lalu satu Angelic Power spin"
+        ],
+        "displayContext": "Abyssal Axiom terpilih: Fallen Angel. Satu Demonic lalu satu Angelic Power spin.",
+        "narrationExample": "Mantan kubu terang, sekarang power-nya lintas divisi.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "returnPoint": "saved caller; archetype for normal race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+        "basis": [
+          "actual subtype",
+          "actual powers",
+          "scoped follower results"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "setan",
+      "label": "Setan",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype/event; delegated power definitions.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "abyssalSubtypeId",
+          "value": "setan",
+          "source": "actual committed subtype and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "setan-type",
+          "definitionFile": "abyssal-axiom-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "setan-type",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Abyssal Axiom terpilih: Setan",
+          "Satu spin Succubus/Ifrit/Asura/Imp",
+          "Jenis terpilih memberi satu power tetap"
+        ],
+        "displayContext": "Abyssal Axiom terpilih: Setan. Satu spin Succubus/Ifrit/Asura/Imp. Jenis terpilih memberi satu power tetap.",
+        "narrationExample": "Setan juga ada spesialisasi. Tunggu jenisnya dulu.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "returnPoint": "saved caller; archetype for normal race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+        "basis": [
+          "actual subtype",
+          "actual powers",
+          "scoped follower results"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    },
+    {
+      "id": "sinner",
+      "label": "Pendosa",
+      "baseWeight": 1,
+      "status": "User-confirmed subtype/event; delegated power definitions.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "abyssalSubtypeId",
+          "value": "sinner",
+          "source": "actual committed subtype and component"
+        }
+      ],
+      "followups": [
+        {
+          "wheelId": "seven-deadly-sin",
+          "definitionFile": "universal-sin-wheel-design.json",
+          "drawCount": 1,
+          "invocationCount": 1,
+          "drawCountPerInvocation": 1,
+          "followupStepId": "sin-power",
+          "sequenceIndex": 1,
+          "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+          "execution": "Sequential actual one-result/grant/effect/reaction invocations; distinct childOrdinal, finish each reaction before next child.",
+          "returnPoint": "next declared child or saved caller; archetype for normal race-stage chain"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Abyssal Axiom terpilih: Pendosa",
+          "Satu Tujuh Dosa Besar memberi power yang sama seperti Iblis"
+        ],
+        "displayContext": "Abyssal Axiom terpilih: Pendosa. Satu Tujuh Dosa Besar memberi power yang sama seperti Iblis.",
+        "narrationExample": "Belum naik pangkat jadi Iblis, power dosa sudah kebuka.",
+        "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+        "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+      },
+      "returnPoint": "saved caller; archetype for normal race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+        "basis": [
+          "actual subtype",
+          "actual powers",
+          "scoped follower results"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "apex",
+          "title",
+          "size"
+        ]
+      }
+    }
+  ],
+  "wheels": [
+    {
+      "id": "abyssal-axiom-type",
+      "label": "Jenis Abyssal Axiom",
+      "scope": "family-selector",
+      "definitionFile": "abyssal-axiom-design.json",
+      "status": "User-confirmed five-type selector",
+      "active": true,
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "demon-lord",
+          "label": "Raja Iblis Agung",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "choiceKind": "game-subtype",
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "abyssalSubtypeId",
+              "value": "demon-lord",
+              "source": "actual committed subtype and component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "abyssal-axiom-design.json",
+            "definitionId": "demon-lord"
+          },
+          "followupSequence": [
+            {
+              "followupStepId": "demonic-power-grants",
+              "sequenceIndex": 1,
+              "wheelId": "power-demonic",
+              "definitionFile": "universal-power-wheels-design.json",
+              "drawCount": 4,
+              "invocationCount": 4,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+              "displayLabel": "Demonic Power",
+              "catalogVersion": "universal-power/0.2.0"
+            },
+            {
+              "followupStepId": "follower-count",
+              "sequenceIndex": 2,
+              "wheelId": "follower-count",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+              "rewardProfileId": "demon-lord"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Abyssal Axiom terpilih: Raja Iblis Agung",
+              "Empat spin Demonic Power berikutnya",
+              "Lalu jumlah pengikut; bonus mengikuti hasil terpilih"
+            ],
+            "displayContext": "Abyssal Axiom terpilih: Raja Iblis Agung. Empat spin Demonic Power berikutnya. Lalu jumlah pengikut; bonus mengikuti hasil terpilih.",
+            "narrationExample": "Gelar final boss sudah. Cek pengikutnya, jangan-jangan cuma akun sendiri.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "influenceDraft": {
+            "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+            "basis": [
+              "actual subtype",
+              "actual powers",
+              "scoped follower results"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "apex",
+              "title",
+              "size"
+            ]
+          }
+        },
+        {
+          "id": "ordinary-demon",
+          "label": "Iblis",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "choiceKind": "game-subtype",
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "abyssalSubtypeId",
+              "value": "ordinary-demon",
+              "source": "actual committed subtype and component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "abyssal-axiom-design.json",
+            "definitionId": "ordinary-demon"
+          },
+          "followupSequence": [
+            {
+              "followupStepId": "sin-power",
+              "sequenceIndex": 1,
+              "wheelId": "seven-deadly-sin",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+            },
+            {
+              "followupStepId": "demonic-power-grants",
+              "sequenceIndex": 2,
+              "wheelId": "power-demonic",
+              "definitionFile": "universal-power-wheels-design.json",
+              "drawCount": 2,
+              "invocationCount": 2,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+              "displayLabel": "Demonic Power",
+              "catalogVersion": "universal-power/0.2.0"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Abyssal Axiom terpilih: Iblis",
+              "Satu Tujuh Dosa Besar memberi power dosa terpilih",
+              "Lalu dua Demonic Power spin"
+            ],
+            "displayContext": "Abyssal Axiom terpilih: Iblis. Satu Tujuh Dosa Besar memberi power dosa terpilih. Lalu dua Demonic Power spin.",
+            "narrationExample": "Dosa dulu, dua Demonic kemudian. Paket villain tinggal tunggu roda.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "influenceDraft": {
+            "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+            "basis": [
+              "actual subtype",
+              "actual powers",
+              "scoped follower results"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "apex",
+              "title",
+              "size"
+            ]
+          }
+        },
+        {
+          "id": "fallen-angel",
+          "label": "Fallen Angel",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "choiceKind": "game-subtype",
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "abyssalSubtypeId",
+              "value": "fallen-angel",
+              "source": "actual committed subtype and component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "abyssal-axiom-design.json",
+            "definitionId": "fallen-angel"
+          },
+          "followupSequence": [
+            {
+              "followupStepId": "demonic-power-grant",
+              "sequenceIndex": 1,
+              "wheelId": "power-demonic",
+              "definitionFile": "universal-power-wheels-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+              "displayLabel": "Demonic Power",
+              "catalogVersion": "universal-power/0.2.0"
+            },
+            {
+              "followupStepId": "angelic-power-grant",
+              "sequenceIndex": 2,
+              "wheelId": "power-angelic",
+              "definitionFile": "universal-power-wheels-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal",
+              "catalogVersion": "universal-power/0.2.0"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Abyssal Axiom terpilih: Fallen Angel",
+              "Satu Demonic lalu satu Angelic Power spin"
+            ],
+            "displayContext": "Abyssal Axiom terpilih: Fallen Angel. Satu Demonic lalu satu Angelic Power spin.",
+            "narrationExample": "Mantan kubu terang, sekarang power-nya lintas divisi.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "influenceDraft": {
+            "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+            "basis": [
+              "actual subtype",
+              "actual powers",
+              "scoped follower results"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "apex",
+              "title",
+              "size"
+            ]
+          }
+        },
+        {
+          "id": "setan",
+          "label": "Setan",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "choiceKind": "game-subtype",
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "abyssalSubtypeId",
+              "value": "setan",
+              "source": "actual committed subtype and component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "abyssal-axiom-design.json",
+            "definitionId": "setan"
+          },
+          "followupSequence": [
+            {
+              "followupStepId": "setan-type",
+              "sequenceIndex": 1,
+              "wheelId": "setan-type",
+              "definitionFile": "abyssal-axiom-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Abyssal Axiom terpilih: Setan",
+              "Satu spin Succubus/Ifrit/Asura/Imp",
+              "Jenis terpilih memberi satu power tetap"
+            ],
+            "displayContext": "Abyssal Axiom terpilih: Setan. Satu spin Succubus/Ifrit/Asura/Imp. Jenis terpilih memberi satu power tetap.",
+            "narrationExample": "Setan juga ada spesialisasi. Tunggu jenisnya dulu.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "influenceDraft": {
+            "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+            "basis": [
+              "actual subtype",
+              "actual powers",
+              "scoped follower results"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "apex",
+              "title",
+              "size"
+            ]
+          }
+        },
+        {
+          "id": "sinner",
+          "label": "Pendosa",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "choiceKind": "game-subtype",
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "abyssalSubtypeId",
+              "value": "sinner",
+              "source": "actual committed subtype and component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "abyssal-axiom-design.json",
+            "definitionId": "sinner"
+          },
+          "followupSequence": [
+            {
+              "followupStepId": "sin-power",
+              "sequenceIndex": 1,
+              "wheelId": "seven-deadly-sin",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "drawCount": 1,
+              "invocationCount": 1,
+              "invocationKey": "runId/sourceComponentId/sourceSubtypeSpinId/profileId/followupStepId/childOrdinal"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Abyssal Axiom terpilih: Pendosa",
+              "Satu Tujuh Dosa Besar memberi power yang sama seperti Iblis"
+            ],
+            "displayContext": "Abyssal Axiom terpilih: Pendosa. Satu Tujuh Dosa Besar memberi power yang sama seperti Iblis.",
+            "narrationExample": "Belum naik pangkat jadi Iblis, power dosa sudah kebuka.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "influenceDraft": {
+            "status": "Only explicit events/grants/rewards apply; numerical future modifiers pending.",
+            "basis": [
+              "actual subtype",
+              "actual powers",
+              "scoped follower results"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "apex",
+              "title",
+              "size"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "setan-type",
+      "label": "Jenis Setan",
+      "scope": "family-subtype-event",
+      "definitionFile": "abyssal-axiom-design.json",
+      "status": "User-confirmed four types; delegated fixed powers",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "succubus",
+          "label": "Succubus",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "sourceRefs": [
+            "abyssal-succubus"
+          ],
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "setanSubtypeId",
+              "value": "succubus",
+              "source": "actual committed Setan result and component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "pesona-hasrat",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Setan terpilih: Succubus",
+              "Power diperoleh: Pesona Hasrat",
+              "Mastery bersama nanti"
+            ],
+            "displayContext": "Setan terpilih: Succubus. Power diperoleh: Pesona Hasrat. Mastery bersama nanti.",
+            "narrationExample": "Musuh belum kena hit, sudah kena pesona.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "returnPoint": "saved Setan/Abyssal caller"
+        },
+        {
+          "id": "ifrit",
+          "label": "Ifrit",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "sourceRefs": [
+            "abyssal-efreeti"
+          ],
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "setanSubtypeId",
+              "value": "ifrit",
+              "source": "actual committed Setan result and component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-element-wheel-design.json",
+              "definitionId": "fire-manipulation",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Setan terpilih: Ifrit",
+              "Power diperoleh: Fire Manipulation (Kendali Api)",
+              "Mastery bersama nanti"
+            ],
+            "displayContext": "Setan terpilih: Ifrit. Power diperoleh: Fire Manipulation (Kendali Api). Mastery bersama nanti.",
+            "narrationExample": "Masuk arena bikin suasana panas.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "returnPoint": "saved Setan/Abyssal caller"
+        },
+        {
+          "id": "asura",
+          "label": "Asura",
+          "inputAliases": [
+            "Ashura"
+          ],
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "sourceRefs": [
+            "abyssal-asura"
+          ],
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "setanSubtypeId",
+              "value": "asura",
+              "source": "actual committed Setan result and component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "universal-sin-wheel-design.json",
+              "definitionId": "berserk-amuk",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Setan terpilih: Asura",
+              "Power diperoleh: Berserk (Amuk)",
+              "Mastery bersama nanti"
+            ],
+            "displayContext": "Setan terpilih: Asura. Power diperoleh: Berserk (Amuk). Mastery bersama nanti.",
+            "narrationExample": "Diajak debat, jawabannya ngajak duel.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "returnPoint": "saved Setan/Abyssal caller"
+        },
+        {
+          "id": "imp",
+          "label": "Imp",
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "sourceRefs": [
+            "abyssal-imp"
+          ],
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "setanSubtypeId",
+              "value": "imp",
+              "source": "actual committed Setan result and component"
+            },
+            {
+              "type": "grant-power",
+              "definitionFile": "abyssal-axiom-design.json",
+              "definitionId": "invisibility",
+              "masteryTiming": "main-power-stage",
+              "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+              "source": "actual committed result and caller component"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Setan terpilih: Imp",
+              "Power diperoleh: Invisibility (Mode Ngilang)",
+              "Mastery bersama nanti"
+            ],
+            "displayContext": "Setan terpilih: Imp. Power diperoleh: Invisibility (Mode Ngilang). Mastery bersama nanti.",
+            "narrationExample": "Badan kecil, kelakuan licik, sekarang bisa ngilang.",
+            "availability": "Only committed source-scoped facts; future child results, main stats and shared mastery stay unknown until their actual stage.",
+            "exampleMode": "Narration only, no additional mechanics or funny-result catalog tag."
+          },
+          "returnPoint": "saved Setan/Abyssal caller"
+        }
+      ]
+    }
+  ],
+  "contracts": {
+    "routing": "Commit/react to family; spin one equal subtype; commit source effects and react; resolve declared children, one actual spin/reaction per invocation; restore saved caller.",
+    "profileAuthority": "Profiles and wheels here are canonical. Inline race mirrors/imports do not register or dispatch duplicate events.",
+    "fixedGrants": "Setan result grants one linked power, no extra acquisition/sin/element spin.",
+    "sinAuthority": "Iblis/Pendosa share seven-deadly-sin and linked definitions. Sin selection dispatches no other family.",
+    "followerPolicy": "Raja uses demon-lord policy; God uses stat-only god policy from universal-follower-wheel-design.json. Selected row only, independent sources scoped.",
+    "ownedInventory": "All powers remain after main Power None. Ordinary grants use one shared Power Mastery, including late grants; acquisition count never multiplies mastery draws.",
+    "duplicatePowerResults": "Working sampling uses replacement across repeated themed invocations unless an approved guard changes eligibility. Keep duplicates/provenance, never reroll; merging remains pending.",
+    "mastery": "Follower bonus modifies common rank, no fixed max or extra spin. God Authority exceptions remain maximum.",
+    "boundaries": "Fallen Angel Angelic calls do not dispatch Heavenly. Asura gets no Demigod stat bonus. Ifrit fixed Fire grants no Element/Elemental spin. Oni stays Orc; Lelembut/Raksasa keep routing.",
+    "inheritedOrigins": "Authorized origin/Hybrid calls execute this approved scoped profile and saved return. Global no-repeat excludes every previous canonical family before identity draws.",
+    "size": "Use global Size only; body references/limits pending. No inferred size or stats.",
+    "idempotence": "Commit profile/grants once per run/component/sourceSpinId/profile/effectOrdinal. Child key includes followupStepId and childOrdinal, distinguishing four Demonic draws and follower child. Resume/render retries duplicate no bonus, grant or spin.",
+    "context": "Each result appends truthful scoped facts before reaction. Future child choices, final stats and shared base rank unavailable. Examples create no funny-result catalog tags.",
+    "weights": "Five Abyssal: 1 each (20%). Four Setan: 1 each (25%). Seven Sins: 1 each. Nine followers exact 3:3:3:3:3:2:2:2:1; total 22.",
+    "demonicPool": "Independent canonical power-demonic with twenty outcomes, equal base weights; one selected grant per actual invocation. Previous Cursed display reuse is retired.",
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "retiredProposals": [
+    {
+      "retiredOn": "2026-10-08",
+      "reason": "User replaced eight candidates with five types and nested Setan.",
+      "registration": "History only; never register/dispatch.",
+      "wheel": {
+        "id": "abyssal-axiom-type",
+        "label": "Jenis Abyssal Axiom",
+        "status": "Retired eight-candidate proposal",
+        "active": false,
+        "activationStatus": "Not wired to the family branch until the user selects the roster and event routing",
+        "baseWeightsAssigned": true,
+        "outcomes": [
+          {
+            "id": "imp",
+            "label": "Imp",
+            "inclusionStatus": "proposed",
+            "choiceKind": "creature-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-imp"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Setan kecil dan licik. Tukang ngibul yang tetap pede walau badan mini."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "ordinary-demon",
+            "label": "Demon",
+            "inclusionStatus": "proposed",
+            "choiceKind": "creature-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-demon-devil"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Iblis barbar. Tema tenaga mentah dan kekacauan; maunya rusuh dulu, mikir belakangan."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "devil",
+            "label": "Devil",
+            "inclusionStatus": "proposed",
+            "choiceKind": "creature-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-demon-devil",
+              "abyssal-infernal-options"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Iblis kontrak. Kelihatan sopan, syarat dan ketentuannya bikin hidup berantakan."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "succubus-incubus",
+            "label": "Succubus / Incubus",
+            "inclusionStatus": "proposed",
+            "choiceKind": "grouped-creature-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-succubus"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Setan pesona. Menang gaya dulu; musuh sudah salah fokus sebelum duel."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "ifrit",
+            "label": "Ifrit (Jin Api)",
+            "inclusionStatus": "proposed",
+            "choiceKind": "fantasy-adapted-creature-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-efreeti"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Jin dengan tema api dan sihir. Suasana langsung panas begitu masuk arena."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "asura",
+            "label": "Asura",
+            "inclusionStatus": "proposed",
+            "choiceKind": "fantasy-adapted-mythological-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-asura"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Petarung ambisius dengan tema perang dan duel. Ada masalah, ngajak sparring."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "fallen-angel",
+            "label": "Fallen Angel",
+            "inclusionStatus": "proposed",
+            "choiceKind": "status-based-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-fallen-angel"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Malaikat jatuh dengan masa lalu dari kubu terang. Mantan anak baik, sekarang punya villain arc."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          },
+          {
+            "id": "demon-lord",
+            "label": "Demon Lord (Raja Iblis)",
+            "inclusionStatus": "proposed",
+            "choiceKind": "rank-based-type",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "abyssal-infernal-options"
+            ],
+            "themeContext": {
+              "status": "Authored fantasy/narrator theme only; no gameplay grant",
+              "displayContext": "Penguasa iblis dengan aura final boss. Gelarnya sudah bikin orang menoleh."
+            },
+            "eventStatus": "Awaiting user-defined event and approved mechanical profile"
+          }
+        ]
+      }
+    }
+  ],
+  "openBalance": [
+    "Configure intrinsic limits of the twenty Demonic and twenty Angelic powers.",
+    "Power limits, body references and future influence remain open. Raw mastery0..9/final signed unbounded values and canonical ownership dedup are approved."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1
+  },
+  "version": "abyssal-axiom/0.2.0",
+  "updatedDate": "2026-10-09",
+  "migrationContract": {
+    "retiredSnapshot": "reference/power-themes-before-2026-10-09.json",
+    "policy": "New invocations use this route/version and universal-power/0.2.0; committed old results keep their original version, route, pool and effects."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  }
+}

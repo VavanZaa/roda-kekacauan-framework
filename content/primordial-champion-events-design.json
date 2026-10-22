@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "roda-kekacauan-primordial-champion/0.1",
+  "version": "primordial-champion/0.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "primordial-champion",
+  "eventProfileId": "primordial-champion-patron",
+  "status": "User explicitly approves the eleven-identity Primordial race and Champion package design. Algorithm design accepted; executor and body/capability/Size profiles remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Primordial is an initial entity not created by another god; deliberate self-creation not required.",
+      "Primordial race receives a six-point package.",
+      "Primordial Champion receives a three-point package.",
+      "Assign power, weapon and/or stat bonuses based on lore.",
+      "Unspecified odds are equal.",
+      "User explicitly approves the presented Primordial and Primordial Champion packages and flow."
+    ],
+    "authoredInterpretations": [
+      "Use the current eleven researched identities as working roster.",
+      "Champion spins the shared identity selector as patron, not owned race.",
+      "Primordial signature package skips Archetype; consistent with the already accepted boost gate.",
+      "Stat/power/weapon recipes and explicit tiers are game adaptations.",
+      "Primordial victim/army identity uses the existing divine quantity profile, without race rewards."
+    ]
+  },
+  "budgetPoints": 3,
+  "selector": {
+    "wheelId": "primordial-identity",
+    "definitionFile": "content/primordial-events-design.json",
+    "invocationCount": 1,
+    "labelOverride": "Champion dari siapa?",
+    "callerContext": "primordial-champion-patron"
+  },
+  "rewardProfilesRef": "content/primordial-events-design.json#championRewardProfiles",
+  "contracts": {
+    "order": "Owned Race: family commit/history/reaction → one primordial-identity spin/reaction → exactly selected six-point recipe → saved caller. Champion: actual selected Archetype reaction → same identity wheel in patron context → exactly selected three-point recipe → Backstory.",
+    "grantAuthority": "Execute reward profiles once; wheel links, caption, lore context and mirrored references never dispatch another recipe.",
+    "source": "Every fixed grant and stat modifier carries the original race/Archetype invocation and recipe/ordinal, atomically persisted. Resume reuses committed identity and grants.",
+    "mastery": "Powers use one shared ordinary Power Mastery; every weapon uses its ordinary recipient mastery. No automatic max, bonus mastery, guarantee or copied God Authority rank.",
+    "bonusTiming": "Register at source; calculate all numeric bonuses only at final phase after mandatory events. Weapon effective mastery still controls compatible final Enchant.",
+    "mainAcquisitions": "Keep ordinary later Weapon/Power wheels; early inventory survives main None. No additional universal power spin, followers or God80% None merely from a name.",
+    "duplicatePolicy": "Use existing definition/source ownership rules; no unrequested duplicate reroll, free tier upgrade, bonus stat conversion or second mastery draw.",
+    "weaponPolicy": "Honor existing hard inventory/acquisition locks including Gladiator; no bypass, bonus replacement or extra weapon created by a power caption.",
+    "identityBoundary": "Race identity uses family primordial and its actual token; Champion records patronEntityId only, does not acquire/replace race, commit race history, dispatch full six-point race recipe or reopen gate.",
+    "loreBoundary": "Research supplies motifs; tiers, powers, weapons and numeric bonuses are authored game adaptations. Retain the user-confirmed origin definition and current-Indonesian-religion curation.",
+    "gate": "All owned Primordial identities skip the initial Archetype gate under the existing strong signature-package principle. Champion remains available only to other body/profile-compatible eligible characters; patron itself is not a strong owned race.",
+    "bodySize": "No automatic full lore size, cosmic grant, Raksasa/Machine/Elemental event or extra lineage from the entity name. Primordial body/Size reference profiles remain explicit configuration.",
+    "distribution": "One identity spin per actual caller, eleven base weights1. Existing Equalizer/eligibility modifiers act by their contracts; no origin/category/power-count wheel.",
+    "return": "Nested race grants restore exact caller, including Hybrid/host/base/undead/Mutant; only outer initial race completion goes to Archetype gate. Champion returns to Backstory.",
+    "budget": "Every nominal recipe totals6 or3. Comparison is not combat equivalence or automatic post-lock compensation."
+  },
+  "powers": [],
+  "weapons": [],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "primordial-identity",
+      "definitionFile": "content/primordial-events-design.json",
+      "invocationCount": 1,
+      "stepId": "primordial-champion-patron-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "returnTo": "backstory",
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "module": null,
+    "status": "design-only"
+  },
+  "aliasPolicy": "Use user-requested primordial-champion as this event ID. Source primordial-champ stays archived/excluded pending alias review; never duplicate the event or wheel mass.",
+  "migrationContract": {
+    "snapshot": "reference/before-primordial-packages-2026-10-10.json",
+    "newInvocationsOnly": true
+  },
+  "approval": {
+    "authority": "direct-user",
+    "date": "2026-10-10",
+    "userStatement": "yup i approve, now we can move on to the next archtype",
+    "scope": "Accept the presented eleven identities, all six-point race and three-point Champion recipes, equal selector odds, Primordial Archetype skip, Champion patron-only flow, ordinary mastery and final numeric bonus timing.",
+    "implementationBoundary": "Approval of algorithm design; runtime executors, body/Size/capability profiles remain configuration. Other technical projection choices retain their disclosed authored provenance."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

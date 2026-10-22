@@ -1,0 +1,627 @@
+{
+  "schemaVersion": "roda-kekacauan-survivalist/1.0",
+  "version": "survivalist/1.0.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "survivalist",
+  "eventProfileId": "survivalist-environment",
+  "status": "User-confirmed two-wheel flow and inclusive reward thresholds; twelve environment/stat/power pairings are editable authored initial curation, not a user-confirmed final roster",
+  "authority": {
+    "confirmed": [
+      "Roll a harsh environment first, including freezing tundra, volcano core, acid pool, nuclear wasteland and space.",
+      "Then roll Survival Chance from 0% through 100% in 12.5-percentage-point steps.",
+      "At <=37.5% give +1 point worth of environment-related stat buff.",
+      "At >37.5% and <=75% give its environment-related power.",
+      "At >75% give both that power and the same stat buff.",
+      "Some environments can be much harsher than others; no equal-power balancing is required."
+    ],
+    "existingPolicy": "Unspecified wheel probabilities are equal; every environment baseWeight 1 and each of nine chance outcomes 1/9.",
+    "authoredInterpretations": [
+      "The +1 stat package is exactly +1 numeric point on one main stat, not +1 on all stats or a tier increase.",
+      "Twelve environment choices and their linked stat/power recipes are editable authored design; only five environment themes were explicit examples.",
+      "0% falls into the first reward band and still grants +1; no additional survival/death check or character cancellation was requested."
+    ]
+  },
+  "contracts": {
+    "order": "Actual Survivalist role/reaction -> one Environment spin/reaction -> one Survival Chance spin/reaction -> one stat modifier, one fixed power grant or both -> Backstory.",
+    "probability": "Equal weights per wheel: twelve authored environment choices 1/12 each; nine chance results 1/9 each. The displayed chance percentage is the selected value, not that outcome's draw probability. No automatic hardship/race/power/stat modifiers, unavailable-body filters, rarity or higher reward from environment severity.",
+    "chance": "Values 0,12.5,25,37.5,50,62.5,75,87.5,100. Treat as a fictional spin result driving the specified reward; do not make a second Bernoulli/death roll, reroll zero or infer actual death/survival.",
+    "rewards": "<=37.5 stat-only; >37.5 and <=75 power-only; >75 both. Power-only never adds the stat buff. Both uses exactly the same +1 stat/power recipe, not double stats, another power selector or an environmental immunity package.",
+    "stat": "Apply one +1 numeric main-stat modifier from the selected recipe after the immutable recipient base under configured limits. No extra resistance, mastery, Size or probability bonus is inferred.",
+    "power": "Grant the environment-linked intrinsic power directly, without Element/Cosmic/Race/Sin/hero subflow. Reuse canonical definitions where already present; new definitions live once here. Source context comes from Survivalist, not the other caller race/season/hero. Limits remain; manipulation does not automatically imply immunity.",
+    "mastery": "All grants are ordinary owned powers under the recipient one shared current/future Power Mastery; no rank bonus, God Authority override, extra mastery spin or Enchant. Grants survive a later normal Power None.",
+    "severity": "Keep thematic hazard differences. Hazard text is game context, not a sourced mortality estimate or a numerical difficulty/stat scale. Do not rebalance, add tier multipliers or bias chance from severity without a new rule.",
+    "ledger": "Freeze version, environment pool/recipe and chance pool before seeded sampling. Commit each actual result/reaction once; consume the source-scoped reward key atomically for the power and stat together. Resume/re-render uses saved snapshots/results with no redraw or duplicate reward.",
+    "reaction": "Environment beat reveals only the committed environment. Reward is known only after actual chance result. Fixed grant/modifier creates no extra spin or funny-result mechanics tag; existing Shrek hook runs only if an actual catalog-tagged spin is separately configured."
+  },
+  "wheels": [
+    {
+      "id": "survivalist-environment",
+      "label": "Survive di Mana?",
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "freezing-tundra",
+          "label": "Tundra Beku",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "User named this environment theme; display wording and stat/power pairing are editable authored design",
+          "hazardContext": "Dingin ekstrem dan medan es.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "ice-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "powerDisplayLabel": "Ice Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Tundra Beku"
+            ],
+            "displayContext": "Dingin. Banget.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "volcano-core",
+          "label": "Inti Gunung Berapi",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "User named this environment theme; display wording and stat/power pairing are editable authored design",
+          "hazardContext": "Magma dan panas ekstrem.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "magma-manipulation",
+            "definitionFile": "content/golem-events-design.json"
+          },
+          "powerDisplayLabel": "Magma Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Inti Gunung Berapi"
+            ],
+            "displayContext": "Spawn di dalam magma.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "acid-pool",
+          "label": "Kolam Asam",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "User named this environment theme; display wording and stat/power pairing are editable authored design",
+          "hazardContext": "Cairan korosif sebagai tema encounter.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "acid-manipulation",
+            "definitionFile": "content/survivalist-events-design.json"
+          },
+          "powerDisplayLabel": "Acid Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Kolam Asam"
+            ],
+            "displayContext": "Kolamnya salah.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "nuclear-wasteland",
+          "label": "Nuclear Wasteland",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "User named this environment theme; display wording and stat/power pairing are editable authored design",
+          "hazardContext": "Limbah radioaktif dalam setting fiksi.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "radiation-manipulation",
+            "definitionFile": "content/survivalist-events-design.json"
+          },
+          "powerDisplayLabel": "Radiation Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Nuclear Wasteland"
+            ],
+            "displayContext": "Map-nya habis kena nuklir.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "outer-space",
+          "label": "Luar Angkasa",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "User named this environment theme; display wording and stat/power pairing are editable authored design",
+          "hazardContext": "Vakum dan kondisi antariksa dalam setting fiksi.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "space-adaptation",
+            "definitionFile": "content/survivalist-events-design.json"
+          },
+          "powerDisplayLabel": "Space Adaptation",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Luar Angkasa"
+            ],
+            "displayContext": "Nge-spawn tanpa oksigen.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "deep-ocean-trench",
+          "label": "Palung Laut",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Tekanan dan kondisi laut dalam.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "powerDisplayLabel": "Water Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Palung Laut"
+            ],
+            "displayContext": "Spawn di dasar laut.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "waterless-desert",
+          "label": "Gurun Tanpa Air",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Gurun gersang tanpa suplai sebagai tema encounter.",
+          "statBuff": {
+            "stat": "durability",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "sand-manipulation",
+            "definitionFile": "content/lelembut-events-design.json"
+          },
+          "powerDisplayLabel": "Sand Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Gurun Tanpa Air"
+            ],
+            "displayContext": "Air minum sold out.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "poisoned-forest",
+          "label": "Hutan Beracun",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Racun, vegetasi dan jalur berbahaya.",
+          "statBuff": {
+            "stat": "intelligence",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "poison-manipulation",
+            "definitionFile": "content/survivalist-events-design.json"
+          },
+          "powerDisplayLabel": "Poison Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Hutan Beracun"
+            ],
+            "displayContext": "Salah petik, tamat.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "lightning-storm",
+          "label": "Badai Petir",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Badai petir yang terus bergerak.",
+          "statBuff": {
+            "stat": "speed",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "lightning-manipulation",
+            "definitionFile": "content/legendary-hero-events-design.json"
+          },
+          "powerDisplayLabel": "Lightning Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Badai Petir"
+            ],
+            "displayContext": "Langitnya spam petir.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "high-gravity-planet",
+          "label": "Planet Gravitasi Ekstrem",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Gravitasi berat dalam setting planet fiksi.",
+          "statBuff": {
+            "stat": "strength",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "gravity-manipulation",
+            "definitionFile": "content/universal-power-wheels-design.json"
+          },
+          "powerDisplayLabel": "Gravity Control",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Planet Gravitasi Ekstrem"
+            ],
+            "displayContext": "Berdiri aja leg day.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "shadow-dimension",
+          "label": "Dimensi Bayangan",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Dimensi gelap dengan arah dan ancaman yang sulit dibaca.",
+          "statBuff": {
+            "stat": "intelligence",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "shadow-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "powerDisplayLabel": "Shadow Manipulation",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Dimensi Bayangan"
+            ],
+            "displayContext": "GPS ikut nyerah.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        },
+        {
+          "id": "eternal-battlefield",
+          "label": "Medan Perang Abadi",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "contentAuthority": "Editable authored addition within requested harsh-environment theme",
+          "hazardContext": "Konflik dan ancaman tempur yang tidak berhenti.",
+          "statBuff": {
+            "stat": "fight",
+            "amount": 1
+          },
+          "powerRef": {
+            "definitionId": "battle-instinct",
+            "definitionFile": "content/survivalist-events-design.json"
+          },
+          "powerDisplayLabel": "Battle Instinct",
+          "resultContext": {
+            "facts": [
+              "Environment terpilih: Medan Perang Abadi"
+            ],
+            "displayContext": "Tidak ada safe zone.",
+            "futureResults": "Survival Chance dan reward belum diketahui."
+          }
+        }
+      ]
+    },
+    {
+      "id": "survivalist-chance",
+      "label": "Survival Chance",
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "survivalist-chance-0",
+          "label": "0%",
+          "value": 0,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "stat-only"
+        },
+        {
+          "id": "survivalist-chance-1",
+          "label": "12.5%",
+          "value": 12.5,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "stat-only"
+        },
+        {
+          "id": "survivalist-chance-2",
+          "label": "25%",
+          "value": 25,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "stat-only"
+        },
+        {
+          "id": "survivalist-chance-3",
+          "label": "37.5%",
+          "value": 37.5,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "stat-only"
+        },
+        {
+          "id": "survivalist-chance-4",
+          "label": "50%",
+          "value": 50,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "power-only"
+        },
+        {
+          "id": "survivalist-chance-5",
+          "label": "62.5%",
+          "value": 62.5,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "power-only"
+        },
+        {
+          "id": "survivalist-chance-6",
+          "label": "75%",
+          "value": 75,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "power-only"
+        },
+        {
+          "id": "survivalist-chance-7",
+          "label": "87.5%",
+          "value": 87.5,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "both"
+        },
+        {
+          "id": "survivalist-chance-8",
+          "label": "100%",
+          "value": 100,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "rewardKind": "both"
+        }
+      ]
+    }
+  ],
+  "rewardBands": [
+    {
+      "id": "stat-only",
+      "minimumInclusive": 0,
+      "maximumInclusive": 37.5,
+      "statBuff": true,
+      "power": false
+    },
+    {
+      "id": "power-only",
+      "minimumExclusive": 37.5,
+      "maximumInclusive": 75,
+      "statBuff": false,
+      "power": true
+    },
+    {
+      "id": "both",
+      "minimumExclusive": 75,
+      "maximumInclusive": 100,
+      "statBuff": true,
+      "power": true
+    }
+  ],
+  "powers": [
+    {
+      "id": "acid-manipulation",
+      "label": "Acid Control",
+      "scope": "Membentuk dan mengendalikan asam korosif dalam batas power.",
+      "affinityTags": [
+        "acid",
+        "control"
+      ],
+      "group": "survivalist-environment-power",
+      "contentStatus": "Editable authored environment-linked ability within current event design",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, output and mastery-dependent limits remain pending. No extra stat bonus or universal environmental immunity inferred.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Acid Control"
+        ],
+        "displayContext": "Acid Control"
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#acid-manipulation"
+    },
+    {
+      "id": "radiation-manipulation",
+      "label": "Radiation Control",
+      "scope": "Mengendalikan radiasi dalam batas area, kapasitas dan target power.",
+      "affinityTags": [
+        "radiation",
+        "control"
+      ],
+      "group": "survivalist-environment-power",
+      "contentStatus": "Editable authored environment-linked ability within current event design",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, output and mastery-dependent limits remain pending. No extra stat bonus or universal environmental immunity inferred.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Radiation Control"
+        ],
+        "displayContext": "Radiation Control"
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#radiation-manipulation"
+    },
+    {
+      "id": "space-adaptation",
+      "label": "Space Adaptation",
+      "scope": "Adaptasi tubuh sendiri untuk kondisi vakum dan antariksa sesuai batas power; bukan immortality, space-time control atau otomatis aman dari semua bahaya kosmik.",
+      "affinityTags": [
+        "space",
+        "self-adaptation"
+      ],
+      "group": "survivalist-environment-power",
+      "contentStatus": "Editable authored environment-linked ability within current event design",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, output and mastery-dependent limits remain pending. No extra stat bonus or universal environmental immunity inferred.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Space Adaptation"
+        ],
+        "displayContext": "Space Adaptation"
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Adaptasi lingkungan diri sendiri; tanpa kendali ruang-waktu.",
+      "powerTierRef": "content/power-tier-design.json#space-adaptation"
+    },
+    {
+      "id": "poison-manipulation",
+      "label": "Poison Control",
+      "scope": "Membentuk dan mengendalikan racun dalam batas power.",
+      "affinityTags": [
+        "poison",
+        "control"
+      ],
+      "group": "survivalist-environment-power",
+      "contentStatus": "Editable authored environment-linked ability within current event design",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, output and mastery-dependent limits remain pending. No extra stat bonus or universal environmental immunity inferred.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Poison Control"
+        ],
+        "displayContext": "Poison Control"
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#poison-manipulation"
+    },
+    {
+      "id": "battle-instinct",
+      "label": "Battle Instinct",
+      "scope": "Membaca ancaman dan pola pertempuran sebagai insting tempur; bukan precognition absolut atau bonus stat numerik otomatis.",
+      "affinityTags": [
+        "combat",
+        "awareness"
+      ],
+      "group": "survivalist-environment-power",
+      "contentStatus": "Editable authored environment-linked ability within current event design",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, cost, duration, resistance, output and mastery-dependent limits remain pending. No extra stat bonus or universal environmental immunity inferred.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Battle Instinct"
+        ],
+        "displayContext": "Battle Instinct"
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#battle-instinct"
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionId": "ice-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "environmentId": "freezing-tundra"
+    },
+    {
+      "definitionId": "magma-manipulation",
+      "definitionFile": "content/golem-events-design.json",
+      "environmentId": "volcano-core"
+    },
+    {
+      "definitionId": "water-manipulation",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "environmentId": "deep-ocean-trench"
+    },
+    {
+      "definitionId": "sand-manipulation",
+      "definitionFile": "content/lelembut-events-design.json",
+      "environmentId": "waterless-desert"
+    },
+    {
+      "definitionId": "lightning-manipulation",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "environmentId": "lightning-storm"
+    },
+    {
+      "definitionId": "gravity-manipulation",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "environmentId": "high-gravity-planet"
+    },
+    {
+      "definitionId": "shadow-manipulation",
+      "definitionFile": "content/elf-events-design.json",
+      "environmentId": "shadow-dimension"
+    }
+  ],
+  "runtimeInterface": {
+    "module": "framework/survivalist-event.mjs",
+    "functions": [
+      "planSurvivalistEnvironment",
+      "planSurvivalistChance",
+      "resolveSurvivalistChance"
+    ],
+    "sampling": "Pure frozen plans; future engine performs and journals the seeded actual spins.",
+    "mutation": "Emits once-keyed effects only; engine applies grants/stat ledger atomically and schedules ordinary common mastery."
+  },
+  "resultContext": {
+    "afterRole": "Survivalist. Spawn-nya di mana?",
+    "afterEnvironment": "Environment sudah diketahui; Survival Chance dan reward belum.",
+    "afterChance": "Tampilkan nilai chance aktual dan tepat reward pada bandnya. 0% bukan perintah mematikan karakter.",
+    "futureResults": "Backstory, Size, base main stats dan mastery yang belum diputar tetap belum diketahui."
+  },
+  "openConfiguration": [
+    "Final editable environment roster/stat-power recipes",
+    "Body/role-fit and boost-band profiles for final Archetype pool",
+    "Intrinsic power limits and catalog runtime resolution"
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

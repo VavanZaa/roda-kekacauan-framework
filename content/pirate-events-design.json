@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "roda-kekacauan-pirate/0.1",
+  "version": "pirate/0.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "pirate",
+  "eventProfileId": "pirate-rank-and-ship",
+  "status": "Core rank-then-ship event approved; ship explicitly cosmetic-only. Six-rank recipes/eighteen historical names remain editable; runtime helper/body-role fit pending.",
+  "authority": {
+    "confirmed": [
+      "Pirate rolls rank from King Pirate down to Crew, grants 0..2 total numeric stat points according to rank, then rolls a ship.",
+      "Ships use real historical legendary pirate-associated vessels; no fictional franchise ships.",
+      "Existing user equal-default rule applies when no probability ratio is specified.",
+      "User confirms Pirate ship adds no gameplay effect: cosmetic design, visual and narrative context only. Rank stat bonuses remain unchanged."
+    ],
+    "authoredChoices": "Six game rank options and exact stat allocation are proposed within user delegation, not a claim of universal historical hierarchy. King Pirate Fight +2; Captain Fight +1/Intelligence +1; Quartermaster Intelligence +1; First Mate Fight +1; Boatswain Strength +1; Crew none. Eighteen curated historical ships; roster is adjustable and not an exhaustive inventory of all pirate ships."
+  },
+  "rankWheel": {
+    "id": "pirate-rank",
+    "label": "Rank Pirate",
+    "outcomeCount": 6,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "king-pirate",
+        "label": "King Pirate",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {
+          "fight": 2
+        },
+        "totalStatPoints": 2,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "fight",
+            "amount": 2,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: King Pirate",
+            "fight +2"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "captain",
+        "label": "Captain",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {
+          "fight": 1,
+          "intelligence": 1
+        },
+        "totalStatPoints": 2,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "intelligence",
+            "amount": 1,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: Captain",
+            "fight +1",
+            "intelligence +1"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "quartermaster",
+        "label": "Quartermaster",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {
+          "intelligence": 1
+        },
+        "totalStatPoints": 1,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "intelligence",
+            "amount": 1,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: Quartermaster",
+            "intelligence +1"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "first-mate",
+        "label": "First Mate",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {
+          "fight": 1
+        },
+        "totalStatPoints": 1,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: First Mate",
+            "fight +1"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "boatswain",
+        "label": "Boatswain",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {
+          "strength": 1
+        },
+        "totalStatPoints": 1,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "strength",
+            "amount": 1,
+            "unit": "numeric point"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: Boatswain",
+            "strength +1"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "crew",
+        "label": "Crew",
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "statBonus": {},
+        "totalStatPoints": 0,
+        "effects": [],
+        "resultContext": {
+          "facts": [
+            "Rank Pirate: Crew",
+            "Tidak mendapat bonus rank"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "shipWheel": {
+    "id": "pirate-ship",
+    "label": "Kapal Pirate",
+    "outcomeCount": 18,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "queen-annes-revenge",
+        "label": "Queen Anne’s Revenge",
+        "pirateAssociation": "Blackbeard",
+        "aliases": [
+          "La Concorde"
+        ],
+        "sourceIds": [
+          "qar"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Queen Anne’s Revenge",
+            "Referensi sejarah: Blackbeard"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "whydah-gally",
+        "label": "Whydah Gally",
+        "pirateAssociation": "Samuel Bellamy",
+        "aliases": [
+          "Whydah",
+          "Whydah Galley"
+        ],
+        "sourceIds": [
+          "nps-whydah"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Whydah Gally",
+            "Referensi sejarah: Samuel Bellamy"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "fancy-every",
+        "label": "Fancy",
+        "pirateAssociation": "Henry Every",
+        "aliases": [
+          "Charles II"
+        ],
+        "sourceIds": [
+          "whe-every"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Fancy",
+            "Referensi sejarah: Henry Every"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "royal-fortune-roberts",
+        "label": "Royal Fortune",
+        "pirateAssociation": "Bartholomew Roberts",
+        "aliases": [
+          "Onslow"
+        ],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Royal Fortune",
+            "Referensi sejarah: Bartholomew Roberts"
+          ],
+          "futureResultsUnknown": true
+        },
+        "identityNote": "One curated slot for Roberts’s final Royal Fortune (formerly Onslow); do not duplicate his successive same-name flagships.",
+        "effects": []
+      },
+      {
+        "id": "adventure-galley-kidd",
+        "label": "Adventure Galley",
+        "pirateAssociation": "William Kidd",
+        "aliases": [],
+        "sourceIds": [
+          "rmg-kidd"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Adventure Galley",
+            "Referensi sejarah: William Kidd"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "revenge-royal-james-bonnet",
+        "label": "Revenge / Royal James",
+        "pirateAssociation": "Stede Bonnet",
+        "aliases": [
+          "Revenge",
+          "Royal James"
+        ],
+        "sourceIds": [
+          "qar",
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Revenge / Royal James",
+            "Referensi sejarah: Stede Bonnet"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "adventure-blackbeard",
+        "label": "Adventure",
+        "pirateAssociation": "Blackbeard / Israel Hands",
+        "aliases": [],
+        "sourceIds": [
+          "qar",
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Adventure",
+            "Referensi sejarah: Blackbeard / Israel Hands"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "adventure-prize-kidd",
+        "label": "Quedagh Merchant / Adventure Prize",
+        "pirateAssociation": "William Kidd",
+        "aliases": [
+          "Quedagh Merchant",
+          "Adventure Prize",
+          "Cara Merchant"
+        ],
+        "sourceIds": [
+          "kidd-research"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Quedagh Merchant / Adventure Prize",
+            "Referensi sejarah: William Kidd"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "satisfaction-morgan",
+        "label": "Satisfaction",
+        "pirateAssociation": "Henry Morgan",
+        "aliases": [],
+        "sourceIds": [
+          "morgan-research"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Satisfaction",
+            "Referensi sejarah: Henry Morgan"
+          ],
+          "futureResultsUnknown": true
+        },
+        "historicalRoleNote": "Morgan was a buccaneer/privateer; name supplied by the archaeological project, not a fictional franchise ship.",
+        "effects": []
+      },
+      {
+        "id": "golden-fleece-bannister",
+        "label": "Golden Fleece",
+        "pirateAssociation": "Joseph Bannister",
+        "aliases": [],
+        "sourceIds": [
+          "golden-fleece"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Golden Fleece",
+            "Referensi sejarah: Joseph Bannister"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "speaker-bowen",
+        "label": "Speaker",
+        "pirateAssociation": "John Bowen",
+        "aliases": [],
+        "sourceIds": [
+          "archaeology-2019",
+          "bowen-history"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Speaker",
+            "Referensi sejarah: John Bowen"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "flying-dragon-condent",
+        "label": "Flying Dragon",
+        "pirateAssociation": "Captain Condent",
+        "aliases": [
+          "Dragon"
+        ],
+        "sourceIds": [
+          "gutenberg-1724",
+          "condent-names"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Flying Dragon",
+            "Referensi sejarah: Captain Condent"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "cassandra-england-taylor",
+        "label": "Cassandra",
+        "pirateAssociation": "Edward England / Richard Taylor",
+        "aliases": [],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Cassandra",
+            "Referensi sejarah: Edward England / Richard Taylor"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "happy-delivery-lowther",
+        "label": "Happy Delivery",
+        "pirateAssociation": "George Lowther",
+        "aliases": [],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Happy Delivery",
+            "Referensi sejarah: George Lowther"
+          ],
+          "futureResultsUnknown": true
+        },
+        "identityNote": "Do not assume Happy Delivery and Gambia Castle/Delivery are the same hull; no alias merge without further evidence.",
+        "effects": []
+      },
+      {
+        "id": "good-fortune-anstis",
+        "label": "Good Fortune",
+        "pirateAssociation": "Thomas Anstis",
+        "aliases": [],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Good Fortune",
+            "Referensi sejarah: Thomas Anstis"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "morning-star-fenn",
+        "label": "Morning Star",
+        "pirateAssociation": "John Fenn; armada Thomas Anstis",
+        "aliases": [],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Morning Star",
+            "Referensi sejarah: John Fenn; armada Thomas Anstis"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "great-ranger-roberts-fleet",
+        "label": "Great Ranger",
+        "pirateAssociation": "Armada Bartholomew Roberts",
+        "aliases": [],
+        "sourceIds": [
+          "archaeology-2019",
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Great Ranger",
+            "Referensi sejarah: Armada Bartholomew Roberts"
+          ],
+          "futureResultsUnknown": true
+        },
+        "effects": []
+      },
+      {
+        "id": "revenge-phillips",
+        "label": "Revenge",
+        "pirateAssociation": "John Phillips",
+        "aliases": [],
+        "sourceIds": [
+          "gutenberg-1724"
+        ],
+        "baseWeight": 1,
+        "probability": 0.05555555555555555,
+        "resultContext": {
+          "facts": [
+            "Kapal: Revenge",
+            "Referensi sejarah: John Phillips"
+          ],
+          "futureResultsUnknown": true
+        },
+        "identityNote": "Distinct vessel from Bonnet’s Revenge; same display name does not merge different captains/hulls.",
+        "effects": []
+      }
+    ],
+    "rankCondition": "All six ranks use this same ship pool; no undocumented rank rarity/pool lock.",
+    "presentationOnly": true
+  },
+  "shipHandling": {
+    "recordField": "presentation.pirateShip",
+    "classification": "cosmetic-only",
+    "visualOnly": true,
+    "affectsGameplay": false,
+    "weaponClassification": "cosmetic-only",
+    "weaponGrant": null,
+    "vehicleGrant": null,
+    "masteryScheduling": "none from ship result",
+    "crewGrant": false,
+    "statBonusFromShip": 0,
+    "powerGrant": false,
+    "probabilityModifiers": [],
+    "relationship": "Committed historical ship appearance/reference for design and narration; no owned/controllable vessel entity or command authority."
+  },
+  "contracts": {
+    "order": "Actual Pirate result/reaction -> one equal rank spin -> selected 0..2-point stat recipe/reaction -> one equal cosmetic ship spin -> presentation context/reaction -> Backstory.",
+    "probability": "Six equal ranks (1/6), eighteen equal ships (1/18) under the user default; no category, success, quantity, rank-dependent ship rarity or historic-fame modifier.",
+    "rankReward": "Each rank grants exactly its frozen recipe total 0..2 numeric points, not that amount on every stat. Apply per-stat flat modifiers once after immutable raw bases; Crew zero/no reroll. Fixed reward is not a Lucky Number stat spin.",
+    "identity": "Ships are real historically attested associations, with notes for privateering/history uncertainties. Alias names for one ship share one outcome; genuinely different ships sharing a name retain separate IDs. Historical captain is reference context, not owner Race/hero/mentor/event or an ally grant.",
+    "ship": "Store only the actual selected ship identity/alias/history source as presentation.pirateShip. Ship affects visual design/narration only: no stats, power, weapon, vehicle, mastery, Enchant, crew/army, Size, command/control, hidden event or later odds modifier. Rank bonus remains unchanged.",
+    "ledger": "Freeze both wheel pools/odds, rule version, selected rank recipe and cosmetic ship identity/aliases/source refs. Rank package is source-keyed to its actual rank spin; presentation record to its actual ship spin. Commit each once; replay adds no spin, stat bonus, inventory entity or second presentation record.",
+    "reaction": "Stack actual rank/declared bonus then cosmetic ship/history association in order. Ship may appear in image/video context without implied ownership/control or gameplay grants. No future Backstory/stat/mastery result inferred; captions do not create funny tags.",
+    "return": "After two actual child spins and reactions restore Backstory; preserve Race rewards/normal Weapon and Power stages."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only; pure event helper not yet implemented",
+    "module": null
+  },
+  "researchRef": "../reference/pirate-ship-research.json",
+  "openConfiguration": [
+    "editable rank labels/exact 0..2-point recipes and historical ship roster",
+    "final Archetype body/role fit and optional ship visual reference/art profiles",
+    "runtime event planner/resolver and persistence adapter"
+  ],
+  "retiredProfiles": [
+    {
+      "version": "pirate/0.1.0",
+      "active": false,
+      "definitionFile": "../reference/pirate-retired-profile-0.1.0.json",
+      "reason": "Previous classification-pending design preserved; new runs follow the user-confirmed cosmetic-only ship rule. Do not rewrite committed historical journals."
+    }
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

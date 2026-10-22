@@ -1,0 +1,377 @@
+{
+  "schemaVersion": "roda-kekacauan-royal/0.1",
+  "version": "royal/0.3.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "royal",
+  "eventProfileId": "royal-chess-piece",
+  "status": "Core six-piece outcomes, Tier 5 command Authority, Bishop Angelic and raw-stat Pawn evolution approved. Seven-category aggregation disclosed; capability/body-role fit/runtime configuration remains.",
+  "authority": {
+    "confirmed": [
+      "Royal spins one of six chess pieces: King, Queen, Bishop, Knight, Rook, Pawn. Unspecified equal default applies.",
+      "King grants one fixed Tier 5 power Authority; user clarifies its scope as Perintah mutlak / dominasi kehendak.",
+      "Queen gives +1 to all five main stats; Knight gives +2 Speed; Rook gives +2 Durability.",
+      "Bishop makes exactly one canonical twenty-option Angelic Power spin, explicitly clarified by the user.",
+      "Pawn unlocks the Beast of Possibility condition: when at least three stat categories including Weapon and Power Mastery reach >=7, evolve to Royal High Paladin and give +2 to all five main stats.",
+      "User clarifies Pawn evaluates original raw spin results before bonuses; mastery uses the same explicit numeric mapping as stats."
+    ],
+    "authoredChoices": "Disclosed working interpretation: at least three of seven stat categories; multiple weapons contribute at most one Weapon Mastery category. User confirmed threshold and raw values; no all-weapon stacking count requested."
+  },
+  "statKeys": [
+    "strength",
+    "speed",
+    "durability",
+    "intelligence",
+    "fight"
+  ],
+  "pieceWheel": {
+    "id": "royal-chess-piece",
+    "label": "Bidak Royal",
+    "outcomeCount": 6,
+    "drawCount": 1,
+    "outcomes": [
+      {
+        "id": "king",
+        "label": "King",
+        "effects": [
+          {
+            "type": "grant-power",
+            "powerId": "royal-authority",
+            "definitionFile": "royal-events-design.json",
+            "grantMode": "power"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: King",
+            "Authority Tier 5"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "queen",
+        "label": "Queen",
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "strength",
+            "amount": 1,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "speed",
+            "amount": 1,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "durability",
+            "amount": 1,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "intelligence",
+            "amount": 1,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "fight",
+            "amount": 1,
+            "unit": "numeric point"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: Queen",
+            "+1 semua main stat"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "bishop",
+        "label": "Bishop",
+        "effects": [
+          {
+            "type": "invoke-shared-wheel",
+            "wheelId": "power-angelic",
+            "definitionFile": "universal-power-wheels-design.json",
+            "invocationCount": 1,
+            "catalogVersion": "universal-power/0.2.0"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: Bishop",
+            "Satu Angelic Power spin"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "knight",
+        "label": "Knight",
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "speed",
+            "amount": 2,
+            "unit": "numeric point"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: Knight",
+            "Speed +2"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "rook",
+        "label": "Rook",
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "durability",
+            "amount": 2,
+            "unit": "numeric point"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: Rook",
+            "Durability +2"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "pawn",
+        "label": "Pawn",
+        "effects": [
+          {
+            "type": "arm-condition",
+            "conditionId": "beast-of-possibility"
+          }
+        ],
+        "baseWeight": 1,
+        "probability": 0.16666666666666666,
+        "resultContext": {
+          "facts": [
+            "Royal: Pawn",
+            "Beast of Possibility aktif; evolusi belum terjadi"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "powers": [
+    {
+      "id": "royal-authority",
+      "label": "Authority",
+      "aliases": [
+        "Perintah Mutlak",
+        "Dominasi Kehendak"
+      ],
+      "group": "royal-command",
+      "contentStatus": "User-defined fictional King power with explicit Tier 5 and will/command scope.",
+      "scope": "Perintah mutlak / dominasi kehendak.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, command interpretation, range, duration, costs, resistance interactions and rank-dependent control remain configuration. No extra army/follower/body/race/Concept event inferred.",
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "User explicitly sets Authority to Tier 5 and clarifies absolute command / will domination; not inferred from mastery or chess rank.",
+      "powerTierRef": "content/power-tier-design.json#royal-authority",
+      "resultContext": {
+        "facts": [
+          "Power: Authority",
+          "Tier 5",
+          "Perintah Mutlak / Dominasi Kehendak"
+        ],
+        "futureResultsUnknown": true
+      }
+    }
+  ],
+  "weapons": [],
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-angelic",
+      "definitionFile": "universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "invocationCount": 1,
+      "guard": "Actual Bishop only",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "beast-of-possibility",
+      "label": "Beast of Possibility",
+      "classification": "passive evolution condition, not an owned power",
+      "sourceOutcomeId": "pawn",
+      "thresholdValue": 7,
+      "minimumQualifyingCategoryCount": 3,
+      "comparison": ">=",
+      "valueBasis": "immutable original raw spin result before any bonus, multiplier, derived base, cap or override",
+      "statCategories": [
+        "strength",
+        "speed",
+        "durability",
+        "intelligence",
+        "fight",
+        "weapon-mastery",
+        "power-mastery"
+      ],
+      "categoryCount": 7,
+      "aggregationAuthority": "Disclosed working interpretation: at least three of seven stat categories; multiple weapons contribute at most one Weapon Mastery category. User confirmed threshold and raw values; no all-weapon stacking count requested.",
+      "mainStatInputs": "One actual raw primary spin result per main-stat key. Skipped/copied/derived bases or fixed stat modifiers do not fabricate raw qualifying samples.",
+      "weaponMasteryInput": "Category qualifies when any currently active owned weapon has an actual immutable raw mastery result numerically >=7; record its exact instance/spin proof. Multiple qualifying weapons still count once; discarded/inactive weapons excluded.",
+      "powerMasteryInput": "The one actual shared raw Power Mastery result counts at most one category, regardless of owned power count. God Authority maximum overrides and per-power projections are not raw samples.",
+      "masteryNumberMapping": {
+        "range": [
+          0,
+          9
+        ],
+        "reference": "stat-scales-design.json#scales: explicit 0..9 Weapon/Power Mastery maps, frozen with invocation",
+        "configurationRequired": false,
+        "noLabelParsing": true,
+        "noImplicitSectorIndex": true,
+        "missingActualResultBinding": "needs_configuration; never silently treat an unmapped actual result as zero",
+        "catalogVersion": "stat-scales/0.2.0"
+      },
+      "availability": "Future unrolled categories are pending; genuinely absent/skipped mastery has no raw result and is unqualified. Three known qualifying categories suffice to evolve while later categories remain unrolled.",
+      "observe": [
+        "after actual main-stat raw commit",
+        "after actual per-active-weapon Weapon Mastery raw commit",
+        "after the one actual shared Power Mastery raw commit",
+        "after a relevant inventory activation/discard update",
+        "finalize consistency audit before image freeze"
+      ],
+      "timing": "Evaluate after committed source result and before its reaction snapshot; promote immediately on the first satisfied >=3 criterion, without another spin.",
+      "evolution": {
+        "id": "royal-high-paladin",
+        "label": "Royal High Paladin",
+        "operation": "set source-owned Royal Pawn evolved form; preserve original Royal/Pawn result and history",
+        "additionalArchetypeSpin": false,
+        "dispatchPaladinProfile": false,
+        "effects": [
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "strength",
+            "amount": 2,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "speed",
+            "amount": 2,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "durability",
+            "amount": 2,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "intelligence",
+            "amount": 2,
+            "unit": "numeric point"
+          },
+          {
+            "type": "register-flat-stat-modifier",
+            "stat": "fight",
+            "amount": 2,
+            "unit": "numeric point"
+          }
+        ],
+        "oneTime": true,
+        "demotion": false
+      },
+      "ledgerKey": "runId/sourceRoyalInvocationId/sourcePieceSpinId/conditionId/evolution",
+      "recursiveTrigger": false,
+      "repeat": "At most one evolution package per Pawn source. Replays, reevaluation, finalization and own +2 bonuses do not promote or grant again.",
+      "evidence": "Freeze qualifying category names, raw numbers, original result IDs, active weapon instance proof and mastery maps at the first successful trigger.",
+      "exclusions": [
+        "effective boosted stats/masteries or Royal evolution bonus",
+        "Power Tier 1-5 metadata",
+        "duplicate power projections or multiple weapon categories",
+        "discarded weapon raw results",
+        "skipped/copied/derived/fixed reveals",
+        "caption, image, replay or narration"
+      ]
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "royal-chess-piece",
+      "definitionFile": "royal-events-design.json",
+      "invocationCount": 1,
+      "stepId": "royal-piece-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "conditionalFollowups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "power-angelic",
+      "definitionFile": "universal-power-wheels-design.json",
+      "guard": "Actual Bishop",
+      "invocationCount": 1,
+      "stepId": "royal-bishop-angelic-1",
+      "returnTo": "backstory",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "contracts": {
+    "order": "Actual Royal/reaction -> one equal piece spin -> apply only selected effect or arm Pawn condition/reaction -> Bishop only one actual canonical Angelic spin/grant/reaction -> Backstory.",
+    "probability": "Six equal piece base weights 1, each 1/6; Bishop uses canonical twenty Angelic entries/weights 1, each 1/20. No chess-rank rarity, promotion chance or special success wheel.",
+    "king": "Grant one fixed named Authority (absolute command/will domination), ordinary power mode at explicit Tier 5. No Concept selector, God race/follower/Divine package, God Authority maximum or automatic mastery bonus. Persist after main None for one shared mastery.",
+    "fixedStats": "Queen +1 each five numeric main stats; Knight +2 Speed only; Rook +2 Durability only. Source-keyed fixed modifiers, not actual stat rolls or mastery bonus. Register all five-stat modifiers now; calculate their numeric contribution only at finalize. Pawn uses raw values and may evolve earlier without applying its stat bonus yet.",
+    "bishop": "Reuse power-angelic once, twenty canonical definitions/tiers/equal base weights; grant only the actual selected ordinary power. Import no Heavenly/Angel identity event, maximum or extra mastery.",
+    "pawn": "Arm Beast of Possibility condition only, no early power/stat bonus. Original raw values and explicit frozen mastery mappings determine >=3 qualifying categories at >=7. First success gives one source-owned Royal High Paladin form/+2 each five main stats; no new Paladin/Archetype/race dispatch or repeated promotion.",
+    "mastery": "King/Bishop owned powers retain one ordinary shared Power Mastery after all acquisitions; no Power Enchant/mastery-specific child wheel. Pawn passively observes that same raw draw and can grant its one stat/form milestone without another mastery/evolution spin.",
+    "ledger": "Freeze piece pool/weights/version/result/effects and conditional Angelic invocation; commit selected fixed package or armed condition once. Pawn trigger freezes qualifying raw proof and commits form/five modifiers atomically under one evolution source key. Replay reuses snapshots, never duplicates grants, Divine draw or evolution.",
+    "reaction": "Stack actual piece and declared effects; Pawn starts armed, not evolved. At successful trigger append Royal High Paladin, raw category proof and +2 per main stat in the result/milestone reaction. Future powers/masteries/stats remain unknown; no caption-derived funny tag.",
+    "return": "Piece and optional Bishop child return to Backstory. Passive evolution restores exact current stat/mastery/event caller; final audit completes before image. Preserve normal Weapon/Power/Weakness/Apex/Title sequence and unrelated sources."
+  },
+  "runtimeInterface": {
+    "status": "design-only; Royal event and passive raw-stat evolution helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Authority capability/target/range/cost/resistance limits",
+    "Intelligence display labels and final numeric bounds/cap policy; raw 0..9 mapping is defined",
+    "seven-category aggregation may be refined; current Weapon Mastery category counts once",
+    "existing canonical Angelic limits, final Archetype body/role fit/boost band",
+    "runtime condition observer, atomic grants/form ledger and persistence adapter"
+  ],
+  "migrationContract": {
+    "retiredSnapshot": "reference/power-themes-before-2026-10-09.json",
+    "policy": "New invocations use this route/version and universal-power/0.2.0; committed old results keep their original version, route, pool and effects. Latest new invocations bind stat-scales/0.2.0 explicitly; preserve old committed mastery mappings.",
+    "mappingSnapshot": "reference/before-stat-scales-resilient-2026-10-09.json"
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

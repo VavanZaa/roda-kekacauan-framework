@@ -1,0 +1,3576 @@
+{
+  "version": "enchantment-wheel/1.0.0",
+  "status": "editable design and pure helper; production executor and attack/render adapters pending",
+  "authority": {
+    "userRequest": "About60 enchants, including large size, bloodsteal, fire, living weapon, sharp, extremely small, slippery.",
+    "authoredChoices": "Names, Tier1..5 ordering, bounded effect parameters, physical-item capabilities and proposed one slot are editable game design."
+  },
+  "wheel": {
+    "id": "enchant",
+    "label": "Enchantment",
+    "baseProbability": "equal-per-eligible-option",
+    "unfilteredOutcomeCount": 60,
+    "noneOutcome": null,
+    "direction": "anticlockwise",
+    "order": "weakest-to-strongest along the pointer sampling direction",
+    "tierMass": "not reserved; tiers annotate strength only",
+    "statMasteryProbabilityBoundsApply": false
+  },
+  "tierNames": {
+    "1": "Zonk / Kekacauan",
+    "2": "Praktis",
+    "3": "Tempur",
+    "4": "Spesial",
+    "5": "Legendary"
+  },
+  "contract": {
+    "stage": "finalize",
+    "threshold": 5,
+    "thresholdLabel": "Master",
+    "slotsPerWeapon": 1,
+    "gate": "active owned weapon + final effective Weapon Mastery>=5 + compatible unused slot",
+    "bonusTiming": "Effective mastery = immutable retained raw base + distinct matching final modifiers; signed, unbounded.",
+    "noPowerEnchant": true,
+    "slotKey": "[runId, characterId, weaponInstanceId, enchant, 0]",
+    "repeat": "Resolve once per slot; saved frozen result consumes its slot atomically with the trait. Resume never redraws a consumed slot.",
+    "effects": "Weapon-local traits only. No main-stat/mastery modifier, owner power, weapon/race grant or other wheel invocation.",
+    "size": "Only selected weapon changes; owner Size wheel/result stays unchanged. Geometric scale does not invent owner stats/body fit.",
+    "attack": "Enchant augments the existing weapon attack/delivery; does not create unlimited ammo, attacks, target eligibility, or an owner power.",
+    "bloodsteal": "Needs a successful wounding hit on a blood-bearing target; minor healing, no victim-count wheel or Vampire rewards.",
+    "living": "Same weapon instance gains bounded autonomous behavior; no separate companion/race/grant or secondary mastery.",
+    "funny": "Only an actual tagged Enchant result supplies the existing Shrek funny-result hook; once by actual spin ID, never fixed/replayed/preview results.",
+    "equalizer": "Uniform after hard compatibility/disabled/slot/ownership filters; no threshold or draw-count change.",
+    "emptyPool": "needs_configuration, no fallback, None, or silent skipped reward",
+    "externalDefinitions": "Unbound early/mount/companion/Mecha definitions need an explicit adapter binding. Never infer artifact compatibility from a name or narrative.",
+    "replay": "Freeze versions, eligibility/capability snapshot, final projection proof, normalized leaf pool and recipe before external RNG. Replay uses frozen plan."
+  },
+  "capabilityVocabulary": [
+    "physical-item",
+    "edge",
+    "grip",
+    "metal",
+    "powered",
+    "elongated",
+    "projectile",
+    "binding"
+  ],
+  "compatibilityBindings": [
+    {
+      "id": "enchant-binding-weapon-bola-tenis",
+      "weaponCatalogId": "weapon-bola-tenis",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-bola-tenis",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gigi-palsu",
+      "weaponCatalogId": "weapon-gigi-palsu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gigi-palsu",
+      "enchantable": true,
+      "capabilities": [
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-jebakan-tikus",
+      "weaponCatalogId": "weapon-jebakan-tikus",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-jebakan-tikus",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-batu-bata",
+      "weaponCatalogId": "weapon-batu-bata",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-batu-bata",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-garpu",
+      "weaponCatalogId": "weapon-garpu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-garpu",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sendok",
+      "weaponCatalogId": "weapon-sendok",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sendok",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-centong-nasi",
+      "weaponCatalogId": "weapon-centong-nasi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-centong-nasi",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sandal-jepit",
+      "weaponCatalogId": "weapon-sandal-jepit",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sandal-jepit",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sapu-lidi",
+      "weaponCatalogId": "weapon-sapu-lidi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sapu-lidi",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kemoceng",
+      "weaponCatalogId": "weapon-kemoceng",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kemoceng",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gantungan-baju",
+      "weaponCatalogId": "weapon-gantungan-baju",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gantungan-baju",
+      "enchantable": true,
+      "capabilities": [
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-penggaris-kayu",
+      "weaponCatalogId": "weapon-penggaris-kayu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-penggaris-kayu",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pensil-2b",
+      "weaponCatalogId": "weapon-pensil-2b",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pensil-2b",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-spidol-permanen",
+      "weaponCatalogId": "weapon-spidol-permanen",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-spidol-permanen",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-botol-plastik",
+      "weaponCatalogId": "weapon-botol-plastik",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-botol-plastik",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gelas-plastik",
+      "weaponCatalogId": "weapon-gelas-plastik",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gelas-plastik",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-piring-plastik",
+      "weaponCatalogId": "weapon-piring-plastik",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-piring-plastik",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tutup-panci",
+      "weaponCatalogId": "weapon-tutup-panci",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tutup-panci",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-wajan-lengket",
+      "weaponCatalogId": "weapon-wajan-lengket",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-wajan-lengket",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-bantal-guling",
+      "weaponCatalogId": "weapon-bantal-guling",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-bantal-guling",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sarung-gulung",
+      "weaponCatalogId": "weapon-sarung-gulung",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sarung-gulung",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-payung-bolong",
+      "weaponCatalogId": "weapon-payung-bolong",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-payung-bolong",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kardus",
+      "weaponCatalogId": "weapon-kardus",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kardus",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-mi-instan-mentah",
+      "weaponCatalogId": "weapon-mi-instan-mentah",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-mi-instan-mentah",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kerupuk",
+      "weaponCatalogId": "weapon-kerupuk",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kerupuk",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-timun",
+      "weaponCatalogId": "weapon-timun",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-timun",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-telur-mentah",
+      "weaponCatalogId": "weapon-telur-mentah",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-telur-mentah",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kulit-pisang",
+      "weaponCatalogId": "weapon-kulit-pisang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kulit-pisang",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-balon-air",
+      "weaponCatalogId": "weapon-balon-air",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-balon-air",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-selfie",
+      "weaponCatalogId": "weapon-tongkat-selfie",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-selfie",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item",
+        "powered"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pisau-dapur",
+      "weaponCatalogId": "weapon-pisau-dapur",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pisau-dapur",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-golok",
+      "weaponCatalogId": "weapon-golok",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-golok",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-celurit",
+      "weaponCatalogId": "weapon-celurit",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-celurit",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-parang",
+      "weaponCatalogId": "weapon-parang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-parang",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-belati",
+      "weaponCatalogId": "weapon-belati",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-belati",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-kayu",
+      "weaponCatalogId": "weapon-pedang-kayu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-kayu",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-bambu",
+      "weaponCatalogId": "weapon-tongkat-bambu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-bambu",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-keris-biasa",
+      "weaponCatalogId": "weapon-keris-biasa",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-keris-biasa",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-besi",
+      "weaponCatalogId": "weapon-tongkat-besi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-besi",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-palu-godam",
+      "weaponCatalogId": "weapon-palu-godam",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-palu-godam",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kunci-inggris",
+      "weaponCatalogId": "weapon-kunci-inggris",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kunci-inggris",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-linggis",
+      "weaponCatalogId": "weapon-linggis",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-linggis",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kapak-kayu",
+      "weaponCatalogId": "weapon-kapak-kayu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kapak-kayu",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pacul",
+      "weaponCatalogId": "weapon-pacul",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pacul",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sabit",
+      "weaponCatalogId": "weapon-sabit",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sabit",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sekop",
+      "weaponCatalogId": "weapon-sekop",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sekop",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-ketapel",
+      "weaponCatalogId": "weapon-ketapel",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-ketapel",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pemukul-baseball",
+      "weaponCatalogId": "weapon-pemukul-baseball",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pemukul-baseball",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-raket-tenis",
+      "weaponCatalogId": "weapon-raket-tenis",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-raket-tenis",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-rantai-besi",
+      "weaponCatalogId": "weapon-rantai-besi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-rantai-besi",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tombak-bambu",
+      "weaponCatalogId": "weapon-tombak-bambu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tombak-bambu",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pecut",
+      "weaponCatalogId": "weapon-pecut",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pecut",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gitar-akustik",
+      "weaponCatalogId": "weapon-gitar-akustik",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gitar-akustik",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pistol-angin",
+      "weaponCatalogId": "weapon-pistol-angin",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pistol-angin",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "powered",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pistol-flare",
+      "weaponCatalogId": "weapon-pistol-flare",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pistol-flare",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-semprotan-merica",
+      "weaponCatalogId": "weapon-semprotan-merica",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-semprotan-merica",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-bom-asap",
+      "weaponCatalogId": "weapon-bom-asap",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-bom-asap",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-jaring-penangkap",
+      "weaponCatalogId": "weapon-jaring-penangkap",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-jaring-penangkap",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pancing-ikan",
+      "weaponCatalogId": "weapon-pancing-ikan",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pancing-ikan",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kursi-lipat",
+      "weaponCatalogId": "weapon-kursi-lipat",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kursi-lipat",
+      "enchantable": true,
+      "capabilities": [
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-panjang",
+      "weaponCatalogId": "weapon-pedang-panjang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-panjang",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-katana",
+      "weaponCatalogId": "weapon-katana",
+      "definitionFile": "content/goblin-orc-troll-events-design.json",
+      "definitionId": "katana",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-besar",
+      "weaponCatalogId": "weapon-pedang-besar",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-besar",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-rapier",
+      "weaponCatalogId": "weapon-rapier",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-rapier",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-saber",
+      "weaponCatalogId": "weapon-saber",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-saber",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tombak",
+      "weaponCatalogId": "weapon-tombak",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tombak",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-trident-trisula",
+      "weaponCatalogId": "weapon-trident-trisula",
+      "definitionFile": "content/elf-events-design.json",
+      "definitionId": "trishula",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-halberd",
+      "weaponCatalogId": "weapon-halberd",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-halberd",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kapak-perang",
+      "weaponCatalogId": "weapon-kapak-perang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kapak-perang",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gada-perang",
+      "weaponCatalogId": "weapon-gada-perang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gada-perang",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-palu-perang",
+      "weaponCatalogId": "weapon-palu-perang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-palu-perang",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-kembar",
+      "weaponCatalogId": "weapon-pedang-kembar",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-kembar",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-buku-jari-besi",
+      "weaponCatalogId": "weapon-buku-jari-besi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-buku-jari-besi",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-shuriken",
+      "weaponCatalogId": "weapon-shuriken",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-shuriken",
+      "enchantable": true,
+      "capabilities": [
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kunai",
+      "weaponCatalogId": "weapon-kunai",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kunai",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-nunchaku",
+      "weaponCatalogId": "weapon-nunchaku",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-nunchaku",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-busur",
+      "weaponCatalogId": "weapon-busur",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-busur",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-crossbow",
+      "weaponCatalogId": "weapon-crossbow",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-crossbow",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-busur-besar",
+      "weaponCatalogId": "weapon-busur-besar",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-busur-besar",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-javelin",
+      "weaponCatalogId": "weapon-javelin",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-javelin",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tameng-besi",
+      "weaponCatalogId": "weapon-tameng-besi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tameng-besi",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-cakram-lempar",
+      "weaponCatalogId": "weapon-cakram-lempar",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-cakram-lempar",
+      "enchantable": true,
+      "capabilities": [
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-revolver",
+      "weaponCatalogId": "weapon-revolver",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-revolver",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-shotgun",
+      "weaponCatalogId": "weapon-shotgun",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-shotgun",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-smg",
+      "weaponCatalogId": "weapon-smg",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-smg",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-senapan-serbu",
+      "weaponCatalogId": "weapon-senapan-serbu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-senapan-serbu",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-senapan-sniper",
+      "weaponCatalogId": "weapon-senapan-sniper",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-senapan-sniper",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-peluncur-granat",
+      "weaponCatalogId": "weapon-peluncur-granat",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-peluncur-granat",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-bazooka",
+      "weaponCatalogId": "weapon-bazooka",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-bazooka",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-flamethrower",
+      "weaponCatalogId": "weapon-flamethrower",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-flamethrower",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sacred-sword",
+      "weaponCatalogId": "weapon-sacred-sword",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sacred-sword",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-terkutuk",
+      "weaponCatalogId": "weapon-pedang-terkutuk",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-terkutuk",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-api",
+      "weaponCatalogId": "weapon-pedang-api",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-api",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-es",
+      "weaponCatalogId": "weapon-pedang-es",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-es",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-petir",
+      "weaponCatalogId": "weapon-pedang-petir",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-petir",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-bayangan",
+      "weaponCatalogId": "weapon-pedang-bayangan",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-bayangan",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-darah",
+      "weaponCatalogId": "weapon-pedang-darah",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-darah",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pedang-pemburu-naga",
+      "weaponCatalogId": "weapon-pedang-pemburu-naga",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-pedang-pemburu-naga",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tombak-rune",
+      "weaponCatalogId": "weapon-tombak-rune",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tombak-rune",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-trisula-pengendali-air",
+      "weaponCatalogId": "weapon-trisula-pengendali-air",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-trisula-pengendali-air",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-busur-angin",
+      "weaponCatalogId": "weapon-busur-angin",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-busur-angin",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-busur-cahaya",
+      "weaponCatalogId": "weapon-busur-cahaya",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-busur-cahaya",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-crossbow-peledak",
+      "weaponCatalogId": "weapon-crossbow-peledak",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-crossbow-peledak",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kapak-magma",
+      "weaponCatalogId": "weapon-kapak-magma",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kapak-magma",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-palu-gravitasi",
+      "weaponCatalogId": "weapon-palu-gravitasi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-palu-gravitasi",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-cambuk-petir",
+      "weaponCatalogId": "weapon-cambuk-petir",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-cambuk-petir",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-sabit-roh",
+      "weaponCatalogId": "weapon-sabit-roh",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-sabit-roh",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-belati-penembus-armor",
+      "weaponCatalogId": "weapon-belati-penembus-armor",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-belati-penembus-armor",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-perisai-pemantul",
+      "weaponCatalogId": "weapon-perisai-pemantul",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-perisai-pemantul",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-rantai-penyegel",
+      "weaponCatalogId": "weapon-rantai-penyegel",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-rantai-penyegel",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-sihir",
+      "weaponCatalogId": "weapon-tongkat-sihir",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-sihir",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-healing",
+      "weaponCatalogId": "weapon-tongkat-healing",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-healing",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-badai",
+      "weaponCatalogId": "weapon-tongkat-badai",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-badai",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-tongkat-nekromansi",
+      "weaponCatalogId": "weapon-tongkat-nekromansi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-tongkat-nekromansi",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-buku-mantra",
+      "weaponCatalogId": "weapon-buku-mantra",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-buku-mantra",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kitab-kutukan",
+      "weaponCatalogId": "weapon-kitab-kutukan",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kitab-kutukan",
+      "enchantable": true,
+      "capabilities": [
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-laser-sword",
+      "weaponCatalogId": "weapon-laser-sword",
+      "definitionFile": "content/universal-tech-weapon-wheel-design.json",
+      "definitionId": "scifi-tech-laser-sword",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "physical-item",
+        "powered"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-railgun",
+      "weaponCatalogId": "weapon-railgun",
+      "definitionFile": "content/universal-tech-weapon-wheel-design.json",
+      "definitionId": "scifi-tech-railgun",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "powered",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-plasma-rifle",
+      "weaponCatalogId": "weapon-plasma-rifle",
+      "definitionFile": "content/universal-tech-weapon-wheel-design.json",
+      "definitionId": "scifi-tech-plasma-rifle",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "powered",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-banana-peel-launcher",
+      "weaponCatalogId": "weapon-banana-peel-launcher",
+      "definitionFile": "content/goblin-orc-troll-events-design.json",
+      "definitionId": "banana-peel-launcher",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "grip",
+        "metal",
+        "physical-item",
+        "powered",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-excalibur",
+      "weaponCatalogId": "weapon-excalibur",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "definitionId": "legend-fate-excalibur",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-dragon-slayer-berserk",
+      "weaponCatalogId": "weapon-dragon-slayer-berserk",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-dragon-slayer-berserk",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-mjolnir",
+      "weaponCatalogId": "weapon-mjolnir",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-mjolnir",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-stormbreaker",
+      "weaponCatalogId": "weapon-stormbreaker",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-stormbreaker",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gungnir",
+      "weaponCatalogId": "weapon-gungnir",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gungnir",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-trisula-poseidon",
+      "weaponCatalogId": "weapon-trisula-poseidon",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-trisula-poseidon",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kusanagi",
+      "weaponCatalogId": "weapon-kusanagi",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kusanagi",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-masamune-ffvii",
+      "weaponCatalogId": "weapon-masamune-ffvii",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-masamune-ffvii",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-zangetsu",
+      "weaponCatalogId": "weapon-zangetsu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-zangetsu",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-ryujin-jakka",
+      "weaponCatalogId": "weapon-ryujin-jakka",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-ryujin-jakka",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kyoka-suigetsu",
+      "weaponCatalogId": "weapon-kyoka-suigetsu",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kyoka-suigetsu",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gada-rujakpala",
+      "weaponCatalogId": "weapon-gada-rujakpala",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gada-rujakpala",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-enma",
+      "weaponCatalogId": "weapon-enma",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-enma",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-yoru",
+      "weaponCatalogId": "weapon-yoru",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-yoru",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-samehada",
+      "weaponCatalogId": "weapon-samehada",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-samehada",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-kubikiribocho",
+      "weaponCatalogId": "weapon-kubikiribocho",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-kubikiribocho",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-ea-fate",
+      "weaponCatalogId": "weapon-ea-fate",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-ea-fate",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gae-bolg",
+      "weaponCatalogId": "weapon-gae-bolg",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gae-bolg",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-durandal",
+      "weaponCatalogId": "weapon-durandal",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "definitionId": "legend-fate-durandal",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-gram",
+      "weaponCatalogId": "weapon-gram",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-gram",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-pasopati-kit",
+      "weaponCatalogId": "weapon-pasopati-kit",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "definitionId": "legend-pasopati-kit",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-ruyi-jingu-bang",
+      "weaponCatalogId": "weapon-ruyi-jingu-bang",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-ruyi-jingu-bang",
+      "enchantable": true,
+      "capabilities": [
+        "elongated",
+        "grip",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-blades-of-chaos",
+      "weaponCatalogId": "weapon-blades-of-chaos",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-blades-of-chaos",
+      "enchantable": true,
+      "capabilities": [
+        "binding",
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-leviathan-axe",
+      "weaponCatalogId": "weapon-leviathan-axe",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-leviathan-axe",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-master-sword",
+      "weaponCatalogId": "weapon-master-sword",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-master-sword",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-keyblade",
+      "weaponCatalogId": "weapon-keyblade",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-keyblade",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-spear-of-longinus-evangelion",
+      "weaponCatalogId": "weapon-spear-of-longinus-evangelion",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-spear-of-longinus-evangelion",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "elongated",
+        "grip",
+        "metal",
+        "physical-item",
+        "projectile"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-keris-mpu-gandring",
+      "weaponCatalogId": "weapon-keris-mpu-gandring",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "definitionId": "legend-gandring-keris",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-keris-nagasasra",
+      "weaponCatalogId": "weapon-keris-nagasasra",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-keris-nagasasra",
+      "enchantable": true,
+      "capabilities": [
+        "edge",
+        "grip",
+        "metal",
+        "physical-item"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    },
+    {
+      "id": "enchant-binding-weapon-infinity-gauntlet",
+      "weaponCatalogId": "weapon-infinity-gauntlet",
+      "definitionFile": "content/weapon-wheel-design.json",
+      "definitionId": "weapon-infinity-gauntlet",
+      "enchantable": true,
+      "capabilities": [
+        "grip",
+        "metal",
+        "physical-item",
+        "powered"
+      ],
+      "authority": "authored-enchantment-compatibility; not owner body-fit or canon immunity"
+    }
+  ],
+  "enchantments": [
+    {
+      "id": "enchant-tiny",
+      "label": "Super Kecil",
+      "tier": 1,
+      "catalogOrder": 1,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "size-scale",
+        "parameters": {
+          "factor": 0.1
+        }
+      },
+      "context": "Ukuran senjata jadi sepersepuluh ukuran awal.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-slippery",
+      "label": "Licin",
+      "tier": 1,
+      "catalogOrder": 2,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "grip"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "slippery-grip",
+        "parameters": {}
+      },
+      "context": "Senjata gampang lepas dari pegangan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-blunt",
+      "label": "Tumpul",
+      "tier": 1,
+      "catalogOrder": 3,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "edge"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "edge-scale",
+        "parameters": {
+          "factor": 0.5
+        }
+      },
+      "context": "Ketajaman ujung atau mata senjata berkurang.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-too-heavy",
+      "label": "Berat Banget",
+      "tier": 1,
+      "catalogOrder": 4,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "mass-scale",
+        "parameters": {
+          "factor": 3
+        }
+      },
+      "context": "Massa senjata jadi tiga kali massa awal.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-fragile",
+      "label": "Rapuh",
+      "tier": 1,
+      "catalogOrder": 5,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "fragile",
+        "parameters": {
+          "trigger": "hard-impact"
+        }
+      },
+      "context": "Senjata retak saat menerima benturan keras.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-jengkol",
+      "label": "Bau Jengkol",
+      "tier": 1,
+      "catalogOrder": 6,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "odor",
+        "parameters": {
+          "scent": "jengkol"
+        }
+      },
+      "context": "Senjata bau jengkol.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-noisy",
+      "label": "Berisik",
+      "tier": 1,
+      "catalogOrder": 7,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "movement-noise",
+        "parameters": {}
+      },
+      "context": "Senjata bunyi tiap digerakkan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-sticky",
+      "label": "Lengket",
+      "tier": 1,
+      "catalogOrder": 8,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "grip"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "sticky-grip",
+        "parameters": {}
+      },
+      "context": "Pegangan senjata susah dilepas.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-rusty",
+      "label": "Karatan",
+      "tier": 1,
+      "catalogOrder": 9,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "metal"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "accelerated-rust",
+        "parameters": {}
+      },
+      "context": "Bagian logam senjata gampang berkarat.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-sulky",
+      "label": "Ngambekan",
+      "tier": 1,
+      "catalogOrder": 10,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "uncooperative-item",
+        "parameters": {
+          "trigger": "attempted-use"
+        }
+      },
+      "context": "Senjata kadang menolak dipakai.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-leaky-battery",
+      "label": "Baterai Bocor",
+      "tier": 1,
+      "catalogOrder": 11,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "powered"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "energy-leak",
+        "parameters": {}
+      },
+      "context": "Sumber energi senjata cepat habis.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-fake-damage",
+      "label": "Damage Kosmetik",
+      "tier": 1,
+      "catalogOrder": 12,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "fake-damage-overlay",
+        "parameters": {
+          "actualBonusDamage": 0
+        }
+      },
+      "context": "Serangan menampilkan angka damage palsu.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-sharp",
+      "label": "Tajam",
+      "tier": 2,
+      "catalogOrder": 13,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "edge"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "edge-scale",
+        "parameters": {
+          "factor": 1.25
+        }
+      },
+      "context": "Mata atau ujung senjata lebih tajam.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-rustproof",
+      "label": "Anti Karat",
+      "tier": 2,
+      "catalogOrder": 14,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "metal"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "rustproof",
+        "parameters": {}
+      },
+      "context": "Bagian logam senjata tahan karat.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-lightweight",
+      "label": "Ringan",
+      "tier": 2,
+      "catalogOrder": 15,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "mass-scale",
+        "parameters": {
+          "factor": 0.5
+        }
+      },
+      "context": "Massa senjata jadi setengah massa awal.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-comfy-grip",
+      "label": "Gagang Nyaman",
+      "tier": 2,
+      "catalogOrder": 16,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "grip"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "comfortable-grip",
+        "parameters": {}
+      },
+      "context": "Pegangan senjata lebih nyaman.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-non-slip",
+      "label": "Anti Selip",
+      "tier": 2,
+      "catalogOrder": 17,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "grip"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "non-slip-grip",
+        "parameters": {}
+      },
+      "context": "Pegangan senjata tidak mudah selip.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-impact-resistant",
+      "label": "Tahan Banting",
+      "tier": 2,
+      "catalogOrder": 18,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "impact-resistance",
+        "parameters": {}
+      },
+      "context": "Senjata lebih tahan terhadap benturan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-glow",
+      "label": "Glow in the Dark",
+      "tier": 2,
+      "catalogOrder": 19,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "low-light-glow",
+        "parameters": {}
+      },
+      "context": "Senjata menyala dalam gelap.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-returning",
+      "label": "Balik ke Tangan",
+      "tier": 2,
+      "catalogOrder": 20,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "return-to-owner",
+        "parameters": {
+          "rangeMeters": 30
+        }
+      },
+      "context": "Senjata yang dilepas kembali ke tangan pemilik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-silent",
+      "label": "Senyap",
+      "tier": 2,
+      "catalogOrder": 21,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "weapon-noise-damping",
+        "parameters": {}
+      },
+      "context": "Bunyi mekanis senjata diredam.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-waterproof",
+      "label": "Anti Air",
+      "tier": 2,
+      "catalogOrder": 22,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "waterproof",
+        "parameters": {}
+      },
+      "context": "Senjata terlindungi dari kerusakan karena air.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-rgb",
+      "label": "Lampu RGB",
+      "tier": 2,
+      "catalogOrder": 23,
+      "baseWeight": 1,
+      "funnyResult": true,
+      "tags": [
+        "funny-result"
+      ],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "rgb-light",
+        "parameters": {}
+      },
+      "context": "Senjata kelap-kelip RGB.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-self-cleaning",
+      "label": "Auto Bersih",
+      "tier": 2,
+      "catalogOrder": 24,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "self-cleaning",
+        "parameters": {}
+      },
+      "context": "Kotoran pada senjata luruh sendiri.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-fire",
+      "label": "Api",
+      "tier": 3,
+      "catalogOrder": 25,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-element",
+        "parameters": {
+          "element": "fire"
+        }
+      },
+      "context": "Serangan senjata membawa api.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-ice",
+      "label": "Es",
+      "tier": 3,
+      "catalogOrder": 26,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-element",
+        "parameters": {
+          "element": "ice"
+        }
+      },
+      "context": "Serangan senjata membawa es.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-lightning",
+      "label": "Petir",
+      "tier": 3,
+      "catalogOrder": 27,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-element",
+        "parameters": {
+          "element": "lightning"
+        }
+      },
+      "context": "Serangan senjata membawa sengatan listrik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-poison",
+      "label": "Racun",
+      "tier": 3,
+      "catalogOrder": 28,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-poison",
+        "parameters": {
+          "trigger": "successful-hit"
+        }
+      },
+      "context": "Serangan yang mengenai target membawa racun.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-wind",
+      "label": "Angin",
+      "tier": 3,
+      "catalogOrder": 29,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-element",
+        "parameters": {
+          "element": "wind"
+        }
+      },
+      "context": "Serangan senjata membawa hembusan angin.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-vibration",
+      "label": "Getaran",
+      "tier": 3,
+      "catalogOrder": 30,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "hit-vibration",
+        "parameters": {
+          "trigger": "successful-hit"
+        }
+      },
+      "context": "Senjata menggetarkan titik yang terkena serangan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-shockwave",
+      "label": "Shockwave",
+      "tier": 3,
+      "catalogOrder": 31,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "impact-shockwave",
+        "parameters": {
+          "radiusMeters": 3
+        }
+      },
+      "context": "Benturan senjata menghasilkan gelombang kejut kecil.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-giant",
+      "label": "Ukuran Raksasa",
+      "tier": 3,
+      "catalogOrder": 32,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "size-scale",
+        "parameters": {
+          "factor": 3
+        }
+      },
+      "context": "Ukuran senjata jadi tiga kali ukuran awal.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-telescopic",
+      "label": "Panjang-Pendek",
+      "tier": 3,
+      "catalogOrder": 33,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "elongated"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "length-range",
+        "parameters": {
+          "minFactor": 0.5,
+          "maxFactor": 3
+        }
+      },
+      "context": "Panjang senjata bisa diubah dari setengah hingga tiga kali panjang awal.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-ricochet",
+      "label": "Peluru Pantul",
+      "tier": 3,
+      "catalogOrder": 34,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "projectile"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "ricochet",
+        "parameters": {
+          "maxBounces": 1
+        }
+      },
+      "context": "Peluru atau lemparan memantul sekali ke target lain.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-shield-breaker",
+      "label": "Pembelah Perisai",
+      "tier": 3,
+      "catalogOrder": 35,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "shield-damage-bonus",
+        "parameters": {
+          "target": "physical-shield"
+        }
+      },
+      "context": "Serangan lebih efektif merusak perisai fisik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-binding",
+      "label": "Pengikat",
+      "tier": 3,
+      "catalogOrder": 36,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "binding"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "bind-target",
+        "parameters": {
+          "maxTargets": 1
+        }
+      },
+      "context": "Senjata dapat melilit atau menjerat target.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-bloodsteal",
+      "label": "Bloodsteal",
+      "tier": 4,
+      "catalogOrder": 37,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "bloodsteal",
+        "parameters": {
+          "trigger": "wounding-blood-bearing-target",
+          "healing": "minor-wounds",
+          "cannotResurrect": true
+        }
+      },
+      "context": "Serangan yang melukai target berdarah memulihkan luka ringan pemilik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-living",
+      "label": "Living Weapon",
+      "tier": 4,
+      "catalogOrder": 38,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "animate-weapon",
+        "parameters": {
+          "rangeMeters": 10,
+          "newWeaponInstance": false
+        }
+      },
+      "context": "Senjata hidup dan dapat bicara serta bergerak sendiri.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-armor-piercing",
+      "label": "Tembus Armor",
+      "tier": 4,
+      "catalogOrder": 39,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "partial-armor-bypass",
+        "parameters": {
+          "absoluteBypass": false
+        }
+      },
+      "context": "Serangan mengurangi perlindungan armor fisik target.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-spellbreaker",
+      "label": "Pemutus Mantra",
+      "tier": 4,
+      "catalogOrder": 40,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "interrupt-spell",
+        "parameters": {
+          "maxEffectsPerHit": 1,
+          "mustConnect": true
+        }
+      },
+      "context": "Serangan mengganggu satu mantra aktif yang terkena.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-spirit-strike",
+      "label": "Serangan Roh",
+      "tier": 4,
+      "catalogOrder": 41,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "hit-incorporeal",
+        "parameters": {
+          "trigger": "successful-hit"
+        }
+      },
+      "context": "Serangan bisa mengenai makhluk tak berwujud.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-dragon-hunter",
+      "label": "Pemburu Naga",
+      "tier": 4,
+      "catalogOrder": 42,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "target-affinity",
+        "parameters": {
+          "targetTag": "dragon"
+        }
+      },
+      "context": "Senjata mendapat keunggulan serangan terhadap naga.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-energy-shield",
+      "label": "Perisai Energi",
+      "tier": 4,
+      "catalogOrder": 43,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "project-energy-shield",
+        "parameters": {
+          "maxShields": 1,
+          "invulnerable": false
+        }
+      },
+      "context": "Senjata membentuk pelindung energi di depan pemilik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-shadow-copies",
+      "label": "Klon Bayangan",
+      "tier": 4,
+      "catalogOrder": 44,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "attack-afterimages",
+        "parameters": {
+          "maxAfterimages": 2,
+          "newWeaponInstances": false
+        }
+      },
+      "context": "Serangan dibantu dua bayangan senjata sementara.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-target-mark",
+      "label": "Penanda Target",
+      "tier": 4,
+      "catalogOrder": 45,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "projectile"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "mark-target",
+        "parameters": {
+          "maxMarks": 1,
+          "rangeMeters": 100
+        }
+      },
+      "context": "Target yang pernah terkena ditandai agar lebih mudah dibidik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-chain-explosion",
+      "label": "Ledakan Berantai",
+      "tier": 4,
+      "catalogOrder": 46,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "chain-blast",
+        "parameters": {
+          "maxSecondaryTargets": 2,
+          "radiusMeters": 5
+        }
+      },
+      "context": "Serangan memicu ledakan kecil pada target dan dua target terdekat.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-energy-absorb",
+      "label": "Penyerap Energi",
+      "tier": 4,
+      "catalogOrder": 47,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "absorb-energy",
+        "parameters": {
+          "maxStoredHits": 1,
+          "capacity": "bounded-by-weapon",
+          "absorbsPhysicalMass": false
+        }
+      },
+      "context": "Senjata menyimpan sebagian energi dari satu serangan yang ditahan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-self-repair",
+      "label": "Reparasi Sendiri",
+      "tier": 4,
+      "catalogOrder": 48,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "self-repair",
+        "parameters": {
+          "trigger": "idle",
+          "restoresDestroyedWeapon": false
+        }
+      },
+      "context": "Senjata memperbaiki kerusakan kecil selama tidak dipakai.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-space-cut",
+      "label": "Pemotong Ruang",
+      "tier": 5,
+      "catalogOrder": 49,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "edge"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "space-cut",
+        "parameters": {
+          "maxRiftMeters": 3,
+          "permanentRift": false
+        }
+      },
+      "context": "Serangan membuat celah ruang pendek sepanjang jalur serangan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-dimension-hit",
+      "label": "Tembus Dimensi",
+      "tier": 5,
+      "catalogOrder": 50,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "adjacent-dimension-hit",
+        "parameters": {
+          "crossUniverse": false,
+          "requiresTargetLocation": true
+        }
+      },
+      "context": "Serangan dapat menjangkau target pada lapisan dimensi berdekatan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-regen-stop",
+      "label": "Penghenti Regenerasi",
+      "tier": 5,
+      "catalogOrder": 51,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "regen-inhibition",
+        "parameters": {
+          "durationSeconds": 10,
+          "trigger": "wounding-hit"
+        }
+      },
+      "context": "Luka dari senjata menghambat regenerasi target sementara.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-power-seal",
+      "label": "Penyegel Power",
+      "tier": 5,
+      "catalogOrder": 52,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "temporary-power-seal",
+        "parameters": {
+          "durationSeconds": 5,
+          "maxPowers": 1,
+          "absolute": false
+        }
+      },
+      "context": "Serangan menyegel sementara satu power aktif yang terkena.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-gravity",
+      "label": "Gravitasi Lokal",
+      "tier": 5,
+      "catalogOrder": 53,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "local-gravity",
+        "parameters": {
+          "radiusMeters": 5,
+          "durationSeconds": 3
+        }
+      },
+      "context": "Senjata mengubah gravitasi di area kecil sekitar titik serangan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-time-delay",
+      "label": "Delay Waktu",
+      "tier": 5,
+      "catalogOrder": 54,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "delay-hit",
+        "parameters": {
+          "maxDelaySeconds": 3,
+          "newAttacks": false
+        }
+      },
+      "context": "Dampak serangan dapat ditunda hingga tiga detik.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-curse-break",
+      "label": "Pemutus Kutukan",
+      "tier": 5,
+      "catalogOrder": 55,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "break-curse-link",
+        "parameters": {
+          "maxLinks": 1,
+          "absolute": false
+        }
+      },
+      "context": "Senjata dapat memutus satu ikatan kutukan yang disentuh.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-soulbound",
+      "label": "Soulbound",
+      "tier": 5,
+      "catalogOrder": 56,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "soulbound-return",
+        "parameters": {
+          "rangeMeters": 1000,
+          "crossDimension": false,
+          "ownerImmortality": false
+        }
+      },
+      "context": "Senjata terikat pada pemilik dan dapat dipanggil kembali dari jarak jauh.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-reflect",
+      "label": "Pemantul Serangan",
+      "tier": 5,
+      "catalogOrder": 57,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "reflect-energy",
+        "parameters": {
+          "maxStoredHits": 1,
+          "capacity": "bounded-by-weapon",
+          "reflectsPhysicalMass": false
+        }
+      },
+      "context": "Senjata memantulkan satu serangan energi yang berhasil ditahan.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-adaptive",
+      "label": "Adaptasi Material",
+      "tier": 5,
+      "catalogOrder": 58,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "adaptive-material",
+        "parameters": {
+          "maxActiveResistances": 1,
+          "immunity": false
+        }
+      },
+      "context": "Material senjata menyesuaikan diri setelah menerima jenis serangan yang sama.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-homing",
+      "label": "Peluru Pengejar",
+      "tier": 5,
+      "catalogOrder": 59,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "projectile"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "homing-projectile",
+        "parameters": {
+          "maxTargets": 1,
+          "rangeMeters": 100,
+          "guaranteedHit": false
+        }
+      },
+      "context": "Peluru atau lemparan membelok mengejar satu target yang ditandai.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    },
+    {
+      "id": "enchant-counter",
+      "label": "Serangan Balik",
+      "tier": 5,
+      "catalogOrder": 60,
+      "baseWeight": 1,
+      "funnyResult": false,
+      "tags": [],
+      "requiresAll": [
+        "physical-item"
+      ],
+      "effect": {
+        "scope": "selected-weapon-instance",
+        "mechanic": "stored-counter",
+        "parameters": {
+          "maxStoredHits": 1,
+          "capacity": "bounded-by-weapon",
+          "unlimitedStacking": false
+        }
+      },
+      "context": "Senjata menyimpan sebagian benturan yang ditahan untuk serangan berikutnya.",
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "grantsPowers": [],
+      "grantsWeapons": []
+    }
+  ],
+  "runtime": {
+    "module": "framework/enchantment-wheel.mjs",
+    "planner": "planEnchantmentWheel",
+    "selection": "selectEnchantmentOutcome",
+    "resolution": "resolveEnchantmentResult",
+    "mutation": "caller atomically commits receipt and consumed slot; persistent scheduler not included"
+  },
+  "preview": "preview/enchantment-roster.html"
+}

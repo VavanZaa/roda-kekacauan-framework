@@ -1,0 +1,1634 @@
+{
+  "schemaVersion": "roda-kekacauan-mythical-beast-events/0.1",
+  "status": "Ten Local and all eight Imported Mythical Beast event routes are defined. Griffin is user-specified; five remaining packages are authored within delegated three-point budget. Dragon/Phoenix and all earlier grants unchanged; detailed power/body/Size/odds balance pending.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "mythical-beast",
+  "localWheelId": "mythical-beast-local-type",
+  "confirmedLocalIds": [
+    "garuda",
+    "barong",
+    "singa-barong-reog",
+    "naga",
+    "lembuswana",
+    "kuda-sembrani",
+    "warak-ngendog",
+    "makara",
+    "kinnara",
+    "singa-ambara-raja"
+  ],
+  "inputNormalizations": [
+    {
+      "input": "luda sembrani",
+      "acceptedLabel": "Kuda Sembrani",
+      "reason": "Contextual spelling normalization of the existing type."
+    },
+    {
+      "input": "Singa Ambara Raja power +1",
+      "acceptedMeaning": "+1 Power Mastery",
+      "source": "User clarification"
+    },
+    {
+      "input": "Lembuswana Power Mastery +2",
+      "acceptedScope": "all-owned-powers",
+      "source": "User clarification"
+    }
+  ],
+  "powers": [
+    {
+      "id": "unity-inducement",
+      "label": "Unity Inducement",
+      "group": "mythical-beast-fixed-power",
+      "scope": "Mendorong keselarasan, kerja sama, dan kekompakan pada target sesuai aturan power yang nanti ditetapkan.",
+      "affinityTags": [
+        "unity"
+      ],
+      "contentStatus": "Power theme user-defined; this wording is an adjustable game description, not an additional approved effect.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent effects remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Unity Inducement",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Unity Inducement udah masuk daftar power. Mastery-nya nanti."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing proposal; exact future eligibility and weights pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "power.mastery",
+          "weakness",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#unity-inducement"
+    },
+    {
+      "id": "spirit-control",
+      "label": "Spirit Control",
+      "group": "mythical-beast-fixed-power",
+      "scope": "Memengaruhi atau mengendalikan roh dalam batas sasaran dan kemampuan yang nanti ditetapkan.",
+      "affinityTags": [
+        "spirit"
+      ],
+      "contentStatus": "Power theme user-defined; this wording is an adjustable game description, not an additional approved effect.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent effects remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Spirit Control",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Spirit Control udah masuk daftar power. Mastery-nya nanti."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing proposal; exact future eligibility and weights pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "power.mastery",
+          "weakness",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#spirit-control"
+    },
+    {
+      "id": "purity-power",
+      "label": "Purity Power",
+      "group": "mythical-beast-fixed-power",
+      "scope": "Power bertema pemurnian dan penyucian; sasaran serta efek purifikasinya akan ditetapkan saat balance.",
+      "affinityTags": [
+        "purity"
+      ],
+      "contentStatus": "Power theme user-defined; this wording is an adjustable game description, not an additional approved effect.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Targets, range, cost, duration, resistance, and mastery-dependent effects remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Purity Power",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Purity Power udah masuk daftar power. Mastery-nya nanti."
+      },
+      "laterInfluenceDraft": {
+        "status": "Semantic routing proposal; exact future eligibility and weights pending.",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "power.mastery",
+          "weakness",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual grant provenance"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#purity-power"
+    },
+    {
+      "id": "hydra-regeneration",
+      "label": "Regeneration (Tumbuh Lagi)",
+      "group": "mythical-beast-fixed-power",
+      "contentStatus": "Authored within user-delegated three-point Mythical Beast packages; body/head regrowth theme adapted from Hydra lore.",
+      "scope": "Memulihkan dan menumbuhkan kembali bagian tubuh sendiri yang rusak atau terputus, termasuk kepala, sesuai batas power dan mastery.",
+      "affinityTags": [
+        "regeneration",
+        "self-restoration"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Recovery rate, costs, activation, maximum regrowth and head-count limits pending. No unbounded head multiplication, resurrection or automatic extra numeric bonuses.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Regeneration (Tumbuh Lagi)"
+        ],
+        "displayContext": "Regeneration masuk daftar power. Detail pemulihan dan penguasaannya mengikuti batas power serta satu mastery bersama."
+      },
+      "laterInfluenceDraft": {
+        "status": "Actual eligibility and numerical weight profiles pending; no factors inferred from budget.",
+        "targets": [
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags",
+          "actual source component"
+        ]
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#hydra-regeneration"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "music-instrument",
+      "label": "Alat Musik",
+      "group": "musical-instrument-weapon",
+      "status": "User-confirmed fixed weapon category; instrument model, combat profile and balance pending.",
+      "scope": "An owned instrument used as a weapon. The exact instrument and compatible enchantment catalog remain to be designed.",
+      "enchantable": true,
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "masteryConstraintRef": "kinnara-instrument-min-master",
+      "extraSelector": false,
+      "personalPowerGrant": false
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "lelembut-events-design.json",
+      "definitionId": "flight",
+      "callers": [
+        "garuda",
+        "kuda-sembrani",
+        "griffin",
+        "pegasus"
+      ]
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "water-manipulation",
+      "callers": [
+        "makara"
+      ],
+      "mode": "fixed grant; no Element selector"
+    },
+    {
+      "definitionFile": "universal-power-wheels-design.json",
+      "definitionId": "resurrection",
+      "callers": [
+        "phoenix"
+      ],
+      "mode": "Fixed grant; no Holy/Divine selector."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "fire-manipulation",
+      "callers": [
+        "phoenix"
+      ],
+      "displayAlias": "Flame Control (Kendali Api)",
+      "mode": "Fixed grant; no Element selector or rolled Element result."
+    },
+    {
+      "definitionFile": "fairy-events-design.json",
+      "definitionId": "healing-power",
+      "callers": [
+        "unicorn"
+      ],
+      "mode": "Fixed power grant with actual Unicorn provenance; imports no Fairy subtype or event/narrator identity."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "fire-manipulation",
+      "callers": [
+        "chimera"
+      ],
+      "displayAlias": "Flame Control (Kendali Api)",
+      "mode": "Fixed power grant; no Element selector or rolled Element result."
+    }
+  ],
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "wheelDefinitionRef": "element-universal",
+      "callers": [
+        "naga"
+      ],
+      "drawCount": 1
+    }
+  ],
+  "eventProfiles": [
+    {
+      "id": "garuda",
+      "label": "Garuda",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "garuda"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Garuda",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Flight",
+          "Bonus Speed: +2 poin angka",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Garuda. Power diperoleh: Flight. Bonus Speed: +2 poin angka. Power Mastery belum diputar.",
+        "narrationExample": "Garuda dapet Flight dan Speed +2. Ojek langit udah online.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "barong",
+      "label": "Barong (Bali)",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "barong"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "mythical-beast-events-design.json",
+          "definitionId": "spirit-control",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Barong (Bali)",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Spirit Control",
+          "Bonus Strength: +2 poin angka",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Barong (Bali). Power diperoleh: Spirit Control. Bonus Strength: +2 poin angka. Power Mastery belum diputar.",
+        "narrationExample": "Barong Bali: Spirit Control, Strength +2. Roh diajak koordinasi, otot ikut naik.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "singa-barong-reog",
+      "label": "Reog (Jawa)",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "singa-barong-reog"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Reog (Jawa)",
+          "Asal rujukan: Lokal",
+          "Bonus Strength: +2 poin angka",
+          "Bonus Durability: +2 poin angka",
+          "Konteks visual: wajah lebar"
+        ],
+        "displayContext": "Dapet Reog (Jawa). Bonus Strength: +2 poin angka. Bonus Durability: +2 poin angka. Konteks visual: wajah lebar.",
+        "narrationExample": "Reog Jawa, wajah lebar. Strength +2, Durability +2. Paket tank panggung.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "naga",
+      "label": "Naga",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "naga"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Naga",
+          "Asal rujukan: Lokal",
+          "Satu spin Element universal akan dijalankan",
+          "Elemen dan power terkait belum diketahui sebelum hasil Element"
+        ],
+        "displayContext": "Dapet Naga. Satu spin Element universal akan dijalankan. Elemen dan power terkait belum diketahui sebelum hasil Element.",
+        "narrationExample": "Naga masuk. Elemen belum ketahuan, jangan claim api dulu.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical element outcome grants its linked manipulation power; the caller does not grant it a second time.",
+        "caller": "Mythical Beast Lokal / Naga with actual sourceSpinId and component scope",
+        "returnPoint": "saved Naga caller; archetype after its immediate Element reaction"
+      }
+    },
+    {
+      "id": "lembuswana",
+      "label": "Lembuswana",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "lembuswana"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "mythical-beast-events-design.json",
+          "definitionId": "purity-power",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        },
+        {
+          "type": "register-power-mastery-modifier",
+          "definitionFile": "mythical-beast-events-design.json",
+          "contractRef": "lembuswana-power-mastery",
+          "amount": 2,
+          "operation": "add-rank-steps",
+          "scope": "all-owned-powers",
+          "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+          "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Lembuswana",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Purity Power",
+          "Bonus Power Mastery: +2 untuk semua power yang dimiliki",
+          "Base Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Lembuswana. Power diperoleh: Purity Power. Bonus Power Mastery: +2 untuk semua power yang dimiliki. Base Power Mastery belum diputar.",
+        "narrationExample": "Lembuswana dapet Purity Power. Semua power kebagian mastery +2, build ikut bersih-bersih.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "kuda-sembrani",
+      "label": "Kuda Sembrani",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "kuda-sembrani"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Kuda Sembrani",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Flight",
+          "Bonus Speed: +2 poin angka",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Kuda Sembrani. Power diperoleh: Flight. Bonus Speed: +2 poin angka. Power Mastery belum diputar.",
+        "narrationExample": "Kuda Sembrani dapet Flight dan Speed +2. Kuda upgrade jalur udara.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "warak-ngendog",
+      "label": "Warak Ngendog",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "warak-ngendog"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "mythical-beast-events-design.json",
+          "definitionId": "unity-inducement",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Warak Ngendog",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Unity Inducement",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Warak Ngendog. Power diperoleh: Unity Inducement. Power Mastery belum diputar.",
+        "narrationExample": "Warak Ngendog dapet Unity Inducement. Squad mulai kompak, chat grup ada gunanya.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "makara",
+      "label": "Makara",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "makara"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "universal-element-wheel-design.json",
+          "definitionId": "water-manipulation",
+          "masteryTiming": "main-power-stage",
+          "source": "actual committed local Mythical Beast type result"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Makara",
+          "Asal rujukan: Lokal",
+          "Power diperoleh: Water Manipulation (Kendali Air)",
+          "Bonus Intelligence: +2 poin angka",
+          "Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Makara. Power diperoleh: Water Manipulation (Kendali Air). Bonus Intelligence: +2 poin angka. Power Mastery belum diputar.",
+        "narrationExample": "Makara: Kendali Air, Intelligence +2. Otak encer, airnya juga bisa diatur.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "kinnara",
+      "label": "Kinnara",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "kinnara"
+        },
+        {
+          "type": "grant-weapon",
+          "definitionFile": "mythical-beast-events-design.json",
+          "definitionId": "music-instrument",
+          "masteryTiming": "main-weapon-stage",
+          "enchantable": true,
+          "source": "actual committed Kinnara type result"
+        },
+        {
+          "type": "register-weapon-mastery-constraint",
+          "definitionFile": "mythical-beast-events-design.json",
+          "contractRef": "kinnara-instrument-min-master",
+          "target": "weapon instance created by this Kinnara grant",
+          "minimumRankId": "master"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Kinnara",
+          "Asal rujukan: Lokal",
+          "Weapon diperoleh: Alat Musik",
+          "Weapon Mastery nanti diputar dengan hasil minimal Master",
+          "Jenis alat musik dan hasil mastery belum ditentukan"
+        ],
+        "displayContext": "Dapet Kinnara. Weapon diperoleh: Alat Musik. Weapon Mastery nanti diputar dengan hasil minimal Master. Jenis alat musik dan hasil mastery belum ditentukan.",
+        "narrationExample": "Kinnara dapet Alat Musik. Mastery minimal Master, konsernya punya damage.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    },
+    {
+      "id": "singa-ambara-raja",
+      "label": "Singa Ambara Raja",
+      "sourceOrigin": "local",
+      "status": "User-confirmed type event/grants; numerical scales, detailed scopes and later odds remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "singa-ambara-raja"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed local Mythical Beast type result",
+          "timing": "Record once at the source result; apply through the existing effect ledger after the target base stat is rolled."
+        },
+        {
+          "type": "register-power-mastery-modifier",
+          "definitionFile": "mythical-beast-events-design.json",
+          "contractRef": "singa-ambara-power-mastery",
+          "amount": 1,
+          "operation": "add-rank-steps",
+          "scope": "all-owned-powers",
+          "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+          "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast terpilih: Singa Ambara Raja",
+          "Asal rujukan: Lokal",
+          "Bonus Speed: +1 poin angka",
+          "Bonus Power Mastery: +1 tingkat",
+          "Base Power Mastery belum diputar"
+        ],
+        "displayContext": "Dapet Singa Ambara Raja. Bonus Speed: +1 poin angka. Bonus Power Mastery: +1 tingkat. Base Power Mastery belum diputar.",
+        "narrationExample": "Singa Ambara Raja: Speed +1, Power Mastery +1. Build singa mulai ngegas.",
+        "availability": "Only after the actual type result and its fixed effects/constraints commit. Follow-up element, stats, mastery and enchantment results stay unknown until committed.",
+        "exampleMode": "Optional Gen Z Indonesian narration; no added power/stat/funny-result tag.",
+        "themeIsGameplayGrant": false
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+    }
+  ],
+  "contracts": {
+    "numericStats": {
+      "unit": "numeric point",
+      "operation": "add-flat",
+      "timing": "Record each source modifier at committed type selection; add through the ledger after the immutable target base roll.",
+      "byType": {
+        "garuda": {
+          "speed": 2
+        },
+        "barong": {
+          "strength": 2
+        },
+        "singa-barong-reog": {
+          "strength": 2,
+          "durability": 2
+        },
+        "kuda-sembrani": {
+          "speed": 2
+        },
+        "makara": {
+          "intelligence": 2
+        },
+        "singa-ambara-raja": {
+          "speed": 1
+        },
+        "griffin": {
+          "strength": 1
+        },
+        "unicorn": {
+          "intelligence": 1
+        },
+        "pegasus": {
+          "speed": 1
+        },
+        "hydra": {
+          "durability": 1
+        },
+        "cerberus": {
+          "strength": 1,
+          "durability": 1,
+          "fight": 1
+        },
+        "chimera": {
+          "fight": 1
+        }
+      },
+      "scale": "Use a declared numeric stat scale or explicit tier-to-numeric mapping; +1/+2 is not an ordinal tier increase."
+    },
+    "kinnaraWeaponMastery": {
+      "id": "kinnara-instrument-min-master",
+      "status": "Minimum Master user-confirmed; constrained scheduled draw is the working algorithm realization.",
+      "target": "Only the weapon instance granted by the actual Kinnara type result; no guarantee for unrelated main/bonus weapons.",
+      "stage": "weapon.mastery",
+      "minimumRankId": "master",
+      "operation": "constrain-mastery-outcomes-to-minimum-rank",
+      "selection": "Before the instrument scheduled mastery draw, intersect ordinary eligible outcomes with rankIndex >= configured Master index. Preserve positive declared weights, then normalize and freeze the surviving odds.",
+      "weights": "Use user-specified normal Weapon Mastery rank weights if present, otherwise base weight 1 per eligible rank. Apply the Master-or-higher constraint before normalization; keep one actual scheduled spin.",
+      "emptyPool": "Missing configured Master rank, invalid weights, or no eligible positive rank at/above Master is a configuration error. Missing/null uncommitted base weights use 1; do not bypass another guard or silently grant Master.",
+      "scheduledSpin": "Perform exactly one actual scheduled mastery spin for the instrument, even if only one result survives at 100%; record and react to the real outcome.",
+      "base": "Commit the actual allowed base result. Never roll a low rank then reroll, overwrite it, or add another mastery spin.",
+      "enchantment": "The granted instrument is enchantable. After its Master-or-higher result, schedule the ordinary compatible enchantment flow when its slot is available; preserve the normal acquisition/result/reaction and consumed-slot contracts.",
+      "mainWeapon": "Keep the main Weapon spin and any authorized bonus acquisitions; None does not remove this owned instrument.",
+      "lateGrant": "A later authorized Kinnara component acquisition opens the ordinary pending owned-weapon subflow and returns to its saved caller.",
+      "identity": "Alat Musik is a fixed generic weapon grant. Instrument model/profile remains pending; no instrument-choice wheel or sound/music power is added."
+    },
+    "powerMasteryModifiers": [
+      {
+        "id": "singa-ambara-power-mastery",
+        "amount": 1,
+        "scope": "all-owned-powers",
+        "status": "Amount and Power Mastery meaning clarified by user; all-owned scope is the working interpretation because no particular power was specified.",
+        "scopeSource": "User clarified power +1 means +1 Power Mastery; no fixed Singa power is granted.",
+        "unit": "ordered mastery rank steps",
+        "operation": "add-rank-steps",
+        "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+        "qualifies": "The one shared character Power Mastery record and every owned power referencing it, including future grants.",
+        "stackingRef": "masteryStacking",
+        "emptyInventory": "No owned power means no mastery spin or phantom power.",
+        "enchantment": "never from power mastery",
+        "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+      },
+      {
+        "id": "lembuswana-power-mastery",
+        "amount": 2,
+        "scope": "all-owned-powers",
+        "status": "User-confirmed amount and all-owned scope; ordered-rank-step interpretation and final scale remain design details.",
+        "scopeSource": "User answered: Semua power yang dimiliki",
+        "unit": "ordered mastery rank steps",
+        "operation": "add-rank-steps",
+        "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+        "qualifies": "The one shared character Power Mastery record and every owned power referencing it, including future grants.",
+        "stackingRef": "masteryStacking",
+        "emptyInventory": "No owned power means no mastery spin or phantom power.",
+        "enchantment": "never from power mastery",
+        "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+      }
+    ],
+    "masteryStacking": {
+      "status": "Working additive interpretation for distinct authorized modifiers; scale and maximum pending.",
+      "formula": "sharedEffectiveRankIndex = sharedRolledRankIndex + sum(distinct active all-owned-power mastery modifiers)",
+      "uniqueness": "Each source modifier is active once for the character shared rank. Deduplicate by characterId/modifierDefinitionId/sourceComponentId/sourceSpinId; never multiply by owned power count.",
+      "eligibleSources": [
+        "fairy-king-power-mastery",
+        "singa-ambara-power-mastery",
+        "lembuswana-power-mastery",
+        "element-golem-power-mastery",
+        "utusan-tuhan-power-mastery",
+        "raja-iblis-agung-follower-mastery"
+      ],
+      "independence": "Distinct authorized all-owned source bonuses add once to the ordinary shared rank. Each power reads that rank unless it has the explicit source-bound God Authority maximum; no modifier creates a power or extra spin.",
+      "base": "Keep one immutable character-level rolled base rank. Per-power rolled/effective fields are projections of the shared record, not independent sampled results.",
+      "cap": "Raw mastery0..9; final base plus distinct modifiers without numeric floor/cap. Intrinsic ability limits remain separate.",
+      "lateActivation": "Project new source bonuses from the same common base without respins; ordinary late grants inherit that rank and explicit God Authority uses base9 plus shared final modifiers.",
+      "enchantment": "Power Mastery never schedules enchantment."
+    },
+    "routing": {
+      "sequence": "Mythical Beast -> declared origin selector -> local type -> fixed grants/modifiers/constraints -> one Element spin only for Naga -> saved continuation.",
+      "fixedGrants": "Fixed powers/weapons and flat bonuses create no acquisition spin. Retain the normal main Weapon/Power acquisition stages.",
+      "optionalReferences": "Old Barong forms, Naga legacies and guardian/duty proposals are reference candidates with no active caller in this local event plan. They add no hidden spin or bonus.",
+      "identity": "Barong Bali and Reog Jawa remain distinct. Canonical shared powers do not dispatch Lelembut or Elemental race events.",
+      "inheritedOrigins": "The same approved profile runs when selected by an authorized Skeleton/Zombie origin or other identity component caller; preserve component provenance, no-repeat family history and saved return.",
+      "profileAuthority": "eventProfiles here are canonical; inline effects and wheel pointers in race-wheel-design.json are mirrors for inspection. Resolve and execute one approved profile once, not both copies as independent events.",
+      "selectorOrder": "Commit the actual local type and its fixed effects/constraints, react, then resolve its single declared Element child if Naga, react to that result, and restore saved continuation.",
+      "importedSequence": "Actual Imported type -> its approved canonical profile -> commit fixed identity/grants/modifiers and reaction -> only Dragon runs its form/Element children -> exact saved caller.",
+      "importedProfileAuthority": "Dragon imports dragon-events-design.json. Seven other Imported types use importedEventProfiles here. Execute one selected canonical profile once; inline/import pointers are references, not additional effects."
+    },
+    "ownedInventory": {
+      "early": "Retain all early powers/weapons with mastery pending until their normal stages.",
+      "none": "Main Weapon/Power None erases no early grant; inventory gates check the entire owned collection.",
+      "powerMastery": "All actual owned powers share one character-level base mastery spin and its effective rank after all-owned modifiers. Power Mastery opens no follow-up event or enchantment.",
+      "weaponMastery": "Each owned weapon gets normal mastery once; only the Kinnara-granted instrument receives its minimum-Master constraint.",
+      "duplicatePower": "If independent sources grant the same definition, retain each source grant. Consolidation/instance stacking remains a declared catalog policy; never silently lose a grant or duplicate an event on replay.",
+      "sharedPowerMasteryRule": "framework/spec.json#powerMasteryContract"
+    },
+    "idempotence": {
+      "key": "runId/componentId/sourceSpinId/profileId/effectOrdinal",
+      "rule": "Register/apply each committed source effect once. Replay and narration/image/video retries restore the existing grants/modifiers/constraints without extra spins."
+    },
+    "size": {
+      "stage": "Global Size after Backstory and before stats",
+      "profiles": "Accepted type grants do not establish body length, height or wingspan. Sourced reference profiles and metric choice remain pending.",
+      "propBoundary": "Reog/Barong stage props and performer skill are not character Size or stat values."
+    },
+    "phoenix": {
+      "grants": [
+        "resurrection",
+        "fire-manipulation"
+      ],
+      "grantMode": "Fixed at the actual Phoenix type result, one source grant each; no additional selector.",
+      "alias": "Flame Control is the Phoenix display alias for canonical fire-manipulation, not a second power definition.",
+      "resurrection": "Reuse the canonical intended Resurrection capacity. Trigger, targets including possible self revival, charges, cooldown, costs and rank-dependent limits remain pending; ownership alone records no actual death/revival event.",
+      "mastery": "Both powers retain the one shared character Power Mastery and remain owned after main Power None. No Phoenix mastery/stat bonus was specified.",
+      "routing": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race event chain completes.",
+      "provenance": "True Phoenix source; importing Resurrection/Fire definitions does not spin Holy/Divine/Element or dispatch another family.",
+      "idempotence": "Existing runId/componentId/sourceSpinId/profileId/effectOrdinal contract applies to both fixed grants."
+    },
+    "packageBudget": {
+      "status": "User sets power value 2 stat points, stronger four-point packages and delegates remaining Mythical Beasts around three points. Current remainder uses exactly three.",
+      "scope": "Mythical Beast package design; preserve all previously defined Local/Dragon/Phoenix effects. No automatic rebalance of other families or existing committed characters.",
+      "costs": {
+        "oneGrantedPower": 2,
+        "oneNumericStatPoint": 1
+      },
+      "formula": "packagePoints = 2 * declared grantedPowerCount + sum(declared positive numeric stat bonuses)",
+      "meaning": "Design accounting only. A power worth two points creates no +2 stat modifier. Score is per source package/component, not a character-wide cap or probability rule.",
+      "bands": {
+        "3": "standard",
+        "4": "stronger"
+      },
+      "unpriced": "Weapons, mastery bonuses, guarantees and event-only benefits have no cost supplied here. Existing Local packages containing them remain unpriced in total; never score an unspecified cost as zero or force them to three.",
+      "preserve": "Dragon remains one selected Element power plus two numeric points = four; Phoenix two powers = four. Other existing Local packages remain as specified. Strength/power potency/range/cost balance is still separate from package accounting.",
+      "odds": "Stronger packages do not become rarer from budget alone. Keep equal type weights and all existing explicit probability rules.",
+      "allowedNewEffects": [
+        "fixed grant-power",
+        "numeric stat-modifier"
+      ],
+      "newPackages": {
+        "griffin": {
+          "powerCount": 1,
+          "numericStatPoints": 1,
+          "totalPoints": 3
+        },
+        "unicorn": {
+          "powerCount": 1,
+          "numericStatPoints": 1,
+          "totalPoints": 3
+        },
+        "pegasus": {
+          "powerCount": 1,
+          "numericStatPoints": 1,
+          "totalPoints": 3
+        },
+        "hydra": {
+          "powerCount": 1,
+          "numericStatPoints": 1,
+          "totalPoints": 3
+        },
+        "cerberus": {
+          "powerCount": 0,
+          "numericStatPoints": 3,
+          "totalPoints": 3
+        },
+        "chimera": {
+          "powerCount": 1,
+          "numericStatPoints": 1,
+          "totalPoints": 3
+        }
+      },
+      "existingImported": {
+        "dragon": {
+          "powerCount": 1,
+          "numericStatPoints": 2,
+          "totalPoints": 4,
+          "classification": "stronger",
+          "powerTiming": "Actual Element child grants its selected power; parent records no fabricated element."
+        },
+        "phoenix": {
+          "powerCount": 2,
+          "numericStatPoints": 0,
+          "totalPoints": 4,
+          "classification": "stronger"
+        }
+      }
+    },
+    "importedFixedPackages": {
+      "profileIds": [
+        "phoenix",
+        "griffin",
+        "unicorn",
+        "pegasus",
+        "hydra",
+        "cerberus",
+        "chimera"
+      ],
+      "source": "Actual selected Imported type result; each canonical fixed profile commits its identity/grants/modifiers once before reaction.",
+      "routing": "Fixed Imported profiles open no additional power, Element, head-count, weapon, mastery or race selector. Dragon alone keeps its previously specified form and Element children.",
+      "inventory": "Keep actual early powers after main Power None and use the one shared Power Mastery. Cerberus grants only stats: no phantom power/mastery when the entire inventory is empty.",
+      "sharedDefinitions": "Flight, Healing, Resurrection and Flame Control keep their canonical definitions and true caller source. Do not import Fairy/Phoenix/Lelembut/Symbiote identity, narrator source context or event dispatch from a shared definition.",
+      "idempotence": "Existing source/effectOrdinal dedup applies. Budget metadata executes no effect. Restore exact nested caller/global used-family history and one global Size."
+    },
+    "bonusTiming": "All authorized numeric main-stat/mastery bonuses register at their original source and calculate only in final bonus phase. Compatible Weapon Enchant uses effective mastery after bonuses there; no earlier Enchant child."
+  },
+  "contextContract": {
+    "voice": "Funny casual Gen Z Indonesian with familiar English; preserve factual effect amounts and component scope.",
+    "order": "Commit result and authorized effects/constraints before reaction. Each real type/Element/mastery/enchant spin has its own reaction.",
+    "future": "At type selection report known flat modifiers, owned powers/weapons and future mastery guarantees; no unrolled stat, element, rank or enchantment result.",
+    "reactionEffects": "Narration examples/memes grant no abilities, bonuses or Shrek funny-result tags.",
+    "masteryReaction": "Show actual rolled base rank, effective rank, source bonuses and cap when applicable. At Kinnara instrument mastery show its actual constrained result; compatible enchantment is resolved separately."
+  },
+  "openBalance": [
+    "Equal main-family, origin and type base weights now confirmed; optional user overrides",
+    "Full universal Element roster; equal base weights",
+    "Numeric scales, mastery0..9 with Weapon Master=5 and signed unbounded finals; rank base weights default to 1",
+    "Power effect limits and future odds/compatibility profiles",
+    "Kinnara instrument model, combat profile and compatible enchantments",
+    "Source-backed body Size profiles",
+    "Additive independent mastery-bonus interpretation and Singa all-owned scope can be refined; no specific Singa power was named",
+    "Dragon and other Imported body profiles; optional reference selectors",
+    "Phoenix Resurrection trigger/targets/charges/cooldown/costs and body Size reference",
+    "Hydra regrowth rate/cost/maximum heads; all delegated power scopes and numeric stat scale"
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "importedWheelId": "mythical-beast-imported-type",
+  "confirmedImportedEventIds": [
+    "dragon",
+    "phoenix",
+    "griffin",
+    "unicorn",
+    "pegasus",
+    "hydra",
+    "cerberus",
+    "chimera"
+  ],
+  "pendingImportedTypeIds": [],
+  "importedEventProfileImports": [
+    {
+      "typeId": "dragon",
+      "definitionFile": "dragon-events-design.json",
+      "definitionId": "dragon",
+      "profileCollection": "typeEventProfile",
+      "formWheelId": "dragon-form"
+    },
+    {
+      "typeId": "phoenix",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "phoenix",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "griffin",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "griffin",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "unicorn",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "unicorn",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "pegasus",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "pegasus",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "hydra",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "hydra",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "cerberus",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "cerberus",
+      "profileCollection": "importedEventProfiles"
+    },
+    {
+      "typeId": "chimera",
+      "definitionFile": "mythical-beast-events-design.json",
+      "definitionId": "chimera",
+      "profileCollection": "importedEventProfiles"
+    }
+  ],
+  "importedEventProfiles": [
+    {
+      "id": "phoenix",
+      "label": "Phoenix",
+      "sourceOrigin": "imported",
+      "status": "User-confirmed two fixed powers. Resurrection limits and body/Size references remain balance work.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "phoenix"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "universal-power-wheels-design.json",
+          "definitionId": "resurrection",
+          "displayAlias": "Resurrection (Bangkit Lagi)",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Phoenix type result with source component and sourceSpinId."
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "universal-element-wheel-design.json",
+          "definitionId": "fire-manipulation",
+          "displayAlias": "Flame Control (Kendali Api)",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Phoenix type result with source component and sourceSpinId."
+        }
+      ],
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Phoenix",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Resurrection (Bangkit Lagi)",
+          "Power dimiliki: Flame Control (Kendali Api)",
+          "Mastery kedua power mengikuti satu hasil Power Mastery bersama pada tahap normal"
+        ],
+        "displayContext": "Phoenix dapet Resurrection dan Kendali Api langsung. Kedua power sudah dimiliki; mastery tetap menunggu tahap normal.",
+        "narrationExample": "Phoenix dapet Resurrection sama Kendali Api. Paket comeback plus kompor, build-nya niat.",
+        "availability": "After actual Phoenix result and both fixed grants commit. Ownership is known; actual resurrection use/success and future stats/mastery are not invented.",
+        "exampleMode": "Optional Gen Z narration; no extra effects, funny-result tags or fabricated spins."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race event chain completes."
+    },
+    {
+      "id": "griffin",
+      "label": "Griffin",
+      "sourceOrigin": "imported",
+      "status": "User explicitly specifies Flight and Strength +1. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "User explicitly specifies Flight and Strength +1.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "griffin"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Griffin type result; retain this source, not the definition author/caller family."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "myth-western"
+      ],
+      "referenceMotif": "User-defined winged predator package.",
+      "budget": {
+        "powerCount": 1,
+        "powerPoints": 2,
+        "numericStatPoints": 1,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Griffin",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Flight",
+          "Bonus poin angka tercatat: Strength +1",
+          "Angka base/final stat belum diketahui sebelum spin stat",
+          "Power Mastery mengikuti satu hasil bersama pada tahap normal"
+        ],
+        "displayContext": "Griffin mendapat Flight dan Strength +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Griffin dapet Flight dan Strength +1. Singa pasang sayap, otot ikut naik.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    },
+    {
+      "id": "unicorn",
+      "label": "Unicorn",
+      "sourceOrigin": "imported",
+      "status": "Authored within the user-delegated approximately-three-point budget. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "Authored within the user-delegated approximately-three-point budget.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "unicorn"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "fairy-events-design.json",
+          "definitionId": "healing-power",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Unicorn type result; retain this source, not the definition author/caller family."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "myth-unicorn-purifies-water"
+      ],
+      "referenceMotif": "Magical horn/restoration motif adapted as Healing and an Intelligence bonus; purification lore does not add a separate purification power.",
+      "budget": {
+        "powerCount": 1,
+        "powerPoints": 2,
+        "numericStatPoints": 1,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Unicorn",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Healing Power (Pemulihan)",
+          "Bonus poin angka tercatat: Intelligence +1",
+          "Angka base/final stat belum diketahui sebelum spin stat",
+          "Power Mastery mengikuti satu hasil bersama pada tahap normal"
+        ],
+        "displayContext": "Unicorn mendapat Healing Power (Pemulihan) dan Intelligence +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Unicorn dapet Healing dan Intelligence +1. Kuda support, skill sama otaknya kepake.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    },
+    {
+      "id": "pegasus",
+      "label": "Pegasus",
+      "sourceOrigin": "imported",
+      "status": "Authored within the user-delegated approximately-three-point budget. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "Authored within the user-delegated approximately-three-point budget.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "pegasus"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "lelembut-events-design.json",
+          "definitionId": "flight",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Pegasus type result; retain this source, not the definition author/caller family."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "pegasus-chimera"
+      ],
+      "referenceMotif": "Winged horse adapted as Flight and Speed +1.",
+      "budget": {
+        "powerCount": 1,
+        "powerPoints": 2,
+        "numericStatPoints": 1,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Pegasus",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Flight",
+          "Bonus poin angka tercatat: Speed +1",
+          "Angka base/final stat belum diketahui sebelum spin stat",
+          "Power Mastery mengikuti satu hasil bersama pada tahap normal"
+        ],
+        "displayContext": "Pegasus mendapat Flight dan Speed +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Pegasus dapet Flight dan Speed +1. Kuda komuter, jalurnya lewat atas.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    },
+    {
+      "id": "hydra",
+      "label": "Hydra",
+      "sourceOrigin": "imported",
+      "status": "Authored within the user-delegated approximately-three-point budget. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "Authored within the user-delegated approximately-three-point budget.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "hydra"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "mythical-beast-events-design.json",
+          "definitionId": "hydra-regeneration",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Hydra type result; retain this source, not the definition author/caller family."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "myth-hydra-regrowth"
+      ],
+      "referenceMotif": "Regrowing heads adapted as bounded self/body regeneration and Durability +1; no head-count wheel or unlimited head multiplication.",
+      "budget": {
+        "powerCount": 1,
+        "powerPoints": 2,
+        "numericStatPoints": 1,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Hydra",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Regeneration (Tumbuh Lagi)",
+          "Bonus poin angka tercatat: Durability +1",
+          "Angka base/final stat belum diketahui sebelum spin stat",
+          "Power Mastery mengikuti satu hasil bersama pada tahap normal"
+        ],
+        "displayContext": "Hydra mendapat Regeneration (Tumbuh Lagi) dan Durability +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Hydra dapet Regeneration dan Durability +1. Badan punya fitur tumbuh lagi.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    },
+    {
+      "id": "cerberus",
+      "label": "Cerberus",
+      "sourceOrigin": "imported",
+      "status": "Authored within the user-delegated approximately-three-point budget; pure-stat allocation. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "Authored within the user-delegated approximately-three-point budget; pure-stat allocation.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "cerberus"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "myth-cerberus-guardian"
+      ],
+      "referenceMotif": "Underworld guard-dog motif adapted as three physical/combat stats, with no fixed power.",
+      "budget": {
+        "powerCount": 0,
+        "powerPoints": 0,
+        "numericStatPoints": 3,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Cerberus",
+          "Asal rujukan: Impor",
+          "Bonus poin angka tercatat: Strength +1, Durability +1, Fight +1",
+          "Angka base/final stat belum diketahui sebelum spin stat"
+        ],
+        "displayContext": "Cerberus mendapat Strength +1, Durability +1, Fight +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Cerberus dapet Strength, Durability, Fight masing-masing +1. Satpam gerbang, build fisik semua.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    },
+    {
+      "id": "chimera",
+      "label": "Chimera",
+      "sourceOrigin": "imported",
+      "status": "Authored within the user-delegated approximately-three-point budget. Fixed grant/numeric package active; detailed limits and Size remain balance work.",
+      "authority": "Authored within the user-delegated approximately-three-point budget.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "mythicalBeastTypeId",
+          "value": "chimera"
+        },
+        {
+          "type": "grant-power",
+          "definitionFile": "universal-element-wheel-design.json",
+          "definitionId": "fire-manipulation",
+          "displayAlias": "Flame Control (Kendali Api)",
+          "masteryTiming": "main-power-stage",
+          "source": "Actual committed Chimera type result; retain this source, not the definition author/caller family."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Imported Mythical Beast type result with component/sourceSpinId.",
+          "timing": "Register once before type reaction; apply through the source modifier ledger after the immutable target base roll. Reprojection/asset retry adds no second bonus."
+        }
+      ],
+      "sourceRefs": [
+        "pegasus-chimera"
+      ],
+      "referenceMotif": "Fire-breathing monster motif adapted as canonical Flame Control and Fight +1; source anatomy/fire breath are inspiration, not extra independent powers.",
+      "budget": {
+        "powerCount": 1,
+        "powerPoints": 2,
+        "numericStatPoints": 1,
+        "totalPoints": 3,
+        "classification": "standard",
+        "ruleRef": "contracts.packageBudget",
+        "metadataOnly": true
+      },
+      "resultContext": {
+        "facts": [
+          "Jenis Mythical Beast: Chimera",
+          "Asal rujukan: Impor",
+          "Power dimiliki: Flame Control (Kendali Api)",
+          "Bonus poin angka tercatat: Fight +1",
+          "Angka base/final stat belum diketahui sebelum spin stat",
+          "Power Mastery mengikuti satu hasil bersama pada tahap normal"
+        ],
+        "displayContext": "Chimera mendapat Flame Control (Kendali Api) dan Fight +1. Bonus sudah tercatat; angka stat aktual mengikuti spin normal nanti.",
+        "narrationExample": "Chimera dapet Kendali Api dan Fight +1. Badan rame, urusan ribut ikut panas.",
+        "availability": "After the actual type and fixed source grants/modifiers commit. Future base/final stats, actual power use, mastery and Size remain unknown until committed.",
+        "exampleMode": "Optional narration; no extra power/effect/funny-result tag."
+      },
+      "returnPoint": "Exact saved Mythical Beast/host/base/origin/Hybrid caller; Archetype only after the ordinary main race chain completes."
+    }
+  ],
+  "inactiveImportedProposals": [
+    {
+      "typeId": "phoenix",
+      "active": false,
+      "reason": "Superseded by user-defined Resurrection and Flame Control fixed grants.",
+      "proposal": {
+        "id": "phoenix",
+        "label": "Phoenix",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "myth-eastern"
+        ],
+        "eventDraft": [
+          "Siklus kehidupan atau affinity"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "power",
+            "weakness",
+            "apex"
+          ],
+          "description": "Fantasy-game rebirth/fire candidates are proposed adaptations, not a universal claim about every phoenix tradition."
+        }
+      }
+    },
+    {
+      "typeId": "griffin",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "griffin",
+        "label": "Griffin",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "myth-western"
+        ],
+        "eventDraft": [
+          "Naluri penjaga"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "speed",
+            "strength",
+            "weapon"
+          ],
+          "description": "Aerial predator physique and compatible natural/equipped weapons."
+        }
+      }
+    },
+    {
+      "typeId": "unicorn",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "unicorn",
+        "label": "Unicorn",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "myth-western"
+        ],
+        "eventDraft": [
+          "Blessing"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "power",
+            "weakness",
+            "title"
+          ],
+          "description": "Proposed healing/protection and vow-related candidates."
+        }
+      }
+    },
+    {
+      "typeId": "pegasus",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "pegasus",
+        "label": "Pegasus",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "pegasus-chimera"
+        ],
+        "eventDraft": [
+          "Warisan langit"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "speed",
+            "power",
+            "weapon"
+          ],
+          "description": "Winged-horse identity and aerial/equipment compatibility."
+        }
+      }
+    },
+    {
+      "typeId": "hydra",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "hydra",
+        "label": "Hydra",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "hydra-cerberus"
+        ],
+        "eventDraft": [
+          "Profil kepala"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "durability",
+            "power",
+            "weakness"
+          ],
+          "description": "Multi-head control and regeneration-style candidates require explicit limits."
+        }
+      }
+    },
+    {
+      "typeId": "cerberus",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "cerberus",
+        "label": "Cerberus",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "hydra-cerberus"
+        ],
+        "eventDraft": [
+          "Tugas penjaga gerbang"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "fight",
+            "power",
+            "weakness"
+          ],
+          "description": "Guardian identity and detection/underworld-style candidates."
+        }
+      }
+    },
+    {
+      "typeId": "chimera",
+      "active": false,
+      "reason": "Superseded by explicit Griffin rule or user-delegated three-point fixed package.",
+      "proposal": {
+        "id": "chimera",
+        "label": "Chimera",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRefs": [
+          "pegasus-chimera"
+        ],
+        "eventDraft": [
+          "Kontrol tubuh gabungan"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "strength",
+            "power",
+            "weakness"
+          ],
+          "description": "Named mythical composite profile; distinct from a random Siluman animal combination."
+        }
+      }
+    }
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

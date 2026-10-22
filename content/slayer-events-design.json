@@ -1,0 +1,2536 @@
+{
+  "schemaVersion": "roda-kekacauan-slayer/1.0",
+  "version": "slayer/1.5.0",
+  "updatedDate": "2026-10-10",
+  "status": "User-confirmed identity-only victim reference and ten-count wheel; strength +1..+3 confirmed; exact ranges/odds/slot thresholds authored within delegated balance",
+  "familyDesign": "race-wheel-design.json",
+  "archetypeDesign": "archetype-wheel-design.json",
+  "archetypeId": "slayer",
+  "authority": {
+    "confirmed": [
+      "Target Race can descend into identity subtypes; never spin victim equipment/powers/boosts.",
+      "Dwarf stops before armor; Dragon descends to its body form.",
+      "Exactly ten count sections, natural/log-like values for plentiful targets and small integers for God.",
+      "Slayer receives +1 to +3 numeric Strength based on victim amount.",
+      "Every Slayer victim-count outcome must have at least 5% probability; applies to all target-specific count profiles."
+    ],
+    "delegated": [
+      "Estimate ranges/likelihoods by victim identity; do not treat fictional probabilities as factual statistics."
+    ],
+    "authoredInterpretations": [
+      "Zero victims gives no boost; positive outcome positions 1–3/4–6/7–9 give +1/+2/+3.",
+      "Continue Dwarf/Gnome identity selector before stopping; no armor/gadget event.",
+      "Element selector is used only as material/body identity for Elemental/Element Golem; never grants its power.",
+      "Composite victim difficulty uses hardest component with explicit wrapper rules, not future Size/Takeover/power rolls."
+    ]
+  },
+  "contracts": {
+    "order": "Actual Slayer result/reaction -> target Race reference -> relevant identity selectors -> complete victim identity -> one ten-outcome count spin/reaction -> source-scoped Strength modifier -> Backstory.",
+    "referenceOnly": "Victim identity is separate from the character. No victim race events, fixed grants, weapons, powers, mastery, army/follower counts, Size, Takeover, stats, titles or loot are executed/copied. Cosmic group reference never follows armor/ring/color reward wheels.",
+    "history": "Use an independent usedVictimFamilyIds set across the victim tree. Target references do not consume/clear the character usedRaceFamilyIds. Target wrappers exclude already selected victim families before child draws; empty required pool is a configuration error.",
+    "probability": "Target selectors keep canonical option weights/fixed ratios. Only the new Slayer count wheel uses delegated custom fixed likelihood profiles; canonical Vampire six-count odds remain unchanged. New count profiles have a 5% floor per outcome after normalization, total 100%; never clamp then renormalize below the floor. This count-only policy does not rebalance canonical identity selectors. Existing committed 1.0.0 count snapshots retain their original results/odds.",
+    "profileSelection": "Difficulty is authored encounter-frequency metadata, never a main-stat score, power feat or lore guarantee. Last applicable subtype selects its profile; Siluman uses the single selected animal type. Anime NPC uses common regardless of genre; MC uses genre then Sci-fi identity role, without genre events.",
+    "composition": "Skeleton/Zombie use their origin profile with minimum common; Symbiote uses host with minimum elite and no Takeover; Raksasa uses base +1 difficulty step with minimum apex, without Size; Hybrid uses hardest component +1 step. Cap at divine. One victim is the whole composite, not a count per component.",
+    "strength": "Zero gives no modifier. Positive positions 1–3 +1, 4–6 +2, 7–9 +3 numeric Strength. Cap Slayer reward at +3; do not copy Vampire all-stat/Cursed rewards or infer extra loot from God/hero victims.",
+    "ledger": "Register one flat Strength effect keyed by committed count spin/source. Project after immutable base Strength without numeric clamps; resume/re-render restores result/effect without redispatch, resampling or duplicate boost.",
+    "reaction": "Each actual target/identity/count spin has its own reaction. Early beats reveal only committed target facts; reward known after count. Fixed bonus is not an extra spin or funny-result tag."
+  },
+  "selectorCatalog": [
+    {
+      "id": "race-family",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "race-family",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "elf-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "elf-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "sea-elf-form",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "sea-elf-form",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "fey-elf-season",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "fey-elf-season",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "dwarf-gnome-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "dwarf-gnome-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "goblin-orc-troll-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "goblin-orc-troll-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "orc-role",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "orc-role",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "fairy-subrace",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "fairy-subrace",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "siluman-animal-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "siluman-animal-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "lelembut-origin",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-origin",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "lelembut-local-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-local-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "lelembut-imported-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "lelembut-imported-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "mythical-beast-origin",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-origin",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "mythical-beast-local-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-local-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "mythical-beast-imported-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "mythical-beast-imported-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "golem-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "golem-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "heavenly-principle-type",
+      "definitionFile": "content/race-wheel-design.json",
+      "canonicalWheelId": "heavenly-principle-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "dragon-form",
+      "definitionFile": "content/dragon-events-design.json",
+      "canonicalWheelId": "dragon-form",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "element-universal",
+      "definitionFile": "content/universal-element-wheel-design.json",
+      "canonicalWheelId": "element-universal",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "abyssal-axiom-type",
+      "definitionFile": "content/abyssal-axiom-design.json",
+      "canonicalWheelId": "abyssal-axiom-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "setan-type",
+      "definitionFile": "content/abyssal-axiom-design.json",
+      "canonicalWheelId": "setan-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "anime-genre",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-genre",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "anime-role",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-role",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "anime-scifi-role",
+      "definitionFile": "content/anime-events-design.json",
+      "canonicalWheelId": "anime-scifi-role",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "legend-origin",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-origin",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "legend-local-character",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-local-character",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "legend-imported-character",
+      "definitionFile": "content/legendary-hero-events-design.json",
+      "canonicalWheelId": "legend-imported-character",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "machine-type",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-type",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "machine-mecha-model",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-mecha-model",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "machine-transformer-form",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-transformer-form",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "machine-appliance-item",
+      "definitionFile": "content/machine-events-design.json",
+      "canonicalWheelId": "machine-appliance-item",
+      "projection": "id/label/baseWeight only; no event/fixed-grant/weapon/power dispatch"
+    },
+    {
+      "id": "primordial-identity",
+      "definitionFile": "content/primordial-events-design.json",
+      "canonicalWheelId": "primordial-identity",
+      "projection": "id/label/baseWeight only; no six-point or Champion reward dispatch"
+    },
+    {
+      "id": "slime-type",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "slime-type",
+      "projection": "id/label/baseWeight only; no linked power, stats, rewards or Ultraman color."
+    },
+    {
+      "id": "centaur-lower-body",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "centaur-lower-body",
+      "projection": "id/label/baseWeight only; no linked power, stats, rewards or Ultraman color."
+    },
+    {
+      "id": "cosmic-warrior-group",
+      "definitionFile": "content/video2-race-imports-design.json",
+      "canonicalWheelId": "cosmic-warrior-group",
+      "projection": "id/label/baseWeight only; no linked power, stats, rewards or Ultraman color."
+    }
+  ],
+  "identityRoutes": {
+    "human": {
+      "defaultProfileId": "common",
+      "selectors": [],
+      "promotion": 0
+    },
+    "elf": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "elf-type"
+        },
+        {
+          "wheelId": "sea-elf-form",
+          "when": {
+            "elf-type": [
+              "sea-elf"
+            ]
+          }
+        },
+        {
+          "wheelId": "fey-elf-season",
+          "when": {
+            "elf-type": [
+              "fey-elf"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "dwarf": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "dwarf-gnome-type"
+        }
+      ],
+      "promotion": 0
+    },
+    "goblinoid": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "goblin-orc-troll-type"
+        },
+        {
+          "wheelId": "orc-role",
+          "when": {
+            "goblin-orc-troll-type": [
+              "orc"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "raksasa": {
+      "defaultProfileId": "apex",
+      "selectors": [],
+      "children": {
+        "relation": "base",
+        "count": 1
+      },
+      "minimumProfileId": "apex",
+      "promotion": 1
+    },
+    "fae": {
+      "defaultProfileId": "elite",
+      "selectors": [
+        {
+          "wheelId": "fairy-subrace"
+        }
+      ],
+      "promotion": 0
+    },
+    "beastfolk": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "siluman-animal-type",
+          "drawCount": 1
+        }
+      ],
+      "promotion": 0
+    },
+    "lelembut": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "lelembut-origin"
+        },
+        {
+          "wheelId": "lelembut-local-type",
+          "when": {
+            "lelembut-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "lelembut-imported-type",
+          "when": {
+            "lelembut-origin": [
+              "imported"
+            ]
+          }
+        }
+      ],
+      "children": {
+        "relation": "origin",
+        "count": 1,
+        "when": {
+          "lelembut-origin": [
+            "imported"
+          ],
+          "lelembut-imported-type": [
+            "skeleton",
+            "zombie"
+          ]
+        }
+      },
+      "minimumProfileId": "common",
+      "promotion": 0
+    },
+    "mythical-beast": {
+      "defaultProfileId": "apex",
+      "selectors": [
+        {
+          "wheelId": "mythical-beast-origin"
+        },
+        {
+          "wheelId": "mythical-beast-local-type",
+          "when": {
+            "mythical-beast-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "mythical-beast-imported-type",
+          "when": {
+            "mythical-beast-origin": [
+              "imported"
+            ]
+          }
+        },
+        {
+          "wheelId": "dragon-form",
+          "when": {
+            "mythical-beast-origin": [
+              "imported"
+            ],
+            "mythical-beast-imported-type": [
+              "dragon"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "golem": {
+      "defaultProfileId": "formidable",
+      "selectors": [
+        {
+          "wheelId": "golem-type"
+        },
+        {
+          "wheelId": "element-universal",
+          "when": {
+            "golem-type": [
+              "element-golem"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "elemental": {
+      "defaultProfileId": "formidable",
+      "selectors": [
+        {
+          "wheelId": "element-universal"
+        }
+      ],
+      "promotion": 0
+    },
+    "symbiote": {
+      "defaultProfileId": "elite",
+      "selectors": [],
+      "children": {
+        "relation": "host",
+        "count": 1
+      },
+      "minimumProfileId": "elite",
+      "promotion": 0
+    },
+    "heavenly-principle": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "heavenly-principle-type"
+        }
+      ],
+      "promotion": 0
+    },
+    "demon": {
+      "defaultProfileId": "apex",
+      "selectors": [
+        {
+          "wheelId": "abyssal-axiom-type"
+        },
+        {
+          "wheelId": "setan-type",
+          "when": {
+            "abyssal-axiom-type": [
+              "setan"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "hybrid": {
+      "defaultProfileId": "common",
+      "selectors": [],
+      "children": {
+        "relation": "hybrid-component",
+        "count": 2
+      },
+      "promotion": 1
+    },
+    "anime-lineage": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "anime-genre"
+        },
+        {
+          "wheelId": "anime-role"
+        },
+        {
+          "wheelId": "anime-scifi-role",
+          "when": {
+            "anime-genre": [
+              "sci-fi"
+            ],
+            "anime-role": [
+              "mc"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "legendary-warrior": {
+      "defaultProfileId": "legendary",
+      "selectors": [
+        {
+          "wheelId": "legend-origin"
+        },
+        {
+          "wheelId": "legend-local-character",
+          "when": {
+            "legend-origin": [
+              "local"
+            ]
+          }
+        },
+        {
+          "wheelId": "legend-imported-character",
+          "when": {
+            "legend-origin": [
+              "imported"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "machine": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "machine-type"
+        },
+        {
+          "wheelId": "machine-mecha-model",
+          "when": {
+            "machine-type": [
+              "mecha"
+            ]
+          }
+        },
+        {
+          "wheelId": "machine-transformer-form",
+          "when": {
+            "machine-type": [
+              "transformer"
+            ]
+          }
+        },
+        {
+          "wheelId": "machine-appliance-item",
+          "when": {
+            "machine-type": [
+              "household-appliance"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "primordial": {
+      "defaultProfileId": "divine",
+      "selectors": [
+        {
+          "wheelId": "primordial-identity"
+        }
+      ],
+      "promotion": 0
+    },
+    "slime": {
+      "defaultProfileId": "common",
+      "selectors": [
+        {
+          "wheelId": "slime-type"
+        },
+        {
+          "wheelId": "element-universal",
+          "when": {
+            "slime-type": [
+              "elemental"
+            ]
+          }
+        }
+      ],
+      "promotion": 0
+    },
+    "centaur": {
+      "defaultProfileId": "trained",
+      "selectors": [
+        {
+          "wheelId": "centaur-lower-body"
+        }
+      ],
+      "promotion": 0
+    },
+    "cosmic-warrior": {
+      "defaultProfileId": "legendary",
+      "selectors": [
+        {
+          "wheelId": "cosmic-warrior-group"
+        }
+      ],
+      "promotion": 0
+    }
+  },
+  "quantityAssignments": {
+    "elf:elf-type": {
+      "high-elf": "trained",
+      "dark-elf": "trained",
+      "blood-elf": "trained",
+      "sea-elf": "trained",
+      "astral-elf": "trained",
+      "forest-elf": "elite",
+      "fey-elf": "elite",
+      "shadow-elf": "elite"
+    },
+    "elf:sea-elf-form": {
+      "putri-duyung": "common",
+      "atlantean-warrior": "trained"
+    },
+    "elf:fey-elf-season": {
+      "summer": "elite",
+      "autumn": "elite",
+      "winter": "elite",
+      "spring": "elite"
+    },
+    "dwarf:dwarf-gnome-type": {
+      "dwarf": "trained",
+      "gnome": "common"
+    },
+    "goblinoid:goblin-orc-troll-type": {
+      "goblin": "swarm",
+      "orc": "trained",
+      "troll": "formidable"
+    },
+    "goblinoid:orc-role": {
+      "orc-general": "elite",
+      "shaman": "elite",
+      "oni": "apex",
+      "orc-warrior": "trained",
+      "shrek": "legendary"
+    },
+    "fae:fairy-subrace": {
+      "fairy-parents": "legendary",
+      "element-pixie": "elite",
+      "healer-fairy": "trained",
+      "fairy-king": "apex"
+    },
+    "beastfolk:siluman-animal-type": {
+      "harimau": "elite",
+      "buaya": "elite",
+      "serigala": "trained",
+      "babi": "trained",
+      "ular": "trained",
+      "kera": "trained",
+      "kerbau": "trained",
+      "rubah": "trained",
+      "ayam": "common",
+      "kucing": "common",
+      "kelelawar": "trained",
+      "elang": "trained"
+    },
+    "lelembut:lelembut-local-type": {
+      "pocong": "common",
+      "tuyul": "common",
+      "wewe-gombel": "common",
+      "sundel-bolong": "common",
+      "suster-ngesot": "common",
+      "kuntilanak": "trained",
+      "palasik": "trained",
+      "jenglot": "trained",
+      "genderuwo": "elite",
+      "kuyang": "elite",
+      "leak": "formidable",
+      "banaspati": "formidable"
+    },
+    "lelembut:lelembut-imported-type": {
+      "skeleton": "common",
+      "zombie": "common",
+      "vampire": "formidable",
+      "ghost": "formidable",
+      "lich": "legendary",
+      "mummy": "elite"
+    },
+    "mythical-beast:mythical-beast-local-type": {
+      "garuda": "legendary",
+      "barong": "apex",
+      "naga": "apex",
+      "lembuswana": "apex",
+      "makara": "apex",
+      "singa-barong-reog": "formidable",
+      "kuda-sembrani": "formidable",
+      "singa-ambara-raja": "formidable",
+      "warak-ngendog": "elite",
+      "kinnara": "elite"
+    },
+    "mythical-beast:mythical-beast-imported-type": {
+      "dragon": "apex",
+      "hydra": "apex",
+      "phoenix": "legendary",
+      "griffin": "formidable",
+      "pegasus": "formidable",
+      "cerberus": "formidable",
+      "chimera": "formidable",
+      "unicorn": "elite"
+    },
+    "mythical-beast:dragon-form": {
+      "western": "apex",
+      "wyrm": "apex",
+      "lindwyrm": "apex",
+      "sea-serpent": "apex",
+      "wyvern": "formidable",
+      "drake": "formidable",
+      "amphiptere": "formidable",
+      "eastern": "legendary"
+    },
+    "golem:golem-type": {
+      "sand-golem": "elite",
+      "rock-golem": "formidable",
+      "crystal-golem": "formidable",
+      "element-golem": "formidable",
+      "magma-golem": "apex",
+      "diamond-golem": "apex",
+      "trash-golem": "common"
+    },
+    "golem:element-universal": {
+      "fire": "formidable",
+      "water": "formidable",
+      "earth": "formidable",
+      "wind": "formidable",
+      "lightning": "formidable",
+      "ice": "formidable",
+      "metal": "formidable",
+      "plant": "formidable",
+      "light": "formidable",
+      "darkness": "formidable",
+      "shadow": "formidable",
+      "void": "formidable"
+    },
+    "elemental:element-universal": {
+      "fire": "formidable",
+      "water": "formidable",
+      "earth": "formidable",
+      "wind": "formidable",
+      "lightning": "formidable",
+      "ice": "formidable",
+      "metal": "formidable",
+      "plant": "formidable",
+      "light": "formidable",
+      "darkness": "formidable",
+      "shadow": "formidable",
+      "void": "formidable"
+    },
+    "heavenly-principle:heavenly-principle-type": {
+      "god": "divine",
+      "demigod": "legendary",
+      "angel": "apex",
+      "utusan-tuhan": "formidable",
+      "pemuka-agama": "common",
+      "orang-saleh": "common"
+    },
+    "demon:abyssal-axiom-type": {
+      "demon-lord": "divine",
+      "ordinary-demon": "apex",
+      "fallen-angel": "apex",
+      "setan": "elite",
+      "sinner": "common"
+    },
+    "demon:setan-type": {
+      "succubus": "elite",
+      "ifrit": "formidable",
+      "asura": "apex",
+      "imp": "common"
+    },
+    "anime-lineage:anime-genre": {
+      "isekai": "apex",
+      "fantasy": "formidable",
+      "romance": "common",
+      "sport": "common",
+      "slice-of-life": "common",
+      "sci-fi": "trained",
+      "action": "trained"
+    },
+    "anime-lineage:anime-role": {
+      "npc": "common",
+      "mc": "trained"
+    },
+    "anime-lineage:anime-scifi-role": {
+      "technician": "trained",
+      "pilot": "trained",
+      "cyborg": "elite"
+    },
+    "legendary-warrior:legend-local-character": {
+      "gatotkaca": "legendary",
+      "bima": "legendary",
+      "arjuna": "legendary",
+      "srikandi": "legendary",
+      "hanoman": "legendary",
+      "antareja": "legendary",
+      "gajah-mada": "legendary",
+      "si-pitung": "legendary",
+      "si-pahit-lidah": "legendary",
+      "prabu-siliwangi": "legendary",
+      "rama": "legendary",
+      "abimanyu": "legendary",
+      "karna": "legendary",
+      "baladewa": "legendary",
+      "kresna": "legendary",
+      "antasena": "legendary",
+      "wisanggeni": "legendary",
+      "semar": "legendary",
+      "aji-saka": "legendary",
+      "jaka-tingkir": "legendary",
+      "ciung-wanara": "legendary",
+      "ken-arok": "legendary",
+      "raden-wijaya": "legendary",
+      "sultan-hasanuddin": "legendary",
+      "cut-nyak-dien": "legendary",
+      "gundala": "legendary",
+      "sri-asih": "legendary",
+      "si-buta": "legendary",
+      "wiro-sableng": "legendary",
+      "virgo": "legendary"
+    },
+    "legendary-warrior:legend-imported-character": {
+      "arthur-pendragon": "legendary",
+      "sasaki-kojiro": "legendary",
+      "grigori-rasputin": "legendary",
+      "miyamoto-musashi": "legendary",
+      "oda-nobunaga": "legendary",
+      "okita-souji": "legendary",
+      "ushiwakamaru": "legendary",
+      "minamoto-raikou": "legendary",
+      "tomoe-gozen": "legendary",
+      "takeda-shingen": "legendary",
+      "uesugi-kenshin": "legendary",
+      "iskandar": "legendary",
+      "leonidas": "legendary",
+      "julius-caesar": "legendary",
+      "cleopatra": "legendary",
+      "nero-claudius": "legendary",
+      "boudica": "legendary",
+      "spartacus": "legendary",
+      "vlad-iii": "legendary",
+      "napoleon": "legendary",
+      "jeanne-darc": "legendary",
+      "richard-i": "legendary",
+      "charlemagne": "legendary",
+      "francis-drake": "legendary",
+      "edward-teach": "legendary",
+      "bartholomew-roberts": "legendary",
+      "christopher-columbus": "legendary",
+      "leonardo-da-vinci": "legendary",
+      "nikola-tesla": "legendary",
+      "thomas-edison": "legendary",
+      "charles-babbage": "legendary",
+      "florence-nightingale": "legendary",
+      "paracelsus": "legendary",
+      "helena-blavatsky": "legendary",
+      "william-shakespeare": "legendary",
+      "hans-andersen": "legendary",
+      "mozart": "legendary",
+      "antonio-salieri": "legendary",
+      "marie-antoinette": "legendary",
+      "chevalier-deon": "legendary",
+      "qin-shi-huang": "legendary",
+      "zhuge-liang": "legendary",
+      "sima-yi": "legendary",
+      "lu-bu": "legendary",
+      "chen-gong": "legendary",
+      "li-shuwen": "legendary",
+      "qin-liangyu": "legendary",
+      "yang-guifei": "legendary",
+      "wu-zetian": "legendary",
+      "gilgamesh": "legendary",
+      "heracles": "legendary",
+      "achilles": "legendary",
+      "merlin": "legendary",
+      "lancelot": "legendary",
+      "gawain": "legendary",
+      "mordred": "legendary",
+      "tristan": "legendary",
+      "enkidu": "legendary",
+      "hector": "legendary",
+      "odysseus": "legendary",
+      "medusa": "legendary",
+      "william-tell": "legendary",
+      "robin-hood": "legendary",
+      "xu-fu": "legendary",
+      "jing-ke": "legendary",
+      "gao-changgong": "legendary",
+      "ashoka": "legendary",
+      "zenobia": "legendary",
+      "attila": "legendary",
+      "roland": "legendary",
+      "fuma-kotaro": "legendary",
+      "mata-hari": "legendary",
+      "cu-chulainn": "legendary",
+      "scathach": "legendary",
+      "siegfried": "legendary",
+      "beowulf": "legendary",
+      "ozymandias": "legendary",
+      "arash": "legendary",
+      "xuanzang-sanzang": "legendary",
+      "geronimo": "legendary"
+    },
+    "machine:machine-type": {
+      "android": "elite",
+      "cyborg": "trained",
+      "transformer": "trained",
+      "mecha": "apex",
+      "nanobot": "formidable",
+      "ai": "formidable",
+      "household-appliance": "swarm"
+    },
+    "machine:machine-mecha-model": {
+      "machine-mecha-mechagodzilla": "apex",
+      "machine-mecha-rx78": "apex",
+      "machine-mecha-gipsy-danger": "apex",
+      "machine-mecha-megazord": "apex",
+      "machine-mecha-voltron": "apex",
+      "machine-mecha-mazinger-z": "apex",
+      "machine-mecha-gurren-lagann": "apex",
+      "machine-mecha-mecha-probe": "formidable",
+      "machine-mecha-odong-odong": "common",
+      "machine-mecha-bakso-cart": "common",
+      "machine-mecha-water-jug": "common",
+      "machine-mecha-cardboard": "common"
+    },
+    "machine:machine-transformer-form": {
+      "machine-transformer-fighter-jet": "elite",
+      "machine-transformer-tank": "elite",
+      "machine-transformer-helicopter": "elite",
+      "machine-transformer-submarine": "elite",
+      "machine-transformer-sports-car": "trained",
+      "machine-transformer-trailer-truck": "trained",
+      "machine-transformer-racing-bike": "trained",
+      "machine-transformer-high-speed-train": "trained",
+      "machine-transformer-angkot": "common",
+      "machine-transformer-bajaj": "common",
+      "machine-transformer-odong-odong": "common",
+      "machine-transformer-bakso-cart": "common"
+    },
+    "machine:machine-appliance-item": {
+      "rice-cooker": "swarm",
+      "microwave": "swarm",
+      "refrigerator": "swarm",
+      "washing-machine": "swarm",
+      "electric-fan": "swarm",
+      "air-conditioner": "swarm",
+      "vacuum-cleaner": "swarm",
+      "electric-iron": "swarm",
+      "blender": "swarm",
+      "air-fryer": "swarm",
+      "toaster": "swarm",
+      "electric-kettle": "swarm",
+      "water-dispenser": "swarm",
+      "hair-dryer": "swarm",
+      "mixer": "swarm",
+      "electric-oven": "swarm",
+      "induction-stove": "swarm",
+      "coffee-machine": "swarm",
+      "television": "swarm",
+      "robot-vacuum": "swarm"
+    },
+    "primordial:primordial-identity": {
+      "atum": "divine",
+      "khepri": "divine",
+      "amun": "divine",
+      "neith": "divine",
+      "ptah": "divine",
+      "chaos": "divine",
+      "gaia": "divine",
+      "namma": "divine",
+      "apsu": "divine",
+      "tiamat": "divine",
+      "ymir": "divine"
+    },
+    "slime:slime-type": {
+      "ordinary": "swarm",
+      "acid": "common",
+      "poison": "common",
+      "healing": "common",
+      "metal": "trained",
+      "elemental": "formidable"
+    },
+    "centaur:centaur-lower-body": {
+      "horse": "trained",
+      "jaguar": "elite",
+      "chicken": "common",
+      "capybara": "common",
+      "wolf": "trained",
+      "tiger": "elite",
+      "bear": "elite",
+      "bull": "elite",
+      "deer": "trained",
+      "rabbit": "common",
+      "elephant": "formidable",
+      "goat": "common"
+    },
+    "cosmic-warrior:cosmic-warrior-group": {
+      "alien-x": "divine",
+      "ultraman": "legendary",
+      "saiyan": "apex",
+      "green-lantern": "apex",
+      "silver-surfer": "legendary",
+      "saint": "apex"
+    }
+  },
+  "quantityProfiles": [
+    {
+      "id": "swarm",
+      "label": "Target massal",
+      "difficultyRank": 0,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-swarm-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 800,
+          "probability": 0.08,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-swarm-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 800,
+          "probability": 0.08,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-swarm-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 1100,
+          "probability": 0.11,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-swarm-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 1600,
+          "probability": 0.16,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-swarm-victims-50",
+          "label": "50",
+          "value": 50,
+          "baseWeight": 1600,
+          "probability": 0.16,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-swarm-victims-100",
+          "label": "100",
+          "value": 100,
+          "baseWeight": 1300,
+          "probability": 0.13,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-swarm-victims-500",
+          "label": "500",
+          "value": 500,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-swarm-victims-1000",
+          "label": "1000",
+          "value": 1000,
+          "baseWeight": 800,
+          "probability": 0.08,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-swarm-victims-5000",
+          "label": "5000",
+          "value": 5000,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-swarm-victims-10000",
+          "label": "10000",
+          "value": 10000,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "common",
+      "label": "Target biasa",
+      "difficultyRank": 1,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-common-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-common-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 1400,
+          "probability": 0.14,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-common-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 1600,
+          "probability": 0.16,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-common-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 1600,
+          "probability": 0.16,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-common-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 1300,
+          "probability": 0.13,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-common-victims-20",
+          "label": "20",
+          "value": 20,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-common-victims-50",
+          "label": "50",
+          "value": 50,
+          "baseWeight": 600,
+          "probability": 0.06,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-common-victims-100",
+          "label": "100",
+          "value": 100,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-common-victims-500",
+          "label": "500",
+          "value": 500,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-common-victims-1000",
+          "label": "1000",
+          "value": 1000,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "trained",
+      "label": "Target terlatih",
+      "difficultyRank": 2,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-trained-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 1500,
+          "probability": 0.15,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-trained-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 2000,
+          "probability": 0.2,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-trained-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 1600,
+          "probability": 0.16,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-trained-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 1200,
+          "probability": 0.12,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-trained-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-trained-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 700,
+          "probability": 0.07,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-trained-victims-20",
+          "label": "20",
+          "value": 20,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-trained-victims-50",
+          "label": "50",
+          "value": 50,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-trained-victims-100",
+          "label": "100",
+          "value": 100,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-trained-victims-500",
+          "label": "500",
+          "value": 500,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "elite",
+      "label": "Target elite",
+      "difficultyRank": 3,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-elite-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 2400,
+          "probability": 0.24,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-elite-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 2000,
+          "probability": 0.2,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-elite-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 1400,
+          "probability": 0.14,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-elite-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-elite-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 700,
+          "probability": 0.07,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-elite-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-elite-victims-20",
+          "label": "20",
+          "value": 20,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-elite-victims-30",
+          "label": "30",
+          "value": 30,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-elite-victims-50",
+          "label": "50",
+          "value": 50,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-elite-victims-100",
+          "label": "100",
+          "value": 100,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "formidable",
+      "label": "Monster kuat",
+      "difficultyRank": 4,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-formidable-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 2900,
+          "probability": 0.29,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-formidable-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 2200,
+          "probability": 0.22,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-formidable-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 1200,
+          "probability": 0.12,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-formidable-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 700,
+          "probability": 0.07,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-formidable-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-formidable-victims-7",
+          "label": "7",
+          "value": 7,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-formidable-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-formidable-victims-15",
+          "label": "15",
+          "value": 15,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-formidable-victims-20",
+          "label": "20",
+          "value": 20,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-formidable-victims-50",
+          "label": "50",
+          "value": 50,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "apex",
+      "label": "Boss besar",
+      "difficultyRank": 5,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-apex-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 3300,
+          "probability": 0.33,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-apex-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 2200,
+          "probability": 0.22,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-apex-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 1000,
+          "probability": 0.1,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-apex-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-apex-victims-4",
+          "label": "4",
+          "value": 4,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-apex-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-apex-victims-7",
+          "label": "7",
+          "value": 7,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-apex-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-apex-victims-15",
+          "label": "15",
+          "value": 15,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-apex-victims-20",
+          "label": "20",
+          "value": 20,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "legendary",
+      "label": "Target legendaris",
+      "difficultyRank": 6,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-legendary-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 4100,
+          "probability": 0.41,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-legendary-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 1900,
+          "probability": 0.19,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-legendary-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-legendary-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-legendary-victims-4",
+          "label": "4",
+          "value": 4,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-legendary-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-legendary-victims-6",
+          "label": "6",
+          "value": 6,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-legendary-victims-7",
+          "label": "7",
+          "value": 7,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-legendary-victims-8",
+          "label": "8",
+          "value": 8,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-legendary-victims-10",
+          "label": "10",
+          "value": 10,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    },
+    {
+      "id": "divine",
+      "label": "God/Raja Iblis Agung",
+      "difficultyRank": 7,
+      "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+      "outcomeCount": 10,
+      "allowModifiers": false,
+      "weightTotal": 10000,
+      "outcomes": [
+        {
+          "id": "slayer-divine-victims-0",
+          "label": "0",
+          "value": 0,
+          "baseWeight": 4800,
+          "probability": 0.48,
+          "strengthBonus": 0
+        },
+        {
+          "id": "slayer-divine-victims-1",
+          "label": "1",
+          "value": 1,
+          "baseWeight": 1200,
+          "probability": 0.12,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-divine-victims-2",
+          "label": "2",
+          "value": 2,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-divine-victims-3",
+          "label": "3",
+          "value": 3,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 1
+        },
+        {
+          "id": "slayer-divine-victims-4",
+          "label": "4",
+          "value": 4,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-divine-victims-5",
+          "label": "5",
+          "value": 5,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-divine-victims-6",
+          "label": "6",
+          "value": 6,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 2
+        },
+        {
+          "id": "slayer-divine-victims-7",
+          "label": "7",
+          "value": 7,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-divine-victims-8",
+          "label": "8",
+          "value": 8,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        },
+        {
+          "id": "slayer-divine-victims-9",
+          "label": "9",
+          "value": 9,
+          "baseWeight": 500,
+          "probability": 0.05,
+          "strengthBonus": 3
+        }
+      ],
+      "minimumOutcomeProbability": 0.05
+    }
+  ],
+  "specialCases": {
+    "anime": "NPC common; MC ignores anime-role quantity assignment and uses its selected genre profile, then the actual Sci-fi role if applicable.",
+    "siluman": "One identity-only animal selection from twelve approved types. No count/fusion/sampling configuration, Animal Transformation, Nyolong, body grant or target race event is dispatched."
+  },
+  "runtimeInterface": {
+    "module": "framework/slayer-event.mjs",
+    "document": "docs/SLAYER-EVENTS.md",
+    "exports": [
+      "getSlayerTargetSelector",
+      "planSlayerTarget",
+      "resolveSlayerVictimCount",
+      "SlayerInputError"
+    ],
+    "tests": "framework/tests/slayer-event.test.mjs",
+    "scope": "Pure reference selector/count/reward planning; future engine performs seeded spins, ledger commit, caller restore and reactions. Full Archetype roster/body fit remains incomplete."
+  },
+  "coverage": {
+    "raceFamilies": 22,
+    "identitySelectorReferences": 35,
+    "quantityProfiles": 8,
+    "sectionsPerProfile": 10,
+    "assignedSubtypeRows": 322,
+    "configuredRaceFamilies": 22,
+    "pendingRaceFamilyIds": []
+  },
+  "retiredProbabilityProfiles": {
+    "version": "slayer/1.0.0",
+    "reason": "User requires a minimum 5% per Slayer count outcome for new spins; existing committed snapshots keep their original odds/results.",
+    "profiles": [
+      {
+        "id": "swarm",
+        "label": "Target massal",
+        "difficultyRank": 0,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-swarm-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 800,
+            "probability": 0.08,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-swarm-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 800,
+            "probability": 0.08,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-swarm-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 1200,
+            "probability": 0.12,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-swarm-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-swarm-victims-50",
+            "label": "50",
+            "value": 50,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-swarm-victims-100",
+            "label": "100",
+            "value": 100,
+            "baseWeight": 1400,
+            "probability": 0.14,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-swarm-victims-500",
+            "label": "500",
+            "value": 500,
+            "baseWeight": 1000,
+            "probability": 0.1,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-swarm-victims-1000",
+            "label": "1000",
+            "value": 1000,
+            "baseWeight": 700,
+            "probability": 0.07,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-swarm-victims-5000",
+            "label": "5000",
+            "value": 5000,
+            "baseWeight": 400,
+            "probability": 0.04,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-swarm-victims-10000",
+            "label": "10000",
+            "value": 10000,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "common",
+        "label": "Target biasa",
+        "difficultyRank": 1,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-common-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 1200,
+            "probability": 0.12,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-common-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 1600,
+            "probability": 0.16,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-common-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-common-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-common-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 1400,
+            "probability": 0.14,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-common-victims-20",
+            "label": "20",
+            "value": 20,
+            "baseWeight": 1000,
+            "probability": 0.1,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-common-victims-50",
+            "label": "50",
+            "value": 50,
+            "baseWeight": 600,
+            "probability": 0.06,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-common-victims-100",
+            "label": "100",
+            "value": 100,
+            "baseWeight": 300,
+            "probability": 0.03,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-common-victims-500",
+            "label": "500",
+            "value": 500,
+            "baseWeight": 200,
+            "probability": 0.02,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-common-victims-1000",
+            "label": "1000",
+            "value": 1000,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "trained",
+        "label": "Target terlatih",
+        "difficultyRank": 2,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-trained-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 2000,
+            "probability": 0.2,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-trained-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 2200,
+            "probability": 0.22,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-trained-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-trained-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 1400,
+            "probability": 0.14,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-trained-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 1000,
+            "probability": 0.1,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-trained-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 700,
+            "probability": 0.07,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-trained-victims-20",
+            "label": "20",
+            "value": 20,
+            "baseWeight": 400,
+            "probability": 0.04,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-trained-victims-50",
+            "label": "50",
+            "value": 50,
+            "baseWeight": 250,
+            "probability": 0.025,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-trained-victims-100",
+            "label": "100",
+            "value": 100,
+            "baseWeight": 150,
+            "probability": 0.015,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-trained-victims-500",
+            "label": "500",
+            "value": 500,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "elite",
+        "label": "Target elite",
+        "difficultyRank": 3,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-elite-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 3000,
+            "probability": 0.3,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-elite-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 2500,
+            "probability": 0.25,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-elite-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-elite-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 1000,
+            "probability": 0.1,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-elite-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 700,
+            "probability": 0.07,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-elite-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 400,
+            "probability": 0.04,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-elite-victims-20",
+            "label": "20",
+            "value": 20,
+            "baseWeight": 250,
+            "probability": 0.025,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-elite-victims-30",
+            "label": "30",
+            "value": 30,
+            "baseWeight": 150,
+            "probability": 0.015,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-elite-victims-50",
+            "label": "50",
+            "value": 50,
+            "baseWeight": 150,
+            "probability": 0.015,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-elite-victims-100",
+            "label": "100",
+            "value": 100,
+            "baseWeight": 50,
+            "probability": 0.005,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "formidable",
+        "label": "Monster kuat",
+        "difficultyRank": 4,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-formidable-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 4000,
+            "probability": 0.4,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-formidable-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 2800,
+            "probability": 0.28,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-formidable-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 1400,
+            "probability": 0.14,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-formidable-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 700,
+            "probability": 0.07,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-formidable-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 400,
+            "probability": 0.04,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-formidable-victims-7",
+            "label": "7",
+            "value": 7,
+            "baseWeight": 300,
+            "probability": 0.03,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-formidable-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 200,
+            "probability": 0.02,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-formidable-victims-15",
+            "label": "15",
+            "value": 15,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-formidable-victims-20",
+            "label": "20",
+            "value": 20,
+            "baseWeight": 70,
+            "probability": 0.006999999999999999,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-formidable-victims-50",
+            "label": "50",
+            "value": 50,
+            "baseWeight": 30,
+            "probability": 0.003,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "apex",
+        "label": "Boss besar",
+        "difficultyRank": 5,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-apex-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 5000,
+            "probability": 0.5,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-apex-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 2700,
+            "probability": 0.27,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-apex-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 1100,
+            "probability": 0.11,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-apex-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 500,
+            "probability": 0.05,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-apex-victims-4",
+            "label": "4",
+            "value": 4,
+            "baseWeight": 300,
+            "probability": 0.03,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-apex-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 150,
+            "probability": 0.015,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-apex-victims-7",
+            "label": "7",
+            "value": 7,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-apex-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 70,
+            "probability": 0.006999999999999999,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-apex-victims-15",
+            "label": "15",
+            "value": 15,
+            "baseWeight": 50,
+            "probability": 0.005,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-apex-victims-20",
+            "label": "20",
+            "value": 20,
+            "baseWeight": 30,
+            "probability": 0.003,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "legendary",
+        "label": "Target legendaris",
+        "difficultyRank": 6,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-legendary-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 6000,
+            "probability": 0.6,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-legendary-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 2400,
+            "probability": 0.24,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-legendary-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 800,
+            "probability": 0.08,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-legendary-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 400,
+            "probability": 0.04,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-legendary-victims-4",
+            "label": "4",
+            "value": 4,
+            "baseWeight": 200,
+            "probability": 0.02,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-legendary-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 100,
+            "probability": 0.01,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-legendary-victims-6",
+            "label": "6",
+            "value": 6,
+            "baseWeight": 50,
+            "probability": 0.005,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-legendary-victims-7",
+            "label": "7",
+            "value": 7,
+            "baseWeight": 30,
+            "probability": 0.003,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-legendary-victims-8",
+            "label": "8",
+            "value": 8,
+            "baseWeight": 15,
+            "probability": 0.0015,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-legendary-victims-10",
+            "label": "10",
+            "value": 10,
+            "baseWeight": 5,
+            "probability": 0.0005,
+            "strengthBonus": 3
+          }
+        ]
+      },
+      {
+        "id": "divine",
+        "label": "God/Raja Iblis Agung",
+        "difficultyRank": 7,
+        "authority": "Authored game-balance estimate within user delegation, not real-world/lore frequencies or a main-stat scale",
+        "outcomeCount": 10,
+        "allowModifiers": false,
+        "weightTotal": 10000,
+        "outcomes": [
+          {
+            "id": "slayer-divine-victims-0",
+            "label": "0",
+            "value": 0,
+            "baseWeight": 7000,
+            "probability": 0.7,
+            "strengthBonus": 0
+          },
+          {
+            "id": "slayer-divine-victims-1",
+            "label": "1",
+            "value": 1,
+            "baseWeight": 1800,
+            "probability": 0.18,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-divine-victims-2",
+            "label": "2",
+            "value": 2,
+            "baseWeight": 600,
+            "probability": 0.06,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-divine-victims-3",
+            "label": "3",
+            "value": 3,
+            "baseWeight": 300,
+            "probability": 0.03,
+            "strengthBonus": 1
+          },
+          {
+            "id": "slayer-divine-victims-4",
+            "label": "4",
+            "value": 4,
+            "baseWeight": 150,
+            "probability": 0.015,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-divine-victims-5",
+            "label": "5",
+            "value": 5,
+            "baseWeight": 70,
+            "probability": 0.006999999999999999,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-divine-victims-6",
+            "label": "6",
+            "value": 6,
+            "baseWeight": 40,
+            "probability": 0.004,
+            "strengthBonus": 2
+          },
+          {
+            "id": "slayer-divine-victims-7",
+            "label": "7",
+            "value": 7,
+            "baseWeight": 20,
+            "probability": 0.002,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-divine-victims-8",
+            "label": "8",
+            "value": 8,
+            "baseWeight": 15,
+            "probability": 0.0015,
+            "strengthBonus": 3
+          },
+          {
+            "id": "slayer-divine-victims-9",
+            "label": "9",
+            "value": 9,
+            "baseWeight": 5,
+            "probability": 0.0005,
+            "strengthBonus": 3
+          }
+        ]
+      }
+    ]
+  },
+  "minimumCountOutcomeProbability": 0.05,
+  "primordialExtension": {
+    "design": "content/primordial-events-design.json",
+    "profileId": "divine",
+    "authority": "Authored assignment consistent with first-deity power and existing God profile; source count/reward profiles unchanged.",
+    "snapshot": "reference/before-primordial-packages-2026-10-10.json"
+  },
+  "video2RaceImports": {
+    "design": "content/video2-race-imports-design.json",
+    "rewards": false,
+    "identitySelectorCatalogUnchanged": false,
+    "quantityProfilesUnchanged": true,
+    "snapshot": "reference/before-video2-race-imports-2026-10-10.json",
+    "authority": "Authored difficulty assignments under prior user delegation to estimate each race; existing ten-count values/odds/rewards unchanged.",
+    "latestCatalogVersion": "video2-race-imports/0.3.0",
+    "forbiddenCosmicRewardWheelIds": [
+      "ultraman-color",
+      "saint-cosmic-armor",
+      "lantern-ring-color"
+    ]
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract",
+  "elementExpansion": {
+    "version": "element-wheel/0.2.0",
+    "policy": "Identity-only elemental selectors use12 outcomes; all quantity profiles/rewards unchanged. Dragon still stops before Element."
+  }
+}

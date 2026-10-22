@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "roda-kekacauan-bonus-timing/0.1",
+  "version": "bonus-timing/0.2.0",
+  "updatedDate": "2026-10-09",
+  "status": "End-only signed unbounded final scores; effective Weapon Mastery>=5 opens compatible Enchant. Executor/Enchant catalog remain configuration.",
+  "authority": {
+    "confirmed": [
+      "All stat bonuses are calculated at the end.",
+      "Weapon Mastery and Power Mastery bonuses also apply at the end.",
+      "Weapon Mastery bonuses affect Enchant eligibility."
+    ],
+    "executionInterpretation": "Final bonus phase starts after Title and its mandatory events. Calculate mastery bonuses there, resolve compatible Enchant and its events, then close main-stat bonus calculation and freeze character before image."
+  },
+  "scope": [
+    "strength",
+    "speed",
+    "durability",
+    "intelligence",
+    "fight",
+    "weapon-mastery",
+    "power-mastery"
+  ],
+  "contracts": {
+    "registration": "Record each authorized modifier when earned in its immutable source-keyed ledger; do not add it to any raw/stat/mastery result during the earlier main stages.",
+    "raw": "Complete scheduled actual stat/mastery draws and any required Resilient retry at their normal stages. Preserve all immutable results plus retained/copy/Double-Nothing base resolution. Resilient/Lucky Number/Pawn continue reading raw mapped values, never bonuses.",
+    "mastery": "At finalization, per-weapon score = retained raw base + distinct matching modifiers. Shared ordinary Power Mastery = retained shared raw + distinct all-owned modifiers. Actual God Authority uses source-bound base9 plus the same shared modifiers. Every numeric score is signed and unbounded; no clamp.",
+    "enchant": "Evaluate only in final bonus phase after effective Weapon Mastery calculation. Effective score >=5 (Master), enchantable active weapon and an unused compatible configured slot are all required. Earlier stages retain pending gate status even if raw already >=5 or raw+known bonuses would reach5; do not spin early or permanently skip from raw alone.",
+    "boundary": "Only Weapon Mastery bonuses can change this threshold. Strength/other-main-stat bonuses, Power Mastery bonus and Power Tier metadata do not raise Weapon Mastery. Power Mastery never generates Enchant.",
+    "deferred": "At Weapon or a later acquisition caller, settle raw mastery then register a stable pending final Enchant gate per active weapon. Return to saved caller without an Enchant child. Empty/no weapon has no phantom pending gate; discarded weapons remain inactive.",
+    "late": "Resolve actual Enchant and its approved child events using the normal source ledgers, saved return, raw mastery policies, shared-power reuse and acquisition locks. If these create authorized inventory/modifier changes, refresh effective mastery from the same immutable base and current distinct ledger and examine only unused slots. Newly granted weapons resolve normal raw mastery; first late power may resolve the one shared base if previously empty. Never restart earlier main stages.",
+    "drain": "Process to quiescence under the existing declared event activation/depth limits. A changed ledger may be reprojected from base; it must never add the whole bonus again to a previous effective value. Each Enchant slot has one consumed activation key. Missing required catalog/compatible declared profile or exceeded event limit remains explicit needs_configuration; never fake success/freeze with pending events.",
+    "finalStats": "After every mandatory Enchant/late event/raw draw/retry/passive Pawn evaluation finishes, process all Lucky Number eligible actual sources, settle its one modifier package, then calculate five main-stat final scores from resolved bases and distinct active bonus/debuff ledgers. Include bonuses earned by actual final-phase Enchant results, such as an already-active Shrek funny-result hook. Fixed projection/recalculation is not an actual spin/hook.",
+    "freeze": "Final image/stat card wait until pending events/retries/Enchant gates are resolved or explicitly skipped by final eligibility, modifiers are calculated and final audit succeeds. Do not present a provisional projection as a frozen final score.",
+    "replay": "Freeze global policy version, original raw references, modifier-source fingerprint, active inventory snapshot, signed unbounded final-score policy, effective rank used for each gate, pending/consumed slot keys, actual child invocations and saved final-phase cursor. Resume uses existing first/retry/Enchant results; no extra spins, grants or duplicate effects.",
+    "migration": "Pre-revision committed journals preserve their frozen early-Enchant/timing policy. No automatic relabeling, new eligibility check, reward migration or Enchant spin on an old finalized character.",
+    "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy"
+  },
+  "finalizationSteps": [
+    {
+      "id": "drain-pre-enchant-events",
+      "operation": "Complete all prior mandatory Title/late events, raw stat/mastery slots and Resilient retries; keep numeric bonuses pending."
+    },
+    {
+      "id": "calculate-effective-masteries",
+      "operation": "Project active per-weapon and one common power effective rank from retained raw bases and distinct sources without numeric clamps; preserve God instance override."
+    },
+    {
+      "id": "resolve-final-enchants",
+      "operation": "For each active compatible weapon, effective>=5 and unused slot -> actual Enchant spin/events; otherwise record final skip reason. All child results/reactions complete."
+    },
+    {
+      "id": "drain-enchant-children",
+      "operation": "Complete authorized late acquisitions/raw masteries/retries and source hooks. If inventory/modifier fingerprint changed, return to calculate-effective-masteries and check only unused slots, respecting event limits."
+    },
+    {
+      "id": "settle-main-stat-bonuses",
+      "operation": "Once no mandatory child/gate remains, audit Pawn and Lucky Number, settle Lucky modifier once, sum all five main-stat bonus/debuff ledgers against resolved bases without numeric clamps."
+    },
+    {
+      "id": "freeze-before-image",
+      "operation": "Audit consistent final masteries/Enchant slots/stats/provenance, then freeze and generate image/final card."
+    }
+  ],
+  "enchantGate": {
+    "stage": "finalize",
+    "minimumRankId": "master",
+    "minimumScore": 5,
+    "scaleRef": "stat-scales-design.json#scales/5",
+    "valueBasis": "Final signed Weapon Mastery score after bonuses, without clamp",
+    "requires": [
+      "active owned weapon",
+      "enchantable",
+      "effective>=5",
+      "unused compatible configured slot"
+    ],
+    "ledgerKey": "runId/weaponInstanceId/enchantSlotId",
+    "earlyStatus": "pending-final-bonus",
+    "belowMasterAtRaw": "defer, not a final eligibility skip",
+    "extraStatDraw": false
+  },
+  "examples": [
+    {
+      "weaponRaw": 4,
+      "weaponBonus": 1,
+      "effective": 5,
+      "enchantThresholdMet": true
+    },
+    {
+      "weaponRaw": 3,
+      "weaponBonus": 2,
+      "effective": 5,
+      "enchantThresholdMet": true
+    },
+    {
+      "weaponRaw": 4,
+      "weaponBonus": 0,
+      "effective": 4,
+      "enchantThresholdMet": false
+    },
+    {
+      "weaponFirstRaw": 4,
+      "resilientRetryRaw": 2,
+      "retainedRaw": 4,
+      "weaponBonus": 1,
+      "effective": 5,
+      "enchantThresholdMet": true,
+      "bonusAffectsRetry": false
+    },
+    {
+      "weaponRaw": 4,
+      "strengthBonus": 2,
+      "weaponBonus": 0,
+      "effective": 4,
+      "enchantThresholdMet": false
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; final bonus/Enchant scheduler and persistence not implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Existing normal Enchant catalog, slots, compatibility and bounded child effect profiles",
+    "Global bounded event executor, modifier ledger persistence and final-phase resume"
+  ]
+}

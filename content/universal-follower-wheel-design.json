@@ -1,0 +1,816 @@
+{
+  "schemaVersion": 1,
+  "status": "User-confirmed nine counts and complete 3:3:3:3:3:2:2:2:1 odds; God stat-only reward clarified.",
+  "contract": {
+    "scope": "One canonical follower-count wheel shared by God/Raja and authorized full Vessel callers; same counts/odds/reward rows, real source-bound projection.",
+    "countMeaning": "Followers/devotees are separate from army, command, victims and owned races. No army-control grant.",
+    "fixedOdds": {
+      "order": [
+        0,
+        10,
+        100,
+        1000,
+        10000,
+        100000,
+        1000000,
+        10000000,
+        100000000
+      ],
+      "weights": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "totalWeight": 22,
+      "allowModifiers": false,
+      "source": "User clarified nine-value ratio; earlier incomplete seven-value ratio is not active."
+    },
+    "rewardSelection": "Only the exact committed count row for the declared caller applies. Working interpretation: rewards do not accumulate earlier count thresholds.",
+    "rewardPolicyGuard": "Require actual source and matching authorized profile: God race -> god; Raja race -> demon-lord; explicitly authorized Vessel90/100 -> profile matching actual god/demon-lord patron via authorizedAdditionalCallers. Other/mismatched callers are configuration errors; never fake a source race component.",
+    "execution": "Commit count, append scoped follower record and selected reward ledger atomically before one reaction; resume next child or saved caller.",
+    "idempotence": "runId/sourceComponentId/sourceFollowerInvocationId/rewardProfileId/effectOrdinal; replay/media retry repeats no record, bonus or spin.",
+    "numericStats": "Register numeric-point effects once; wait for each immutable base stat or recompute existing base plus ledger. Respect bounds/mappings; no tier increments or respins.",
+    "mastery": "Only demon-lord selected100/1000/10000/100000 gives one shared-rank modifier from actual Raja or authorized full-Raja Vessel follower source. God profile never gives follower mastery. Preserve bound Authority max; no extra draw.",
+    "provenance": "Separate follower records by source component; one God/Raja source never overwrites another count.",
+    "history": "No race/count exclusion inferred here; global race history still filters separately authorized identity draws.",
+    "authorizedAdditionalCallers": [
+      {
+        "id": "vessel-full-god",
+        "archetypeId": "vessel",
+        "definitionFile": "content/vessel-events-design.json",
+        "ruleVersion": "vessel/0.2.0",
+        "patronId": "god",
+        "bandId": "full-package",
+        "allowedCompatibilityValues": [
+          90,
+          100
+        ],
+        "rewardProfileId": "god",
+        "guard": "Actual committed Vessel patron god, compatibility90 or100, and this recipe's actual follower child.",
+        "projection": "Use the existing matching byFollowerCount row and modifier amounts; bind all records/effects to actual Vessel/compatibility/follower source, never fabricate a God/Raja owned-race component. Follower display/context belongs to the selected patron.",
+        "masteryModifierAccess": "No follower mastery bonus."
+      },
+      {
+        "id": "vessel-full-demon-lord",
+        "archetypeId": "vessel",
+        "definitionFile": "content/vessel-events-design.json",
+        "ruleVersion": "vessel/0.2.0",
+        "patronId": "demon-lord",
+        "bandId": "full-package",
+        "allowedCompatibilityValues": [
+          90,
+          100
+        ],
+        "rewardProfileId": "demon-lord",
+        "guard": "Actual committed Vessel patron demon-lord, compatibility90 or100, and this recipe's actual follower child.",
+        "projection": "Use the existing matching byFollowerCount row and modifier amounts; bind all records/effects to actual Vessel/compatibility/follower source, never fabricate a God/Raja owned-race component. Follower display/context belongs to the selected patron.",
+        "masteryModifierAccess": "Existing raja-iblis-agung-follower-mastery at100/1000 +1 or10000/100000 +2, once on shared rank at final phase; other counts none."
+      }
+    ]
+  },
+  "powerMasteryModifiers": [
+    {
+      "id": "raja-iblis-agung-follower-mastery",
+      "status": "User-confirmed +1 at 100/1000; +2 at 10000/100000; other counts grant no follower mastery.",
+      "operation": "add-rank-steps",
+      "amountByFollowerCount": {
+        "100": 1,
+        "1000": 1,
+        "10000": 2,
+        "100000": 2
+      },
+      "unit": "ordered mastery rank steps",
+      "scope": "all-owned-powers",
+      "callerGuard": "demon-lord reward profile from actual Raja Iblis Agung OR explicitly authorized full-Raja Vessel follower invocation with matching patron and90/100 compatibility.",
+      "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+      "sourceKey": "characterId/modifierDefinitionId/sourceComponentId/sourceSpinId",
+      "sourceSpinBinding": "sourceSpinId is the actual follower-count spin, not the parent subtype spin.",
+      "stackingRef": "framework/spec.json#powerMasteryContract.stacking",
+      "godBoundary": "God follower policy never grants this modifier; preserve independently acquired God Authority maximum overrides.",
+      "emptyInventory": "No phantom power or mastery draw.",
+      "enchantment": "never from Power Mastery",
+      "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+    }
+  ],
+  "rewardProfiles": [
+    {
+      "id": "demon-lord",
+      "label": "Raja Iblis Agung",
+      "familyId": "demon",
+      "subtypeId": "demon-lord",
+      "byFollowerCount": {
+        "0": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "10": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "100": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 1,
+          "effects": [
+            {
+              "type": "register-power-mastery-modifier",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "definitionId": "raja-iblis-agung-follower-mastery",
+              "amount": 1,
+              "source": "actual committed follower result and Raja component"
+            }
+          ]
+        },
+        "1000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 1,
+          "effects": [
+            {
+              "type": "register-power-mastery-modifier",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "definitionId": "raja-iblis-agung-follower-mastery",
+              "amount": 1,
+              "source": "actual committed follower result and Raja component"
+            }
+          ]
+        },
+        "10000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 2,
+          "effects": [
+            {
+              "type": "register-power-mastery-modifier",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "definitionId": "raja-iblis-agung-follower-mastery",
+              "amount": 2,
+              "source": "actual committed follower result and Raja component"
+            }
+          ]
+        },
+        "100000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 2,
+          "effects": [
+            {
+              "type": "register-power-mastery-modifier",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "definitionId": "raja-iblis-agung-follower-mastery",
+              "amount": 2,
+              "source": "actual committed follower result and Raja component"
+            }
+          ]
+        },
+        "1000000": {
+          "statBonusPerMainStat": 1,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        },
+        "10000000": {
+          "statBonusPerMainStat": 1,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        },
+        "100000000": {
+          "statBonusPerMainStat": 2,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "god",
+      "label": "God",
+      "familyId": "heavenly-principle",
+      "subtypeId": "god",
+      "byFollowerCount": {
+        "0": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "10": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "100": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "1000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "10000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "100000": {
+          "statBonusPerMainStat": 0,
+          "powerMasteryBonus": 0,
+          "effects": []
+        },
+        "1000000": {
+          "statBonusPerMainStat": 1,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        },
+        "10000000": {
+          "statBonusPerMainStat": 1,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        },
+        "100000000": {
+          "statBonusPerMainStat": 2,
+          "powerMasteryBonus": 0,
+          "effects": [
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 2,
+              "unit": "numeric point",
+              "source": "actual committed follower result and caller reward profile"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "wheels": [
+    {
+      "id": "follower-count",
+      "label": "Jumlah Pengikut",
+      "scope": "universal",
+      "definitionFile": "universal-follower-wheel-design.json",
+      "status": "User-confirmed fixed distribution",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "weightsPolicy": "Explicit fixed weights; no equal-default substitution or later odds modifiers.",
+      "outcomes": [
+        {
+          "id": "followers-0",
+          "label": "0",
+          "count": 0,
+          "baseWeight": 3,
+          "probability": {
+            "numerator": 3,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 0,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 0,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 0"
+            ],
+            "displayContext": "Jumlah pengikut: 0. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Nol pengikut. Grup chat-nya cuma admin."
+          }
+        },
+        {
+          "id": "followers-10",
+          "label": "10",
+          "count": 10,
+          "baseWeight": 3,
+          "probability": {
+            "numerator": 3,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 10,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 10,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 10"
+            ],
+            "displayContext": "Jumlah pengikut: 10. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 10. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-100",
+          "label": "100",
+          "count": 100,
+          "baseWeight": 3,
+          "probability": {
+            "numerator": 3,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 100,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 100,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 100"
+            ],
+            "displayContext": "Jumlah pengikut: 100. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 100. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-1000",
+          "label": "1.000",
+          "count": 1000,
+          "baseWeight": 3,
+          "probability": {
+            "numerator": 3,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 1000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 1000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 1.000"
+            ],
+            "displayContext": "Jumlah pengikut: 1.000. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 1.000. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-10000",
+          "label": "10.000",
+          "count": 10000,
+          "baseWeight": 3,
+          "probability": {
+            "numerator": 3,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 10000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 10000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 10.000"
+            ],
+            "displayContext": "Jumlah pengikut: 10.000. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 10.000. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-100000",
+          "label": "100.000",
+          "count": 100000,
+          "baseWeight": 2,
+          "probability": {
+            "numerator": 2,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 100000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 100000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 100.000"
+            ],
+            "displayContext": "Jumlah pengikut: 100.000. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 100.000. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-1000000",
+          "label": "1 juta",
+          "count": 1000000,
+          "baseWeight": 2,
+          "probability": {
+            "numerator": 2,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 1000000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 1000000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 1 juta"
+            ],
+            "displayContext": "Jumlah pengikut: 1 juta. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 1 juta. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-10000000",
+          "label": "10 juta",
+          "count": 10000000,
+          "baseWeight": 2,
+          "probability": {
+            "numerator": 2,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 10000000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 10000000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 10 juta"
+            ],
+            "displayContext": "Jumlah pengikut: 10 juta. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Pengikutnya 10 juta. Bonus mengikuti hasil ini."
+          }
+        },
+        {
+          "id": "followers-100000000",
+          "label": "100 juta",
+          "count": 100000000,
+          "baseWeight": 1,
+          "probability": {
+            "numerator": 1,
+            "denominator": 22
+          },
+          "inclusionStatus": "user-confirmed",
+          "effects": [
+            {
+              "type": "record-followers",
+              "count": 100000000,
+              "scope": "source-component",
+              "source": "actual committed follower result and caller"
+            },
+            {
+              "type": "apply-follower-reward-profile",
+              "definitionFile": "universal-follower-wheel-design.json",
+              "profileId": "from authorized invocation",
+              "count": 100000000,
+              "effectPolicy": "selected row exactly once"
+            }
+          ],
+          "narrationContext": {
+            "facts": [
+              "Jumlah pengikut terpilih: 100 juta"
+            ],
+            "displayContext": "Jumlah pengikut: 100 juta. Hadiah membaca profil pemanggil yang benar.",
+            "callerFacts": "Append only selected committed reward effects. Final stats/base rank stay unknown until their stage.",
+            "narrationExample": "Seratus juta pengikut. Kelima stat dapet +2 dari hasil ini."
+          }
+        }
+      ]
+    }
+  ],
+  "openBalance": [
+    "Follower visual presence, capacities and future influence remain undefined; grant only declared rewards."
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  }
+}

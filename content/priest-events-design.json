@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "roda-kekacauan-priest/0.1",
+  "version": "priest/0.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "priest",
+  "eventProfileId": "priest-angelic-power",
+  "status": "Core one-universal-Angelic-spin event approved. Canonical power limits/final body-role fit and runtime helper remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Priest: exactly one spin of the existing twenty-option Angelic Power wheel. User explicitly clarified this choice after referencing Angelic Power/Orang Saleh; Orang Saleh remains fixed Komunikasi dengan Tuhan.",
+      "Previously confirmed equal default applies: canonical Angelic base weight 1 per outcome."
+    ],
+    "clarification": "Latest user instruction creates Angelic Power for Angel, Priest and Bishop, superseding the earlier Divine routing. Priest retains exactly one invocation; Orang Saleh stays fixed Komunikasi dengan Tuhan."
+  },
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-angelic",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "invocationCount": 1,
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "power-angelic",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "invocationCount": 1,
+      "sourceArchetypeId": "priest",
+      "stepId": "priest-angelic-1",
+      "ordinal": 1,
+      "returnTo": "backstory",
+      "catalogVersion": "universal-power/0.2.0"
+    }
+  ],
+  "contracts": {
+    "order": "Actual Priest -> exactly one canonical power-angelic spin -> grant only its selected power -> actual result/reaction -> Backstory.",
+    "probability": "Reuse all twenty canonical Angelic outcomes and weights unchanged: baseWeight 1 each, probability 1/20 before any explicitly approved modifier. Strength display order does not add rarity.",
+    "grant": "Grant exactly the actual selected canonical power once, sourced to the Priest invocation/result. No bundled lower entries, owner stat/weapon/mastery rank bonus or source-race event dispatch.",
+    "mastery": "Retain owned power after normal main Power None. It participates in the one ordinary shared character Power Mastery at its normal stage; no God Concept Authority maximum and no power-mastery Enchant or extra mastery draw.",
+    "tier": "Freeze the selected canonical definition reference, ordinary power grant mode and resolved tier/policy version under the existing powerTierContract. No new power definition or automatic tier increase.",
+    "ledger": "Freeze canonical wheel/version, eligible pool, odds and selected power recipe/reference. Commit one source-scoped power grant/result once; replay restores the selected result without another spin, duplicate power or reward.",
+    "reaction": "Append only actual Priest identity, selected Angelic power and frozen tier metadata. Future Backstory/Size/stat/mastery values are unknown; keep short result-based Gen Z captions and no caption-derived funny-result tag.",
+    "return": "After the one child result/grant/reaction restore Backstory; preserve earlier race/Archetype grants and inventory.",
+    "scope": "Priest Archetype imports no Heavenly/Angel/Pemuka/God identity, follower/Concept event or Authority override. Orang Saleh remains the existing fixed Komunikasi dengan Tuhan profile."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only; pure event helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "existing canonical Angelic power limits and capability profiles",
+    "final Archetype body/role fit and boost band",
+    "runtime event planner/resolver and grant persistence adapter"
+  ],
+  "migrationContract": {
+    "retiredSnapshot": "reference/power-themes-before-2026-10-09.json",
+    "policy": "New invocations use this route/version and universal-power/0.2.0; committed old results keep their original version, route, pool and effects."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

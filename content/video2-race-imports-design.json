@@ -1,0 +1,3484 @@
+{
+  "schemaVersion": "roda-kekacauan-video2-race-imports/0.3",
+  "version": "video2-race-imports/0.3.0",
+  "updatedDate": "2026-10-10",
+  "status": "Approved race recipes with latest Cosmic armor/ring revision; full executor and body/Size configuration remain pending.",
+  "authority": {
+    "roster": "We can import slimes centaur, cosmic warrior. Lets make it",
+    "slime": "I agree with your slime.",
+    "centaur": "Roll lower body animal; Horse/Jaguar/Chicken/Capybara examples; author others and total+1/+2 stat per animal.",
+    "cosmic": "Alien X/Ultraman and known media groups; author packages based on Ultraman; red Strength+2,blue Speed+2,mixed Strength+1/Speed+1, all Ultraman powerTier4.",
+    "cosmicRevision": "User keeps remaining packages, removes Asgardian/Kryptonian, adds Saint armor Cosmic Armor Bronze2/Silver3/Gold4 and Lantern ring-color power3/4.",
+    "archetypeClassification": "User accepts the remaining proposal: Centaur compatible spin, Cosmic Warrior signature skip; Slime ordinary/specialized classification unchanged."
+  },
+  "approvedFamilyIds": [
+    "slime",
+    "centaur",
+    "cosmic-warrior"
+  ],
+  "canonicalSource": "reference/race-video2-reference.json",
+  "familyPolicies": {
+    "slime": {
+      "rosterApproved": true,
+      "eventApproved": true,
+      "recipeAuthority": "direct-user-approval",
+      "runtimeReady": false,
+      "archetypeClassificationApproved": true,
+      "requiredConfiguration": [
+        "body-size-profile:slime",
+        "full-event-executor:slime"
+      ]
+    },
+    "centaur": {
+      "rosterApproved": true,
+      "eventApproved": true,
+      "recipeAuthority": "direct-user-rule-with-delegated-curation",
+      "runtimeReady": false,
+      "archetypeClassificationApproved": true,
+      "requiredConfiguration": [
+        "body-size-profile:centaur",
+        "full-event-executor:centaur"
+      ]
+    },
+    "cosmic-warrior": {
+      "rosterApproved": true,
+      "eventApproved": true,
+      "recipeAuthority": "direct-user-rule-with-delegated-curation",
+      "runtimeReady": false,
+      "archetypeClassificationApproved": true,
+      "requiredConfiguration": [
+        "body-size-profile:cosmic-warrior",
+        "full-event-executor:cosmic-warrior"
+      ]
+    }
+  },
+  "wheels": [
+    {
+      "id": "slime-type",
+      "label": "Jenis Slime",
+      "drawCount": 1,
+      "outcomeCount": 6,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "outcomes": [
+        {
+          "id": "ordinary",
+          "label": "Slime Biasa",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-ordinary",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Slime Biasa"
+            ],
+            "displayContext": "Cuma jelly."
+          },
+          "powerDefinitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "slime-jelly-body"
+          }
+        },
+        {
+          "id": "acid",
+          "label": "Acid Slime",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-acid",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Acid Slime"
+            ],
+            "displayContext": "Acid Slime"
+          },
+          "powerDefinitionRef": {
+            "definitionFile": "content/survivalist-events-design.json",
+            "definitionId": "acid-manipulation"
+          }
+        },
+        {
+          "id": "poison",
+          "label": "Poison Slime",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-poison",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Poison Slime"
+            ],
+            "displayContext": "Poison Slime"
+          },
+          "powerDefinitionRef": {
+            "definitionFile": "content/survivalist-events-design.json",
+            "definitionId": "poison-manipulation"
+          }
+        },
+        {
+          "id": "healing",
+          "label": "Healing Slime",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-healing",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Healing Slime"
+            ],
+            "displayContext": "Healing Slime"
+          },
+          "powerDefinitionRef": {
+            "definitionFile": "content/fairy-events-design.json",
+            "definitionId": "healing-power"
+          }
+        },
+        {
+          "id": "metal",
+          "label": "Metal Slime",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-metal",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Metal Slime"
+            ],
+            "displayContext": "Metal Slime"
+          },
+          "powerDefinitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "metal-manipulation"
+          }
+        },
+        {
+          "id": "elemental",
+          "label": "Elemental Slime",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "status": "user-accepted-type",
+          "profileId": "slime-elemental",
+          "resultContext": {
+            "facts": [
+              "Jenis Slime: Elemental Slime"
+            ],
+            "displayContext": "Elemental Slime"
+          },
+          "childWheelId": "element-universal"
+        }
+      ]
+    },
+    {
+      "id": "centaur-lower-body",
+      "label": "Tubuh Bawah Centaur",
+      "drawCount": 1,
+      "outcomeCount": 12,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "outcomes": [
+        {
+          "id": "horse",
+          "label": "Kuda",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-horse",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "horse",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Kuda"
+            ],
+            "displayContext": "Centaur bawahnya Kuda."
+          }
+        },
+        {
+          "id": "jaguar",
+          "label": "Jaguar",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-jaguar",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "jaguar",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Jaguar"
+            ],
+            "displayContext": "Centaur bawahnya Jaguar."
+          }
+        },
+        {
+          "id": "chicken",
+          "label": "Ayam",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-chicken",
+          "statPointTotal": 1,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "chicken",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Ayam"
+            ],
+            "displayContext": "Centaur bawahnya Ayam."
+          }
+        },
+        {
+          "id": "capybara",
+          "label": "Capybara",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-capybara",
+          "statPointTotal": 1,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "capybara",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Capybara"
+            ],
+            "displayContext": "Centaur bawahnya Capybara."
+          }
+        },
+        {
+          "id": "wolf",
+          "label": "Serigala",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-wolf",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "wolf",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Serigala"
+            ],
+            "displayContext": "Centaur bawahnya Serigala."
+          }
+        },
+        {
+          "id": "tiger",
+          "label": "Harimau",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-tiger",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "tiger",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Harimau"
+            ],
+            "displayContext": "Centaur bawahnya Harimau."
+          }
+        },
+        {
+          "id": "bear",
+          "label": "Beruang",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-bear",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "bear",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Beruang"
+            ],
+            "displayContext": "Centaur bawahnya Beruang."
+          }
+        },
+        {
+          "id": "bull",
+          "label": "Banteng",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-bull",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "bull",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Banteng"
+            ],
+            "displayContext": "Centaur bawahnya Banteng."
+          }
+        },
+        {
+          "id": "deer",
+          "label": "Rusa",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-deer",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "deer",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Rusa"
+            ],
+            "displayContext": "Centaur bawahnya Rusa."
+          }
+        },
+        {
+          "id": "rabbit",
+          "label": "Kelinci",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-rabbit",
+          "statPointTotal": 1,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "rabbit",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Kelinci"
+            ],
+            "displayContext": "Centaur bawahnya Kelinci."
+          }
+        },
+        {
+          "id": "elephant",
+          "label": "Gajah",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-elephant",
+          "statPointTotal": 2,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "elephant",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Gajah"
+            ],
+            "displayContext": "Centaur bawahnya Gajah."
+          }
+        },
+        {
+          "id": "goat",
+          "label": "Kambing",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "profileId": "centaur-goat",
+          "statPointTotal": 1,
+          "bodyBinding": {
+            "kind": "lower-body-animal",
+            "animalId": "goat",
+            "upperBody": "humanoid",
+            "referenceMetric": null
+          },
+          "resultContext": {
+            "facts": [
+              "Bagian tubuh bawah: Kambing"
+            ],
+            "displayContext": "Centaur bawahnya Kambing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cosmic-warrior-group",
+      "label": "Kelompok Cosmic Warrior",
+      "drawCount": 1,
+      "outcomeCount": 6,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "outcomes": [
+        {
+          "id": "alien-x",
+          "label": "Alien X",
+          "franchise": "Ben 10",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-alien-x",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#alien-x",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Alien X"
+            ],
+            "displayContext": "Alien X masuk arena."
+          }
+        },
+        {
+          "id": "ultraman",
+          "label": "Ultraman",
+          "franchise": "Ultraman",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-ultraman",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#ultraman",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Ultraman"
+            ],
+            "displayContext": "Ultraman masuk arena."
+          }
+        },
+        {
+          "id": "saiyan",
+          "label": "Saiyan",
+          "franchise": "Dragon Ball",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-saiyan",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saiyan",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Saiyan"
+            ],
+            "displayContext": "Saiyan masuk arena."
+          }
+        },
+        {
+          "id": "green-lantern",
+          "label": "Lantern Corps",
+          "franchise": "DC",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-green-lantern",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#green-lantern",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Lantern Corps"
+            ],
+            "displayContext": "Lantern Corps masuk arena."
+          }
+        },
+        {
+          "id": "silver-surfer",
+          "label": "Herald of Galactus / Silver Surfer",
+          "franchise": "Marvel",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-silver-surfer",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#silver-surfer",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Herald of Galactus / Silver Surfer"
+            ],
+            "displayContext": "Herald of Galactus / Silver Surfer masuk arena."
+          }
+        },
+        {
+          "id": "saint",
+          "label": "Saint Seiya",
+          "franchise": "Saint Seiya",
+          "baseWeight": 1,
+          "probability": 0.16666666666666666,
+          "profileId": "cosmic-warrior-saint",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint",
+          "resultContext": {
+            "facts": [
+              "Kelompok Cosmic Warrior: Saint Seiya"
+            ],
+            "displayContext": "Saint Seiya masuk arena."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ultraman-color",
+      "label": "Warna Ultraman",
+      "drawCount": 1,
+      "outcomeCount": 3,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "outcomes": [
+        {
+          "id": "red",
+          "label": "Merah",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333,
+          "profileId": "ultraman-red",
+          "resultContext": {
+            "facts": [
+              "Warna Ultraman: Merah"
+            ],
+            "displayContext": "Ultraman Merah."
+          }
+        },
+        {
+          "id": "blue",
+          "label": "Biru",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333,
+          "profileId": "ultraman-blue",
+          "resultContext": {
+            "facts": [
+              "Warna Ultraman: Biru"
+            ],
+            "displayContext": "Ultraman Biru."
+          }
+        },
+        {
+          "id": "mixed",
+          "label": "Mixed",
+          "baseWeight": 1,
+          "probability": 0.3333333333333333,
+          "profileId": "ultraman-mixed",
+          "resultContext": {
+            "facts": [
+              "Warna Ultraman: Mixed"
+            ],
+            "displayContext": "Ultraman Mixed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "saint-cosmic-armor",
+      "label": "Armor Saint Seiya",
+      "drawCount": 1,
+      "outcomeCount": 35,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "selectionMode": "one flat wheel; class is outcome metadata, no class pre-spin",
+      "outcomes": [
+        {
+          "id": "bronze-pegasus",
+          "label": "Bronze Pegasus",
+          "clothClass": "bronze",
+          "constellation": "Pegasus",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-pegasus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Pegasus",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Pegasus."
+          }
+        },
+        {
+          "id": "bronze-dragon",
+          "label": "Bronze Dragon",
+          "clothClass": "bronze",
+          "constellation": "Dragon",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-dragon",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Dragon",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Dragon."
+          }
+        },
+        {
+          "id": "bronze-cygnus",
+          "label": "Bronze Cygnus",
+          "clothClass": "bronze",
+          "constellation": "Cygnus",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-cygnus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Cygnus",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Cygnus."
+          }
+        },
+        {
+          "id": "bronze-andromeda",
+          "label": "Bronze Andromeda",
+          "clothClass": "bronze",
+          "constellation": "Andromeda",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-andromeda",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Andromeda",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Andromeda."
+          }
+        },
+        {
+          "id": "bronze-phoenix",
+          "label": "Bronze Phoenix",
+          "clothClass": "bronze",
+          "constellation": "Phoenix",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-phoenix",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Phoenix",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Phoenix."
+          }
+        },
+        {
+          "id": "bronze-unicorn",
+          "label": "Bronze Unicorn",
+          "clothClass": "bronze",
+          "constellation": "Unicorn",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-unicorn",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Unicorn",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Unicorn."
+          }
+        },
+        {
+          "id": "bronze-hydra",
+          "label": "Bronze Hydra",
+          "clothClass": "bronze",
+          "constellation": "Hydra",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-hydra",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Hydra",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Hydra."
+          }
+        },
+        {
+          "id": "bronze-wolf",
+          "label": "Bronze Wolf",
+          "clothClass": "bronze",
+          "constellation": "Wolf",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-wolf",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Wolf",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Wolf."
+          }
+        },
+        {
+          "id": "bronze-bear",
+          "label": "Bronze Bear",
+          "clothClass": "bronze",
+          "constellation": "Bear",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-bear",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Bear",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Bear."
+          }
+        },
+        {
+          "id": "bronze-lionet",
+          "label": "Bronze Lionet",
+          "clothClass": "bronze",
+          "constellation": "Lionet",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-lionet",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Lionet",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Lionet."
+          }
+        },
+        {
+          "id": "bronze-chameleon",
+          "label": "Bronze Chameleon",
+          "clothClass": "bronze",
+          "constellation": "Chameleon",
+          "powerTier": 2,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-bronze-chameleon",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Bronze Chameleon",
+              "Cosmic Armor Tier2"
+            ],
+            "displayContext": "Dapet Bronze Chameleon."
+          }
+        },
+        {
+          "id": "silver-eagle",
+          "label": "Silver Eagle",
+          "clothClass": "silver",
+          "constellation": "Eagle",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-eagle",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Eagle",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Eagle."
+          }
+        },
+        {
+          "id": "silver-ophiuchus",
+          "label": "Silver Ophiuchus",
+          "clothClass": "silver",
+          "constellation": "Ophiuchus",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-ophiuchus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Ophiuchus",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Ophiuchus."
+          }
+        },
+        {
+          "id": "silver-lizard",
+          "label": "Silver Lizard",
+          "clothClass": "silver",
+          "constellation": "Lizard",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-lizard",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Lizard",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Lizard."
+          }
+        },
+        {
+          "id": "silver-cetus",
+          "label": "Silver Cetus",
+          "clothClass": "silver",
+          "constellation": "Cetus",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-cetus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Cetus",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Cetus."
+          }
+        },
+        {
+          "id": "silver-hound",
+          "label": "Silver Hound",
+          "clothClass": "silver",
+          "constellation": "Hound",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-hound",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Hound",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Hound."
+          }
+        },
+        {
+          "id": "silver-crow",
+          "label": "Silver Crow",
+          "clothClass": "silver",
+          "constellation": "Crow",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-crow",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Crow",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Crow."
+          }
+        },
+        {
+          "id": "silver-centaurus",
+          "label": "Silver Centaurus",
+          "clothClass": "silver",
+          "constellation": "Centaurus",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-centaurus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Centaurus",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Centaurus."
+          }
+        },
+        {
+          "id": "silver-perseus",
+          "label": "Silver Perseus",
+          "clothClass": "silver",
+          "constellation": "Perseus",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-perseus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Perseus",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Perseus."
+          }
+        },
+        {
+          "id": "silver-auriga",
+          "label": "Silver Auriga",
+          "clothClass": "silver",
+          "constellation": "Auriga",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-auriga",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Auriga",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Auriga."
+          }
+        },
+        {
+          "id": "silver-cerberus",
+          "label": "Silver Cerberus",
+          "clothClass": "silver",
+          "constellation": "Cerberus",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-cerberus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Cerberus",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Cerberus."
+          }
+        },
+        {
+          "id": "silver-heracles",
+          "label": "Silver Heracles",
+          "clothClass": "silver",
+          "constellation": "Heracles",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-heracles",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Heracles",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Heracles."
+          }
+        },
+        {
+          "id": "silver-lyra",
+          "label": "Silver Lyra",
+          "clothClass": "silver",
+          "constellation": "Lyra",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-silver-lyra",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Silver Lyra",
+              "Cosmic Armor Tier3"
+            ],
+            "displayContext": "Dapet Silver Lyra."
+          }
+        },
+        {
+          "id": "gold-aries",
+          "label": "Gold Aries",
+          "clothClass": "gold",
+          "constellation": "Aries",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-aries",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Aries",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Aries."
+          }
+        },
+        {
+          "id": "gold-taurus",
+          "label": "Gold Taurus",
+          "clothClass": "gold",
+          "constellation": "Taurus",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-taurus",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Taurus",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Taurus."
+          }
+        },
+        {
+          "id": "gold-gemini",
+          "label": "Gold Gemini",
+          "clothClass": "gold",
+          "constellation": "Gemini",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-gemini",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Gemini",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Gemini."
+          }
+        },
+        {
+          "id": "gold-cancer",
+          "label": "Gold Cancer",
+          "clothClass": "gold",
+          "constellation": "Cancer",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-cancer",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Cancer",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Cancer."
+          }
+        },
+        {
+          "id": "gold-leo",
+          "label": "Gold Leo",
+          "clothClass": "gold",
+          "constellation": "Leo",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-leo",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Leo",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Leo."
+          }
+        },
+        {
+          "id": "gold-virgo",
+          "label": "Gold Virgo",
+          "clothClass": "gold",
+          "constellation": "Virgo",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-virgo",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Virgo",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Virgo."
+          }
+        },
+        {
+          "id": "gold-libra",
+          "label": "Gold Libra",
+          "clothClass": "gold",
+          "constellation": "Libra",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-libra",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Libra",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Libra."
+          }
+        },
+        {
+          "id": "gold-scorpio",
+          "label": "Gold Scorpio",
+          "clothClass": "gold",
+          "constellation": "Scorpio",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-scorpio",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Scorpio",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Scorpio."
+          }
+        },
+        {
+          "id": "gold-sagittarius",
+          "label": "Gold Sagittarius",
+          "clothClass": "gold",
+          "constellation": "Sagittarius",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-sagittarius",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Sagittarius",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Sagittarius."
+          }
+        },
+        {
+          "id": "gold-capricorn",
+          "label": "Gold Capricorn",
+          "clothClass": "gold",
+          "constellation": "Capricorn",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-capricorn",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Capricorn",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Capricorn."
+          }
+        },
+        {
+          "id": "gold-aquarius",
+          "label": "Gold Aquarius",
+          "clothClass": "gold",
+          "constellation": "Aquarius",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-aquarius",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Aquarius",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Aquarius."
+          }
+        },
+        {
+          "id": "gold-pisces",
+          "label": "Gold Pisces",
+          "clothClass": "gold",
+          "constellation": "Pisces",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.02857142857142857,
+          "profileId": "saint-armor-gold-pisces",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#saint-armor",
+          "resultContext": {
+            "facts": [
+              "Armor: Gold Pisces",
+              "Cosmic Armor Tier4"
+            ],
+            "displayContext": "Dapet Gold Pisces."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lantern-ring-color",
+      "label": "Warna Cincin Lantern",
+      "drawCount": 1,
+      "outcomeCount": 9,
+      "baseWeightPolicy": "equal1-per-allowed-outcome",
+      "outcomes": [
+        {
+          "id": "green",
+          "label": "Hijau — Willpower",
+          "emotion": "Willpower",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-green",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Hijau",
+              "Emosi: Willpower",
+              "Power: Energy Constructs Tier3"
+            ],
+            "displayContext": "Cincinnya hijau, energinya Willpower."
+          }
+        },
+        {
+          "id": "yellow",
+          "label": "Kuning — Fear",
+          "emotion": "Fear",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-yellow",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Kuning",
+              "Emosi: Fear",
+              "Power: Fear Manipulation Tier3"
+            ],
+            "displayContext": "Cincinnya kuning, energinya Fear."
+          }
+        },
+        {
+          "id": "red",
+          "label": "Merah — Rage",
+          "emotion": "Rage",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-red",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Merah",
+              "Emosi: Rage",
+              "Power: Rage Plasma Tier3"
+            ],
+            "displayContext": "Cincinnya merah, energinya Rage."
+          }
+        },
+        {
+          "id": "blue",
+          "label": "Biru — Hope",
+          "emotion": "Hope",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-blue",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Biru",
+              "Emosi: Hope",
+              "Power: Hope Energy Tier3"
+            ],
+            "displayContext": "Cincinnya biru, energinya Hope."
+          }
+        },
+        {
+          "id": "orange",
+          "label": "Oranye — Avarice",
+          "emotion": "Avarice",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-orange",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Oranye",
+              "Emosi: Avarice",
+              "Power: Avarice Constructs Tier4"
+            ],
+            "displayContext": "Cincinnya oranye, energinya Avarice."
+          }
+        },
+        {
+          "id": "indigo",
+          "label": "Indigo — Compassion",
+          "emotion": "Compassion",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-indigo",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Indigo",
+              "Emosi: Compassion",
+              "Power: Emotional Mimicry Tier4"
+            ],
+            "displayContext": "Cincinnya indigo, energinya Compassion."
+          }
+        },
+        {
+          "id": "violet",
+          "label": "Ungu — Love",
+          "emotion": "Love",
+          "powerTier": 3,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-violet",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Ungu",
+              "Emosi: Love",
+              "Power: Love Binding Tier3"
+            ],
+            "displayContext": "Cincinnya ungu, energinya Love."
+          }
+        },
+        {
+          "id": "black",
+          "label": "Hitam — Death",
+          "emotion": "Death",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-black",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Hitam",
+              "Emosi: Death",
+              "Power: Death Energy Tier4"
+            ],
+            "displayContext": "Cincinnya hitam, energinya Death."
+          }
+        },
+        {
+          "id": "white",
+          "label": "Putih — Life",
+          "emotion": "Life",
+          "powerTier": 4,
+          "baseWeight": 1,
+          "probability": 0.1111111111111111,
+          "profileId": "lantern-ring-white",
+          "sourceRef": "reference/cosmic-warrior-media-research.json#lantern-spectrum",
+          "resultContext": {
+            "facts": [
+              "Cincin Lantern: Putih",
+              "Emosi: Life",
+              "Power: Life Energy Tier4"
+            ],
+            "displayContext": "Cincinnya putih, energinya Life."
+          }
+        }
+      ]
+    }
+  ],
+  "slimeRewardProfiles": {
+    "ordinary": {
+      "id": "slime-ordinary",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "slime-jelly-body"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "acid": {
+      "id": "slime-acid",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/survivalist-events-design.json",
+            "definitionId": "acid-manipulation"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "poison": {
+      "id": "slime-poison",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/survivalist-events-design.json",
+            "definitionId": "poison-manipulation"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "healing": {
+      "id": "slime-healing",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/fairy-events-design.json",
+            "definitionId": "healing-power"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "metal": {
+      "id": "slime-metal",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "metal-manipulation"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "elemental": {
+      "id": "slime-elemental",
+      "grants": [],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [
+        {
+          "id": "slime-element",
+          "wheelId": "element-universal",
+          "definitionFile": "content/universal-element-wheel-design.json",
+          "drawCount": 1,
+          "grantPolicy": "Only selected canonical linked manipulation power, once; no Elemental/Golem/Pixie event dispatch."
+        }
+      ],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    }
+  },
+  "centaurRewardProfiles": {
+    "horse": {
+      "id": "centaur-horse",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "jaguar": {
+      "id": "centaur-jaguar",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "chicken": {
+      "id": "centaur-chicken",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 1
+    },
+    "capybara": {
+      "id": "centaur-capybara",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 1
+    },
+    "wolf": {
+      "id": "centaur-wolf",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "tiger": {
+      "id": "centaur-tiger",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "bear": {
+      "id": "centaur-bear",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "bull": {
+      "id": "centaur-bull",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "deer": {
+      "id": "centaur-deer",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "rabbit": {
+      "id": "centaur-rabbit",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 1
+    },
+    "elephant": {
+      "id": "centaur-elephant",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 2
+    },
+    "goat": {
+      "id": "centaur-goat",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0,
+      "statPointTotal": 1
+    }
+  },
+  "cosmicRewardProfiles": {
+    "alien-x": {
+      "id": "cosmic-warrior-alien-x",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/universal-power-wheels-design.json",
+            "definitionId": "divine-reality-rewrite"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "displayLabel": "Reality Rewrite"
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "ultraman": {
+      "id": "cosmic-warrior-ultraman",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "ultraman-power"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [
+        {
+          "id": "ultraman-color",
+          "wheelId": "ultraman-color",
+          "definitionFile": "content/video2-race-imports-design.json",
+          "drawCount": 1,
+          "grantPolicy": "Color profile adds only its two numeric stat points; Ultraman power already granted exactly once by group profile."
+        }
+      ],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "saiyan": {
+      "id": "cosmic-warrior-saiyan",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-ki-control"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "green-lantern": {
+      "id": "cosmic-warrior-green-lantern",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [
+        {
+          "id": "lantern-ring-color",
+          "wheelId": "lantern-ring-color",
+          "definitionFile": "content/video2-race-imports-design.json",
+          "drawCount": 1,
+          "rewardProfilesRef": "content/video2-race-imports-design.json#lanternRingRewardProfiles",
+          "grantPolicy": "Exactly one selected child power with its exact tier/binding; parent stat package registers once, no old fixed power."
+        }
+      ],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-surfer": {
+      "id": "cosmic-warrior-silver-surfer",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-power-cosmic"
+          },
+          "count": 1,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "saint": {
+      "id": "cosmic-warrior-saint",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [
+        {
+          "id": "saint-cosmic-armor",
+          "wheelId": "saint-cosmic-armor",
+          "definitionFile": "content/video2-race-imports-design.json",
+          "drawCount": 1,
+          "rewardProfilesRef": "content/video2-race-imports-design.json#saintArmorRewardProfiles",
+          "grantPolicy": "Exactly one selected child power with its exact tier/binding; parent stat package registers once, no old fixed power."
+        }
+      ],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    }
+  },
+  "ultramanColorRewardProfiles": {
+    "red": {
+      "id": "ultraman-red",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "blue": {
+      "id": "ultraman-blue",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "mixed": {
+      "id": "ultraman-mixed",
+      "grants": [],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true
+        }
+      ],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    }
+  },
+  "powers": [
+    {
+      "id": "slime-jelly-body",
+      "label": "Tubuh Jelly",
+      "powerTier": 1,
+      "scope": "Tubuh jelly yang bisa melentur secara sederhana; kapasitas lemah. Tidak otomatis kebal, membelah diri, regenerasi atau menguasai bentuk lain.",
+      "contentStatus": "Authored ability/recipe within approved Slime or delegated Cosmic curation.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi tubuh jelly sederhana dan lemah.",
+      "powerTierRef": "content/power-tier-design.json#slime-jelly-body",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races."
+    },
+    {
+      "id": "metal-manipulation",
+      "label": "Manipulasi Logam",
+      "powerTier": 3,
+      "scope": "Membentuk dan mengendalikan logam dalam batas jangkauan, volume dan target yang dikonfigurasi.",
+      "contentStatus": "Authored ability/recipe within approved Slime or delegated Cosmic curation.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali material/energi dengan fungsi serbaguna dan lingkup terbatas.",
+      "powerTierRef": "content/power-tier-design.json#metal-manipulation",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races."
+    },
+    {
+      "id": "ultraman-power",
+      "label": "Ultraman",
+      "powerTier": 4,
+      "scope": "Paket kemampuan Ultra berupa energi cahaya/beam, mobilitas dan teknik tempur Ultra dalam profil output yang dikonfigurasi. Warna menentukan bonus stat resep, bukan tiga definisi power berbeda.",
+      "contentStatus": "User-defined name and Tier4; authored bounded scope.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#ultraman-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races."
+    },
+    {
+      "id": "cosmic-ki-control",
+      "label": "Ki Control",
+      "powerTier": 3,
+      "scope": "Mengendalikan Ki untuk serangan energi dan teknik tempur. Tidak otomatis membuka transformasi Saiyan lain atau maksimum stat.",
+      "contentStatus": "Authored ability/recipe within approved Slime or delegated Cosmic curation.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali material/energi dengan fungsi serbaguna dan lingkup terbatas.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-ki-control",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races."
+    },
+    {
+      "id": "cosmic-solar-empowerment",
+      "label": "Solar Empowerment",
+      "powerTier": 4,
+      "scope": "Paket fisiologi Kryptonian bertenaga matahari, dengan kemampuan seperti mobilitas udara dan heat vision dalam profil output terbatas.",
+      "contentStatus": "retired-current-race-recipe",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-solar-empowerment",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": false,
+      "retirementReason": "User latest Cosmic Warrior revision; retained exact legacy references only."
+    },
+    {
+      "id": "cosmic-asgardian-force",
+      "label": "Asgardian Force",
+      "powerTier": 4,
+      "scope": "Adaptasi energi/magic Asgardian untuk force blast dan pertahanan. Bukan seluruh Odinforce tanpa batas, Authority atau paket God.",
+      "contentStatus": "retired-current-race-recipe",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-asgardian-force",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": false,
+      "retirementReason": "User latest Cosmic Warrior revision; retained exact legacy references only."
+    },
+    {
+      "id": "cosmic-lantern-constructs",
+      "label": "Energy Constructs",
+      "powerTier": 4,
+      "scope": "Membentuk konstruksi hard light melalui energi kehendak. Konstruksi tempur adalah keluaran power; tidak otomatis menjadi inventory weapon atau hadiah mastery terpisah.",
+      "contentStatus": "retired-current-race-recipe",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-lantern-constructs",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": false,
+      "retirementReason": "User latest Cosmic Warrior revision; retained exact legacy references only."
+    },
+    {
+      "id": "cosmic-power-cosmic",
+      "label": "Power Cosmic",
+      "powerTier": 4,
+      "scope": "Paket terbatas manipulasi energi kosmik, beam dan mobilitas kosmik; tidak otomatis mencakup manipulasi realitas/materi umum Tier5.",
+      "contentStatus": "Authored ability/recipe within approved Slime or delegated Cosmic curation.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-power-cosmic",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races."
+    },
+    {
+      "id": "cosmic-cosmo",
+      "label": "Cosmo",
+      "powerTier": 4,
+      "scope": "Energi kosmik tempur untuk teknik serangan dan pertahanan sesuai profil Saint. Armor Cloth dan kemampuan setiap karakter tidak otomatis diberikan.",
+      "contentStatus": "retired-current-race-recipe",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Paket kemampuan tempur atau hax kuat, dibatasi agar bukan kendali realitas fundamental.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-cosmo",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": false,
+      "retirementReason": "User latest Cosmic Warrior revision; retained exact legacy references only."
+    },
+    {
+      "id": "cosmic-armor-bronze",
+      "label": "Cosmic Armor (Bronze)",
+      "powerTier": 2,
+      "scope": "Armor kosmik kelas Bronze: perlindungan dan penyaluran energi kosmik sesuai Tier2. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-armor-bronze",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true,
+      "abilityFamilyId": "cosmic-armor"
+    },
+    {
+      "id": "cosmic-armor-silver",
+      "label": "Cosmic Armor (Silver)",
+      "powerTier": 3,
+      "scope": "Armor kosmik kelas Silver: perlindungan dan penyaluran energi kosmik sesuai Tier3. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-armor-silver",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true,
+      "abilityFamilyId": "cosmic-armor"
+    },
+    {
+      "id": "cosmic-armor-gold",
+      "label": "Cosmic Armor (Gold)",
+      "powerTier": 4,
+      "scope": "Armor kosmik kelas Gold: perlindungan dan penyaluran energi kosmik sesuai Tier4. Konstelasi menentukan desain, bukan paket semua teknik pemilik canon.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "User directly sets Bronze2/Silver3/Gold4; three exact variants preserve intrinsic class tier.",
+      "powerTierRef": "content/power-tier-design.json#cosmic-armor-gold",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true,
+      "abilityFamilyId": "cosmic-armor"
+    },
+    {
+      "id": "lantern-green-power",
+      "label": "Energy Constructs",
+      "powerTier": 3,
+      "scope": "Bentuk senjata/perisai energi pribadi dengan skala terbatas.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-green-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-yellow-power",
+      "label": "Fear Manipulation",
+      "powerTier": 3,
+      "scope": "Menekan target dengan rasa takut; target dan resistensi tetap dibatasi.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-yellow-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-red-power",
+      "label": "Rage Plasma",
+      "powerTier": 3,
+      "scope": "Plasma agresif yang dipicu amarah; keluaran tempur terbatas.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-red-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-blue-power",
+      "label": "Hope Energy",
+      "powerTier": 3,
+      "scope": "Energi harapan untuk dukungan dan perlindungan terbatas.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-blue-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-orange-power",
+      "label": "Avarice Constructs",
+      "powerTier": 4,
+      "scope": "Beberapa konstruksi energi yang terikat pemakai; tidak mencuri inventory atau power target.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-orange-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-indigo-power",
+      "label": "Emotional Mimicry",
+      "powerTier": 4,
+      "scope": "Meniru fungsi energi emosi secara terbatas; bukan mencopy sembarang power Tier5 atau menambah owned power/spin.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-indigo-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-violet-power",
+      "label": "Love Binding",
+      "powerTier": 3,
+      "scope": "Ikatan energi cinta untuk menahan target dengan resistensi.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-violet-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-black-power",
+      "label": "Death Energy",
+      "powerTier": 4,
+      "scope": "Energi kematian, life-drain dan animasi jasad terbatas; bukan kebangkitan sejati atau kematian mutlak.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-black-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    },
+    {
+      "id": "lantern-white-power",
+      "label": "Life Energy",
+      "powerTier": 4,
+      "scope": "Energi kehidupan untuk pemulihan dan cleansing kuat; tidak membangkitkan yang benar-benar mati.",
+      "contentStatus": "Authored selected-child ability under user-approved Cosmic event.",
+      "masteryTiming": "main-power-stage; one shared character result",
+      "masteryRank": null,
+      "enchantment": "never from Power Mastery",
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Authored bounded game ability at Tier3/4 under user instruction; official sources support color/emotion motif, not game tier.",
+      "powerTierRef": "content/power-tier-design.json#lantern-white-power",
+      "mechanicalBalance": "Range, costs, duration, targets, resistance, output/body profiles and mastery-dependent limits remain configuration. Scope text never dispatches more stats/powers/weapons/races.",
+      "activeForNewAcquisition": true
+    }
+  ],
+  "weapons": [],
+  "masteryModifiers": [],
+  "familyEventProfiles": {
+    "slime": {
+      "mode": "subtype-wheel",
+      "wheelId": "slime-type",
+      "rewardProfilesRef": "content/video2-race-imports-design.json#slimeRewardProfiles"
+    },
+    "centaur": {
+      "mode": "lower-body-animal-wheel",
+      "wheelId": "centaur-lower-body",
+      "rewardProfilesRef": "content/video2-race-imports-design.json#centaurRewardProfiles"
+    },
+    "cosmic-warrior": {
+      "mode": "media-group-wheel",
+      "wheelId": "cosmic-warrior-group",
+      "rewardProfilesRef": "content/video2-race-imports-design.json#cosmicRewardProfiles"
+    }
+  },
+  "archetypeClassification": {
+    "slime": {
+      "approved": true,
+      "ordinary": "spin-compatible-pool",
+      "specialized": "skip-signature"
+    },
+    "centaur": {
+      "approved": true,
+      "decision": "spin-compatible-pool"
+    },
+    "cosmic-warrior": {
+      "approved": true,
+      "decision": "skip-signature"
+    }
+  },
+  "contracts": {
+    "recipeAuthority": "Execute the selected rewardProfile exactly once per actual source; wheel context/budget/lore mirrors never grant again.",
+    "universalSelectors": "Elemental Slime calls existing element-universal once. Cosmic Warrior no longer calls the generic power-cosmic wheel; only selected media profile executes.",
+    "fixedPowers": "Fixed group grants except Saint/Lantern: those parents grant no power, then exactly one actual armor/ring result grants its conditional power. Ultraman parent grants once and color gives stats only.",
+    "mastery": "All early grants survive normal main None and use exactly one shared Power Mastery; no new mastery bonus/max/Enchant.",
+    "bonuses": "Register each numeric stat modifier at source and calculate at final bonus phase; total Centaur animal stat points1 or2. Cosmic non-Ultra gets2 points; Ultra color gets2 points.",
+    "raceHistory": "All three canonical families participate in global usedRaceFamilyIds and every canonical race invocation; no extra family exclusions.",
+    "size": "One global Size, reference/body metrics pending. Centaur lower animal changes body identity only, no second Race/animal/Size spin. Ultraman membership does not invoke Raksasa or give an automatic53m body.",
+    "cosmicSizeReward": "Existing >planet Size power-cosmic reward remains independent, once per character under its original guard.",
+    "context": "Stack only actual committed family/subtype/group/armor/color, exact selected power tier/binding and source-ledger facts; never reveal future or unselected outcomes.",
+    "funnyResults": "No new Shrek funny-result tags in these catalogs; caption humor is not another mechanics trigger.",
+    "identityOnlyCallers": "Slayer/Warlord stop Cosmic at group before Ultraman color, Saint armor or Lantern ring; these are reward selectors, not victim/troop identity selectors. Preserve identity-only Slime Element cap differences.",
+    "returnTo": "Restore exact saved caller; initial gate only after complete outer Race chain.",
+    "powerTierIndependence": "Tier never forces numeric main stats or maximum mastery. Alien X uses canonical Reality Rewrite5; other exact refs use catalog ratings.",
+    "migration": "Retired draft fixed-Centaur/one-generic-Cosmic+1Str/+1Dur never execute in new runs. Preserve historical committed journals and prior snapshot. Latest revision removes Kryptonian/Asgardian group memberships, replaces old Saint Cosmo and Lantern fixed Constructs with child powers; previous0.2 snapshot remains frozen.",
+    "armor": "One flat35-armor wheel. Bronze/Silver/Gold assign exact Cosmic Armor2/3/4; selected constellation binds costume. No Dwarf pieces, extra armor stats, weapon inventory or signature technique grants.",
+    "lantern": "One flat9-color wheel, one selected bounded power3/4; ring is power manifestation, no weapon/mastery/enchant reward.",
+    "retiredDefinitions": "Legacy four definitions are lookup-only with activeForNewAcquisition:false; never include in new acquisition pools or current profiles. Old frozen journals retain original recipes/tiers."
+  },
+  "runtimeReady": false,
+  "document": "docs/VIDEO2-RACE-IMPORTS.md",
+  "researchRef": "reference/cosmic-warrior-media-research.json",
+  "snapshot": "reference/before-cosmic-armor-lantern-2026-10-10.json",
+  "saintArmorRewardProfiles": {
+    "bronze-pegasus": {
+      "id": "saint-armor-bronze-pegasus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-pegasus",
+            "clothClass": "bronze",
+            "constellation": "Pegasus",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-dragon": {
+      "id": "saint-armor-bronze-dragon",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-dragon",
+            "clothClass": "bronze",
+            "constellation": "Dragon",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-cygnus": {
+      "id": "saint-armor-bronze-cygnus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-cygnus",
+            "clothClass": "bronze",
+            "constellation": "Cygnus",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-andromeda": {
+      "id": "saint-armor-bronze-andromeda",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-andromeda",
+            "clothClass": "bronze",
+            "constellation": "Andromeda",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-phoenix": {
+      "id": "saint-armor-bronze-phoenix",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-phoenix",
+            "clothClass": "bronze",
+            "constellation": "Phoenix",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-unicorn": {
+      "id": "saint-armor-bronze-unicorn",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-unicorn",
+            "clothClass": "bronze",
+            "constellation": "Unicorn",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-hydra": {
+      "id": "saint-armor-bronze-hydra",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-hydra",
+            "clothClass": "bronze",
+            "constellation": "Hydra",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-wolf": {
+      "id": "saint-armor-bronze-wolf",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-wolf",
+            "clothClass": "bronze",
+            "constellation": "Wolf",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-bear": {
+      "id": "saint-armor-bronze-bear",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-bear",
+            "clothClass": "bronze",
+            "constellation": "Bear",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-lionet": {
+      "id": "saint-armor-bronze-lionet",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-lionet",
+            "clothClass": "bronze",
+            "constellation": "Lionet",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "bronze-chameleon": {
+      "id": "saint-armor-bronze-chameleon",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-bronze"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "bronze-chameleon",
+            "clothClass": "bronze",
+            "constellation": "Chameleon",
+            "powerTier": 2
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-eagle": {
+      "id": "saint-armor-silver-eagle",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-eagle",
+            "clothClass": "silver",
+            "constellation": "Eagle",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-ophiuchus": {
+      "id": "saint-armor-silver-ophiuchus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-ophiuchus",
+            "clothClass": "silver",
+            "constellation": "Ophiuchus",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-lizard": {
+      "id": "saint-armor-silver-lizard",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-lizard",
+            "clothClass": "silver",
+            "constellation": "Lizard",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-cetus": {
+      "id": "saint-armor-silver-cetus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-cetus",
+            "clothClass": "silver",
+            "constellation": "Cetus",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-hound": {
+      "id": "saint-armor-silver-hound",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-hound",
+            "clothClass": "silver",
+            "constellation": "Hound",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-crow": {
+      "id": "saint-armor-silver-crow",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-crow",
+            "clothClass": "silver",
+            "constellation": "Crow",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-centaurus": {
+      "id": "saint-armor-silver-centaurus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-centaurus",
+            "clothClass": "silver",
+            "constellation": "Centaurus",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-perseus": {
+      "id": "saint-armor-silver-perseus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-perseus",
+            "clothClass": "silver",
+            "constellation": "Perseus",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-auriga": {
+      "id": "saint-armor-silver-auriga",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-auriga",
+            "clothClass": "silver",
+            "constellation": "Auriga",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-cerberus": {
+      "id": "saint-armor-silver-cerberus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-cerberus",
+            "clothClass": "silver",
+            "constellation": "Cerberus",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-heracles": {
+      "id": "saint-armor-silver-heracles",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-heracles",
+            "clothClass": "silver",
+            "constellation": "Heracles",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "silver-lyra": {
+      "id": "saint-armor-silver-lyra",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-silver"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "silver-lyra",
+            "clothClass": "silver",
+            "constellation": "Lyra",
+            "powerTier": 3
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-aries": {
+      "id": "saint-armor-gold-aries",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-aries",
+            "clothClass": "gold",
+            "constellation": "Aries",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-taurus": {
+      "id": "saint-armor-gold-taurus",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-taurus",
+            "clothClass": "gold",
+            "constellation": "Taurus",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-gemini": {
+      "id": "saint-armor-gold-gemini",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-gemini",
+            "clothClass": "gold",
+            "constellation": "Gemini",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-cancer": {
+      "id": "saint-armor-gold-cancer",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-cancer",
+            "clothClass": "gold",
+            "constellation": "Cancer",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-leo": {
+      "id": "saint-armor-gold-leo",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-leo",
+            "clothClass": "gold",
+            "constellation": "Leo",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-virgo": {
+      "id": "saint-armor-gold-virgo",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-virgo",
+            "clothClass": "gold",
+            "constellation": "Virgo",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-libra": {
+      "id": "saint-armor-gold-libra",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-libra",
+            "clothClass": "gold",
+            "constellation": "Libra",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-scorpio": {
+      "id": "saint-armor-gold-scorpio",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-scorpio",
+            "clothClass": "gold",
+            "constellation": "Scorpio",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-sagittarius": {
+      "id": "saint-armor-gold-sagittarius",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-sagittarius",
+            "clothClass": "gold",
+            "constellation": "Sagittarius",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-capricorn": {
+      "id": "saint-armor-gold-capricorn",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-capricorn",
+            "clothClass": "gold",
+            "constellation": "Capricorn",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-aquarius": {
+      "id": "saint-armor-gold-aquarius",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-aquarius",
+            "clothClass": "gold",
+            "constellation": "Aquarius",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "gold-pisces": {
+      "id": "saint-armor-gold-pisces",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "cosmic-armor-gold"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "cosmic-armor",
+            "outcomeId": "gold-pisces",
+            "clothClass": "gold",
+            "constellation": "Pisces",
+            "powerTier": 4
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    }
+  },
+  "lanternRingRewardProfiles": {
+    "green": {
+      "id": "lantern-ring-green",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-green-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "green",
+            "emotion": "Willpower"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "yellow": {
+      "id": "lantern-ring-yellow",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-yellow-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "yellow",
+            "emotion": "Fear"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "red": {
+      "id": "lantern-ring-red",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-red-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "red",
+            "emotion": "Rage"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "blue": {
+      "id": "lantern-ring-blue",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-blue-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "blue",
+            "emotion": "Hope"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "orange": {
+      "id": "lantern-ring-orange",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-orange-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "orange",
+            "emotion": "Avarice"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "indigo": {
+      "id": "lantern-ring-indigo",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-indigo-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "indigo",
+            "emotion": "Compassion"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "violet": {
+      "id": "lantern-ring-violet",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-violet-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "violet",
+            "emotion": "Love"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "black": {
+      "id": "lantern-ring-black",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-black-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "black",
+            "emotion": "Death"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    },
+    "white": {
+      "id": "lantern-ring-white",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionFile": "content/video2-race-imports-design.json",
+            "definitionId": "lantern-white-power"
+          },
+          "count": 1,
+          "sourceOnce": true,
+          "binding": {
+            "kind": "lantern-ring",
+            "colorId": "white",
+            "emotion": "Life"
+          }
+        }
+      ],
+      "statModifiers": [],
+      "masteryModifiers": [],
+      "followups": [],
+      "sourceOnce": true,
+      "additionalAcquisitionSpinCount": 0
+    }
+  }
+}

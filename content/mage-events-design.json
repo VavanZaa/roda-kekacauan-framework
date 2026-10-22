@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "roda-kekacauan-mage/0.1",
+  "version": "mage/0.1.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "mage",
+  "eventProfileId": "mage-deferred-power",
+  "status": "Core 10/90 chance, deferred guaranteed two/three acquisition schedule and Master Sihir Tier 3-5 weight x3 approved. Normal Power catalog, body/role fit and runtime helpers remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Mage makes one fixed Master Sihir chance spin at Archetype: Master Sihir 10%, ordinary Mage 90%.",
+      "Power acquisitions are deferred to the normal later Power stage; no Power acquisition spin at the Mage Archetype event.",
+      "Master Sihir gets three Mage-managed Power spins total: one normal main spin plus two extra spins. Ordinary Mage gets two total: one normal main spin plus one extra spin.",
+      "Mage-managed main and extra Power spins guarantee a power; exclude None and every no-power result before sampling.",
+      "User confirms Master Sihir boosts Tier 3, 4 and 5 candidate weights by exactly 3; Tier 1 and 2 weights remain unchanged on all three Mage-managed later Power spins."
+    ],
+    "clarification": "User confirmed high-tier weight multiplier x3, not a fixed triple final probability. Total two/three includes the normal main spin, not two/three additional spins."
+  },
+  "chanceWheel": {
+    "id": "mage-master-sihir-chance",
+    "label": "Jadi Master Sihir?",
+    "outcomeCount": 2,
+    "drawCount": 1,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "master-sihir",
+        "label": "Master Sihir",
+        "baseWeight": 1,
+        "probability": 0.1,
+        "selectedPlan": {
+          "mainPowerSpinCount": 1,
+          "extraPowerSpinCount": 2,
+          "totalMageManagedPowerSpinCount": 3,
+          "requiredGrant": "power",
+          "tierWeightMultipliers": {
+            "1": 1,
+            "2": 1,
+            "3": 3,
+            "4": 3,
+            "5": 3
+          }
+        },
+        "effects": [
+          {
+            "type": "register-deferred-power-plan",
+            "planId": "mage-master-sihir-power",
+            "phase": "power",
+            "extraSpinCount": 2,
+            "requiredGrant": "power"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Archetype: Mage",
+            "Master Sihir",
+            "Total 3 spin Power nanti; semuanya dijamin mendapat power",
+            "Bobot power Tier 3-5 x3; Tier 1-2 tetap"
+          ],
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "mage-biasa",
+        "label": "Mage Biasa",
+        "baseWeight": 9,
+        "probability": 0.9,
+        "selectedPlan": {
+          "mainPowerSpinCount": 1,
+          "extraPowerSpinCount": 1,
+          "totalMageManagedPowerSpinCount": 2,
+          "requiredGrant": "power",
+          "tierWeightMultipliers": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          }
+        },
+        "effects": [
+          {
+            "type": "register-deferred-power-plan",
+            "planId": "mage-mage-biasa-power",
+            "phase": "power",
+            "extraSpinCount": 1,
+            "requiredGrant": "power"
+          }
+        ],
+        "resultContext": {
+          "facts": [
+            "Archetype: Mage",
+            "Mage Biasa",
+            "Total 2 spin Power nanti; semuanya dijamin mendapat power",
+            "Tanpa bonus bobot tier dari Mage"
+          ],
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "deferredPowerPlans": [
+    {
+      "id": "mage-master-sihir-power",
+      "sourceOutcomeId": "master-sihir",
+      "stage": "power",
+      "wheelFamily": "power",
+      "mainPowerSpinCount": 1,
+      "extraPowerSpinCount": 2,
+      "totalMageManagedPowerSpinCount": 3,
+      "requiredGrant": "power",
+      "queueOrdinals": [
+        1,
+        2
+      ],
+      "highTierModifierActive": true,
+      "acquisitionTiming": "Normal main Power stage main acquisition/details, then these source-ordered bonus tickets/details before the one shared mastery gate; other authorized source tickets also run."
+    },
+    {
+      "id": "mage-mage-biasa-power",
+      "sourceOutcomeId": "mage-biasa",
+      "stage": "power",
+      "wheelFamily": "power",
+      "mainPowerSpinCount": 1,
+      "extraPowerSpinCount": 1,
+      "totalMageManagedPowerSpinCount": 2,
+      "requiredGrant": "power",
+      "queueOrdinals": [
+        1
+      ],
+      "highTierModifierActive": false,
+      "acquisitionTiming": "Normal main Power stage main acquisition/details, then these source-ordered bonus tickets/details before the one shared mastery gate; other authorized source tickets also run."
+    }
+  ],
+  "guarantee": {
+    "id": "mage-guaranteed-power",
+    "scope": "Only the normal main Power acquisition bound to this Mage plan and its one/two bonus tickets",
+    "operation": "exclude-no-power-results-before-sampling",
+    "requiredGrant": "power",
+    "noPowerResults": "None and any other outcome with no declared actual power grant; do not infer from display label alone.",
+    "scarcityPrecedence": "Guaranteed acquisition excludes None; existing God normal-power scarcity explicitly exempts guaranteed grants. It cannot reintroduce 80% None to these Mage-managed draws.",
+    "missingPool": "Missing catalog, invalid candidate grant/tier reference or no eligible positive actual-power weight is needs_configuration/run error; no None fallback, reroll, invented power or silently dropped ticket."
+  },
+  "tierBias": {
+    "id": "master-sihir-high-tier-bias",
+    "activation": "Committed Master Sihir outcome only",
+    "phase": "power",
+    "scope": "All three Mage-managed acquisitions: normal main plus two Mage bonus tickets",
+    "operation": "multiply-candidate-weight",
+    "multipliersByTier": {
+      "1": 1,
+      "2": 1,
+      "3": 3,
+      "4": 3,
+      "5": 3
+    },
+    "metadataRef": "framework/spec.json#powerTierContract",
+    "tierLookup": "Exact canonical definitionFile/definitionId/grantMode via resolvePowerTier; freeze tier policy and rating with odds. No guessed labels, mastery ranks or default tier.",
+    "formula": "After hard eligibility and no-power exclusion: weight(i) = baseWeight(i) * otherApprovedApplicableFactors(i) * (tier(i) >= 3 ? 3 : 1); P(i) = weight(i) / sum(eligible positive weights).",
+    "probabilityMeaning": "x3 changes relative raw weight before normalization, not triple each final probability or guarantee Tier >=3. Tier 1/2 stay possible.",
+    "boundHandling": "Preserve user-approved exact Mage factor 3 once per candidate. If generic tuning would clip or conflict with it, require compatible configuration rather than silently reducing/changing the approved factor.",
+    "excluded": [
+      "ordinary Mage branch",
+      "early/fixed/themed Race power grants",
+      "bonus Power tickets owned by other sources",
+      "Power Mastery",
+      "weapon/stat/Size wheels",
+      "later unrelated Power acquisitions"
+    ],
+    "sourceDeduplication": "One active factor keyed by sourceArchetypeInvocationId/sourceChanceSpinId/modifierId; never multiply to x9/x27 by ticket count, owned power count or replay."
+  },
+  "contracts": {
+    "order": "Actual Mage/reaction -> one fixed 1:9 Master Sihir chance spin -> atomically register selected deferred plan/main guarantee/one or two bonus tickets/conditional x3 bias -> child reaction -> Backstory. No early Power draw.",
+    "counts": "Ordinary Mage: one normal main + one extra = two Mage-managed spins. Master Sihir: one normal main + two extras = three. This is not a cap on all owned powers or on independent Race/Backstory bonus acquisitions; retain other source grants/tickets.",
+    "powerStage": "Bind plan to the one main Power acquisition, then consume Mage extras by ordinal through the existing bonus queue before shared mastery. Freeze fresh eligible odds at each actual spin; resolve declared acquisition details/reaction, grant and consume exactly once.",
+    "guarantee": "Every Mage-managed acquisition requires a power. Disable all no-power outcomes before drawing, normalize the remaining eligible positive weights. Other sources keep their own normal None/guarantee rules.",
+    "tier": "Only Master Sihir x3 on Tier 3-5, x1 on Tier 1-2 for its three managed draws, after hard guards. Use exact existing intrinsic 1-5 metadata; no new tier definitions or selection wheel. Unknown metadata is configuration error.",
+    "repetition": "Use the approved global Power repetition/grant policy and frozen source-scoped provenance. Two/three spins do not imply two/three distinct canonical definitions; no unique-power exclusion or duplicate reroll is added by Mage.",
+    "mastery": "Master Sihir is an outcome flag, not an automatic Power Mastery rank or a second Archetype. After all authorized acquisitions, one normal shared Power Mastery covers all powers as before. No mastery bonus, maximum, per-power spin or power Enchant.",
+    "ledger": "Freeze chance version/pool/weights/outcome and selected plan. Atomic source key runId/sourceArchetypeInvocationId/sourceChanceSpinId/eventProfileId registers main binding and bonus ordinals once. Each actual later acquisition has its own frozen pool/tier references/weights/result/grant and consumes its own ticket atomically. Resume/media retry restores existing results; no extra draw, grant, ticket or repeated x3.",
+    "reaction": "At Archetype stack actual chance result, promised later spin count, guaranteed grant and any tier bias; selected powers remain unknown. Later react only to actual Power acquisitions and the one shared mastery. No caption-derived funny tag.",
+    "scope": "Mage affects deferred normal Power acquisition count/eligibility/conditional weights only. Earlier Race grants and independent bonus tickets remain; no stat/weapon/Size event or new universal power definitions.",
+    "return": "After chance result/reaction return Backstory. At later Power, finish all required acquisitions/shared mastery then Weakness; nested acquisitions restore exact saved caller."
+  },
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "mage-master-sihir-chance",
+      "definitionFile": "mage-events-design.json",
+      "invocationCount": 1,
+      "stepId": "mage-master-sihir-1",
+      "ordinal": 1,
+      "returnTo": "backstory"
+    }
+  ],
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only; chance planner, deferred guaranteed acquisition and tier-odds resolver not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "normal Power catalog and candidate intrinsic definition/grant-mode metadata",
+    "existing global duplicate-power/grant policy and acquisition-specific details",
+    "declared non-Mage odds profiles/compatible bias bounds and fresh per-invocation normalization",
+    "final Archetype body/role fit and boost band",
+    "runtime planner/ticket scheduling/mastery gate and persistence adapter"
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

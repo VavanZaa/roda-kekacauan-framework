@@ -1,0 +1,3268 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "MC Isekai route user-confirmed; 64 source-backed anime references and one-power game adaptations authored within delegated scope, roster editable.",
+  "familyId": "anime-lineage",
+  "wheel": {
+    "id": "isekai-cheat-skill",
+    "label": "Cheat Skill Isekai",
+    "scope": "canonical-shared",
+    "drawCount": 1,
+    "outcomeCount": 64,
+    "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+    "outcomes": [
+      {
+        "id": "isekai-cheat-vending",
+        "label": "Vending Machine Sultan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-vending",
+        "referenceTitle": "Reborn as a Vending Machine, I Now Wander the Dungeon",
+        "sourceRefs": [
+          "anime-cr-vending"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Vending Machine Sultan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Reinkarnasi malah buka warung otomatis.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-sword",
+        "label": "Pedang Hidup",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-sword",
+        "referenceTitle": "Reincarnated as a Sword",
+        "sourceRefs": [
+          "anime-hidive-sword"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Pedang Hidup",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "MC-nya sekaligus barang bawaan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-slime",
+        "label": "Predator Adaptif",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-slime",
+        "referenceTitle": "That Time I Got Reincarnated as a Slime",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Predator Adaptif",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kelihatan jelly, isi skill-nya satu gudang.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-spider",
+        "label": "Jaring Evolusi",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-spider",
+        "referenceTitle": "So I'm a Spider, So What?",
+        "sourceRefs": [
+          "anime-cr-isekai-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Jaring Evolusi",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kena isekai malah jadi tukang web.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-pig",
+        "label": "Telepati Babi",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-pig",
+        "referenceTitle": "Butareba -The Story of a Man Turned into a Pig-",
+        "sourceRefs": [
+          "anime-cr-butareba"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Telepati Babi",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Build-nya babi, komunikasinya premium.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-level1",
+        "label": "Loot Level 1 Sultan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-level1",
+        "referenceTitle": "My Unique Skill Makes Me OP even at Level 1",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Loot Level 1 Sultan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Level satu, pemasukan beda server.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-level2",
+        "label": "Level 2 Kebuka Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-level2",
+        "referenceTitle": "Chillin’ in Another World with Level 2 Super Cheat Powers",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Level 2 Kebuka Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Baru level dua sudah bikin admin curiga.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-level99",
+        "label": "Hidden Boss Level 99",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-level99",
+        "referenceTitle": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+        "sourceRefs": [
+          "anime-cr-level99"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Hidden Boss Level 99",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Mau jadi figuran, kebaca sebagai boss rahasia.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-potions",
+        "label": "Potion Sesuka Hati",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-potions",
+        "referenceTitle": "I Shall Survive Using Potions!",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Potion Sesuka Hati",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Masalah hidup diselesaikan pakai botol.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-gold",
+        "label": "Bolak-balik Dunia",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-gold",
+        "referenceTitle": "Saving 80,000 Gold in Another World for my Retirement",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Bolak-balik Dunia",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Isekai sambil nyusun dana pensiun.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-slimes300",
+        "label": "Grind Santai 300 Tahun",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-slimes300",
+        "referenceTitle": "I've Been Killing Slimes For 300 Years And Maxed Out My Level",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Grind Santai 300 Tahun",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Daily quest kebablasan tiga abad.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-average",
+        "label": "Average Salah Hitung",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-average",
+        "referenceTitle": "Didn't I say to make my abilities average in the next life",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Average Salah Hitung",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Minta rata-rata, kalkulator dewa salah range.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-drugstore",
+        "label": "Racik Obat Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-drugstore",
+        "referenceTitle": "Drug Store in Another World - The Slow Life of a Cheat Pharmacist",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Racik Obat Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Buka apotek, pelanggan satu kerajaan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-pharmacy",
+        "label": "Farmasi Sihir",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-pharmacy",
+        "referenceTitle": "Parallel World Pharmacy",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Farmasi Sihir",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Apoteker pindah dimensi, resepnya ikut naik kelas.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-cooking",
+        "label": "Belanja Online Antar-Dunia",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-cooking",
+        "referenceTitle": "Campfire Cooking in Another World with My Absurd Skill",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Belanja Online Antar-Dunia",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kalah equipment, menang checkout.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-bookworm",
+        "label": "Knowledge Craft",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-bookworm",
+        "referenceTitle": "Ascendance of a Bookworm",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Knowledge Craft",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dunia belum punya printer, MC sudah mikir percetakan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-cleric",
+        "label": "Recovery Training",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-cleric",
+        "referenceTitle": "The Great Cleric",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Recovery Training",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Healer yang jam kerjanya kelewat niat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-grace",
+        "label": "Slime Utility",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-grace",
+        "referenceTitle": "By the Grace of the Gods",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Slime Utility",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Pasukan slime, job desk laundry.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-fluffy",
+        "label": "Disayang Makhluk",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-fluffy",
+        "referenceTitle": "Fluffy Paradise",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Disayang Makhluk",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Animal magnet, letterlijk.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-sweet",
+        "label": "Magic Pastry",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-sweet",
+        "referenceTitle": "Sweet Reincarnation",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Magic Pastry",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Build battle-nya masuk toko kue.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-smartphone",
+        "label": "Smartphone Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-smartphone",
+        "referenceTitle": "In Another World With My Smartphone",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Smartphone Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dunia lain, sinyal tetap full.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-deathmarch",
+        "label": "EXP Kebanjiran",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-deathmarch",
+        "referenceTitle": "Death March to the Parallel World Rhapsody",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: EXP Kebanjiran",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Tutorial belum selesai, EXP sudah banjir.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-magician",
+        "label": "Mana Kebanyakan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-magician",
+        "referenceTitle": "Isekai Cheat Magician",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Mana Kebanyakan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Talent test-nya sampai minta tes ulang.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-summoner",
+        "label": "Kontrak Summon",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-summoner",
+        "referenceTitle": "Black Summoner",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Kontrak Summon",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Memori boleh ilang, menu summon tetap jalan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-exorcist",
+        "label": "Onmyoji Lintas Server",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-exorcist",
+        "referenceTitle": "The Reincarnation Of The Strongest Exorcist In Another World",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Onmyoji Lintas Server",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Sistem sihir beda, trik lama tetap bikin panik.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-assassin",
+        "label": "Assassin Craft",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-assassin",
+        "referenceTitle": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Assassin Craft",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Job lama assassin, spawn baru bangsawan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-aristocrat",
+        "label": "Berkah Kebanyakan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-aristocrat",
+        "referenceTitle": "The Aristocrat’s Otherworldly Adventure: Serving Gods Who Go Too Far",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Berkah Kebanyakan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dewa kasih paket, lupa baca batas promo.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-strongest",
+        "label": "Barrier Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-strongest",
+        "referenceTitle": "Am I Actually the Strongest?",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Barrier Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Katanya lemah, barrier-nya bikin server diam.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-8thson",
+        "label": "Mana Pewaris Bungsu",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-8thson",
+        "referenceTitle": "The 8th son? Are you kidding me?",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Mana Pewaris Bungsu",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Warisan sedikit, mana malah kebanyakan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-grandchild",
+        "label": "Sihir Pakai Logika",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-grandchild",
+        "referenceTitle": "Wise Man's Grandchild",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Sihir Pakai Logika",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Logika dunia lama bikin sihir dunia baru error.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-spirits",
+        "label": "Resonansi Roh",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-spirits",
+        "referenceTitle": "Seirei Gensouki: Spirit Chronicles",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Resonansi Roh",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Memori hidup lama ikut nebeng dalam build.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-moon",
+        "label": "Ruang Saku",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-moon",
+        "referenceTitle": "TSUKIMICHI -Moonlit Fantasy-",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Ruang Saku",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Ditolak dewi, malah buka base sendiri.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-skeleton",
+        "label": "Knight Spectral",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-skeleton",
+        "referenceTitle": "Skeleton Knight in Another World",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Knight Spectral",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Vibe tengkorak, gear tetap niat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-realist",
+        "label": "Multitasking Kerajaan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-realist",
+        "referenceTitle": "How a Realist Hero Rebuilt the Kingdom",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Multitasking Kerajaan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Musuhnya administrasi, senjatanya multitasking.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-prodigies",
+        "label": "Blueprint Genius",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-prodigies",
+        "referenceTitle": "High School Prodigies Have It Easy Even In Another World",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Blueprint Genius",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Anak sekolah pindah dunia, kurikulumnya jadi ancaman.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-villainess",
+        "label": "Radar Bad Ending",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-villainess",
+        "referenceTitle": "My Next Life as a Villainess: All Routes Lead to Doom!",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Radar Bad Ending",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Misi utama: jangan kena ending tamat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-saint",
+        "label": "Saint Healing",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-saint",
+        "referenceTitle": "The Saint's Magic Power is Omnipotent",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Saint Healing",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dikira cadangan, ternyata paket support utama.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-ragnarok",
+        "label": "Strategi Masa Depan",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-ragnarok",
+        "referenceTitle": "The Master of Ragnarok & Blesser of Einherjar",
+        "sourceRefs": [
+          "anime-cr-isekai-popular"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Strategi Masa Depan",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Beda zaman, strategi langsung patch terbaru.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-fruit",
+        "label": "Buah Auto-Evolve",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-fruit",
+        "referenceTitle": "The Fruit of Evolution: Before I Knew It, My Life Had It Made",
+        "sourceRefs": [
+          "anime-cr-fruit"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Buah Auto-Evolve",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Makan buah, character development langsung ngebut.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-company",
+        "label": "Kontrak Dungeon",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-company",
+        "referenceTitle": "The Dungeon of Black Company",
+        "sourceRefs": [
+          "anime-cr-black-company"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Kontrak Dungeon",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kabur dari kerja, spawn di perusahaan dungeon.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-shirohiyo",
+        "label": "Skill Bekal Hidup Lama",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-shirohiyo",
+        "referenceTitle": "SHIROHIYO - Reincarnated as a Neglected Noble: Raising My Baby Brother With Memories From My Past Life",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Skill Bekal Hidup Lama",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Reinkarnasi sambil jadi kakak paling niat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-mynoghra",
+        "label": "RTS Civilization",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-mynoghra",
+        "referenceTitle": "Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: RTS Civilization",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Orang lain cari guild, dia buka civilization.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-uglymug",
+        "label": "Build Anti-Standar",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-uglymug",
+        "referenceTitle": "Uglymug, Epicfighter",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Build Anti-Standar",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Visualnya dihujat, build-nya bikin lawan diam.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-evil-lord",
+        "label": "Command Imperial",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-evil-lord",
+        "referenceTitle": "I'm the Evil Lord of an Intergalactic Empire!",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Command Imperial",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Niat jadi jahat, hasilnya belum tentu sesuai briefing.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-beginning",
+        "label": "Memori Raja",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-beginning",
+        "referenceTitle": "The Beginning After the End",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Memori Raja",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "New game, pengalaman akun lama masih kebawa.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-water",
+        "label": "Water Precision",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-water",
+        "referenceTitle": "The Water Magician",
+        "sourceRefs": [
+          "anime-cr-shirohiyo"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Water Precision",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Mulainya air, kontrolnya bikin orang salah perkiraan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-alchemist",
+        "label": "Alkimia Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-alchemist",
+        "referenceTitle": "Possibly the Greatest Alchemist of All Time",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Alkimia Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Judulnya mungkin, hasil craft-nya serius.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-journey",
+        "label": "Guardian Adventure",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-journey",
+        "referenceTitle": "A Journey Through Another World: Raising Kids While Adventuring",
+        "sourceRefs": [
+          "anime-cr-journey"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Guardian Adventure",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Quest adventurer merangkap ngasuh.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-overlord",
+        "label": "Overlord Spellcraft",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-overlord",
+        "referenceTitle": "Overlord",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Overlord Spellcraft",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Aura boss ada, paket seluruh Nazarick belum ikut.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-rezero",
+        "label": "Return by Death",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-rezero",
+        "referenceTitle": "Re:ZERO -Starting Life in Another World-",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Return by Death",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kena ending buruk, hidupnya minta checkpoint.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-konosuba",
+        "label": "Steal Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-konosuba",
+        "referenceTitle": "KONOSUBA -God's blessing on this wonderful world!",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Steal Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Bukan loot drop, ini loot pindah tangan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-mushoku",
+        "label": "Sihir Tanpa Chant",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-mushoku",
+        "referenceTitle": "Mushoku Tensei: Jobless Reincarnation",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Sihir Tanpa Chant",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dialog dipangkas, cast tetap jalan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-tanya",
+        "label": "Aerial Spell Combat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-tanya",
+        "referenceTitle": "Saga of Tanya the Evil",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Aerial Spell Combat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Badan kecil, briefing-nya bikin satu batalion tegang.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-zenshu",
+        "label": "Gambar Jadi Nyata",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-zenshu",
+        "referenceTitle": "ZENSHU",
+        "sourceRefs": [
+          "anime-cr-essential"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Gambar Jadi Nyata",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Deadline animator pindah jadi deadline dunia.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-problem-children",
+        "label": "Gift Breaker",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-problem-children",
+        "referenceTitle": "Problem Children are Coming from Another World, aren't they?",
+        "sourceRefs": [
+          "anime-cr-isekai-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Gift Breaker",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Anak bermasalahnya ternyata masalah buat boss.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-grimgar",
+        "label": "Survival Sense",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-grimgar",
+        "referenceTitle": "Grimgar, Ashes and Illusions",
+        "sourceRefs": [
+          "anime-cr-isekai-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Survival Sense",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Isekai mode susah, instingnya jadi bekal utama.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-million",
+        "label": "Quest Class Adaptation",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-million",
+        "referenceTitle": "I'm Standing on a Million Lives",
+        "sourceRefs": [
+          "anime-cr-isekai-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Quest Class Adaptation",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Quest-nya aneh, cara survive-nya harus kreatif.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-eminence",
+        "label": "Atomic Burst",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-eminence",
+        "referenceTitle": "The Eminence in Shadow",
+        "sourceRefs": [
+          "anime-hidive-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Atomic Burst",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Latihan jadi NPC, dialognya malah final boss.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-isekai-life",
+        "label": "Slime Magic Network",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-isekai-life",
+        "referenceTitle": "My Isekai Life",
+        "sourceRefs": [
+          "anime-hidive-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Slime Magic Network",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Kerja ditinggal, jaringan slime langsung aktif.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-loner",
+        "label": "Skill Sisa OP",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-loner",
+        "referenceTitle": "Loner Life in Another World",
+        "sourceRefs": [
+          "anime-hidive-catalog"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Skill Sisa OP",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Dapat sisa, ternyata bisa di-combo.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-no-game",
+        "label": "Game Theory Cheat",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-no-game",
+        "referenceTitle": "No Game No Life",
+        "sourceRefs": [
+          "anime-cr-no-game"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Game Theory Cheat",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Ngomongnya santai, sudah mikir dua puluh langkah.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-shield",
+        "label": "Shield Evolution",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-shield",
+        "referenceTitle": "The Rising of the Shield Hero",
+        "sourceRefs": [
+          "anime-cr-shield"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Shield Evolution",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Defense dulu, dendam belakangan.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-instant-death",
+        "label": "Instant Death",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-instant-death",
+        "referenceTitle": "My Instant Death Ability Is So Overpowered, No One in This Other World Stands a Chance Against Me!",
+        "sourceRefs": [
+          "anime-cr-instant-death"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Instant Death",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Musuh belum selesai monolog, skill sudah minta tamat.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      },
+      {
+        "id": "isekai-cheat-cautious",
+        "label": "Overprepared Prediction",
+        "baseWeight": 1,
+        "powerRef": "isekai-cheat-cautious",
+        "referenceTitle": "Cautious Hero: The Hero is Overpowered but Overly Cautious",
+        "sourceRefs": [
+          "anime-cr-cautious"
+        ],
+        "resultContext": {
+          "facts": [
+            "Cheat Skill diperoleh: Overprepared Prediction",
+            "Power Mastery mengikuti satu hasil bersama nanti"
+          ],
+          "displayContext": "Slime biasa dilawan pakai persiapan sidang akhir.",
+          "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+        }
+      }
+    ]
+  },
+  "powers": [
+    {
+      "id": "isekai-cheat-vending",
+      "label": "Vending Machine Sultan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 1,
+      "scope": "Mengeluarkan makanan, minuman, dan barang kecil lewat kemampuan vending.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-vending"
+      ],
+      "referenceTitle": "Reborn as a Vending Machine, I Now Wander the Dungeon",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Vending Machine Sultan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Reinkarnasi malah buka warung otomatis.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-vending"
+    },
+    {
+      "id": "isekai-cheat-sword",
+      "label": "Pedang Hidup",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 2,
+      "scope": "Mengendalikan manifestasi pedang sadar yang terhubung dengan pemiliknya.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-hidive-sword"
+      ],
+      "referenceTitle": "Reincarnated as a Sword",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Pedang Hidup",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "MC-nya sekaligus barang bawaan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-sword"
+    },
+    {
+      "id": "isekai-cheat-slime",
+      "label": "Predator Adaptif",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 3,
+      "scope": "Menganalisis dan menyerap ciri target untuk adaptasi kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "That Time I Got Reincarnated as a Slime",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Predator Adaptif",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kelihatan jelly, isi skill-nya satu gudang.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-slime"
+    },
+    {
+      "id": "isekai-cheat-spider",
+      "label": "Jaring Evolusi",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 4,
+      "scope": "Membentuk jaring supernatural yang dapat berkembang lewat pengalaman.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-catalog"
+      ],
+      "referenceTitle": "So I'm a Spider, So What?",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Jaring Evolusi",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kena isekai malah jadi tukang web.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-spider"
+    },
+    {
+      "id": "isekai-cheat-pig",
+      "label": "Telepati Babi",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 5,
+      "scope": "Mengirim pikiran melalui tautan telepati bertema babi.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-butareba"
+      ],
+      "referenceTitle": "Butareba -The Story of a Man Turned into a Pig-",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Telepati Babi",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Build-nya babi, komunikasinya premium.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-pig"
+    },
+    {
+      "id": "isekai-cheat-level1",
+      "label": "Loot Level 1 Sultan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 6,
+      "scope": "Meningkatkan potensi loot melalui satu kemampuan khusus.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "My Unique Skill Makes Me OP even at Level 1",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Loot Level 1 Sultan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Level satu, pemasukan beda server.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-level1"
+    },
+    {
+      "id": "isekai-cheat-level2",
+      "label": "Level 2 Kebuka Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 7,
+      "scope": "Membuka mode tenaga sihir yang jauh melampaui tampilan levelnya.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Chillin’ in Another World with Level 2 Super Cheat Powers",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Level 2 Kebuka Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Baru level dua sudah bikin admin curiga.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-level2"
+    },
+    {
+      "id": "isekai-cheat-level99",
+      "label": "Hidden Boss Level 99",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 8,
+      "scope": "Menggunakan sihir gelap dengan tema hidden boss.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-level99"
+      ],
+      "referenceTitle": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Hidden Boss Level 99",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Mau jadi figuran, kebaca sebagai boss rahasia.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-level99"
+    },
+    {
+      "id": "isekai-cheat-potions",
+      "label": "Potion Sesuka Hati",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 9,
+      "scope": "Menciptakan potion dengan fungsi supernatural yang ditentukan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "I Shall Survive Using Potions!",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Potion Sesuka Hati",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Masalah hidup diselesaikan pakai botol.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-potions"
+    },
+    {
+      "id": "isekai-cheat-gold",
+      "label": "Bolak-balik Dunia",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 10,
+      "scope": "Berpindah antara dua dunia untuk membawa barang yang memenuhi batas kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "Saving 80,000 Gold in Another World for my Retirement",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Bolak-balik Dunia",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Isekai sambil nyusun dana pensiun.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-gold"
+    },
+    {
+      "id": "isekai-cheat-slimes300",
+      "label": "Grind Santai 300 Tahun",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 11,
+      "scope": "Mengumpulkan potensi kemampuan melalui pengulangan latihan sederhana.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "I've Been Killing Slimes For 300 Years And Maxed Out My Level",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Grind Santai 300 Tahun",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Daily quest kebablasan tiga abad.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-slimes300"
+    },
+    {
+      "id": "isekai-cheat-average",
+      "label": "Average Salah Hitung",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 12,
+      "scope": "Mengakses tenaga sihir bertema rata-rata yang ternyata kelewat tinggi.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "Didn't I say to make my abilities average in the next life",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Average Salah Hitung",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Minta rata-rata, kalkulator dewa salah range.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-average"
+    },
+    {
+      "id": "isekai-cheat-drugstore",
+      "label": "Racik Obat Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 13,
+      "scope": "Meracik ramuan supernatural untuk kebutuhan yang dipilih.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "Drug Store in Another World - The Slow Life of a Cheat Pharmacist",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Racik Obat Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Buka apotek, pelanggan satu kerajaan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-drugstore"
+    },
+    {
+      "id": "isekai-cheat-pharmacy",
+      "label": "Farmasi Sihir",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 14,
+      "scope": "Membentuk bahan farmasi supernatural untuk diagnosis dan perawatan fiksi.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Parallel World Pharmacy",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Farmasi Sihir",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Apoteker pindah dimensi, resepnya ikut naik kelas.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-pharmacy"
+    },
+    {
+      "id": "isekai-cheat-cooking",
+      "label": "Belanja Online Antar-Dunia",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 15,
+      "scope": "Mengakses bahan makanan dunia lain lewat kemampuan belanja supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Campfire Cooking in Another World with My Absurd Skill",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Belanja Online Antar-Dunia",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kalah equipment, menang checkout.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-cooking"
+    },
+    {
+      "id": "isekai-cheat-bookworm",
+      "label": "Knowledge Craft",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 16,
+      "scope": "Mengubah pengetahuan menjadi rancangan dan kerajinan supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "Ascendance of a Bookworm",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Knowledge Craft",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dunia belum punya printer, MC sudah mikir percetakan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-bookworm"
+    },
+    {
+      "id": "isekai-cheat-cleric",
+      "label": "Recovery Training",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 17,
+      "scope": "Memadukan pemulihan sihir dan latihan melalui satu kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "The Great Cleric",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Recovery Training",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Healer yang jam kerjanya kelewat niat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-cleric"
+    },
+    {
+      "id": "isekai-cheat-grace",
+      "label": "Slime Utility",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 18,
+      "scope": "Mengendalikan manifestasi slime pembantu untuk tugas praktis.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "By the Grace of the Gods",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Slime Utility",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Pasukan slime, job desk laundry.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-grace"
+    },
+    {
+      "id": "isekai-cheat-fluffy",
+      "label": "Disayang Makhluk",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 19,
+      "scope": "Membentuk kedekatan supernatural dengan makhluk yang sesuai.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "Fluffy Paradise",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Disayang Makhluk",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Animal magnet, letterlijk.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-fluffy"
+    },
+    {
+      "id": "isekai-cheat-sweet",
+      "label": "Magic Pastry",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 20,
+      "scope": "Membentuk sajian manis dan konstruksi berbasis pastry lewat sihir.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "Sweet Reincarnation",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Magic Pastry",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Build battle-nya masuk toko kue.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-sweet"
+    },
+    {
+      "id": "isekai-cheat-smartphone",
+      "label": "Smartphone Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 21,
+      "scope": "Mengakses fungsi pencarian dan komunikasi supernatural melalui smartphone terikat.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "In Another World With My Smartphone",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Smartphone Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dunia lain, sinyal tetap full.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-smartphone"
+    },
+    {
+      "id": "isekai-cheat-deathmarch",
+      "label": "EXP Kebanjiran",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 22,
+      "scope": "Menyerap potensi pengalaman dalam lonjakan besar melalui kemampuan khusus.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "Death March to the Parallel World Rhapsody",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: EXP Kebanjiran",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Tutorial belum selesai, EXP sudah banjir.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-deathmarch"
+    },
+    {
+      "id": "isekai-cheat-magician",
+      "label": "Mana Kebanyakan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 23,
+      "scope": "Menggunakan cadangan sihir besar dengan kontrol mengikuti mastery.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "Isekai Cheat Magician",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Mana Kebanyakan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Talent test-nya sampai minta tes ulang.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-magician"
+    },
+    {
+      "id": "isekai-cheat-summoner",
+      "label": "Kontrak Summon",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 24,
+      "scope": "Membentuk kontrak supernatural untuk memanggil manifestasi bantuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Black Summoner",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Kontrak Summon",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Memori boleh ilang, menu summon tetap jalan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-summoner"
+    },
+    {
+      "id": "isekai-cheat-exorcist",
+      "label": "Onmyoji Lintas Server",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 25,
+      "scope": "Menggunakan ritual segel dan manifestasi shikigami sebagai satu kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "The Reincarnation Of The Strongest Exorcist In Another World",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Onmyoji Lintas Server",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Sistem sihir beda, trik lama tetap bikin panik.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-exorcist"
+    },
+    {
+      "id": "isekai-cheat-assassin",
+      "label": "Assassin Craft",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 26,
+      "scope": "Menyusun sarana serangan presisi supernatural melalui satu skill.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Assassin Craft",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Job lama assassin, spawn baru bangsawan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-assassin"
+    },
+    {
+      "id": "isekai-cheat-aristocrat",
+      "label": "Berkah Kebanyakan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 27,
+      "scope": "Menyalurkan berkah supernatural bertema hadiah dewa berlebihan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "The Aristocrat’s Otherworldly Adventure: Serving Gods Who Go Too Far",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Berkah Kebanyakan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dewa kasih paket, lupa baca batas promo.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-aristocrat"
+    },
+    {
+      "id": "isekai-cheat-strongest",
+      "label": "Barrier Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 28,
+      "scope": "Membentuk penghalang dan konstruksi sihir dengan fungsi yang dibatasi mastery.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Am I Actually the Strongest?",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Barrier Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Katanya lemah, barrier-nya bikin server diam.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-strongest"
+    },
+    {
+      "id": "isekai-cheat-8thson",
+      "label": "Mana Pewaris Bungsu",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 29,
+      "scope": "Mengakses bakat sihir besar yang tersembunyi dalam identitas anak kedelapan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "The 8th son? Are you kidding me?",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Mana Pewaris Bungsu",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Warisan sedikit, mana malah kebanyakan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-8thson"
+    },
+    {
+      "id": "isekai-cheat-grandchild",
+      "label": "Sihir Pakai Logika",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 30,
+      "scope": "Merancang pola sihir melalui pemahaman dan visualisasi.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Wise Man's Grandchild",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Sihir Pakai Logika",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Logika dunia lama bikin sihir dunia baru error.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-grandchild"
+    },
+    {
+      "id": "isekai-cheat-spirits",
+      "label": "Resonansi Roh",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 31,
+      "scope": "Menyalurkan kemampuan melalui hubungan supernatural dengan roh.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "Seirei Gensouki: Spirit Chronicles",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Resonansi Roh",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Memori hidup lama ikut nebeng dalam build.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-spirits"
+    },
+    {
+      "id": "isekai-cheat-moon",
+      "label": "Ruang Saku",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 32,
+      "scope": "Membentuk ruang terpisah yang mengikuti batas kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "TSUKIMICHI -Moonlit Fantasy-",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Ruang Saku",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Ditolak dewi, malah buka base sendiri.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-moon"
+    },
+    {
+      "id": "isekai-cheat-skeleton",
+      "label": "Knight Spectral",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 33,
+      "scope": "Menyalurkan tenaga sihir bergaya ksatria tulang tanpa mengganti ras yang telah tercatat.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Skeleton Knight in Another World",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Knight Spectral",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Vibe tengkorak, gear tetap niat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-skeleton"
+    },
+    {
+      "id": "isekai-cheat-realist",
+      "label": "Multitasking Kerajaan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 34,
+      "scope": "Membagi perhatian supernatural ke beberapa tugas sekaligus.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "How a Realist Hero Rebuilt the Kingdom",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Multitasking Kerajaan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Musuhnya administrasi, senjatanya multitasking.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-realist"
+    },
+    {
+      "id": "isekai-cheat-prodigies",
+      "label": "Blueprint Genius",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 35,
+      "scope": "Memvisualisasi rancangan teknologi dan strategi lewat satu skill.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "High School Prodigies Have It Easy Even In Another World",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Blueprint Genius",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Anak sekolah pindah dunia, kurikulumnya jadi ancaman.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-prodigies"
+    },
+    {
+      "id": "isekai-cheat-villainess",
+      "label": "Radar Bad Ending",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 36,
+      "scope": "Mengenali tanda jalur kejadian berbahaya sebagai firasat supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "My Next Life as a Villainess: All Routes Lead to Doom!",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Radar Bad Ending",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Misi utama: jangan kena ending tamat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-villainess"
+    },
+    {
+      "id": "isekai-cheat-saint",
+      "label": "Saint Healing",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 37,
+      "scope": "Menyalurkan pemulihan dan pemurnian bertema saint melalui satu kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "The Saint's Magic Power is Omnipotent",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Saint Healing",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dikira cadangan, ternyata paket support utama.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-saint"
+    },
+    {
+      "id": "isekai-cheat-ragnarok",
+      "label": "Strategi Masa Depan",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 38,
+      "scope": "Mengakses wawasan taktis supernatural dari pengetahuan yang dimiliki.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-popular"
+      ],
+      "referenceTitle": "The Master of Ragnarok & Blesser of Einherjar",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Strategi Masa Depan",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Beda zaman, strategi langsung patch terbaru.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-ragnarok"
+    },
+    {
+      "id": "isekai-cheat-fruit",
+      "label": "Buah Auto-Evolve",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 39,
+      "scope": "Memicu adaptasi evolutif melalui satu kemampuan bertema buah.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-fruit"
+      ],
+      "referenceTitle": "The Fruit of Evolution: Before I Knew It, My Life Had It Made",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Buah Auto-Evolve",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Makan buah, character development langsung ngebut.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-fruit"
+    },
+    {
+      "id": "isekai-cheat-company",
+      "label": "Kontrak Dungeon",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 40,
+      "scope": "Membentuk perjanjian supernatural untuk mengatur pekerjaan dungeon.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-black-company"
+      ],
+      "referenceTitle": "The Dungeon of Black Company",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Kontrak Dungeon",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kabur dari kerja, spawn di perusahaan dungeon.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-company"
+    },
+    {
+      "id": "isekai-cheat-shirohiyo",
+      "label": "Skill Bekal Hidup Lama",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 41,
+      "scope": "Mengakses kecakapan praktis dari memori kehidupan sebelumnya.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "SHIROHIYO - Reincarnated as a Neglected Noble: Raising My Baby Brother With Memories From My Past Life",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Skill Bekal Hidup Lama",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Reinkarnasi sambil jadi kakak paling niat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 1,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Fungsi kecil, kebutuhan harian atau adaptasi sangat sempit; tanpa kendali tempur luas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-shirohiyo"
+    },
+    {
+      "id": "isekai-cheat-mynoghra",
+      "label": "RTS Civilization",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 42,
+      "scope": "Mengarahkan konstruksi supernatural bertema pembangunan peradaban.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: RTS Civilization",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Orang lain cari guild, dia buka civilization.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-mynoghra"
+    },
+    {
+      "id": "isekai-cheat-uglymug",
+      "label": "Build Anti-Standar",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 43,
+      "scope": "Mengaktifkan mode kemampuan yang kuat meski penampilannya diremehkan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "Uglymug, Epicfighter",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Build Anti-Standar",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Visualnya dihujat, build-nya bikin lawan diam.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-uglymug"
+    },
+    {
+      "id": "isekai-cheat-evil-lord",
+      "label": "Command Imperial",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 44,
+      "scope": "Menyalurkan pengaruh komando supernatural bertema kerajaan antargalaksi.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "I'm the Evil Lord of an Intergalactic Empire!",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Command Imperial",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Niat jadi jahat, hasilnya belum tentu sesuai briefing.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-evil-lord"
+    },
+    {
+      "id": "isekai-cheat-beginning",
+      "label": "Memori Raja",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 45,
+      "scope": "Mengakses wawasan sihir dan teknik dari memori kehidupan sebelumnya.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "The Beginning After the End",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Memori Raja",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "New game, pengalaman akun lama masih kebawa.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-beginning"
+    },
+    {
+      "id": "isekai-cheat-water",
+      "label": "Water Precision",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 46,
+      "scope": "Mengendalikan manifestasi air dengan presisi sebagai satu Cheat Skill.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shirohiyo"
+      ],
+      "referenceTitle": "The Water Magician",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Water Precision",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Mulainya air, kontrolnya bikin orang salah perkiraan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-water"
+    },
+    {
+      "id": "isekai-cheat-alchemist",
+      "label": "Alkimia Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 47,
+      "scope": "Mengubah bahan menjadi bentuk baru melalui kemampuan alkimia.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "Possibly the Greatest Alchemist of All Time",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Alkimia Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Judulnya mungkin, hasil craft-nya serius.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-alchemist"
+    },
+    {
+      "id": "isekai-cheat-journey",
+      "label": "Guardian Adventure",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 48,
+      "scope": "Membentuk dukungan supernatural untuk menjaga rekan perjalanan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-journey"
+      ],
+      "referenceTitle": "A Journey Through Another World: Raising Kids While Adventuring",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Guardian Adventure",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Quest adventurer merangkap ngasuh.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-journey"
+    },
+    {
+      "id": "isekai-cheat-overlord",
+      "label": "Overlord Spellcraft",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 49,
+      "scope": "Membentuk sihir ofensif dan ritual bertema penguasa undead sebagai satu skill.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "Overlord",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Overlord Spellcraft",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Aura boss ada, paket seluruh Nazarick belum ikut.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-overlord"
+    },
+    {
+      "id": "isekai-cheat-rezero",
+      "label": "Return by Death",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 50,
+      "scope": "Memiliki kemampuan kembali dari kematian dengan cakupan naratif yang belum dibalance.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "Re:ZERO -Starting Life in Another World-",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Return by Death",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kena ending buruk, hidupnya minta checkpoint.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-rezero"
+    },
+    {
+      "id": "isekai-cheat-konosuba",
+      "label": "Steal Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 51,
+      "scope": "Memindahkan benda kecil milik target melalui kemampuan supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "KONOSUBA -God's blessing on this wonderful world!",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Steal Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Bukan loot drop, ini loot pindah tangan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-konosuba"
+    },
+    {
+      "id": "isekai-cheat-mushoku",
+      "label": "Sihir Tanpa Chant",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 52,
+      "scope": "Membentuk sihir melalui visualisasi tanpa incantation panjang.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "Mushoku Tensei: Jobless Reincarnation",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Sihir Tanpa Chant",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dialog dipangkas, cast tetap jalan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-mushoku"
+    },
+    {
+      "id": "isekai-cheat-tanya",
+      "label": "Aerial Spell Combat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 53,
+      "scope": "Menyalurkan sihir tempur udara sebagai satu kemampuan bertema militer.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "Saga of Tanya the Evil",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Aerial Spell Combat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Badan kecil, briefing-nya bikin satu batalion tegang.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-tanya"
+    },
+    {
+      "id": "isekai-cheat-zenshu",
+      "label": "Gambar Jadi Nyata",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 54,
+      "scope": "Mewujudkan karya gambar sebagai manifestasi supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-essential"
+      ],
+      "referenceTitle": "ZENSHU",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Gambar Jadi Nyata",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Deadline animator pindah jadi deadline dunia.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-zenshu"
+    },
+    {
+      "id": "isekai-cheat-problem-children",
+      "label": "Gift Breaker",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 55,
+      "scope": "Mengganggu manifestasi kemampuan supernatural target sesuai batas power.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-catalog"
+      ],
+      "referenceTitle": "Problem Children are Coming from Another World, aren't they?",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Gift Breaker",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Anak bermasalahnya ternyata masalah buat boss.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-problem-children"
+    },
+    {
+      "id": "isekai-cheat-grimgar",
+      "label": "Survival Sense",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 56,
+      "scope": "Mengenali bahaya dan celah bertahan melalui persepsi supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-catalog"
+      ],
+      "referenceTitle": "Grimgar, Ashes and Illusions",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Survival Sense",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Isekai mode susah, instingnya jadi bekal utama.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-grimgar"
+    },
+    {
+      "id": "isekai-cheat-million",
+      "label": "Quest Class Adaptation",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 57,
+      "scope": "Menyesuaikan teknik supernatural dengan kebutuhan quest sebagai satu skill.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-isekai-catalog"
+      ],
+      "referenceTitle": "I'm Standing on a Million Lives",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Quest Class Adaptation",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Quest-nya aneh, cara survive-nya harus kreatif.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-million"
+    },
+    {
+      "id": "isekai-cheat-eminence",
+      "label": "Atomic Burst",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 58,
+      "scope": "Melepaskan ledakan sihir terpusat bertema atomic.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-hidive-catalog"
+      ],
+      "referenceTitle": "The Eminence in Shadow",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Atomic Burst",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Latihan jadi NPC, dialognya malah final boss.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-eminence"
+    },
+    {
+      "id": "isekai-cheat-isekai-life",
+      "label": "Slime Magic Network",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 59,
+      "scope": "Menyalurkan satu jaringan sihir melalui manifestasi slime.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-hidive-catalog"
+      ],
+      "referenceTitle": "My Isekai Life",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Slime Magic Network",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Kerja ditinggal, jaringan slime langsung aktif.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-isekai-life"
+    },
+    {
+      "id": "isekai-cheat-loner",
+      "label": "Skill Sisa OP",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 60,
+      "scope": "Mengombinasikan fungsi skill yang diremehkan sebagai satu kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-hidive-catalog"
+      ],
+      "referenceTitle": "Loner Life in Another World",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Skill Sisa OP",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Dapat sisa, ternyata bisa di-combo.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 4,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Efek tempur besar atau hax kuat: kendali tubuh/roh, transmutasi spesifik, negasi atau regenerasi berat.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-loner"
+    },
+    {
+      "id": "isekai-cheat-no-game",
+      "label": "Game Theory Cheat",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 61,
+      "scope": "Memproyeksikan strategi permainan melalui intuisi supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-no-game"
+      ],
+      "referenceTitle": "No Game No Life",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Game Theory Cheat",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Ngomongnya santai, sudah mikir dua puluh langkah.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 2,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kemampuan personal atau tempur dasar dengan sasaran/fungsi terbatas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-no-game"
+    },
+    {
+      "id": "isekai-cheat-shield",
+      "label": "Shield Evolution",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 62,
+      "scope": "Membentuk perisai energi adaptif sebagai satu personal power.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-shield"
+      ],
+      "referenceTitle": "The Rising of the Shield Hero",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Shield Evolution",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Defense dulu, dendam belakangan.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-shield"
+    },
+    {
+      "id": "isekai-cheat-instant-death",
+      "label": "Instant Death",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 63,
+      "scope": "Mengakhiri fungsi atau kehidupan target yang memenuhi aturan kemampuan.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-instant-death"
+      ],
+      "referenceTitle": "My Instant Death Ability Is So Overpowered, No One in This Other World Stands a Chance Against Me!",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Instant Death",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Musuh belum selesai monolog, skill sudah minta tamat.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Perubahan aturan mendasar: materi umum, penciptaan, hidup-mati, ruang-waktu, takdir, wish atau realitas.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-instant-death"
+    },
+    {
+      "id": "isekai-cheat-cautious",
+      "label": "Overprepared Prediction",
+      "contentStatus": "Original game adaptation within user-delegated scope; not a claim of the complete canonical character skillset.",
+      "catalogOrder": 64,
+      "scope": "Memproyeksikan bahaya untuk menyiapkan respons supernatural.",
+      "tags": [
+        "isekai-cheat",
+        "anime-inspired"
+      ],
+      "sourceRefs": [
+        "anime-cr-cautious"
+      ],
+      "referenceTitle": "Cautious Hero: The Hero is Overpowered but Overly Cautious",
+      "masteryPolicy": "One ordinary shared character Power Mastery result; no fixed maximum and no Enchant.",
+      "limits": "Range, costs, resistance, duration, growth and combat balance remain pending. Title levels are source flavor, not rolled main stats or mastery ranks.",
+      "notInferred": "No automatic stat, item, follower, race, armor, extra power, extra spin or peak-franchise package. Manifestations described by this one ability are not separate owned equipment grants.",
+      "resultContext": {
+        "facts": [
+          "Cheat Skill diperoleh: Overprepared Prediction",
+          "Power Mastery mengikuti satu hasil bersama nanti"
+        ],
+        "displayContext": "Slime biasa dilawan pakai persiapan sidang akhir.",
+        "reactionPolicy": "Use actual committed result and available stacked facts only. Suggested punchline is editable; narration creates no mechanics."
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#isekai-cheat-cautious"
+    }
+  ],
+  "invocationContract": {
+    "callers": [
+      "anime-mc-isekai"
+    ],
+    "sequence": "After actual Genre Isekai and actual Role MC commits, draw one Cheat Skill, grant its one power and record one reaction. Restore saved caller.",
+    "ownership": "Retain after main Power None; mastery at normal shared Power Mastery stage. New late grants inherit existing shared result.",
+    "provenance": "Bind actual child spin, parent Anime component, Genre and Role source IDs; no reference-title identity dispatch.",
+    "checkpointBoundary": "Return by Death and other narrative abilities never rewrite the generation journal, undo committed RNG, reroll a race/stat, or create a new mechanics event without a separate approved rule.",
+    "defaultOdds": "64 equal positive base weights, 1/64 before any approved later modifier.",
+    "funnyHook": "These joke captions do not by themselves tag outcomes funny-result. Such gameplay tags require explicit catalog classification.",
+    "referenceBoundary": "Source pages support anime titles/premises only. Authored powers are adaptations, not verbatim franchise ability claims or automatic canonical feats."
+  },
+  "sources": [
+    {
+      "id": "anime-cr-isekai-catalog",
+      "title": "Adventure / Isekai A–Z",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/videos/adventure/isekai/alphabetical",
+      "supports": "Anime catalog names including Spider, Grimgar, Problem Children and Million Lives.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-isekai-popular",
+      "title": "Popular Fantasy / Isekai",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/fr/videos/fantasy/isekai/popular",
+      "supports": "Anime catalog names for Smartphone, Spirit Chronicles, Realist Hero, Death March, Demon Lord, 8th Son, Saint, Villainess, Prodigies, Average Abilities, Kyo Kara Maoh, Ragnarok and Drug Store.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-journey",
+      "title": "A Journey Through Another World: Raising Kids While Adventuring",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/hi/series/G79H23ZVX/a-journey-through-another-world-raising-kids-while-adventuring",
+      "supports": "Anime series and related-title catalog names; powers in this project are authored adaptations.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-shirohiyo",
+      "title": "SHIROHIYO – Reincarnated as a Neglected Noble: Raising My Baby Brother With Memories From My Past Life",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/pl/series/GNVHKN9QW/shirohiyo---reincarnated-as-a-neglected-noble-raising-my-baby-brother-with-memories-from-my-past-life",
+      "supports": "Anime series and related-title catalog names including Mynoghra, Uglymug, Evil Lord, Water Magician, Beginning, Potions, Sweet, Fluffy and Saving Gold.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-essential",
+      "title": "15 Essential Isekai Anime",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/hi/news/guides/2023/6/20/essential-isekai-anime-on-crunchyroll",
+      "supports": "Anime references including Slime, Overlord, Re:ZERO, KONOSUBA, Mushoku Tensei, Tanya, Bookworm and ZENSHU.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-vending",
+      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/fr/series/GVDHX8504/reborn-as-a-vending-machine-i-now-wander-the-dungeon",
+      "supports": "Anime title and vending-machine reincarnation premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-hidive-sword",
+      "title": "Celebrating Father’s Day with Your Favorite Sword Dad from Reincarnated as a Sword",
+      "publisher": "HIDIVE",
+      "url": "https://news.hidive.com/2024/6/13/celebrating-father-s-day-with-your-favorite-sword-dad-from-reincarnated-as-a-sword",
+      "supports": "Anime title and sentient-sword reincarnation premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-hidive-catalog",
+      "title": "HIDIVE anime catalog",
+      "publisher": "HIDIVE",
+      "url": "https://welcome.hidive.com/?pubDate=20260709",
+      "supports": "Anime names The Eminence in Shadow, My Isekai Life, Loner Life in Another World and Reincarnated as a Sword.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-butareba",
+      "title": "Crunchyroll release calendar 2023-10-15",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/simulcastcalendar?date=2023-10-15&filter=premium",
+      "supports": "Butareba -The Story of a Man Turned into a Pig- anime episode listing.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-level99",
+      "title": "What is Shojosei Isekai? A Guide on What to Watch",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/id/news/guides/2024/2/4/what-is-shojosei-isekai-guide",
+      "supports": "Villainess Level 99 anime reference; the title says 99, not 999.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-fruit",
+      "title": "The Fruit of Evolution: Before I Knew It, My Life Had It Made",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/series/G9VHN9DDX/the-fruit-of-evolution-before-i-knew-it-my-life-had-it-made",
+      "supports": "Anime title and another-world evolution premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-black-company",
+      "title": "The Dungeon of Black Company",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/fr/series/GP5HJ85WM/the-dungeon-of-black-company",
+      "supports": "Anime title and another-world corporate dungeon premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-no-game",
+      "title": "No Game No Life",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/es-es/series/G68V1JGD6/no-game-no-life",
+      "supports": "Anime reference about siblings summoned to another world; not a claim of current local streaming availability.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-shield",
+      "title": "The Rising of the Shield Hero: The Shield Hero",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/watch/G6J04M44R/the-shield-hero",
+      "supports": "Anime episode and other-world summoning premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-instant-death",
+      "title": "My Instant Death Ability is So Overpowered TV Anime Releases Creditless Opening and Ending Theme Videos",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/news/latest/2024/1/5/my-instant-death-ability-is-so-overpowered-anime-creditless-opening-ending-theme-videos",
+      "supports": "Anime adaptation and isekai classification.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    },
+    {
+      "id": "anime-cr-cautious",
+      "title": "Cautious Hero: This Hero Is Too Arrogant",
+      "publisher": "Crunchyroll",
+      "url": "https://www.crunchyroll.com/watch/G7PU4VXJ8/this-hero-is-too-arrogant",
+      "supports": "Anime episode and cautious summoned-hero premise.",
+      "checkedOn": "2026-10-08",
+      "access": "Official search-index excerpts inspected with web tools. Some Crunchyroll full-page reads were unavailable; no full-page inspection claimed.",
+      "authority": "Reference evidence only; no gameplay instruction, granted stats, rarity or power balance."
+    }
+  ],
+  "balancePending": [
+    "Exact limits and rank-dependent capability of each Cheat Skill",
+    "Any body transformation from vending/sword/pig/slime/spider references",
+    "Explicit funny-result tags and conditional odds; no automatic rarity from strength or title length"
+  ]
+}

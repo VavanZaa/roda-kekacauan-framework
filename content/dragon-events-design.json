@@ -1,0 +1,854 @@
+{
+  "schemaVersion": "roda-kekacauan-dragon-events/0.1",
+  "status": "User-defined form selector, total +2 numeric stat points and one shared Element grant; eight forms and allocations authored within delegated scope. Detailed limits remain design work.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "mythical-beast",
+  "originId": "imported",
+  "typeId": "dragon",
+  "formWheelId": "dragon-form",
+  "authority": {
+    "userConfirmed": [
+      "Dragon forms focus on body shape; about eight to ten or fewer if useful.",
+      "Every selected form receives total +2 numeric main-stat points distributed according to its lore/body motif.",
+      "After the form, spin the universal Element wheel once and receive the selected element-control power.",
+      "Unspecified wheels use equal base weights."
+    ],
+    "authoredChoices": "Eight named silhouettes, chosen visual variants, stat allocations, and optional Gen Z reactions are editable game-design content within the delegated request. Anatomy terms are not a universal mythology taxonomy; numeric bonuses are game adaptations, not sourced facts."
+  },
+  "powers": [],
+  "weapons": [],
+  "sharedWheelReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "wheelDefinitionRef": "element-universal",
+      "callers": [
+        "western",
+        "wyvern",
+        "drake",
+        "wyrm",
+        "lindwyrm",
+        "amphiptere",
+        "eastern",
+        "sea-serpent"
+      ],
+      "drawCount": 1
+    }
+  ],
+  "sharedPowerReferences": [
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "fire-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "water-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "earth-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "wind-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "legendary-hero-events-design.json",
+      "definitionId": "lightning-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "elf-events-design.json",
+      "definitionId": "ice-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "video2-race-imports-design.json",
+      "definitionId": "metal-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "elf-events-design.json",
+      "definitionId": "forest-control",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "universal-concept-wheel-design.json",
+      "definitionId": "concept-light",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "universal-element-wheel-design.json",
+      "definitionId": "darkness-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "elf-events-design.json",
+      "definitionId": "shadow-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    },
+    {
+      "definitionFile": "primordial-events-design.json",
+      "definitionId": "primordial-void-manipulation",
+      "grantMode": "power",
+      "access": "Only through the actual selected Element child outcome, never every Element power as a bundle."
+    }
+  ],
+  "typeEventProfile": {
+    "id": "dragon",
+    "label": "Dragon",
+    "sourceOrigin": "imported",
+    "effects": [
+      {
+        "type": "record-identity-detail",
+        "field": "mythicalBeastTypeId",
+        "value": "dragon"
+      }
+    ],
+    "followup": {
+      "wheelId": "dragon-form",
+      "definitionFile": "dragon-events-design.json",
+      "drawCount": 1,
+      "returnPoint": "Saved Dragon type continuation after its form and Element child."
+    },
+    "resultContext": {
+      "facts": [
+        "Jenis Mythical Beast: Dragon",
+        "Asal rujukan: Impor",
+        "Bentuk Dragon belum diketahui",
+        "Bentuk terpilih akan memberi total +2 poin stat, lalu satu Element universal"
+      ],
+      "narrationExample": "Dragon masuk. Bentuknya dulu, baru kita tahu bonusnya. Elemen masih nunggu giliran."
+    },
+    "returnPoint": "Saved calling continuation; do not advance a nested caller to Archetype early."
+  },
+  "wheels": [
+    {
+      "id": "dragon-form",
+      "label": "Bentuk Dragon",
+      "scope": "Mythical Beast / Impor / Dragon",
+      "selectorKind": "body-form",
+      "definitionFile": "dragon-events-design.json",
+      "drawCount": 1,
+      "status": "Eight delegated authored forms, active for the user-approved Dragon event; equal default weights.",
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "outcomes": [
+        {
+          "id": "western",
+          "label": "Western Dragon",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "4 kaki, 2 sayap; tubuh reptil kekar.",
+          "sourceRefs": [
+            "dragon-heraldic-distinction"
+          ],
+          "statBonus": {
+            "strength": 1,
+            "durability": 1
+          },
+          "bonusRationale": "Bentuk naga Barat yang kekar menjadi motif build kuat dan tahan banting.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "western"
+          }
+        },
+        {
+          "id": "wyvern",
+          "label": "Wyvern",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "2 kaki, 2 sayap; sayap menjadi anggota depan.",
+          "sourceRefs": [
+            "dragon-wyvern-collins"
+          ],
+          "statBonus": {
+            "speed": 1,
+            "fight": 1
+          },
+          "bonusRationale": "Siluet bersayap dan predator dipakai sebagai motif gerak cepat serta serangan agresif.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "wyvern"
+          }
+        },
+        {
+          "id": "drake",
+          "label": "Drake",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "4 kaki, tanpa sayap; versi darat untuk roda ini.",
+          "sourceRefs": [
+            "dragon-drake-collins"
+          ],
+          "statBonus": {
+            "strength": 1,
+            "fight": 1
+          },
+          "bonusRationale": "Varian darat pilihan game menonjolkan dorongan badan dan pertarungan jarak dekat.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "drake"
+          }
+        },
+        {
+          "id": "wyrm",
+          "label": "Wyrm",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "Tubuh ular, tanpa kaki dan sayap.",
+          "sourceRefs": [
+            "dragon-wyrm-lexicon"
+          ],
+          "statBonus": {
+            "durability": 2
+          },
+          "bonusRationale": "Tubuh ular bersisik dipakai sebagai motif build tank dalam adaptasi game ini.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "wyrm"
+          }
+        },
+        {
+          "id": "lindwyrm",
+          "label": "Lindwyrm",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "Tubuh ular, 2 lengan depan, tanpa sayap; varian pilihan.",
+          "sourceRefs": [
+            "dragon-lindworm-lexicon"
+          ],
+          "statBonus": {
+            "strength": 1,
+            "speed": 1
+          },
+          "bonusRationale": "Lengan depan dan tubuh lentur dipakai sebagai motif tenaga serta gerak lincah.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "lindwyrm"
+          }
+        },
+        {
+          "id": "amphiptere",
+          "label": "Amphiptere",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "Tubuh ular, 2 sayap, tanpa kaki.",
+          "sourceRefs": [
+            "dragon-amphiptere-heraldry"
+          ],
+          "statBonus": {
+            "speed": 2
+          },
+          "bonusRationale": "Siluet ular bersayap dipakai sebagai motif spesialis kecepatan.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "amphiptere"
+          }
+        },
+        {
+          "id": "eastern",
+          "label": "Eastern Dragon / Long",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "Tubuh panjang berkelok, 4 kaki, tanpa sayap; varian Long pilihan.",
+          "sourceRefs": [
+            "dragon-long-museum"
+          ],
+          "statBonus": {
+            "intelligence": 2
+          },
+          "bonusRationale": "Motif kebijaksanaan dalam rujukan Chinese Long diadaptasi menjadi bonus Intelligence.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "eastern"
+          }
+        },
+        {
+          "id": "sea-serpent",
+          "label": "Sea Serpent",
+          "baseWeight": 1,
+          "inclusionStatus": "authored within user-delegated form roster",
+          "bodyDescription": "Tubuh ular laut, tanpa kaki dan sayap; sirip sebagai ciri visual pilihan.",
+          "sourceRefs": [
+            "dragon-sea-serpent-collins"
+          ],
+          "statBonus": {
+            "speed": 1,
+            "durability": 1
+          },
+          "bonusRationale": "Motif monster laut dipakai sebagai build lincah dan tahan banting.",
+          "bonusAuthority": "Authored game allocation; exactly two total numeric points.",
+          "eventProfileRef": {
+            "definitionFile": "dragon-events-design.json",
+            "definitionId": "sea-serpent"
+          }
+        }
+      ]
+    }
+  ],
+  "formEventProfiles": [
+    {
+      "id": "western",
+      "label": "Western Dragon",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "western"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Western Dragon",
+          "Bentuk tubuh pilihan: 4 kaki, 2 sayap; tubuh reptil kekar.",
+          "Bonus tercatat: Strength +1, Durability +1; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Western Dragon. Strength +1, Durability +1 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Western Dragon. Badan kekar, Strength +1 dan Durability +1. Elemen masih gacha.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "wyvern",
+      "label": "Wyvern",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "wyvern"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Wyvern",
+          "Bentuk tubuh pilihan: 2 kaki, 2 sayap; sayap menjadi anggota depan.",
+          "Bonus tercatat: Speed +1, Fight +1; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Wyvern. Speed +1, Fight +1 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Wyvern dapet Speed +1, Fight +1. Build gesit, siap nyamperin masalah.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "drake",
+      "label": "Drake",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "drake"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Drake",
+          "Bentuk tubuh pilihan: 4 kaki, tanpa sayap; versi darat untuk roda ini.",
+          "Bonus tercatat: Strength +1, Fight +1; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Drake. Strength +1, Fight +1 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Drake: Strength +1, Fight +1. Naga jalur darat, urusan ribut aman.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "wyrm",
+      "label": "Wyrm",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "wyrm"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Wyrm",
+          "Bentuk tubuh pilihan: Tubuh ular, tanpa kaki dan sayap.",
+          "Bonus tercatat: Durability +2; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Wyrm. Durability +2 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Wyrm dapet Durability +2. Bentuk ular, build tahan banting.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "lindwyrm",
+      "label": "Lindwyrm",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "lindwyrm"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Lindwyrm",
+          "Bentuk tubuh pilihan: Tubuh ular, 2 lengan depan, tanpa sayap; varian pilihan.",
+          "Bonus tercatat: Strength +1, Speed +1; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Lindwyrm. Strength +1, Speed +1 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Lindwyrm: Strength +1, Speed +1. Ular dapet tangan, build mulai ngegas.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "amphiptere",
+      "label": "Amphiptere",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "amphiptere"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Amphiptere",
+          "Bentuk tubuh pilihan: Tubuh ular, 2 sayap, tanpa kaki.",
+          "Bonus tercatat: Speed +2; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Amphiptere. Speed +2 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Amphiptere dapet Speed +2. Ular body kit sayap, sekarang tinggal elemen.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "eastern",
+      "label": "Eastern Dragon / Long",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "eastern"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 2,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Eastern Dragon / Long",
+          "Bentuk tubuh pilihan: Tubuh panjang berkelok, 4 kaki, tanpa sayap; varian Long pilihan.",
+          "Bonus tercatat: Intelligence +2; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Eastern Dragon / Long. Intelligence +2 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Eastern Dragon dapet Intelligence +2. Naga jalur otak, build ikut mikir.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    },
+    {
+      "id": "sea-serpent",
+      "label": "Sea Serpent",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "dragonFormId",
+          "value": "sea-serpent"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "Actual committed Dragon form result, not its parent type or Element result.",
+          "timing": "Register once at form commitment; apply through the existing modifier ledger after the immutable target base roll."
+        }
+      ],
+      "followup": {
+        "wheelId": "element-universal",
+        "definitionFile": "universal-element-wheel-design.json",
+        "drawCount": 1,
+        "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+        "caller": "Actual committed Dragon form sourceSpinId and source component, linked to its selected Dragon type.",
+        "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+      },
+      "resultContext": {
+        "facts": [
+          "Bentuk Dragon: Sea Serpent",
+          "Bentuk tubuh pilihan: Tubuh ular laut, tanpa kaki dan sayap; sirip sebagai ciri visual pilihan.",
+          "Bonus tercatat: Speed +1, Durability +1; total +2 poin angka",
+          "Elemen belum diketahui sebelum hasil Element child",
+          "Angka base stat dan Power Mastery tetap menunggu tahap normal"
+        ],
+        "displayContext": "Dapet Sea Serpent. Speed +1, Durability +1 sudah tercatat. Berikutnya satu spin Element untuk power kendali elemen terpilih.",
+        "narrationExample": "Sea Serpent: Speed +1, Durability +1. Bentuknya anak laut, elemennya masih misteri.",
+        "availability": "Only after the actual form result and its modifiers commit; append the real element/power only after the canonical child result commits.",
+        "exampleMode": "Optional narration; creates no additional effect, funny-result tag or fabricated spin."
+      },
+      "returnPoint": "Saved Dragon form continuation, then its saved Mythical Beast/host/origin/Hybrid caller. Archetype only when the ordinary main race chain has completed."
+    }
+  ],
+  "contracts": {
+    "routing": {
+      "sequence": "Actual Dragon type commit/reaction -> one dragon-form commit and +2 ledger/reaction -> one element-universal commit and selected linked power/reaction -> exact saved caller.",
+      "profileAuthority": "Dragon type/form profiles here are canonical. Race registration/import pointers are inspection/routing references; execute one profile per committed source, not each pointer as a separate event.",
+      "otherImported": "All eight Imported Mythical Beast event routes are now defined. Griffin and the five delegated three-point packages are fixed profiles in mythical-beast-events-design.json; Dragon retains only its own form/Element route."
+    },
+    "numericStats": {
+      "totalPerForm": 2,
+      "unit": "numeric point",
+      "operation": "add-flat",
+      "byForm": {
+        "western": {
+          "strength": 1,
+          "durability": 1
+        },
+        "wyvern": {
+          "speed": 1,
+          "fight": 1
+        },
+        "drake": {
+          "strength": 1,
+          "fight": 1
+        },
+        "wyrm": {
+          "durability": 2
+        },
+        "lindwyrm": {
+          "strength": 1,
+          "speed": 1
+        },
+        "amphiptere": {
+          "speed": 2
+        },
+        "eastern": {
+          "intelligence": 2
+        },
+        "sea-serpent": {
+          "speed": 1,
+          "durability": 1
+        }
+      },
+      "timing": "Commit modifiers atomically with the form result before reaction; preserve immutable base and project through the existing final-stat ledger. +2 is a total budget, never +2 each stat.",
+      "lateActivation": "If an authorized source is acquired after a base stat exists, reproject from that same base and current distinct modifiers; no new stat spin."
+    },
+    "element": {
+      "wheelId": "element-universal",
+      "drawCount": 1,
+      "affinity": "Body form does not force any element or change its weights. Sea Serpent can receive Api, Western can receive Air. Selected element and control come only from the canonical child.",
+      "grantAuthority": "Only the selected canonical Element outcome records the element and grants its linked manipulation power. The Dragon caller grants no second copy.",
+      "roster": "Reuse the existing adjustable starter. Do not create a Dragon-only pool or silently add Ice/Lightning/Poison/Light/Dark."
+    },
+    "inventory": {
+      "early": "Retain the selected control power after main Power None; ordinary main Power acquisition still occurs.",
+      "mastery": "All owned powers use the single character Power Mastery at its normal stage. Dragon grants no mastery boost or automatic maximum, and Power Mastery triggers no Enchant.",
+      "body": "Selected wings, legs, fins and mythology motifs are visual reference. This event grants no separate Flight, breath weapon, venom, regeneration, armor, immunity, swimming/flight stat rule, or equipment."
+    },
+    "identity": {
+      "family": "Dragon forms remain a source-scoped Mythical Beast component. No Naga local selector, Elemental race event or extra race draw is dispatched.",
+      "history": "Use existing shared used-family history on actual family draws; form/element are not new race-family draws.",
+      "nested": "Run the same approved event in Hybrid, Symbiote host, Raksasa base and Skeleton/Zombie origin components, keeping provenance and their saved continuation. Do not erase wrapper identity or advance main stages early."
+    },
+    "size": {
+      "stage": "The one global Size stage after Backstory and before stats.",
+      "profiles": "Per-form body metric and source reference remain pending; neither bonus nor a source drawing assigns dimensions. Raksasa retains its existing giant Size binding."
+    },
+    "idempotence": {
+      "key": "runId/componentId/sourceSpinId/profileId/effectOrdinal",
+      "rule": "Register each source effect once. Replay restores recorded result/odds/effects/context without a new form/Element draw, duplicate bonus or duplicate grant."
+    },
+    "context": {
+      "stack": "Keep source component, actual type/form result IDs, visual variant and committed bonus ledger in stacked context. Later append the actual Element/power with its child source.",
+      "unknown": "Before form commitment do not expose chosen bonus/body; before Element commitment do not claim an element or control power; before stats/mastery do not fabricate bases/final totals/ranks.",
+      "reaction": "Every actual type, form and Element spin gets its own result/reaction. Fixed +2 effects add no fake spin or automatically funny result."
+    }
+  },
+  "inactiveHistory": {
+    "replacedTwoFormProposal": {
+      "active": false,
+      "reason": "User requests a body-shape roster with total +2 numeric bonus then shared Element. Retire the old two-form affinity draft.",
+      "typeProposal": {
+        "id": "dragon",
+        "label": "Dragon",
+        "inclusionStatus": "proposed",
+        "baseWeight": 1,
+        "sourceRaceId": "dragons",
+        "sourceRefs": [
+          "myth-eastern",
+          "myth-western"
+        ],
+        "followupWheelId": "dragon-form",
+        "eventDraft": [
+          "Dragon affinity"
+        ],
+        "influenceDraft": {
+          "status": "semantic proposal; numerical values and eligibility guards pending",
+          "targets": [
+            "strength",
+            "durability",
+            "power"
+          ],
+          "description": "Body-form/affinity influences; breath and stat tiers still roll in their own stages."
+        }
+      },
+      "wheelProposal": {
+        "id": "dragon-form",
+        "label": "Bentuk Dragon",
+        "status": "proposed",
+        "baseWeightsAssigned": true,
+        "outcomes": [
+          {
+            "id": "western",
+            "label": "Western Dragon",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "power",
+                "weapon",
+                "strength"
+              ],
+              "description": "Proposed winged fantasy-dragon body plan."
+            }
+          },
+          {
+            "id": "eastern",
+            "label": "Eastern Dragon",
+            "inclusionStatus": "proposed",
+            "baseWeight": 1,
+            "sourceRefs": [
+              "myth-eastern"
+            ],
+            "influenceDraft": {
+              "status": "semantic proposal; numerical values and eligibility guards pending",
+              "targets": [
+                "power",
+                "weapon",
+                "durability"
+              ],
+              "description": "Proposed long-bodied dragon profile with content-defined anatomy."
+            }
+          }
+        ],
+        "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights"
+      }
+    }
+  },
+  "openBalance": [
+    "Body Size references and metric per form",
+    "Power limits, mobility and equipment compatibility",
+    "Approved future probability/eligibility modifiers; none invented from form motifs"
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "formCount": 8,
+    "probabilityBeforeApprovedModifiers": 0.125
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

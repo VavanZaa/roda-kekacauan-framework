@@ -1,0 +1,1664 @@
+{
+  "schemaVersion": "roda-kekacauan-symbiote-events/0.1",
+  "status": "User-confirmed host race attachment plus existing Takeover/power thresholds; equal default odds and detailed balance pending.",
+  "raceDesign": "race-wheel-design.json",
+  "familyId": "symbiote",
+  "takeoverWheelId": "symbiote-takeover",
+  "takeoverPercentValues": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100
+  ],
+  "takeoverWeights": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "powerWheelRef": {
+    "definitionFile": "universal-power-wheels-design.json",
+    "wheelId": "power-symbiote",
+    "outcomeCount": 12,
+    "drawCountPerInvocation": 1
+  },
+  "eventProfiles": [
+    {
+      "id": "takeover-0",
+      "label": "0% Takeover",
+      "takeoverPercent": 0,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 0,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        }
+      ],
+      "sourceBonusTotals": {},
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 0%",
+          "Tidak ada bonus main stat dari takeover ini",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 0%. Tidak ada bonus main stat dari takeover ini. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 0%. Symbiote numpang alamat doang.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-10",
+      "label": "10% Takeover",
+      "takeoverPercent": 10,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 10,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        }
+      ],
+      "sourceBonusTotals": {},
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 10%",
+          "Tidak ada bonus main stat dari takeover ini",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 10%. Tidak ada bonus main stat dari takeover ini. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 10%. Masih jadi penumpang, belum dapet bonus.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-20",
+      "label": "20% Takeover",
+      "takeoverPercent": 20,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 20,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 20%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 20%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 20%. Strength +1, symbiote mulai ikut angkat.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-30",
+      "label": "30% Takeover",
+      "takeoverPercent": 30,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 30,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 30%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 30%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 30%. Strength +1, otot dapet teman patungan.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-40",
+      "label": "40% Takeover",
+      "takeoverPercent": 40,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 40,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 40%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 40%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 40%. Strength +1, mulai ikut pegang setir.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-50",
+      "label": "50% Takeover",
+      "takeoverPercent": 50,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 50,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "durability": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 50%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 50%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 50%. Strength +1, Durability +1. Bodi ikut upgrade.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-60",
+      "label": "60% Takeover",
+      "takeoverPercent": 60,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 60,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "durability": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 60%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 60%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 60%. Strength +1, Durability +1. Kontrak kos mulai panjang.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-70",
+      "label": "70% Takeover",
+      "takeoverPercent": 70,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 70,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "durability": 1
+      },
+      "symbiotePowerSpins": 0,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 70%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Tidak ada spin Symbiote Power dari takeover ini",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 70%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 70%. Strength +1, Durability +1. Symbiote makin betah.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      }
+    },
+    {
+      "id": "takeover-80",
+      "label": "80% Takeover",
+      "takeoverPercent": 80,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 80,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "durability": 1
+      },
+      "symbiotePowerSpins": 1,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 80%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Spin Symbiote Power yang dijadwalkan: 1",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 80%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 1. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 80%. Strength +1, Durability +1. Satu spin power kebuka.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      },
+      "followup": {
+        "wheelId": "power-symbiote",
+        "definitionFile": "universal-power-wheels-design.json",
+        "drawCount": 1,
+        "invocationCount": 1,
+        "drawCountPerInvocation": 1,
+        "execution": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish.",
+        "source": "actual takeover result, source component and child ordinal 1..1",
+        "grantAuthority": "Only each canonical power-symbiote selected outcome grants its linked power once.",
+        "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+      }
+    },
+    {
+      "id": "takeover-90",
+      "label": "90% Takeover",
+      "takeoverPercent": 90,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 90,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "durability": 1
+      },
+      "symbiotePowerSpins": 1,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 90%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Spin Symbiote Power yang dijadwalkan: 1",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 90%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 1. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 90%. Strength +1, Durability +1. Power-nya spin dulu, bos.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      },
+      "followup": {
+        "wheelId": "power-symbiote",
+        "definitionFile": "universal-power-wheels-design.json",
+        "drawCount": 1,
+        "invocationCount": 1,
+        "drawCountPerInvocation": 1,
+        "execution": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish.",
+        "source": "actual takeover result, source component and child ordinal 1..1",
+        "grantAuthority": "Only each canonical power-symbiote selected outcome grants its linked power once.",
+        "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+      }
+    },
+    {
+      "id": "takeover-100",
+      "label": "100% Takeover",
+      "takeoverPercent": 100,
+      "status": "User-confirmed takeover thresholds; 80/90 retain Strength/Durability, 100% gives total +1 to each main stat and exactly two power spins. Base weights equal; scale/limits pending.",
+      "effects": [
+        {
+          "type": "record-identity-detail",
+          "field": "symbioteTakeoverPercent",
+          "value": 100,
+          "unit": "percent",
+          "source": "actual committed takeover result and source Symbiote component"
+        },
+        {
+          "type": "stat-modifier",
+          "target": "strength",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "speed",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "durability",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "intelligence",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        },
+        {
+          "type": "stat-modifier",
+          "target": "fight",
+          "operation": "add-flat",
+          "amount": 1,
+          "unit": "numeric point",
+          "source": "actual committed takeover result and source Symbiote component",
+          "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+        }
+      ],
+      "sourceBonusTotals": {
+        "strength": 1,
+        "speed": 1,
+        "durability": 1,
+        "intelligence": 1,
+        "fight": 1
+      },
+      "symbiotePowerSpins": 2,
+      "resultContext": {
+        "facts": [
+          "Symbiote Takeover terpilih: 100%",
+          "Bonus strength: +1 poin angka dari sumber Symbiote",
+          "Bonus speed: +1 poin angka dari sumber Symbiote",
+          "Bonus durability: +1 poin angka dari sumber Symbiote",
+          "Bonus intelligence: +1 poin angka dari sumber Symbiote",
+          "Bonus fight: +1 poin angka dari sumber Symbiote",
+          "Spin Symbiote Power yang dijadwalkan: 2",
+          "Power hasil event memakai satu Power Mastery bersama karakter"
+        ],
+        "displayContext": "Symbiote Takeover terpilih: 100%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus speed: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Bonus intelligence: +1 poin angka dari sumber Symbiote. Bonus fight: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 2. Power hasil event memakai satu Power Mastery bersama karakter.",
+        "narrationExample": "Takeover 100%. Semua stat +1, dua spin power. Symbiote pegang setir full.",
+        "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+        "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+      },
+      "returnPoint": "saved caller; archetype for the ordinary race-stage chain",
+      "laterInfluenceDraft": {
+        "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+        "basis": [
+          "actual takeover percent",
+          "committed source stat modifiers",
+          "actual owned selected Symbiote powers"
+        ],
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "power",
+          "weakness",
+          "size"
+        ],
+        "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+      },
+      "followup": {
+        "wheelId": "power-symbiote",
+        "definitionFile": "universal-power-wheels-design.json",
+        "drawCount": 2,
+        "invocationCount": 2,
+        "drawCountPerInvocation": 1,
+        "execution": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish.",
+        "source": "actual takeover result, source component and child ordinal 1..2",
+        "grantAuthority": "Only each canonical power-symbiote selected outcome grants its linked power once.",
+        "returnPoint": "saved caller; archetype for the ordinary race-stage chain"
+      }
+    }
+  ],
+  "contracts": {
+    "routing": "Commit/react Symbiote family; spin one host race and finish its approved immediate/nested events under shared history; restore Symbiote caller; spin Takeover once, commit source modifiers/react, resolve awarded Symbiote Power children, then saved caller.",
+    "profileAuthority": "Profiles and the Takeover wheel here are canonical. Race branch/import references point here and execute one profile once, never both mirrors as independent invocations.",
+    "thresholds": {
+      "100": "Total +1 each Strength/Speed/Durability/Intelligence/Fight from this Symbiote source, plus exactly two Symbiote Power spins.",
+      "0/10": "No declared numeric bonus or power spin.",
+      "20/30/40": "+1 Strength.",
+      "50/60/70": "+1 Strength and +1 Durability.",
+      "80/90": "+1 Strength and +1 Durability, plus one Symbiote Power spin."
+    },
+    "numericStats": {
+      "unit": "numeric point",
+      "operation": "add-flat",
+      "byTakeoverPercent": {
+        "0": {},
+        "10": {},
+        "20": {
+          "strength": 1
+        },
+        "30": {
+          "strength": 1
+        },
+        "40": {
+          "strength": 1
+        },
+        "50": {
+          "strength": 1,
+          "durability": 1
+        },
+        "60": {
+          "strength": 1,
+          "durability": 1
+        },
+        "70": {
+          "strength": 1,
+          "durability": 1
+        },
+        "80": {
+          "strength": 1,
+          "durability": 1
+        },
+        "90": {
+          "strength": 1,
+          "durability": 1
+        },
+        "100": {
+          "strength": 1,
+          "speed": 1,
+          "durability": 1,
+          "intelligence": 1,
+          "fight": 1
+        }
+      },
+      "timing": "Record at committed takeover result; add once after each immutable base stat through the ledger and the signed, unbounded final-score policy.",
+      "sourceKey": "runId/sourceComponentId/sourceSpinId/profileId/effectOrdinal",
+      "stacking": "Execute only the selected takeover profile. The 100% source total is +1 each, not +2 Strength/Durability and not an extra third power spin. Independent other approved race/equipment modifiers retain their own rules."
+    },
+    "powerSampling": {
+      "wheelId": "power-symbiote",
+      "authority": "universal-power-wheels-design.json",
+      "invocationsByPercent": {
+        "0": 0,
+        "10": 0,
+        "20": 0,
+        "30": 0,
+        "40": 0,
+        "50": 0,
+        "60": 0,
+        "70": 0,
+        "80": 1,
+        "90": 1,
+        "100": 2
+      },
+      "ordering": "Each actual child spin grants only its selected power and gets its own reaction before the next child. Invoke once at 80/90, twice at 100.",
+      "uniquenessStatus": "No user-requested unique-power guarantee. Working default: separate invocations use the canonical eligible pool; do not disable a chosen section or reroll a committed duplicate. Exact repeated-definition merge/instance policy follows the pending global inventory policy.",
+      "idempotence": "Track parent event and ordinal so replay/media retry restores committed child results rather than granting/spinning again."
+    },
+    "mastery": "framework/spec.json#powerMasteryContract",
+    "ownedInventory": "Preserve selected Symbiote powers after main Power None. Complete all acquisitions before the one shared mastery draw; existing shared rank is inherited by late grants. Takeover grants no mastery boost or Enchant.",
+    "classification": "Symbiote is an attachment wrapper with one explicit host race spin from its FAMILY event. Takeover is scoped metadata and grants no additional host draws: 0% retains wrapper+actual host, 100% adds no unlisted personality penalty or power bundle.",
+    "inheritedOrigins": "Authorized Skeleton/Zombie origin or Hybrid/host callers execute this same approved profile with actual source provenance, race-family exclusion history and saved return.",
+    "size": "One global Size spin based on actual host/composite body with explicit reference policy. Any selected Raksasa activates the existing giant variant. No takeover-specific extra Size draw; unknown references never default to Human.",
+    "weights": "Equal default: eleven Takeover outcomes each have base weight 1 (1/11); twelve Symbiote Power outcomes each have base weight 1 (1/12). 10% is the takeover value step, not outcome probability.",
+    "idempotence": "Commit each profile once per run/source component/sourceSpinId/profile key, with each effect ordinal and child ordinal. Replay duplicates no stat modifier, power grant or spin.",
+    "host": {
+      "status": "User clarified Symbiote attaches to another race and Raksasa gives another race giant size; each requires one additional race spin.",
+      "canonicalWheelId": "race-family",
+      "historyRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+      "dispatch": "Every selected host/base family executes its normal approved events, including another authorized attachment/origin chain. Commit family to shared history BEFORE children.",
+      "identity": "The wrapper component stays owned. Host/base is a linked descendant in the same Hybrid root when applicable, not a replacement result or an extra Hybrid root.",
+      "order": "Working execution order: resolve host/base immediate events before returning to the attachment caller. Symbiote then runs its existing Takeover/power chain. Raksasa registers its existing stage effects once and returns after its base chain.",
+      "mastery": "All early powers survive main None and use the one shared character rank; caller-scoped Authority max remains an exception. No host-specific mastery bonus inferred.",
+      "return": "Always restore the saved nested caller; only the completed outer race event advances to Archetype.",
+      "exclusion": "Intersect existing caller eligibility with familyId not in usedRaceFamilyIds. Disable all used sections before drawing; do not sample them then reroll.",
+      "termination": "Each new identity-family result strictly enlarges the used set. At most the number of unique eligible catalog families can commit (17 in the current main pool), so race-family cycles cannot repeat indefinitely.",
+      "emptyPool": "A required draw with no eligible positive-weight candidate is an explicit configuration error. Never reset history, restore used sections, silently skip, or reroll a committed result.",
+      "idempotence": "One host/base invocation per actual wrapper source component; committed history, links, effects and child keys restore together on resume.",
+      "context": "Record wrapper source, actual host/base and each nested descendant. Do not reveal unrolled host or final Size/Takeover results in earlier reaction."
+    }
+  },
+  "contextContract": {
+    "stackedFacts": [
+      "actual family/component",
+      "actual takeover percentage",
+      "source-specific numeric modifier totals",
+      "number of power spins scheduled",
+      "actual acquired power results in order",
+      "shared mastery status/rank only if already committed",
+      "actual host race and nested descendants, bound to source Symbiote component and Hybrid root if applicable"
+    ],
+    "futureGuard": "Never name an unrolled power or base/final stat value. Narration is downstream of committed effects.",
+    "reactionPolicy": "Family, actual host race and each host event, Takeover and every power child receive one actual-spin reaction; fixed bonus/link registration creates no fake spin."
+  },
+  "openBalance": [
+    "Equal Takeover and Symbiote Power base odds are confirmed; optional later user overrides.",
+    "Set main stat scale/bounds, shared mastery scale and individual power limits/costs.",
+    "Set sourced body Size profiles and declared later odds/compatibility.",
+    "Finalize repeated power-definition merging; the two scheduled actual results and provenance are always retained."
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "attachmentProfileRef": {
+    "definitionFile": "race-attachment-events-design.json",
+    "definitionId": "symbiote-attachment"
+  },
+  "hostRaceInvocationTemplateId": "symbiote-host-race",
+  "wheels": [
+    {
+      "id": "symbiote-takeover",
+      "label": "Symbiote Takeover",
+      "scope": "family-event",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "status": "User-confirmed host race attachment plus existing Takeover/power thresholds; equal default odds and detailed balance pending.",
+      "outcomes": [
+        {
+          "id": "takeover-0",
+          "label": "0% Takeover",
+          "takeoverPercent": 0,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 0,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-0"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 0%",
+              "Tidak ada bonus main stat dari takeover ini",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 0%. Tidak ada bonus main stat dari takeover ini. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 0%. Symbiote numpang alamat doang.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-10",
+          "label": "10% Takeover",
+          "takeoverPercent": 10,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 10,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-10"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 10%",
+              "Tidak ada bonus main stat dari takeover ini",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 10%. Tidak ada bonus main stat dari takeover ini. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 10%. Masih jadi penumpang, belum dapet bonus.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-20",
+          "label": "20% Takeover",
+          "takeoverPercent": 20,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 20,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-20"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 20%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 20%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 20%. Strength +1, symbiote mulai ikut angkat.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-30",
+          "label": "30% Takeover",
+          "takeoverPercent": 30,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 30,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-30"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 30%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 30%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 30%. Strength +1, otot dapet teman patungan.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-40",
+          "label": "40% Takeover",
+          "takeoverPercent": 40,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 40,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-40"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 40%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 40%. Bonus strength: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 40%. Strength +1, mulai ikut pegang setir.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-50",
+          "label": "50% Takeover",
+          "takeoverPercent": 50,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 50,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-50"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 50%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 50%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 50%. Strength +1, Durability +1. Bodi ikut upgrade.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-60",
+          "label": "60% Takeover",
+          "takeoverPercent": 60,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 60,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-60"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 60%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 60%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 60%. Strength +1, Durability +1. Kontrak kos mulai panjang.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-70",
+          "label": "70% Takeover",
+          "takeoverPercent": 70,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 70,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-70"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 70%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Tidak ada spin Symbiote Power dari takeover ini",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 70%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Tidak ada spin Symbiote Power dari takeover ini. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 70%. Strength +1, Durability +1. Symbiote makin betah.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          }
+        },
+        {
+          "id": "takeover-80",
+          "label": "80% Takeover",
+          "takeoverPercent": 80,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 80,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-80"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 80%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Spin Symbiote Power yang dijadwalkan: 1",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 80%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 1. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 80%. Strength +1, Durability +1. Satu spin power kebuka.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          },
+          "followupWheelId": "power-symbiote",
+          "followupDrawCount": 1,
+          "sequenceOverride": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish."
+        },
+        {
+          "id": "takeover-90",
+          "label": "90% Takeover",
+          "takeoverPercent": 90,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 90,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-90"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 90%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Spin Symbiote Power yang dijadwalkan: 1",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 90%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 1. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 90%. Strength +1, Durability +1. Power-nya spin dulu, bos.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          },
+          "followupWheelId": "power-symbiote",
+          "followupDrawCount": 1,
+          "sequenceOverride": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish."
+        },
+        {
+          "id": "takeover-100",
+          "label": "100% Takeover",
+          "takeoverPercent": 100,
+          "inclusionStatus": "user-confirmed",
+          "baseWeight": 1,
+          "effects": [
+            {
+              "type": "record-identity-detail",
+              "field": "symbioteTakeoverPercent",
+              "value": 100,
+              "unit": "percent",
+              "source": "actual committed takeover result and source Symbiote component"
+            },
+            {
+              "type": "stat-modifier",
+              "target": "strength",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "speed",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "durability",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "intelligence",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            },
+            {
+              "type": "stat-modifier",
+              "target": "fight",
+              "operation": "add-flat",
+              "amount": 1,
+              "unit": "numeric point",
+              "source": "actual committed takeover result and source Symbiote component",
+              "timing": "Register once from this selected profile; add after the immutable base stat roll through the numeric ledger."
+            }
+          ],
+          "eventProfileRef": {
+            "definitionFile": "symbiote-events-design.json",
+            "definitionId": "takeover-100"
+          },
+          "narrationContext": {
+            "facts": [
+              "Symbiote Takeover terpilih: 100%",
+              "Bonus strength: +1 poin angka dari sumber Symbiote",
+              "Bonus speed: +1 poin angka dari sumber Symbiote",
+              "Bonus durability: +1 poin angka dari sumber Symbiote",
+              "Bonus intelligence: +1 poin angka dari sumber Symbiote",
+              "Bonus fight: +1 poin angka dari sumber Symbiote",
+              "Spin Symbiote Power yang dijadwalkan: 2",
+              "Power hasil event memakai satu Power Mastery bersama karakter"
+            ],
+            "displayContext": "Symbiote Takeover terpilih: 100%. Bonus strength: +1 poin angka dari sumber Symbiote. Bonus speed: +1 poin angka dari sumber Symbiote. Bonus durability: +1 poin angka dari sumber Symbiote. Bonus intelligence: +1 poin angka dari sumber Symbiote. Bonus fight: +1 poin angka dari sumber Symbiote. Spin Symbiote Power yang dijadwalkan: 2. Power hasil event memakai satu Power Mastery bersama karakter.",
+            "narrationExample": "Takeover 100%. Semua stat +1, dua spin power. Symbiote pegang setir full.",
+            "availability": "After the actual takeover result and modifier registration commit. Power identities remain unknown until each actual power result; base/final stats and shared mastery rank are stated only when recorded.",
+            "exampleMode": "Gen Z Indonesian narration only; no additional effects or funny-result mechanics tags."
+          },
+          "influenceDraft": {
+            "status": "Takeover/source grants may inform configured later profiles; exact odds pending.",
+            "basis": [
+              "actual takeover percent",
+              "committed source stat modifiers",
+              "actual owned selected Symbiote powers"
+            ],
+            "targets": [
+              "archetype",
+              "backstory",
+              "weapon",
+              "power",
+              "weakness",
+              "size"
+            ],
+            "description": "Use committed facts only; no unlisted stat, mastery, host or extra event from takeover."
+          },
+          "followupWheelId": "power-symbiote",
+          "followupDrawCount": 2,
+          "sequenceOverride": "Sequential one-power invocations. Commit/react to each result and restore the takeover caller only after all scheduled invocations finish."
+        }
+      ],
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "definitionFile": "symbiote-events-design.json"
+    }
+  ],
+  "raceResultContext": {
+    "facts": [
+      "Ras terpilih: Symbiote",
+      "Satu spin ras inang berikutnya dan seluruh event langsungnya",
+      "Setelah inang selesai, spin Takeover dan Symbiote Power sesuai hasil"
+    ],
+    "displayContext": "Symbiote menempel pada ras yang akan diputar berikutnya. Identitas inang dan nilai Takeover belum diketahui.",
+    "narrationExample": "Symbiote dulu. Cari badan buat ditumpangi, belum tahu siapa.",
+    "availability": "After actual family commit. Host identity and Takeover values only after actual child results.",
+    "exampleMode": "Narration only; no funny-result mechanics tag or added bonuses."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

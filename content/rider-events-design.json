@@ -1,0 +1,2895 @@
+{
+  "schemaVersion": "roda-kekacauan-rider/0.1",
+  "version": "rider/0.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "rider",
+  "eventProfileId": "rider-mount",
+  "status": "Core two-spin Rider event and 1/2/1-point rewards with strong mount-as-weapon approved. Forty-eight names/strength placements/stat allocations remain editable authored curation; intrinsic control/body/weapon compatibility and runtime helper remain configuration.",
+  "authority": {
+    "confirmed": [
+      "User Rider instruction: category first, then specific mount; every category has twelve choices, four weak/four moderate/four strong.",
+      "Previously confirmed equal default applies to both selectors unless the user supplies an override.",
+      "User confirms Rider weak gives +1 total numeric main-stat point; moderate gives +2 total numeric main-stat points; strong gives +1 total numeric main-stat point and the selected mount counts as a weapon. User explicitly confirms stat allocation follows the mount (e.g. Motor Speed +2)."
+    ],
+    "authoredChoices": "Four categories follow the user examples. All specific choices and strength assignments remain editable; bands are fictional game classifications, not scientific or exact franchise power rankings. Exact per-mount stat keys and any two-point split are authored under the confirmed mount-related numeric-stat interpretation."
+  },
+  "categories": [
+    {
+      "id": "animal",
+      "label": "Hewan",
+      "mountKind": "living-mount",
+      "childWheelId": "rider-mount-animal",
+      "baseWeight": 1,
+      "probability": 0.25,
+      "strengthBandCounts": {
+        "weak": 4,
+        "moderate": 4,
+        "strong": 4
+      }
+    },
+    {
+      "id": "transportation",
+      "label": "Transportasi",
+      "mountKind": "vehicle-mount",
+      "childWheelId": "rider-mount-transportation",
+      "baseWeight": 1,
+      "probability": 0.25,
+      "strengthBandCounts": {
+        "weak": 4,
+        "moderate": 4,
+        "strong": 4
+      }
+    },
+    {
+      "id": "mecha-giant",
+      "label": "Mecha & Raksasa",
+      "mountKind": "piloted-or-ridden-mount",
+      "childWheelId": "rider-mount-mecha-giant",
+      "baseWeight": 1,
+      "probability": 0.25,
+      "strengthBandCounts": {
+        "weak": 4,
+        "moderate": 4,
+        "strong": 4
+      }
+    },
+    {
+      "id": "unusual",
+      "label": "Tunggangan Ajaib & Absurd",
+      "mountKind": "unusual-mount",
+      "childWheelId": "rider-mount-unusual",
+      "baseWeight": 1,
+      "probability": 0.25,
+      "strengthBandCounts": {
+        "weak": 4,
+        "moderate": 4,
+        "strong": 4
+      }
+    }
+  ],
+  "categoryWheel": {
+    "id": "rider-category",
+    "label": "Jenis Tunggangan",
+    "outcomeCount": 4,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "animal",
+        "label": "Hewan",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "childWheelId": "rider-mount-animal",
+        "resultContext": {
+          "facts": [
+            "Kategori tunggangan: Hewan"
+          ],
+          "futureFactsExcluded": true
+        }
+      },
+      {
+        "id": "transportation",
+        "label": "Transportasi",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "childWheelId": "rider-mount-transportation",
+        "resultContext": {
+          "facts": [
+            "Kategori tunggangan: Transportasi"
+          ],
+          "futureFactsExcluded": true
+        }
+      },
+      {
+        "id": "mecha-giant",
+        "label": "Mecha & Raksasa",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "childWheelId": "rider-mount-mecha-giant",
+        "resultContext": {
+          "facts": [
+            "Kategori tunggangan: Mecha & Raksasa"
+          ],
+          "futureFactsExcluded": true
+        }
+      },
+      {
+        "id": "unusual",
+        "label": "Tunggangan Ajaib & Absurd",
+        "baseWeight": 1,
+        "probability": 0.25,
+        "childWheelId": "rider-mount-unusual",
+        "resultContext": {
+          "facts": [
+            "Kategori tunggangan: Tunggangan Ajaib & Absurd"
+          ],
+          "futureFactsExcluded": true
+        }
+      }
+    ]
+  },
+  "mountWheels": [
+    {
+      "id": "rider-mount-animal",
+      "label": "Naik Apa? — Hewan",
+      "outcomeCount": 12,
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "rider-animal-keong",
+          "label": "Keong",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-keong",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Keong",
+              "Kelas tunggangan: Lemah",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-ayam",
+          "label": "Ayam",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-ayam",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Ayam",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-kambing",
+          "label": "Kambing",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-kambing",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Kambing",
+              "Kelas tunggangan: Lemah",
+              "Strength +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-keledai",
+          "label": "Keledai",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-keledai",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Keledai",
+              "Kelas tunggangan: Lemah",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-kuda",
+          "label": "Kuda",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-kuda",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Kuda",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-unta",
+          "label": "Unta",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-unta",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 2,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Unta",
+              "Kelas tunggangan: Sedang",
+              "Durability +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-rusa",
+          "label": "Rusa",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-rusa",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Rusa",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-burung-unta",
+          "label": "Burung Unta",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-burung-unta",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Burung Unta",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-animal-gajah",
+          "label": "Gajah",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-gajah",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-animal-gajah",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-animal-gajah",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Gajah",
+              "Kelas tunggangan: Kuat",
+              "Strength +1",
+              "Weapon diperoleh: Gajah"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-animal-badak",
+          "label": "Badak",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-badak",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-animal-badak",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-animal-badak",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Badak",
+              "Kelas tunggangan: Kuat",
+              "Durability +1",
+              "Weapon diperoleh: Badak"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-animal-t-rex",
+          "label": "T-Rex",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-t-rex",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-animal-t-rex",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-animal-t-rex",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: T-Rex",
+              "Kelas tunggangan: Kuat",
+              "Fight +1",
+              "Weapon diperoleh: T-Rex"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-animal-garuda",
+          "label": "Garuda",
+          "categoryId": "animal",
+          "mountKind": "living-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-animal-garuda",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-animal-garuda",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-animal-garuda",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Garuda",
+              "Kelas tunggangan: Kuat",
+              "Speed +1",
+              "Weapon diperoleh: Garuda"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        }
+      ]
+    },
+    {
+      "id": "rider-mount-transportation",
+      "label": "Naik Apa? — Transportasi",
+      "outcomeCount": 12,
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "rider-transportation-sepeda",
+          "label": "Sepeda",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-sepeda",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Sepeda",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-becak",
+          "label": "Becak",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-becak",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Becak",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-odong-odong",
+          "label": "Odong-odong",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-odong-odong",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Odong-odong",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-gerobak",
+          "label": "Gerobak",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-gerobak",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Gerobak",
+              "Kelas tunggangan: Lemah",
+              "Strength +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-motor",
+          "label": "Motor",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-motor",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Motor",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-atv",
+          "label": "ATV",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-atv",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: ATV",
+              "Kelas tunggangan: Sedang",
+              "Speed +1",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-mobil-balap",
+          "label": "Mobil Balap",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-mobil-balap",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mobil Balap",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-helikopter",
+          "label": "Helikopter",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-helikopter",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "intelligence",
+              "amount": 1,
+              "sourceEffectKey": "stat:intelligence"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            },
+            {
+              "stat": "intelligence",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Helikopter",
+              "Kelas tunggangan: Sedang",
+              "Speed +1",
+              "Intelligence +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-transportation-fighter-jet",
+          "label": "Fighter Jet",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-fighter-jet",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-transportation-fighter-jet",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-transportation-fighter-jet",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Fighter Jet",
+              "Kelas tunggangan: Kuat",
+              "Speed +1",
+              "Weapon diperoleh: Fighter Jet"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-transportation-gustav-cannon",
+          "label": "Gustav Cannon",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-gustav-cannon",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-transportation-gustav-cannon",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-transportation-gustav-cannon",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Gustav Cannon",
+              "Kelas tunggangan: Kuat",
+              "Fight +1",
+              "Weapon diperoleh: Gustav Cannon"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-transportation-warship",
+          "label": "Warship",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-warship",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-transportation-warship",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-transportation-warship",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Warship",
+              "Kelas tunggangan: Kuat",
+              "Durability +1",
+              "Weapon diperoleh: Warship"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-transportation-tank",
+          "label": "Tank",
+          "categoryId": "transportation",
+          "mountKind": "vehicle-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-transportation-tank",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-transportation-tank",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-transportation-tank",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Tank",
+              "Kelas tunggangan: Kuat",
+              "Durability +1",
+              "Weapon diperoleh: Tank"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        }
+      ]
+    },
+    {
+      "id": "rider-mount-mecha-giant",
+      "label": "Naik Apa? — Mecha & Raksasa",
+      "outcomeCount": 12,
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "rider-mecha-giant-mecha-kardus",
+          "label": "Mecha Kardus",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mecha-kardus",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": {
+            "id": "machine-mecha-cardboard",
+            "label": "Mecha Kardus",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mecha Kardus",
+              "Kelas tunggangan: Lemah",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-mecha-galon",
+          "label": "Mecha Galon",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mecha-galon",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": {
+            "id": "machine-mecha-water-jug",
+            "label": "Mecha Galon",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mecha Galon",
+              "Kelas tunggangan: Lemah",
+              "Strength +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-mecha-gerobak-bakso",
+          "label": "Mecha Gerobak Bakso",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mecha-gerobak-bakso",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": {
+            "id": "machine-mecha-bakso-cart",
+            "label": "Mecha Gerobak Bakso",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mecha Gerobak Bakso",
+              "Kelas tunggangan: Lemah",
+              "Strength +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-mecha-odong-odong",
+          "label": "Mecha Odong-Odong",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mecha-odong-odong",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": {
+            "id": "machine-mecha-odong-odong",
+            "label": "Mecha Odong-Odong",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mecha Odong-Odong",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-mecha-probe",
+          "label": "Mecha Probe",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mecha-probe",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": {
+            "id": "machine-mecha-mecha-probe",
+            "label": "Mecha Probe",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mecha Probe",
+              "Kelas tunggangan: Sedang",
+              "Fight +1",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-titan-attack-on-titan",
+          "label": "Titan (Attack on Titan)",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-titan-attack-on-titan",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 2,
+              "sourceEffectKey": "stat:strength"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Titan (Attack on Titan)",
+              "Kelas tunggangan: Sedang",
+              "Strength +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-zaku-ii",
+          "label": "Zaku II",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-zaku-ii",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Zaku II",
+              "Kelas tunggangan: Sedang",
+              "Fight +1",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-hulkbuster",
+          "label": "Hulkbuster",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-hulkbuster",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Hulkbuster",
+              "Kelas tunggangan: Sedang",
+              "Strength +1",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-mecha-giant-mechagodzilla",
+          "label": "Mechagodzilla",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-mechagodzilla",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-mecha-giant-mechagodzilla",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-mecha-giant-mechagodzilla",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": {
+            "id": "machine-mecha-mechagodzilla",
+            "label": "Mechagodzilla",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Mechagodzilla",
+              "Kelas tunggangan: Kuat",
+              "Strength +1",
+              "Weapon diperoleh: Mechagodzilla"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-mecha-giant-rx-78-2-gundam",
+          "label": "RX-78-2 Gundam",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-rx-78-2-gundam",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-mecha-giant-rx-78-2-gundam",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-mecha-giant-rx-78-2-gundam",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": {
+            "id": "machine-mecha-rx78",
+            "label": "RX-78-2 Gundam",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: RX-78-2 Gundam",
+              "Kelas tunggangan: Kuat",
+              "Fight +1",
+              "Weapon diperoleh: RX-78-2 Gundam"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-mecha-giant-evangelion-unit-01",
+          "label": "Evangelion Unit-01",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-evangelion-unit-01",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-mecha-giant-evangelion-unit-01",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-mecha-giant-evangelion-unit-01",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": {
+            "id": "anime-mecha-eva01",
+            "label": "Evangelion Unit-01",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Evangelion Unit-01",
+              "Kelas tunggangan: Kuat",
+              "Fight +1",
+              "Weapon diperoleh: Evangelion Unit-01"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-mecha-giant-gurren-lagann",
+          "label": "Gurren Lagann",
+          "categoryId": "mecha-giant",
+          "mountKind": "piloted-or-ridden-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-mecha-giant-gurren-lagann",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "strength",
+              "amount": 1,
+              "sourceEffectKey": "stat:strength"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-mecha-giant-gurren-lagann",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "strength",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-mecha-giant-gurren-lagann",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": {
+            "id": "machine-mecha-gurren-lagann",
+            "label": "Gurren Lagann",
+            "sourceBoundary": "Identity/display reference only; no source Race/Anime/Machine event or reward inheritance."
+          },
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Gurren Lagann",
+              "Kelas tunggangan: Kuat",
+              "Strength +1",
+              "Weapon diperoleh: Gurren Lagann"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        }
+      ]
+    },
+    {
+      "id": "rider-mount-unusual",
+      "label": "Naik Apa? — Tunggangan Ajaib & Absurd",
+      "outcomeCount": 12,
+      "allowModifiers": false,
+      "outcomes": [
+        {
+          "id": "rider-unusual-sapu-lidi",
+          "label": "Sapu Lidi",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-sapu-lidi",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Sapu Lidi",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-keset-terbang",
+          "label": "Keset Terbang",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-keset-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Keset Terbang",
+              "Kelas tunggangan: Lemah",
+              "Speed +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-kursi-plastik",
+          "label": "Kursi Plastik",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-kursi-plastik",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Kursi Plastik",
+              "Kelas tunggangan: Lemah",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-ban-pelampung",
+          "label": "Ban Pelampung",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "weak",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-ban-pelampung",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Ban Pelampung",
+              "Kelas tunggangan: Lemah",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-sapu-terbang",
+          "label": "Sapu Terbang",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-sapu-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Sapu Terbang",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-karpet-terbang",
+          "label": "Karpet Terbang",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-karpet-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Karpet Terbang",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-awan-kinton",
+          "label": "Awan Kinton",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-awan-kinton",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 2,
+              "sourceEffectKey": "stat:speed"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Awan Kinton",
+              "Kelas tunggangan: Sedang",
+              "Speed +2"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-peti-mati-terbang",
+          "label": "Peti Mati Terbang",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "moderate",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-peti-mati-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            },
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Peti Mati Terbang",
+              "Kelas tunggangan: Sedang",
+              "Speed +1",
+              "Durability +1"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 2,
+          "countsAsWeapon": false
+        },
+        {
+          "id": "rider-unusual-papan-portal",
+          "label": "Papan Portal",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-papan-portal",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "speed",
+              "amount": 1,
+              "sourceEffectKey": "stat:speed"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-unusual-papan-portal",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-unusual-papan-portal",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Papan Portal",
+              "Kelas tunggangan: Kuat",
+              "Speed +1",
+              "Weapon diperoleh: Papan Portal"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-unusual-singgasana-terbang",
+          "label": "Singgasana Terbang",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-singgasana-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "intelligence",
+              "amount": 1,
+              "sourceEffectKey": "stat:intelligence"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-unusual-singgasana-terbang",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "intelligence",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-unusual-singgasana-terbang",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Singgasana Terbang",
+              "Kelas tunggangan: Kuat",
+              "Intelligence +1",
+              "Weapon diperoleh: Singgasana Terbang"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-unusual-kereta-hantu",
+          "label": "Kereta Hantu",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-kereta-hantu",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "fight",
+              "amount": 1,
+              "sourceEffectKey": "stat:fight"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-unusual-kereta-hantu",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "fight",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-unusual-kereta-hantu",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Kereta Hantu",
+              "Kelas tunggangan: Kuat",
+              "Fight +1",
+              "Weapon diperoleh: Kereta Hantu"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        },
+        {
+          "id": "rider-unusual-kapal-langit",
+          "label": "Kapal Langit",
+          "categoryId": "unusual",
+          "mountKind": "unusual-mount",
+          "strengthBand": "strong",
+          "baseWeight": 1,
+          "probability": 0.08333333333333333,
+          "overallBaseProbability": 0.020833333333333332,
+          "effects": [
+            {
+              "type": "register-owned-mount",
+              "definitionId": "rider-unusual-kapal-langit",
+              "definitionFile": "content/rider-events-design.json",
+              "sourceEffectKey": "mount"
+            },
+            {
+              "type": "numeric-stat-modifier",
+              "stat": "durability",
+              "amount": 1,
+              "sourceEffectKey": "stat:durability"
+            },
+            {
+              "type": "grant-weapon",
+              "definitionId": "rider-weapon-unusual-kapal-langit",
+              "definitionFile": "content/rider-events-design.json",
+              "linkedMountSource": "same-result-mount-instance",
+              "sourceEffectKey": "weapon",
+              "masteryPolicy": "recipient-per-weapon-normal",
+              "masteryStatus": "pending",
+              "surviveMainNone": true
+            }
+          ],
+          "ownerStatModifiers": [
+            {
+              "stat": "durability",
+              "amount": 1
+            }
+          ],
+          "ownerPowerRefs": [],
+          "ownerWeaponRefs": [
+            {
+              "definitionId": "rider-weapon-unusual-kapal-langit",
+              "definitionFile": "content/rider-events-design.json"
+            }
+          ],
+          "referenceOnly": null,
+          "resultContext": {
+            "facts": [
+              "Tunggangan: Kapal Langit",
+              "Kelas tunggangan: Kuat",
+              "Durability +1",
+              "Weapon diperoleh: Kapal Langit"
+            ],
+            "futureFactsExcluded": true
+          },
+          "statPointTotal": 1,
+          "countsAsWeapon": true
+        }
+      ]
+    }
+  ],
+  "contracts": {
+    "order": "Actual Rider -> one category spin/reaction -> one specific mount spin -> atomically register one mount, its exact numeric stat buff and (strong only) linked weapon -> actual result reaction -> Backstory.",
+    "probability": "Four equal categories: 25% each. Twelve equal outcomes in the selected category: 1/12 each. Every named mount has unconditional 1/48 probability. Four entries in each strength band give 1/3 per band; no extra strength-band draw.",
+    "quantity": "Exactly one mount; no count, success/taming, strength-band, model, or extra subtype selector.",
+    "ownership": "Mount is an owned separate entity linked to the Rider source. Owner race/body/Size stay separate; Titan is an external mount, not owner Titan transformation. Mecha is a ride/pilot entity, not Machine race/body conversion. Animals do not grant Taming Power or copy a Tamer event.",
+    "effects": "Weak: +1 total numeric main-stat point. Moderate: +2 total numeric main-stat points. Strong: +1 total numeric main-stat point plus one weapon record for that same selected mount. Apply only the selected row, not stacked strength bands. No automatic Power grant or mastery rank bonus.",
+    "capability": "Detailed animal traits, mounted functions/loadouts, operator/crew, fuel/ammunition, range, body-fit and control profiles remain configuration. Names do not grant all franchise forms/abilities or source-race events. Gustav Cannon is a heavy mounted platform; operation/crew must be defined, not inferred from its label.",
+    "body": "Owner retains the one global Size spin. Missing mount-fit/embodiment rules require configuration, not an inferred enlargement, owner transformation or second owner Size draw.",
+    "ledger": "Freeze both pools, odds, version, mount recipe, exact stat allocation and strong weapon reference before drawing. Commit mount/buff/linked weapon atomically using one result-source ledger key and distinct effect keys; replay restores the same records without another spin, duplicate modifier or second mount/weapon.",
+    "reaction": "Append actual category, mount, band, declared numeric buff and strong-only weapon grant. Do not predict future base stats/mastery/Enchant. Short Gen Z captions; no joke explanation or new funny-result tag inferred from a name.",
+    "return": "Return to Backstory after both actual child-spin reactions and mount registration; preserve earlier inventory and any caller continuation.",
+    "stat": "Apply the frozen exact per-mount allocation once through source-keyed modifiers. +1/+2 means the total across the five main stats, not +1/+2 to every stat. Main-stat bases remain immutable; derive final values from all source modifiers without numeric clamps. Band total is metadata, not an additional buff.",
+    "weapon": "All sixteen strong outcomes count as one owned weapon each when actually selected, including animals and unusual mounts. Link weapon instance to the same mount instance; no second entity or weapon acquisition selector. Retain after main Weapon None and resolve its one ordinary per-instance mastery at the normal Weapon stage. Effective Master or above opens compatible Enchant under existing rules; compatibility profiles remain configuration. Weak/moderate mounts grant no weapon or weapon mastery."
+  },
+  "powers": [],
+  "weapons": [
+    {
+      "id": "rider-weapon-animal-gajah",
+      "label": "Gajah",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-animal-gajah",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-animal-badak",
+      "label": "Badak",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-animal-badak",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-animal-t-rex",
+      "label": "T-Rex",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-animal-t-rex",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-animal-garuda",
+      "label": "Garuda",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-animal-garuda",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-transportation-fighter-jet",
+      "label": "Fighter Jet",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-transportation-fighter-jet",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-transportation-gustav-cannon",
+      "label": "Gustav Cannon",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-transportation-gustav-cannon",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-transportation-warship",
+      "label": "Warship",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-transportation-warship",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-transportation-tank",
+      "label": "Tank",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-transportation-tank",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-mecha-giant-mechagodzilla",
+      "label": "Mechagodzilla",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-mecha-giant-mechagodzilla",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-mecha-giant-rx-78-2-gundam",
+      "label": "RX-78-2 Gundam",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-mecha-giant-rx-78-2-gundam",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-mecha-giant-evangelion-unit-01",
+      "label": "Evangelion Unit-01",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-mecha-giant-evangelion-unit-01",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-mecha-giant-gurren-lagann",
+      "label": "Gurren Lagann",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-mecha-giant-gurren-lagann",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-unusual-papan-portal",
+      "label": "Papan Portal",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-unusual-papan-portal",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-unusual-singgasana-terbang",
+      "label": "Singgasana Terbang",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-unusual-singgasana-terbang",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-unusual-kereta-hantu",
+      "label": "Kereta Hantu",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-unusual-kereta-hantu",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    },
+    {
+      "id": "rider-weapon-unusual-kapal-langit",
+      "label": "Kapal Langit",
+      "kind": "mount-weapon",
+      "linkedMountDefinitionId": "rider-unusual-kapal-langit",
+      "definitionFile": "content/rider-events-design.json",
+      "contentStatus": "Selected strong Rider mount treated as one weapon by explicit user rule.",
+      "masteryTiming": "normal-weapon-stage",
+      "masteryScope": "per-owned-weapon-instance",
+      "enchantmentEligibility": {
+        "minimumMastery": "Master",
+        "requiresCompatibilityProfile": true
+      },
+      "surviveMainNone": true,
+      "scope": "Weapon record links the same owned mount; no second mount, copied source-race reward, automatic full loadout or owner transformation."
+    }
+  ],
+  "runtimeInterface": {
+    "status": "design-only; pure event helper not yet implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "editable exact forty-eight-entry roster and strength-band placement and exact per-mount stat allocation",
+    "intrinsic mount function/loadout/control/crew and limitations",
+    "mount body-size and actual owner/mount compatibility profiles",
+    "final Archetype body/role fit and boost classification",
+    "runtime event planner/resolver and owned-mount persistence adapter",
+    "strong mount-weapon control/enchantment compatibility profiles"
+  ],
+  "rewardProfiles": {
+    "weak": {
+      "totalMainStatPoints": 1,
+      "countsAsWeapon": false
+    },
+    "moderate": {
+      "totalMainStatPoints": 2,
+      "countsAsWeapon": false
+    },
+    "strong": {
+      "totalMainStatPoints": 1,
+      "countsAsWeapon": true
+    }
+  },
+  "retiredProfiles": [
+    {
+      "version": "rider/0.1.0",
+      "reference": "reference/rider-retired-profile-v1.json",
+      "active": false,
+      "reason": "Prior mount-only reward design superseded for new results. Frozen older journals keep original rewards; never retroactively add stat buffs or weapon mastery."
+    }
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

@@ -1,0 +1,708 @@
+{
+  "schemaVersion": "roda-kekacauan-divine-followups/1.0",
+  "version": "divine-followups/1.0.0",
+  "updatedDate": "2026-10-11",
+  "scope": "All12 existing Divine recipes only",
+  "authority": "User delegates follow-up event mechanisms for the preceding12 Divine effects.",
+  "designReady": true,
+  "runtimeReady": false,
+  "status": "Structured algorithm and editable narration; persistent/video/combat adapters are not implemented.",
+  "mainStatKeys": [
+    "strength",
+    "speed",
+    "durability",
+    "intelligence",
+    "fight"
+  ],
+  "sharedLifecycle": [
+    "Read completed actor snapshot and classify child recipe eligibility before the effect draw.",
+    "Keep the confirmed seven-root weights; normalize only the selected branch eligible effect leaves.",
+    "Persist the actual effect result and react using completed facts.",
+    "Run recipe steps sequentially, freeze only the next required live pool after its dependencies commit.",
+    "Persist each selection and effect under a stable source key; react before the next spin.",
+    "Complete all required children and any first-late-power mastery gate, then return to saved Title continuation.",
+    "After Title/mandatory late events, settle mastery for the ordinary Enchant gate and complete Enchant children; final card includes all accumulated source-once modifiers/hooks."
+  ],
+  "planningInterface": {
+    "name": "planDivineFollowup",
+    "implemented": false,
+    "inputs": [
+      "runId",
+      "characterId",
+      "eventInvocationId",
+      "recipeId",
+      "committedActorSnapshot",
+      "mainStatResolutionProofs",
+      "activeInventory",
+      "sharedMasteryProof",
+      "weaknessStates",
+      "modifierLedger",
+      "savedContinuation"
+    ],
+    "returns": [
+      "ready-next-step",
+      "fixed-reveal-no-RNG",
+      "await-actual-child",
+      "complete-return-to-title",
+      "needs_configuration"
+    ],
+    "sourceKey": "[runId,characterId,eventInvocationId,recipeId,stepId]",
+    "exactReplay": "Reuse frozen plans/receipts and no new RNG, charge consumption, bonus, Lucky or funny hit.",
+    "staleSnapshot": "Revalidate frozen proof/version atomically before commit; do not silently redraw or retarget."
+  },
+  "targetSelectionContract": {
+    "basePolicy": "uniform-among-eligible-targets",
+    "defaultWeight": 1,
+    "equalizer": "Uniform after hard guards; target wheels are already equal by default.",
+    "noTarget": "Remove recipe before effect draw; unknown proof/configuration is needs_configuration, not absence.",
+    "oneTarget": "Reveal target directly; no RNG, no actual spin, no sampled numeric/funny hit.",
+    "manyTargets": "One segment per distinct target instance/ID and one actual target draw.",
+    "numericBoundsApply": false,
+    "boundsExplanation": "Stat/mastery5%..25% bounds apply actual raw tier draws only; target/effect wheels are unrestricted.",
+    "sourceProof": "Only committed owned targets, never future grants, discarded weapon labels or narrator guesses.",
+    "targetResultKind": "selection; no numeric raw result and no inherited funny flag from an already-owned item.",
+    "newTargetWheelFunnyResult": false,
+    "presentation": "Anticlockwise; target labels use canonical order or live inventory order, not invented strength ranking."
+  },
+  "effectSelectionContract": {
+    "default": "Four candidate recipes per branch, weight1 each before live hard guards.",
+    "eligible": "Check owned target/state proofs from this complete snapshot before drawing the effect.",
+    "missingTarget": "Remove only that recipe, normalize this child branch; preserve parent root probabilities.",
+    "unknownProof": "Return needs_configuration before selection; do not silently remove a potentially eligible recipe.",
+    "singleton": "Direct reveal and execute sole eligible recipe; no RNG or sampled spin.",
+    "empty": "needs_configuration; never fallback to another root or None.",
+    "narration": "One completed effect reveal/reaction even when selected deterministically."
+  },
+  "chargeUseContract": {
+    "registeredAt": "Divine result, not consumed during generation or character image display",
+    "applies": "Add1 to the corresponding effective combat stat for exactly one qualifying resolved action.",
+    "thinShield": "First actual incoming hit that reaches the durability calculation; misses/cancelled actions do not consume.",
+    "reserveBreath": "First actual dodge attempt that reaches the dodge calculation; success or failure consumes.",
+    "briefFocus": "First actual outgoing attack that reaches the Fight calculation; success or miss consumes.",
+    "consumption": "Atomic action receipt with trait source key and distinct actionId; charges1->0 once.",
+    "expiry": "No extra lifespan/stack/refresh wheel; unused trait remains pending.",
+    "card": "Separate single-use trait, not an always-on stat increase or owned power."
+  },
+  "secondChanceContract": {
+    "status": "authored-followup-policy; runtime adapter pending",
+    "target": "Lowest eligible retained raw before bonuses; uniform ties or direct reveal for one.",
+    "original": "Immutable original resolution, multiplier decision, copies and raw history remain unchanged.",
+    "conditionalOdds": "Reuse ordinary stat planner with a fresh stable late invocation and current committed lore context; no self-reward bonus input.",
+    "ordinaryFormula": "min(2,max(0,newRetainedRaw-oldRetainedRaw))",
+    "comparisonFormula": "min(2,max(0,newResolution.baseValue-originalResolution.baseValue))",
+    "formulaExplanation": "Ordinary/High Roller/All In sampled base equals retained raw. Double/Nothing uses its separately resolved derived base; this refines the earlier raw-only shorthand for that mode.",
+    "resilient": "If this new first attempt<=5, one retry using the same frozen late pool; retain the higher raw, at most two attempts.",
+    "doubleOrNothing": "After retaining the new raw, run its separate50:50 Double/Nothing wheel once. Compare new derived base to original derived base, refund0..2; Nothing cannot reduce the original stat.",
+    "highRoller": "Keep normal four extreme raw sectors0/1/8/9 and existing bounds; do not invent mid-tier sectors.",
+    "allIn": "Only the original actual Strength resolution is eligible; other four copied categories have no independent retained draw. New reward is a Strength-only final modifier, not a new copy across all five.",
+    "luckyNumber": "Each genuinely sampled raw attempt, including Resilient retry, can count once under its spinId; target-selection/Double decision/bonus/replay does not count.",
+    "pawn": "Send new retained raw observation to the same target category; preserve original evidence and count distinct categories, not each attempt as a new category. Existing evolution reward is source-once.",
+    "zero": "Complete with0 bonus when no improvement; no recursive retry or fallback reward.",
+    "budget": "Cap only this event direct refund at2; existing actual Lucky/Pawn rewards remain independent final sources."
+  },
+  "latePowerMasteryContract": {
+    "powerAlreadyOwned": "Reuse one existing settled shared mastery; no second mastery spin.",
+    "godGuarantee": "Actual qualifying fixed9 shared mastery remains fixed9 without RNG; final modifiers still apply.",
+    "firstPower": "If ordinary earlier gate skipped because inventory was empty, request exactly one normal shared mastery resolution immediately after this grant, using normal stat odds/Resilient/Lucky rules.",
+    "noMasteryEnchant": true,
+    "duplicate": "Exclude owned canonical ordinary-mode powers before Gift; no duplicate reward or thematic source package.",
+    "slotKey": "One shared [runId,characterId,power-mastery] gate, reused by all later grants."
+  },
+  "narrationContract": {
+    "sequence": [
+      "effect-reveal",
+      "reaction",
+      "child-result-if-required",
+      "reaction",
+      "pending-effect-summary"
+    ],
+    "facts": "Only completed result IDs, selected target, registered pending effect and bounded amount.",
+    "futureUnknown": true,
+    "fixedRevealIsNotSpin": true,
+    "memes": "Choose reaction footage later from an approved media library; no new media assets or forecasts here.",
+    "finalBonusTiming": "Describe registered +1/+2; do not fabricate a settled total before final phase."
+  },
+  "flows": [
+    {
+      "id": "small-blessing",
+      "label": "Sentuhan Berkah",
+      "branchId": "divine-low",
+      "status": "user-delegated-followup-design",
+      "eligibility": "five-main-stat-targets-present",
+      "steps": [
+        {
+          "id": "small-blessing-target",
+          "operation": "select-target",
+          "wheelId": "divine-small-blessing-target",
+          "label": "Stat mana yang diberkahi?",
+          "pool": "all-five-main-stats",
+          "saveAs": "selectedStat",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "stat-point",
+          "operation": "register-final-modifier",
+          "target": "$selectedStat",
+          "amount": 1,
+          "sourceKeySuffix": "stat-point",
+          "calculation": "final-only"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{selectedStat} +1. Lumayan.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      }
+    },
+    {
+      "id": "thin-shield",
+      "label": "Perisai Tipis",
+      "branchId": "divine-low",
+      "status": "user-delegated-followup-design",
+      "eligibility": "main-stat-system-present",
+      "steps": [
+        {
+          "id": "register-charge",
+          "operation": "register-conditional-stat-trait",
+          "stat": "durability",
+          "amount": 1,
+          "charges": 1,
+          "trigger": "first-resolved-incoming-hit",
+          "consumption": "chargeUseContract",
+          "changesAlwaysOnFinalStats": false,
+          "isOwnedPower": false,
+          "schedulesPowerMastery": false,
+          "sourceKeySuffix": "conditional-trait"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "Perisai sekali pakai.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "childDraws": 0
+    },
+    {
+      "id": "reserve-breath",
+      "label": "Napas Cadangan",
+      "branchId": "divine-low",
+      "status": "user-delegated-followup-design",
+      "eligibility": "main-stat-system-present",
+      "steps": [
+        {
+          "id": "register-charge",
+          "operation": "register-conditional-stat-trait",
+          "stat": "speed",
+          "amount": 1,
+          "charges": 1,
+          "trigger": "first-resolved-dodge-attempt",
+          "consumption": "chargeUseContract",
+          "changesAlwaysOnFinalStats": false,
+          "isOwnedPower": false,
+          "schedulesPowerMastery": false,
+          "sourceKeySuffix": "conditional-trait"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "Satu dodge lagi.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "childDraws": 0
+    },
+    {
+      "id": "brief-focus",
+      "label": "Fokus Sesaat",
+      "branchId": "divine-low",
+      "status": "user-delegated-followup-design",
+      "eligibility": "main-stat-system-present",
+      "steps": [
+        {
+          "id": "register-charge",
+          "operation": "register-conditional-stat-trait",
+          "stat": "fight",
+          "amount": 1,
+          "charges": 1,
+          "trigger": "first-resolved-outgoing-attack",
+          "consumption": "chargeUseContract",
+          "changesAlwaysOnFinalStats": false,
+          "isOwnedPower": false,
+          "schedulesPowerMastery": false,
+          "sourceKeySuffix": "conditional-trait"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "Sekali fokus. Jangan meleset.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "childDraws": 0
+    },
+    {
+      "id": "targeted-blessing",
+      "label": "Berkah Terarah",
+      "branchId": "divine-medium",
+      "status": "user-delegated-followup-design",
+      "eligibility": "five-completed-main-stat-bases-present",
+      "steps": [
+        {
+          "id": "find-lowest",
+          "operation": "build-lowest-target-pool",
+          "pool": "all-five-main-stats",
+          "comparison": "current-validated-derived-base-before-additive-bonuses",
+          "saveAs": "lowestStats"
+        },
+        {
+          "id": "targeted-blessing-target",
+          "operation": "select-target",
+          "wheelId": "divine-targeted-blessing-target",
+          "label": "Stat terendah mana yang dibantu?",
+          "pool": "$lowestStats",
+          "saveAs": "selectedStat",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "stat-point",
+          "operation": "register-final-modifier",
+          "target": "$selectedStat",
+          "amount": 1,
+          "sourceKeySuffix": "stat-point",
+          "calculation": "final-only"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{selectedStat} diselamatin dikit.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      }
+    },
+    {
+      "id": "expert-touch",
+      "label": "Sentuhan Ahli",
+      "branchId": "divine-medium",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-active-owned-weapon-with-valid-mastery-base",
+      "steps": [
+        {
+          "id": "expert-touch-target",
+          "operation": "select-target",
+          "wheelId": "divine-expert-touch-target",
+          "label": "Senjata mana yang dapet berkah?",
+          "pool": "active-owned-weapon-instances",
+          "saveAs": "selectedWeapon",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "weapon-mastery-point",
+          "operation": "register-final-modifier",
+          "target": "$selectedWeapon.weapon-mastery",
+          "amount": 1,
+          "sourceKeySuffix": "weapon-mastery-point",
+          "calculation": "final-only"
+        },
+        {
+          "id": "enchant-reminder",
+          "operation": "record-final-gate-dependency",
+          "gate": "ordinary-weapon-enchant",
+          "immediateSpin": false,
+          "threshold": 5,
+          "requires": "active-compatible-unused-enchant-slot"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{selectedWeapon} dapet les privat.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "targetGuards": [
+        "Discarded or inactive weapons, armor and cosmetic-only mounts are excluded.",
+        "A weapon label alone is not proof of a valid owned weapon/mastery instance."
+      ]
+    },
+    {
+      "id": "resonance",
+      "label": "Resonansi",
+      "branchId": "divine-medium",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-active-owned-power-and-valid-shared-mastery-base",
+      "steps": [
+        {
+          "id": "shared-mastery-point",
+          "operation": "register-final-modifier",
+          "target": "shared-power-mastery",
+          "amount": 1,
+          "sourceKeySuffix": "shared-mastery-point",
+          "calculation": "final-only"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "Semua power makin kebaca.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "childDraws": 0,
+      "scope": "One shared bonus, including later owned powers at final; do not add once per power.",
+      "god": "Fixed base9 is preserved; this final modifier may produce10 or higher; no new mastery roll."
+    },
+    {
+      "id": "purification",
+      "label": "Purification",
+      "branchId": "divine-medium",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-active-owned-general-receh-weakness",
+      "steps": [
+        {
+          "id": "purification-target",
+          "operation": "select-target",
+          "wheelId": "divine-purification-target",
+          "label": "Weakness mana yang dicabut?",
+          "pool": "unique-active-owned-receh-weakness-ids",
+          "saveAs": "selectedWeakness",
+          "selectionPolicyRef": "targetSelectionContract",
+          "allowedIds": [
+            "stage-fright",
+            "itchy-groin",
+            "body-odor",
+            "empty-wallet",
+            "always-hungry",
+            "sleepy",
+            "masuk-angin",
+            "toilet-break",
+            "hiccups",
+            "tight-shoes"
+          ],
+          "definitionFile": "weakness-wheel-design.json"
+        },
+        {
+          "id": "deactivate",
+          "operation": "deactivate-selected-canonical-weakness",
+          "target": "$selectedWeakness",
+          "sourceKeySuffix": "purification",
+          "keepDefinitionAndProvenance": true,
+          "preserveOtherWeaknesses": true,
+          "preserveEarlierFunnyHooks": true
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{selectedWeakness} dicabut.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "targetGuards": [
+        "Ten receh canonical definitions only; deduplicate multiple grant provenances.",
+        "No Cursed weakness, Rage, Overload or numeric debuff ledger deletion.",
+        "Only this current active weakness state is disabled; future independent grants keep their own source history."
+      ]
+    },
+    {
+      "id": "divine-blessing",
+      "label": "Berkah Ganda",
+      "branchId": "divine-high",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-two-distinct-main-stat-targets",
+      "steps": [
+        {
+          "id": "double-blessing-first",
+          "operation": "select-target",
+          "wheelId": "divine-double-blessing-first",
+          "label": "Berkah pertama ke stat mana?",
+          "pool": "all-five-main-stats",
+          "saveAs": "firstStat",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "double-blessing-second",
+          "operation": "select-target",
+          "wheelId": "divine-double-blessing-second",
+          "label": "Berkah kedua ke stat mana?",
+          "pool": "all-five-main-stats-except-firstStat",
+          "saveAs": "secondStat",
+          "selectionPolicyRef": "targetSelectionContract",
+          "excludeSavedTarget": "firstStat",
+          "freezeOnlyAfter": "first-selection-receipt"
+        },
+        {
+          "id": "first-stat-point",
+          "operation": "register-final-modifier",
+          "target": "$firstStat",
+          "amount": 1,
+          "sourceKeySuffix": "first-stat-point",
+          "calculation": "final-only"
+        },
+        {
+          "id": "second-stat-point",
+          "operation": "register-final-modifier",
+          "target": "$secondStat",
+          "amount": 1,
+          "sourceKeySuffix": "second-stat-point",
+          "calculation": "final-only"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{firstStat} sama {secondStat}. Rezeki dobel.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "distinctTargets": true,
+      "totalDirectStatPoints": 2
+    },
+    {
+      "id": "second-chance",
+      "label": "Second Chance",
+      "branchId": "divine-high",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-actual-nonguaranteed-main-stat-retained-raw-below9",
+      "steps": [
+        {
+          "id": "find-lowest",
+          "operation": "build-lowest-target-pool",
+          "pool": "actual-completed-nonguaranteed-main-stat-resolutions-with-retained-raw-below9",
+          "comparison": "retained-raw-before-bonuses",
+          "exclude": [
+            "fixed-guarantee",
+            "all-in-copy"
+          ],
+          "saveAs": "lowestEligibleStats"
+        },
+        {
+          "id": "second-chance-target",
+          "operation": "select-target",
+          "wheelId": "divine-second-chance-target",
+          "label": "Stat mana yang dikasih kesempatan kedua?",
+          "pool": "$lowestEligibleStats",
+          "saveAs": "selectedStat",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "late-stat-attempt",
+          "operation": "invoke-late-stat-resolution",
+          "target": "$selectedStat",
+          "adapterContractRef": "secondChanceContract",
+          "saveAs": "newResolution",
+          "doNotOverwrite": "original-main-stat-resolution"
+        },
+        {
+          "id": "bounded-difference",
+          "operation": "compute-capped-positive-difference",
+          "formulaRef": "secondChanceContract.comparisonFormula",
+          "saveAs": "recoveredPoints"
+        },
+        {
+          "id": "second-chance-point",
+          "operation": "register-final-modifier",
+          "target": "$selectedStat",
+          "amount": "$recoveredPoints",
+          "sourceKeySuffix": "second-chance-point",
+          "calculation": "final-only"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{selectedStat}: kesempatan kedua, bonus {recoveredPoints}.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "zeroBonusCaption": "Kesempatan kedua. Hasilnya gitu lagi.",
+      "totalDirectStatPointsMaximum": 2
+    },
+    {
+      "id": "divine-gift",
+      "label": "Divine Gift",
+      "branchId": "divine-high",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-unowned-canonical-Divine-power-Tier1-to3",
+      "steps": [
+        {
+          "id": "gift-power",
+          "operation": "invoke-universal-themed-power-wheel",
+          "wheelId": "power-divine",
+          "callerHardFilter": {
+            "allowedTiers": [
+              1,
+              2,
+              3
+            ],
+            "candidateIds": [
+              "holy-spark",
+              "sacred-sense",
+              "blessed-water",
+              "comforting-prayer",
+              "healing-touch",
+              "purify",
+              "holy-shield",
+              "holy-arrow",
+              "sacred-flame",
+              "sanctuary",
+              "sacred-binding",
+              "holy-constructs"
+            ],
+            "excludeOwned": true,
+            "excludeNone": true
+          },
+          "scope": "this-invocation-only",
+          "drawCount": 1,
+          "canonicalDefinitionFile": "universal-power-wheels-design.json",
+          "freeze": "after-live-ownership-validation",
+          "saveAs": "grantedPower",
+          "singletonPolicy": "direct-canonical-grant-and-reveal-without-RNG-or-actual-spin",
+          "onExhaustionAfterFreeze": "needs_configuration-no-substitute-reward"
+        },
+        {
+          "id": "mastery-gate",
+          "operation": "resolve-recipient-shared-power-mastery-gate",
+          "contractRef": "latePowerMasteryContract",
+          "appliesTo": "$grantedPower"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "{grantedPower} masuk build.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "powerPool": "Exactly twelve canonical Divine Tier1–3 definitions before ownership filtering; equal eligible leaves, no separate tier roll."
+    },
+    {
+      "id": "restoration",
+      "label": "Restoration",
+      "branchId": "divine-high",
+      "status": "user-delegated-followup-design",
+      "eligibility": "at-least-one-active-uncompensated-negative-main-stat-point",
+      "steps": [
+        {
+          "id": "restoration-first",
+          "operation": "select-target",
+          "wheelId": "divine-restoration-first",
+          "label": "Debuff mana yang dipulihkan?",
+          "pool": "active-uncompensated-negative-main-stat-ledger-entries",
+          "saveAs": "firstPenalty",
+          "selectionPolicyRef": "targetSelectionContract"
+        },
+        {
+          "id": "recover-first",
+          "operation": "allocate-negative-compensation",
+          "penalty": "$firstPenalty",
+          "amount": "min(2, uncompensatedMagnitude(firstPenalty))",
+          "maxBudget": 2,
+          "saveAs": "firstRecovery",
+          "sourceKeySuffix": "first-refund"
+        },
+        {
+          "id": "rebuild-second-pool",
+          "operation": "conditional-target-selection",
+          "condition": "2-firstRecovery.amount>0 AND another-uncompensated-entry-exists",
+          "targetWheel": {
+            "id": "restoration-second",
+            "operation": "select-target",
+            "wheelId": "divine-restoration-second",
+            "label": "Masih ada satu poin untuk debuff mana?",
+            "pool": "remaining-uncompensated-negative-main-stat-entries-except-firstPenalty",
+            "saveAs": "secondPenalty",
+            "selectionPolicyRef": "targetSelectionContract",
+            "excludeSavedTarget": "firstPenalty",
+            "freezeOnlyAfter": "first-refund-receipt"
+          },
+          "elseAction": "complete-with-actual-first-recovery"
+        },
+        {
+          "id": "recover-second",
+          "operation": "conditional-allocate-negative-compensation",
+          "condition": "secondPenalty-selected",
+          "penalty": "$secondPenalty",
+          "amount": "min(2-firstRecovery.amount, uncompensatedMagnitude(secondPenalty))",
+          "sourceKeySuffix": "second-refund"
+        }
+      ],
+      "completion": {
+        "persist": "atomic-source-once-event-receipt",
+        "reaction": "after-each-actual-selection-or-direct-grant",
+        "returnTo": "title"
+      },
+      "narrator": {
+        "exampleTemplate": "Debuff dipulihkan {totalRecovery} poin.",
+        "facts": "committed-results-only",
+        "futureResultsUnknown": true,
+        "templatesAreEditable": true
+      },
+      "totalDirectStatPointsMaximum": 2,
+      "targetGuards": [
+        "Each candidate key is [negativeSourceKey, statKey], not one segment per lost point.",
+        "Uncompensated magnitude subtracts only linked earlier compensation receipts.",
+        "Always-on negative main-stat modifiers only; exclude mastery, conditional weakness, raw0 and base transforms.",
+        "Keep original negative entries; append linked positive final-only refund. Never refund the same lost point twice."
+      ]
+    }
+  ],
+  "optionalMethods": "Existing pity and cost-before-reward suggestions remain inactive.",
+  "remainingImplementation": [
+    "Persistent snapshot/atomic receipt executor",
+    "Typed late-stat observer adapter",
+    "Combat action/charge adapter",
+    "Narration/meme/video scheduler",
+    "Title design remains separate"
+  ]
+}

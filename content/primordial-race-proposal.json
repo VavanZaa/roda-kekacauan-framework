@@ -1,0 +1,426 @@
+{
+  "schemaVersion": "roda-kekacauan-optional-race/0.4",
+  "id": "primordial-race-proposal",
+  "updatedDate": "2026-10-10",
+  "status": "explicitly-approved-package-design-migrated-to-canonical-module",
+  "approved": true,
+  "enabled": true,
+  "runtimeReady": false,
+  "authority": {
+    "userRequest": "Primordial means an entity at the beginning that was not created by another god. Deliberate self-creation is not required. Retain old-legends preference and current-Indonesian-religion exclusion.",
+    "scope": "User assigns race6/Champion3 and delegates lore recipes; canonical working roster and design integration now recorded. Runtime/body profiles remain configuration.",
+    "authored": "Candidate selection, classifications and possible game themes are assistant curation; myth facts are source-qualified."
+  },
+  "label": "Primordial (Makhluk Pertama)",
+  "concept": "Entitas awal penciptaan yang tidak diciptakan atau diperanakkan oleh dewa lain dalam versi legenda yang dipilih. Tidak wajib sengaja menciptakan diri sendiri.",
+  "activeRaceRosterCount": 19,
+  "sourceArchiveRef": "content/race-wheel-design.json#proposed routing for sourceRaceId primordial",
+  "researchRef": "reference/primordial-mythology-research.json",
+  "supersededProposalRef": "reference/primordial-proposal-before-mythology-2026-10-10.json",
+  "superseded": "The Kosmos/Alam/Kehidupan selector and proposed Durability+1/Intelligence+1 recipe are retired suggestions. Their replacement recipes are assigned in content/primordial-events-design.json under the user six/three-point instruction.",
+  "curationConstraints": {
+    "preferAncientCreationLegends": true,
+    "preferExplicitSelfCreation": false,
+    "avoidCurrentIndonesianReligiousFigures": true,
+    "notIncludedInThisProposal": [
+      "Vishnu/Wisnu",
+      "Brahma",
+      "Shiva/Siwa"
+    ],
+    "scope": "Only this optional proposal; keep all already accepted races unchanged.",
+    "religionContext": "Ancient origin does not prove a tradition has no present-day followers; this is audience-focused curation.",
+    "requireFirstOriginPosition": true,
+    "requireNoOtherDeityCreator": true
+  },
+  "suggestedIdentityWheel": {
+    "id": "primordial-identity-proposal",
+    "label": "Tokoh Primordial",
+    "status": "migrated-to-shared-canonical-identity-wheel",
+    "selectionMode": "Eleven working identities under the confirmed origin definition, now assigned six-point race and three-point Champion recipes through delegated lore curation. The roster remains editable; use the canonical primordial-identity selector rather than this former proposal mirror.",
+    "probability": "Canonical primordial-identity has eleven equal base weights1.",
+    "outcomes": [
+      {
+        "id": "atum",
+        "label": "Atum",
+        "tradition": "Mesir kuno — Heliopolis",
+        "originClass": "explicit-self-created",
+        "context": "Menciptakan dirinya sendiri di air purba Nun, lalu memulai penciptaan para dewa.",
+        "sourceVersion": "Heliopolitan creation account, rooted in the Pyramid Texts.",
+        "sourceRefs": [
+          "egypt-creation-wegner"
+        ],
+        "possibleGameThemes": [
+          "creation",
+          "primordial-sun"
+        ],
+        "overlapGroup": "egyptian-solar-creation",
+        "selfCreationClaim": "explicit-in-selected-tradition-or-text",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "self-origin",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-selected-Heliopolitan-account",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "khepri",
+        "label": "Khepri",
+        "tradition": "Mesir kuno",
+        "originClass": "explicit-self-created",
+        "context": "Dewa self-created, dilambangkan scarab dan matahari terbit; terkait kemunculan dan pembaruan.",
+        "sourceVersion": "McClung Museum account of the sacred scarab.",
+        "sourceRefs": [
+          "khepri-mcclung"
+        ],
+        "possibleGameThemes": [
+          "renewal",
+          "transformation",
+          "rising-sun"
+        ],
+        "overlapGroup": "egyptian-solar-creation",
+        "selfCreationClaim": "explicit-in-selected-tradition-or-text",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "self-origin",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-selected-self-generation-account; solar-form roster overlap remains",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "amun",
+        "label": "Amun",
+        "tradition": "Mesir kuno — teologi Thebes",
+        "originClass": "explicit-self-created",
+        "context": "Dalam himne Leiden, pencipta yang tersembunyi ini membentuk dan menciptakan dirinya sendiri.",
+        "sourceVersion": "Papyrus Leiden I 350, chapter 40; composite creator identities in this hymnal tradition.",
+        "sourceRefs": [
+          "amun-leiden-pires"
+        ],
+        "possibleGameThemes": [
+          "hidden-existence",
+          "self-generation"
+        ],
+        "selfCreationClaim": "explicit-in-selected-tradition-or-text",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "self-origin",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-selected-Leiden-hymnal-account",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "neith",
+        "label": "Neith",
+        "tradition": "Mesir kuno — Sais/Esna",
+        "originClass": "qualified-self-origin",
+        "context": "Dewi pencipta awal; Esna 204 menggambarkannya hadir sendiri sebelum menciptakan yang lain. Perbedaan terjemahan self-origin tetap metadata, tidak lagi menjadi syarat wajib.",
+        "sourceVersion": "Esna 204 initial sole creator; Esna 206 section 2 and footnote 37 preserve the self-origin translation caveat.",
+        "sourceRefs": [
+          "neith-esna-klotz"
+        ],
+        "possibleGameThemes": [
+          "primordial-creation",
+          "bringing-thought-into-being"
+        ],
+        "selfCreationClaim": "translation-and-tradition-qualified",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "primordial-origin",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-Esna-204-first-sole-creator-account; self-origin translation caveat retained as lore",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "ptah",
+        "label": "Ptah",
+        "tradition": "Mesir kuno — Memphis",
+        "originClass": "primordial-creator",
+        "context": "Pencipta utama dalam kosmogoni Memphis, membentuk dunia lewat pikiran dan ucapan; dipilih menurut versi Memphite.",
+        "sourceVersion": "Memphite Theology on the Shabaka Stone.",
+        "sourceRefs": [
+          "egypt-creation-wegner"
+        ],
+        "possibleGameThemes": [
+          "creation-through-speech",
+          "craftsmanship"
+        ],
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "primary-creator",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-as-Memphite-primary-creator; authored curation inference from reviewed account",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "chaos",
+        "label": "Chaos / Khaos",
+        "tradition": "Yunani kuno — Hesiod",
+        "originClass": "first-emergence-without-parent-stated",
+        "context": "Yang pertama muncul dalam Theogony; asal sebelumnya tidak dijelaskan, bukan self-creation eksplisit.",
+        "sourceVersion": "Hesiod, Theogony 116 onward, Evelyn-White translation.",
+        "sourceRefs": [
+          "hesiod-theogony"
+        ],
+        "possibleGameThemes": [
+          "primordial-gap",
+          "void"
+        ],
+        "interpretationGuard": "Primordial chasm/gap, not automatically a god of randomness or destruction.",
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "spontaneous-emergence",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-Hesiod-account; no-deity-parent-attested",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "gaia",
+        "label": "Gaia",
+        "tradition": "Yunani kuno — Hesiod",
+        "originClass": "early-emergence-without-parent-stated",
+        "context": "Bumi purba muncul pada awal kisah, lalu melahirkan langit tanpa pasangan. Teks tidak menyebut Gaia sebagai anak Chaos.",
+        "sourceVersion": "Hesiod, Theogony 116–133, Evelyn-White translation.",
+        "sourceRefs": [
+          "hesiod-theogony"
+        ],
+        "possibleGameThemes": [
+          "earth",
+          "life-generation"
+        ],
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "initial-independent-generation",
+          "originType": "spontaneous-emergence",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-in-Hesiod-account; appears-after-Chaos-but-not-stated-as-its-child",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "namma",
+        "label": "Namma / Nammu",
+        "tradition": "Sumeria — Eridu",
+        "originClass": "primordial-cosmic-mother",
+        "context": "Ibu purba langit dan bumi, terkait air kosmik. Riwayatnya terbatas; penciptaan dirinya sendiri tidak diklaim.",
+        "sourceVersion": "An-Anum I 28 and Enki and Ninmah, discussed by Nicole Brisch.",
+        "sourceRefs": [
+          "namma-oracc-brisch"
+        ],
+        "possibleGameThemes": [
+          "cosmic-waters",
+          "life-generation"
+        ],
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "initial-independent-generation",
+          "originType": "cosmic-mother",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-as-Sumerian-origin-mother-in-reviewed-evidence; source-sparse-curation",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "apsu",
+        "label": "Apsu / Abzu",
+        "tradition": "Babilonia — Enuma Elish",
+        "originClass": "primeval-waters",
+        "context": "Air tawar purba yang bercampur dengan Tiamat untuk melahirkan para dewa; bukan self-creation eksplisit.",
+        "sourceVersion": "Opening of Enuma Elish, discussed by Sophus Helle.",
+        "sourceRefs": [
+          "tiamat-apsu-oracc-helle"
+        ],
+        "possibleGameThemes": [
+          "primordial-fresh-water"
+        ],
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "co-first",
+          "originType": "primordial-waters",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-as-one-of-opening-Enuma-Elish-pair",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "tiamat",
+        "label": "Tiamat",
+        "tradition": "Babilonia — Enuma Elish",
+        "originClass": "primeval-waters",
+        "context": "Laut asin purba dan ibu para dewa; kelak membentuk pasukan monster. Asal dirinya tidak dinyatakan self-created.",
+        "sourceVersion": "Enuma Elish, discussed by Sophus Helle.",
+        "sourceRefs": [
+          "tiamat-apsu-oracc-helle"
+        ],
+        "possibleGameThemes": [
+          "primordial-sea",
+          "monster-generation"
+        ],
+        "interpretationGuard": "Use the ancient figure, not an automatic substitution of the modern D&D five-headed dragon.",
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "co-first",
+          "originType": "primordial-waters",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-as-one-of-opening-Enuma-Elish-pair",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      },
+      {
+        "id": "ymir",
+        "label": "Ymir",
+        "tradition": "Norse — Edda",
+        "originClass": "formed-from-primordial-elements",
+        "context": "Raksasa purba terbentuk ketika panas mencairkan es; tubuhnya kemudian menjadi bahan dunia. Bukan dewa dalam arti sempit teks ini.",
+        "sourceVersion": "Gylfaginning 5–8; medieval written witness to older traditions.",
+        "sourceRefs": [
+          "ymir-gylfaginning"
+        ],
+        "possibleGameThemes": [
+          "primordial-body",
+          "world-formation",
+          "frost"
+        ],
+        "interpretationGuard": "Fits primordial entity scope as a first living giant formed from elements, without claiming he is a god or deliberately self-created.",
+        "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+        "eligibilityAssessment": {
+          "status": "candidate-fits-clarified-definition",
+          "originPosition": "first",
+          "originType": "primordial-element-interaction",
+          "noOtherDeityCreatorAssessment": "pass",
+          "basis": "pass-as-first-living-giant-in-Gylfaginning; not-a-deity-born-child",
+          "authority": "assistant-source-qualified-curation-not-final-roster-approval"
+        }
+      }
+    ]
+  },
+  "gameAdaptationBoundary": "Themes are inspiration only: no automatic Tier 5, Creation Power, maximum mastery, Authority, stat bonus or extra spin follows from a myth label.",
+  "overlapDecision": "Atum/Khepri share Egyptian solar-creation associations. The working eleven-identity selector retains both as distinct variants; future roster edits can revisit this overlap.",
+  "rewardPackages": {
+    "status": "assigned-under-user-delegation",
+    "raceBudgetPoints": 6,
+    "championBudgetPoints": 3,
+    "raceProfilesRef": "content/primordial-events-design.json#raceRewardProfiles",
+    "championProfilesRef": "content/primordial-events-design.json#championRewardProfiles"
+  },
+  "archetypeProposal": "Primordial six-point package skips initial Archetype; Champion three-point patron applies to otherwise eligible compatible characters.",
+  "notIntegrated": [
+    "Owned race and Champion reward execution adapter",
+    "Final body/capability/Size/power/weapon limit profiles"
+  ],
+  "nextDecision": "Review/edit exact authored recipes and configure intrinsic power/weapon/body/Size/Champion-fit profiles; next untouched Archetype remains Champion’s Legacy.",
+  "definitionContract": {
+    "status": "user-confirmed-definition",
+    "userClarification": "as long as they are not created by other god and the first. they count as primordial",
+    "conditions": [
+      "At the origin of the selected cosmogony",
+      "Not created, engendered or born from another deity in that selected account"
+    ],
+    "selfCreationRequired": false,
+    "firstInterpretation": "Design interpretation: a first entity, co-first pair, or initial independently emerging generation before derivative divine genealogies; not every later creator or merely old god. The earliest cosmic medium may pre-exist without acting as a deity-parent.",
+    "allowedOrigins": [
+      "self-origin",
+      "spontaneous emergence",
+      "primordial waters",
+      "interaction of primordial elements"
+    ],
+    "indirectCreationRule": "A deity that deliberately fashions the egg or vessel of another entity counts as a creator; intermediate egg birth does not bypass the rule.",
+    "versionRule": "Evaluate one stated source version; do not combine incompatible genealogies into one eligibility claim.",
+    "uncertaintyRule": "An unknown origin remains review-needed until a source-qualified design assessment exists; absence of a named parent is not a claim that every tradition denies parents.",
+    "logicalPredicate": "originPosition in {first, co-first, initial-independent-generation} AND noOtherDeityCreatorAssessment=pass; false excludes, unknown requires review. Runtime registration remains disabled.",
+    "mechanicsScope": "This is a curation contract for a draft identity list; it dispatches no event or reward."
+  },
+  "previousResearchProposalRef": "reference/primordial-proposal-before-definition-2026-10-10.json",
+  "originGroups": {
+    "explicitSelfCreation": [
+      "atum",
+      "khepri",
+      "amun"
+    ],
+    "qualifiedSelfOrigin": [
+      "neith"
+    ],
+    "broaderPrimordialOrCreator": [
+      "ptah",
+      "chaos",
+      "gaia",
+      "phanes",
+      "namma",
+      "apsu",
+      "tiamat",
+      "ymir"
+    ]
+  },
+  "excludedCandidates": [
+    {
+      "id": "phanes",
+      "label": "Phanes",
+      "tradition": "Yunani kuno — Orphic",
+      "originClass": "cosmic-egg-born",
+      "context": "Pencipta awal yang menetas dari telur kosmik, terkait lahirnya kehidupan. Kisah telur itu berbeda menurut versi Orphic.",
+      "sourceVersion": "Attributed Orphic passages, including Rhapsodies fragment 66.",
+      "sourceRefs": [
+        "phanes-orphic-fragments"
+      ],
+      "possibleGameThemes": [
+        "primordial-light",
+        "life-generation"
+      ],
+      "selfCreationClaim": "not-established-or-not-self-created-in-selected-version",
+      "eligibilityAssessment": {
+        "status": "excluded-in-selected-account",
+        "originPosition": "later-than-other-primordial-entities",
+        "noOtherDeityCreatorAssessment": "fail",
+        "reason": "Orphic Rhapsodies fragment 66 has Chronos fashion the egg from which Phanes is born; fragment 54 also places other principles before him.",
+        "sourceRefs": [
+          "phanes-orphic-fragments"
+        ]
+      },
+      "interpretationGuard": "Mythological label primordial or first-born does not override the user's no-other-deity-creator criterion."
+    }
+  ],
+  "candidateGroups": {
+    "fitsClarifiedDefinition": [
+      "atum",
+      "khepri",
+      "amun",
+      "neith",
+      "ptah",
+      "chaos",
+      "gaia",
+      "namma",
+      "apsu",
+      "tiamat",
+      "ymir"
+    ],
+    "excludedInReviewedVersion": [
+      "phanes"
+    ]
+  },
+  "canonicalDesignRef": "content/primordial-events-design.json",
+  "championDesignRef": "content/primordial-champion-events-design.json",
+  "approval": {
+    "authority": "direct-user",
+    "date": "2026-10-10",
+    "userStatement": "yup i approve, now we can move on to the next archtype",
+    "scope": "Accept the presented eleven identities, all six-point race and three-point Champion recipes, equal selector odds, Primordial Archetype skip, Champion patron-only flow, ordinary mastery and final numeric bonus timing.",
+    "implementationBoundary": "Approval of algorithm design; runtime executors, body/Size/capability profiles remain configuration. Other technical projection choices retain their disclosed authored provenance."
+  }
+}

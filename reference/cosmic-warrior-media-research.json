@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "roda-kekacauan-cosmic-media/0.2",
+  "updatedDate": "2026-10-10",
+  "sources": [
+    {
+      "id": "alien-x",
+      "label": "Alien X",
+      "franchise": "Ben 10",
+      "url": "https://www.youtube.com/watch?v=H1zHalthf30",
+      "supported": "Official Cartoon Network description names Alien X/Celestialsapiens and universe recreation.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "ultraman",
+      "label": "Ultraman",
+      "franchise": "Ultraman",
+      "url": "https://tsuburaya-prod.com/heroes/ultraman-tiga",
+      "supported": "Official Tiga page has Multi/Sky/Power types and a light-beam move. Red/Blue/Mixed game labels and stat bonuses are direct user rules, not universal canon classification.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "saiyan",
+      "label": "Saiyan",
+      "franchise": "Dragon Ball",
+      "url": "https://en.dragon-ball-official.com/news/01_1748.html",
+      "supported": "Official Goku article associates Saiyan and Ki/special attack.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "kryptonian",
+      "label": "Kryptonian",
+      "franchise": "DC / Superman",
+      "url": "https://www.dc.com/characters/superman",
+      "supported": "Official Superman page gives Krypton identity and flight/heat vision/strength powers.",
+      "activeForCurrentRoster": false
+    },
+    {
+      "id": "asgardian",
+      "label": "Asgardian",
+      "franchise": "Marvel / Thor-Odin",
+      "url": "https://www.marvel.com/characters/odin/in-comics/profile?mobile-app=true&theme=false",
+      "supported": "Official Odin profile gives Asgard identity and Odinpower force-blast abilities; game recipe is a bounded authored adaptation, not every Asgardian canon entitlement.",
+      "activeForCurrentRoster": false
+    },
+    {
+      "id": "green-lantern",
+      "label": "Lantern Corps",
+      "franchise": "DC",
+      "url": "https://www.dc.com/characters/green-lantern",
+      "supported": "Official Green Lantern page describes cosmic Corps/power ring, hard-light constructs and willpower energy.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "silver-surfer",
+      "label": "Herald of Galactus / Silver Surfer",
+      "franchise": "Marvel",
+      "url": "https://www.marvel.com/articles/comics/who-is-silver-surfer-the-official-marvel-guide?linkId=231447808",
+      "supported": "Official guide identifies Silver Surfer as Galactus herald empowered by Power Cosmic.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "saint",
+      "label": "Saint",
+      "franchise": "Saint Seiya",
+      "url": "https://www.toei-animation.com/catalog/saint-seiya/",
+      "supported": "Official Toei confirms Saint/Cloth and cosmic warrior motif; selected armor roster and user class tiers are game configuration.",
+      "activeForCurrentRoster": true
+    },
+    {
+      "id": "lantern-spectrum",
+      "label": "Lantern spectrum",
+      "url": "https://shop.dc.com/products/green-lantern-emotional-spectrum-9-ring-set",
+      "supported": "Official DC licensed9-ring set lists Green Willpower, Red Rage, Orange Avarice, Yellow Fear, Blue Hope, Indigo Compassion, Violet Love, White Life, Black Death. Game abilities/tier assignments are authored bounded adaptations."
+    },
+    {
+      "id": "saint-armor",
+      "label": "Saint Cloth",
+      "url": "https://lineup.toei-anim.co.jp/en/tv/seiya/",
+      "supported": "Official Toei describes Bronze Cloth lowest, Gold Cloth prize/status and constellation-bound Saints, Seiya Pegasus. Game35-outcome selection is curated, class2/3/4 is direct user rule.",
+      "additionalPrimarySources": [
+        "https://tamashiiweb.com/special/jumpcs/scm/?lmode=ja&wovn=en",
+        "https://tamashiiweb.com/item/10275/?lmode=ja&wovn=zh-CHS"
+      ],
+      "coverageLimit": "Primary sources support Cloth/constellation motif and selected examples, not an assertion this35-choice wheel is a complete canon armor list."
+    }
+  ],
+  "sourceLimit": "Source facts support identity/media motifs only; no source establishes game tiers/weights/stat bonuses/complete copied packages."
+}

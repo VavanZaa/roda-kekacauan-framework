@@ -1,0 +1,1162 @@
+{
+  "schemaVersion": "roda-kekacauan-primordial/0.1",
+  "version": "primordial/0.1.0",
+  "updatedDate": "2026-10-10",
+  "familyId": "primordial",
+  "status": "User explicitly approves the eleven-identity Primordial race and Champion package design. Algorithm design accepted; executor and body/capability/Size profiles remain configuration.",
+  "authority": {
+    "confirmed": [
+      "Primordial is an initial entity not created by another god; deliberate self-creation not required.",
+      "Primordial race receives a six-point package.",
+      "Primordial Champion receives a three-point package.",
+      "Assign power, weapon and/or stat bonuses based on lore.",
+      "Unspecified odds are equal.",
+      "User explicitly approves the presented Primordial and Primordial Champion packages and flow."
+    ],
+    "authoredInterpretations": [
+      "Use the current eleven researched identities as working roster.",
+      "Champion spins the shared identity selector as patron, not owned race.",
+      "Primordial signature package skips Archetype; consistent with the already accepted boost gate.",
+      "Stat/power/weapon recipes and explicit tiers are game adaptations.",
+      "Primordial victim/army identity uses the existing divine quantity profile, without race rewards."
+    ]
+  },
+  "definitionContract": {
+    "status": "user-confirmed-definition",
+    "userClarification": "as long as they are not created by other god and the first. they count as primordial",
+    "conditions": [
+      "At the origin of the selected cosmogony",
+      "Not created, engendered or born from another deity in that selected account"
+    ],
+    "selfCreationRequired": false,
+    "firstInterpretation": "Design interpretation: a first entity, co-first pair, or initial independently emerging generation before derivative divine genealogies; not every later creator or merely old god. The earliest cosmic medium may pre-exist without acting as a deity-parent.",
+    "allowedOrigins": [
+      "self-origin",
+      "spontaneous emergence",
+      "primordial waters",
+      "interaction of primordial elements"
+    ],
+    "indirectCreationRule": "A deity that deliberately fashions the egg or vessel of another entity counts as a creator; intermediate egg birth does not bypass the rule.",
+    "versionRule": "Evaluate one stated source version; do not combine incompatible genealogies into one eligibility claim.",
+    "uncertaintyRule": "An unknown origin remains review-needed until a source-qualified design assessment exists; absence of a named parent is not a claim that every tradition denies parents.",
+    "logicalPredicate": "originPosition in {first, co-first, initial-independent-generation} AND noOtherDeityCreatorAssessment=pass; false excludes, unknown requires review. Runtime registration remains disabled.",
+    "mechanicsScope": "This is a curation contract for a draft identity list; it dispatches no event or reward."
+  },
+  "budget": {
+    "racePoints": 6,
+    "championPoints": 3,
+    "statPointCost": 1,
+    "signaturePowerCost": 2,
+    "signatureWeaponCost": 2,
+    "authority": "User assigns total budgets and delegates lore recipes; reuse established power/weapon=2 and numeric stat=1 comparison.",
+    "tierMapping": "No tier-to-budget conversion. Power tier is explicit metadata, independent from this existing comparison method.",
+    "masteryBonusCost": null,
+    "masteryBonusesAssigned": false
+  },
+  "identityWheel": {
+    "id": "primordial-identity",
+    "label": "Tokoh Primordial",
+    "outcomeCount": 11,
+    "probabilityPolicy": "equal-base-weight",
+    "outcomes": [
+      {
+        "id": "atum",
+        "label": "Atum",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-atum",
+        "championRewardProfileId": "primordial-champion-atum"
+      },
+      {
+        "id": "khepri",
+        "label": "Khepri",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-khepri",
+        "championRewardProfileId": "primordial-champion-khepri"
+      },
+      {
+        "id": "amun",
+        "label": "Amun",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-amun",
+        "championRewardProfileId": "primordial-champion-amun"
+      },
+      {
+        "id": "neith",
+        "label": "Neith",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-neith",
+        "championRewardProfileId": "primordial-champion-neith"
+      },
+      {
+        "id": "ptah",
+        "label": "Ptah",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-ptah",
+        "championRewardProfileId": "primordial-champion-ptah"
+      },
+      {
+        "id": "chaos",
+        "label": "Chaos / Khaos",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-chaos",
+        "championRewardProfileId": "primordial-champion-chaos"
+      },
+      {
+        "id": "gaia",
+        "label": "Gaia",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-gaia",
+        "championRewardProfileId": "primordial-champion-gaia"
+      },
+      {
+        "id": "namma",
+        "label": "Namma / Nammu",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-namma",
+        "championRewardProfileId": "primordial-champion-namma"
+      },
+      {
+        "id": "apsu",
+        "label": "Apsu / Abzu",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-apsu",
+        "championRewardProfileId": "primordial-champion-apsu"
+      },
+      {
+        "id": "tiamat",
+        "label": "Tiamat",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-tiamat",
+        "championRewardProfileId": "primordial-champion-tiamat"
+      },
+      {
+        "id": "ymir",
+        "label": "Ymir",
+        "baseWeight": 1,
+        "probability": 0.09090909090909091,
+        "raceRewardProfileId": "primordial-ymir",
+        "championRewardProfileId": "primordial-champion-ymir"
+      }
+    ]
+  },
+  "raceRewardProfiles": [
+    {
+      "id": "primordial-atum",
+      "entityId": "atum",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "life-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-khepri",
+      "entityId": "khepri",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "resurrection",
+            "definitionFile": "content/universal-power-wheels-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "solar-flame",
+            "definitionFile": "content/universal-power-wheels-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "speed",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-amun",
+      "entityId": "amun",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "invisibility",
+            "definitionFile": "content/abyssal-axiom-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-neith",
+      "entityId": "neith",
+      "grants": [
+        {
+          "kind": "weapon",
+          "definitionRef": {
+            "definitionId": "primordial-neith-bow",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-ptah",
+      "entityId": "ptah",
+      "grants": [
+        {
+          "kind": "weapon",
+          "definitionRef": {
+            "definitionId": "primordial-ptah-scepter",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-chaos",
+      "entityId": "chaos",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-void-manipulation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "space-fold",
+            "definitionFile": "content/universal-power-wheels-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-gaia",
+      "entityId": "gaia",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "earth-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "life-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-namma",
+      "entityId": "namma",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-apsu",
+      "entityId": "apsu",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 3,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 3
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-tiamat",
+      "entityId": "tiamat",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-monster-genesis",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        },
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-ymir",
+      "entityId": "ymir",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "ice-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        },
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 2,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 2
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 6,
+      "sourceOnce": true
+    }
+  ],
+  "championRewardProfiles": [
+    {
+      "id": "primordial-champion-atum",
+      "entityId": "atum",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-creation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-khepri",
+      "entityId": "khepri",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "resurrection",
+            "definitionFile": "content/universal-power-wheels-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-amun",
+      "entityId": "amun",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "invisibility",
+            "definitionFile": "content/abyssal-axiom-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-neith",
+      "entityId": "neith",
+      "grants": [
+        {
+          "kind": "weapon",
+          "definitionRef": {
+            "definitionId": "primordial-neith-bow",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "fight",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-ptah",
+      "entityId": "ptah",
+      "grants": [
+        {
+          "kind": "weapon",
+          "definitionRef": {
+            "definitionId": "primordial-ptah-scepter",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-chaos",
+      "entityId": "chaos",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-void-manipulation",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-gaia",
+      "entityId": "gaia",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "earth-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-namma",
+      "entityId": "namma",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "intelligence",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-apsu",
+      "entityId": "apsu",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "water-manipulation",
+            "definitionFile": "content/universal-element-wheel-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "durability",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-tiamat",
+      "entityId": "tiamat",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "primordial-monster-genesis",
+            "definitionFile": "content/primordial-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    },
+    {
+      "id": "primordial-champion-ymir",
+      "entityId": "ymir",
+      "grants": [
+        {
+          "kind": "power",
+          "definitionRef": {
+            "definitionId": "ice-manipulation",
+            "definitionFile": "content/elf-events-design.json"
+          },
+          "count": 1,
+          "designCost": 2,
+          "sourceOnce": true
+        }
+      ],
+      "statModifiers": [
+        {
+          "type": "register-flat-stat-modifier",
+          "stat": "strength",
+          "amount": 1,
+          "unit": "numeric point",
+          "timing": "final-bonus-phase",
+          "sourceOnce": true,
+          "designCost": 1
+        }
+      ],
+      "masteryModifiers": [],
+      "additionalAcquisitionSpinCount": 0,
+      "budgetTotal": 3,
+      "sourceOnce": true
+    }
+  ],
+  "powers": [
+    {
+      "id": "primordial-creation",
+      "label": "Creation (Penciptaan)",
+      "powerTier": 5,
+      "tierPolicyVersion": "power-tier/1.0.0",
+      "tierReason": "Membentuk materi/bentuk baru, kemampuan fundamental; lingkup tidak sama dengan mastery atau omnipotensi.",
+      "description": "Membentuk materi dan bentuk baru lewat kehendak atau ucapan.",
+      "limits": "Output, biaya, jarak, durasi dan target perlu profil eksplisit. Tidak otomatis menciptakan power lain, ras baru, stat, Authority, senjata sihir milik inventory atau event tambahan."
+    },
+    {
+      "id": "primordial-void-manipulation",
+      "label": "Void Manipulation (Kendali Kekosongan)",
+      "powerTier": 5,
+      "tierPolicyVersion": "power-tier/1.0.0",
+      "tierReason": "Manipulasi keberadaan ruang kosong/batas materi; efek fundamental dengan batas profil.",
+      "description": "Mengendalikan ruang kosong dan meniadakan materi dalam area terbatas sesuai profil.",
+      "limits": "Bukan penghapusan seluruh semesta, kemenangan otomatis atau kendali acak absolut. Resistansi, area, biaya dan durasi memerlukan profil."
+    },
+    {
+      "id": "primordial-monster-genesis",
+      "label": "Monster Genesis (Penciptaan Monster)",
+      "powerTier": 4,
+      "tierPolicyVersion": "power-tier/1.0.0",
+      "tierReason": "Mencipta/mengendalikan monster bertarung sebagai efek signature yang dibatasi.",
+      "description": "Menciptakan monster tempur terikat kemampuan dan kendali pemakai.",
+      "limits": "Jumlah, bentuk, durasi, biaya dan kekuatan mengikuti profil/mastery. Tidak menjalankan race wheel, army/follower/count, Tamer atau memberikan seluruh pasukan kanon."
+    }
+  ],
+  "weapons": [
+    {
+      "id": "primordial-neith-bow",
+      "label": "Busur Neith",
+      "kind": "bow",
+      "countAsOneWeapon": true,
+      "description": "Busur bertema Neith; atribut perang/pemanah menjadi satu signature weapon.",
+      "limits": "Tidak otomatis memberi Holy Arrow atau Creation. Panah/ammo/output/body fit/enchant mengikuti profil senjata normal.",
+      "powerSource": null,
+      "loreSourceRefs": [
+        "neith-esna-klotz",
+        "neith-bow-british-museum"
+      ]
+    },
+    {
+      "id": "primordial-ptah-scepter",
+      "label": "Tongkat Ankh-Was-Djed",
+      "kind": "staff",
+      "countAsOneWeapon": true,
+      "description": "Tongkat composite bertema simbol ankh, was dan djed yang dipegang Ptah.",
+      "limits": "Simbol kehidupan/kekuasaan/stabilitas tidak menjadi tiga power gratis; satu weapon dan mastery/enchant normal.",
+      "powerSource": null,
+      "loreSourceRefs": [
+        "ptah-scepter-met"
+      ]
+    }
+  ],
+  "loreContexts": [
+    {
+      "entityId": "atum",
+      "context": "Pencipta awal dan asal kehidupan; penguasaan adalah hasil mastery karakter.",
+      "sourceRefs": [
+        "egypt-creation-wegner"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "khepri",
+      "context": "Pembaruan matahari diadaptasi sebagai kebangkitan dan api matahari, bukan janji kebal mati.",
+      "sourceRefs": [
+        "khepri-mcclung"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "amun",
+      "context": "Pencipta tersembunyi; invisibility adalah adaptasi game dari tema tersembunyi.",
+      "sourceRefs": [
+        "amun-leiden-pires"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "neith",
+      "context": "Pencipta dan dewi perang/pemanah; busur sesuai ikonografinya.",
+      "sourceRefs": [
+        "neith-esna-klotz"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "ptah",
+      "context": "Pencipta melalui pikiran/ucapan dan tongkat ankh-was-djed; fungsi combat adalah adaptasi.",
+      "sourceRefs": [
+        "egypt-creation-wegner"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "chaos",
+      "context": "Celah purba diadaptasi menjadi kendali ruang kosong dan pelipatan ruang; bukan klaim Chaos dewa kehancuran.",
+      "sourceRefs": [
+        "hesiod-theogony"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "gaia",
+      "context": "Bumi dan asal kehidupan; bonus ketahanan/kekuatan adalah kurasi game.",
+      "sourceRefs": [
+        "hesiod-theogony"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "namma",
+      "context": "Ibu kosmik dan air purba; tidak mengklaim kemampuan tempur historis yang tidak tercatat.",
+      "sourceRefs": [
+        "namma-oracc-brisch"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "apsu",
+      "context": "Air tawar purba diadaptasi sebagai kendali air dan ketahanan.",
+      "sourceRefs": [
+        "tiamat-apsu-oracc-helle"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "tiamat",
+      "context": "Laut purba dan pembentuk monster; tidak memberi seluruh pasukan mitologi secara otomatis.",
+      "sourceRefs": [
+        "tiamat-apsu-oracc-helle"
+      ],
+      "adaptation": true
+    },
+    {
+      "entityId": "ymir",
+      "context": "Raksasa pertama dari pertemuan panas/es; kekuatan, ketahanan dan es diadaptasi tanpa memanggil event Raksasa.",
+      "sourceRefs": [
+        "ymir-gylfaginning"
+      ],
+      "adaptation": true
+    }
+  ],
+  "contracts": {
+    "order": "Owned Race: family commit/history/reaction → one primordial-identity spin/reaction → exactly selected six-point recipe → saved caller. Champion: actual selected Archetype reaction → same identity wheel in patron context → exactly selected three-point recipe → Backstory.",
+    "grantAuthority": "Execute reward profiles once; wheel links, caption, lore context and mirrored references never dispatch another recipe.",
+    "source": "Every fixed grant and stat modifier carries the original race/Archetype invocation and recipe/ordinal, atomically persisted. Resume reuses committed identity and grants.",
+    "mastery": "Powers use one shared ordinary Power Mastery; every weapon uses its ordinary recipient mastery. No automatic max, bonus mastery, guarantee or copied God Authority rank.",
+    "bonusTiming": "Register at source; calculate all numeric bonuses only at final phase after mandatory events. Weapon effective mastery still controls compatible final Enchant.",
+    "mainAcquisitions": "Keep ordinary later Weapon/Power wheels; early inventory survives main None. No additional universal power spin, followers or God80% None merely from a name.",
+    "duplicatePolicy": "Use existing definition/source ownership rules; no unrequested duplicate reroll, free tier upgrade, bonus stat conversion or second mastery draw.",
+    "weaponPolicy": "Honor existing hard inventory/acquisition locks including Gladiator; no bypass, bonus replacement or extra weapon created by a power caption.",
+    "identityBoundary": "Race identity uses family primordial and its actual token; Champion records patronEntityId only, does not acquire/replace race, commit race history, dispatch full six-point race recipe or reopen gate.",
+    "loreBoundary": "Research supplies motifs; tiers, powers, weapons and numeric bonuses are authored game adaptations. Retain the user-confirmed origin definition and current-Indonesian-religion curation.",
+    "gate": "All owned Primordial identities skip the initial Archetype gate under the existing strong signature-package principle. Champion remains available only to other body/profile-compatible eligible characters; patron itself is not a strong owned race.",
+    "bodySize": "No automatic full lore size, cosmic grant, Raksasa/Machine/Elemental event or extra lineage from the entity name. Primordial body/Size reference profiles remain explicit configuration.",
+    "distribution": "One identity spin per actual caller, eleven base weights1. Existing Equalizer/eligibility modifiers act by their contracts; no origin/category/power-count wheel.",
+    "return": "Nested race grants restore exact caller, including Hybrid/host/base/undead/Mutant; only outer initial race completion goes to Archetype gate. Champion returns to Backstory.",
+    "budget": "Every nominal recipe totals6 or3. Comparison is not combat equivalence or automatic post-lock compensation."
+  },
+  "runtimeReady": false,
+  "runtimeInterface": {
+    "module": null,
+    "status": "design-only",
+    "missing": [
+      "owned reward transaction adapter",
+      "body/capability/Size references",
+      "Champion body-role compatibility profile"
+    ]
+  },
+  "researchRef": "reference/primordial-mythology-research.json",
+  "migrationContract": {
+    "snapshot": "reference/before-primordial-packages-2026-10-10.json",
+    "newInvocationsOnly": true,
+    "policy": "Preserve old eighteen-family pools, excluded roles, tier/grant versions and frozen journals."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "approval": {
+    "authority": "direct-user",
+    "date": "2026-10-10",
+    "userStatement": "yup i approve, now we can move on to the next archtype",
+    "scope": "Accept the presented eleven identities, all six-point race and three-point Champion recipes, equal selector odds, Primordial Archetype skip, Champion patron-only flow, ordinary mastery and final numeric bonus timing.",
+    "implementationBoundary": "Approval of algorithm design; runtime executors, body/Size/capability profiles remain configuration. Other technical projection choices retain their disclosed authored provenance."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

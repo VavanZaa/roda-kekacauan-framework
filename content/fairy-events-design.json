@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "roda-kekacauan-fairy-events/0.1",
+  "status": "Four subraces/grants and 4:2:3:1 user-defined; King bonus confirmed for all powers; Element starter and balance proposed",
+  "raceDesign": "race-wheel-design.json",
+  "universalElementDesign": "universal-element-wheel-design.json",
+  "subraceDistribution": {
+    "order": [
+      "fairy-parents",
+      "element-pixie",
+      "healer-fairy",
+      "fairy-king"
+    ],
+    "weights": [
+      4,
+      2,
+      3,
+      1
+    ],
+    "probabilities": [
+      0.4,
+      0.2,
+      0.3,
+      0.1
+    ],
+    "totalWeight": 10,
+    "allowModifiers": false
+  },
+  "powers": [
+    {
+      "id": "wish-granting",
+      "label": "Wish Granting (Pengabul Harapan)",
+      "scope": "Mengabulkan harapan melalui aturan wish yang akan menetapkan batas, biaya, sasaran, dan jumlah penggunaan.",
+      "affinityTags": [
+        "wish",
+        "fairy"
+      ],
+      "group": "fairy-fixed-power",
+      "contentStatus": "User-confirmed grant; descriptive scope and limits are game design content",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, costs, activation conditions, duration, targets, and mastery limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Wish Granting (Pengabul Harapan)"
+        ],
+        "displayContext": "Fairy Parents memperoleh Wish Granting. Batas dan penguasaan power belum ditentukan; tidak ada jatah tiga wish atau hasil harapan tambahan yang diberikan otomatis."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact later eligibility and odds effects pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags"
+        ]
+      },
+      "powerTier": 5,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Pengabul harapan dapat melintasi fungsi power biasa; batas wish tetap wajib.",
+      "powerTierRef": "content/power-tier-design.json#wish-granting"
+    },
+    {
+      "id": "healing-power",
+      "label": "Healing Power (Pemulihan)",
+      "scope": "Memulihkan luka atau kondisi damage pada target yang memenuhi batas power dan mastery.",
+      "affinityTags": [
+        "healing",
+        "fairy"
+      ],
+      "group": "fairy-fixed-power",
+      "contentStatus": "User-confirmed grant; descriptive scope and limits are game design content",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Range, costs, activation conditions, duration, targets, and mastery limits remain pending.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Healing Power (Pemulihan)"
+        ],
+        "displayContext": "Healer Fairy memperoleh Healing Power. Besaran pemulihan, target, dan penguasaannya mengikuti aturan nanti; revival atau immortality tidak otomatis diberikan."
+      },
+      "laterInfluenceDraft": {
+        "status": "exact later eligibility and odds effects pending",
+        "targets": [
+          "archetype",
+          "backstory",
+          "power",
+          "power.mastery",
+          "weakness",
+          "title"
+        ],
+        "basis": [
+          "definitionId",
+          "affinityTags"
+        ]
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#healing-power"
+    }
+  ],
+  "bonusSpinContract": {
+    "stage": "power",
+    "wheelFamily": "power",
+    "extraSpins": 1,
+    "requiredGrant": null,
+    "emptyOutcomePolicy": "Uses the approved normal Power pool, including None if configured. The user guarantees an extra spin, not a power regardless of result.",
+    "sequence": "Main Power acquisition and immediate details -> pending bonus acquisitions and details -> mastery for all unresolved owned powers -> Weakness.",
+    "idempotence": "One stable source ticket consumed atomically with its actual bonus result; retries never add another spin."
+  },
+  "masteryBonusContract": {
+    "id": "fairy-king-power-mastery",
+    "status": "User confirmed +2 applies to every owned power; rank-step interpretation and final scale remain design details",
+    "amount": 2,
+    "unit": "ordered mastery rank steps (proposed interpretation; final rank scale pending)",
+    "operation": "add-rank-steps",
+    "scope": "all-owned-powers",
+    "timing": "Register the original authorized source modifier once when earned. Resolve raw mastery/Resilient at the ordinary scheduled stage; calculate this bonus only in final bonus phase from the retained immutable base, never at the earlier draw.",
+    "formula": "sharedEffectiveMasteryScore = retainedSharedRawScore + 2 + sum(other distinct applicable shared mastery modifiers)",
+    "scale": "Raw mastery scale0..9; final score signed/unbounded under stat-scales/0.2.0.",
+    "provenance": "Committed Fairy King source modifier and the one shared character mastery invocation; individual power grants retain their own provenance.",
+    "idempotence": "A distinct source modifier changes the shared rank once. Owning more powers, reevaluation and media retries do not multiply +2.",
+    "inventory": "No owned power means no mastery roll or phantom power. Keep the main and extra acquisition stages even when the modifier is registered.",
+    "enchantment": "Never opens enchantment; this affects Power Mastery only.",
+    "baseResult": "Keep rolled mastery unchanged and show rolled-to-effective rank in context/final card.",
+    "scopeSource": "User answered: Semua power yang dimiliki",
+    "qualifies": "One shared ordinary Power Mastery projection covers all owned powers. An actual God Authority uses its source-bound base9 plus the same final shared modifiers; the override never transfers by matching definition.",
+    "lateActivation": "Register new source as pending. Before final phase do not project; within final phase refresh from the same retained immutable base plus current distinct sources, preserving God instance overrides. No mastery redraw or compounded bonus.",
+    "stacking": "This fixed Fairy King modifier is active once per character; replaying the same source or repeating evaluation cannot make +4/+6. Additional independent mastery modifiers require their own declared stacking rules.",
+    "bonusTimingContractRef": "content/bonus-timing-design.json#contracts"
+  },
+  "wishContract": {
+    "grant": "One owned Wish Granting power. No extra Wish wheel or usage-count spin was requested.",
+    "limits": "Wish types, cost, count, targeting, failure rules, and event bounds are pending; do not invent a three-wish cap or unlimited powers.",
+    "mechanicsBoundary": "Future wish effects must resolve through declared mechanics; narration cannot overwrite committed spin results or create unrecorded powers."
+  },
+  "healingContract": {
+    "grant": "One owned Healing Power; no additional healing selector requested.",
+    "limits": "Heal amount/targets/cost and revival eligibility remain pending; no automatic extra immortality or regeneration trait."
+  },
+  "sizeContract": {
+    "phase": "The standard global Size phase remains after Backstory and before stats.",
+    "profileStatus": "Fairy Parents/Pixie/Healer/King body forms and source-backed size profiles are not yet set; do not infer one height for all four or silently copy Human/Gnome."
+  },
+  "contextContract": {
+    "timing": "Append only committed subrace, actual power grants, chosen element, stage ticket, and mastery modifier; future Power/mastery results remain unknown.",
+    "provenance": "Keep actual caller, component slot, source invocation and version. Element selection does not activate Elemental race events."
+  },
+  "openBalance": [
+    "Raw mastery0..9 approved; final values signed and unbounded.",
+    "Universal Element roster and manipulation profiles; equal base weights",
+    "Wish/healing limits and future odds effects",
+    "Fairy body forms and sourced ordinary Size reference profiles"
+  ],
+  "sharedMasteryRule": {
+    "design": "framework/spec.json#powerMasteryContract",
+    "actualDrawCount": "one total if any power is owned; zero for empty inventory",
+    "latePower": "A power granted after a shared result commits inherits the same base/effective mastery and active bonuses immediately, without a new spin or mastery reaction."
+  },
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "bonusTimingMigration": {
+    "snapshot": "reference/before-final-mastery-bonuses-2026-10-09.json",
+    "policy": "This global timing policy supersedes earlier inline calculation timing for new invocations only. Amounts/scopes/odds/raw-draw stages and original source ownership remain unchanged."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

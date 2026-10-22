@@ -1,0 +1,755 @@
+{
+  "schemaVersion": "roda-kekacauan-chaos-proposal/0.2",
+  "version": "chaos-wheel/0.4.0",
+  "updatedDate": "2026-10-11",
+  "displayName": "Roda Kekacauan",
+  "stageId": "apex",
+  "legacyDisplayNames": [
+    "Apex Force"
+  ],
+  "status": "Seven-root odds confirmed;24 event designs. All12 Divine follow-up algorithms defined; Chaos review and full runtime pending.",
+  "designReady": false,
+  "runtimeReady": false,
+  "authority": {
+    "confirmed": [
+      "Rename Apex Force display to Roda Kekacauan, matching project branding.",
+      "Chaos side includes Low/Medium/High and Divine side.",
+      "Inversion examples7->2 and9->0.",
+      "Devil's Pact main stat-1 and one Chaotic Power spin.",
+      "Both Chaos and Divine have Low/Medium/High.",
+      "Each side Low15%, Medium12%, High8%; None30%; totals Chaos35%/Divine35%/None30%.",
+      "User requests four effects in each Divine Low/Medium/High branch.",
+      "Divine must be toned down because it has little risk.",
+      "User asks follow-up event mechanisms for each of the12 preceding Divine effects."
+    ],
+    "interpretations": [
+      "Pact all-stat cost interpreted as five main stats; mastery costs must be explicit."
+    ],
+    "proposals": [
+      "Chaos12 prior candidates preserved. Divine12 editable delegated recipes with four per severity.",
+      "Low one-point/one-use; Medium one targeted point/mastery step or one receh weakness removal; High at most2 direct stat points or one Tier1–3 Divine power.",
+      "Keep user root15/12/8 per side and30 None. Optional pity is inactive until separately chosen.",
+      "Chaotic Power universal roster/tier scopes and exact Chaos runtime still pending."
+    ]
+  },
+  "proposedEventWheels": [
+    {
+      "id": "chaos-low-effects",
+      "branchId": "chaos-low",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "stat-swap",
+        "point-transfer",
+        "lazy-weapon",
+        "extra-weakness"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    },
+    {
+      "id": "chaos-medium-effects",
+      "branchId": "chaos-medium",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "partial-inversion",
+        "devils-pact",
+        "glass-cannon",
+        "chaos-surge"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    },
+    {
+      "id": "chaos-high-effects",
+      "branchId": "chaos-high",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "inversion",
+        "equivalent-exchange",
+        "stat-carousel",
+        "reality-glitch"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    },
+    {
+      "id": "divine-low-effects",
+      "branchId": "divine-low",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "small-blessing",
+        "thin-shield",
+        "reserve-breath",
+        "brief-focus"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    },
+    {
+      "id": "divine-medium-effects",
+      "branchId": "divine-medium",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "targeted-blessing",
+        "expert-touch",
+        "resonance",
+        "purification"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    },
+    {
+      "id": "divine-high-effects",
+      "branchId": "divine-high",
+      "status": "four-candidate-editable-design-not-runtime",
+      "drawCount": 1,
+      "outcomeIds": [
+        "divine-blessing",
+        "second-chance",
+        "divine-gift",
+        "restoration"
+      ],
+      "baseProbabilityPolicy": "Four eligible candidates default25% each, renormalize only child hard eligibility; do not multiply or change root group mass."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "stat-swap",
+      "label": "Tukar Nasib",
+      "branchId": "chaos-low",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Dua main stat berbeda ditukar nilai dasarnya.",
+      "operation": "swap-two-main-stat-bases",
+      "targets": "two-distinct-main-stats",
+      "selection": "one random distinct pair"
+    },
+    {
+      "id": "point-transfer",
+      "label": "Geser Poin",
+      "branchId": "chaos-low",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Stat tertinggi -1, stat terendah +1.",
+      "operation": "register-flat-modifiers",
+      "highestAmount": -1,
+      "lowestAmount": 1,
+      "targets": "two-distinct-main-stats"
+    },
+    {
+      "id": "lazy-weapon",
+      "label": "Senjata Mager",
+      "branchId": "chaos-low",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Serangan pertama dengan satu senjata terpilih gagal keluar.",
+      "operation": "conditional-weapon-restriction",
+      "requires": "active-owned-weapon",
+      "limit": "one attempted opening attack; no numeric mastery loss or weapon removal"
+    },
+    {
+      "id": "extra-weakness",
+      "label": "Kesialan Receh",
+      "branchId": "chaos-low",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Satu spin Weakness tambahan, dijamin mendapat weakness.",
+      "operation": "extra-weakness-spin",
+      "wheelId": "weakness",
+      "count": 1,
+      "excludeNone": true
+    },
+    {
+      "id": "partial-inversion",
+      "label": "Partial Inversion",
+      "branchId": "chaos-medium",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Satu main stat dipilih acak, lalu dasarnya menjadi9 - nilai.",
+      "operation": "invert-one-main-stat-base",
+      "formula": "9 - x",
+      "targets": "one-main-stat"
+    },
+    {
+      "id": "devils-pact",
+      "label": "Devil’s Pact",
+      "branchId": "chaos-medium",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Kelima main stat -1 dan satu spin Chaotic Power.",
+      "operation": "stat-cost-plus-power-spin",
+      "mainStatDelta": -1,
+      "powerWheelId": "power-chaotic",
+      "powerSpinCount": 1,
+      "userExample": true
+    },
+    {
+      "id": "glass-cannon",
+      "label": "Glass Cannon",
+      "branchId": "chaos-medium",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Strength +2, Durability -2.",
+      "operation": "register-flat-modifiers",
+      "modifiers": [
+        {
+          "stat": "strength",
+          "amount": 2
+        },
+        {
+          "stat": "durability",
+          "amount": -2
+        }
+      ]
+    },
+    {
+      "id": "chaos-surge",
+      "label": "Chaos Surge",
+      "branchId": "chaos-medium",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Satu spin Chaotic Power, tetapi Power Mastery -1.",
+      "operation": "power-spin-with-mastery-cost",
+      "powerWheelId": "power-chaotic",
+      "powerSpinCount": 1,
+      "sharedPowerMasteryDelta": -1
+    },
+    {
+      "id": "inversion",
+      "label": "Inversion",
+      "branchId": "chaos-high",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Nilai dasar target menjadi9 - nilai:7 menjadi2,9 menjadi0.",
+      "operation": "invert-main-stat-bases",
+      "formula": "9 - x",
+      "targets": "awaiting-user-scope",
+      "userExample": true
+    },
+    {
+      "id": "equivalent-exchange",
+      "label": "Equivalent Exchange",
+      "branchId": "chaos-high",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Satu stat terendah menjadi9; satu stat tertinggi menjadi0.",
+      "operation": "replace-two-main-stat-bases",
+      "lowestBase": 9,
+      "highestBase": 0,
+      "targets": "two-distinct-main-stats"
+    },
+    {
+      "id": "stat-carousel",
+      "label": "Stat Carousel",
+      "branchId": "chaos-high",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Semua nilai dasar main stat bergeser ke posisi stat lain.",
+      "operation": "rotate-five-main-stat-bases",
+      "order": [
+        "strength",
+        "speed",
+        "durability",
+        "intelligence",
+        "fight"
+      ],
+      "stepChoices": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "reality-glitch",
+      "label": "Reality Glitch",
+      "branchId": "chaos-high",
+      "status": "proposed-not-active",
+      "baseWeight": 1,
+      "description": "Dua spin Chaotic Power dan dua spin Weakness tambahan.",
+      "operation": "power-plus-weakness-spins",
+      "powerWheelId": "power-chaotic",
+      "powerSpinCount": 2,
+      "weaknessWheelId": "weakness",
+      "weaknessSpinCount": 2,
+      "excludeWeaknessNone": true
+    },
+    {
+      "id": "small-blessing",
+      "label": "Sentuhan Berkah",
+      "branchId": "divine-low",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "+1 pada satu main stat acak.",
+      "operation": "register-flat-modifiers",
+      "modifier": {
+        "target": "one-random-main-stat",
+        "amount": 1,
+        "calculation": "final-only"
+      },
+      "directStatPointBudget": 1,
+      "followupRef": "divine-followup-design.json#small-blessing",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "thin-shield",
+      "label": "Perisai Tipis",
+      "branchId": "divine-low",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Durability +1 hanya untuk satu serangan yang diterima.",
+      "operation": "conditional-stat-bonus",
+      "stat": "durability",
+      "amount": 1,
+      "charges": 1,
+      "trigger": "first-resolved-incoming-hit",
+      "directStatPointBudget": 0,
+      "conditionalStatPointBudget": 1,
+      "registerAs": "conditional-trait",
+      "changesAlwaysOnFinalStats": false,
+      "followupRef": "divine-followup-design.json#thin-shield",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "reserve-breath",
+      "label": "Napas Cadangan",
+      "branchId": "divine-low",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Speed +1 hanya untuk satu aksi menghindar.",
+      "operation": "conditional-stat-bonus",
+      "stat": "speed",
+      "amount": 1,
+      "charges": 1,
+      "trigger": "first-resolved-dodge-attempt",
+      "directStatPointBudget": 0,
+      "conditionalStatPointBudget": 1,
+      "registerAs": "conditional-trait",
+      "changesAlwaysOnFinalStats": false,
+      "followupRef": "divine-followup-design.json#reserve-breath",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "brief-focus",
+      "label": "Fokus Sesaat",
+      "branchId": "divine-low",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Fight +1 hanya untuk satu serangan yang dilakukan.",
+      "operation": "conditional-stat-bonus",
+      "stat": "fight",
+      "amount": 1,
+      "charges": 1,
+      "trigger": "first-resolved-outgoing-attack",
+      "directStatPointBudget": 0,
+      "conditionalStatPointBudget": 1,
+      "registerAs": "conditional-trait",
+      "changesAlwaysOnFinalStats": false,
+      "followupRef": "divine-followup-design.json#brief-focus",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "targeted-blessing",
+      "label": "Berkah Terarah",
+      "branchId": "divine-medium",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "+1 pada satu main stat terendah.",
+      "operation": "register-flat-modifiers",
+      "modifier": {
+        "target": "one-lowest-pre-bonus-main-stat",
+        "amount": 1,
+        "calculation": "final-only"
+      },
+      "directStatPointBudget": 1,
+      "tiePolicy": "uniform among tied eligible targets; target selection is not a numeric stat roll",
+      "followupRef": "divine-followup-design.json#targeted-blessing",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "expert-touch",
+      "label": "Sentuhan Ahli",
+      "branchId": "divine-medium",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Weapon Mastery +1 untuk satu senjata yang dimiliki.",
+      "operation": "one-weapon-mastery-modifier",
+      "amount": 1,
+      "target": "one-active-owned-weapon-instance",
+      "requires": "active-owned-weapon",
+      "calculation": "final-only",
+      "enchantPolicy": "Final ordinary effective>=Master5 and compatible unused-slot gate; no immediate or guaranteed enchant.",
+      "directMasteryPointBudget": 1,
+      "followupRef": "divine-followup-design.json#expert-touch",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "resonance",
+      "label": "Resonansi",
+      "branchId": "divine-medium",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Shared Power Mastery +1 untuk semua power yang dimiliki.",
+      "operation": "shared-power-mastery-modifier",
+      "amount": 1,
+      "requires": "active-owned-power",
+      "calculation": "final-only",
+      "scope": "one-shared-Power-Mastery",
+      "directMasteryPointBudget": 1,
+      "followupRef": "divine-followup-design.json#resonance",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "purification",
+      "label": "Purification",
+      "branchId": "divine-medium",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Nonaktifkan satu weakness receh dari pool40.",
+      "operation": "deactivate-one-main-pool-weakness",
+      "requires": "active-owned-receh-weakness-from-content/weakness-wheel-design.json",
+      "allowedWeaknessCategories": [
+        "receh"
+      ],
+      "preserveAuditHistory": true,
+      "limit": 1,
+      "directStatPointBudget": 0,
+      "limits": "Only selected canonical receh weakness from main40. Keep its source/audit and unrelated bonuses. Do not clear Cursed/Rage/Overload or all weakness inventory.",
+      "followupRef": "divine-followup-design.json#purification",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "divine-blessing",
+      "label": "Berkah Ganda",
+      "branchId": "divine-high",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "+1 pada dua main stat berbeda, total +2.",
+      "operation": "register-flat-modifiers",
+      "modifier": {
+        "target": "two-distinct-random-main-stats",
+        "amountEach": 1,
+        "calculation": "final-only"
+      },
+      "directStatPointBudget": 2,
+      "followupRef": "divine-followup-design.json#divine-blessing",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "second-chance",
+      "label": "Second Chance",
+      "branchId": "divine-high",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Roll satu stat terendah lagi; hasil lebih baik memberi bonus, maksimal +2.",
+      "operation": "one-stat-bounded-reroll-bonus",
+      "requires": "eligible-nonguaranteed-retained-raw-main-stat-below9-and-completed-stat-adapter",
+      "target": "one-lowest-eligible-retained-raw-main-stat",
+      "actualLateSpin": true,
+      "comparison": "immutable original pre-bonus derived base; ordinary equals retained raw",
+      "formula": "min(2, max(0, newResolution.baseValue - originalResolution.baseValue))",
+      "directStatPointBudget": 2,
+      "calculation": "register0..2 positive final-only difference; original resolution and All In copies never replaced",
+      "preservesOriginalRaw": true,
+      "tiePolicy": "uniform among eligible lowest ties",
+      "guards": "Use divine-followup-design.json#secondChanceContract for exact Gambler/Resilient/Lucky/Pawn semantics; runtime adapter pending.",
+      "followupRef": "divine-followup-design.json#second-chance",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "divine-gift",
+      "label": "Divine Gift",
+      "branchId": "divine-high",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Satu spin Divine Power, dibatasi Tier1–3.",
+      "operation": "themed-power-spin",
+      "wheelId": "power-divine",
+      "count": 1,
+      "allowedPowerTiers": [
+        1,
+        2,
+        3
+      ],
+      "requires": "at-least-one-unowned-canonical-Divine-Power-Tier1-to3",
+      "callerHardFilter": true,
+      "scope": "one current invocation; original universal20 remains unchanged for other callers",
+      "mastery": "recipient shared mastery with existing God guarantee and late-acquisition gate; never donor maximum",
+      "newPowerCount": 1,
+      "maximumIntrinsicPowerTier": 3,
+      "followupRef": "divine-followup-design.json#divine-gift",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    },
+    {
+      "id": "restoration",
+      "label": "Restoration",
+      "branchId": "divine-high",
+      "status": "user-delegated-editable-design-not-runtime",
+      "baseWeight": 1,
+      "description": "Pulihkan maksimal2 poin dari debuff main stat yang ada.",
+      "operation": "bounded-negative-main-stat-compensation",
+      "requires": "active-negative-main-stat-flat-modifier",
+      "maxRecoveredPoints": 2,
+      "target": "owned negative main-stat ledger entries",
+      "allocation": "Choose uniformly from active uncompensated negative main-stat effects, recover up to two points total without replacement per source; partial recovery permitted.",
+      "calculation": "source-once positive counter-ledger at final-only; never erase original penalties/audit",
+      "directStatPointBudget": 2,
+      "limits": "No positive reward beyond actual uncompensated negative points, no mastery refunds or removal of conditional weaknesses/cost conditions.",
+      "followupRef": "divine-followup-design.json#restoration",
+      "followupStatus": "algorithm-defined-runtime-adapter-pending"
+    }
+  ],
+  "inversionScope": {
+    "status": "pending-user-answer",
+    "recommended": "five-main-stats-only",
+    "question": "Five main stats only, or both masteries as well?"
+  },
+  "proposedCalculationContract": {
+    "rawHistory": "Never overwrite original roll/retained raw evidence, Lucky hits, Pawn observations or fixed maximum provenance.",
+    "layer": "At Roda Kekacauan store source-once transformations/costs/restrictions; evaluate at final phase. Proposed base transforms operate after existing Gambler raw-derived base and before additive bonuses.",
+    "inversion": "9-x, without clamping. A derived base18 would become-9; this is a proposal consistent with signed/unbounded scores, awaiting approval of operation order.",
+    "numeric": "Main-stat/mastery bonuses and costs calculated final-only; no immediate Enchant from a mastery change.",
+    "powers": "Chaotic powers need canonical intrinsic Tier1..5 definitions. Themed grants happen immediately at this event, exclude owned, and use recipient one shared mastery (reuse settled ordinary base; late first power needs its normal gate; God all-power base9 preserved).",
+    "guards": "Filter absent weapon/weakness targets and incompatible combinations before their child draw. Unknown adapter/configuration stays needs_configuration; no automatic substitute reward.",
+    "hooks": "Only actual late numeric rolls can count Lucky/Resilient/Pawn under approved contracts. Swap/inversion/fixed replacement/bonus projection do not create sampled raw hits. Exact late reroll/Gambler combinations require review.",
+    "equalizer": "Uniform allowed leaves on each separate actual wheel, after hard guards. No stat5%..25% bounds on Chaos effect wheels.",
+    "followups": "Complete chosen source effect and required children/reactions, then saved return to Title. No generic unconditional boost spin.",
+    "divine": "Use complete12 follow-up algorithms in content/divine-followup-design.json. Final-only source budgets, atomic receipts, no extra generic boost; original raw preserved. Second Chance compares resolved pre-bonus bases for Double/Nothing; ordinary difference is raw difference."
+  },
+  "proposedChaoticPowerWheel": {
+    "id": "power-chaotic",
+    "status": "roster-and-tier-scopes-pending",
+    "sharedForAllCallers": true,
+    "distinctFrom": [
+      "power-demonic",
+      "power-cursed",
+      "power-divine"
+    ],
+    "direction": "Space/target/causality/body glitches with bounded fictional scope; use no deterministic new owner-stat wheel rules inferred from power name."
+  },
+  "legacyBackstoryApexIntents": [
+    {
+      "id": "backstory-refused-destiny-apex",
+      "status": "semantic-target-restored-numeric-binding-pending",
+      "target": "chaos-none",
+      "intent": "None more likely"
+    },
+    {
+      "id": "backstory-world-ended-apex",
+      "status": "semantic-target-restored-numeric-binding-pending",
+      "target": "all-six-non-none-root-leaves",
+      "intent": "Non-None slightly more likely"
+    }
+  ],
+  "nextReview": [
+    "Review remaining Chaos12 scope/order and Chaotic Power roster; all12 Divine follow-up designs are defined.",
+    "Implement runtime adapters later; optional pity remains inactive; Title only after user advances."
+  ],
+  "openingWheelReady": true,
+  "openingWheel": {
+    "id": "roda-kekacauan-side",
+    "label": "Roda Kekacauan",
+    "status": "user-confirmed-topology-and-base-odds",
+    "outcomeCount": 7,
+    "drawCount": 1,
+    "noneOutcomeId": "chaos-none",
+    "baseWeightTotal": 100,
+    "baseProbabilityPolicy": "15:12:8:15:12:8:30; a single seven-leaf wheel, not separate side and severity draws.",
+    "outcomes": [
+      {
+        "id": "chaos-low",
+        "label": "Chaos Low",
+        "side": "chaos",
+        "level": "low",
+        "baseWeight": 15,
+        "probability": 0.15,
+        "nextWheelId": "chaos-low-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Chaos Low"
+          ],
+          "caption": "Chaos Low",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "chaos-medium",
+        "label": "Chaos Medium",
+        "side": "chaos",
+        "level": "medium",
+        "baseWeight": 12,
+        "probability": 0.12,
+        "nextWheelId": "chaos-medium-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Chaos Medium"
+          ],
+          "caption": "Chaos Medium",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "chaos-high",
+        "label": "Chaos High",
+        "side": "chaos",
+        "level": "high",
+        "baseWeight": 8,
+        "probability": 0.08,
+        "nextWheelId": "chaos-high-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Chaos High"
+          ],
+          "caption": "Chaos High",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "divine-low",
+        "label": "Divine Low",
+        "side": "divine",
+        "level": "low",
+        "baseWeight": 15,
+        "probability": 0.15,
+        "nextWheelId": "divine-low-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Divine Low"
+          ],
+          "caption": "Divine Low",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "divine-medium",
+        "label": "Divine Medium",
+        "side": "divine",
+        "level": "medium",
+        "baseWeight": 12,
+        "probability": 0.12,
+        "nextWheelId": "divine-medium-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Divine Medium"
+          ],
+          "caption": "Divine Medium",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "divine-high",
+        "label": "Divine High",
+        "side": "divine",
+        "level": "high",
+        "baseWeight": 8,
+        "probability": 0.08,
+        "nextWheelId": "divine-high-effects",
+        "returnTo": "after-selected-event-and-children",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: Divine High"
+          ],
+          "caption": "Divine High",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "chaos-none",
+        "label": "None",
+        "side": "none",
+        "level": null,
+        "baseWeight": 30,
+        "probability": 0.3,
+        "nextWheelId": null,
+        "returnTo": "title",
+        "resultContext": {
+          "facts": [
+            "Roda Kekacauan: None"
+          ],
+          "caption": "Nasib aman.",
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "openingProbabilityContract": {
+    "confirmed": true,
+    "chaosBaseMass": 0.35,
+    "divineBaseMass": 0.35,
+    "noneBaseMass": 0.3,
+    "statMasteryBoundsApplied": false,
+    "equalizer": "After hard eligibility, active Equalizer makes all seven eligible root leaves1/7. No15/12/8/30 ratio reapplication.",
+    "backstory": "Previously approved None/non-None intents remain pending explicit numeric calibration; no new automatic factors.",
+    "noImplicitChildCountWeighting": true
+  },
+  "noneContract": {
+    "status": "user-confirmed",
+    "grantEffects": [],
+    "childWheels": [],
+    "genericBoostSpin": false,
+    "returnTo": "title",
+    "behavior": "One actual None result/reaction. Preserve every earlier stat/bonus/power/weapon/weakness. No new Chaos/Divine event or boost.",
+    "replay": "Saved source receipt is reused, no redraw or invented actual stat/mastery/Lucky/funny spin."
+  },
+  "divineBalanceContract": {
+    "status": "authored-under-user-delegation",
+    "perLevelCount": 4,
+    "low": "At most one permanent main-stat point or one1-point single-use conditional stat buff.",
+    "medium": "One targeted main-stat point, one mastery step, or one receh weakness disabled.",
+    "high": "At most2 direct main-stat points/negative-point compensation, or one bounded canonical Divine power Tier1–3.",
+    "noAllFiveStatGrant": true,
+    "noGuaranteedNine": true,
+    "noRiskFreeTier4Or5Power": true,
+    "capsAreSourceRewardBudgetsOnly": "Do not cap character totals/other bonuses/passive rewards. Signed/unbounded final stats preserved; ordinary one-weapon mastery gain can unlock normal final Enchant.",
+    "conditionalTraits": "One-use conditional stat bonuses remain labeled traits; not three new power grants, not always-on final stat increases, not mastery draws.",
+    "secondaryHooks": "Keep existing actual late Lucky/Resilient/Pawn/Enchant contracts; budget does not suppress authorized source hooks.",
+    "universalPool": "Tier filter only on this Divine Gift invocation; no global theme power tier/weight/registry changes."
+  },
+  "optionalMethods": [
+    {
+      "id": "pity-after-three-none",
+      "label": "Pity setelah3 None",
+      "status": "optional-recommendation-not-active",
+      "active": false,
+      "purpose": "Rare streaks become a series hook while the ordinary35/35/30 base remains.",
+      "trigger": "Three consecutive completed, persisted main Roda Kekacauan None results across characters in one explicit series.",
+      "nextRoot": "Hard-exclude only chaos-none on the next actual main invocation; keep non-None weights15/12/8 per side and normalize over70.",
+      "conditionalProbabilities": {
+        "chaos-low": 0.21428571428571427,
+        "chaos-medium": 0.17142857142857143,
+        "chaos-high": 0.11428571428571428,
+        "divine-low": 0.21428571428571427,
+        "divine-medium": 0.17142857142857143,
+        "divine-high": 0.11428571428571428
+      },
+      "equalizer": "After guarantee guard, active Equalizer makes six eligible root leaves1/6.",
+      "counter": "Count one persisted main-root receipt per completed character; successful non-None resets. Preview/replay/child None/incomplete episodes do not increment.",
+      "note": "Changes effective odds only on a triggered future draw. Requires persistent series counter and separate adoption; never retroactively edit frozen odds."
+    },
+    {
+      "id": "cost-before-reward",
+      "label": "Harga dulu, hadiah belakangan",
+      "status": "optional-presentation-recommendation",
+      "active": false,
+      "purpose": "Build suspense on Chaos tradeoffs without changing the seven-root distribution.",
+      "sequence": "Reveal actual Chaos event, show its known pending cost, react, then draw its actual unknown reward power wheel and react.",
+      "examples": [
+        "Devil’s Pact: record pending-1 each main stat before spinning its unknown Chaotic Power."
+      ],
+      "guard": "No fake cost spin, guessed future reward, immediate bonus settlement, or added cost beyond the event recipe."
+    }
+  ],
+  "divineFollowupContract": {
+    "version": "divine-followups/1.0.0",
+    "design": "content/divine-followup-design.json",
+    "docs": "docs/DIVINE-EVENTS.md",
+    "flowCount": 12,
+    "designReady": true,
+    "runtimeReady": false
+  }
+}

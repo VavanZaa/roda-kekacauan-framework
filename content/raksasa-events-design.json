@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "roda-kekacauan-raksasa-events/0.1",
+  "status": "User-confirmed base-race events and giant Size; Archetype skip accepted on 2026-10-09, replacing the former two-slot rule.",
+  "archetypeContract": {
+    "stage": "archetype",
+    "mode": "skip",
+    "spinCount": 0,
+    "extraSpins": 0,
+    "status": "User accepted the Archetype skip policy on 2026-10-09.",
+    "policyVersion": "archetype-eligibility/1.0.0",
+    "decisionFunction": "framework/archetype-eligibility.mjs#planArchetypeStage",
+    "registration": "Bind giant Size once; register no Archetype ticket.",
+    "order": "Finish all base/nested Race events → Archetype gate records skip → Backstory → Size → eligible Cosmic → main stats.",
+    "history": "Former primary/secondary rule is retired; already committed old-policy journals are not rewritten.",
+    "gateScope": "Skip applies when Raksasa exists before the initial Archetype decision. If acquired by an already selected Mutant, preserve that decision/result, do not create/re-enter another gate or role spin; giant Size/base-race events still apply."
+  },
+  "sizeWheelId": "size-raksasa",
+  "sizeDesign": "size-wheel-design.json",
+  "universalPowerDesign": "universal-power-wheels-design.json",
+  "cosmicTriggerId": "size-beyond-planet-cosmic",
+  "raceResultContext": {
+    "facts": [
+      "Ras terpilih: Raksasa",
+      "Archetype dilewati; tidak ada bonus Archetype kedua",
+      "Size nanti memakai roda Raksasa",
+      "Satu spin ras dasar berikutnya; hasil menjadi versi raksasa dengan event rasnya"
+    ],
+    "displayContext": "Raksasa membuat ras hasil spin berikutnya menjadi versi raksasa. Archetype akan dilewati; ras dasar dan ukuran tepat menunggu hasil spin."
+  },
+  "familyDetails": "Raksasa/Buto/Buto Ijo remain reference examples; no unrequested subtype selector or separate trait wheel is introduced.",
+  "openBalance": [
+    "Optional future user override of the current equal 1/8 Giant Size odds",
+    "Compatibility and future odds effects",
+    "Remaining local Raksasa identity references"
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "attachmentProfileRef": {
+    "definitionFile": "race-attachment-events-design.json",
+    "definitionId": "raksasa-attachment"
+  },
+  "baseRaceInvocationTemplateId": "raksasa-base-race",
+  "routingContract": {
+    "sequence": "Commit/react Raksasa and register existing deferred effects once → one base race spin with normal immediate/nested events → giant/base link → saved caller",
+    "registration": "Giant Size binding belongs to the actual Raksasa source and is applied once. No primary/secondary Archetype ticket under policy 1.0.0.",
+    "returnPoint": "saved caller; Archetype only after outer race event is complete"
+  },
+  "retiredArchetypeContracts": [
+    {
+      "retiredDate": "2026-10-09",
+      "supersededBy": "archetype-eligibility/1.0.0",
+      "contract": {
+        "stage": "archetype",
+        "mode": "add-secondary",
+        "extraSpins": 1,
+        "status": "User clarified: add a second archetype, not replace the first",
+        "registration": "Raksasa result registers one deferred secondary-archetype ticket and binds giant Size.",
+        "order": "Main archetype acquisition and immediate events -> secondary archetype spin and its immediate events -> Backstory -> Size -> conditional Cosmic Power -> Strength.",
+        "ticket": "Use stable source invocation/component slot and consume the secondary-archetype ticket once on commit.",
+        "wheel": "The same archetype family and current compatible pool; freeze fresh eligible options and odds for the second invocation.",
+        "slots": [
+          "primary",
+          "secondary"
+        ],
+        "context": "Keep both selected archetypes and each actual event/grant in the stack with source and slot.",
+        "overlap": "Do not silently reroll or exclude a duplicate archetype. Keep both draw records; deduplicate overlapping traits under declared stacking rules. Detailed same-archetype effect policy remains balance work.",
+        "limits": "One race-authorized secondary spin per activation; it cannot redispatch its own Raksasa ticket from the archetype outcome. Include it and child events in event/spin limits."
+      }
+    }
+  ],
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

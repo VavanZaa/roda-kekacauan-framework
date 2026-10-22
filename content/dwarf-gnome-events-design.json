@@ -1,0 +1,1969 @@
+{
+  "schemaVersion": "roda-kekacauan-dwarf-gnome-events-design/0.1",
+  "status": "User-defined Dwarf/Gnome routing, armor bonuses and no-duplicate rule; delegated Gnome weapon content; balance incomplete",
+  "raceDesign": "race-wheel-design.json",
+  "authority": "User defines the family event. Technology weapons are fictional game content, not engineering instructions or franchise-canon grants.",
+  "armorCountDistribution": {
+    "counts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "weights": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "totalWeight": 15,
+    "probabilityFractions": [
+      "5/15",
+      "4/15",
+      "3/15",
+      "2/15",
+      "1/15"
+    ],
+    "modifiable": false,
+    "interpretation": {
+      "userText": "5:4:3:2:!",
+      "interpretedAs": "5:4:3:2:1",
+      "status": "Last character interpreted as a typo for 1; assumption disclosed to user."
+    }
+  },
+  "armorSamplingContract": {
+    "requestedSpins": "The committed armor-count result N requires exactly N actual armor-piece spins.",
+    "sampling": "without-replacement",
+    "dedupKey": "armor definitionId / unique body slot",
+    "scope": "One Dwarf armor-award event, identified by runId, event invocation, and component slot when applicable.",
+    "state": [
+      "armorSelectionId",
+      "targetCount",
+      "drawsCommitted",
+      "chosenArmorIds[]",
+      "remainingArmorIds[]"
+    ],
+    "beforeEachDraw": "Remove all chosen armor IDs from the eligible set, apply declared guards to remaining pieces, normalize remaining weights, and freeze this draw distribution.",
+    "commit": "Atomically journal the result, append the chosen ID, grant its armor instance and one +1 numeric modifier, update remaining IDs, append context, then react.",
+    "repeatKey": "Every scheduled draw has its own stable invocation ID and ordinal; do not share one consumed-event key across repeated draws.",
+    "duplicatePolicy": "Chosen pieces always have effective weight zero. Weight modifiers cannot restore their eligibility. Never reroll a committed duplicate or substitute another result.",
+    "wheelRendering": "Chosen sections are disabled and have zero sector angle in subsequent active wheels. Redistribute the active circle using remaining frozen probabilities; show collected pieces outside the active wheel if desired.",
+    "lastDrawPolicy": "If N=5, the fifth scheduled piece spin still occurs with the sole remaining piece at 100%, then receives its own result/reaction. This is an explicit exception to the generic fixed-identity reveal shortcut.",
+    "pieceWeights": {
+      "status": "User-confirmed equal probability default for eligible armor pieces; preserve specified armor-count weights.",
+      "baseWeightPerPiece": 1,
+      "reason": "Equal active-piece base odds follow the user default. Remove selected pieces before normalizing; change the base distribution only if the user specifies an override before a draw."
+    },
+    "poolExhaustion": "Configuration error if requested remaining draws exceed eligible remaining unique pieces; do not truncate the awarded count or silently reuse a piece.",
+    "fullSetBonuses": {
+      "durability": 3,
+      "fight": 1,
+      "speed": 1
+    },
+    "bonusUnits": "Numeric points, following the established +1-point convention; numeric scales or explicit mappings required.",
+    "additionalStats": "No unrequested material, quality, weight, durability, intelligence, or mobility effects are inferred."
+  },
+  "armors": [
+    {
+      "id": "helmet",
+      "label": "Helmet (Helm)",
+      "equipmentKind": "armor",
+      "slot": "head",
+      "grantStatus": "user-confirmed piece and bonus",
+      "statBonus": {
+        "target": "durability",
+        "operation": "add-flat",
+        "amount": 1,
+        "unit": "numeric point",
+        "timing": "Record at the armor draw; add once after the corresponding base stat is rolled."
+      },
+      "mastery": "No armor mastery requested; this armor is not an owned weapon.",
+      "resultContext": {
+        "facts": [
+          "Armor diperoleh: Helmet (Helm)",
+          "Bonus: +1 poin durability"
+        ],
+        "displayContext": "Helm menambah satu poin Durability; bagian kepala kini masuk koleksi armor."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending full guards and numerical balance",
+        "targets": [
+          "archetype",
+          "weapon",
+          "weapon.mastery",
+          "stat.durability"
+        ],
+        "basis": [
+          "armor slot",
+          "armor definitionId"
+        ],
+        "rule": "Do not infer additional stat bonuses or penalties from equipment flavor."
+      }
+    },
+    {
+      "id": "gloves",
+      "label": "Gloves (Sarung Tangan)",
+      "equipmentKind": "armor",
+      "slot": "hands",
+      "grantStatus": "user-confirmed piece and bonus",
+      "statBonus": {
+        "target": "fight",
+        "operation": "add-flat",
+        "amount": 1,
+        "unit": "numeric point",
+        "timing": "Record at the armor draw; add once after the corresponding base stat is rolled."
+      },
+      "mastery": "No armor mastery requested; this armor is not an owned weapon.",
+      "resultContext": {
+        "facts": [
+          "Armor diperoleh: Gloves (Sarung Tangan)",
+          "Bonus: +1 poin fight"
+        ],
+        "displayContext": "Sarung tangan menambah satu poin Fight; bonus ini belum menentukan hasil dasar kemampuan bertarung."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending full guards and numerical balance",
+        "targets": [
+          "archetype",
+          "weapon",
+          "weapon.mastery",
+          "stat.fight"
+        ],
+        "basis": [
+          "armor slot",
+          "armor definitionId"
+        ],
+        "rule": "Do not infer additional stat bonuses or penalties from equipment flavor."
+      }
+    },
+    {
+      "id": "body-armor",
+      "label": "Body Armor (Armor Badan)",
+      "equipmentKind": "armor",
+      "slot": "torso",
+      "grantStatus": "user-confirmed piece and bonus",
+      "statBonus": {
+        "target": "durability",
+        "operation": "add-flat",
+        "amount": 1,
+        "unit": "numeric point",
+        "timing": "Record at the armor draw; add once after the corresponding base stat is rolled."
+      },
+      "mastery": "No armor mastery requested; this armor is not an owned weapon.",
+      "resultContext": {
+        "facts": [
+          "Armor diperoleh: Body Armor (Armor Badan)",
+          "Bonus: +1 poin durability"
+        ],
+        "displayContext": "Armor badan menambah satu poin Durability; tidak ada penalti Speed tambahan yang diberikan oleh hasil ini."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending full guards and numerical balance",
+        "targets": [
+          "archetype",
+          "weapon",
+          "weapon.mastery",
+          "stat.durability"
+        ],
+        "basis": [
+          "armor slot",
+          "armor definitionId"
+        ],
+        "rule": "Do not infer additional stat bonuses or penalties from equipment flavor."
+      }
+    },
+    {
+      "id": "leggings",
+      "label": "Leggings (Armor Kaki)",
+      "equipmentKind": "armor",
+      "slot": "legs",
+      "grantStatus": "user-confirmed piece and bonus",
+      "statBonus": {
+        "target": "durability",
+        "operation": "add-flat",
+        "amount": 1,
+        "unit": "numeric point",
+        "timing": "Record at the armor draw; add once after the corresponding base stat is rolled."
+      },
+      "mastery": "No armor mastery requested; this armor is not an owned weapon.",
+      "resultContext": {
+        "facts": [
+          "Armor diperoleh: Leggings (Armor Kaki)",
+          "Bonus: +1 poin durability"
+        ],
+        "displayContext": "Armor kaki menambah satu poin Durability dan dicatat terpisah dari Boots."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending full guards and numerical balance",
+        "targets": [
+          "archetype",
+          "weapon",
+          "weapon.mastery",
+          "stat.durability"
+        ],
+        "basis": [
+          "armor slot",
+          "armor definitionId"
+        ],
+        "rule": "Do not infer additional stat bonuses or penalties from equipment flavor."
+      }
+    },
+    {
+      "id": "boots",
+      "label": "Boots (Sepatu)",
+      "equipmentKind": "armor",
+      "slot": "feet",
+      "grantStatus": "user-confirmed piece and bonus",
+      "statBonus": {
+        "target": "speed",
+        "operation": "add-flat",
+        "amount": 1,
+        "unit": "numeric point",
+        "timing": "Record at the armor draw; add once after the corresponding base stat is rolled."
+      },
+      "mastery": "No armor mastery requested; this armor is not an owned weapon.",
+      "resultContext": {
+        "facts": [
+          "Armor diperoleh: Boots (Sepatu)",
+          "Bonus: +1 poin speed"
+        ],
+        "displayContext": "Sepatu menambah satu poin Speed; bagian ini tidak memberi bonus Durability dalam aturan yang ditetapkan."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending full guards and numerical balance",
+        "targets": [
+          "archetype",
+          "weapon",
+          "weapon.mastery",
+          "stat.speed"
+        ],
+        "basis": [
+          "armor slot",
+          "armor definitionId"
+        ],
+        "rule": "Do not infer additional stat bonuses or penalties from equipment flavor."
+      }
+    }
+  ],
+  "gnomeTechContract": {
+    "drawCount": 1,
+    "candidateCount": 20,
+    "poolOrder": "Catalog order only; no potency ranking requested.",
+    "grant": "Grant exactly one technology weapon instance from the selected result.",
+    "mastery": "Register unresolved Weapon Mastery and process it at the normal main Weapon stage, including when the main draw is None.",
+    "existingGear": "Keep the tech weapon alongside any later weapons; follow the shared owned-inventory and grant-provenance contract.",
+    "powerBoundary": "Effects produced by a technology weapon do not automatically grant a matching personal power.",
+    "weights": "User-confirmed equal base weights (1 per eligible option) unless the user specified a distribution; declared eligibility and conditional modifiers are applied before normalization.",
+    "theme": "Gnome tinker gadgets based on clockwork, steam, springs, traps, lenses, alchemy, and decoys.",
+    "weaponClassification": "Direct attacks, traps, control devices, and tactical decoys all count as weapons under the user rule. A construct gadget includes its operating mechanism/controller in one weapon kit; it does not spawn extra weapon or power grants.",
+    "masteryMeaning": "Precision, timing, targeting, placement, and operation/control of the chosen gadget; actual mastery rank remains a later spin.",
+    "sourcePolicy": "Official sources support the broad tinkering/clockwork and mechanized-gnome themes. These twenty gadgets and combat functions are original game adaptations, not a list of canonical racial equipment."
+  },
+  "techWeapons": [
+    {
+      "id": "steam-hammer",
+      "label": "Steam Hammer",
+      "catalogOrder": 1,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Palu kecil dengan piston uap untuk pukulan mekanik.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "melee",
+        "steam",
+        "impact"
+      ],
+      "visualBrief": "Palu pendek, tabung uap kecil, roda pengatur, dan sambungan kuningan.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Steam Hammer",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Palu uap masuk inventori: alat kecil dengan mekanisme pukul yang perlu dikuasai."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "drill-lance",
+      "label": "Drill Lance",
+      "catalogOrder": 2,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Tombak bor dengan roda gigi dan pegangan pemutar.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "melee",
+        "gears",
+        "drill"
+      ],
+      "visualBrief": "Tombak pendek berujung bor dengan engkol dan rumah roda gigi.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Drill Lance",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gnome mendapat tombak bor; gaya bertarung alat ini mengandalkan ujung berputar."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "gearblade",
+      "label": "Gearblade",
+      "catalogOrder": 3,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Bilah mekanik bergerigi yang digerakkan oleh engkol.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "melee",
+        "gears",
+        "blade"
+      ],
+      "visualBrief": "Bilah bergigi, engkol samping, dan roda gigi yang terlihat.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Gearblade",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gearblade membawa potensi serangan bilah bergerigi; pengoperasiannya mengikuti Weapon Mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "spring-puncher",
+      "label": "Spring Puncher",
+      "catalogOrder": 4,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Alat genggam yang melontarkan sarung pukul memakai pegas.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "melee",
+        "spring",
+        "impact"
+      ],
+      "visualBrief": "Kotak mekanik kecil dengan pegas dan sarung pukul di ujung.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Spring Puncher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Senjata baru berupa tinju pegas: bentuknya lucu, fungsinya tetap alat tempur."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "net-launcher",
+      "label": "Net Launcher",
+      "catalogOrder": 5,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Pelontar jaring untuk menjerat gerakan sasaran.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "ranged",
+        "spring",
+        "net",
+        "control"
+      ],
+      "visualBrief": "Pelontar pendek dengan gulungan jaring dan tuas pegas.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Net Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Net Launcher membuka cara bertarung dengan jerat; jaring harus digunakan dengan tepat."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "clockwork-spider",
+      "label": "Clockwork Spider",
+      "catalogOrder": 6,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Perangkat laba-laba mekanik yang memasang benang penjerat.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "clockwork",
+        "construct",
+        "trap",
+        "control"
+      ],
+      "visualBrief": "Laba-laba kuningan kecil dengan kunci putar dan gulungan benang.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Clockwork Spider",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gnome mendapat laba-laba mekanik penjerat, dicatat sebagai satu perangkat senjata."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "firefly-bomb",
+      "label": "Firefly Bomb",
+      "catalogOrder": 7,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Gadget kunang-kunang mekanik yang menghasilkan kilatan cahaya untuk mengganggu pandangan.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "clockwork",
+        "flash",
+        "disruption"
+      ],
+      "visualBrief": "Serangga mekanik bercahaya dengan sayap kecil dan kunci putar.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Firefly Bomb",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kunang-kunang mekanik menjadi alat pengacau pandangan; reaksi lawan tidak dijamin oleh hasil ini."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "glue-sprayer",
+      "label": "Glue Sprayer",
+      "catalogOrder": 8,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Penyemprot cairan lengket untuk menghambat gerak sasaran.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "alchemy",
+        "sprayer",
+        "control"
+      ],
+      "visualBrief": "Botol cairan lengket, pompa tangan, pipa pendek, dan nozzle.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Glue Sprayer",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gnome mendapat penyemprot lem: gadget ini mengandalkan gangguan gerak, bukan sekadar damage."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "alchemy-sprayer",
+      "label": "Alchemy Sprayer",
+      "catalogOrder": 9,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Penyemprot ramuan fantasi pengganggu dengan fungsi yang perlu ditetapkan dalam profil senjata.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "alchemy",
+        "sprayer",
+        "disruption"
+      ],
+      "visualBrief": "Perangkat genggam dengan botol ramuan berwarna dan pompa kuningan.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Alchemy Sprayer",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Alat alkimia masuk inventori; efek ramuannya mengikuti profil senjata dan hasil mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "stun-whistle",
+      "label": "Stun Whistle",
+      "catalogOrder": 10,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Peluit mekanik dengan resonansi pengganggu fokus dan keseimbangan.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "sound",
+        "clockwork",
+        "disruption"
+      ],
+      "visualBrief": "Peluit besar dengan roda pengatur resonansi dan corong kecil.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Stun Whistle",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Peluit kecil menjadi senjata pengacau; namanya tidak menjamin sasaran selalu terkena stun."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "shrink-ray",
+      "label": "Shrink Ray",
+      "catalogOrder": 11,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Alat lensa magis-mekanik yang berpotensi mengecilkan sasaran sementara.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "lens",
+        "size",
+        "control"
+      ],
+      "visualBrief": "Lensa berlapis, cincin putar, kabel pendek, dan badan alat kuningan.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Shrink Ray",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gadget kecil dengan rencana besar: Shrink Ray membuka potensi mengecilkan sasaran."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "clockwork-scorpion",
+      "label": "Clockwork Scorpion",
+      "catalogOrder": 12,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Kalajengking mekanik dengan ekor penjepit untuk mengganggu sasaran dari dekat.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "clockwork",
+        "construct",
+        "melee",
+        "control"
+      ],
+      "visualBrief": "Kalajengking mini dengan kaki roda gigi dan ekor penjepit.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Clockwork Scorpion",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kalajengking mekanik masuk sebagai satu senjata; pengendalian perangkatnya tetap membutuhkan mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "gear-disc-launcher",
+      "label": "Gear Disc Launcher",
+      "catalogOrder": 13,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Pelontar cakram roda gigi berputar untuk serangan jarak jauh.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "ranged",
+        "gears",
+        "projectile"
+      ],
+      "visualBrief": "Pelontar engkol dengan magasin cakram roda gigi yang terlihat.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Gear Disc Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Pelontar roda gigi memberi serangan proyektil mekanik; akurasi mengikuti penguasaan alat."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "magnet-glove",
+      "label": "Magnet Glove",
+      "catalogOrder": 14,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Sarung tangan mekanik yang menarik atau mengalihkan benda logam dalam jangkauan.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "magnet",
+        "gauntlet",
+        "control"
+      ],
+      "visualBrief": "Sarung tangan dengan tapal magnet, kabel kumparan, dan roda pengatur.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Magnet Glove",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Magnet Glove mengandalkan benda logam sebagai sasaran kendali. Ini satu gadget senjata."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "spring-trap",
+      "label": "Spring Trap",
+      "catalogOrder": 15,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Jebakan penjepit bertenaga pegas yang ditempatkan di medan tempur.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "spring",
+        "trap",
+        "control"
+      ],
+      "visualBrief": "Jebakan kotak lipat dengan pegas besar dan penjepit bundar.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Spring Trap",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gnome mendapat jebakan pegas; penempatan dan waktu pemasangan menjadi bagian penguasaan senjatanya."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "smoke-bomb-launcher",
+      "label": "Smoke Bomb Launcher",
+      "catalogOrder": 16,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Pelontar kapsul asap untuk menyamarkan posisi atau mengganggu pandangan.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "ranged",
+        "smoke",
+        "deception"
+      ],
+      "visualBrief": "Tabung pendek dengan kapsul asap dan tuas pelontar.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Smoke Bomb Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Kapsul asap memberi alat penyamaran di medan tempur; karakter tetap mengoperasikan gadget."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "clockwork-decoy",
+      "label": "Clockwork Decoy",
+      "catalogOrder": 17,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Boneka mekanik bergerak dan berbunyi untuk mengalihkan perhatian sasaran.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "clockwork",
+        "deception",
+        "disruption"
+      ],
+      "visualBrief": "Boneka kecil berengkol dengan kaki pegas dan kotak bunyi.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Clockwork Decoy",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Umpan mekanik menjadi senjata taktis; gerak dan bunyinya digunakan untuk mengecoh."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "clockwork-turret",
+      "label": "Clockwork Turret",
+      "catalogOrder": 18,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Turret mini dengan mekanisme roda gigi untuk serangan dari posisi yang dipilih.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "clockwork",
+        "turret",
+        "ranged"
+      ],
+      "visualBrief": "Turret rendah berkaki lipat dengan roda gigi, kunci putar, dan tabung pendek.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Clockwork Turret",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Turret mini menjadi satu perangkat senjata; penempatan dan pengoperasiannya mengikuti mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "grapple-launcher",
+      "label": "Grapple Launcher",
+      "catalogOrder": 19,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Pelontar kait bertali untuk menarik benda, menjangkau posisi, atau menahan sasaran yang terkait.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "ranged",
+        "hook",
+        "mobility",
+        "control"
+      ],
+      "visualBrief": "Pelontar kait pendek dengan gulungan tali dan engkol penarik.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Grapple Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Grapple Launcher membawa kait dan tali untuk gerak taktis serta kendali; ini dihitung sebagai senjata gadget."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    },
+    {
+      "id": "illusion-projector",
+      "label": "Illusion Projector",
+      "catalogOrder": 20,
+      "equipmentKind": "weapon",
+      "contentStatus": "Original Gnome-inspired game gadget, authored within user-delegated scope",
+      "scope": "Proyektor lensa magis-mekanik yang membentuk umpan visual untuk mengecoh sasaran.",
+      "tags": [
+        "gnome-tech",
+        "tinker-gadget",
+        "lens",
+        "illusion",
+        "deception"
+      ],
+      "visualBrief": "Kotak lensa kecil dengan prisma, roda pengatur, dan pola ukiran.",
+      "sourceRefs": [
+        "gnome-dnd-lineage",
+        "gnome-warcraft-mechagon"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Range, duration, resistance, damage when relevant, control limits, equipment compatibility, and rank-dependent effects pending.",
+      "resultContext": {
+        "facts": [
+          "Gadget senjata diperoleh: Illusion Projector",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Gnome mendapat alat proyeksi ilusi; umpan visual berasal dari gadget yang dipakai."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "Gnome gadget definitionId",
+          "tactical role tags"
+        ]
+      }
+    }
+  ],
+  "narrationContract": {
+    "family": "Kurcaci opens a Dwarf/Gnome choice; no subtype-specific gear is granted before that choice commits.",
+    "dwarf": "Count result adds the required spin count; each armor result adds only its own granted piece, +1-point modifier, and current collected/remaining pieces.",
+    "gnome": "Type result reveals one Gnome tinker-gadget event; the selected tool adds one owned weapon and its tactical/visual context with unresolved mastery.",
+    "history": "Append only committed facts to the as-of-spin context. Unknown next pieces and unselected technology candidates are not owned facts."
+  },
+  "openBalance": [
+    "Optional user override of equal Dwarf/Gnome odds",
+    "Confirm/revise the disclosed final count-weight character interpretation if needed",
+    "Equipment compatibility; eligible armor pieces now have confirmed equal base odds",
+    "Complete twenty Gnome weapon profiles/enchantability; base odds equal",
+    "Durability, Fight, Speed numeric scales or explicit mappings",
+    "Later pre-stat odds/eligibility effects"
+  ],
+  "gnomeDesignTheme": {
+    "status": "User requested replacement of generic technology tools with a more Gnome-aligned pool",
+    "direction": "Compact eccentric tinker gadgets: clockwork, gears, steam, springs, lenses, alchemical sprays, traps, decoys, and tactical tricks.",
+    "sourceRefs": [
+      "gnome-dnd-lineage",
+      "gnome-warcraft-mechagon"
+    ],
+    "sourcePolicy": "Official sources support the broad tinkering/clockwork and mechanized-gnome themes. These twenty gadgets and combat functions are original game adaptations, not a list of canonical racial equipment.",
+    "artPolicy": "Use item visual briefs as art context after the corresponding item result commits. Flavor does not add an automatic malfunction, failure chance, armor bonus, or personal power."
+  },
+  "retiredTechWeapons": [
+    {
+      "id": "rocket-gauntlet",
+      "label": "Rocket Gauntlet",
+      "catalogOrder": 4,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Sarung tangan tempur dengan pendorong untuk pukulan.",
+      "tags": [
+        "gnome-tech",
+        "melee",
+        "gauntlet"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Rocket Gauntlet",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Sarung tangan roket ini dihitung sebagai senjata Gnome, bukan Gloves armor Dwarf."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "magnetic-crossbow",
+      "label": "Magnetic Crossbow",
+      "catalogOrder": 5,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Crossbow dengan mekanisme magnetik fantasi.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "projectile"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Magnetic Crossbow",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Crossbow magnet masuk daftar senjata; akurasi dan penguasaan mengikuti Weapon Mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "tesla-staff",
+      "label": "Tesla Staff",
+      "catalogOrder": 6,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Tongkat teknologi yang menyalurkan serangan listrik.",
+      "tags": [
+        "gnome-tech",
+        "energy",
+        "electric"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Tesla Staff",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Tongkat listrik adalah senjata teknologi; karakter tidak otomatis mendapat power listrik pribadi."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "flamethrower",
+      "label": "Flamethrower",
+      "catalogOrder": 7,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Alat tempur penyembur api.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "fire"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Flamethrower",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Api berasal dari senjata yang didapat; tidak ada grant Fire Manipulation."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "freeze-gun",
+      "label": "Freeze Gun",
+      "catalogOrder": 8,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Senjata yang mengeluarkan semburan pembekuan fantasi.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "ice"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Freeze Gun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Freeze Gun memberi senjata bertema es; power Kendali Es tidak ikut diberikan otomatis."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "acid-launcher",
+      "label": "Acid Launcher",
+      "catalogOrder": 9,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Pelontar muatan korosif fantasi.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "corrosive"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Acid Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Pelontar korosif masuk inventori senjata; efek angka, jangkauan, dan kontrol masih perlu balance."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "sonic-blaster",
+      "label": "Sonic Blaster",
+      "catalogOrder": 10,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Senjata yang memancarkan gelombang suara untuk serangan.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "sound"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Sonic Blaster",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Sonic Blaster merupakan sumber serangan suara dari alat, bukan power vokal karakter."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "shock-rifle",
+      "label": "Shock Rifle",
+      "catalogOrder": 11,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Senapan energi listrik jarak jauh.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "electric"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Shock Rifle",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Senapan listrik didapat; potensi senjata belum menentukan mastery penembaknya."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "railgun",
+      "label": "Railgun",
+      "catalogOrder": 12,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Senjata proyektil elektromagnetik dalam desain fantasi.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "projectile"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Railgun",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Railgun masuk daftar senjata; hasilnya tidak menjamin semua armor sasaran tertembus."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "plasma-pistol",
+      "label": "Plasma Pistol",
+      "catalogOrder": 13,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Pistol yang menembakkan energi plasma fantasi.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "energy"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Plasma Pistol",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Pistol plasma didapat tanpa bonus stat atau power tubuh tambahan."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "laser-saber",
+      "label": "Laser Saber",
+      "catalogOrder": 14,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Pedang dengan bilah energi.",
+      "tags": [
+        "gnome-tech",
+        "melee",
+        "energy",
+        "blade"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Laser Saber",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Pedang energi adalah senjata; karakter tidak otomatis menjadi Jedi atau memperoleh Force."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "gravity-hammer",
+      "label": "Gravity Hammer",
+      "catalogOrder": 15,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Palu teknologi yang memanfaatkan efek gravitasi fantasi.",
+      "tags": [
+        "gnome-tech",
+        "melee",
+        "gravity"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Gravity Hammer",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Efek gravitasi berasal dari palu ini; tidak otomatis menjadi Gravity Manipulation pribadi."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "mine-launcher",
+      "label": "Mine Launcher",
+      "catalogOrder": 16,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Pelontar ranjau tempur dalam permainan.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "area",
+        "trap"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Mine Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Senjata pemasang jebakan didapat; kemahiran dan batas jumlah jebakan mengikuti aturan senjata."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "combat-drone-controller",
+      "label": "Combat Drone Controller",
+      "catalogOrder": 17,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Perangkat senjata untuk mengendalikan drone tempur.",
+      "tags": [
+        "gnome-tech",
+        "remote",
+        "drone"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Combat Drone Controller",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Hasil ini dihitung sebagai satu senjata berupa perangkat kendali drone; tidak memberi ras, power, atau senjata tambahan terpisah."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "boomerang-launcher",
+      "label": "Boomerang Launcher",
+      "catalogOrder": 19,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Pelontar cakram tempur dengan mekanisme kembali.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "disc"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Boomerang Launcher",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Pelontar cakram menjadi satu senjata yang menunggu Weapon Mastery."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    },
+    {
+      "id": "arcane-cannon",
+      "label": "Arcane Cannon",
+      "catalogOrder": 20,
+      "equipmentKind": "weapon",
+      "contentStatus": "assistant-authored within user-delegated scope; all 20 count as weapons",
+      "scope": "Meriam teknologi yang memakai energi magis.",
+      "tags": [
+        "gnome-tech",
+        "ranged",
+        "arcane"
+      ],
+      "masteryRank": null,
+      "masteryTiming": "main-weapon-stage",
+      "enchantable": null,
+      "enchantments": [],
+      "enchantmentPolicy": "Normal compatible-weapon enchantment eligibility after master-or-higher mastery; no enchantment at race stage. Enchantability and slots remain pending.",
+      "powerGrant": "none",
+      "statGrant": "none",
+      "balance": "Damage, range, capacity, costs, equipment compatibility, and rank-dependent limits pending.",
+      "resultContext": {
+        "facts": [
+          "Senjata teknologi diperoleh: Arcane Cannon",
+          "Weapon Mastery: belum diputar"
+        ],
+        "displayContext": "Meriam arcane didapat sebagai senjata; sumber energi alat tidak otomatis memberikan power sihir pribadi."
+      },
+      "laterInfluenceDraft": {
+        "status": "semantic compatibility/odds proposal pending complete guards and balance",
+        "targets": [
+          "archetype",
+          "backstory",
+          "weapon",
+          "weapon.mastery"
+        ],
+        "basis": [
+          "technology weapon definitionId",
+          "tags"
+        ]
+      },
+      "poolStatus": "retired from the active Gnome wheel",
+      "retiredReason": "Replaced after the user requested a stronger Gnome tinkering theme.",
+      "retiredOn": "2026-10-07"
+    }
+  ],
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1,
+    "activation": "Default weights do not activate or approve proposed rosters, callers or events."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

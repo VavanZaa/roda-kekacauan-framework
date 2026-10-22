@@ -1,0 +1,30 @@
+{
+  "version": "detail-closure/0.1.0",
+  "date": "2026-10-10",
+  "scope": "Race and Archetype detail review before Backstory",
+  "confirmed": {
+    "siluman": "12 approved species; exactly one animal. Bat/Eagle added. Humanoid normal body, full selected-animal transformation; Babi also Nyolong.",
+    "lich": "Raw Durability9; final bonuses/debuffs still apply.",
+    "finalScores": "All seven final numeric scores signed and unbounded; raw0..9 labels unchanged.",
+    "godAuthority": "Source-bound base9 plus shared final Power Mastery bonuses/debuffs.",
+    "powers": "Exclude owned powers before acquisition draws; identical fixed powers merge with preserved provenance.",
+    "bodyMix": "AI may freely combine Hybrid/Mutant bodies from actually committed identities.",
+    "hybridPairs": "Exclude mutually limiting Archetype pairs before child2; no first-child reroll.",
+    "mainPowerWheel": "At least128 power choices, to be curated at Power-wheel stage.",
+    "discipleBootstrap": "Empty eligible archive: fixed God mentor, one ordinary Divine Power spin, recipient mastery; no God race dispatch.",
+    "wheelDirection": "Anticlockwise rotation; sectors clockwise so options pass top pointer weakest-to-strongest. IDs, weighted outcomes and odds unchanged."
+  },
+  "pending": [
+    "Final raw0..9 Intelligence labels and conditional stat odds at Stat-wheel stage.",
+    "Power-wheel roster/None odds/themed exhaustion behavior at Power-wheel stage.",
+    "Backstory, Weakness, Apex, Title and Enchant catalogs at their own stages."
+  ],
+  "implementation": "Canonical policies and pure Disciple/Hybrid compatible-pool helpers updated and tested. Full video/body/event/journal executors remain future implementation.",
+  "references": {
+    "scores": "content/stat-scales-design.json#finalValuePolicy",
+    "ownership": "framework/spec.json#powerOwnershipContract",
+    "body": "content/hybrid-events-design.json#bodyCompositionContract",
+    "hybridPairs": "content/archetype-hybrid-events-design.json#pairCompatibility",
+    "discipleBootstrap": "content/disciple-events-design.json#godMentorFallback"
+  }
+}

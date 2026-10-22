@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "roda-kekacauan-paladin/0.1",
+  "version": "paladin/0.1.0",
+  "updatedDate": "2026-10-10",
+  "archetypeId": "paladin",
+  "eventProfileId": "paladin-ascension",
+  "status": "User-approved 10% Ascension/90% ordinary branch, three/one canonical Angelic spins and ordinary-only +1 Weapon Mastery on all owned weapons. Algorithm design; intrinsic/body-fit/runtime configuration pending.",
+  "authority": {
+    "confirmed": [
+      "Paladin spins Ascension with 10% success probability.",
+      "On success it becomes Nirvana High Paladin and gets three Angelic Power spins.",
+      "Without Ascension it gets one Angelic Power spin and +1 Weapon Mastery.",
+      "User confirms the +1 Weapon Mastery applies to all owned weapons.",
+      "Previously accepted numeric/mastery bonuses calculate only in final bonus phase and effective Weapon Mastery affects Enchant."
+    ],
+    "interpretation": "The two branches are exclusive. Success receives three total Angelic event spins, not one plus three, and no ordinary-branch Weapon Mastery bonus. All-owned scope includes earlier and later active owned weapons at final calculation."
+  },
+  "chanceWheel": {
+    "id": "paladin-ascension-chance",
+    "label": "Ascension?",
+    "outcomeCount": 2,
+    "drawCount": 1,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "nirvana-high-paladin",
+        "label": "Nirvana High Paladin",
+        "baseWeight": 1,
+        "probability": 0.1,
+        "selectedProfileId": "paladin-nirvana",
+        "resultContext": {
+          "facts": [
+            "Archetype sumber: Paladin",
+            "Ascension berhasil",
+            "Bentuk: Nirvana High Paladin",
+            "3 spin Angelic Power"
+          ],
+          "caption": "Naik kelas jauh.",
+          "futureResultsUnknown": true
+        }
+      },
+      {
+        "id": "paladin-biasa",
+        "label": "Paladin Biasa",
+        "baseWeight": 9,
+        "probability": 0.9,
+        "selectedProfileId": "paladin-ordinary",
+        "resultContext": {
+          "facts": [
+            "Archetype: Paladin",
+            "Ascension tidak berhasil",
+            "1 spin Angelic Power",
+            "Bonus pending: Weapon Mastery +1 untuk semua weapon"
+          ],
+          "caption": "Tetap Paladin.",
+          "futureResultsUnknown": true
+        }
+      }
+    ]
+  },
+  "branchProfiles": [
+    {
+      "id": "paladin-nirvana",
+      "chanceOutcomeId": "nirvana-high-paladin",
+      "formGrant": {
+        "formId": "nirvana-high-paladin",
+        "label": "Nirvana High Paladin",
+        "sourceArchetypeId": "paladin"
+      },
+      "masteryModifierRef": null,
+      "angelicInvocationCount": 3,
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-angelic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "paladin-nirvana-angelic-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-paladin-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-angelic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "paladin-nirvana-angelic-2",
+          "ordinal": 2,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-paladin-branch-continuation"
+        },
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-angelic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "paladin-nirvana-angelic-3",
+          "ordinal": 3,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-paladin-branch-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    },
+    {
+      "id": "paladin-ordinary",
+      "chanceOutcomeId": "paladin-biasa",
+      "formGrant": null,
+      "masteryModifierRef": "paladin-all-weapon-mastery",
+      "angelicInvocationCount": 1,
+      "steps": [
+        {
+          "type": "spin-wheel",
+          "wheelId": "power-angelic",
+          "definitionFile": "content/universal-power-wheels-design.json",
+          "invocationCount": 1,
+          "stepId": "paladin-ordinary-angelic-1",
+          "ordinal": 1,
+          "catalogVersion": "universal-power/0.2.0",
+          "returnTo": "saved-paladin-branch-continuation"
+        }
+      ],
+      "returnTo": "backstory"
+    }
+  ],
+  "weaponMasteryModifier": {
+    "id": "paladin-all-weapon-mastery",
+    "operation": "add-rank-steps",
+    "amount": 1,
+    "scope": "all-active-owned-weapon-instances",
+    "guard": "Actual Paladin Biasa branch only",
+    "targetSelector": "All earlier and later active owned weapons at final calculation; discarded/unowned items are excluded.",
+    "timing": "Register the source modifier once on ordinary chance-result commit. Resolve each active weapon raw mastery at its normal stage; calculate +1 only in final bonus phase from retained immutable base plus distinct matching modifiers without numeric clamps.",
+    "sourceKey": "runId/sourceArchetypeInvocationId/sourceAscensionSpinId/modifierId",
+    "projectionKey": "sourceModifierId/activeWeaponInstanceId",
+    "lateWeapon": "Reuse this same active modifier for a later owned weapon's ordinary raw mastery; registering one modifier does not create a weapon or extra acquisition/mastery spin.",
+    "enchantment": "Final effective Weapon Mastery>=5 opens only a compatible unused Enchant slot. Reprojection does not compound +1, repeat the slot or change raw Lucky/Resilient/Pawn evidence.",
+    "cap": null,
+    "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+    "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy"
+  },
+  "sharedWheelReferences": [
+    {
+      "wheelId": "power-angelic",
+      "definitionFile": "content/universal-power-wheels-design.json",
+      "outcomeCount": 20,
+      "catalogVersion": "universal-power/0.2.0",
+      "invocationCountByBranch": {
+        "nirvana-high-paladin": 3,
+        "paladin-biasa": 1
+      }
+    }
+  ],
+  "followups": [
+    {
+      "type": "spin-wheel",
+      "wheelId": "paladin-ascension-chance",
+      "definitionFile": "content/paladin-events-design.json",
+      "invocationCount": 1,
+      "stepId": "paladin-ascension-1",
+      "ordinal": 1,
+      "returnTo": "selected-paladin-branch"
+    }
+  ],
+  "followupSpinCountByResult": {
+    "nirvana-high-paladin": 4,
+    "paladin-biasa": 2
+  },
+  "contracts": {
+    "order": "Actual Paladin result/reaction -> one Ascension chance spin -> commit only the chosen branch form or source mastery modifier -> chance reaction -> one or three sequential canonical Angelic actual spins/grants/reactions -> Backstory.",
+    "probability": "Ordinary Ascension success1/failure9 =10%/90%; no ordinary lore modifier. Each Angelic invocation reuses canonical twenty options at baseWeight1,5% each before otherwise authorized distribution policies. Named active Equalizer can override future odds under its own contract; this does not authorize role stacking.",
+    "exclusive": "Nirvana gets exactly three total Angelic event spins and no ordinary Weapon Mastery+1. Paladin Biasa gets exactly one Angelic event spin and one all-owned Weapon Mastery+1 source. No successful branch inherits the failed-branch reward.",
+    "form": "Nirvana High Paladin is one source-owned evolved form attached to the original Paladin result. Preserve original identity/provenance. It is distinct from Royal/Pawn Royal High Paladin and triggers no Royal chess/evolution/all-stat reward, second Archetype/race/Size spin or replacement Title.",
+    "angelic": "Reuse only power-angelic; no private wheel, copied definitions or Divine substitution. Each call is an actual independent wheel invocation with unique step ID/ordinal and saved continuation; grant exactly its selected canonical power before reacting. Canonical pool stays unchanged between calls; repeated results do not cause uniqueness rerolls or an invented fallback power.",
+    "ownership": "Each actual grant records its own source. Global owned-power duplicate/identity handling remains the existing policy; repeated selections add no guessed tier/mastery/stat bonus. Early owned powers survive normal main Power None and use the one normal common Power Mastery resolution.",
+    "mastery": "Only Paladin Biasa registers +1 Weapon Mastery once for all active owned weapon instances, including later grants; no Power Mastery boost, weapon grant, guaranteed Master or early mastery spin. Final calculation uses each retained raw weapon mastery plus source-once modifiers, never a previously adjusted result.",
+    "enchantment": "Effective Weapon Mastery after final +1 can qualify at Master5+, subject to active compatible weapon/unused slot. No early Enchant and no Power Enchant. Empty weapon inventory creates no phantom item or mastery draw; the source modifier can bind to a later owned weapon.",
+    "mainFlow": "Paladin Angelic children resolve during the Archetype event. Normal main Weapon/Power acquisitions and their ordinary stages remain scheduled; event child count does not consume the later main Power spin.",
+    "tier": "Resolve and freeze each selected Angelic canonical definition reference/mode/rating under power-tier/1.0.0. Paladin applies no intrinsic tier floor, tier weight boost or maximum mastery override; the Assassin Tier3/4 brief does not apply to this caller.",
+    "ledger": "Freeze chance pool/odds/version/outcome/selected profile, owned form or mastery source and child schedule. Commit branch once at runId/sourceArchetypeInvocationId/sourceAscensionSpinId/eventProfileId; each Angelic child has a distinct invocation source. Replay/media retries resume the existing next ordinal and never repeat chance, completed child, grant, form or bonus.",
+    "reaction": "Stack only actual Paladin/Ascension/form/selected Angelic results and pending mastery source with provenance. Later child power/stat/mastery results stay unknown until rolled. Names/captions/fixed form/bonus do not create funny-result tags or extra Shrek hooks.",
+    "return": "Finish the selected branch's mandatory children and their events/reactions in sequence; restore Backstory only after the last child. Preserve earlier race rewards and the accepted Archetype gate/global Size/race history.",
+    "runtime": "Core design approved; canonical capability limits, body-role fit and event/grant persistence executor remain configuration. Complete Archetype roster is not yet activated."
+  },
+  "powers": [],
+  "weapons": [],
+  "runtimeInterface": {
+    "status": "design-only; branch planner/resolver and central mastery-source projection not implemented",
+    "module": null
+  },
+  "openConfiguration": [
+    "Canonical Angelic intrinsic capability limits and global repeat/ownership persistence handling.",
+    "Existing mastery cap/overflow, intrinsic weapon/Enchant compatibility and active-loadout profiles.",
+    "Final Paladin body-role fit/boost band and complete role roster.",
+    "Runtime chance/branch/child planner, source-once mastery/form grant and saved-continuation persistence adapter."
+  ],
+  "bonusTimingContractRef": "content/bonus-timing-design.json#contracts",
+  "bonusTimingPolicyVersion": "bonus-timing/0.2.0",
+  "migrationContract": {
+    "retiredSnapshot": "reference/before-paladin-2026-10-10.json",
+    "policy": "New Paladin invocations use paladin/0.1.0. Committed previous-role/chance/Angelic journals preserve original versions/pools/odds/grants; do not insert this event into old runs."
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

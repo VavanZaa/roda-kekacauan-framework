@@ -1,0 +1,1783 @@
+{
+  "schemaVersion": "roda-kekacauan-tamer/1.0",
+  "version": "tamer/1.2.0",
+  "updatedDate": "2026-10-09",
+  "archetypeId": "tamer",
+  "eventProfileId": "tamer-companion",
+  "status": "User-confirmed Taming Power, direct companion and 32/16/8/8 composition; specific roster and intrinsic limits/body fit remain editable configuration.",
+  "authority": {
+    "confirmed": [
+      "Tamer has about 64 tameable animals from basic animals through large/cool animals (including Blue Whale and Megalodon) to Mythical Beast. Normal animals considerably outnumber legendary/mythical choices. After the animal spin, directly grant one companion; no taming-success spin.",
+      "Tamer wheel composition is exactly 32 current animals, 16 past animals, eight Mythical Beast and eight Pop Culture creatures, with Kyubi as a user example. Total 64 equal outcomes, directly one companion; exact curated identities beyond the examples remain editable.",
+      "Tamer explicitly receives Taming Power in addition to its one direct companion. Ordinary owned power uses the one shared Power Mastery and persists after main Power None; no extra power selector."
+    ],
+    "existingPolicy": "Every unspecified wheel uses equal base weights.",
+    "authoredChoices": "Specific identities within the user-fixed 32/16/8/8 counts are editable curation. Eight Pop Culture suggestions span eight franchises; one-per-franchise is an editorial choice, not a new user rule. One flat equal wheel; no group selector."
+  },
+  "contracts": {
+    "order": "Actual Tamer result/reaction -> one Animal To Tame spin -> atomically commit one companion plus fixed Taming Power -> reaction -> Backstory.",
+    "probability": "One flat 64-option wheel, equal weight 1, probability 1/64=1.5625% each. User-fixed group counts produce modern 32/64=50%, past 16/64=25%, mythical 8/64=12.5%, Pop Culture 8/64=12.5%. Groups are display metadata only.",
+    "acquisition": "Direct one-companion acquisition for every result, including tiny animals. No chance, quantity, subtype, Element or power selector. A generic Dragon/Naga identity stays at this outcome; any future form/capability proposal requires explicit configuration. Named Pop Culture identity also grants only one companion. No automatic evolution, Digivolution, sealing/Jinchuriki, transformation, form or franchise-event branch.",
+    "ownership": "Register one separate companion entity, and grant the owner exactly one explicit Taming Power. Companion skills remain separate; no copied race/stat/weapon/mastery/enchant package or additional owner power from companion identity.",
+    "capabilities": "Intrinsic companion action/size/habitat/combat profiles remain configuration. Do not copy player-race stat packages, finding rewards or mythology maximum feats. Aquatic companions are not silently made land/flying creatures; presentation placement needs its own profile, not another owner Size spin.",
+    "persistence": "Companion and Taming Power survive main Weapon/Power None. Taming Power counts for the one shared ordinary owner Power Mastery. Companion does not itself schedule owner mastery; companion leveling/mastery/bonding wheels remain undefined.",
+    "ledger": "Freeze rule/catalog version and animal pool before seeded draw. Commit one companion record and consumed source ledger atomically. Stable instance ID/source key prevent duplicates on retry; replay never redraws the current roster. New 1.2.0 plans freeze the fixed Taming Power reference. Companion and power are one atomic package; old 1.0.0/1.1.0 snapshots retain original companion-only effects without retroactive grant.",
+    "reaction": "Actual Animal To Tame result gets its caption/reaction, including Semut/Nyamuk/Kecoa. Caption/fixed acquisition creates no extra funny-result tag or Shrek hook; existing actual tagged-result hooks retain their contracts.",
+    "source": "Existing animal/mythical identity refs and primary fauna/franchise sources establish identity/category context only; fantasy companion acquisition and bounded capabilities are game design, not factual domestication or full franchise-feat imports."
+  },
+  "groups": [
+    {
+      "id": "modern",
+      "label": "Hewan Masa Kini",
+      "count": 32,
+      "probability": 0.5
+    },
+    {
+      "id": "prehistoric",
+      "label": "Hewan Masa Lalu",
+      "count": 16,
+      "probability": 0.25
+    },
+    {
+      "id": "mythical",
+      "label": "Mythical Beast",
+      "count": 8,
+      "probability": 0.125
+    },
+    {
+      "id": "pop-culture",
+      "label": "Pop Culture",
+      "count": 8,
+      "probability": 0.125
+    }
+  ],
+  "wheel": {
+    "id": "tamer-animal-to-tame",
+    "label": "Animal To Tame",
+    "outcomeCount": 64,
+    "allowModifiers": false,
+    "outcomes": [
+      {
+        "id": "ant",
+        "label": "Semut",
+        "groupId": "modern",
+        "displayOrder": 1,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "ant",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Semut",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Semut.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "mosquito",
+        "label": "Nyamuk",
+        "groupId": "modern",
+        "displayOrder": 2,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "mosquito",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Nyamuk",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Nyamuk.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "fly",
+        "label": "Lalat",
+        "groupId": "modern",
+        "displayOrder": 3,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "fly",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Lalat",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Lalat.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "cockroach",
+        "label": "Kecoa",
+        "groupId": "modern",
+        "displayOrder": 4,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "cockroach",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kecoa",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kecoa.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "earthworm",
+        "label": "Cacing Tanah",
+        "groupId": "modern",
+        "displayOrder": 5,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "earthworm",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Cacing Tanah",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Cacing Tanah.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "snail",
+        "label": "Siput",
+        "groupId": "modern",
+        "displayOrder": 6,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "snail",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Siput",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Siput.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "spider",
+        "label": "Laba-laba",
+        "groupId": "modern",
+        "displayOrder": 7,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "spider",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Laba-laba",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Laba-laba.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "scorpion",
+        "label": "Kalajengking",
+        "groupId": "modern",
+        "displayOrder": 8,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "scorpion",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kalajengking",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kalajengking.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "chicken",
+        "label": "Ayam",
+        "groupId": "modern",
+        "displayOrder": 9,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "chicken",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Ayam",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Ayam.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "duck",
+        "label": "Bebek",
+        "groupId": "modern",
+        "displayOrder": 10,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "duck",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Bebek",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Bebek.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "pigeon",
+        "label": "Merpati",
+        "groupId": "modern",
+        "displayOrder": 11,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "pigeon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Merpati",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Merpati.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "owl",
+        "label": "Burung Hantu",
+        "groupId": "modern",
+        "displayOrder": 12,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "owl",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Burung Hantu",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Burung Hantu.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "eagle",
+        "label": "Elang",
+        "groupId": "modern",
+        "displayOrder": 13,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "eagle",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Elang",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Elang.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "cat",
+        "label": "Kucing",
+        "groupId": "modern",
+        "displayOrder": 14,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "cat",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kucing",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kucing.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "dog",
+        "label": "Anjing",
+        "groupId": "modern",
+        "displayOrder": 15,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "dog",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Anjing",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Anjing.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "rabbit",
+        "label": "Kelinci",
+        "groupId": "modern",
+        "displayOrder": 16,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "rabbit",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kelinci",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kelinci.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "rat",
+        "label": "Tikus",
+        "groupId": "modern",
+        "displayOrder": 17,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "rat",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Tikus",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Tikus.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "civet",
+        "label": "Musang",
+        "groupId": "modern",
+        "displayOrder": 18,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "civet",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Musang",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Musang.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "goat",
+        "label": "Kambing",
+        "groupId": "modern",
+        "displayOrder": 19,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "goat",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kambing",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kambing.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "pig",
+        "label": "Babi",
+        "groupId": "modern",
+        "displayOrder": 20,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "pig",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Babi",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Babi.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "cow",
+        "label": "Sapi",
+        "groupId": "modern",
+        "displayOrder": 21,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "cow",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Sapi",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Sapi.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "horse",
+        "label": "Kuda",
+        "groupId": "modern",
+        "displayOrder": 22,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "horse",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kuda",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kuda.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "catfish",
+        "label": "Lele",
+        "groupId": "modern",
+        "displayOrder": 23,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "catfish",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Lele",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Lele.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "betta",
+        "label": "Ikan Cupang",
+        "groupId": "modern",
+        "displayOrder": 24,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "betta",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Ikan Cupang",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Ikan Cupang.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "cobra",
+        "label": "Ular Kobra",
+        "groupId": "modern",
+        "displayOrder": 25,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "cobra",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Ular Kobra",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Ular Kobra.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "komodo-dragon",
+        "label": "Komodo",
+        "groupId": "modern",
+        "displayOrder": 26,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "komodo-dragon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Komodo",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Komodo.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "crocodile",
+        "label": "Buaya",
+        "groupId": "modern",
+        "displayOrder": 27,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "crocodile",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Buaya",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Buaya.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "wolf",
+        "label": "Serigala",
+        "groupId": "modern",
+        "displayOrder": 28,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "wolf",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Serigala",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Serigala.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "tiger",
+        "label": "Harimau",
+        "groupId": "modern",
+        "displayOrder": 29,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "tiger",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Harimau",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Harimau.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "elephant",
+        "label": "Gajah",
+        "groupId": "modern",
+        "displayOrder": 30,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "elephant",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Gajah",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Gajah.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "orca",
+        "label": "Orca",
+        "groupId": "modern",
+        "displayOrder": 31,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "orca",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Orca",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Orca.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "blue-whale",
+        "label": "Paus Biru",
+        "groupId": "modern",
+        "displayOrder": 32,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "blue-whale",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Paus Biru",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Paus Biru.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "dire-wolf",
+        "label": "Dire Wolf",
+        "groupId": "prehistoric",
+        "displayOrder": 33,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "dire-wolf",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "dire-wolf",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Dire Wolf",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Dire Wolf.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "glyptodon",
+        "label": "Glyptodon",
+        "groupId": "prehistoric",
+        "displayOrder": 34,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "glyptodon",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "glyptodon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Glyptodon",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Glyptodon.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "smilodon",
+        "label": "Smilodon / Sabertooth Tiger",
+        "groupId": "prehistoric",
+        "displayOrder": 35,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "smilodon",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "smilodon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Smilodon / Sabertooth Tiger",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Smilodon / Sabertooth Tiger.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "woolly-mammoth",
+        "label": "Woolly Mammoth",
+        "groupId": "prehistoric",
+        "displayOrder": 36,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "woolly-mammoth",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "woolly-mammoth",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Woolly Mammoth",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Woolly Mammoth.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "woolly-rhino",
+        "label": "Woolly Rhino",
+        "groupId": "prehistoric",
+        "displayOrder": 37,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "woolly-rhino",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "woolly-rhino",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Woolly Rhino",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Woolly Rhino.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "megatherium",
+        "label": "Megatherium / Giant Sloth",
+        "groupId": "prehistoric",
+        "displayOrder": 38,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "megatherium",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "megatherium",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Megatherium / Giant Sloth",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Megatherium / Giant Sloth.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "paraceratherium",
+        "label": "Paraceratherium",
+        "groupId": "prehistoric",
+        "displayOrder": 39,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "paraceratherium",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "paraceratherium",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Paraceratherium",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Paraceratherium.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "titanoboa",
+        "label": "Titanoboa",
+        "groupId": "prehistoric",
+        "displayOrder": 40,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "titanoboa",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "titanoboa",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Titanoboa",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Titanoboa.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "velociraptor",
+        "label": "Velociraptor",
+        "groupId": "prehistoric",
+        "displayOrder": 41,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "velociraptor",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "velociraptor",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Velociraptor",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Velociraptor.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "iguanodon",
+        "label": "Iguanodon",
+        "groupId": "prehistoric",
+        "displayOrder": 42,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "iguanodon",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "iguanodon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Iguanodon",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Iguanodon.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "triceratops",
+        "label": "Triceratops",
+        "groupId": "prehistoric",
+        "displayOrder": 43,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "triceratops",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "triceratops",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Triceratops",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Triceratops.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "ankylosaurus",
+        "label": "Ankylosaurus",
+        "groupId": "prehistoric",
+        "displayOrder": 44,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "ankylosaurus",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "ankylosaurus",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Ankylosaurus",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Ankylosaurus.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "spinosaurus",
+        "label": "Spinosaurus",
+        "groupId": "prehistoric",
+        "displayOrder": 45,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "spinosaurus",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "spinosaurus",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Spinosaurus",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Spinosaurus.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "tyrannosaurus-rex",
+        "label": "T-rex",
+        "groupId": "prehistoric",
+        "displayOrder": 46,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "tyrannosaurus-rex",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "tyrannosaurus-rex",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: T-rex",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet T-rex.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "mosasaurus",
+        "label": "Mosasaurus",
+        "groupId": "prehistoric",
+        "displayOrder": 47,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/archaeologist-events-design.json",
+            "collection": "wheel.outcomes",
+            "definitionId": "mosasaurus",
+            "scope": "animal identity only; no bone-finding reward"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "mosasaurus",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Mosasaurus",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Mosasaurus.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "megalodon",
+        "label": "Megalodon",
+        "groupId": "prehistoric",
+        "displayOrder": 48,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "megalodon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Megalodon",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Megalodon.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "kuda-sembrani",
+        "label": "Kuda Sembrani",
+        "groupId": "mythical",
+        "displayOrder": 49,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "local",
+            "wheelId": "mythical-beast-local-type",
+            "definitionId": "kuda-sembrani",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "kuda-sembrani",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kuda Sembrani",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kuda Sembrani.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "garuda",
+        "label": "Garuda",
+        "groupId": "mythical",
+        "displayOrder": 50,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "local",
+            "wheelId": "mythical-beast-local-type",
+            "definitionId": "garuda",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "garuda",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Garuda",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Garuda.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "makara",
+        "label": "Makara",
+        "groupId": "mythical",
+        "displayOrder": 51,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "local",
+            "wheelId": "mythical-beast-local-type",
+            "definitionId": "makara",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "makara",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Makara",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Makara.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "naga",
+        "label": "Naga",
+        "groupId": "mythical",
+        "displayOrder": 52,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "local",
+            "wheelId": "mythical-beast-local-type",
+            "definitionId": "naga",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "naga",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Naga",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Naga.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "dragon",
+        "label": "Dragon",
+        "groupId": "mythical",
+        "displayOrder": 53,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "imported",
+            "wheelId": "mythical-beast-imported-type",
+            "definitionId": "dragon",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "dragon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Dragon",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Dragon.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "phoenix",
+        "label": "Phoenix",
+        "groupId": "mythical",
+        "displayOrder": 54,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "imported",
+            "wheelId": "mythical-beast-imported-type",
+            "definitionId": "phoenix",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "phoenix",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Phoenix",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Phoenix.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "griffin",
+        "label": "Griffin",
+        "groupId": "mythical",
+        "displayOrder": 55,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "imported",
+            "wheelId": "mythical-beast-imported-type",
+            "definitionId": "griffin",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "griffin",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Griffin",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Griffin.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "cerberus",
+        "label": "Cerberus",
+        "groupId": "mythical",
+        "displayOrder": 56,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [
+          {
+            "definitionFile": "content/race-wheel-design.json",
+            "familyId": "mythical-beast",
+            "originId": "imported",
+            "wheelId": "mythical-beast-imported-type",
+            "definitionId": "cerberus",
+            "scope": "existing identity label only; no character-race reward/event dispatch"
+          }
+        ],
+        "companionProfile": {
+          "definitionId": "cerberus",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Cerberus",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Cerberus.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        }
+      },
+      {
+        "id": "kurama",
+        "label": "Kyūbi (Kurama)",
+        "groupId": "pop-culture",
+        "displayOrder": 57,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "kurama",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Kyūbi (Kurama)",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Kyūbi (Kurama).",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "Naruto:kurama",
+        "franchise": "Naruto",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "kurama",
+          "url": "https://naruto-official.com/en/news/01_1896",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "aliases": [
+          "Kyubi",
+          "Kyuubi",
+          "Kyūbi",
+          "Kurama",
+          "Nine Tails"
+        ],
+        "aliasContract": "One Naruto Kurama outcome. Spelling aliases do not duplicate weight or create a separate folklore fox.",
+        "inclusionAuthority": "User example kyubi; Naruto Kurama normalization supported by official character reference."
+      },
+      {
+        "id": "pikachu",
+        "label": "Pikachu",
+        "groupId": "pop-culture",
+        "displayOrder": 58,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "pikachu",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Pikachu",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Pikachu.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "Pokémon:pikachu",
+        "franchise": "Pokémon",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "pikachu",
+          "url": "https://www.pokemon.com/us/pokemon-video-games/pokemon-lets-go-pikachu-and-pokemon-lets-go-eevee",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "agumon",
+        "label": "Agumon",
+        "groupId": "pop-culture",
+        "displayOrder": 59,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "agumon",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Agumon",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Agumon.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "Digimon:agumon",
+        "franchise": "Digimon",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "agumon",
+          "url": "https://digimon.net/reference_en/detail.php?directory_name=agumon",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "toothless",
+        "label": "Toothless",
+        "groupId": "pop-culture",
+        "displayOrder": 60,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "toothless",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Toothless",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Toothless.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "How to Train Your Dragon:toothless",
+        "franchise": "How to Train Your Dragon",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "toothless",
+          "url": "https://www.dreamworks.com/movies/how-to-train-your-dragon",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "appa",
+        "label": "Appa",
+        "groupId": "pop-culture",
+        "displayOrder": 61,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "appa",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Appa",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Appa.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "Avatar: The Last Airbender:appa",
+        "franchise": "Avatar: The Last Airbender",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "appa",
+          "url": "https://www.avatarstudiosofficial.com/characters/",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "chopper",
+        "label": "Chopper",
+        "groupId": "pop-culture",
+        "displayOrder": 62,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "chopper",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Chopper",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Chopper.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "One Piece:chopper",
+        "franchise": "One Piece",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "chopper",
+          "url": "https://one-piece.com/character/chopper/index.html",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "totoro",
+        "label": "Totoro",
+        "groupId": "pop-culture",
+        "displayOrder": 63,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "totoro",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Totoro",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Totoro.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "My Neighbor Totoro:totoro",
+        "franchise": "My Neighbor Totoro",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "totoro",
+          "url": "https://gkids.com/films/my-neighbor-totoro/",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      },
+      {
+        "id": "scooby-doo",
+        "label": "Scooby-Doo",
+        "groupId": "pop-culture",
+        "displayOrder": 64,
+        "baseWeight": 1,
+        "probability": 0.015625,
+        "identityRefs": [],
+        "companionProfile": {
+          "definitionId": "scooby-doo",
+          "definitionFile": "content/tamer-events-design.json",
+          "capabilityStatus": "Intrinsic companion actions, limits, size and combat profile pending configuration; no automatic owner reward."
+        },
+        "resultContext": {
+          "facts": [
+            "Companion diperoleh: Scooby-Doo",
+            "Jumlah companion dari event ini: 1"
+          ],
+          "displayContext": "Dapet Scooby-Doo.",
+          "futureResults": "Backstory, owner Size/stat/mastery and companion capability details are not inferred."
+        },
+        "canonicalIdentityId": "Scooby-Doo:scooby-doo",
+        "franchise": "Scooby-Doo",
+        "franchiseRef": {
+          "sourceFile": "reference/tamer-fauna-research.json",
+          "sourceId": "scooby-doo",
+          "url": "https://www.warnerbros.com/movies/scoob",
+          "scope": "Fictional identity/franchise only, not automatic combat actions or owner bonuses."
+        },
+        "inclusionAuthority": "Editable authored Pop Culture candidate."
+      }
+    ]
+  },
+  "powers": [
+    {
+      "id": "taming",
+      "label": "Taming Power",
+      "scope": "Menjinakkan, melatih dan membangun kerja sama dengan makhluk sesuai kapasitas power. Satu companion dari event Tamer tetap diperoleh langsung; penggunaan power di luar event memakai batas target/resistance yang nanti dikonfigurasi.",
+      "affinityTags": [
+        "taming",
+        "creature",
+        "bond"
+      ],
+      "group": "tamer-fixed-power",
+      "contentStatus": "Power explicitly requested by user; bounded description is editable authored interpretation.",
+      "masteryRank": null,
+      "masteryTiming": "main-power-stage",
+      "sharedMasteryContract": "framework/spec.json#powerMasteryContract",
+      "enchantment": "never from power mastery",
+      "mechanicalBalance": "Target capacity, range, duration, resistance and cost pending; no universal guaranteed control, army/stat bonus or extra acquisition wheel.",
+      "resultContext": {
+        "facts": [
+          "Power diperoleh: Taming Power"
+        ],
+        "displayContext": "Taming Power"
+      },
+      "powerTier": 3,
+      "powerTierPolicyVersion": "power-tier/1.0.0",
+      "powerTierReason": "Kendali elemen, bentuk, kelompok target atau fungsi supernatural yang serbaguna.",
+      "powerTierRef": "content/power-tier-design.json#taming"
+    }
+  ],
+  "weapons": [],
+  "researchReference": "reference/tamer-fauna-research.json",
+  "runtimeInterface": {
+    "module": "framework/tamer-event.mjs",
+    "functions": [
+      "planTamerCompanion",
+      "resolveTamerCompanion"
+    ],
+    "sampling": "Pure plan; future engine performs seeded draw and journals it.",
+    "mutation": "Pure effect output; future engine commits companion registration once by source ledger."
+  },
+  "openConfiguration": [
+    "final editable identities within confirmed 32/16/8/8 group counts",
+    "intrinsic companion actions, combat, size, habitat and presentation profiles",
+    "final Archetype inclusion/body fit and role boost band"
+  ],
+  "retiredRosterRef": {
+    "file": "reference/tamer-retired-roster-v1.json",
+    "version": "tamer/1.0.0",
+    "policy": "Inactive for new plans; saved old pools/results resolve under original identities and equal odds without current catalog lookup."
+  },
+  "rolePowerRef": {
+    "definitionId": "taming",
+    "definitionFile": "content/tamer-events-design.json"
+  },
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}

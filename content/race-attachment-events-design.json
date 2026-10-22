@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "status": "User clarified Symbiote attaches to another race and Raksasa gives another race giant size; each requires one additional race spin.",
+  "raceDesign": "race-wheel-design.json",
+  "contract": {
+    "status": "User clarified Symbiote attaches to another race and Raksasa gives another race giant size; each requires one additional race spin.",
+    "canonicalWheelId": "race-family",
+    "historyRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+    "dispatch": "Every selected host/base family executes its normal approved events, including another authorized attachment/origin chain. Commit family to shared history BEFORE children.",
+    "identity": "The wrapper component stays owned. Host/base is a linked descendant in the same Hybrid root when applicable, not a replacement result or an extra Hybrid root.",
+    "order": "Working execution order: resolve host/base immediate events before returning to the attachment caller. Symbiote then runs its existing Takeover/power chain. Raksasa registers its existing stage effects once and returns after its base chain.",
+    "mastery": "All early powers survive main None and use the one shared character rank; caller-scoped Authority max remains an exception. No host-specific mastery bonus inferred.",
+    "return": "Always restore the saved nested caller. Only initial outer Race completion advances to the Archetype gate; attachments acquired inside Mutant restore its mutation event without a second gate or Archetype spin.",
+    "exclusion": "Intersect existing caller eligibility with familyId not in usedRaceFamilyIds. Disable all used sections before drawing; do not sample them then reroll.",
+    "termination": "Each new identity-family result strictly enlarges the used set. At most the number of unique eligible catalog families can commit (19 in the current main pool), so race-family cycles cannot repeat indefinitely.",
+    "emptyPool": "A required draw with no eligible positive-weight candidate is an explicit configuration error. Never reset history, restore used sections, silently skip, or reroll a committed result.",
+    "idempotence": "One host/base invocation per actual wrapper source component; committed history, links, effects and child keys restore together on resume.",
+    "context": "Record wrapper source, actual host/base and each nested descendant. Do not reveal unrolled host or final Size/Takeover results in earlier reaction."
+  },
+  "invocationTemplates": [
+    {
+      "id": "symbiote-host-race",
+      "label": "Ras Inang Symbiote",
+      "status": "User-confirmed invocation of the existing canonical race-family pool",
+      "kind": "race-invocation-template",
+      "canonicalWheelId": "race-family",
+      "definitionFile": "race-wheel-design.json",
+      "optionsRef": "race-wheel-design.json#mainWheel.options",
+      "role": "host",
+      "componentSlot": "host",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "eligibilityRuleRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+      "guard": "familyId not in character.usedRaceFamilyIds, intersect only separately approved caller guards",
+      "odds": "Use canonical main weights (currently 1 each), approved modifiers, then normalize/freeze eligible pool. Used family weights are zero regardless of modifiers.",
+      "commitRaceHistory": true,
+      "dispatchPolicy": "Execute selected family approved events normally, exactly once, under new source component and saved continuation.",
+      "registration": "Invocation template reuses main pool; not a new option catalog or duplicate active canonical wheel.",
+      "invocationKey": "runId/sourceComponentId/sourceParentSpinId/rootHybridSlot/followupStepId/childOrdinal",
+      "emptyPool": "Configuration error; never reset history, silently skip required draw or reroll a committed result.",
+      "followupStepId": "symbiote-host-race",
+      "rootSlotBinding": "Inherit the calling Hybrid root slot when present; this is a descendant, not a new root"
+    },
+    {
+      "id": "raksasa-base-race",
+      "label": "Ras Dasar Raksasa",
+      "status": "User-confirmed invocation of the existing canonical race-family pool",
+      "kind": "race-invocation-template",
+      "canonicalWheelId": "race-family",
+      "definitionFile": "race-wheel-design.json",
+      "optionsRef": "race-wheel-design.json#mainWheel.options",
+      "role": "host",
+      "componentSlot": "base",
+      "drawCount": 1,
+      "baseWeightsAssigned": true,
+      "defaultWeightsRef": "framework/spec.json#probabilityContract.defaultWeights",
+      "eligibilityRuleRef": "framework/spec.json#raceGroupingContract.raceNoRepeat",
+      "guard": "familyId not in character.usedRaceFamilyIds, intersect only separately approved caller guards",
+      "odds": "Use canonical main weights (currently 1 each), approved modifiers, then normalize/freeze eligible pool. Used family weights are zero regardless of modifiers.",
+      "commitRaceHistory": true,
+      "dispatchPolicy": "Execute selected family approved events normally, exactly once, under new source component and saved continuation.",
+      "registration": "Invocation template reuses main pool; not a new option catalog or duplicate active canonical wheel.",
+      "invocationKey": "runId/sourceComponentId/sourceParentSpinId/rootHybridSlot/followupStepId/childOrdinal",
+      "emptyPool": "Configuration error; never reset history, silently skip required draw or reroll a committed result.",
+      "followupStepId": "raksasa-base-race",
+      "rootSlotBinding": "Inherit the calling Hybrid root slot when present; this is a descendant, not a new root"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "symbiote-attachment",
+      "familyId": "symbiote",
+      "invocationTemplateId": "symbiote-host-race",
+      "drawCount": 1,
+      "preserveWrapper": true,
+      "sequence": [
+        "commit/react Symbiote",
+        "spin host race and execute all its immediate events",
+        "bind actual host/subtree to Symbiote source",
+        "spin existing symbiote-takeover once",
+        "resolve exactly the awarded power-symbiote invocations",
+        "saved caller"
+      ],
+      "existingEventDesign": "symbiote-events-design.json",
+      "noUnlistedBonuses": true,
+      "resultContextRef": {
+        "definitionFile": "symbiote-events-design.json",
+        "field": "raceResultContext"
+      }
+    },
+    {
+      "id": "raksasa-attachment",
+      "familyId": "raksasa",
+      "invocationTemplateId": "raksasa-base-race",
+      "drawCount": 1,
+      "preserveWrapper": true,
+      "sequence": [
+        "commit/react Raksasa and register giant Size binding once; Archetype gate will skip",
+        "spin base race and execute all its immediate events",
+        "bind actual base/subtree as giant version",
+        "saved caller"
+      ],
+      "existingEventDesign": "raksasa-events-design.json",
+      "deferredEffects": "Keep the eight-milestone global Size/Cosmic flow deferred. Policy 1.0.0 skips Archetype and registers no second-slot ticket.",
+      "noUnlistedBonuses": true,
+      "resultContextRef": {
+        "definitionFile": "raksasa-events-design.json",
+        "field": "raceResultContext"
+      }
+    }
+  ],
+  "exampleRef": "hybrid-events-design.json#example",
+  "probabilityDefaultContract": {
+    "ref": "framework/spec.json#probabilityContract.defaultWeights",
+    "baseWeightPerOption": 1
+  },
+  "mainWheelDistributionRef": "content/main-wheel-strength-design.json",
+  "finalScorePolicyRef": "content/stat-scales-design.json#finalValuePolicy",
+  "powerOwnershipPolicyRef": "framework/spec.json#powerOwnershipContract"
+}
